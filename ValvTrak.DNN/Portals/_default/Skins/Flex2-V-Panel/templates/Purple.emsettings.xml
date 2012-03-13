@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EasyMod>
+      <EMSkinName>Flex</EMSkinName>
+      <EMSkinAuthor>DrNuke</EMSkinAuthor>
+      <EMSkinVersion>2.00.00</EMSkinVersion>
+      <EMWidth>750</EMWidth>
+      <EMFullHeight>False</EMFullHeight>
+      <EMBaseColour1>5c1c99</EMBaseColour1>
+      <EMBaseColour2>a3a3a3</EMBaseColour2>
+      <EMBaseColour3>5c1c99</EMBaseColour3>
+      <EMBaseColour4>5c1c99</EMBaseColour4>
+      <EMBaseColour5>5c1c99</EMBaseColour5>
+      <EMBaseColour6>a3a3a3</EMBaseColour6>
+      <EMBaseColour7 />
+      <EMBaseColour8 />
+      <EMBackgroundColour>ffffff</EMBackgroundColour>
+      <EMBackgroundImage>images/backgrounds/drnuke_bg_08.jpg</EMBackgroundImage>
+      <EMBackgroundImageRepeat>repeat</EMBackgroundImageRepeat>
+      <EMBackgroundImageAttachment>fixed</EMBackgroundImageAttachment>
+      <EMBackgroundImagePositionH>left</EMBackgroundImagePositionH>
+      <EMBackgroundImagePositionV>top</EMBackgroundImagePositionV>
+      <EMLogo>True</EMLogo>
+      <EMLanguage>True</EMLanguage>
+      <EMSearch>True</EMSearch>
+      <EMDate>True</EMDate>
+      <EMBreadcrumb>True</EMBreadcrumb>
+      <EMCopyright>True</EMCopyright>
+      <EMTerms>True</EMTerms>
+      <EMPrivacy>True</EMPrivacy>
+      <EMMainMenuFont>Tahoma, Geneva, sans-serif</EMMainMenuFont>
+      <EMMainMenuItemOn>ffffff</EMMainMenuItemOn>
+      <EMMainMenuItemOff>ffffff</EMMainMenuItemOff>
+      <EMSubMenuItemOn>ededed</EMSubMenuItemOn>
+      <EMSubMenuItemOff>242424</EMSubMenuItemOff>
+      <EMSubMenuItemBGOn>5c1c99</EMSubMenuItemBGOn>
+      <EMSubMenuItemBGOff>f0f0f0</EMSubMenuItemBGOff>
+      <EMMenuArrow>True</EMMenuArrow>
+      <EMSubMenuOpacity>100</EMSubMenuOpacity>
+      <EMBannerImage>images/banners/banner-61.jpg</EMBannerImage>
+      <EMBannerImageBG>images/banners/bg/banner-61.jpg</EMBannerImageBG>
+      <EMBannerHeight>185</EMBannerHeight>
+      <EMBannerPanePositionTop>25</EMBannerPanePositionTop>
+      <EMBannerPanePositionLeft>365</EMBannerPanePositionLeft>
+      <EMBannerPaneWidth>323</EMBannerPaneWidth>
+      <EMHeadFontFamily>Tahoma, Geneva, sans-serif</EMHeadFontFamily>
+      <EMHeadFontColour>8c8c8c</EMHeadFontColour>
+      <EMHeadFontSize>16</EMHeadFontSize>
+      <EMSubHeadFontFamily>Tahoma, Geneva, sans-serif</EMSubHeadFontFamily>
+      <EMSubHeadFontColour>707070</EMSubHeadFontColour>
+      <EMSubHeadFontSize>12</EMSubHeadFontSize>
+      <EMHFontFamily1>Tahoma, Geneva, sans-serif</EMHFontFamily1>
+      <EMHFontColour1>5c1c99</EMHFontColour1>
+      <EMHFontSize1>20</EMHFontSize1>
+      <EMHFontFamily2>Tahoma, Geneva, sans-serif</EMHFontFamily2>
+      <EMHFontColour2>5c1c99</EMHFontColour2>
+      <EMHFontSize2>18</EMHFontSize2>
+      <EMHFontFamily3>Tahoma, Geneva, sans-serif</EMHFontFamily3>
+      <EMHFontColour3>5c1c99</EMHFontColour3>
+      <EMHFontSize3>16</EMHFontSize3>
+      <EMHFontFamily4>Tahoma, Geneva, sans-serif</EMHFontFamily4>
+      <EMHFontColour4>5c1c99</EMHFontColour4>
+      <EMHFontSize4>14</EMHFontSize4>
+      <EMHFontFamily5>Tahoma, Geneva, sans-serif</EMHFontFamily5>
+      <EMHFontColour5>5c1c99</EMHFontColour5>
+      <EMHFontSize5>11</EMHFontSize5>
+      <EMHFontFamily6>Tahoma, Geneva, sans-serif</EMHFontFamily6>
+      <EMHFontColour6>5c1c99</EMHFontColour6>
+      <EMHFontSize6>10</EMHFontSize6>
+      <EMFontFamily>Tahoma, Geneva, sans-serif</EMFontFamily>
+      <EMFontColour>242424</EMFontColour>
+      <EMFontSize>12</EMFontSize>
+      <EMLinkColour>5c1c99</EMLinkColour>
+      <EMLinkHoverColour>5c1c99</EMLinkHoverColour>
+      <EMFooterFontFamily>Tahoma, Geneva, sans-serif</EMFooterFontFamily>
+      <EMFooterFontColour>ffffff</EMFooterFontColour>
+      <EMFooterFontSize>10</EMFooterFontSize>
+      <EMFooterLinkColour>ffffff</EMFooterLinkColour>
+      <EMFooterLinkHoverColour>e0e0e0</EMFooterLinkHoverColour>
+      <EMBorderStyle>css/borders/boxed-3.css</EMBorderStyle>
+      <EMContainerColour1>5c1c99</EMContainerColour1>
+      <EMContainerColour2>9045d6</EMContainerColour2>
+      <EMContainerColour3>230540</EMContainerColour3>
+      <EMContainerColour4>a1a1a1</EMContainerColour4>
+      <EMContainerColour5>5c5c5c</EMContainerColour5>
+      <EMContainerColour6>ffffff</EMContainerColour6>
+      <EMContainerColour7>ffffff</EMContainerColour7>
+      <EMContainerColour8>ffffff</EMContainerColour8>
+      <EMContainerTitleFontFamily1>Tahoma, Geneva, sans-serif</EMContainerTitleFontFamily1>
+      <EMContainerTitleFontFamily2>Tahoma, Geneva, sans-serif</EMContainerTitleFontFamily2>
+      <EMContainerTitleFontFamily3>Tahoma, Geneva, sans-serif</EMContainerTitleFontFamily3>
+      <EMContainerTitleFontFamily4 />
+      <EMContainerTitleFontFamily5>Tahoma, Geneva, sans-serif</EMContainerTitleFontFamily5>
+      <EMContainerTitleFontFamily6>Tahoma, Geneva, sans-serif</EMContainerTitleFontFamily6>
+      <EMContainerTitleFontFamily7>Tahoma, Geneva, sans-serif</EMContainerTitleFontFamily7>
+      <EMContainerTitleFontFamily8>Tahoma, Geneva, sans-serif</EMContainerTitleFontFamily8>
+      <EMContainerTitleFontColour1>ffffff</EMContainerTitleFontColour1>
+      <EMContainerTitleFontColour2>ffffff</EMContainerTitleFontColour2>
+      <EMContainerTitleFontColour3>ffffff</EMContainerTitleFontColour3>
+      <EMContainerTitleFontColour4>ffffff</EMContainerTitleFontColour4>
+      <EMContainerTitleFontColour5>ffffff</EMContainerTitleFontColour5>
+      <EMContainerTitleFontColour6>5c1c99</EMContainerTitleFontColour6>
+      <EMContainerTitleFontColour7>5c1c99</EMContainerTitleFontColour7>
+      <EMContainerTitleFontColour8>3d3d3d</EMContainerTitleFontColour8>
+      <EMContainerTitleFontSize1>14</EMContainerTitleFontSize1>
+      <EMContainerTitleFontSize2>14</EMContainerTitleFontSize2>
+      <EMContainerTitleFontSize3>14</EMContainerTitleFontSize3>
+      <EMContainerTitleFontSize4>14</EMContainerTitleFontSize4>
+      <EMContainerTitleFontSize5>14</EMContainerTitleFontSize5>
+      <EMContainerTitleFontSize6>20</EMContainerTitleFontSize6>
+      <EMContainerTitleFontSize7>14</EMContainerTitleFontSize7>
+      <EMContainerTitleFontSize8>14</EMContainerTitleFontSize8>
+</EasyMod>

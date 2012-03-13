@@ -1,0 +1,86 @@
+@import url('css/borders/boxed-3.css');
+#Body { background:#020202 url(images/backgrounds/drnuke_stripe_14.png) repeat left top fixed; }
+p, ul, li, div { font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#1c1c1c; }
+.normal, .Normal, .WizardText { font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#1c1c1c; }
+.NormalBold { font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#1c1c1c; }
+.NormalRed { font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#1c1c1c; }
+a:link, a:visited, a:active { color:#2b83b5; }
+a:hover { color:#11a2f5; }
+select, input, .NormalTextBox { font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#1c1c1c; }
+.Head { font-family:Arial, Helvetica, sans-serif; color:#2b83b5; font-size:16px; }
+.SubHead { font-family:Arial, Helvetica, sans-serif; color:#1c1c1c; font-size:12px; }
+h1 { font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#2b83b5; }
+h2 { font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#2b83b5; }
+h3 { font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#2b83b5; }
+h4 { font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#2b83b5; }
+h5 { font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#2b83b5; }
+h6 { font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#2b83b5; }
+.EMWidth { width:946px; }
+.EMFullHeight { }
+.EMBaseColour1 { background-color:#383838; }
+.EMBaseColour2 { background-color:#11a2f5; }
+.EMBaseColour3 { background-color:#11a2f5; }
+.EMBaseColour4 { background-color:#11a2f5; }
+.EMBaseColour5 { background-color:#11a2f5; }
+.EMBaseColour6 { background-color:#383838; }
+.EMLogoContainer { }
+.EMLanguageContainer { }
+.EMSearchContainer { }
+.EMDateContainer { }
+.EMBreadcrumbContainer { }
+.EMCopyrightContainer { }
+.EMTermsContainer { }
+.EMPrivacyContainer { }
+.EMMainMenuFont { font-family:Arial, Helvetica, sans-serif; }
+.EMSubMenuItemOff { color:#ffffff; }
+.EMSubMenuItemOn { color:#ffffff; }
+.EMSubMenuItemBGOff { background:#383838; }
+.EMSubMenuItemBGOn { background:#11a2f5; }
+.EMMainMenuItemOff { color:#e3e3e3; }
+.EMMainMenuItemOn { color:#ffffff; }
+.EMMenuArrow { }
+.mainmenu-menuitem td img { }
+.mainmenu-menuitem td span img { }
+.EMSubMenuOpacity { opacity:.98; }
+.EMBannerImage { background:url(images/banners/banner-92.jpg) left center no-repeat; }
+.EMBannerImageBG { background:url(images/banners/bg/banner-92.jpg) left center repeat-x; }
+.EMBannerHeight { height:185px; }
+.EMBannerPanePosition { margin:0 0 0 294px; padding:40px 0 0 0; }
+.EMBannerPaneWidth { width:434px; }
+.EMFontFamily { font-family:Arial, Helvetica, sans-serif; }
+.EMFooterFont { font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#ffffff; }
+a.EMFooterFont:link, a.EMFooterFont:visited, a.EMFooterFont:active { color:#ffffff; }
+a.EMFooterFont:hover { color:#2b83b5; }
+.EMContainerColour1 { background-color:#383838; }
+.EMContainerColour2 { background-color:#11a2f5; }
+.EMContainerColour3 { background-color:#11a2f5; }
+.EMContainerColour4 { background-color:#9e9e9e; }
+.EMContainerColour5 { background-color:#ffffff; }
+.EMContainerColour6 { background-color:#ffffff; }
+.EMContainerColour7 { background-color:#ffffff; }
+.EMContainerColour8 { background-color:#ffffff; }
+.EMContainerTitleFontFamily1 { font-family:Arial, Helvetica, sans-serif; }
+.EMContainerTitleFontFamily2 { font-family:Arial, Helvetica, sans-serif; }
+.EMContainerTitleFontFamily3 { font-family:Arial, Helvetica, sans-serif; }
+.EMContainerTitleFontFamily4 { font-family:Arial, Helvetica, sans-serif; }
+.EMContainerTitleFontFamily5 { font-family:Arial, Helvetica, sans-serif; }
+.EMContainerTitleFontFamily6 { font-family:Arial, Helvetica, sans-serif; }
+.EMContainerTitleFontFamily7 { font-family:Arial, Helvetica, sans-serif; }
+.EMContainerTitleFontFamily8 { font-family:Arial, Helvetica, sans-serif; }
+.EMContainerTitleFontColour1 { color:#ffffff; }
+.EMContainerTitleFontColour2 { color:#ffffff; }
+.EMContainerTitleFontColour3 { color:#171717; }
+.EMContainerTitleFontColour4 { color:#ffffff; }
+.EMContainerTitleFontColour5 { color:#1c1c1c; }
+.EMContainerTitleFontColour6 { color:#11a2f5; }
+.EMContainerTitleFontColour7 { color:#9e9e9e; }
+.EMContainerTitleFontColour8 { color:#ffffff; }
+.EMContainerTitleFontSize1 { font-size:14px; }
+.EMContainerTitleFontSize2 { font-size:14px; }
+.EMContainerTitleFontSize3 { font-size:14px; }
+.EMContainerTitleFontSize4 { font-size:14px; }
+.EMContainerTitleFontSize5 { font-size:18px; }
+.EMContainerTitleFontSize6 { font-size:18px; }
+.EMContainerTitleFontSize7 { font-size:18px; }
+.EMContainerTitleFontSize8 { font-size:14px; }
+

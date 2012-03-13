@@ -1,0 +1,11 @@
+The DNN Minimal Extropy Skin is the default skin for DotNetNuke and has been designed to 
+show some of the capabilities available in DotNetNuke.
+
+Minimal Extropy v1.0 Beta includes minimal usage of the new client widget framework.  The final
+release version of the skin will contain more extensive use of widgets to enhance skin functionality
+and provide a working example of the widget framework.
+
+Known issues:
+1.  Limited widget implementation
+2.  May show PNG rendering issues in IE6
+3.  Does not include use of default containers for panes

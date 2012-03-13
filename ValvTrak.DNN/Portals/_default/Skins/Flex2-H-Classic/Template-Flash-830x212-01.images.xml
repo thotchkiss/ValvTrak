@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+
+<data>
+
+<pic  
+path = "http://www.drnuke.co.uk/portals/_default/Flash/Flex2/"
+delay ="140"
+pic = "flex2-830x212-1.jpg"
+gURL = "http://www.snowcovered.com/Snowcovered2/Default.aspx?tabid=242&PackageID=10668&r=934cd35a91"
+URLtarget = "_blank"
+>
+</pic>
+
+<pic  
+path = "http://www.drnuke.co.uk/portals/_default/Flash/Flex2/"
+delay ="140"
+pic = "flex2-830x212-2.jpg"
+gURL = ""
+URLtarget = ""
+>
+</pic>
+
+<pic  
+path = "http://www.drnuke.co.uk/portals/_default/Flash/Flex2/"
+delay ="140"
+pic = "flex2-830x212-3.jpg"
+gURL = "http://www.snowcovered.com/Snowcovered2/Default.aspx?tabid=242&PackageID=10668&r=934cd35a91"
+URLtarget = "_self"
+>
+</pic>
+
+<pic  
+path = "http://www.drnuke.co.uk/portals/_default/Flash/Flex2/"
+delay ="140"
+pic = "flex2-830x212-4.jpg"
+gURL = "http://www.snowcovered.com/Snowcovered2/Default.aspx?tabid=242&PackageID=10668&r=934cd35a91"
+URLtarget = "_self"
+>
+</pic>
+
+</data>

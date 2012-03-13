@@ -1,0 +1,213 @@
+
+/*
+--------------------------------------------------------------
+  CLIENT-SIDE WIDGET STYLES                                     
+--------------------------------------------------------------
+*/
+
+#Layout-ToolBox
+{
+    display: none;
+    padding: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+    /* Toolbox colors remain consistent regardless of color palette selected */
+    border: solid 4px #d2d2d2;
+    background-color: white;
+}
+
+object.VisibilityWidget,
+object.HeaderRotator
+{
+    /* 
+        IE annoyingly displays a visual artifact for some client-side widgets that are
+        not done rendering. This rule hides the object during rendering.
+    */
+    display: none;
+}
+
+#WidgetPanel
+{
+}
+
+#TextSizeWidget,
+#LayoutWidget,
+#ColorPaletteWidget,
+#LanguageObject
+{
+    display: inline;
+    margin-right: 30px;
+}
+
+#LayoutWidget input,
+#TextSizeWidget input,
+#ColorPaletteWidget input
+{
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    border: 0;
+    padding: 0;
+}
+
+#LayoutWidget input.SelectedWidget,
+#TextSizeWidget input.SelectedWidget,
+#ColorPaletteWidget input.SelectedWidget
+{
+    margin-bottom: 20px;
+}
+
+#LayoutWidget input.UnselectedWidget,
+#TextSizeWidget input.UnselectedWidget,
+#ColorPaletteWidget input.UnselectedWidget
+{
+}
+/* Visibility widget */
+
+
+.Layout-Masthead-InfoBar-ToolBoxIcon-Collapsed,
+.Layout-Masthead-InfoBar-ToolBoxIcon-Expanded
+{
+    width: 45px;
+    height: 31px;
+    float: right;
+    margin-top: 15px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: 0;
+    background-color: Transparent;
+}
+
+.Layout-Masthead-InfoBar-ToolBoxIcon-Collapsed
+{
+    background-image: url("toolbox_collapse.png");
+}
+
+.Layout-Masthead-InfoBar-ToolBoxIcon-Expanded
+{
+    background-image: url("toolbox_expand.png");
+}
+
+/* Layout widget */
+
+#LayoutWidget_layout-1024
+{
+    background-image: url("layout-1024.gif");
+}
+
+#LayoutWidget_layout-1400
+{
+    background-image: url("layout-1400.gif");
+}
+
+#LayoutWidget_layout-1680
+{
+    background-image: url("layout-1680.gif");
+}
+
+#LayoutWidget_layout-flex
+{
+    background-image: url("layout-flex.gif");
+}
+
+/* Textsize widget */
+
+#TextSizeWidget_textsize-small
+{
+    background-image: url("textsize-small.gif");
+}
+
+#TextSizeWidget_textsize-medium
+{
+    background-image: url("textsize-medium.gif");
+}
+
+#TextSizeWidget_textsize-large
+{
+    background-image: url("textsize-large.gif");
+}
+
+/* Color palette widget */
+
+#ColorPaletteWidget_blue_palette-blue
+{
+    background-image: url("palette-blue.gif");
+}
+
+#ColorPaletteWidget_teal_palette-teal
+{
+    background-image: url("palette-teal.gif");
+}
+
+#ColorPaletteWidget_brown_palette-brown
+{
+    background-image: url("palette-brown.gif");
+}
+
+#ColorPaletteWidget_green_palette-green
+{
+    background-image: url("palette-green.gif");
+}
+
+#ColorPaletteWidget_pink_palette-pink
+{
+    background-image: url("palette-pink.gif");
+}
+
+#ColorPaletteWidget_red_palette-red
+{
+    background-image: url("palette-red.gif");
+}
+
+#ColorPaletteWidget_orange_palette-orange
+{
+    background-image: url("palette-orange.gif");
+}
+
+#ColorPaletteWidget_grayscale_palette-grayscale
+{
+    background-image: url("palette-grayscale.gif");
+}
+
+#ColorPaletteWidget_bluepink_palette-bluepink
+{
+    background-image: url("palette-bluepink.gif");
+}
+
+#ColorPaletteWidget_greenorange_palette-greenorange
+{
+    background-image: url("palette-greenorange.gif");
+}
+
+#ColorPaletteWidget_purpleyellow_palette-purpleyellow
+{
+    background-image: url("palette-purpleyellow.gif");
+}
+
+#ColorPaletteWidget_contrastrust_palette-contrastrust
+{
+    background-image: url("palette-contrastrust.gif");
+}
+
+#ColorPaletteWidget_contrastgold_palette-contrastgold
+{
+    background-image: url("palette-contrastgold.gif");
+}
+
+#ColorPaletteWidget_contrastmagenta_palette-contrastmagenta
+{
+    background-image: url("palette-contrastmagenta.gif");
+}
+
+#ColorPaletteWidget_contrastblack_palette-contrastblack
+{
+    background-image: url("palette-contrastblack.gif");
+}
+
+
+
+

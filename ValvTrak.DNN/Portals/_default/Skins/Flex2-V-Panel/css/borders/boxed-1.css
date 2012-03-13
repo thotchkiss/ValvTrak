@@ -1,0 +1,50 @@
+/*---------------------------------------------------------*/
+/*  ___      _  _      _               ___ _          ___  */
+/* |   \ _ _| \| |_  _| |_____   ___  | __| |_____ __|_  ) */
+/* | |) | '_| .` | || | / / -_) |___| | _|| / -_) \ / / /  */
+/* |___/|_| |_|\_|\_,_|_\_\___|       |_| |_\___/_\_\/___| */
+/*                                                         */
+/*      Skin Styles for DotNetNuke - Flex2 by DrNuke       */
+/*              http://www.DrNuke.co.uk/flex2              */
+/*       Copyright DrNuke Ltd - All rights reserved        */
+/*---------------------------------------------------------*/
+
+/*----------------------------------------------------*/
+/* Boxed											  */
+/*----------------------------------------------------*/
+.EMSkinTable { margin:0; padding:0; }
+.EMSkinTL { width:18px; height:27px; background:url(../../images/borders/boxed-1/tl.png) no-repeat bottom; margin:0; padding:0; }
+.EMSkinTL img { width:18px; height:27px; }
+.EMSkinTL2 { width:12px; height:27px; background:url(../../images/borders/boxed-1/tl2.png) no-repeat bottom; margin:0; padding:0; }
+.EMSkinTL2 img { width:12px; height:27px; }
+.EMSkinT { height:27px; background:url(../../images/borders/boxed-1/t.png) repeat-x bottom; margin:0; padding:0; }
+.EMSkinT img { height:27px; }
+.EMSkinTR { width:18px; height:27px; background:url(../../images/borders/boxed-1/tr.png) no-repeat bottom; margin:0; padding:0; }
+.EMSkinTR img { width:18px; height:27px; }
+.EMSkinTR2 { width:12px; height:27px; background:url(../../images/borders/boxed-1/tr2.png) no-repeat bottom; margin:0; padding:0; }
+.EMSkinTR2 img { width:12px; height:27px; }
+.EMSkinL { width:18px; background:url(../../images/borders/boxed-1/l.png) repeat-y top left; }
+.EMSkinL img { width:18px; height:1px; }
+.EMSkinM { background:#ffffff; vertical-align:top; }
+.EMSkinR { width:18px; background:url(../../images/borders/boxed-1/r.png) repeat-y top right; }
+.EMSkinR img { width:18px; height:1px; }
+.EMSkinBL { width:18px; height:27px; vertical-align:top; background:url(../../images/borders/boxed-1/bl.png) no-repeat top; margin:0; padding:0; }
+.EMSkinBL img { width:18px; height:27px; }
+.EMSkinBL2 { width:12px; height:27px; vertical-align:top; background:url(../../images/borders/boxed-1/bl2.png) no-repeat top left; margin:0; padding:0; }
+.EMSkinBL2 img { width:12px; height:27px; }
+.EMSkinB { height:27px; background:url(../../images/borders/boxed-1/b.png) repeat-x top; margin:0; }
+.EMSkinB img { width:12px; height:27px; }
+.EMSkinBR { width:18px; height:27px; vertical-align:top; background:url(../../images/borders/boxed-1/br.png) no-repeat top; margin:0; padding:0; }
+.EMSkinBR img { width:18px; height:27px; }
+.EMSkinBR2 { width:12px; height:27px; vertical-align:top; background:url(../../images/borders/boxed-1/br2.png) no-repeat top right; margin:0; padding:0; }
+.EMSkinBR2 img { width:12px; height:27px; }
+.EMSkinBL3 { width:18px; height:27px; vertical-align:top; background:url() repeat-y top left; margin:0; padding:0; }
+.EMSkinBL3 img { width:18px; height:27px; }
+.EMSkinBR3 { width:18px; height:27px; vertical-align:top; background:url() repeat-y top right; margin:0; padding:0; }
+.EMSkinBR3 img { width:18px; height:27px; }
+.EMSkinB3 { background:none; }
+
+/* End Style Sheet */
+/*----------------------------------------------------*/
+
+

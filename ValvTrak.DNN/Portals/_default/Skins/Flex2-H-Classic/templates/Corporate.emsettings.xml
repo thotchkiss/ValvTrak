@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EasyMod>
+      <EMSkinName>Flex</EMSkinName>
+      <EMSkinAuthor>DrNuke</EMSkinAuthor>
+      <EMSkinVersion>2.00.00</EMSkinVersion>
+      <EMWidth>820</EMWidth>
+      <EMFullHeight>False</EMFullHeight>
+      <EMBaseColour1>a3a3a3</EMBaseColour1>
+      <EMBaseColour2>991c1c</EMBaseColour2>
+      <EMBaseColour3>991c1c</EMBaseColour3>
+      <EMBaseColour4>991c1c</EMBaseColour4>
+      <EMBaseColour5>991c1c</EMBaseColour5>
+      <EMBaseColour6>991c1c</EMBaseColour6>
+      <EMBaseColour7 />
+      <EMBaseColour8 />
+      <EMBackgroundColour>040404</EMBackgroundColour>
+      <EMBackgroundImage>images/backgrounds/drnuke_bg_10.jpg</EMBackgroundImage>
+      <EMBackgroundImageRepeat>repeat-x</EMBackgroundImageRepeat>
+      <EMBackgroundImageAttachment>fixed</EMBackgroundImageAttachment>
+      <EMBackgroundImagePositionH>left</EMBackgroundImagePositionH>
+      <EMBackgroundImagePositionV>top</EMBackgroundImagePositionV>
+      <EMLogo>True</EMLogo>
+      <EMLanguage>True</EMLanguage>
+      <EMSearch>True</EMSearch>
+      <EMDate>True</EMDate>
+      <EMBreadcrumb>True</EMBreadcrumb>
+      <EMCopyright>True</EMCopyright>
+      <EMTerms>True</EMTerms>
+      <EMPrivacy>True</EMPrivacy>
+      <EMMainMenuFont>Arial, Helvetica, sans-serif</EMMainMenuFont>
+      <EMMainMenuItemOn>ffffff</EMMainMenuItemOn>
+      <EMMainMenuItemOff>ffffff</EMMainMenuItemOff>
+      <EMSubMenuItemOn>ededed</EMSubMenuItemOn>
+      <EMSubMenuItemOff>ffffff</EMSubMenuItemOff>
+      <EMSubMenuItemBGOn>590101</EMSubMenuItemBGOn>
+      <EMSubMenuItemBGOff>991c1c</EMSubMenuItemBGOff>
+      <EMMenuArrow>True</EMMenuArrow>
+      <EMSubMenuOpacity>100</EMSubMenuOpacity>
+      <EMBannerImage>images/banners/banner-60.jpg</EMBannerImage>
+      <EMBannerImageBG>images/banners/bg/banner-60.jpg</EMBannerImageBG>
+      <EMBannerHeight>184</EMBannerHeight>
+      <EMBannerPanePositionTop>45</EMBannerPanePositionTop>
+      <EMBannerPanePositionLeft>388</EMBannerPanePositionLeft>
+      <EMBannerPaneWidth>335</EMBannerPaneWidth>
+      <EMHeadFontFamily>Arial, Helvetica, sans-serif</EMHeadFontFamily>
+      <EMHeadFontColour>696969</EMHeadFontColour>
+      <EMHeadFontSize>16</EMHeadFontSize>
+      <EMSubHeadFontFamily>Arial, Helvetica, sans-serif</EMSubHeadFontFamily>
+      <EMSubHeadFontColour>5c5c5c</EMSubHeadFontColour>
+      <EMSubHeadFontSize>12</EMSubHeadFontSize>
+      <EMHFontFamily1>Arial, Helvetica, sans-serif</EMHFontFamily1>
+      <EMHFontColour1>991c1c</EMHFontColour1>
+      <EMHFontSize1>20</EMHFontSize1>
+      <EMHFontFamily2>Arial, Helvetica, sans-serif</EMHFontFamily2>
+      <EMHFontColour2>991c1c</EMHFontColour2>
+      <EMHFontSize2>18</EMHFontSize2>
+      <EMHFontFamily3>Arial, Helvetica, sans-serif</EMHFontFamily3>
+      <EMHFontColour3>991c1c</EMHFontColour3>
+      <EMHFontSize3>16</EMHFontSize3>
+      <EMHFontFamily4>Arial, Helvetica, sans-serif</EMHFontFamily4>
+      <EMHFontColour4>991c1c</EMHFontColour4>
+      <EMHFontSize4>14</EMHFontSize4>
+      <EMHFontFamily5>Arial, Helvetica, sans-serif</EMHFontFamily5>
+      <EMHFontColour5>991c1c</EMHFontColour5>
+      <EMHFontSize5>11</EMHFontSize5>
+      <EMHFontFamily6>Arial, Helvetica, sans-serif</EMHFontFamily6>
+      <EMHFontColour6>991c1c</EMHFontColour6>
+      <EMHFontSize6>10</EMHFontSize6>
+      <EMFontFamily>Arial, Helvetica, sans-serif</EMFontFamily>
+      <EMFontColour>242424</EMFontColour>
+      <EMFontSize>12</EMFontSize>
+      <EMLinkColour>991c1c</EMLinkColour>
+      <EMLinkHoverColour>991c1c</EMLinkHoverColour>
+      <EMFooterFontFamily>Arial, Helvetica, sans-serif</EMFooterFontFamily>
+      <EMFooterFontColour>ffffff</EMFooterFontColour>
+      <EMFooterFontSize>11</EMFooterFontSize>
+      <EMFooterLinkColour>ffffff</EMFooterLinkColour>
+      <EMFooterLinkHoverColour>e8e8e8</EMFooterLinkHoverColour>
+      <EMBorderStyle>css/borders/boxed-3.css</EMBorderStyle>
+      <EMContainerColour1>991c1c</EMContainerColour1>
+      <EMContainerColour2>5c0b0b</EMContainerColour2>
+      <EMContainerColour3>c25b5b</EMContainerColour3>
+      <EMContainerColour4>a1a1a1</EMContainerColour4>
+      <EMContainerColour5>5c5c5c</EMContainerColour5>
+      <EMContainerColour6>ffffff</EMContainerColour6>
+      <EMContainerColour7>ffffff</EMContainerColour7>
+      <EMContainerColour8>ffffff</EMContainerColour8>
+      <EMContainerTitleFontFamily1>Arial, Helvetica, sans-serif</EMContainerTitleFontFamily1>
+      <EMContainerTitleFontFamily2>Arial, Helvetica, sans-serif</EMContainerTitleFontFamily2>
+      <EMContainerTitleFontFamily3>Arial, Helvetica, sans-serif</EMContainerTitleFontFamily3>
+      <EMContainerTitleFontFamily4>Arial, Helvetica, sans-serif</EMContainerTitleFontFamily4>
+      <EMContainerTitleFontFamily5>Arial, Helvetica, sans-serif</EMContainerTitleFontFamily5>
+      <EMContainerTitleFontFamily6>Arial, Helvetica, sans-serif</EMContainerTitleFontFamily6>
+      <EMContainerTitleFontFamily7>Arial, Helvetica, sans-serif</EMContainerTitleFontFamily7>
+      <EMContainerTitleFontFamily8>Arial, Helvetica, sans-serif</EMContainerTitleFontFamily8>
+      <EMContainerTitleFontColour1>ffffff</EMContainerTitleFontColour1>
+      <EMContainerTitleFontColour2>ffffff</EMContainerTitleFontColour2>
+      <EMContainerTitleFontColour3>ffffff</EMContainerTitleFontColour3>
+      <EMContainerTitleFontColour4>ffffff</EMContainerTitleFontColour4>
+      <EMContainerTitleFontColour5>ffffff</EMContainerTitleFontColour5>
+      <EMContainerTitleFontColour6>991c1c</EMContainerTitleFontColour6>
+      <EMContainerTitleFontColour7>991c1c</EMContainerTitleFontColour7>
+      <EMContainerTitleFontColour8>666666</EMContainerTitleFontColour8>
+      <EMContainerTitleFontSize1>14</EMContainerTitleFontSize1>
+      <EMContainerTitleFontSize2>14</EMContainerTitleFontSize2>
+      <EMContainerTitleFontSize3>14</EMContainerTitleFontSize3>
+      <EMContainerTitleFontSize4>14</EMContainerTitleFontSize4>
+      <EMContainerTitleFontSize5>14</EMContainerTitleFontSize5>
+      <EMContainerTitleFontSize6>20</EMContainerTitleFontSize6>
+      <EMContainerTitleFontSize7>14</EMContainerTitleFontSize7>
+      <EMContainerTitleFontSize8>14</EMContainerTitleFontSize8>
+</EasyMod>
