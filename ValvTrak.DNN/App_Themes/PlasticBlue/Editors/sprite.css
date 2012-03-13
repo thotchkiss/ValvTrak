@@ -1,0 +1,413 @@
+.dxEditors_edtError_PlasticBlue,
+.dxEditors_edtCalendarPrevYear_PlasticBlue,
+.dxEditors_edtCalendarPrevYearDisabled_PlasticBlue,
+.dxEditors_edtCalendarPrevMonth_PlasticBlue,
+.dxEditors_edtCalendarPrevMonthDisabled_PlasticBlue,
+.dxEditors_edtCalendarNextMonth_PlasticBlue,
+.dxEditors_edtCalendarNextMonthDisabled_PlasticBlue,
+.dxEditors_edtCalendarNextYear_PlasticBlue,
+.dxEditors_edtCalendarNextYearDisabled_PlasticBlue,
+.dxEditors_edtCalendarFNPrevYear_PlasticBlue,
+.dxEditors_edtCalendarFNNextYear_PlasticBlue,
+.dxEditors_edtCheckBoxOn_PlasticBlue,
+.dxEditors_edtCheckBoxOff_PlasticBlue,
+.dxEditors_edtCheckBoxUndefined_PlasticBlue,
+.dxEditors_edtRadioButtonOn_PlasticBlue,
+.dxEditors_edtRadioButtonOff_PlasticBlue,
+.dxEditors_edtRadioButtonUndefined_PlasticBlue,
+.dxEditors_edtEllipsis_PlasticBlue,
+.dxEditors_edtEllipsisDisabled_PlasticBlue,
+.dxEditors_edtDropDown_PlasticBlue,
+.dxEditors_edtDropDownDisabled_PlasticBlue,
+.dxEditors_edtSpinEditIncrementImage_PlasticBlue,
+.dxEditors_edtSpinEditIncrementImageDisabled_PlasticBlue,
+.dxEditors_edtSpinEditDecrementImage_PlasticBlue,
+.dxEditors_edtSpinEditDecrementImageDisabled_PlasticBlue,
+.dxEditors_edtSpinEditLargeIncImage_PlasticBlue,
+.dxEditors_edtSpinEditLargeIncImageDisabled_PlasticBlue,
+.dxEditors_edtSpinEditLargeDecImage_PlasticBlue,
+.dxEditors_edtSpinEditLargeDecImageDisabled_PlasticBlue,
+.dxEditors_fcadd_PlasticBlue,
+.dxEditors_fcaddhot_PlasticBlue,
+.dxEditors_fcremove_PlasticBlue,
+.dxEditors_fcremovehot_PlasticBlue,
+.dxEditors_fcgroupaddcondition_PlasticBlue,
+.dxEditors_fcgroupaddgroup_PlasticBlue,
+.dxEditors_fcgroupremove_PlasticBlue,
+.dxEditors_fcopany_PlasticBlue,
+.dxEditors_fcopbegin_PlasticBlue,
+.dxEditors_fcopbetween_PlasticBlue,
+.dxEditors_fcopcontain_PlasticBlue,
+.dxEditors_fcopnotcontain_PlasticBlue,
+.dxEditors_fcopnotequal_PlasticBlue,
+.dxEditors_fcopend_PlasticBlue,
+.dxEditors_fcopequal_PlasticBlue,
+.dxEditors_fcopgreater_PlasticBlue,
+.dxEditors_fcopgreaterorequal_PlasticBlue,
+.dxEditors_fcopnotblank_PlasticBlue,
+.dxEditors_fcopblank_PlasticBlue,
+.dxEditors_fcopless_PlasticBlue,
+.dxEditors_fcoplessorequal_PlasticBlue,
+.dxEditors_fcoplike_PlasticBlue,
+.dxEditors_fcopnotany_PlasticBlue,
+.dxEditors_fcopnotbetween_PlasticBlue,
+.dxEditors_fcopnotlike_PlasticBlue,
+.dxEditors_fcgroupand_PlasticBlue,
+.dxEditors_fcgroupor_PlasticBlue,
+.dxEditors_fcgroupnotand_PlasticBlue,
+.dxEditors_fcgroupnotor_PlasticBlue {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxEditors_edtError_PlasticBlue {
+    background-position: -170px 0px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxEditors_edtCalendarPrevYear_PlasticBlue {
+    background-position: -76px 0px;
+    width: 13px;
+    height: 7px;
+}
+
+.dxEditors_edtCalendarPrevYearDisabled_PlasticBlue {
+    background-position: -76px -20px;
+    width: 13px;
+    height: 7px;
+}
+
+.dxEditors_edtCalendarPrevMonth_PlasticBlue {
+    background-position: -57px 0px;
+    width: 9px;
+    height: 7px;
+}
+
+.dxEditors_edtCalendarPrevMonthDisabled_PlasticBlue {
+    background-position: -57px -20px;
+    width: 9px;
+    height: 7px;
+}
+
+.dxEditors_edtCalendarNextMonth_PlasticBlue {
+    background-position: -19px 0px;
+    width: 9px;
+    height: 7px;
+}
+
+.dxEditors_edtCalendarNextMonthDisabled_PlasticBlue {
+    background-position: -19px -20px;
+    width: 9px;
+    height: 7px;
+}
+
+.dxEditors_edtCalendarNextYear_PlasticBlue {
+    background-position: -38px 0px;
+    width: 13px;
+    height: 7px;
+}
+
+.dxEditors_edtCalendarNextYearDisabled_PlasticBlue {
+    background-position: -38px -20px;
+    width: 13px;
+    height: 7px;
+}
+
+.dxEditors_edtCalendarFNPrevYear_PlasticBlue {
+    background-position: 0px 0px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxEditors_edtCalendarFNNextYear_PlasticBlue {
+    background-position: 0px -20px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxEditors_edtCheckBoxOn_PlasticBlue {
+    background-position: -23px -44px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxEditors_edtCheckBoxOff_PlasticBlue {
+    background-position: 0px -44px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxEditors_edtCheckBoxUndefined_PlasticBlue {
+    background-position: -46px -44px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxEditors_edtRadioButtonOn_PlasticBlue {
+    background-position: -91px -44px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxEditors_edtRadioButtonOff_PlasticBlue {
+    background-position: -69px -44px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxEditors_edtRadioButtonUndefined_PlasticBlue {
+    background-position: -113px -44px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxEditors_edtEllipsis_PlasticBlue {
+    background-position: -113px 0px;
+    width: 10px;
+    height: 2px;
+}
+
+.dxEditors_edtEllipsisDisabled_PlasticBlue {
+    background-position: -113px -22px;
+    width: 10px;
+    height: 2px;
+}
+
+.dxEditors_edtDropDown_PlasticBlue {
+    background-position: -95px 0px;
+    width: 9px;
+    height: 6px;
+}
+
+.dxEditors_edtDropDownDisabled_PlasticBlue {
+    background-position: -95px -22px;
+    width: 9px;
+    height: 6px;
+}
+
+.dxEditors_edtSpinEditIncrementImage_PlasticBlue {
+    background-position: -150px 0px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxEditors_edtSpinEditIncrementImageDisabled_PlasticBlue {
+    background-position: -150px -13px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxEditors_edtSpinEditDecrementImage_PlasticBlue {
+    background-position: -132px 0px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxEditors_edtSpinEditDecrementImageDisabled_PlasticBlue {
+    background-position: -132px -13px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxEditors_edtSpinEditLargeIncImage_PlasticBlue {
+    background-position: -145px -26px;
+    width: 5px;
+    height: 7px;
+}
+
+.dxEditors_edtSpinEditLargeIncImageDisabled_PlasticBlue {
+    background-position: -171px -26px;
+    width: 5px;
+    height: 7px;
+}
+
+.dxEditors_edtSpinEditLargeDecImage_PlasticBlue {
+    background-position: -132px -26px;
+    width: 5px;
+    height: 7px;
+}
+
+.dxEditors_edtSpinEditLargeDecImageDisabled_PlasticBlue {
+    background-position: -158px -26px;
+    width: 5px;
+    height: 7px;
+}
+
+.dxEditors_fcadd_PlasticBlue {
+    background-position: 0px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcaddhot_PlasticBlue {
+    background-position: -21px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcremove_PlasticBlue {
+    background-position: -42px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcremovehot_PlasticBlue {
+    background-position: -63px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupaddcondition_PlasticBlue {
+    background-position: -168px -46px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupaddgroup_PlasticBlue {
+    background-position: -147px -46px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupremove_PlasticBlue {
+    background-position: -126px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopany_PlasticBlue {
+    background-position: 0px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopbegin_PlasticBlue {
+    background-position: -42px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopbetween_PlasticBlue {
+    background-position: -84px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopcontain_PlasticBlue {
+    background-position: -105px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotcontain_PlasticBlue {
+    background-position: -147px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotequal_PlasticBlue {
+    background-position: -168px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopend_PlasticBlue {
+    background-position: -63px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopequal_PlasticBlue {
+    background-position: 0px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopgreater_PlasticBlue {
+    background-position: -21px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopgreaterorequal_PlasticBlue {
+    background-position: -42px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotblank_PlasticBlue {
+    background-position: -105px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopblank_PlasticBlue {
+    background-position: -126px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopless_PlasticBlue {
+    background-position: -63px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcoplessorequal_PlasticBlue {
+    background-position: -84px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcoplike_PlasticBlue {
+    background-position: -126px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotany_PlasticBlue {
+    background-position: -21px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotbetween_PlasticBlue {
+    background-position: -147px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotlike_PlasticBlue {
+    background-position: -168px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupand_PlasticBlue {
+    background-position: -84px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupor_PlasticBlue {
+    background-position: -168px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupnotand_PlasticBlue {
+    background-position: -105px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupnotor_PlasticBlue {
+    background-position: -147px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+

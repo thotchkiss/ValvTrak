@@ -1,0 +1,22 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxwgv" Namespace="DevExpress.Web.ASPxGridView" Assembly="DevExpress.Web.ASPxGridView.v10.2" %>
+
+<dxwgv:ASPxGridView runat="server"
+	CssFilePath="{0}/styles.css" CssPostfix="Office2003Blue">
+	<Images SpriteCssFilePath="{0}/sprite.css">
+        <LoadingPanel Url="GridView/Loading.gif"></LoadingPanel>
+        <LoadingPanelOnStatusBar Url="GridView/gvLoadingOnStatusBar.gif"></LoadingPanelOnStatusBar>
+	</Images>	
+    <ImagesFilterControl>
+        <LoadingPanel Url="Editors/Loading.gif"></LoadingPanel>
+    </ImagesFilterControl>
+    <Styles>
+        <Header SortingImageSpacing="5"></Header>
+	<LoadingPanel ImageSpacing="10px" />
+    </Styles>	
+    <StylesEditors>
+        <ProgressBar Height="25px">
+        </ProgressBar>
+    </StylesEditors>
+</dxwgv:ASPxGridView>
+

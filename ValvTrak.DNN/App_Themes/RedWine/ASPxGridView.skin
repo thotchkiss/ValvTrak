@@ -1,0 +1,26 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxgv" Namespace="DevExpress.Web.ASPxGridView" Assembly="DevExpress.Web.ASPxGridView.v10.2" %> 
+
+<dxgv:ASPxGridView runat="server" CssFilePath="{0}/styles.css" CssPostfix="RedWine">
+    <Images SpriteCssFilePath="{0}/sprite.css">
+        <LoadingPanel Url="GridView/Loading.gif"></LoadingPanel>
+        <LoadingPanelOnStatusBar Url="GridView/gvLoadingOnStatusBar.gif"></LoadingPanelOnStatusBar>
+    </Images>
+    <ImagesFilterControl>
+        <LoadingPanel Url="Editors/Loading.gif"></LoadingPanel>
+    </ImagesFilterControl>
+    <ImagesEditors>
+		<DropDownEditDropDown>
+			<SpriteProperties HottrackedCssClass="dxEditors_edtDropDownHover_RedWine" />
+		</DropDownEditDropDown>
+    </ImagesEditors>  
+    <SettingsLoadingPanel Text="" />
+    <SettingsPager CurrentPageNumberFormat="{0}">
+    </SettingsPager>
+    <StylesEditors>
+        <ProgressBar Height="25px">
+        </ProgressBar>
+        <CalendarHeader Spacing="1px">
+        </CalendarHeader>
+    </StylesEditors>
+</dxgv:ASPxGridView>

@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SRD" EntityNamespace="Rawson.Data.Model" ContextNamespace="Rawson.Data" Class="ValvTrakDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=localhost;Initial Catalog=SRD;User ID=srd;Password=HOmLF1L8" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ClientContactPositions" Member="ClientContactPositions">
+    <Type Name="ClientContactPosition">
+      <Column Name="ClientContactPositionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContactPosition" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="ClientContactPosition_ClientLocationContact" Member="ClientLocationContacts" ThisKey="ClientContactPositionID" OtherKey="ClientContactPositionID" Type="ClientLocationContact" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientContacts" Member="ClientContacts">
+    <Type Name="ClientContact">
+      <Column Name="ClientContactID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WorkPhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CellPhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="ClientContact_ClientLocationContact" Member="ClientLocationContacts" ThisKey="ClientContactID" OtherKey="ClientContactID" Type="ClientLocationContact" />
+      <Association Name="Client_ClientContact" Member="Client" ThisKey="ClientID" OtherKey="ClientID" Type="Client" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientLocationContacts" Member="ClientLocationContacts">
+    <Type Name="ClientLocationContact">
+      <Column Name="ClientLocationContactID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientLocationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClientContactID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClientContactPositionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientContactPosition_ClientLocationContact" Member="ClientContactPosition" ThisKey="ClientContactPositionID" OtherKey="ClientContactPositionID" Type="ClientContactPosition" IsForeignKey="true" />
+      <Association Name="ClientContact_ClientLocationContact" Member="ClientContact" ThisKey="ClientContactID" OtherKey="ClientContactID" Type="ClientContact" IsForeignKey="true" />
+      <Association Name="ClientLocation_ClientLocationContact" Member="ClientLocation" ThisKey="ClientLocationID" OtherKey="ClientLocationID" Type="ClientLocation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientLocations" Member="ClientLocations">
+    <Type Name="ClientLocation">
+      <Column Name="ClientLocationID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ClientID" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ClientLocationTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PropertyNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="State" Type="System.String" DbType="VarChar(2)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ZipCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Longitude" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Latitude" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ServiceDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="Version" AutoSync="Never" Type="System.Byte[]" DbType="Timestamp NOT NULL" CanBeNull="false" UpdateCheck="WhenChanged" IsVersion="true" />
+      <Association Name="ClientLocation_ClientLocationContact" Member="ClientLocationContacts" ThisKey="ClientLocationID" OtherKey="ClientLocationID" Type="ClientLocationContact" />
+      <Association Name="ClientLocation_Job" Member="Jobs" ThisKey="ClientLocationID" OtherKey="ClientLocationID" Type="Job" />
+      <Association Name="ClientLocation_ServiceItem" Member="ServiceItems" ThisKey="ClientLocationID" OtherKey="ClientLocationID" Type="ServiceItem" />
+      <Association Name="Client_ClientLocation" Member="Client" ThisKey="ClientID" OtherKey="ClientID" Type="Client" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Clients" Member="Clients">
+    <Type Name="Client">
+      <Column Name="ClientID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="State" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ZipCode" Type="System.String" DbType="VarChar(15)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Website" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="SysProNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="Version" AutoSync="Never" Type="System.Byte[]" DbType="Timestamp NOT NULL" CanBeNull="false" UpdateCheck="WhenChanged" IsVersion="true" />
+      <Association Name="Client_ClientContact" Member="ClientContacts" ThisKey="ClientID" OtherKey="ClientID" Type="ClientContact" />
+      <Association Name="Client_ClientLocation" Member="ClientLocations" ThisKey="ClientID" OtherKey="ClientID" Type="ClientLocation" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeliveryMethods" Member="DeliveryMethods">
+    <Type Name="DeliveryMethod">
+      <Column Name="DeliveryMethodID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Method" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="DeliveryMethod_Job" Member="Jobs" ThisKey="DeliveryMethodID" OtherKey="DeliveryMethodID" Type="Job" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GreasingRecordItems" Member="GreasingRecordItems">
+    <Type Name="GreasingRecordItem">
+      <Column Name="GreasingRecordItemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="GreasingRecordID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ServiceItemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ValveLocation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ActuatorInspected" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ActuatorLubed" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PercentCycled" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ValveSecured" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="FlangeOrScrew" Type="System.Char" DbType="Char(1)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="EaseOfOperation" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SeatsChecked" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SeatsLubed" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Leaking" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="LubeTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="AmountInjected" Type="System.Single" DbType="Float" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(200)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Version" AutoSync="Never" Type="System.Byte[]" DbType="Timestamp NOT NULL" CanBeNull="false" UpdateCheck="WhenChanged" IsVersion="true" />
+      <Association Name="GreasingRecord_GreasingRecordItem" Member="GreasingRecord" ThisKey="GreasingRecordID" OtherKey="GreasingRecordID" Type="GreasingRecord" IsForeignKey="true" />
+      <Association Name="ServiceItem_GreasingRecordItem" Member="ServiceItem" ThisKey="ServiceItemID" OtherKey="ServiceItemID" Type="ServiceItem" IsForeignKey="true" />
+      <Association Name="Employee_GreasingRecordItem" Member="Employee" ThisKey="ModifiedBy" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GreasingRecords" Member="GreasingRecords">
+    <Type Name="GreasingRecord">
+      <Column Name="GreasingRecordID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="JobID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ClientFieldOffice" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PipelineSegment" Type="System.String" DbType="VarChar(100)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Field" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SapPSV" Storage="_SapEquipNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="FSRNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Version" AutoSync="Never" Type="System.Byte[]" DbType="Timestamp NOT NULL" CanBeNull="false" UpdateCheck="WhenChanged" IsVersion="true" />
+      <Association Name="GreasingRecord_GreasingRecordItem" Member="GreasingRecordItems" ThisKey="GreasingRecordID" OtherKey="GreasingRecordID" Type="GreasingRecordItem" />
+      <Association Name="Job_GreasingRecord" Member="Job" ThisKey="JobID" OtherKey="JobID" Type="Job" IsForeignKey="true" />
+      <Association Name="Employee_GreasingRecord" Member="Employee" ThisKey="CreatedBy" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+      <Association Name="Employee_GreasingRecord1" Member="Employee1" ThisKey="ModifiedBy" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobAssignments" Member="JobAssignments">
+    <Type Name="JobAssignment">
+      <Column Name="JobAssignmentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JobID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobNotes" Member="JobNotes">
+    <Type Name="JobNote">
+      <Column Name="JobNotesID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="JobID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Jobs" Member="Jobs">
+    <Type Name="Job">
+      <Column Name="JobID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="SalesOrderNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SapWoNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CallDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="RequestedByID" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="JobTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ClientLocationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="JobStatusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ServiceDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CompletionDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="AssignedByID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="AssignedToID" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ApprovedByID" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="DeliveryMethodID" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PM" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="NP" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="FS" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="DotNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="VRstamp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="Version" AutoSync="Never" Type="System.Byte[]" CanBeNull="false" UpdateCheck="WhenChanged" IsVersion="true" />
+      <Association Name="Job_GreasingRecord" Member="GreasingRecords" ThisKey="JobID" OtherKey="JobID" Type="GreasingRecord" />
+      <Association Name="Job_ValveTest" Member="ValveTests" ThisKey="JobID" OtherKey="JobID" Type="ValveTest" />
+      <Association Name="Job_WellSafetyTest" Member="WellSafetyTests" ThisKey="JobID" OtherKey="JobID" Type="WellSafetyTest" />
+      <Association Name="Job_ChemicalPumpTest" Member="ChemicalPumpTests" ThisKey="JobID" OtherKey="JobID" Type="ChemicalPumpTest" />
+      <Association Name="ClientLocation_Job" Member="ClientLocation" ThisKey="ClientLocationID" OtherKey="ClientLocationID" Type="ClientLocation" IsForeignKey="true" />
+      <Association Name="DeliveryMethod_Job" Member="DeliveryMethod" ThisKey="DeliveryMethodID" OtherKey="DeliveryMethodID" Type="DeliveryMethod" IsForeignKey="true" />
+      <Association Name="JobStatus_Job" Member="JobStatus" ThisKey="JobStatusID" OtherKey="JobStatusID" Type="JobStatus" IsForeignKey="true" />
+      <Association Name="JobType_Job" Member="JobType" ThisKey="JobTypeID" OtherKey="JobTypeID" Type="JobType" IsForeignKey="true" />
+      <Association Name="Employee_Job" Member="Employee" ThisKey="RequestedByID" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+      <Association Name="Employee_Job1" Member="Employee1" ThisKey="CreatedBy" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+      <Association Name="Employee_Job2" Member="Employee2" ThisKey="AssignedByID" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+      <Association Name="Employee_Job3" Member="Employee3" ThisKey="AssignedToID" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+      <Association Name="Employee_Job4" Member="Employee4" ThisKey="ApprovedByID" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobStatus" Member="JobStatus">
+    <Type Name="JobStatus">
+      <Column Name="JobStatusID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Sequence" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="JobStatus_Job" Member="Jobs" ThisKey="JobStatusID" OtherKey="JobStatusID" Type="Job" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobTypes" Member="JobTypes">
+    <Type Name="JobType">
+      <Column Name="JobTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="JobType_Job" Member="Jobs" ThisKey="JobTypeID" OtherKey="JobTypeID" Type="Job" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Lists" Member="Lists">
+    <Type Name="List">
+      <Column Name="ListID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ListKey" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ListValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SortOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Display1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Display2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Abbr" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="SysCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="List_ValveTest" Member="ValveTests" ThisKey="ListID" OtherKey="CapacityTypeID" Type="ValveTest" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ManufacturerModels" Member="ManufacturerModels">
+    <Type Name="ManufacturerModel">
+      <Column Name="ManufacturerModelID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ManufacturerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="Version" AutoSync="Never" Type="System.Byte[]" DbType="Timestamp NOT NULL" CanBeNull="false" UpdateCheck="Always" IsVersion="true" />
+      <Association Name="ManufacturerModel_ServiceItem" Member="ServiceItems" ThisKey="ManufacturerModelID" OtherKey="ManufacturerModelID" Type="ServiceItem" />
+      <Association Name="Manufacturer_ManufacturerModel" Member="Manufacturer" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="Manufacturer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Manufacturers" Member="Manufacturers">
+    <Type Name="Manufacturer">
+      <Column Name="ManufacturerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="Manufacturer" Member="Name" Storage="_Manufacturer" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="Version" AutoSync="Never" Type="System.Byte[]" DbType="Timestamp NOT NULL" CanBeNull="false" UpdateCheck="Always" IsVersion="true" />
+      <Association Name="Manufacturer_ManufacturerModel" Member="ManufacturerModels" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="ManufacturerModel" />
+      <Association Name="Manufacturer_ServiceItem" Member="ServiceItems" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="ServiceItem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServiceItemCategories" Member="ServiceItemCategories">
+    <Type Name="ServiceItemCategory">
+      <Column Name="ServiceItemCategoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ServiceItemCategory_ServiceItemType" Member="ServiceItemTypes" ThisKey="ServiceItemCategoryID" OtherKey="ServiceItemCategoryID" Type="ServiceItemType" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServiceItems" Member="ServiceItems">
+    <Type Name="ServiceItem">
+      <Column Name="ServiceItemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ServiceItemTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ClientLocationID" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ManufacturerID" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ManufacturerModelID" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SerialNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SapEquipNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Threaded" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Flanged" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="InletSize" Type="System.Decimal" DbType="Decimal(9,3)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="OutletSize" Type="System.Decimal" DbType="Decimal(9,3)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="InletFlangeRating" Type="System.Decimal" DbType="Decimal(9,3)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="OutletFlangeRating" Type="System.Decimal" DbType="Decimal(9,3)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Version" AutoSync="Never" Type="System.Byte[]" DbType="Timestamp NOT NULL" CanBeNull="false" UpdateCheck="WhenChanged" IsVersion="true" />
+      <Association Name="ServiceItem_GreasingRecordItem" Member="GreasingRecordItems" ThisKey="ServiceItemID" OtherKey="ServiceItemID" Type="GreasingRecordItem" />
+      <Association Name="ServiceItem_ValveTest" Member="ValveTests" ThisKey="ServiceItemID" OtherKey="ServiceItemID" Type="ValveTest" />
+      <Association Name="ServiceItem_WellSafetyTest" Member="WellSafetyTests" ThisKey="ServiceItemID" OtherKey="ServiceItemID" Type="WellSafetyTest" />
+      <Association Name="ServiceItem_ChemicalPumpTest" Member="ChemicalPumpTests" ThisKey="ServiceItemID" OtherKey="ServiceItemID" Type="ChemicalPumpTest" />
+      <Association Name="ClientLocation_ServiceItem" Member="ClientLocation" ThisKey="ClientLocationID" OtherKey="ClientLocationID" Type="ClientLocation" IsForeignKey="true" />
+      <Association Name="ManufacturerModel_ServiceItem" Member="ManufacturerModel" ThisKey="ManufacturerModelID" OtherKey="ManufacturerModelID" Type="ManufacturerModel" IsForeignKey="true" />
+      <Association Name="Manufacturer_ServiceItem" Member="Manufacturer" ThisKey="ManufacturerID" OtherKey="ManufacturerID" Type="Manufacturer" IsForeignKey="true" />
+      <Association Name="ServiceItemType_ServiceItem" Member="ServiceItemType" ThisKey="ServiceItemTypeID" OtherKey="ServiceItemTypeID" Type="ServiceItemType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServiceItemTypes" Member="ServiceItemTypes">
+    <Type Name="ServiceItemType">
+      <Column Name="ServiceItemTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceItemCategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ServiceItemType_ServiceItem" Member="ServiceItems" ThisKey="ServiceItemTypeID" OtherKey="ServiceItemTypeID" Type="ServiceItem" />
+      <Association Name="ServiceItemCategory_ServiceItemType" Member="ServiceItemCategory" ThisKey="ServiceItemCategoryID" OtherKey="ServiceItemCategoryID" Type="ServiceItemCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServiceLocationTypes" Member="ServiceLocationTypes">
+    <Type Name="ServiceLocationType">
+      <Column Name="CustomerLocationTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TestResults" Member="TestResults">
+    <Type Name="TestResult">
+      <Column Name="TestResultID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Result" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TestResult_ValveTest" Member="ValveTests" ThisKey="TestResultID" OtherKey="TestResultID" Type="ValveTest" />
+      <Association Name="TestResult_WellSafetyTest" Member="WellSafetyTests" ThisKey="TestResultID" OtherKey="TestResultID" Type="WellSafetyTest" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ValveTests" Member="ValveTests">
+    <Type Name="ValveTest">
+      <Column Name="ValveTestID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="JobID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ServiceItemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="FSRNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="DateTested" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SetPressure" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="BackPressure" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ColdDiffPressure" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="TempCorr" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Capacity" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CapacityTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SealNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="GaugeNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CalibrationDue" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Coded" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ValveDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SetPressureFound" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SetPressureLeft" Type="System.Decimal" DbType="Decimal(9,2)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="TestResultID" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="TechID" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CustomerWitness" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CostCenter" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SapPsv" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PsvApplication" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="IsolationValve" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ReliefValveSupport" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="TestPort" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="WeatherCap" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="DotLocation" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="JsaComplete" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ReviewItems" Type="System.String" DbType="VarChar(500)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Version" AutoSync="Never" Type="System.Byte[]" DbType="Timestamp NOT NULL" CanBeNull="false" UpdateCheck="WhenChanged" IsVersion="true" />
+      <Association Name="Job_ValveTest" Member="Job" ThisKey="JobID" OtherKey="JobID" Type="Job" IsForeignKey="true" />
+      <Association Name="List_ValveTest" Member="List" ThisKey="CapacityTypeID" OtherKey="ListID" Type="List" IsForeignKey="true" />
+      <Association Name="ServiceItem_ValveTest" Member="ServiceItem" ThisKey="ServiceItemID" OtherKey="ServiceItemID" Type="ServiceItem" IsForeignKey="true" />
+      <Association Name="TestResult_ValveTest" Member="TestResult" ThisKey="TestResultID" OtherKey="TestResultID" Type="TestResult" IsForeignKey="true" />
+      <Association Name="Employee_ValveTest" Member="Employee" ThisKey="TechID" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+      <Association Name="Employee_ValveTest1" Member="Employee1" ThisKey="CreatedBy" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+      <Association Name="Employee_ValveTest2" Member="Employee2" ThisKey="ModifiedBy" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WellSafetyTests" Member="WellSafetyTests">
+    <Type Name="WellSafetyTest">
+      <Column Name="WellSafetyTestID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="JobID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ServiceItemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="FSR_Num" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SSV_SAP_Num" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="FormDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="BodyMaterial" Type="System.String" DbType="VarChar(2)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PlugMaterial" Type="System.String" DbType="VarChar(2)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SteamMaterial" Type="System.String" DbType="VarChar(2)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="GateMaterial" Type="System.String" DbType="VarChar(2)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PortSize" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PressClass" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ActuatorType" Type="System.String" DbType="VarChar(2)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ActuatorModel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ActuatorSerialNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="AirSupplyMedium" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Condition" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="DateManufactured" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SystemLocation" Type="System.String" DbType="VarChar(3)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ControllerType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="HI" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="LO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CustomerWitness" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ManualOverride" Type="System.String" DbType="VarChar(3)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="TestResultID" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Version" AutoSync="Never" Type="System.Byte[]" DbType="Timestamp NOT NULL" CanBeNull="false" UpdateCheck="WhenChanged" IsVersion="true" />
+      <Association Name="Job_WellSafetyTest" Member="Job" ThisKey="JobID" OtherKey="JobID" Type="Job" IsForeignKey="true" />
+      <Association Name="ServiceItem_WellSafetyTest" Member="ServiceItem" ThisKey="ServiceItemID" OtherKey="ServiceItemID" Type="ServiceItem" IsForeignKey="true" />
+      <Association Name="TestResult_WellSafetyTest" Member="TestResult" ThisKey="TestResultID" OtherKey="TestResultID" Type="TestResult" IsForeignKey="true" />
+      <Association Name="Employee_WellSafetyTest" Member="Employee" ThisKey="ModifiedBy" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+      <Association Name="Employee_WellSafetyTest1" Member="Employee1" ThisKey="CreatedBy" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employees" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="UserID" Storage="_UserId" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="WorkPhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CellPhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="EFC_LocationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="Version" AutoSync="Never" Type="System.Byte[]" DbType="Timestamp NOT NULL" CanBeNull="false" UpdateCheck="Always" IsVersion="true" />
+      <Association Name="Employee_GreasingRecordItem" Member="GreasingRecordItems" ThisKey="EmployeeID" OtherKey="ModifiedBy" Type="GreasingRecordItem" />
+      <Association Name="Employee_GreasingRecord" Member="GreasingRecords" ThisKey="EmployeeID" OtherKey="CreatedBy" Type="GreasingRecord" />
+      <Association Name="Employee_GreasingRecord1" Member="GreasingRecords1" ThisKey="EmployeeID" OtherKey="ModifiedBy" Type="GreasingRecord" />
+      <Association Name="Employee_Job" Member="Jobs" ThisKey="EmployeeID" OtherKey="RequestedByID" Type="Job" />
+      <Association Name="Employee_Job1" Member="Jobs1" ThisKey="EmployeeID" OtherKey="CreatedBy" Type="Job" />
+      <Association Name="Employee_Job2" Member="Jobs2" ThisKey="EmployeeID" OtherKey="AssignedByID" Type="Job" />
+      <Association Name="Employee_Job3" Member="Jobs3" ThisKey="EmployeeID" OtherKey="AssignedToID" Type="Job" />
+      <Association Name="Employee_Job4" Member="Jobs4" ThisKey="EmployeeID" OtherKey="ApprovedByID" Type="Job" />
+      <Association Name="Employee_ValveTest" Member="ValveTests" ThisKey="EmployeeID" OtherKey="TechID" Type="ValveTest" />
+      <Association Name="Employee_ValveTest1" Member="ValveTests1" ThisKey="EmployeeID" OtherKey="CreatedBy" Type="ValveTest" />
+      <Association Name="Employee_ValveTest2" Member="ValveTests2" ThisKey="EmployeeID" OtherKey="ModifiedBy" Type="ValveTest" />
+      <Association Name="Employee_WellSafetyTest" Member="WellSafetyTests" ThisKey="EmployeeID" OtherKey="ModifiedBy" Type="WellSafetyTest" />
+      <Association Name="Employee_WellSafetyTest1" Member="WellSafetyTests1" ThisKey="EmployeeID" OtherKey="CreatedBy" Type="WellSafetyTest" />
+      <Association Name="Employee_ChemicalPumpTest" Member="ChemicalPumpTests" ThisKey="EmployeeID" OtherKey="CreatedBy" Type="ChemicalPumpTest" />
+      <Association Name="Employee_ChemicalPumpTest1" Member="ChemicalPumpTests1" ThisKey="EmployeeID" OtherKey="ModifiedBy" Type="ChemicalPumpTest" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChemicalPumpTests" Member="ChemicalPumpTests">
+    <Type Name="ChemicalPumpTest">
+      <Column Name="ChemicalPumpTestID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="JobID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="FSR_Num" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ServiceItemID" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Contact" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ChemicalBeingPumped" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PumpVolumeSetting" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Voltage" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SolarPanelWattage" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="HeadSize" Type="System.Decimal" DbType="Decimal(9,5)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="SupplyPressure" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="DischargePressure" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="FlowlinePressure" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="TubingPressure" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CasingPressure" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PipelinePressure" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Version" AutoSync="Never" Type="System.Byte[]" CanBeNull="false" UpdateCheck="Always" IsVersion="true" />
+      <Association Name="ServiceItem_ChemicalPumpTest" Member="ServiceItem" ThisKey="ServiceItemID" OtherKey="ServiceItemID" Type="ServiceItem" IsForeignKey="true" />
+      <Association Name="Employee_ChemicalPumpTest" Member="Employee" ThisKey="CreatedBy" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+      <Association Name="Employee_ChemicalPumpTest1" Member="Employee1" ThisKey="ModifiedBy" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+      <Association Name="Job_ChemicalPumpTest" Member="Job" ThisKey="JobID" OtherKey="JobID" Type="Job" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ClientLocations_GetAll" Method="ClientLocations_GetAll">
+    <Parameter Name="ShowSelectAll" Parameter="showSelectAll" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="ClientLocations_GetAllResult">
+      <Column Name="ClientLocationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ValveTest_Report" Method="ValveTest_Report">
+    <Parameter Name="ValveTestID" Parameter="valveTestID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="JobID" Parameter="jobID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientID" Parameter="clientID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LocationID" Parameter="locationID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ClientLocations_GetByClient" Method="ClientLocations_GetByClient">
+    <Parameter Name="ShowSelectAll" Parameter="showSelectAll" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ClientID" Parameter="clientID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ClientLocations_GetByClientResult">
+      <Column Name="ClientLocationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Clients_GetAll" Method="Clients_GetAll">
+    <Parameter Name="ShowSelectAll" Parameter="showSelectAll" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="Clients_GetAllResult">
+      <Column Name="ClientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CustomerAccounts_GetClientList" Method="CustomerAccounts_GetClientList">
+    <Parameter Name="UserID" Parameter="userID" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="CustomerAccounts_GetClientListResult">
+      <Column Name="ClientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClientName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HierarchyLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GreasingRecord_Report" Method="GreasingRecord_Report">
+    <Parameter Name="GreasingRecordID" Parameter="greasingRecordID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="JobID" Parameter="jobID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientID" Parameter="clientID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LocationID" Parameter="locationID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GreasingRecord_ReportResult">
+      <Column Name="GreasingRecordID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="JobID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientFieldOffice" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PipelineSegment" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Field" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SapWO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SapEquipNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FSRNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CompletionDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ClientName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientLocationName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TechnicianID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TechnicianDisplay" Type="System.String" DbType="VarChar(101) NOT NULL" CanBeNull="false" />
+      <Column Name="SalesOrderNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GreasingRecordItems_Report" Method="GreasingRecordItems_Report">
+    <Parameter Name="GreasingRecordID" Parameter="greasingRecordID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.JobIDListByClientOrLocation" Method="JobIDListByClientOrLocation">
+    <Parameter Name="ClientID" Parameter="clientID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientLocationID" Parameter="clientLocationID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="JobIDListByClientOrLocationResult">
+      <Column Name="JobID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="JobDisplay" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

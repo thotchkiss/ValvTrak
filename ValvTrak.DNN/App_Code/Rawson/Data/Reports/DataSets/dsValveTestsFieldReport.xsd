@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsValveTestsFieldReport" targetNamespace="http://tempuri.org/dsValveTestsFieldReport.xsd" xmlns:mstns="http://tempuri.org/dsValveTestsFieldReport.xsd" xmlns="http://tempuri.org/dsValveTestsFieldReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ValvTrakConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ValvTrakConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ValvTrakConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ValvTrakData" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ValvTrakData (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ValvTrakData.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtValveTestsTableAdapter" GeneratorDataComponentClassName="dtValveTestsTableAdapter" Name="dsValveTests" UserDataComponentName="dtValveTestsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ValvTrakData (Web.config)" DbObjectName="SRD.dbo.vw_ValveTests" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ValveTestID, JobID, SalesOrderNum, FSRNum, ClientName, ClientLocationName, ServiceItemID, CostCenter, Latitude, Longitude, Description, DateTested, Model, 
+                         ManufacturerName, Threaded, Flanged, SerialNum, InletSize, OutletSize, InletFlangeRating, OutletFlangeRating, ModelSize, SetPressure, BackPressure, 
+                         ColdDiffPressure, TempCorr, Capacity, CapacityTypeID, CapacityTypeDisplay, SealNum, GaugeNum, CalibrationDue, CodedSource, CodedDisplay, ValveDate, 
+                         IsolationValve, ReliefValveSupport, TestPort, WeatherCap, DotLocation, JsaComplete, SetPressureFound, SetPressureLeft, TestResultID, TestResultDisplay, Notes, 
+                         ReviewItems, TechID, TechnicianID, TechnicianDisplay, CustomerWitness, CreatedBy, CreatedByDisplay, CreatedDate, SapWoNum, SapPsv, SapEquipNum
+FROM            dbo.vw_ValveTests
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ValveTestID" DataSetColumn="ValveTestID" />
+              <Mapping SourceColumn="JobID" DataSetColumn="JobID" />
+              <Mapping SourceColumn="SalesOrderNum" DataSetColumn="SalesOrderNum" />
+              <Mapping SourceColumn="FSRNum" DataSetColumn="FSRNum" />
+              <Mapping SourceColumn="ClientName" DataSetColumn="ClientName" />
+              <Mapping SourceColumn="ClientLocationName" DataSetColumn="ClientLocationName" />
+              <Mapping SourceColumn="ServiceItemID" DataSetColumn="ServiceItemID" />
+              <Mapping SourceColumn="CostCenter" DataSetColumn="CostCenter" />
+              <Mapping SourceColumn="Latitude" DataSetColumn="Latitude" />
+              <Mapping SourceColumn="Longitude" DataSetColumn="Longitude" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="DateTested" DataSetColumn="DateTested" />
+              <Mapping SourceColumn="Model" DataSetColumn="Model" />
+              <Mapping SourceColumn="ManufacturerName" DataSetColumn="ManufacturerName" />
+              <Mapping SourceColumn="Threaded" DataSetColumn="Threaded" />
+              <Mapping SourceColumn="Flanged" DataSetColumn="Flanged" />
+              <Mapping SourceColumn="SerialNum" DataSetColumn="SerialNum" />
+              <Mapping SourceColumn="InletSize" DataSetColumn="InletSize" />
+              <Mapping SourceColumn="OutletSize" DataSetColumn="OutletSize" />
+              <Mapping SourceColumn="InletFlangeRating" DataSetColumn="InletFlangeRating" />
+              <Mapping SourceColumn="OutletFlangeRating" DataSetColumn="OutletFlangeRating" />
+              <Mapping SourceColumn="ModelSize" DataSetColumn="ModelSize" />
+              <Mapping SourceColumn="SetPressure" DataSetColumn="SetPressure" />
+              <Mapping SourceColumn="BackPressure" DataSetColumn="BackPressure" />
+              <Mapping SourceColumn="ColdDiffPressure" DataSetColumn="ColdDiffPressure" />
+              <Mapping SourceColumn="TempCorr" DataSetColumn="TempCorr" />
+              <Mapping SourceColumn="Capacity" DataSetColumn="Capacity" />
+              <Mapping SourceColumn="CapacityTypeID" DataSetColumn="CapacityTypeID" />
+              <Mapping SourceColumn="CapacityTypeDisplay" DataSetColumn="CapacityTypeDisplay" />
+              <Mapping SourceColumn="SealNum" DataSetColumn="SealNum" />
+              <Mapping SourceColumn="GaugeNum" DataSetColumn="GaugeNum" />
+              <Mapping SourceColumn="CalibrationDue" DataSetColumn="CalibrationDue" />
+              <Mapping SourceColumn="CodedSource" DataSetColumn="CodedSource" />
+              <Mapping SourceColumn="CodedDisplay" DataSetColumn="CodedDisplay" />
+              <Mapping SourceColumn="ValveDate" DataSetColumn="ValveDate" />
+              <Mapping SourceColumn="IsolationValve" DataSetColumn="IsolationValve" />
+              <Mapping SourceColumn="ReliefValveSupport" DataSetColumn="ReliefValveSupport" />
+              <Mapping SourceColumn="TestPort" DataSetColumn="TestPort" />
+              <Mapping SourceColumn="WeatherCap" DataSetColumn="WeatherCap" />
+              <Mapping SourceColumn="DotLocation" DataSetColumn="DotLocation" />
+              <Mapping SourceColumn="JsaComplete" DataSetColumn="JsaComplete" />
+              <Mapping SourceColumn="SetPressureFound" DataSetColumn="SetPressureFound" />
+              <Mapping SourceColumn="SetPressureLeft" DataSetColumn="SetPressureLeft" />
+              <Mapping SourceColumn="TestResultID" DataSetColumn="TestResultID" />
+              <Mapping SourceColumn="TestResultDisplay" DataSetColumn="TestResultDisplay" />
+              <Mapping SourceColumn="Notes" DataSetColumn="Notes" />
+              <Mapping SourceColumn="ReviewItems" DataSetColumn="ReviewItems" />
+              <Mapping SourceColumn="TechID" DataSetColumn="TechID" />
+              <Mapping SourceColumn="TechnicianID" DataSetColumn="TechnicianID" />
+              <Mapping SourceColumn="TechnicianDisplay" DataSetColumn="TechnicianDisplay" />
+              <Mapping SourceColumn="CustomerWitness" DataSetColumn="CustomerWitness" />
+              <Mapping SourceColumn="CreatedBy" DataSetColumn="CreatedBy" />
+              <Mapping SourceColumn="CreatedByDisplay" DataSetColumn="CreatedByDisplay" />
+              <Mapping SourceColumn="CreatedDate" DataSetColumn="CreatedDate" />
+              <Mapping SourceColumn="SapWoNum" DataSetColumn="SapWoNum" />
+              <Mapping SourceColumn="SapPsv" DataSetColumn="SapPsv" />
+              <Mapping SourceColumn="SapEquipNum" DataSetColumn="SapEquipNum" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsValveTestsFieldReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsValveTestsFieldReport" msprop:Generator_UserDSName="dsValveTestsFieldReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsValveTests" msprop:Generator_TableClassName="dsValveTestsDataTable" msprop:Generator_TableVarName="tabledsValveTests" msprop:Generator_TablePropName="dsValveTests" msprop:Generator_RowDeletingName="dsValveTestsRowDeleting" msprop:Generator_UserTableName="dsValveTests" msprop:Generator_RowChangingName="dsValveTestsRowChanging" msprop:Generator_RowEvHandlerName="dsValveTestsRowChangeEventHandler" msprop:Generator_RowDeletedName="dsValveTestsRowDeleted" msprop:Generator_RowEvArgName="dsValveTestsRowChangeEvent" msprop:Generator_RowChangedName="dsValveTestsRowChanged" msprop:Generator_RowClassName="dsValveTestsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ValveTestID" msprop:Generator_ColumnVarNameInTable="columnValveTestID" msprop:Generator_ColumnPropNameInRow="ValveTestID" msprop:Generator_ColumnPropNameInTable="ValveTestIDColumn" msprop:Generator_UserColumnName="ValveTestID" type="xs:int" />
+              <xs:element name="JobID" msprop:Generator_ColumnVarNameInTable="columnJobID" msprop:Generator_ColumnPropNameInRow="JobID" msprop:Generator_ColumnPropNameInTable="JobIDColumn" msprop:Generator_UserColumnName="JobID" type="xs:int" />
+              <xs:element name="SalesOrderNum" msprop:Generator_ColumnVarNameInTable="columnSalesOrderNum" msprop:Generator_ColumnPropNameInRow="SalesOrderNum" msprop:Generator_ColumnPropNameInTable="SalesOrderNumColumn" msprop:Generator_UserColumnName="SalesOrderNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FSRNum" msprop:Generator_ColumnVarNameInTable="columnFSRNum" msprop:Generator_ColumnPropNameInRow="FSRNum" msprop:Generator_ColumnPropNameInTable="FSRNumColumn" msprop:Generator_UserColumnName="FSRNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClientName" msprop:Generator_ColumnVarNameInTable="columnClientName" msprop:Generator_ColumnPropNameInRow="ClientName" msprop:Generator_ColumnPropNameInTable="ClientNameColumn" msprop:Generator_UserColumnName="ClientName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClientLocationName" msprop:Generator_ColumnVarNameInTable="columnClientLocationName" msprop:Generator_ColumnPropNameInRow="ClientLocationName" msprop:Generator_ColumnPropNameInTable="ClientLocationNameColumn" msprop:Generator_UserColumnName="ClientLocationName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceItemID" msprop:Generator_ColumnVarNameInTable="columnServiceItemID" msprop:Generator_ColumnPropNameInRow="ServiceItemID" msprop:Generator_ColumnPropNameInTable="ServiceItemIDColumn" msprop:Generator_UserColumnName="ServiceItemID" type="xs:int" />
+              <xs:element name="CostCenter" msprop:Generator_ColumnVarNameInTable="columnCostCenter" msprop:Generator_ColumnPropNameInRow="CostCenter" msprop:Generator_ColumnPropNameInTable="CostCenterColumn" msprop:Generator_UserColumnName="CostCenter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Latitude" msprop:Generator_ColumnVarNameInTable="columnLatitude" msprop:Generator_ColumnPropNameInRow="Latitude" msprop:Generator_ColumnPropNameInTable="LatitudeColumn" msprop:Generator_UserColumnName="Latitude" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Longitude" msprop:Generator_ColumnVarNameInTable="columnLongitude" msprop:Generator_ColumnPropNameInRow="Longitude" msprop:Generator_ColumnPropNameInTable="LongitudeColumn" msprop:Generator_UserColumnName="Longitude" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateTested" msprop:Generator_ColumnVarNameInTable="columnDateTested" msprop:Generator_ColumnPropNameInRow="DateTested" msprop:Generator_ColumnPropNameInTable="DateTestedColumn" msprop:Generator_UserColumnName="DateTested" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Model" msprop:Generator_ColumnVarNameInTable="columnModel" msprop:Generator_ColumnPropNameInRow="Model" msprop:Generator_ColumnPropNameInTable="ModelColumn" msprop:Generator_UserColumnName="Model" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ManufacturerName" msprop:Generator_ColumnVarNameInTable="columnManufacturerName" msprop:Generator_ColumnPropNameInRow="ManufacturerName" msprop:Generator_ColumnPropNameInTable="ManufacturerNameColumn" msprop:Generator_UserColumnName="ManufacturerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Threaded" msprop:Generator_ColumnVarNameInTable="columnThreaded" msprop:Generator_ColumnPropNameInRow="Threaded" msprop:Generator_ColumnPropNameInTable="ThreadedColumn" msprop:Generator_UserColumnName="Threaded" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Flanged" msprop:Generator_ColumnVarNameInTable="columnFlanged" msprop:Generator_ColumnPropNameInRow="Flanged" msprop:Generator_ColumnPropNameInTable="FlangedColumn" msprop:Generator_UserColumnName="Flanged" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SerialNum" msprop:Generator_ColumnVarNameInTable="columnSerialNum" msprop:Generator_ColumnPropNameInRow="SerialNum" msprop:Generator_ColumnPropNameInTable="SerialNumColumn" msprop:Generator_UserColumnName="SerialNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InletSize" msprop:Generator_ColumnVarNameInTable="columnInletSize" msprop:Generator_ColumnPropNameInRow="InletSize" msprop:Generator_ColumnPropNameInTable="InletSizeColumn" msprop:Generator_UserColumnName="InletSize" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OutletSize" msprop:Generator_ColumnVarNameInTable="columnOutletSize" msprop:Generator_ColumnPropNameInRow="OutletSize" msprop:Generator_ColumnPropNameInTable="OutletSizeColumn" msprop:Generator_UserColumnName="OutletSize" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InletFlangeRating" msprop:Generator_ColumnVarNameInTable="columnInletFlangeRating" msprop:Generator_ColumnPropNameInRow="InletFlangeRating" msprop:Generator_ColumnPropNameInTable="InletFlangeRatingColumn" msprop:Generator_UserColumnName="InletFlangeRating" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OutletFlangeRating" msprop:Generator_ColumnVarNameInTable="columnOutletFlangeRating" msprop:Generator_ColumnPropNameInRow="OutletFlangeRating" msprop:Generator_ColumnPropNameInTable="OutletFlangeRatingColumn" msprop:Generator_UserColumnName="OutletFlangeRating" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ModelSize" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnModelSize" msprop:Generator_ColumnPropNameInRow="ModelSize" msprop:Generator_ColumnPropNameInTable="ModelSizeColumn" msprop:Generator_UserColumnName="ModelSize" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SetPressure" msprop:Generator_ColumnVarNameInTable="columnSetPressure" msprop:Generator_ColumnPropNameInRow="SetPressure" msprop:Generator_ColumnPropNameInTable="SetPressureColumn" msprop:Generator_UserColumnName="SetPressure" type="xs:double" minOccurs="0" />
+              <xs:element name="BackPressure" msprop:Generator_ColumnVarNameInTable="columnBackPressure" msprop:Generator_ColumnPropNameInRow="BackPressure" msprop:Generator_ColumnPropNameInTable="BackPressureColumn" msprop:Generator_UserColumnName="BackPressure" type="xs:double" minOccurs="0" />
+              <xs:element name="ColdDiffPressure" msprop:Generator_ColumnVarNameInTable="columnColdDiffPressure" msprop:Generator_ColumnPropNameInRow="ColdDiffPressure" msprop:Generator_ColumnPropNameInTable="ColdDiffPressureColumn" msprop:Generator_UserColumnName="ColdDiffPressure" type="xs:double" minOccurs="0" />
+              <xs:element name="TempCorr" msprop:Generator_ColumnVarNameInTable="columnTempCorr" msprop:Generator_ColumnPropNameInRow="TempCorr" msprop:Generator_ColumnPropNameInTable="TempCorrColumn" msprop:Generator_UserColumnName="TempCorr" type="xs:double" minOccurs="0" />
+              <xs:element name="Capacity" msprop:Generator_ColumnVarNameInTable="columnCapacity" msprop:Generator_ColumnPropNameInRow="Capacity" msprop:Generator_ColumnPropNameInTable="CapacityColumn" msprop:Generator_UserColumnName="Capacity" type="xs:double" minOccurs="0" />
+              <xs:element name="CapacityTypeID" msprop:Generator_ColumnVarNameInTable="columnCapacityTypeID" msprop:Generator_ColumnPropNameInRow="CapacityTypeID" msprop:Generator_ColumnPropNameInTable="CapacityTypeIDColumn" msprop:Generator_UserColumnName="CapacityTypeID" type="xs:int" minOccurs="0" />
+              <xs:element name="CapacityTypeDisplay" msprop:Generator_ColumnVarNameInTable="columnCapacityTypeDisplay" msprop:Generator_ColumnPropNameInRow="CapacityTypeDisplay" msprop:Generator_ColumnPropNameInTable="CapacityTypeDisplayColumn" msprop:Generator_UserColumnName="CapacityTypeDisplay" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SealNum" msprop:Generator_ColumnVarNameInTable="columnSealNum" msprop:Generator_ColumnPropNameInRow="SealNum" msprop:Generator_ColumnPropNameInTable="SealNumColumn" msprop:Generator_UserColumnName="SealNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GaugeNum" msprop:Generator_ColumnVarNameInTable="columnGaugeNum" msprop:Generator_ColumnPropNameInRow="GaugeNum" msprop:Generator_ColumnPropNameInTable="GaugeNumColumn" msprop:Generator_UserColumnName="GaugeNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CalibrationDue" msprop:Generator_ColumnVarNameInTable="columnCalibrationDue" msprop:Generator_ColumnPropNameInRow="CalibrationDue" msprop:Generator_ColumnPropNameInTable="CalibrationDueColumn" msprop:Generator_UserColumnName="CalibrationDue" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CodedSource" msprop:Generator_ColumnVarNameInTable="columnCodedSource" msprop:Generator_ColumnPropNameInRow="CodedSource" msprop:Generator_ColumnPropNameInTable="CodedSourceColumn" msprop:Generator_UserColumnName="CodedSource" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CodedDisplay" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCodedDisplay" msprop:Generator_ColumnPropNameInRow="CodedDisplay" msprop:Generator_ColumnPropNameInTable="CodedDisplayColumn" msprop:Generator_UserColumnName="CodedDisplay" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValveDate" msprop:Generator_ColumnVarNameInTable="columnValveDate" msprop:Generator_ColumnPropNameInRow="ValveDate" msprop:Generator_ColumnPropNameInTable="ValveDateColumn" msprop:Generator_UserColumnName="ValveDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IsolationValve" msprop:Generator_ColumnVarNameInTable="columnIsolationValve" msprop:Generator_ColumnPropNameInRow="IsolationValve" msprop:Generator_ColumnPropNameInTable="IsolationValveColumn" msprop:Generator_UserColumnName="IsolationValve" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ReliefValveSupport" msprop:Generator_ColumnVarNameInTable="columnReliefValveSupport" msprop:Generator_ColumnPropNameInRow="ReliefValveSupport" msprop:Generator_ColumnPropNameInTable="ReliefValveSupportColumn" msprop:Generator_UserColumnName="ReliefValveSupport" type="xs:int" minOccurs="0" />
+              <xs:element name="TestPort" msprop:Generator_ColumnVarNameInTable="columnTestPort" msprop:Generator_ColumnPropNameInRow="TestPort" msprop:Generator_ColumnPropNameInTable="TestPortColumn" msprop:Generator_UserColumnName="TestPort" type="xs:boolean" minOccurs="0" />
+              <xs:element name="WeatherCap" msprop:Generator_ColumnVarNameInTable="columnWeatherCap" msprop:Generator_ColumnPropNameInRow="WeatherCap" msprop:Generator_ColumnPropNameInTable="WeatherCapColumn" msprop:Generator_UserColumnName="WeatherCap" type="xs:int" minOccurs="0" />
+              <xs:element name="DotLocation" msprop:Generator_ColumnVarNameInTable="columnDotLocation" msprop:Generator_ColumnPropNameInRow="DotLocation" msprop:Generator_ColumnPropNameInTable="DotLocationColumn" msprop:Generator_UserColumnName="DotLocation" type="xs:boolean" minOccurs="0" />
+              <xs:element name="JsaComplete" msprop:Generator_ColumnVarNameInTable="columnJsaComplete" msprop:Generator_ColumnPropNameInRow="JsaComplete" msprop:Generator_ColumnPropNameInTable="JsaCompleteColumn" msprop:Generator_UserColumnName="JsaComplete" type="xs:boolean" />
+              <xs:element name="SetPressureFound" msprop:Generator_ColumnVarNameInTable="columnSetPressureFound" msprop:Generator_ColumnPropNameInRow="SetPressureFound" msprop:Generator_ColumnPropNameInTable="SetPressureFoundColumn" msprop:Generator_UserColumnName="SetPressureFound" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SetPressureLeft" msprop:Generator_ColumnVarNameInTable="columnSetPressureLeft" msprop:Generator_ColumnPropNameInRow="SetPressureLeft" msprop:Generator_ColumnPropNameInTable="SetPressureLeftColumn" msprop:Generator_UserColumnName="SetPressureLeft" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TestResultID" msprop:Generator_ColumnVarNameInTable="columnTestResultID" msprop:Generator_ColumnPropNameInRow="TestResultID" msprop:Generator_ColumnPropNameInTable="TestResultIDColumn" msprop:Generator_UserColumnName="TestResultID" type="xs:int" minOccurs="0" />
+              <xs:element name="TestResultDisplay" msprop:Generator_ColumnVarNameInTable="columnTestResultDisplay" msprop:Generator_ColumnPropNameInRow="TestResultDisplay" msprop:Generator_ColumnPropNameInTable="TestResultDisplayColumn" msprop:Generator_UserColumnName="TestResultDisplay" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Notes" msprop:Generator_ColumnVarNameInTable="columnNotes" msprop:Generator_ColumnPropNameInRow="Notes" msprop:Generator_ColumnPropNameInTable="NotesColumn" msprop:Generator_UserColumnName="Notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReviewItems" msprop:Generator_ColumnVarNameInTable="columnReviewItems" msprop:Generator_ColumnPropNameInRow="ReviewItems" msprop:Generator_ColumnPropNameInTable="ReviewItemsColumn" msprop:Generator_UserColumnName="ReviewItems" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TechID" msprop:Generator_ColumnVarNameInTable="columnTechID" msprop:Generator_ColumnPropNameInRow="TechID" msprop:Generator_ColumnPropNameInTable="TechIDColumn" msprop:Generator_UserColumnName="TechID" type="xs:int" minOccurs="0" />
+              <xs:element name="TechnicianID" msprop:Generator_ColumnVarNameInTable="columnTechnicianID" msprop:Generator_ColumnPropNameInRow="TechnicianID" msprop:Generator_ColumnPropNameInTable="TechnicianIDColumn" msprop:Generator_UserColumnName="TechnicianID" type="xs:int" minOccurs="0" />
+              <xs:element name="TechnicianDisplay" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTechnicianDisplay" msprop:Generator_ColumnPropNameInRow="TechnicianDisplay" msprop:Generator_ColumnPropNameInTable="TechnicianDisplayColumn" msprop:Generator_UserColumnName="TechnicianDisplay" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustomerWitness" msprop:Generator_ColumnVarNameInTable="columnCustomerWitness" msprop:Generator_ColumnPropNameInRow="CustomerWitness" msprop:Generator_ColumnPropNameInTable="CustomerWitnessColumn" msprop:Generator_UserColumnName="CustomerWitness" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" msprop:Generator_UserColumnName="CreatedBy" type="xs:int" minOccurs="0" />
+              <xs:element name="CreatedByDisplay" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCreatedByDisplay" msprop:Generator_ColumnPropNameInRow="CreatedByDisplay" msprop:Generator_ColumnPropNameInTable="CreatedByDisplayColumn" msprop:Generator_UserColumnName="CreatedByDisplay" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" msprop:Generator_UserColumnName="CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SapWoNum" msprop:Generator_ColumnVarNameInTable="columnSapWoNum" msprop:Generator_ColumnPropNameInRow="SapWoNum" msprop:Generator_ColumnPropNameInTable="SapWoNumColumn" msprop:Generator_UserColumnName="SapWoNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SapPsv" msprop:Generator_ColumnVarNameInTable="columnSapPsv" msprop:Generator_ColumnPropNameInRow="SapPsv" msprop:Generator_ColumnPropNameInTable="SapPsvColumn" msprop:Generator_UserColumnName="SapPsv" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SapEquipNum" msprop:Generator_ColumnVarNameInTable="columnSapEquipNum" msprop:Generator_ColumnPropNameInRow="SapEquipNum" msprop:Generator_ColumnPropNameInTable="SapEquipNumColumn" msprop:Generator_UserColumnName="SapEquipNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dsValveTests" />
+      <xs:field xpath="mstns:ValveTestID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

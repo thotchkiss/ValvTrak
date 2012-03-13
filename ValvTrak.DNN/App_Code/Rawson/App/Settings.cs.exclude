@@ -1,0 +1,209 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Collections.Specialized;
+using System.Configuration;
+using System.Threading;
+using Rawson.Data;
+
+namespace Rawson.App
+{
+    public class Settings
+    {
+        /// <summary>
+        /// A shortcut for accessing the application state.
+        /// </summary>
+        public static HttpApplicationState AppState
+        {
+            get
+            {
+                return HttpContext.Current.Application;
+            }
+        }
+        
+        /// <summary>
+        /// A shortcut for accessing the session state.
+        /// </summary>
+        public static System.Web.SessionState.HttpSessionState UserSession
+        {
+            get
+            {
+                return HttpContext.Current.Session;
+            }
+        }
+
+        public static List<Microsoft.Reporting.WebForms.ReportParameter> ReportParms
+        {
+            get { return (List<Microsoft.Reporting.WebForms.ReportParameter>)HttpContext.Current.Session["ReportParms"]; }
+            set { HttpContext.Current.Session["ReportParms"] = value; }
+        }
+
+        public static string ReportServerUri
+        {
+            get { return ConfigurationManager.AppSettings["ReportServerUri"]; }
+        }
+
+        public static string ReportServerUsername
+        {
+            get { return ConfigurationManager.AppSettings["ReportServerUsername"]; }
+        }
+
+        public static string ReportServerDomain
+        {
+            get { return ConfigurationManager.AppSettings["ReportServerDomain"]; }
+        }
+
+        public static string ReportServerPassword
+        {
+            get { return ConfigurationManager.AppSettings["ReportServerPassword"]; }
+        }
+
+        public static int CurrentJobID
+        {
+            get
+            {
+                int jobID = 0;
+                if (UserSession["CurrentJobID"] != null)
+                {
+                    jobID = Convert.ToInt32(UserSession["CurrentJobID"]);
+                }
+                return jobID;
+            }
+            set
+            {
+                UserSession["CurrentJobID"] = value;
+            }
+        }
+
+        public static int CurrentValveTestFormID
+        {
+            get
+            {
+                int valveTestFormID = 0;
+                if (UserSession["CurrentValveTestFormID"] != null)
+                {
+                    valveTestFormID = Convert.ToInt32(UserSession["CurrentValveTestFormID"]);
+                }
+                return valveTestFormID;
+            }
+            set
+            {
+                UserSession["CurrentValveTestFormID"] = value;
+                //also set the JobID to ensure sync
+                ValvTrakDBDataContext db = new ValvTrakDBDataContext();
+                var vt = db.ValveTests.Where(v => v.ValveTestID == value).SingleOrDefault();
+                if (vt != null)
+                    Settings.CurrentJobID = vt.JobID;
+            }
+        }
+
+        public static int CurrentGreasingRecordID
+        {
+            get
+            {
+                int currentGreasingRecordID = 0;
+                if (UserSession["CurrentGreasingRecordID"] != null)
+                {
+                    currentGreasingRecordID = Convert.ToInt32(UserSession["CurrentGreasingRecordID"]);
+                }
+                return currentGreasingRecordID;
+            }
+            set
+            {
+                UserSession["CurrentGreasingRecordID"] = value;
+                //sync JobID
+                ValvTrakDBDataContext db = new ValvTrakDBDataContext();
+                var r = db.GreasingRecords.Where(w => w.GreasingRecordID == value).SingleOrDefault();
+                if (r != null)
+                    Settings.CurrentJobID = r.JobID;
+            }
+        }
+
+        public static int CurrentGreasingRecordItemID
+        {
+            get
+            {
+                int currentGreasingRecordItemID = 0;
+                if (UserSession["CurrentGreasingRecordItemID"] != null)
+                {
+                    currentGreasingRecordItemID = Convert.ToInt32(UserSession["CurrentGreasingRecordItemID"]);
+                }
+                return currentGreasingRecordItemID;
+            }
+            set
+            {
+                UserSession["CurrentGreasingRecordItemID"] = value;
+                ValvTrakDBDataContext db = new ValvTrakDBDataContext();
+                // sync Greasing Record ID
+                var r = db.GreasingRecordItems.Where(w => w.GreasingRecordItemID == value).SingleOrDefault();
+                if (r != null)
+                {
+                    Settings.CurrentGreasingRecordID = r.GreasingRecordID;
+                    //sync JobID
+                    Settings.CurrentJobID = r.GreasingRecord.JobID;
+                }
+            }
+        }
+
+        public static int CurrentWellSafetyTestID
+        {
+            get
+            {
+                int valveTestFormID = 0;
+                if (UserSession["CurrentWellSafetyTestID"] != null)
+                {
+                    valveTestFormID = Convert.ToInt32(UserSession["CurrentWellSafetyTestID"]);
+                }
+                return valveTestFormID;
+            }
+            set
+            {
+                UserSession["CurrentWellSafetyTestID"] = value;
+                //also set the JobID to ensure sync
+                ValvTrakDBDataContext db = new ValvTrakDBDataContext();
+                var ws = db.WellSafetyTests.Where(v => v.WellSafetyTestID == value).SingleOrDefault();
+                if (ws != null)
+                    Settings.CurrentJobID = ws.JobID;
+            }
+        }
+
+        //public static int CurrentChemPumpWorksheetID
+        //{
+        //    get
+        //    {
+        //        int chemPumpWorksheetID = 0;
+        //        if (UserSession["CurrentChemPumpWorksheetID"] != null)
+        //        {
+        //            chemPumpWorksheetID = Convert.ToInt32(UserSession["CurrentChemPumpWorksheetID"]);
+        //        }
+        //        return chemPumpWorksheetID;
+        //    }
+        //    set
+        //    {
+        //        UserSession["CurrentChemPumpWorksheetID"] = value;
+        //        //also set the JobID to ensure sync
+        //        ValvTrakDBDataContext db = new ValvTrakDBDataContext();
+        //        var rec = db.ChemPumpWorksheets.Where(v => v.ChemPumpWorksheetID == value).SingleOrDefault();
+        //        if (rec != null)
+        //            Settings.CurrentJobID = rec.JobID;
+        //    }
+        //}
+
+        public static List<int> ReportRunCriteria
+        {
+            get
+            {
+                if (UserSession["ReportRunCriteria"] != null)
+                    return UserSession["ReportRunCriteria"] as List<int>;
+                else
+                    return new List<int>();
+            }
+            set
+            {
+                UserSession["ReportRunCriteria"] = value;
+            }
+        }
+		 
+    }
+}

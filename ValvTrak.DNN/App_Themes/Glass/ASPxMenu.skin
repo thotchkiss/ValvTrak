@@ -1,0 +1,16 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxm" Namespace="DevExpress.Web.ASPxMenu" Assembly="DevExpress.Web.v10.2" %>
+
+<dxm:ASPxMenu runat="server" CssFilePath="{0}/styles.css" ItemSpacing="0px" CssPostfix="Glass" SeparatorHeight="100%" 
+    SpriteCssFilePath="{0}/sprite.css" SeparatorWidth="1px" SeparatorColor="#A5A6A8" AutoSeparators="RootOnly">
+    <Border BorderStyle="Solid" BorderWidth="1px" BorderColor="#A5A6A8" />
+    <SubMenuStyle BackColor="#EDF3F4" GutterWidth="0px" SeparatorColor="#7EACB1" ></SubMenuStyle>
+
+    <RootItemSubMenuOffset FirstItemY="-2" LastItemY="-2" Y="-2" FirstItemX="-1" LastItemX="-1" X="-1" />
+
+    <ItemStyle VerticalAlign="Middle" ImageSpacing="5px" PopOutImageSpacing="7px" DropDownButtonSpacing="12px"></ItemStyle>
+
+    <SubMenuItemStyle ImageSpacing="7px"></SubMenuItemStyle>
+    <LoadingPanelImage Url="Web/Loading.gif"></LoadingPanelImage>
+</dxm:ASPxMenu>
+

@@ -1,0 +1,763 @@
+.dxScheduler_SmartTag_RedWine,
+.dxScheduler_Tooltip_Empty_RedWine,
+.dxScheduler_Tooltip_TopRight_RedWine,
+.dxScheduler_Tooltip_TopLeft_RedWine,
+.dxScheduler_Tooltip_BottomRight_RedWine,
+.dxScheduler_Tooltip_BottomLeft_RedWine,
+.dxScheduler_Tooltip_BottomStem_RedWine,
+.dxScheduler_NavigationButton_Backward_RedWine,
+.dxScheduler_NavigationButton_BackwardDisabled_RedWine,
+.dxScheduler_NavigationButton_BackwardHover_RedWine,
+.dxScheduler_NavigationButton_Forward_RedWine,
+.dxScheduler_NavigationButton_ForwardDisabled_RedWine,
+.dxScheduler_NavigationButton_ForwardHover_RedWine,
+.dxScheduler_StatusInfo_Error_RedWine,
+.dxScheduler_StatusInfo_Warning_RedWine,
+.dxScheduler_StatusInfo_Info_RedWine,
+.dxScheduler_MoreButton_Top_RedWine,
+.dxScheduler_MoreButton_TopHover_RedWine,
+.dxScheduler_MoreButton_Bottom_RedWine,
+.dxScheduler_MoreButton_BottomHover_RedWine,
+.dxScheduler_Menu_RecurringAppointment_RedWine,
+.dxScheduler_Menu_NewAppointment_RedWine,
+.dxScheduler_Menu_GoToDate_RedWine,
+.dxScheduler_Menu_Delete_RedWine,
+.dxScheduler_Appointment_EndArrow_RedWine,
+.dxScheduler_Appointment_StartArrow_RedWine,
+.dxScheduler_Appointment_NightClock_RedWine,
+.dxScheduler_Appointment_DayClock_RedWine,
+.dxScheduler_Appointment_Reminder_RedWine,
+.dxScheduler_Appointment_NoRecurrence_RedWine,
+.dxScheduler_Appointment_Recurrence_RedWine,
+.dxScheduler_InplaceEditor_Save_RedWine,
+.dxScheduler_InplaceEditor_Cancel_RedWine,
+.dxScheduler_InplaceEditor_EditForm_RedWine,
+.dxScheduler_AppointmentClockArrows_day_hour_55_RedWine,
+.dxScheduler_AppointmentClockArrows_day_hour_50_RedWine,
+.dxScheduler_AppointmentClockArrows_day_hour_45_RedWine,
+.dxScheduler_AppointmentClockArrows_day_hour_40_RedWine,
+.dxScheduler_AppointmentClockArrows_day_hour_35_RedWine,
+.dxScheduler_AppointmentClockArrows_day_hour_30_RedWine,
+.dxScheduler_AppointmentClockArrows_day_hour_25_RedWine,
+.dxScheduler_AppointmentClockArrows_day_hour_20_RedWine,
+.dxScheduler_AppointmentClockArrows_day_hour_15_RedWine,
+.dxScheduler_AppointmentClockArrows_day_hour_10_RedWine,
+.dxScheduler_AppointmentClockArrows_day_hour_05_RedWine,
+.dxScheduler_AppointmentClockArrows_day_hour_00_RedWine,
+.dxScheduler_AppointmentClockArrows_night_hour_55_RedWine,
+.dxScheduler_AppointmentClockArrows_night_hour_50_RedWine,
+.dxScheduler_AppointmentClockArrows_night_hour_45_RedWine,
+.dxScheduler_AppointmentClockArrows_night_hour_40_RedWine,
+.dxScheduler_AppointmentClockArrows_night_hour_35_RedWine,
+.dxScheduler_AppointmentClockArrows_night_hour_30_RedWine,
+.dxScheduler_AppointmentClockArrows_night_hour_25_RedWine,
+.dxScheduler_AppointmentClockArrows_night_hour_20_RedWine,
+.dxScheduler_AppointmentClockArrows_night_hour_15_RedWine,
+.dxScheduler_AppointmentClockArrows_night_hour_10_RedWine,
+.dxScheduler_AppointmentClockArrows_night_hour_05_RedWine,
+.dxScheduler_AppointmentClockArrows_night_hour_00_RedWine,
+.dxScheduler_AppointmentClockArrows_day_minute_55_RedWine,
+.dxScheduler_AppointmentClockArrows_day_minute_50_RedWine,
+.dxScheduler_AppointmentClockArrows_day_minute_45_RedWine,
+.dxScheduler_AppointmentClockArrows_day_minute_40_RedWine,
+.dxScheduler_AppointmentClockArrows_day_minute_35_RedWine,
+.dxScheduler_AppointmentClockArrows_day_minute_30_RedWine,
+.dxScheduler_AppointmentClockArrows_day_minute_25_RedWine,
+.dxScheduler_AppointmentClockArrows_day_minute_20_RedWine,
+.dxScheduler_AppointmentClockArrows_day_minute_15_RedWine,
+.dxScheduler_AppointmentClockArrows_day_minute_10_RedWine,
+.dxScheduler_AppointmentClockArrows_day_minute_05_RedWine,
+.dxScheduler_AppointmentClockArrows_day_minute_00_RedWine,
+.dxScheduler_AppointmentClockArrows_night_minute_55_RedWine,
+.dxScheduler_AppointmentClockArrows_night_minute_50_RedWine,
+.dxScheduler_AppointmentClockArrows_night_minute_45_RedWine,
+.dxScheduler_AppointmentClockArrows_night_minute_40_RedWine,
+.dxScheduler_AppointmentClockArrows_night_minute_35_RedWine,
+.dxScheduler_AppointmentClockArrows_night_minute_30_RedWine,
+.dxScheduler_AppointmentClockArrows_night_minute_25_RedWine,
+.dxScheduler_AppointmentClockArrows_night_minute_20_RedWine,
+.dxScheduler_AppointmentClockArrows_night_minute_15_RedWine,
+.dxScheduler_AppointmentClockArrows_night_minute_10_RedWine,
+.dxScheduler_AppointmentClockArrows_night_minute_05_RedWine,
+.dxScheduler_AppointmentClockArrows_night_minute_00_RedWine,
+.dxScheduler_ResourceNavigator_First_RedWine,
+.dxScheduler_ResourceNavigator_FirstDisabled_RedWine,
+.dxScheduler_ResourceNavigator_FirstHover_RedWine,
+.dxScheduler_ResourceNavigator_PrevPage_RedWine,
+.dxScheduler_ResourceNavigator_PrevPageDisabled_RedWine,
+.dxScheduler_ResourceNavigator_PrevPageHover_RedWine,
+.dxScheduler_ResourceNavigator_Prev_RedWine,
+.dxScheduler_ResourceNavigator_PrevDisabled_RedWine,
+.dxScheduler_ResourceNavigator_PrevHover_RedWine,
+.dxScheduler_ResourceNavigator_Next_RedWine,
+.dxScheduler_ResourceNavigator_NextDisabled_RedWine,
+.dxScheduler_ResourceNavigator_NextHover_RedWine,
+.dxScheduler_ResourceNavigator_NextPage_RedWine,
+.dxScheduler_ResourceNavigator_NextPageDisabled_RedWine,
+.dxScheduler_ResourceNavigator_NextPageHover_RedWine,
+.dxScheduler_ResourceNavigator_Last_RedWine,
+.dxScheduler_ResourceNavigator_LastDisabled_RedWine,
+.dxScheduler_ResourceNavigator_LastHover_RedWine,
+.dxScheduler_ResourceNavigator_Increase_RedWine,
+.dxScheduler_ResourceNavigator_IncreaseDisabled_RedWine,
+.dxScheduler_ResourceNavigator_IncreaseHover_RedWine,
+.dxScheduler_ResourceNavigator_Decrease_RedWine,
+.dxScheduler_ResourceNavigator_DecreaseDisabled_RedWine,
+.dxScheduler_ResourceNavigator_DecreaseHover_RedWine,
+.dxScheduler_ViewNavigator_Backward_RedWine,
+.dxScheduler_ViewNavigator_Forward_RedWine {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxScheduler_SmartTag_RedWine {
+    background-position: -22px -312px;
+    width: 6px;
+    height: 9px;
+}
+
+.dxScheduler_Tooltip_Empty_RedWine {
+    background-position: -202px -312px;
+    width: 1px;
+    height: 1px;
+}
+
+.dxScheduler_Tooltip_TopRight_RedWine {
+    background-position: -627px -237px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxScheduler_Tooltip_TopLeft_RedWine {
+    background-position: -598px -237px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxScheduler_Tooltip_BottomRight_RedWine {
+    background-position: -507px -237px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxScheduler_Tooltip_BottomLeft_RedWine {
+    background-position: -478px -237px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxScheduler_Tooltip_BottomStem_RedWine {
+    background-position: -536px -237px;
+    width: 40px;
+    height: 53px;
+}
+
+.dxScheduler_NavigationButton_Backward_RedWine {
+    background-position: -354px -133px;
+    width: 15px;
+    height: 41px;
+}
+
+.dxScheduler_NavigationButton_BackwardDisabled_RedWine {
+    background-position: -395px -133px;
+    width: 15px;
+    height: 41px;
+}
+
+.dxScheduler_NavigationButton_BackwardHover_RedWine {
+    background-position: -436px -133px;
+    width: 15px;
+    height: 41px;
+}
+
+.dxScheduler_NavigationButton_Forward_RedWine {
+    background-position: -477px -133px;
+    width: 15px;
+    height: 41px;
+}
+
+.dxScheduler_NavigationButton_ForwardDisabled_RedWine {
+    background-position: -518px -133px;
+    width: 15px;
+    height: 41px;
+}
+
+.dxScheduler_NavigationButton_ForwardHover_RedWine {
+    background-position: -559px -133px;
+    width: 15px;
+    height: 41px;
+}
+
+.dxScheduler_StatusInfo_Error_RedWine {
+    background-position: -268px -237px;
+    width: 48px;
+    height: 48px;
+}
+
+.dxScheduler_StatusInfo_Warning_RedWine {
+    background-position: -408px -237px;
+    width: 48px;
+    height: 48px;
+}
+
+.dxScheduler_StatusInfo_Info_RedWine {
+    background-position: -338px -237px;
+    width: 48px;
+    height: 48px;
+}
+
+.dxScheduler_MoreButton_Top_RedWine {
+    background-position: -268px -133px;
+    width: 21px;
+    height: 17px;
+}
+
+.dxScheduler_MoreButton_TopHover_RedWine {
+    background-position: -311px -133px;
+    width: 21px;
+    height: 17px;
+}
+
+.dxScheduler_MoreButton_Bottom_RedWine {
+    background-position: -182px -133px;
+    width: 21px;
+    height: 17px;
+}
+
+.dxScheduler_MoreButton_BottomHover_RedWine {
+    background-position: -225px -133px;
+    width: 21px;
+    height: 17px;
+}
+
+.dxScheduler_Menu_RecurringAppointment_RedWine {
+    background-position: -164px -312px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxScheduler_Menu_NewAppointment_RedWine {
+    background-position: -126px -312px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxScheduler_Menu_GoToDate_RedWine {
+    background-position: -88px -312px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxScheduler_Menu_Delete_RedWine {
+    background-position: -50px -312px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxScheduler_Appointment_EndArrow_RedWine {
+    background-position: -59px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_Appointment_StartArrow_RedWine {
+    background-position: -244px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_Appointment_NightClock_RedWine {
+    background-position: -96px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_Appointment_DayClock_RedWine {
+    background-position: -22px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_Appointment_Reminder_RedWine {
+    background-position: -207px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_Appointment_NoRecurrence_RedWine {
+    background-position: -133px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_Appointment_Recurrence_RedWine {
+    background-position: -170px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_InplaceEditor_Save_RedWine {
+    background-position: -141px -133px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxScheduler_InplaceEditor_Cancel_RedWine {
+    background-position: -59px -133px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxScheduler_InplaceEditor_EditForm_RedWine {
+    background-position: -100px -133px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_hour_55_RedWine {
+    background-position: -22px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_hour_50_RedWine {
+    background-position: -651px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_hour_45_RedWine {
+    background-position: -614px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_hour_40_RedWine {
+    background-position: -577px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_hour_35_RedWine {
+    background-position: -540px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_hour_30_RedWine {
+    background-position: -503px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_hour_25_RedWine {
+    background-position: -466px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_hour_20_RedWine {
+    background-position: -429px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_hour_15_RedWine {
+    background-position: -392px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_hour_10_RedWine {
+    background-position: -355px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_hour_05_RedWine {
+    background-position: -318px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_hour_00_RedWine {
+    background-position: -281px -22px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_hour_55_RedWine {
+    background-position: -244px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_hour_50_RedWine {
+    background-position: -207px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_hour_45_RedWine {
+    background-position: -170px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_hour_40_RedWine {
+    background-position: -133px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_hour_35_RedWine {
+    background-position: -96px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_hour_30_RedWine {
+    background-position: -59px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_hour_25_RedWine {
+    background-position: -22px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_hour_20_RedWine {
+    background-position: -651px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_hour_15_RedWine {
+    background-position: -614px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_hour_10_RedWine {
+    background-position: -577px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_hour_05_RedWine {
+    background-position: -540px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_hour_00_RedWine {
+    background-position: -503px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_minute_55_RedWine {
+    background-position: -466px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_minute_50_RedWine {
+    background-position: -429px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_minute_45_RedWine {
+    background-position: -392px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_minute_40_RedWine {
+    background-position: -355px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_minute_35_RedWine {
+    background-position: -318px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_minute_30_RedWine {
+    background-position: -281px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_minute_25_RedWine {
+    background-position: -244px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_minute_20_RedWine {
+    background-position: -207px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_minute_15_RedWine {
+    background-position: -170px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_minute_10_RedWine {
+    background-position: -133px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_minute_05_RedWine {
+    background-position: -96px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_day_minute_00_RedWine {
+    background-position: -59px -59px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_minute_55_RedWine {
+    background-position: -22px -133px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_minute_50_RedWine {
+    background-position: -651px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_minute_45_RedWine {
+    background-position: -614px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_minute_40_RedWine {
+    background-position: -577px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_minute_35_RedWine {
+    background-position: -540px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_minute_30_RedWine {
+    background-position: -503px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_minute_25_RedWine {
+    background-position: -466px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_minute_20_RedWine {
+    background-position: -429px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_minute_15_RedWine {
+    background-position: -392px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_minute_10_RedWine {
+    background-position: -355px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_minute_05_RedWine {
+    background-position: -318px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_AppointmentClockArrows_night_minute_00_RedWine {
+    background-position: -281px -96px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxScheduler_ResourceNavigator_First_RedWine {
+    background-position: -63px -196px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_FirstDisabled_RedWine {
+    background-position: -104px -196px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_FirstHover_RedWine {
+    background-position: -145px -196px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_PrevPage_RedWine {
+    background-position: -145px -237px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_PrevPageDisabled_RedWine {
+    background-position: -186px -237px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_PrevPageHover_RedWine {
+    background-position: -227px -237px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_Prev_RedWine {
+    background-position: -22px -237px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_PrevDisabled_RedWine {
+    background-position: -63px -237px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_PrevHover_RedWine {
+    background-position: -104px -237px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_Next_RedWine {
+    background-position: -432px -196px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_NextDisabled_RedWine {
+    background-position: -473px -196px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_NextHover_RedWine {
+    background-position: -514px -196px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_NextPage_RedWine {
+    background-position: -555px -196px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_NextPageDisabled_RedWine {
+    background-position: -596px -196px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_NextPageHover_RedWine {
+    background-position: -637px -196px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_Last_RedWine {
+    background-position: -309px -196px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_LastDisabled_RedWine {
+    background-position: -350px -196px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_LastHover_RedWine {
+    background-position: -391px -196px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_Increase_RedWine {
+    background-position: -186px -196px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_IncreaseDisabled_RedWine {
+    background-position: -227px -196px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_IncreaseHover_RedWine {
+    background-position: -268px -196px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_Decrease_RedWine {
+    background-position: -600px -133px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_DecreaseDisabled_RedWine {
+    background-position: -641px -133px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxScheduler_ResourceNavigator_DecreaseHover_RedWine {
+    background-position: -22px -196px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxScheduler_ViewNavigator_Backward_RedWine {
+    background-position: -225px -312px;
+    width: 6px;
+    height: 10px;
+}
+
+.dxScheduler_ViewNavigator_Forward_RedWine {
+    background-position: -251px -312px;
+    width: 6px;
+    height: 10px;
+}
+
+

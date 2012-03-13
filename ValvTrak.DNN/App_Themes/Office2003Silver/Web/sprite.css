@@ -1,0 +1,308 @@
+.dxWeb_rpHeaderTopLeftCorner_Office2003Silver,
+.dxWeb_rpHeaderTopRightCorner_Office2003Silver,
+.dxWeb_rpBottomLeftCorner_Office2003Silver,
+.dxWeb_rpBottomRightCorner_Office2003Silver,
+.dxWeb_rpTopLeftCorner_Office2003Silver,
+.dxWeb_rpTopRightCorner_Office2003Silver,
+.dxWeb_rpGroupBoxBottomLeftCorner_Office2003Silver,
+.dxWeb_rpGroupBoxBottomRightCorner_Office2003Silver,
+.dxWeb_rpGroupBoxTopLeftCorner_Office2003Silver,
+.dxWeb_rpGroupBoxTopRightCorner_Office2003Silver,
+.dxWeb_mHorizontalPopOut_Office2003Silver,
+.dxWeb_mVerticalPopOut_Office2003Silver,
+.dxWeb_mSubMenuItem_Office2003Silver,
+.dxWeb_mSubMenuItemChecked_Office2003Silver,
+.dxWeb_nbCollapse_Office2003Silver,
+.dxWeb_nbExpand_Office2003Silver,
+.dxWeb_splVSeparator_Office2003Silver,
+.dxWeb_splVSeparatorHover_Office2003Silver,
+.dxWeb_splHSeparator_Office2003Silver,
+.dxWeb_splHSeparatorHover_Office2003Silver,
+.dxWeb_splVCollapseBackwardButton_Office2003Silver,
+.dxWeb_splVCollapseBackwardButtonHover_Office2003Silver,
+.dxWeb_splHCollapseBackwardButton_Office2003Silver,
+.dxWeb_splHCollapseBackwardButtonHover_Office2003Silver,
+.dxWeb_splVCollapseForwardButton_Office2003Silver,
+.dxWeb_splVCollapseForwardButtonHover_Office2003Silver,
+.dxWeb_splHCollapseForwardButton_Office2003Silver,
+.dxWeb_splHCollapseForwardButtonHover_Office2003Silver,
+.dxWeb_pcCloseButton_Office2003Silver,
+.dxWeb_pcSizeGrip_Office2003Silver,
+.dxWeb_pAll_Office2003Silver,
+.dxWeb_pAllDisabled_Office2003Silver,
+.dxWeb_pPrev_Office2003Silver,
+.dxWeb_pPrevDisabled_Office2003Silver,
+.dxWeb_pNext_Office2003Silver,
+.dxWeb_pNextDisabled_Office2003Silver,
+.dxWeb_pLast_Office2003Silver,
+.dxWeb_pLastDisabled_Office2003Silver,
+.dxWeb_pFirst_Office2003Silver,
+.dxWeb_pFirstDisabled_Office2003Silver,
+.dxWeb_hlTail_Office2003Silver,
+.dxWeb_tiBackToTop_Office2003Silver,
+.dxWeb_smBullet_Office2003Silver {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxWeb_rpHeaderTopLeftCorner_Office2003Silver {
+    background-position: -104px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpHeaderTopRightCorner_Office2003Silver {
+    background-position: -117px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpBottomLeftCorner_Office2003Silver {
+    background-position: -78px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpBottomRightCorner_Office2003Silver {
+    background-position: -91px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpTopLeftCorner_Office2003Silver {
+    background-position: -52px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpTopRightCorner_Office2003Silver {
+    background-position: -65px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpGroupBoxBottomLeftCorner_Office2003Silver {
+    background-position: -26px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpGroupBoxBottomRightCorner_Office2003Silver {
+    background-position: -39px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpGroupBoxTopLeftCorner_Office2003Silver {
+    background-position: 0px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpGroupBoxTopRightCorner_Office2003Silver {
+    background-position: -13px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_mHorizontalPopOut_Office2003Silver {
+    background-position: -92px -50px;
+    width: 5px;
+    height: 4px;
+}
+
+.dxWeb_mVerticalPopOut_Office2003Silver {
+    background-position: -105px -50px;
+    width: 4px;
+    height: 8px;
+}
+
+.dxWeb_mSubMenuItem_Office2003Silver {
+    background-position: -48px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_mSubMenuItemChecked_Office2003Silver {
+    background-position: -70px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_nbCollapse_Office2003Silver {
+    background-position: -129px 0px;
+    width: 13px;
+    height: 14px;
+}
+
+.dxWeb_nbExpand_Office2003Silver {
+    background-position: -129px -23px;
+    width: 13px;
+    height: 14px;
+}
+
+.dxWeb_splVSeparator_Office2003Silver {
+    background-position: -92px -62px;
+    width: 6px;
+    height: 18px;
+}
+
+.dxWeb_splVSeparatorHover_Office2003Silver {
+    background-position: -99px -62px;
+    width: 6px;
+    height: 18px;
+}
+
+.dxWeb_splHSeparator_Office2003Silver {
+    background-position: -58px -74px;
+    width: 18px;
+    height: 6px;
+}
+
+.dxWeb_splHSeparatorHover_Office2003Silver {
+    background-position: -58px -81px;
+    width: 18px;
+    height: 6px;
+}
+
+.dxWeb_splVCollapseBackwardButton_Office2003Silver {
+    background-position: -30px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splVCollapseBackwardButtonHover_Office2003Silver {
+    background-position: -37px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splHCollapseBackwardButton_Office2003Silver {
+    background-position: 0px -74px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_splHCollapseBackwardButtonHover_Office2003Silver {
+    background-position: 0px -81px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_splVCollapseForwardButton_Office2003Silver {
+    background-position: -44px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splVCollapseForwardButtonHover_Office2003Silver {
+    background-position: -51px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splHCollapseForwardButton_Office2003Silver {
+    background-position: -15px -74px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_splHCollapseForwardButtonHover_Office2003Silver {
+    background-position: -15px -81px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_pcCloseButton_Office2003Silver {
+    background-position: 0px -50px;
+    width: 13px;
+    height: 12px;
+}
+
+.dxWeb_pcSizeGrip_Office2003Silver {
+    background-position: -24px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_pAll_Office2003Silver {
+    background-position: 0px 0px;
+    width: 30px;
+    height: 19px;
+}
+
+.dxWeb_pAllDisabled_Office2003Silver {
+    background-position: 0px -25px;
+    width: 30px;
+    height: 19px;
+}
+
+.dxWeb_pPrev_Office2003Silver {
+    background-position: -105px 0px;
+    width: 20px;
+    height: 19px;
+}
+
+.dxWeb_pPrevDisabled_Office2003Silver {
+    background-position: -105px -25px;
+    width: 20px;
+    height: 19px;
+}
+
+.dxWeb_pNext_Office2003Silver {
+    background-position: -81px 0px;
+    width: 20px;
+    height: 19px;
+}
+
+.dxWeb_pNextDisabled_Office2003Silver {
+    background-position: -81px -25px;
+    width: 20px;
+    height: 19px;
+}
+
+.dxWeb_pLast_Office2003Silver {
+    background-position: -55px 0px;
+    width: 22px;
+    height: 19px;
+}
+
+.dxWeb_pLastDisabled_Office2003Silver {
+    background-position: -55px -25px;
+    width: 22px;
+    height: 19px;
+}
+
+.dxWeb_pFirst_Office2003Silver {
+    background-position: -31px 0px;
+    width: 22px;
+    height: 19px;
+}
+
+.dxWeb_pFirstDisabled_Office2003Silver {
+    background-position: -31px -25px;
+    width: 22px;
+    height: 19px;
+}
+
+.dxWeb_hlTail_Office2003Silver {
+    background-position: -131px -50px;
+    width: 13px;
+    height: 9px;
+}
+
+.dxWeb_tiBackToTop_Office2003Silver {
+    background-position: -122px -50px;
+    width: 7px;
+    height: 8px;
+}
+
+.dxWeb_smBullet_Office2003Silver {
+    background-position: -114px -50px;
+    width: 5px;
+    height: 5px;
+}
+
+

@@ -1,0 +1,7 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxhl" Namespace="DevExpress.Web.ASPxHeadline" Assembly="DevExpress.Web.v10.2" %>
+
+<dxhl:ASPxHeadline runat="server" CssFilePath="{0}/styles.css" CssPostfix="BlackGlass">
+    <LeftPanelStyle Spacing="8px"></LeftPanelStyle>
+</dxhl:ASPxHeadline>
+

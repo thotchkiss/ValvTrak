@@ -1,0 +1,13 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxnc" Namespace="DevExpress.Web.ASPxNewsControl" Assembly="DevExpress.Web.v10.2" %>
+
+<dxnc:ASPxNewsControl runat="server" CssFilePath="{0}/styles.css" 
+    SpriteCssFilePath="{0}/sprite.css" CssPostfix="PlasticBlue">
+
+    <LoadingPanelImage Url="Web/ncLoading.gif"></LoadingPanelImage>
+    <ItemDateStyle Spacing="0px"></ItemDateStyle>
+    <ItemHeaderStyle Spacing="7px"></ItemHeaderStyle>
+    <ItemSettings DateVerticalPosition="Header" TailPosition="KeepWithLastWord"></ItemSettings>
+    <LoadingPanelStyle ImageSpacing="6px"></LoadingPanelStyle>
+</dxnc:ASPxNewsControl>
+

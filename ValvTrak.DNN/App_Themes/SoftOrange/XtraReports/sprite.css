@@ -1,0 +1,133 @@
+.dxXtraReports_BtnFirstPage_SoftOrange,
+.dxXtraReports_BtnFirstPageDisabled_SoftOrange,
+.dxXtraReports_BtnLastPage_SoftOrange,
+.dxXtraReports_BtnLastPageDisabled_SoftOrange,
+.dxXtraReports_BtnNextPage_SoftOrange,
+.dxXtraReports_BtnNextPageDisabled_SoftOrange,
+.dxXtraReports_BtnPrevPage_SoftOrange,
+.dxXtraReports_BtnPrevPageDisabled_SoftOrange,
+.dxXtraReports_BtnPrint_SoftOrange,
+.dxXtraReports_BtnPrintDisabled_SoftOrange,
+.dxXtraReports_BtnPrintPage_SoftOrange,
+.dxXtraReports_BtnPrintPageDisabled_SoftOrange,
+.dxXtraReports_BtnSave_SoftOrange,
+.dxXtraReports_BtnSaveDisabled_SoftOrange,
+.dxXtraReports_BtnSaveWindow_SoftOrange,
+.dxXtraReports_BtnSaveWindowDisabled_SoftOrange,
+.dxXtraReports_BtnSearch_SoftOrange,
+.dxXtraReports_BtnSearchDisabled_SoftOrange {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxXtraReports_BtnFirstPage_SoftOrange {
+    background-position: -16px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnFirstPageDisabled_SoftOrange {
+    background-position: -16px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnLastPage_SoftOrange {
+    background-position: -32px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnLastPageDisabled_SoftOrange {
+    background-position: -32px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnNextPage_SoftOrange {
+    background-position: -64px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnNextPageDisabled_SoftOrange {
+    background-position: -64px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrevPage_SoftOrange {
+    background-position: -48px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrevPageDisabled_SoftOrange {
+    background-position: -48px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrint_SoftOrange {
+    background-position: -80px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintDisabled_SoftOrange {
+    background-position: -80px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintPage_SoftOrange {
+    background-position: -96px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintPageDisabled_SoftOrange {
+    background-position: -96px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSave_SoftOrange {
+    background-position: -112px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveDisabled_SoftOrange {
+    background-position: -112px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveWindow_SoftOrange {
+    background-position: -128px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveWindowDisabled_SoftOrange {
+    background-position: -128px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSearch_SoftOrange {
+    background-position: 0px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSearchDisabled_SoftOrange {
+    background-position: 0px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+

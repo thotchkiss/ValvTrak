@@ -1,0 +1,26 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxm" Namespace="DevExpress.Web.ASPxMenu" Assembly="DevExpress.Web.v10.2" %>
+
+<dxm:ASPxPopupMenu runat="server" BackColor="#E5EECF" GutterColor="#E5EECF" SpriteCssFilePath="{0}/sprite.css" 
+    CssFilePath="{0}/styles.css" GutterWidth="0px" CssPostfix="Youthful" ItemSpacing="1px" SeparatorColor="White" 
+    SeparatorHeight="1px" ShowSubMenuShadow="False">
+    <SubMenuStyle BackColor="#E5EECF" GutterColor="#E5EECF" GutterWidth="0px" SeparatorColor="White"></SubMenuStyle>
+    <RootItemSubMenuOffset FirstItemX="1" FirstItemY="-1" LastItemX="1" LastItemY="-1" X="1" Y="-1" />
+    <ItemSubMenuOffset FirstItemX="1" FirstItemY="-1" LastItemX="1" LastItemY="-1" X="1" Y="-1" />
+    <SeparatorBackgroundImage ImageUrl="Web/mSeparator.gif" />
+    <LoadingPanelImage Url="Web/Loading.gif"></LoadingPanelImage>
+
+    <SubMenuItemStyle ImageSpacing="5px">
+        <HoverStyle BackColor="#F8FCF1">
+        </HoverStyle>
+        <SelectedStyle BackColor="#DCE6C3">
+        </SelectedStyle>
+    </SubMenuItemStyle>
+    <ItemStyle ImageSpacing="5px">
+        <HoverStyle BackColor="#F8FCF1">
+        </HoverStyle>
+        <SelectedStyle BackColor="#DCE6C3">
+        </SelectedStyle>
+    </ItemStyle>
+</dxm:ASPxPopupMenu>
+

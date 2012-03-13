@@ -1,0 +1,133 @@
+.dxXtraReports_BtnFirstPage_RedWine,
+.dxXtraReports_BtnFirstPageDisabled_RedWine,
+.dxXtraReports_BtnLastPage_RedWine,
+.dxXtraReports_BtnLastPageDisabled_RedWine,
+.dxXtraReports_BtnNextPage_RedWine,
+.dxXtraReports_BtnNextPageDisabled_RedWine,
+.dxXtraReports_BtnPrevPage_RedWine,
+.dxXtraReports_BtnPrevPageDisabled_RedWine,
+.dxXtraReports_BtnPrint_RedWine,
+.dxXtraReports_BtnPrintDisabled_RedWine,
+.dxXtraReports_BtnPrintPage_RedWine,
+.dxXtraReports_BtnPrintPageDisabled_RedWine,
+.dxXtraReports_BtnSave_RedWine,
+.dxXtraReports_BtnSaveDisabled_RedWine,
+.dxXtraReports_BtnSaveWindow_RedWine,
+.dxXtraReports_BtnSaveWindowDisabled_RedWine,
+.dxXtraReports_BtnSearch_RedWine,
+.dxXtraReports_BtnSearchDisabled_RedWine {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxXtraReports_BtnFirstPage_RedWine {
+    background-position: -16px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnFirstPageDisabled_RedWine {
+    background-position: -16px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnLastPage_RedWine {
+    background-position: -32px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnLastPageDisabled_RedWine {
+    background-position: -32px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnNextPage_RedWine {
+    background-position: -64px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnNextPageDisabled_RedWine {
+    background-position: -64px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrevPage_RedWine {
+    background-position: -48px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrevPageDisabled_RedWine {
+    background-position: -48px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrint_RedWine {
+    background-position: -80px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintDisabled_RedWine {
+    background-position: -80px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintPage_RedWine {
+    background-position: -96px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintPageDisabled_RedWine {
+    background-position: -96px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSave_RedWine {
+    background-position: -112px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveDisabled_RedWine {
+    background-position: -112px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveWindow_RedWine {
+    background-position: -128px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveWindowDisabled_RedWine {
+    background-position: -128px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSearch_RedWine {
+    background-position: 0px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSearchDisabled_RedWine {
+    background-position: 0px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+

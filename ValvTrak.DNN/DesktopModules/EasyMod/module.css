@@ -1,0 +1,445 @@
+@import url('css/tabs.css');
+@import url('css/colourpicker.css');
+@import url('css/carousel.css');
+@import url('css/slider.css');
+#EMContainerMain { width:100%; height:100%; background-color:#fff; margin:0; padding:0; font-family:arial,helvetica,verdana; font-size:11px !important; color:#000000 !important; text-align:left; }
+#EMContainerMain h1 { font-family:arial,helvetica,verdana !important; font-size:18px !important; color:#83aa3f !important; margin:0; padding:2px 2px 5px 0; text-align:left; font-weight:bold; }
+#EMContainerMain h3 { font-family:arial,helvetica,verdana !important; font-size:15px !important; color:#444444 !important; margin:0; padding:2px 2px 5px 0; text-align:left; font-weight:bold; }
+#EMContainerMain h4 { font-family:arial,helvetica,verdana !important; font-size:12px !important; color:#444444 !important; margin:0; padding:2px 2px 5px 0; text-align:left; font-weight:bold; }
+#EMContainerMain legend { background-color:#ffffff; }
+#EMContainerMain .legend { font-family:arial,helvetica,verdana; font-size:14px; color:#7fab3c; font-weight:bold; }
+#EMContainerMain fieldset { display:block; padding:0 10px 10px 10px; margin:0 0 10px 0; background:url(images/easymod_bg2.jpg) #c7c7c7 repeat-x top left; }
+#EMContainerMain .msgPos { color:#444444; font-weight:bold; }
+#EMContainerMain .msgNeg { color:#444444; font-weight:bold; }
+#EMContainerMain .note { float:left; margin:0 5px 0 8px; }
+#EMContainerMain p, #EMContainerMain td, #EMContainerMain .normal, #EMContainerMain select, #EMContainerMain input { font-family:arial,helvetica,verdana !important; font-size:11px !important; color:#000000 !important; }
+#EMContainerMain p { margin:0 0 7px 12px; }
+#EMContainerMain #EMStep { margin:0 0 0 12px; }
+#EMContainerMain #EMMessage { border:dotted 1px #ff0000; background-color:#ffffce; padding:5px; margin:10px 0 10px 0; text-align:left; }
+#EMContainerMain #EMMessage img { float:left; margin:0 7px 0 2px; }
+#EMContainerMain .EMHidField { display:none; }
+#EMContainerMain .floatleft { float:left; }
+#EMContainerMain .floatright { float:right; }
+#EMContainerMain .clear { clear:both; line-height:0; margin:0; padding:0; font-size:0; height:0; }
+
+.EMLoadingMask { position:fixed; top:0; left:0; width:100%; height:100%; margin:0; padding:0; background-color:#000000; z-index:1000; filter:Alpha(Opacity=60); opacity:.60; }
+.EMLoadingBox { position:fixed; top:40%; left:50%; width: 400px; margin:0 0 0 -200px; z-index:2000; }
+.EMLoadingBox img { width:400px; height:170px; padding:0; margin:0; }
+
+.EMTabContainer { width:100%; }
+.EMTabBody { height:100%; padding:10px 0 0 0; }
+.EMTabBodyLeft{ }
+.EMTabBodyRight { }
+.EMTabFoot { height:3px; }
+
+/*Buttons*/
+#EMContainerMain .btn-continue { width:77px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -359px 0px; }
+#EMContainerMain .btn-continue:hover { width:77px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -359px -23px; }
+#EMContainerMain .btn-continue-on { width:77px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -359px -23px; }
+#EMContainerMain .btn-continue-disabled { width:77px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -359px -46px; cursor:default; }
+
+#EMContainerMain .btn-loadsettings { width:107px; height:23px; background:url(images/easymodbuttons2.png) no-repeat; }
+#EMContainerMain .btn-loadsettings:hover { width:107px; height:23px; background:url(images/easymodbuttons2.png) no-repeat 0px -23px; }
+#EMContainerMain .btn-loadsettings-on { width:107px; height:23px; background:url(images/easymodbuttons2.png) no-repeat 0px -23px; }
+#EMContainerMain .btn-loadsettings-disabled { width:107px; height:23px; background:url(images/easymodbuttons2.png) no-repeat 0px -46px; cursor:default; }
+
+#EMContainerMain .btn-store { width:64px; height:23px; background:url(images/easymodbuttons.png) no-repeat -128px 0px; }
+#EMContainerMain .btn-store:hover { width:64px; height:23px; background:url(images/easymodbuttons.png) no-repeat -128px -23px; }
+#EMContainerMain .btn-store-on { width:64px; height:23px; background:url(images/easymodbuttons.png) no-repeat -128px -23px; }
+#EMContainerMain .btn-store-disabled { width:64px; height:23px; background:url(images/easymodbuttons.png) no-repeat -128px -46px; cursor:default; }
+
+#EMContainerMain .btn-publish { width:74px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -107px 0px}
+#EMContainerMain .btn-publish:hover { width:74px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -107px -23px; }
+#EMContainerMain .btn-publish-on { width:74px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -107px -23px; }
+#EMContainerMain .btn-publish-disabled { width:74px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -107px -46px; cursor:default; }
+
+#EMContainerMain .btn-cancel { width:68px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -436px 0px; }
+#EMContainerMain .btn-cancel:hover { width:68px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -436px -23px; }
+#EMContainerMain .btn-cancel-on { width:68px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -436px -23px; }
+#EMContainerMain .btn-cancel-disabled { width:68px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -436px -46px; cursor:default; }
+
+#EMContainerMain .btn-update { width:74px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -504px 0px; }
+#EMContainerMain .btn-update:hover { width:74px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -504px -23px; }
+#EMContainerMain .btn-update-on { width:74px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -504px -23px; }
+#EMContainerMain .btn-update-disabled { width:74px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -504px -46px; cursor:default; }
+
+#EMContainerMain .btn-import { width:74px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -578px 0px}
+#EMContainerMain .btn-import:hover { width:74px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -578px -23px; }
+#EMContainerMain .btn-import-on { width:74px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -578px -23px; }
+#EMContainerMain .btn-import-disabled { width:74px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -578px -46px; cursor:default; }
+
+#EMContainerMain .btn-export { width:74px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -652px 0px}
+#EMContainerMain .btn-export:hover { width:74px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -652px -23px; }
+#EMContainerMain .btn-export-on { width:74px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -652px -23px; }
+#EMContainerMain .btn-export-disabled { width:74px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -652px -46px; cursor:default; }
+
+/*About*/
+#EMContainerMain #EMContainerAbout input { margin:0 0 1px 10px; }
+#EMContainerMain #EMContainerAbout .note { float:left; margin:0 10px 10px 12px; }
+#EMContainerMain #EMContainerAbout p { margin-top:10px; margin-bottom:10px; }
+
+/*Load*/
+#EMContainerMain #EMContainerStep1 { overflow:hidden; margin:0 0 10px 0; }
+#EMContainerMain #EMContainerLoad { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerMain #EMContainerLoad select { margin:0; }
+#EMContainerMain #EMContainerLoad input { margin:0 0 1px 0; }
+
+/*Save*/
+#EMContainerMain #EMContainerStep3 { overflow:hidden; margin:0 0 10px 0; }
+#EMContainerMain #EMContainerSave { overflow:hidden; margin:10px 0 0 0; }
+
+/*Header*/
+#EMContainerMain .header-l { width:2px; background:url(images/header-l.gif) no-repeat; }
+#EMContainerMain .header-l img { width:2px; height:44px; }
+#EMContainerMain .header-logo { width:44px; background:url(images/header-bg-l.gif) repeat-x; padding:0 10px 0 10px; }
+#EMContainerMain .header-logo img { width:44px; height:22px; margin:0; }
+#EMContainerMain .header-sep { width:3px; background:url(images/header-sep.gif) no-repeat; }
+#EMContainerMain .header-sep img { width:3px; height:44px; }
+#EMContainerMain .header-logo2 { background:url(images/header-bg-r.gif) repeat-x; padding:0 0 0 10px; }
+#EMContainerMain .header-logo2 img { width:106px; height:26px; }
+#EMContainerMain .header-buttons { text-align:right; background:url(images/header-bg-r.gif) repeat-x; padding:0 10px 0 0; }
+#EMContainerMain .header-buttons input { width:64px; height:23px; padding:0; margin:2px 0 0 0; }
+#EMContainerMain .header-r { width:2px; background:url(images/header-r.gif) no-repeat; }
+#EMContainerMain .header-r img { width:2px; height:44px; }
+#EMContainerMain .header-buttons .btn-step1 { background:url(images/easymodbuttons.png) no-repeat; }
+#EMContainerMain .header-buttons .btn-step2 { background:url(images/easymodbuttons.png) no-repeat -64px 0px; }
+#EMContainerMain .header-buttons .btn-step3 { background:url(images/easymodbuttons.png) no-repeat -128px 0px; }
+#EMContainerMain .header-buttons .btn-step1:hover { background:url(images/easymodbuttons.png) no-repeat 0px -23px; }
+#EMContainerMain .header-buttons .btn-step2:hover { background:url(images/easymodbuttons.png) no-repeat -64px -23px; }
+#EMContainerMain .header-buttons .btn-step3:hover { background:url(images/easymodbuttons.png) no-repeat -128px -23px; }
+#EMContainerMain .header-buttons .btn-step1-on { background:url(images/easymodbuttons.png) no-repeat 0px -23px; }
+#EMContainerMain .header-buttons .btn-step2-on { background:url(images/easymodbuttons.png) no-repeat -64px -23px; }
+#EMContainerMain .header-buttons .btn-step3-on { background:url(images/easymodbuttons.png) no-repeat -128px -23px; }
+#EMContainerMain .header-buttons .btn-step1-disabled { background:url(images/easymodbuttons.png) no-repeat 0px -46px; cursor:default; }
+#EMContainerMain .header-buttons .btn-step2-disabled { background:url(images/easymodbuttons.png) no-repeat -64px -46px; cursor:default; }
+#EMContainerMain .header-buttons .btn-step3-disabled { background:url(images/easymodbuttons.png) no-repeat -128px -46px; cursor:default; }
+
+/*Footer*/
+#EMContainerMain .footer-l { width:2px; background:url(images/footer-l.gif) no-repeat; }
+#EMContainerMain .footer-l img { width:2px; height:31px; }
+#EMContainerMain .footer-copyright { background:url(images/footer-bg.gif) repeat-x; padding:0 0 0 10px; }
+#EMContainerMain .footer-buttons { width:225px; text-align:right; padding:0; }
+#EMContainerMain .footer-buttons input { margin:0 0 0 5px; }
+#EMContainerMain .footer-r { width:2px; background:url(images/footer-r.gif) no-repeat; }
+#EMContainerMain .footer-r img { width:2px; height:31px; }
+#EMContainerMain .footer-buttons .btn-back { width:107px; height:31px; background:url(images/easymodbuttons3.png) no-repeat -214px 0px; }
+#EMContainerMain .footer-buttons .btn-back:hover { width:107px; height:31px; background:url(images/easymodbuttons3.png) no-repeat -214px -31px; }
+#EMContainerMain .footer-buttons .btn-back-on { width:107px; height:31px; background:url(images/easymodbuttons3.png) no-repeat -214px -31px; }
+#EMContainerMain .footer-buttons .btn-back-disabled { width:107px; height:31px; background:url(images/easymodbuttons3.png) no-repeat -214px -62px; cursor:default; }
+#EMContainerMain .footer-buttons .btn-next { width:107px; height:31px; background:url(images/easymodbuttons3.png) no-repeat -321px 0px; }
+#EMContainerMain .footer-buttons .btn-next:hover { width:107px; height:31px; background:url(images/easymodbuttons3.png) no-repeat -321px -31px; }
+#EMContainerMain .footer-buttons .btn-next-on { width:107px; height:31px; background:url(images/easymodbuttons3.png) no-repeat -321px -31px; }
+#EMContainerMain .footer-buttons .btn-next-disabled { width:107px; height:31px; background:url(images/easymodbuttons3.png) no-repeat -321px -62px; cursor:default; }
+#EMContainerMain #EMContainerStep2 { margin:0 0 10px 0; }
+
+/*Layout*/
+#EMContainerBaseColour { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerBaseColour .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerBaseColour div { float:left; }
+#EMContainerBackground { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerBackground .jcarousel-skin-background { margin:0 0 4px 0; }
+#EMContainerBackground .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerBackground select { margin-top:6px; margin-bottom:6px; }
+#EMContainerBackground input { margin-top:8px; margin-bottom:0px; }
+#EMContainerBackground .inptEMBackgroundImagePositionV { margin-right:2px; }
+#EMContainerBorder { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerBorder div { float:left; }
+#EMContainerBorder .note { margin-top:2px; }
+#EMContainerSkinWidth { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerSkinWidth #EMWidthSlider { margin:0 0 0 8px; }
+#EMContainerSkinWidth span { line-height:16px; }
+#EMContainerSkinWidth .inptEMWidth { float:left; margin:0 0 0 4px; }
+#EMContainerSkinWidth .inptEMWidthUnits { float:left; margin:0 0 0 4px; }
+#EMWidthSlider { float:left; }
+#EMContainerTokens { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerTokens .note { margin:0; }
+#EMContainerTokens div { width:90px; float:left; margin:0 10px 0 0; text-align:right; }
+#EMContainerTokens div div { width:100%; margin:0; }
+#EMContainerTokens div div div { width:auto; }
+#EMContainerTokens input { float:right; }
+#EMContainerBackground .btn-auto-background { float:left; margin:3px 0 0 4px; padding:0; cursor:pointer; }
+#EMContainerBackground .btn-auto-background { width:57px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -245px 0px; }
+#EMContainerBackground .btn-auto-background:hover { width:57px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -245px -23px; }
+#EMContainerBackground .btn-auto-background-on { width:57px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -245px -69px; }
+#EMContainerBackground .btn-auto-background-disabled { width:57px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -245px -92px; cursor:default; }
+
+/*Menu*/
+#EMContainerMainMenu { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerMainMenu .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerMainMenu select { margin-top:6px; }
+#EMContainerSubMenu { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerSubMenu .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerSubMenu input { margin-top:4px; margin-bottom:8px; }
+#EMContainerSubMenu .inptEMMenuArrow { margin-top:8px; margin-bottom:0px; }
+#EMContainerSubMenu .ui-slider { margin:3px 0 0 0; }
+.inptEMSubMenuOpacity { float:left; margin:0 0 0 4px; }
+#EMContainerSubMenu span { line-height:28px; }
+#EMContainerSubMenu .note span { line-height:normal; }
+
+/*Banner*/
+#EMContainerBanner { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerBanner .jcarousel-skin-banner { margin-bottom:10px; }
+#EMContainerBanner .note { margin-bottom:4px; width:70px; }
+#EMContainerBanner .btn-auto-banner { width:57px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -245px 0px; cursor:pointer; }
+#EMContainerBanner .btn-auto-banner:hover { width:57px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -245px -23px; }
+#EMContainerBanner .btn-auto-banner-on { width:57px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -245px -69px; }
+#EMContainerBanner .btn-auto-banner-disabled { width:57px; height:23px; background:url(images/easymodbuttons2.png) no-repeat -245px -92px; cursor:default; }
+#EMContainerBanner input { float:left; margin:4px 0 4px 4px; }
+#EMContainerBanner .btn-auto-banner { float:left; margin:3px 0 0 4px; padding:0; }
+#EMContainerBanner span { display:block; float:left; margin:7px 0 7px 0; }
+#EMContainerBanner .ui-slider { margin:3px 0 0 0; }
+.inptEMBannerHeight { float:left; margin:0 0 0 4px; }
+
+/*Text*/
+#EMContainerHeadText { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerHeadText .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerHeadText select { margin-top:6px; }
+#EMContainerHeadText .ui-slider { margin:3px 0 0 0; }
+#EMContainerHeadText input { margin-top:4px; margin-bottom:4px; }
+#EMContainerHeadText span { line-height:28px; }
+#EMContainerHeadText .note span { line-height:normal; }
+
+#EMContainerSubHeadText { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerSubHeadText .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerSubHeadText select { margin-top:6px; }
+#EMContainerSubHeadText .ui-slider { margin:3px 0 0 0; }
+#EMContainerSubHeadText input { margin-top:4px; margin-bottom:4px; }
+#EMContainerSubHeadText span { line-height:28px; }
+#EMContainerSubHeadText .note span { line-height:normal; }
+
+#EMContainerHText1 { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerHText1 .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerHText1 select { margin-top:6px; }
+#EMContainerHText1 .ui-slider { margin:3px 0 0 0; }
+#EMContainerHText1 input { margin-top:4px; margin-bottom:4px; }
+#EMContainerHText1 span { line-height:28px; }
+#EMContainerHText1 .note span { line-height:normal; }
+
+#EMContainerHText2 { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerHText2 .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerHText2 select { margin-top:6px; }
+#EMContainerHText2 .ui-slider { margin:3px 0 0 0; }
+#EMContainerHText2 input { margin-top:4px; margin-bottom:4px; }
+#EMContainerHText2 span { line-height:28px; }
+#EMContainerHText2 .note span { line-height:normal; }
+
+#EMContainerHText3 { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerHText3 .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerHText3 select { margin-top:6px; }
+#EMContainerHText3 .ui-slider { margin:3px 0 0 0; }
+#EMContainerHText3 input { margin-top:4px; margin-bottom:4px; }
+#EMContainerHText3 span { line-height:28px; }
+#EMContainerHText3 .note span { line-height:normal; }
+
+#EMContainerHText4 { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerHText4 .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerHText4 select { margin-top:6px; }
+#EMContainerHText4 .ui-slider { margin:3px 0 0 0; }
+#EMContainerHText4 input { margin-top:4px; margin-bottom:4px; }
+#EMContainerHText4 span { line-height:28px; }
+#EMContainerHText4 .note span { line-height:normal; }
+
+#EMContainerHText5 { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerHText5 .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerHText5 select { margin-top:6px; }
+#EMContainerHText5 .ui-slider { margin:3px 0 0 0; }
+#EMContainerHText5 input { margin-top:4px; margin-bottom:4px; }
+#EMContainerHText5 span { line-height:28px; }
+#EMContainerHText5 .note span { line-height:normal; }
+
+#EMContainerHText6 { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerHText6 .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerHText6 select { margin-top:6px; }
+#EMContainerHText6 .ui-slider { margin:3px 0 0 0; }
+#EMContainerHText6 input { margin-top:4px; margin-bottom:4px; }
+#EMContainerHText6 span { line-height:28px; }
+#EMContainerHText6 .note span { line-height:normal; }
+
+#EMContainerGeneralText { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerGeneralText .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerGeneralText select { margin-top:6px; }
+#EMContainerGeneralText .ui-slider { margin:3px 0 0 0; }
+#EMContainerGeneralText input { margin-top:4px; margin-bottom:4px; }
+#EMContainerGeneralText span { line-height:28px; }
+#EMContainerGeneralText .note span { line-height:normal; }
+#EMContainerFooterText { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerFooterText .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerFooterText select { margin-top:6px; }
+#EMContainerFooterText .ui-slider { margin:3px 0 0 0; }
+#EMContainerFooterText input { margin-top:4px; margin-bottom:4px; }
+#EMContainerFooterText span { line-height:28px; }
+#EMContainerFooterText .note span { line-height:normal; }
+.inptEMHeadFontSize, .inptEMSubHeadFontSize, .inptEMHFontSize1, .inptEMHFontSize2, .inptEMHFontSize3, .inptEMHFontSize4, .inptEMHFontSize5, .inptEMHFontSize6, .inptEMFontSize { float:left; margin:0 0 0 4px; }
+#EMHeadFontSizeSlider, #EMSubHeadFontSizeSlider, #EMHFontSize1Slider, #EMHFontSize2Slider, #EMHFontSize3Slider, #EMHFontSize4Slider, #EMHFontSize5Slider, #EMHFontSize6Slider, #EMFontSizeSlider { float:left; }
+.inptEMFooterFontSize { float:left; margin:0 0 0 4px; }
+#EMFooterFontSizeSlider { float:left; }
+
+/*Containers*/
+#EMContainerContainerSet1 { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerContainerSet1 .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerContainerSet1 select { margin-top:6px; }
+#EMContainerContainerSet1 .ui-slider { margin:3px 0 0 0; }
+#EMContainerContainerSet1 input { margin-top:4px; margin-bottom:4px; }
+#EMContainerContainerSet1 span { line-height:28px; }
+#EMContainerContainerSet1 .note span { line-height:normal; }
+#EMContainerContainerSet2 { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerContainerSet2 .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerContainerSet2 select { margin-top:6px; }
+#EMContainerContainerSet2 .ui-slider { margin:3px 0 0 0; }
+#EMContainerContainerSet2 input { margin-top:4px; margin-bottom:4px; }
+#EMContainerContainerSet2 span { line-height:28px; }
+#EMContainerContainerSet2 .note span { line-height:normal; }
+#EMContainerContainerSet3 { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerContainerSet3 .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerContainerSet3 select { margin-top:6px; }
+#EMContainerContainerSet3 .ui-slider { margin:3px 0 0 0; }
+#EMContainerContainerSet3 input { margin-top:4px; margin-bottom:4px; }
+#EMContainerContainerSet3 span { line-height:28px; }
+#EMContainerContainerSet3 .note span { line-height:normal; }
+#EMContainerContainerSet4 { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerContainerSet4 .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerContainerSet4 select { margin-top:6px; }
+#EMContainerContainerSet4 .ui-slider { margin:3px 0 0 0; }
+#EMContainerContainerSet4 input { margin-top:4px; margin-bottom:4px; }
+#EMContainerContainerSet4 span { line-height:28px; }
+#EMContainerContainerSet4 .note span { line-height:normal; }
+#EMContainerContainerSet5 { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerContainerSet5 .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerContainerSet5 select { margin-top:6px; }
+#EMContainerContainerSet5 .ui-slider { margin:3px 0 0 0; }
+#EMContainerContainerSet5 input { margin-top:4px; margin-bottom:4px; }
+#EMContainerContainerSet5 span { line-height:28px; }
+#EMContainerContainerSet5 .note span { line-height:normal; }
+#EMContainerContainerSet6 { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerContainerSet6 .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerContainerSet6 select { margin-top:6px; }
+#EMContainerContainerSet6 .ui-slider { margin:3px 0 0 0; }
+#EMContainerContainerSet6 input { margin-top:4px; margin-bottom:4px; }
+#EMContainerContainerSet6 span { line-height:28px; }
+#EMContainerContainerSet6 .note span { line-height:normal; }
+#EMContainerContainerSet7 { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerContainerSet7 .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerContainerSet7 select { margin-top:6px; }
+#EMContainerContainerSet7 .ui-slider { margin:3px 0 0 0; }
+#EMContainerContainerSet7 input { margin-top:4px; margin-bottom:4px; }
+#EMContainerContainerSet7 span { line-height:28px; }
+#EMContainerContainerSet7 .note span { line-height:normal; }
+#EMContainerContainerSet8 { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerContainerSet8 .note { margin-top:8px; margin-bottom:8px; }
+#EMContainerContainerSet8 select { margin-top:6px; }
+#EMContainerContainerSet8 .ui-slider { margin:3px 0 0 0; }
+#EMContainerContainerSet8 input { margin-top:4px; margin-bottom:4px; }
+#EMContainerContainerSet8 span { line-height:28px; }
+#EMContainerContainerSet8 .note span { line-height:normal; }
+.inptEMContainerTitleFontSize1, .inptEMContainerTitleFontSize2, .inptEMContainerTitleFontSize3, .inptEMContainerTitleFontSize4, .inptEMContainerTitleFontSize5, .inptEMContainerTitleFontSize6, .inptEMContainerTitleFontSize7, .inptEMContainerTitleFontSize8 { float:left; margin:0 0 0 4px; }
+#EMContainerTitleFontSize1Slider, #EMContainerTitleFontSize2Slider, #EMContainerTitleFontSize3Slider, #EMContainerTitleFontSize4Slider, #EMContainerTitleFontSize5Slider, #EMContainerTitleFontSize6Slider, #EMContainerTitleFontSize7Slider, #EMContainerTitleFontSize8Slider { float:left; }
+
+/*Colour Pickers*/
+#EMBaseColour1 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMBaseColour1 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMBaseColour2 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMBaseColour2 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMBaseColour3 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMBaseColour3 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMBaseColour4 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMBaseColour4 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMBaseColour5 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMBaseColour5 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMBaseColour6 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMBaseColour6 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMBaseColour7 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMBaseColour7 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMBaseColour8 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMBaseColour8 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMBackgroundColour { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMBackgroundColour div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMMainMenuItemOn { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMMainMenuItemOn div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMMainMenuItemOff { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMMainMenuItemOff div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMSubMenuItemOn { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMSubMenuItemOn div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMSubMenuItemOff { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMSubMenuItemOff div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMSubMenuItemBGOn { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMSubMenuItemBGOn div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMSubMenuItemBGOff { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMSubMenuItemBGOff div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMHeadFontColour { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMHeadFontColour div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMSubHeadFontColour { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMSubHeadFontColour div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMHFontColour1 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMHFontColour1 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMHFontColour2 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMHFontColour2 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMHFontColour3 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMHFontColour3 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMHFontColour4 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMHFontColour4 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMHFontColour5 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMHFontColour5 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMHFontColour6 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMHFontColour6 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMFontColour { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMFontColour div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMLinkColour { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMLinkColour div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMLinkHoverColour { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMLinkHoverColour div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMFooterFontColour { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMFooterFontColour div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMFooterLinkColour { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMFooterLinkColour div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMFooterLinkHoverColour { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMFooterLinkHoverColour div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMContainerColour1 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMContainerColour1 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMContainerColour2 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMContainerColour2 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMContainerColour3 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMContainerColour3 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMContainerColour4 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMContainerColour4 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMContainerColour5 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMContainerColour5 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMContainerColour6 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMContainerColour6 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMContainerColour7 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMContainerColour7 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMContainerColour8 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMContainerColour8 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMContainerTitleFontColour1 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMContainerTitleFontColour1 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMContainerTitleFontColour2 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMContainerTitleFontColour2 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMContainerTitleFontColour3 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMContainerTitleFontColour3 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMContainerTitleFontColour4 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMContainerTitleFontColour4 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMContainerTitleFontColour5 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMContainerTitleFontColour5 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMContainerTitleFontColour6 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMContainerTitleFontColour6 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMContainerTitleFontColour7 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMContainerTitleFontColour7 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+#EMContainerTitleFontColour8 { float:left; margin: 2px; position: relative; width: 30px; height: 30px; cursor:pointer; }
+#EMContainerTitleFontColour8 div { position: absolute; top: 0px; left: 0px; width: 30px; height: 30px; background: url(images/colourpicker/select.png) center; }
+
+/*Import*/
+#EMContainerMain #EMContainerImport { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerMain #EMContainerImport .note { float:left; margin:0 10px 10px 3px; }
+#EMContainerMain #EMContainerImport .note2 { float:left; width:60px; margin:0 10px 10px 3px; }
+#EMContainerMain #EMContainerImport .EMImportLog { display:block; margin:10px 0 0 3px; }
+
+/*Export*/
+#EMContainerMain #EMContainerExport { overflow:hidden; margin:10px 0 0 0; }
+#EMContainerMain #EMContainerExport .note { float:left; margin:0 10px 10px 3px; }
+#EMContainerMain #EMContainerExport .note2 { float:left; width:60px; margin:0 5px 10px 3px; }
+
+/*License*/
+#EMContainerMain #EMContainerLicense p { margin:0 0 10px 8px; }
+#EMContainerMain #EMContainerLicense .note { width:90px; margin:0 0 5px 8px; }
+#EMContainerMain #EMContainerLicense .btn-cancel { margin:2px 0 0 8px; }
+#EMContainerMain #EMContainerLicense .btn-update { margin:2px 0 0 8px; }
+#EMContainerMain #EMContainerLicense .btn-continue,.btn-continue-disabled { margin:2px 8px 0 20px; }

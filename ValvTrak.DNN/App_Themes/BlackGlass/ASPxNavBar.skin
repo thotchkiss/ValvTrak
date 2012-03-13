@@ -1,0 +1,9 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxnb" Namespace="DevExpress.Web.ASPxNavBar" Assembly="DevExpress.Web.v10.2" %>
+
+<dxnb:ASPxNavBar runat="server" GroupSpacing="0px" SpriteCssFilePath="{0}/sprite.css"
+    CssFilePath="{0}/styles.css" CssPostfix="BlackGlass">
+    <GroupContentStyle ItemSpacing="1px"></GroupContentStyle>
+    <LoadingPanelImage Url="Web/Loading.gif"></LoadingPanelImage>
+</dxnb:ASPxNavBar>
+

@@ -1,0 +1,8 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v10.2" %>
+
+<dxe:ASPxDateEdit runat="server" CssFilePath="{0}/styles.css" CssPostfix="Office2003Olive"
+	SpriteCssFilePath="{0}/sprite.css">
+    <ButtonStyle Width="13px"></ButtonStyle>
+</dxe:ASPxDateEdit>
+

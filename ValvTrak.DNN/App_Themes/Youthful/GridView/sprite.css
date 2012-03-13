@@ -1,0 +1,105 @@
+.dxGridView_gvCollapsedButton_Youthful,
+.dxGridView_gvExpandedButton_Youthful,
+.dxGridView_gvDetailCollapsedButton_Youthful,
+.dxGridView_gvDetailExpandedButton_Youthful,
+.dxGridView_gvFilterRowButton_Youthful,
+.dxGridView_gvHeaderFilter_Youthful,
+.dxGridView_gvHeaderFilterActive_Youthful,
+.dxGridView_gvHeaderSortDown_Youthful,
+.dxGridView_gvHeaderSortUp_Youthful,
+.dxGridView_gvDragAndDropArrowDown_Youthful,
+.dxGridView_gvDragAndDropArrowUp_Youthful,
+.dxGridView_gvDragAndDropHideColumn_Youthful,
+.dxGridView_gvParentGroupRows_Youthful,
+.dxGridView_WindowResizer_Youthful {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxGridView_gvCollapsedButton_Youthful {
+    background-position: -36px 0px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxGridView_gvExpandedButton_Youthful {
+    background-position: -36px -18px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxGridView_gvDetailCollapsedButton_Youthful {
+    background-position: -53px 0px;
+    width: 9px;
+    height: 10px;
+}
+
+.dxGridView_gvDetailExpandedButton_Youthful {
+    background-position: -53px -18px;
+    width: 9px;
+    height: 10px;
+}
+
+.dxGridView_gvFilterRowButton_Youthful {
+    background-position: -100px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvHeaderFilter_Youthful {
+    background-position: 0px -36px;
+    width: 15px;
+    height: 17px;
+}
+
+.dxGridView_gvHeaderFilterActive_Youthful {
+    background-position: -23px -36px;
+    width: 15px;
+    height: 17px;
+}
+
+.dxGridView_gvHeaderSortDown_Youthful {
+    background-position: -19px 0px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxGridView_gvHeaderSortUp_Youthful {
+    background-position: -19px -18px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxGridView_gvDragAndDropArrowDown_Youthful {
+    background-position: 0px 0px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxGridView_gvDragAndDropArrowUp_Youthful {
+    background-position: 0px -17px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxGridView_gvDragAndDropHideColumn_Youthful {
+    background-position: -70px 0px;
+    width: 22px;
+    height: 22px;
+}
+
+.dxGridView_gvParentGroupRows_Youthful {
+    background-position: -70px -36px;
+    width: 18px;
+    height: 13px;
+}
+
+.dxGridView_WindowResizer_Youthful {
+    background-position: -46px -36px;
+    width: 16px;
+    height: 16px;
+}
+
+

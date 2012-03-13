@@ -1,0 +1,728 @@
+.dxHtmlEditor_Icons_heCut_Glass,
+.dxHtmlEditor_Icons_heCutDisabled_Glass,
+.dxHtmlEditor_Icons_heCopy_Glass,
+.dxHtmlEditor_Icons_heCopyDisabled_Glass,
+.dxHtmlEditor_Icons_hePaste_Glass,
+.dxHtmlEditor_Icons_hePasteDisabled_Glass,
+.dxHtmlEditor_Icons_hePasteFromWord_Glass,
+.dxHtmlEditor_Icons_hePasteFromWordDisabled_Glass,
+.dxHtmlEditor_Icons_heUndo_Glass,
+.dxHtmlEditor_Icons_heUndoDisabled_Glass,
+.dxHtmlEditor_Icons_heRedo_Glass,
+.dxHtmlEditor_Icons_heRedoDisabled_Glass,
+.dxHtmlEditor_Icons_heBold_Glass,
+.dxHtmlEditor_Icons_heBoldDisabled_Glass,
+.dxHtmlEditor_Icons_heItalic_Glass,
+.dxHtmlEditor_Icons_heItalicDisabled_Glass,
+.dxHtmlEditor_Icons_heUnderline_Glass,
+.dxHtmlEditor_Icons_heUnderlineDisabled_Glass,
+.dxHtmlEditor_Icons_heStrikethrough_Glass,
+.dxHtmlEditor_Icons_heStrikethroughDisabled_Glass,
+.dxHtmlEditor_Icons_heCenter_Glass,
+.dxHtmlEditor_Icons_heCenterDisabled_Glass,
+.dxHtmlEditor_Icons_heLeft_Glass,
+.dxHtmlEditor_Icons_heLeftDisabled_Glass,
+.dxHtmlEditor_Icons_heRight_Glass,
+.dxHtmlEditor_Icons_heRightDisabled_Glass,
+.dxHtmlEditor_Icons_heJustifyFull_Glass,
+.dxHtmlEditor_Icons_heJustifyFullDisabled_Glass,
+.dxHtmlEditor_Icons_heSuperscript_Glass,
+.dxHtmlEditor_Icons_heSuperscriptDisabled_Glass,
+.dxHtmlEditor_Icons_heSubscript_Glass,
+.dxHtmlEditor_Icons_heSubscriptDisabled_Glass,
+.dxHtmlEditor_Icons_heIndent_Glass,
+.dxHtmlEditor_Icons_heIndentDisabled_Glass,
+.dxHtmlEditor_Icons_heOutdent_Glass,
+.dxHtmlEditor_Icons_heOutdentDisabled_Glass,
+.dxHtmlEditor_Icons_heInsertOrderedList_Glass,
+.dxHtmlEditor_Icons_heInsertOrderedListDisabled_Glass,
+.dxHtmlEditor_Icons_heInsertUnorderedList_Glass,
+.dxHtmlEditor_Icons_heInsertUnorderedListDisabled_Glass,
+.dxHtmlEditor_Icons_heInsertImageDialog_Glass,
+.dxHtmlEditor_Icons_heInsertImageDialogDisabled_Glass,
+.dxHtmlEditor_Icons_heInsertLinkDialog_Glass,
+.dxHtmlEditor_Icons_heInsertLinkDialogDisabled_Glass,
+.dxHtmlEditor_Icons_heInsertTableDialog_Glass,
+.dxHtmlEditor_Icons_heInsertTableDialogDisabled_Glass,
+.dxHtmlEditor_Icons_heChangeTableDialog_Glass,
+.dxHtmlEditor_Icons_heChangeTableDialogDisabled_Glass,
+.dxHtmlEditor_Icons_heChangeTableCellDialog_Glass,
+.dxHtmlEditor_Icons_heChangeTableCellDialogDisabled_Glass,
+.dxHtmlEditor_Icons_heChangeTableColumnDialog_Glass,
+.dxHtmlEditor_Icons_heChangeTableColumnDialogDisabled_Glass,
+.dxHtmlEditor_Icons_heChangeTableRowDialog_Glass,
+.dxHtmlEditor_Icons_heChangeTableRowDialogDisabled_Glass,
+.dxHtmlEditor_Icons_heInsertTableRowAbove_Glass,
+.dxHtmlEditor_Icons_heInsertTableRowAboveDisabled_Glass,
+.dxHtmlEditor_Icons_heInsertTableRowBelow_Glass,
+.dxHtmlEditor_Icons_heInsertTableRowBelowDisabled_Glass,
+.dxHtmlEditor_Icons_heInsertTableColumnOnLeft_Glass,
+.dxHtmlEditor_Icons_heInsertTableColumnOnLeftDisabled_Glass,
+.dxHtmlEditor_Icons_heInsertTableColumnOnRight_Glass,
+.dxHtmlEditor_Icons_heInsertTableColumnOnRightDisabled_Glass,
+.dxHtmlEditor_Icons_heSplitTableCellHorizontal_Glass,
+.dxHtmlEditor_Icons_heSplitTableCellHorizontalDisabled_Glass,
+.dxHtmlEditor_Icons_heSplitTableCellVertical_Glass,
+.dxHtmlEditor_Icons_heSplitTableCellVerticalDisabled_Glass,
+.dxHtmlEditor_Icons_heMergeTableCellHorizontal_Glass,
+.dxHtmlEditor_Icons_heMergeTableCellHorizontalDisabled_Glass,
+.dxHtmlEditor_Icons_heMergeTableCellVertical_Glass,
+.dxHtmlEditor_Icons_heMergeTableCellVerticalDisabled_Glass,
+.dxHtmlEditor_Icons_heDeleteTable_Glass,
+.dxHtmlEditor_Icons_heDeleteTableDisabled_Glass,
+.dxHtmlEditor_Icons_heDeleteTableColumn_Glass,
+.dxHtmlEditor_Icons_heDeleteTableColumnDisabled_Glass,
+.dxHtmlEditor_Icons_heDeleteTableRow_Glass,
+.dxHtmlEditor_Icons_heDeleteTableRowDisabled_Glass,
+.dxHtmlEditor_Icons_heUnlink_Glass,
+.dxHtmlEditor_Icons_heUnlinkDisabled_Glass,
+.dxHtmlEditor_Icons_heBackColor_Glass,
+.dxHtmlEditor_Icons_heBackColorDisabled_Glass,
+.dxHtmlEditor_Icons_heForeColor_Glass,
+.dxHtmlEditor_Icons_heForeColorDisabled_Glass,
+.dxHtmlEditor_Icons_heRemoveFormat_Glass,
+.dxHtmlEditor_Icons_heRemoveFormatDisabled_Glass,
+.dxHtmlEditor_Icons_hePrint_Glass,
+.dxHtmlEditor_Icons_hePrintDisabled_Glass,
+.dxHtmlEditor_Icons_heCheckSpelling_Glass,
+.dxHtmlEditor_Icons_heCheckSpellingDisabled_Glass,
+.dxHtmlEditor_heToolbarPopOut_Glass,
+.dxHtmlEditor_heConstrainProportionsMiddleOn_Glass,
+.dxHtmlEditor_heConstrainProportionsMiddleOff_Glass,
+.dxHtmlEditor_heConstrainProportionsBottom_Glass,
+.dxHtmlEditor_heConstrainProportionsTop_Glass,
+.dxHtmlEditor_RoundPanel_herpHeaderTopLeftCorner_Glass,
+.dxHtmlEditor_RoundPanel_herpHeaderTopRightCorner_Glass,
+.dxHtmlEditor_RoundPanel_herpBottomLeftCorner_Glass,
+.dxHtmlEditor_RoundPanel_herpBottomRightCorner_Glass,
+.dxHtmlEditor_RoundPanel_herpTopLeftCorner_Glass,
+.dxHtmlEditor_RoundPanel_herpTopRightCorner_Glass,
+.dxHtmlEditor_RoundPanel_herpGroupBoxBottomLeftCorner_Glass,
+.dxHtmlEditor_RoundPanel_herpGroupBoxBottomRightCorner_Glass,
+.dxHtmlEditor_RoundPanel_herpGroupBoxTopLeftCorner_Glass,
+.dxHtmlEditor_RoundPanel_herpGroupBoxTopRightCorner_Glass {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxHtmlEditor_Icons_heCut_Glass {
+    background-position: -48px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCutDisabled_Glass {
+    background-position: -72px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCopy_Glass {
+    background-position: 0px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCopyDisabled_Glass {
+    background-position: -24px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePaste_Glass {
+    background-position: -96px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePasteDisabled_Glass {
+    background-position: -120px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePasteFromWord_Glass {
+    background-position: -144px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePasteFromWordDisabled_Glass {
+    background-position: -168px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUndo_Glass {
+    background-position: -96px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUndoDisabled_Glass {
+    background-position: -120px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heRedo_Glass {
+    background-position: -48px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heRedoDisabled_Glass {
+    background-position: -72px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heBold_Glass {
+    background-position: -48px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heBoldDisabled_Glass {
+    background-position: -72px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heItalic_Glass {
+    background-position: 0px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heItalicDisabled_Glass {
+    background-position: -24px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUnderline_Glass {
+    background-position: -48px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUnderlineDisabled_Glass {
+    background-position: -72px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heStrikethrough_Glass {
+    background-position: -96px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heStrikethroughDisabled_Glass {
+    background-position: -120px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCenter_Glass {
+    background-position: -96px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCenterDisabled_Glass {
+    background-position: -120px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heLeft_Glass {
+    background-position: -96px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heLeftDisabled_Glass {
+    background-position: -120px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heRight_Glass {
+    background-position: -144px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heRightDisabled_Glass {
+    background-position: -168px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heJustifyFull_Glass {
+    background-position: -48px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heJustifyFullDisabled_Glass {
+    background-position: -72px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSuperscript_Glass {
+    background-position: 0px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSuperscriptDisabled_Glass {
+    background-position: -24px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSubscript_Glass {
+    background-position: -144px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSubscriptDisabled_Glass {
+    background-position: -168px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heIndent_Glass {
+    background-position: -96px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heIndentDisabled_Glass {
+    background-position: -120px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heOutdent_Glass {
+    background-position: -48px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heOutdentDisabled_Glass {
+    background-position: -72px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertOrderedList_Glass {
+    background-position: -48px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertOrderedListDisabled_Glass {
+    background-position: -72px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertUnorderedList_Glass {
+    background-position: -144px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertUnorderedListDisabled_Glass {
+    background-position: -168px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertImageDialog_Glass {
+    background-position: -144px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertImageDialogDisabled_Glass {
+    background-position: -168px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertLinkDialog_Glass {
+    background-position: 0px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertLinkDialogDisabled_Glass {
+    background-position: -24px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableDialog_Glass {
+    background-position: 0px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableDialogDisabled_Glass {
+    background-position: -24px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableDialog_Glass {
+    background-position: -48px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableDialogDisabled_Glass {
+    background-position: -72px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableCellDialog_Glass {
+    background-position: -144px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableCellDialogDisabled_Glass {
+    background-position: -168px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableColumnDialog_Glass {
+    background-position: 0px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableColumnDialogDisabled_Glass {
+    background-position: -24px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableRowDialog_Glass {
+    background-position: -96px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableRowDialogDisabled_Glass {
+    background-position: -120px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableRowAbove_Glass {
+    background-position: -48px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableRowAboveDisabled_Glass {
+    background-position: -72px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableRowBelow_Glass {
+    background-position: -96px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableRowBelowDisabled_Glass {
+    background-position: -120px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableColumnOnLeft_Glass {
+    background-position: -96px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableColumnOnLeftDisabled_Glass {
+    background-position: -120px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableColumnOnRight_Glass {
+    background-position: -144px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableColumnOnRightDisabled_Glass {
+    background-position: -168px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSplitTableCellHorizontal_Glass {
+    background-position: 0px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSplitTableCellHorizontalDisabled_Glass {
+    background-position: -24px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSplitTableCellVertical_Glass {
+    background-position: -48px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSplitTableCellVerticalDisabled_Glass {
+    background-position: -72px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heMergeTableCellHorizontal_Glass {
+    background-position: -144px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heMergeTableCellHorizontalDisabled_Glass {
+    background-position: -168px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heMergeTableCellVertical_Glass {
+    background-position: 0px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heMergeTableCellVerticalDisabled_Glass {
+    background-position: -24px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTable_Glass {
+    background-position: -96px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTableDisabled_Glass {
+    background-position: -120px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTableColumn_Glass {
+    background-position: -144px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTableColumnDisabled_Glass {
+    background-position: -168px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTableRow_Glass {
+    background-position: 0px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTableRowDisabled_Glass {
+    background-position: -24px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUnlink_Glass {
+    background-position: -144px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUnlinkDisabled_Glass {
+    background-position: -168px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heBackColor_Glass {
+    background-position: 0px -26px;
+    width: 16px;
+    height: 13px;
+}
+
+.dxHtmlEditor_Icons_heBackColorDisabled_Glass {
+    background-position: -24px -26px;
+    width: 16px;
+    height: 13px;
+}
+
+.dxHtmlEditor_Icons_heForeColor_Glass {
+    background-position: -48px -98px;
+    width: 16px;
+    height: 13px;
+}
+
+.dxHtmlEditor_Icons_heForeColorDisabled_Glass {
+    background-position: -72px -98px;
+    width: 16px;
+    height: 13px;
+}
+
+.dxHtmlEditor_Icons_heRemoveFormat_Glass {
+    background-position: -96px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heRemoveFormatDisabled_Glass {
+    background-position: -120px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePrint_Glass {
+    background-position: 0px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePrintDisabled_Glass {
+    background-position: -24px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCheckSpelling_Glass {
+    background-position: -144px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCheckSpellingDisabled_Glass {
+    background-position: -168px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_heToolbarPopOut_Glass {
+    background-position: -135px 0px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxHtmlEditor_heConstrainProportionsMiddleOn_Glass {
+    background-position: -19px 0px;
+    width: 11px;
+    height: 18px;
+}
+
+.dxHtmlEditor_heConstrainProportionsMiddleOff_Glass {
+    background-position: 0px 0px;
+    width: 11px;
+    height: 18px;
+}
+
+.dxHtmlEditor_heConstrainProportionsBottom_Glass {
+    background-position: -38px 0px;
+    width: 11px;
+    height: 6px;
+}
+
+.dxHtmlEditor_heConstrainProportionsTop_Glass {
+    background-position: -38px -14px;
+    width: 11px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpHeaderTopLeftCorner_Glass {
+    background-position: -109px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpHeaderTopRightCorner_Glass {
+    background-position: -122px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpBottomLeftCorner_Glass {
+    background-position: -57px -13px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpBottomRightCorner_Glass {
+    background-position: -70px -13px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpTopLeftCorner_Glass {
+    background-position: -57px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpTopRightCorner_Glass {
+    background-position: -70px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpGroupBoxBottomLeftCorner_Glass {
+    background-position: -83px -13px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpGroupBoxBottomRightCorner_Glass {
+    background-position: -96px -13px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpGroupBoxTopLeftCorner_Glass {
+    background-position: -83px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpGroupBoxTopRightCorner_Glass {
+    background-position: -96px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+

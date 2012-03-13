@@ -1,0 +1,426 @@
+.dxscControl_Office2003Silver
+{    
+    background: #9C9AB7;
+	border: solid 1px #9C9AB7;
+}
+.dxscLoadingPanel_Office2003Silver
+{
+	border:solid 1px #9C9AB7;
+	background-color: white;
+	font: 9pt Tahoma;
+	color: #758D5E;
+}
+.dxscLoadingPanel_Office2003Silver td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px;
+}
+.dxscLoadingDiv_Office2003Silver
+{
+    background: White ;
+    opacity: 0.25;
+    filter: alpha(opacity=25);
+    cursor: wait;
+}
+
+/* Headers */
+.dxscDateHeader_Office2003Silver, 
+.dxscAlternateDateHeader_Office2003Silver,
+.dxscDayHeader_Office2003Silver,
+.dxscDateCellHeader_Office2003Silver,
+.dxscTodayCellHeader_Office2003Silver,
+.dxscTimelineDateHeader_Office2003Silver,
+.dxscHorizontalResourceHeader_Office2003Silver,
+.dxscVerticalResourceHeader_Office2003Silver
+{    
+    color: black;
+    background: url('CssImages/DateHeaderBack.gif') repeat-x left top #D4D3E1;
+    border: solid 1px #9C9AB7;
+    border-width: 0 1px 1px 0;
+    padding: 4px;
+	font: 9pt Tahoma;		
+	text-align: center;
+    vertical-align: top;
+    cursor: default;
+	overflow: hidden;
+	white-space: nowrap;	
+}
+
+.dxscAlternateTimelineDateHeader_Office2003Silver,
+.dxscAlternateDateHeader_Office2003Silver
+{    
+    background: url('CssImages/DateHeaderAltBack.gif') repeat-x left top #FFD294;
+    color: black;
+}
+.dxscDayHeader_Office2003Silver
+{
+	border-width: 1px 1px 0 0;
+}
+.dxscDateCellHeader_Office2003Silver
+{
+    border-width: 1px;
+}
+.dxscTodayCellHeader_Office2003Silver
+{    
+	border-top-width: 1px;
+	background: #7CABC4;
+    color: #FFFFFF;
+}
+.dxscTimelineDateHeader_Office2003Silver
+{
+    border-width: 1px 1px 1px 0;
+}
+.dxscHorizontalResourceHeader_Office2003Silver
+{
+    border-color: #9C9AB7;
+	border-width: 1px 1px 1px 0;
+    background: url('CssImages/ResourceHeaderBack.gif') repeat-x left top #9E9CB9;    
+}
+.dxscVerticalResourceHeader_Office2003Silver
+{
+    border-width: 1px 1px 0 0;
+	border-top-color: #9C9AB7;
+    background: #C9C9DA;    
+    white-space: normal;
+}
+.dxscSelectionBar_Office2003Silver 
+{	
+    border-style: solid;
+	border-width: 0 1px 0 0;
+	height: 30px;
+}
+
+/* Corners */
+.dxscLeftTopCorner_Office2003Silver, 
+.dxscRightTopCorner_Office2003Silver
+{
+    background-color: #E5E5ED;
+	width: 1px;
+    border-style: solid;
+    border-color: #9C9AB7;	
+	border-width: 0 0 1px;
+}
+.dxscLeftTopCorner_Office2003Silver
+{    
+    border-width: 1px 1px 1px 0;
+    font: 8pt Tahoma;
+    text-align: center;
+    padding: 2px;
+}
+
+/* Separators */
+.dxscGroupSeparatorVertical_Office2003Silver ,
+.dxscGroupSeparatorHorizontal_Office2003Silver
+{
+	background: #FAFAFD;
+	border: solid 1px #918FAD;
+}
+.dxscGroupSeparatorVertical_Office2003Silver
+{
+    width: 1px; 
+    border-width: 0 1px;
+}
+.dxscGroupSeparatorHorizontal_Office2003Silver
+{
+	height: 1px;
+    border-width: 1px 0 0;
+    font-size: 1px;
+}
+
+/* Apts Area */
+.dxscAllDayArea_Office2003Silver
+{
+    background-color: #E5E5ED;
+    border: solid 1px #C8C8D9;
+    border-width: 0 1px 1px 0;
+}
+.dxscDateCellBody_Office2003Silver 
+{
+	height: 100px;
+    border: solid 1px;
+    border-width: 0 1px 0 0;
+}
+.dxscTimeCellBody_Office2003Silver
+{
+    border: solid 1px;
+	font: 9pt Tahoma;
+}
+.dxscTimelineCellBody_Office2003Silver
+{
+	height: 300px;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+}
+
+.dxscAppointment_Office2003Silver
+{
+    color: black;
+    font: 8pt Tahoma;
+    border: solid 1px #7f9db9;
+    padding: 0;
+	margin: 0;
+	cursor: default;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;	
+}
+
+.dxscAppointmentInnerBorders_Office2003Silver
+{	
+    border: solid 1px #7f9db9;
+    padding: 0px;
+}
+.dxscMoreButton_Office2003Silver
+{
+	font: 8pt Tahoma;
+	color: black;
+	text-decoration: underline;	
+	padding: 0;	
+}
+.dxscAppointmentHorizontalSeparator_Office2003Silver
+{
+	height: 1px;
+	width: 100%;
+	overflow: hidden;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-right-style: none;
+}
+/* Rulers */
+.dxscTimeRulerHoursItem_Office2003Silver, .dxscTimeRulerMinuteItem_Office2003Silver
+{
+    color:black;
+    background: #EFEFF4;
+    border: solid 1px #C8C8D9 ;
+    border-width: 0px 1px 1px 0;
+	vertical-align: top;
+	white-space: nowrap;
+} 
+.dxscTimeRulerHoursItem_Office2003Silver
+{
+    border-right-width: 0;
+    border-left-color: black;
+    font: 13pt Tahoma;
+	text-align: right;
+	width: 45px;
+    padding: 2px 4px 0px;
+}
+.dxscTimeRulerMinuteItem_Office2003Silver
+{
+    border-left-width: 0px;
+	text-align: center;
+	width: 13px;
+	font: 8pt Tahoma;
+    padding: 4px;
+    padding-left: 1px;
+}
+
+.dxscTimeRulerHeaderHourItem_Office2003Silver
+{
+    width: 55px;
+}
+.dxscTimeRulerHeaderMinuteItem_Office2003Silver
+{
+    width: 16px;
+}
+.dxscScrollHeaderItem_Office2003Silver 
+{
+    width: 16px;
+}
+
+
+/* Control elements */
+.dxscToolbar_Office2003Silver 
+{
+	background-color: #C8C8D9;
+	padding: 9px 0 9px 12px;
+}
+.dxscViewSelector_Office2003Silver 
+{    
+    background-color: #C8C8D9;
+	padding: 0px 0px;   
+}
+.dxscResourceNavigator_Office2003Silver 
+{    
+    background: #D8D8E4;
+    padding: 7px;
+    border: solid 1px #9C9AB7;
+}
+.dxscViewVisibleInterval_Office2003Silver
+{
+    color: black;
+    font: 9pt Tahoma;
+    white-space: nowrap;
+}
+.dxscInplaceEditor_Office2003Silver
+{
+	background: #C8C8D9;
+	border: solid 3px black;
+	padding: 0;
+	font: 8pt Tahoma;
+	color: Black;
+}
+.dxscErrorInfo_Office2003Silver
+{
+	background: #f1abab;
+	color: #853a3a;
+	padding: 10px;
+	border: solid 1px Black;
+    border-width: 1px 0;
+}
+
+/* Buttons */
+.dxscViewNavigatorButton_Office2003Silver
+{    
+    background: url('CssImages/ButtonBack.gif') repeat-x #9E9DB9;
+    border: solid 1px #9C9AB7;
+    height: 19px;
+    padding: 0px 7px;
+    font: 9pt Tahoma;
+    color: black;
+	cursor: pointer;
+}
+.dxscViewNavigatorButtonHover_Office2003Silver
+{
+    background: url('CssImages/ButtonHoverBack.gif') repeat-x #FFE6B5;
+}
+.dxscViewNavigatorButtonPressed_Office2003Silver
+{
+    background: url('CssImages/ButtonPressedBack.gif') repeat-x #FFE6B5;
+}
+
+.dxscViewSelectorButton_Office2003Silver 
+{
+    background: url('CssImages/ViewSelectorButtonBack.gif') repeat-x left top #ABA9C2;
+	border: solid 1px #9C9AB7;
+	border-width: 0 0 0 1px;
+	padding: 13px 18px;
+	font: 9pt Tahoma;
+    cursor: pointer;
+}
+.dxscViewSelectorButtonHover_Office2003Silver 
+{
+	background: url('CssImages/ViewSelectorButtonBackHover.gif') repeat-x #FFD294;
+    border-color: #9C9AB7;
+}
+.dxscViewSelectorButtonChecked_Office2003Silver 
+{
+    background: url('CssImages/ViewSelectorButtonBackPressed.gif') repeat-x #FFCF8B;
+    border-color: #9C9AB7;
+}
+.dxscViewSelectorButtonPressed_Office2003Silver
+{
+    background: url('CssImages/ViewSelectorButtonBackPressed.gif') repeat-x #FFCF8B;
+    border-color: #9C9AB7;
+}
+
+.dxscResourceNavigatorButton_Office2003Silver
+{    
+    background: #C7C7D8;
+	cursor: pointer;
+}
+.dxscResourceNavigatorButtonHover_Office2003Silver
+{
+    background: #FFE6B5;
+}
+.dxscResourceNavigatorButtonPressed_Office2003Silver
+{
+    background: #FFE6B5;
+}
+
+.dxscNavigationButton_Office2003Silver
+{
+    background: #ABAAC3;
+	cursor: pointer;
+}
+.dxscNavigationButtonHover_Office2003Silver
+{
+    background: #FFE6B5;    
+}
+.dxscNavigationButtonPressed_Office2003Silver
+{
+    background: #FFE6B5;    
+}
+
+.dxscSmartTagButton_Office2003Silver 
+{
+    background: url('CssImages/ButtonBack.gif') repeat-x #B8C692;
+	border: solid 1px #9C9AB7;
+    padding: 4px 5px;
+	cursor: pointer;
+}
+
+.dxscDVBottomMoreButton_Office2003Silver,
+.dxscDVTopMoreButton_Office2003Silver
+{
+	cursor: pointer;
+}
+
+.dxscNoBorderButton_Office2003Silver
+{
+	cursor: pointer;
+	border: solid 1px #C8C8D9;
+}
+.dxscNoBorderButtonHover_Office2003Silver
+{
+    background: #C4DFEE;
+    border-color: #A4BED1;
+}
+.dxscNoBorderButtonPressed_Office2003Silver
+{
+    background: #B6D5E3;
+    border-color: #A4BED1;
+}
+.dxscControlAreaForm_Office2003Silver
+{
+	font: 12pt Tahoma;
+	color: black;
+	white-space: normal;
+	padding: 9px 12px 13px 12px;
+	background-color: white;	
+}
+.dxscToolTipRoundedCornersTopBottomRow_Office2003Silver
+{
+	font-size:1pt;		
+}
+.dxscToolTipRoundedCornersTopSide_Office2003Silver
+{
+	border-top: 1px black solid; 
+	vertical-align:bottom; 
+	height:1px;	
+	background-color:#fafad2;
+}
+.dxscToolTipRoundedCornersLeftSide_Office2003Silver
+{
+	border-left: 1px black solid; 
+	vertical-align:bottom; 
+	background-color:#fafad2;
+}
+.dxscToolTipRoundedCornersRightSide_Office2003Silver
+{
+	border-right: 1px black solid; 
+	vertical-align:bottom; 
+	background-color:#fafad2;
+}
+.dxscToolTipRoundedCornersBottomSide_Office2003Silver
+{
+	border-bottom: 1px black solid; 
+	vertical-align:bottom; 
+	height:1px;	
+	background-color:#fafad2;
+}
+.dxscToolTipRoundedCornersContent_Office2003Silver
+{
+	background-color:#fafad2;
+	padding:0;
+}
+.dxscToolTipSquaredCorners_Office2003Silver
+{
+    background: #f9f9cd;
+    padding: 0;
+    font: 8pt Tahoma;
+    color: #303030;
+    white-space: nowrap;
+    border: solid 1px black;
+}

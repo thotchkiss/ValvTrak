@@ -1,0 +1,410 @@
+.dxgvControl_Office2003Blue,
+.dxgvDisabled_Office2003Blue
+{
+	border: solid 1px #4f93e3;
+	font: 9pt Tahoma;
+	background-color: White;
+	color: Black;
+	cursor: default;
+}
+
+.dxgvDisabled_Office2003Blue 
+{
+	color: Gray;
+}
+.dxgvControl_Office2003Blue a 
+{
+	color: black;
+}
+.dxgvDisabled_Office2003Blue a
+{
+	color: Gray;
+}
+.dxgvLoadingPanel_Office2003Blue
+{
+	border:solid 1px #4f93e3;
+	background-color: white;
+	font: 9pt Tahoma;
+	color: #4B77B8;
+}
+.dxgvLoadingPanel_Office2003Blue td
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px 12px 12px 12px;
+}
+.dxgvLoadingPanelStatusBar_Office2003Blue
+{
+	background-color: transparent;
+	font: 8pt Tahoma;
+	color: #4B77B8;
+}
+.dxgvLoadingPanelStatusBar_Office2003Blue td
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 0px 2px 0px 2px;
+}
+
+.dxgvFilterPopupWindow_Office2003Blue
+{
+	color: Black;
+	font: 9pt Tahoma;
+	border: solid 1px #3a609b;
+}
+.dxgvFilterPopupItemsArea_Office2003Blue
+{
+	color: Black;
+	background-color: White;
+}
+.dxgvFilterPopupButtonPanel_Office2003Blue
+{
+	font: 9pt Tahoma;
+	background-color: #cce2fc;
+	border: 1px solid #dcdcdc;
+	border-left-width: 0px;
+	color: Black;
+}
+
+.dxgvFilterPopupItem_Office2003Blue td.dxgv,
+.dxgvFilterPopupActiveItem_Office2003Blue td.dxgv,
+.dxgvFilterPopupSelectedItem_Office2003Blue td.dxgv
+{
+	padding: 3px 2px 4px 3px;
+	border-left: 1px solid White;
+	border-bottom: 1px solid White;
+	border-right: 1px solid White;
+	cursor: default;
+	white-space: nowrap;	
+}
+.dxgvFilterPopupActiveItem_Office2003Blue
+{
+	background: #cce2fc;
+    color: Black;
+}
+.dxgvFilterPopupSelectedItem_Office2003Blue
+{
+	background: #ffc076;
+    color: Black;    
+}
+
+.dxgvTable_Office2003Blue
+{
+	background-color: transparent;
+	border:0;
+	border-collapse: separate !important;
+	overflow:hidden;
+	font: 9pt Tahoma;
+	color: Black;
+}
+.dxgvInlineEditRow_Office2003Blue,
+.dxgvDataRow_Office2003Blue
+{
+}
+.dxgvInlineEditRow_Office2003Blue td.dxgv
+{
+	border-bottom: solid 1px #4f93e3;
+	border-right: 1px solid #4f93e3;
+	background: #c1d7f8;
+}
+.dxgvDataRowAlt_Office2003Blue
+{
+	background-color: #edf5ff;
+}
+.dxgvFilterRow_Office2003Blue 
+{
+	background: #94b6e8;	
+}
+.dxgvEditForm_Office2003Blue 
+{	
+	background-color: #c1d7f8;
+}
+.dxgvEditForm_Office2003Blue td.dxgv
+{
+	border-bottom: solid 1px #4f93e3;
+	padding: 0px 0px 2px 0px;
+}
+.dxgvSelectedRow_Office2003Blue
+{	
+	background: #ffc076;
+}
+.dxgvFocusedRow_Office2003Blue
+{
+	background: url('gvFocusedBack.gif') repeat-x center bottom #fff2c8;
+}
+.dxgvPreviewRow_Office2003Blue
+{
+	background-color: white;
+}
+.dxgvDetailCell_Office2003Blue,
+.dxgvPreviewRow_Office2003Blue td.dxgv,
+.dxgvEmptyDataRow_Office2003Blue td.dxgv
+{
+	padding: 2px 2px 4px 4px;
+	border-bottom: solid 1px #BFD3EE;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+}
+.dxgvDetailRow_Office2003Blue td.dxgvIndentCell
+{
+    border-bottom: solid 1px #BFD3EE;    
+}
+.dxgvEmptyDataRow_Office2003Blue
+{
+	color: #848484;
+}
+.dxgvEmptyDataRow_Office2003Blue td.dxgv
+{
+	text-align:center;
+}
+
+.dxgvEditFormDisplayRow_Office2003Blue td.dxgv,
+.dxgvDataRow_Office2003Blue td.dxgv,
+.dxgvDataRowAlt_Office2003Blue td.dxgv,
+.dxgvSelectedRow_Office2003Blue td.dxgv,
+.dxgvFocusedRow_Office2003Blue td.dxgv
+{
+	overflow:hidden;
+	border-bottom: solid 1px #bfd3ee;
+	border-right: solid 1px #bfd3ee;
+	border-top: 0;
+	border-left: 0;
+	padding: 2px 6px 5px 6px;
+}
+.dxgvEditFormDisplayRow_Office2003Blue td.dxgv 
+{
+	background: #c1d7f8;	
+}
+.dxgvSelectedRow_Office2003Blue td.dxgv
+{
+	border-color: #fe9552;
+}
+.dxgvEditingErrorRow_Office2003Blue
+{
+	background-color: #FE9552;
+	color: #FFFFFF;
+}
+.dxgvEditingErrorRow_Office2003Blue td.dxgv
+{
+	white-space: pre-wrap;
+	font-weight: bold;
+	border-bottom: solid 1px #4f93e3;
+	border-right: 0;
+	border-top: 0;
+	border-left: 0;
+	padding: 6px 10px 6px 10px;
+}
+
+.dxgvFilterRow_Office2003Blue td.dxgv
+{
+	border-bottom: solid 1px #4f93e3;
+	border-right: 1px solid #4f93e3;
+	border-top: 0;
+	border-left: 0;
+	padding: 2px 2px 2px 2px;
+}
+.dxgvGroupRow_Office2003Blue
+{
+	background-color: #A8C5F5;
+}
+.dxgvFocusedGroupRow_Office2003Blue
+{
+	background: url('gvFocusedBack.gif') repeat-x center bottom #fff2c8;
+}
+.dxgvGroupRow_Office2003Blue td.dxgv,
+.dxgvFocusedGroupRow_Office2003Blue td.dxgv
+{
+	border: none 0;
+	vertical-align:middle;
+	white-space:nowrap;
+	border-top: solid 1px #FFFFFF;
+	border-bottom: solid 1px #4f93e3;
+	padding: 2px 6px 3px 6px;
+}
+.dxgvFocusedRow_Office2003Blue td.dxgvIndentCell,
+.dxgvFocusedGroupRow_Office2003Blue td.dxgvIndentCell,
+.dxgvSelectedRow_Office2003Blue td.dxgvIndentCell
+{
+	background-color: #A8C5F5!important;  
+	border-right: solid 1px #4F93E3;
+	border-top: 0px;
+}
+.dxgvHeaderPanel_Office2003Blue {	
+	background: url('gvGradient.gif') repeat-x center top #94b6e8;
+	color: Black;
+	padding: 8px 6px 8px 6px;
+	border-bottom: solid 1px #4f93e3;
+}
+
+.dxgvHeader_Office2003Blue {
+	cursor:pointer;
+	white-space:nowrap;
+	padding: 4px 6px 5px 6px;
+	border: solid 1px #4f93e3;
+	background: url('gvGradient.gif') repeat-x center top #94b6e8;
+	overflow:hidden;
+    font-weight: normal;
+    text-align: left;
+}
+.dxgvHeader_Office2003Blue, .dxgvHeader_Office2003Blue table {
+	color: Black;
+	font: 9pt Tahoma;
+}
+.dxgvHeader_Office2003Blue td {
+	white-space:nowrap;
+}
+.dxgvCustomization_Office2003Blue,
+.dxgvPopupEditForm_Office2003Blue 
+{
+	width:100%;
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+}
+.dxgvGroupPanel_Office2003Blue
+{
+	white-space:nowrap;	
+	font-size: 9pt;	
+	background: #a4c6f8;
+	border-bottom: solid 1px #4f93e3;
+	padding: 7px 4px 8px 6px;
+}
+.dxgvFooter_Office2003Blue
+{	
+	background-color: #94B6E8;
+	white-space: nowrap;
+}
+.dxgvFooter_Office2003Blue td.dxgv
+{
+	padding: 3px 6px 5px;
+	border-bottom: solid 1px #4F93E3;
+	border-right: solid 1px #4F93E3;
+}
+.dxgvGroupFooter_Office2003Blue
+{
+	background-color: #94B6E8;
+	white-space: nowrap;
+}
+.dxgvGroupFooter_Office2003Blue td.dxgv
+{
+	padding: 4px;
+	padding-left: 6px;
+	padding-right: 6px;
+	border-bottom: solid 1px #BFD3EE;
+	border-right: solid 1px #BFD3EE;
+}
+.dxgvDataRow_Office2003Blue td.dxgvIndentCell,
+.dxgvGroupRow_Office2003Blue td.dxgvIndentCell,
+.dxgvGroupFooter_Office2003Blue td.dxgvIndentCell
+{
+    background-color: #A8C5F5;
+	border-right: solid 1px #4F93E3;
+	border-top: 0px;
+}
+
+.dxgvTitlePanel_Office2003Blue,
+.dxgvTable_Office2003Blue caption
+{
+	color: White;
+	font-weight:bold;
+	padding:3px;
+	text-align:center;	
+	border-bottom: solid 1px #4f93e3;
+	background: url('gvTitleBack.gif') repeat-x center top #0f439d;
+}
+.dxgvLoadingDiv_Office2003Blue
+{
+	background-color:Gray;	
+	opacity: 0.01;
+	filter:progid:DXImageTransform.Microsoft.Alpha(Style=0, Opacity=1);
+}
+.dxgvStatusBar_Office2003Blue 
+{
+	border-top: solid 1px #4f93e3;
+}
+.dxgvStatusBar_Office2003Blue tr.dxgv
+{
+	height: 20px;
+}
+.dxgvCommandColumn_Office2003Blue
+{	
+}
+.dxgvCommandColumn_Office2003Blue a
+{
+	margin: 0px 3px 0px 0px;
+}
+.dxgvCommandColumnItem_Office2003Blue
+{
+	padding: 2px 2px 2px 2px;
+}
+.dxgvEditFormTable_Office2003Blue
+{
+	padding: 2px 6px 6px 4px;
+	font: 11px Tahoma;
+	color: Black;
+}
+.dxgvEditFormCaption_Office2003Blue
+{
+	padding: 4px 4px 4px 10px; 
+}
+
+.dxgvInlineEditCell_Office2003Blue
+{
+	padding: 1px 1px 1px 1px; 
+}
+
+.dxgvEditFormCell_Office2003Blue
+{
+	padding: 4px 4px 4px 4px; 
+	border: 0;
+}
+
+.dxgvFilterBar_Office2003Blue 
+{	
+	border-top: solid 1px #4f93e3;
+	background-color: #A8C5F5;	
+}
+.dxgvFilterBar_Office2003Blue a
+{	
+	color: black;
+	text-decoration: underline;		
+}
+.dxgvFilterBarCheckBoxCell_Office2003Blue
+{
+	padding: 0 3px;
+	padding-right: 7px;
+}
+.dxgvFilterBarImageCell_Office2003Blue
+{
+	padding: 0 3px;
+	padding-right: 1px;
+	cursor: pointer;
+}
+.dxgvFilterBarExpressionCell_Office2003Blue
+{
+	font-size: 9pt;
+	padding: 5px 5px 8px 0;	
+	white-space: nowrap;
+}
+.dxgvFilterBarClearButtonCell_Office2003Blue
+{
+	font-size: 9pt;
+	padding: 5px 6px 8px;	
+}
+.dxgvFilterBuilderMainArea_Office2003Blue
+{
+	background: white;
+	padding: 6px 2px;
+} 
+.dxgvFilterBuilderButtonArea_Office2003Blue
+{
+	background-color: #CFE1F9;
+	border-top: solid 1px #7BA4E0;	
+	padding: 6px;
+}
+
+.dxgvDataRowHover_Office2003Blue
+{
+	background: #cce2fc;
+	color: Black;
+}

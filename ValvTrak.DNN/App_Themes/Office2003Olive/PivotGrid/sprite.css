@@ -1,0 +1,112 @@
+.dxPivotGrid_pgCollapsedButton_Office2003Olive,
+.dxPivotGrid_pgExpandedButton_Office2003Olive,
+.dxPivotGrid_pgSortDownButton_Office2003Olive,
+.dxPivotGrid_pgSortUpButton_Office2003Olive,
+.dxPivotGrid_pgFilterResizer_Office2003Olive,
+.dxPivotGrid_pgFilterButton_Office2003Olive,
+.dxPivotGrid_pgFilterButtonActive_Office2003Olive,
+.dxPivotGrid_pgCustomizationFormCloseButton_Office2003Olive,
+.dxPivotGrid_pgDragArrowDown_Office2003Olive,
+.dxPivotGrid_pgDragArrowUp_Office2003Olive,
+.dxPivotGrid_pgDragHideField_Office2003Olive,
+.dxPivotGrid_pgDataHeaders_Office2003Olive,
+.dxPivotGrid_pgGroupSeparator_Office2003Olive,
+.dxPivotGrid_pgSortByColumn_Office2003Olive,
+.dxPivotGrid_pgPrefilterButton_Office2003Olive {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxPivotGrid_pgCollapsedButton_Office2003Olive {
+    background-position: 0px 0px;
+    width: 11px;
+    height: 12px;
+}
+
+.dxPivotGrid_pgExpandedButton_Office2003Olive {
+    background-position: 0px -18px;
+    width: 11px;
+    height: 12px;
+}
+
+.dxPivotGrid_pgSortDownButton_Office2003Olive {
+    background-position: -36px 0px;
+    width: 7px;
+    height: 8px;
+}
+
+.dxPivotGrid_pgSortUpButton_Office2003Olive {
+    background-position: -36px -18px;
+    width: 7px;
+    height: 8px;
+}
+
+.dxPivotGrid_pgFilterResizer_Office2003Olive {
+    background-position: -69px -37px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxPivotGrid_pgFilterButton_Office2003Olive {
+    background-position: 0px -36px;
+    width: 15px;
+    height: 16px;
+}
+
+.dxPivotGrid_pgFilterButtonActive_Office2003Olive {
+    background-position: -23px -36px;
+    width: 15px;
+    height: 16px;
+}
+
+.dxPivotGrid_pgCustomizationFormCloseButton_Office2003Olive {
+    background-position: -46px -39px;
+    width: 13px;
+    height: 12px;
+}
+
+.dxPivotGrid_pgDragArrowDown_Office2003Olive {
+    background-position: -17px 0px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxPivotGrid_pgDragArrowUp_Office2003Olive {
+    background-position: -17px -17px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxPivotGrid_pgDragHideField_Office2003Olive {
+    background-position: -75px 0px;
+    width: 22px;
+    height: 22px;
+}
+
+.dxPivotGrid_pgDataHeaders_Office2003Olive {
+    background-position: -53px -19px;
+    width: 12px;
+    height: 12px;
+}
+
+.dxPivotGrid_pgGroupSeparator_Office2003Olive {
+    background-position: -105px -21px;
+    width: 5px;
+    height: 1px;
+}
+
+.dxPivotGrid_pgSortByColumn_Office2003Olive {
+    background-position: -53px 0px;
+    width: 11px;
+    height: 7px;
+}
+
+.dxPivotGrid_pgPrefilterButton_Office2003Olive {
+    background-position: -105px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+

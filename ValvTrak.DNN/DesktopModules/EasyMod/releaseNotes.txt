@@ -1,0 +1,13 @@
+<strong>EasyMod 01.00.05</strong><br/>
+New utilities page featuring import and export for EasyMod settings.<br/>
+Edit permissions now assignable under the modules settings.<br/>
+All subdomains of a licensed domain now automatically licensed.
+<br/><br/>
+<strong>EasyMod 01.00.04</strong><br/>
+Added ability to specify relative widths as well as fixed i.e. px and %.
+<br/><br/>
+<strong>EasyMod 01.00.03</strong><br/>
+Fixed background "auto" button to prevent loss of specified background colour in certain circumstances.<br/>
+EasyMod now outputs additional base styles which also improve the DNN5 Dashboard styling.<br/>
+License key input validation improved as some invalid keys caused an error.<br/>
+License key can now only be edited by Host account.

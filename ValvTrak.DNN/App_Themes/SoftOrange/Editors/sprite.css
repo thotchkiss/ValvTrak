@@ -1,0 +1,413 @@
+.dxEditors_edtError_SoftOrange,
+.dxEditors_edtCalendarPrevYear_SoftOrange,
+.dxEditors_edtCalendarPrevYearDisabled_SoftOrange,
+.dxEditors_edtCalendarPrevMonth_SoftOrange,
+.dxEditors_edtCalendarPrevMonthDisabled_SoftOrange,
+.dxEditors_edtCalendarNextMonth_SoftOrange,
+.dxEditors_edtCalendarNextMonthDisabled_SoftOrange,
+.dxEditors_edtCalendarNextYear_SoftOrange,
+.dxEditors_edtCalendarNextYearDisabled_SoftOrange,
+.dxEditors_edtCalendarFNPrevYear_SoftOrange,
+.dxEditors_edtCalendarFNNextYear_SoftOrange,
+.dxEditors_edtCheckBoxOn_SoftOrange,
+.dxEditors_edtCheckBoxOff_SoftOrange,
+.dxEditors_edtCheckBoxUndefined_SoftOrange,
+.dxEditors_edtRadioButtonOn_SoftOrange,
+.dxEditors_edtRadioButtonOff_SoftOrange,
+.dxEditors_edtRadioButtonUndefined_SoftOrange,
+.dxEditors_edtEllipsis_SoftOrange,
+.dxEditors_edtEllipsisDisabled_SoftOrange,
+.dxEditors_edtDropDown_SoftOrange,
+.dxEditors_edtDropDownDisabled_SoftOrange,
+.dxEditors_edtSpinEditIncrementImage_SoftOrange,
+.dxEditors_edtSpinEditIncrementImageDisabled_SoftOrange,
+.dxEditors_edtSpinEditDecrementImage_SoftOrange,
+.dxEditors_edtSpinEditDecrementImageDisabled_SoftOrange,
+.dxEditors_edtSpinEditLargeIncImage_SoftOrange,
+.dxEditors_edtSpinEditLargeIncImageDisabled_SoftOrange,
+.dxEditors_edtSpinEditLargeDecImage_SoftOrange,
+.dxEditors_edtSpinEditLargeDecImageDisabled_SoftOrange,
+.dxEditors_fcadd_SoftOrange,
+.dxEditors_fcaddhot_SoftOrange,
+.dxEditors_fcremove_SoftOrange,
+.dxEditors_fcremovehot_SoftOrange,
+.dxEditors_fcgroupaddcondition_SoftOrange,
+.dxEditors_fcgroupaddgroup_SoftOrange,
+.dxEditors_fcgroupremove_SoftOrange,
+.dxEditors_fcopany_SoftOrange,
+.dxEditors_fcopbegin_SoftOrange,
+.dxEditors_fcopbetween_SoftOrange,
+.dxEditors_fcopcontain_SoftOrange,
+.dxEditors_fcopnotcontain_SoftOrange,
+.dxEditors_fcopnotequal_SoftOrange,
+.dxEditors_fcopend_SoftOrange,
+.dxEditors_fcopequal_SoftOrange,
+.dxEditors_fcopgreater_SoftOrange,
+.dxEditors_fcopgreaterorequal_SoftOrange,
+.dxEditors_fcopnotblank_SoftOrange,
+.dxEditors_fcopblank_SoftOrange,
+.dxEditors_fcopless_SoftOrange,
+.dxEditors_fcoplessorequal_SoftOrange,
+.dxEditors_fcoplike_SoftOrange,
+.dxEditors_fcopnotany_SoftOrange,
+.dxEditors_fcopnotbetween_SoftOrange,
+.dxEditors_fcopnotlike_SoftOrange,
+.dxEditors_fcgroupand_SoftOrange,
+.dxEditors_fcgroupor_SoftOrange,
+.dxEditors_fcgroupnotand_SoftOrange,
+.dxEditors_fcgroupnotor_SoftOrange {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxEditors_edtError_SoftOrange {
+    background-position: -170px 0px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxEditors_edtCalendarPrevYear_SoftOrange {
+    background-position: -48px -128px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarPrevYearDisabled_SoftOrange {
+    background-position: -72px -128px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarPrevMonth_SoftOrange {
+    background-position: -57px 0px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarPrevMonthDisabled_SoftOrange {
+    background-position: -57px -20px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarNextMonth_SoftOrange {
+    background-position: -19px 0px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarNextMonthDisabled_SoftOrange {
+    background-position: -19px -20px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarNextYear_SoftOrange {
+    background-position: 0px -128px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarNextYearDisabled_SoftOrange {
+    background-position: -24px -128px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarFNPrevYear_SoftOrange {
+    background-position: 0px 0px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxEditors_edtCalendarFNNextYear_SoftOrange {
+    background-position: 0px -20px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxEditors_edtCheckBoxOn_SoftOrange {
+    background-position: -23px -44px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxEditors_edtCheckBoxOff_SoftOrange {
+    background-position: 0px -44px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxEditors_edtCheckBoxUndefined_SoftOrange {
+    background-position: -46px -44px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxEditors_edtRadioButtonOn_SoftOrange {
+    background-position: -91px -44px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxEditors_edtRadioButtonOff_SoftOrange {
+    background-position: -69px -44px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxEditors_edtRadioButtonUndefined_SoftOrange {
+    background-position: -113px -44px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxEditors_edtEllipsis_SoftOrange {
+    background-position: -113px 0px;
+    width: 10px;
+    height: 2px;
+}
+
+.dxEditors_edtEllipsisDisabled_SoftOrange {
+    background-position: -113px -22px;
+    width: 10px;
+    height: 2px;
+}
+
+.dxEditors_edtDropDown_SoftOrange {
+    background-position: -95px 0px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxEditors_edtDropDownDisabled_SoftOrange {
+    background-position: -95px -22px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxEditors_edtSpinEditIncrementImage_SoftOrange {
+    background-position: -150px 0px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxEditors_edtSpinEditIncrementImageDisabled_SoftOrange {
+    background-position: -150px -13px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxEditors_edtSpinEditDecrementImage_SoftOrange {
+    background-position: -132px 0px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxEditors_edtSpinEditDecrementImageDisabled_SoftOrange {
+    background-position: -132px -13px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxEditors_edtSpinEditLargeIncImage_SoftOrange {
+    background-position: -145px -26px;
+    width: 6px;
+    height: 9px;
+}
+
+.dxEditors_edtSpinEditLargeIncImageDisabled_SoftOrange {
+    background-position: -171px -26px;
+    width: 6px;
+    height: 9px;
+}
+
+.dxEditors_edtSpinEditLargeDecImage_SoftOrange {
+    background-position: -132px -26px;
+    width: 6px;
+    height: 9px;
+}
+
+.dxEditors_edtSpinEditLargeDecImageDisabled_SoftOrange {
+    background-position: -158px -26px;
+    width: 6px;
+    height: 9px;
+}
+
+.dxEditors_fcadd_SoftOrange {
+    background-position: 0px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcaddhot_SoftOrange {
+    background-position: -21px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcremove_SoftOrange {
+    background-position: -42px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcremovehot_SoftOrange {
+    background-position: -63px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupaddcondition_SoftOrange {
+    background-position: -168px -46px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupaddgroup_SoftOrange {
+    background-position: -147px -46px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupremove_SoftOrange {
+    background-position: -126px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopany_SoftOrange {
+    background-position: 0px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopbegin_SoftOrange {
+    background-position: -42px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopbetween_SoftOrange {
+    background-position: -84px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopcontain_SoftOrange {
+    background-position: -105px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotcontain_SoftOrange {
+    background-position: -147px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotequal_SoftOrange {
+    background-position: -168px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopend_SoftOrange {
+    background-position: -63px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopequal_SoftOrange {
+    background-position: 0px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopgreater_SoftOrange {
+    background-position: -21px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopgreaterorequal_SoftOrange {
+    background-position: -42px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotblank_SoftOrange {
+    background-position: -105px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopblank_SoftOrange {
+    background-position: -126px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopless_SoftOrange {
+    background-position: -63px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcoplessorequal_SoftOrange {
+    background-position: -84px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcoplike_SoftOrange {
+    background-position: -126px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotany_SoftOrange {
+    background-position: -21px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotbetween_SoftOrange {
+    background-position: -147px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotlike_SoftOrange {
+    background-position: -168px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupand_SoftOrange {
+    background-position: -84px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupor_SoftOrange {
+    background-position: -168px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupnotand_SoftOrange {
+    background-position: -105px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupnotor_SoftOrange {
+    background-position: -147px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+

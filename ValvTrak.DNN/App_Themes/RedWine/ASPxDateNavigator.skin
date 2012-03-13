@@ -1,0 +1,10 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxwschs" Namespace="DevExpress.Web.ASPxScheduler" Assembly="DevExpress.Web.ASPxScheduler.v10.2" %>
+<dxwschs:ASPxDateNavigator runat="server" 
+    CssFilePath="{0}/styles.css" CssPostfix="RedWine" 
+    SpriteCssFilePath="{0}/sprite.css">
+    <Properties>
+		<FooterStyle Spacing="17px"></FooterStyle>
+		<HeaderStyle Spacing="1px"></HeaderStyle>
+    </Properties>
+</dxwschs:ASPxDateNavigator>

@@ -1,0 +1,12 @@
+C:\Development\ValvTrak\ValvTrak.VS2010.DNN\Rawson.Data.Model\bin\Debug\Rawson.Data.Model.dll.config
+C:\Development\ValvTrak\ValvTrak.VS2010.DNN\Rawson.Data.Model\bin\Debug\Rawson.Data.Model.dll
+C:\Development\ValvTrak\ValvTrak.VS2010.DNN\Rawson.Data.Model\bin\Debug\Rawson.Data.Model.pdb
+C:\Development\ValvTrak\ValvTrak.VS2010.DNN\Rawson.Data.Model\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\ValvTrak\ValvTrak.VS2010.DNN\Rawson.Data.Model\obj\Debug\Rawson.Data.Model.dll
+C:\Development\ValvTrak\ValvTrak.VS2010.DNN\Rawson.Data.Model\obj\Debug\Rawson.Data.Model.pdb
+D:\SRD\ValvTrak.VS2010.DNN\Rawson.Data.Model\bin\Debug\Rawson.Data.Model.dll.config
+D:\SRD\ValvTrak.VS2010.DNN\Rawson.Data.Model\bin\Debug\Rawson.Data.Model.dll
+D:\SRD\ValvTrak.VS2010.DNN\Rawson.Data.Model\bin\Debug\Rawson.Data.Model.pdb
+D:\SRD\ValvTrak.VS2010.DNN\Rawson.Data.Model\obj\Debug\ResolveAssemblyReference.cache
+D:\SRD\ValvTrak.VS2010.DNN\Rawson.Data.Model\obj\Debug\Rawson.Data.Model.dll
+D:\SRD\ValvTrak.VS2010.DNN\Rawson.Data.Model\obj\Debug\Rawson.Data.Model.pdb

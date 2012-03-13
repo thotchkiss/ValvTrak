@@ -1,0 +1,249 @@
+.dxtlControl_SoftOrange
+{
+	cursor: default;
+	font: 9pt Tahoma;
+	color: black;
+	border: solid 4px #d3d3d3;
+	background: white;
+}
+.dxtlControl_SoftOrange caption
+{
+	background: #ACACAC;
+	color: white;
+	border: solid 4px #d3d3d3;
+    border-bottom: 0;
+    font-size: 15px;
+	font-weight: normal;
+	padding: 4px 3px 4px 3px;
+	text-align: center;	
+}
+
+/* Indent cells */
+.dxtlIndent_SoftOrange, .dxtlIndentWithButton_SoftOrange
+{			
+	background: white;
+	vertical-align: top;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+.dxtlIndent_SoftOrange
+{
+	padding: 0 11px;
+}
+.dxtlIndentWithButton_SoftOrange
+{
+	padding: 4px 5px;
+}
+.dxtlSelectionCell_SoftOrange
+{
+	padding: 0 2px;
+	border: solid 1px #c5c5c5;
+}
+
+/* Tree-lines cells */
+.dxtlLineFirst_SoftOrange
+{
+	background-image: url('CssImages/TreeLineFirst.gif');	
+}
+.dxtlLineMiddle_SoftOrange
+{
+	background-image: url('CssImages/TreeLineMiddle.gif');
+	
+}
+.dxtlLineLast_SoftOrange
+{
+	background-image: url('CssImages/TreeLineLast.gif');
+	
+}
+.dxtlLineRoot_SoftOrange
+{
+	background-image: url('CssImages/TreeLineRoot.gif');
+	background-repeat: repeat-y;	
+}
+
+/* Headers */
+.dxtlHeader_SoftOrange 
+{
+	background: #969696;	
+	border: dotted 1px #5c5c5c;
+	padding: 5px 8px 6px;
+	font-weight: normal;		
+}
+.dxtlHeader_SoftOrange table.dxtl 
+{
+	border-collapse: collapse;
+	width: 100%;
+}
+.dxtlHeader_SoftOrange td.dxtl
+{
+	padding: 0;
+}
+.dxtlHeader_SoftOrange, .dxtlHeader_SoftOrange td.dxtl 
+{	
+    color: white;
+	font: 9pt Tahoma;
+	white-space: nowrap;
+	text-align: left;
+}
+
+/* Nodes */
+.dxtlNode_SoftOrange
+{
+	background: white;	
+}
+.dxtlAltNode_SoftOrange
+{
+	background: #f0f0f0;	
+}
+.dxtlSelectedNode_SoftOrange
+{
+	background: #D3D3D3;
+}
+.dxtlFocusedNode_SoftOrange
+{
+	background: #f16a39;
+    color: white;
+}
+.dxtlInlineEditNode_SoftOrange
+{
+	background: #f8f8f8;
+}
+.dxtlEditFormDisplayNode_SoftOrange 
+{
+	background: white;
+}
+.dxtlNode_SoftOrange td.dxtl, 
+.dxtlAltNode_SoftOrange  td.dxtl, 
+.dxtlSelectedNode_SoftOrange td.dxtl, 
+.dxtlFocusedNode_SoftOrange td.dxtl,
+.dxtlEditFormDisplayNode_SoftOrange td.dxtl,
+.dxtlCommandCell_SoftOrange
+{
+	padding: 3px 8px 4px;
+	border: solid 1px #c5c5c5;
+	white-space: nowrap;
+	font-size: 9pt;
+    font-family: Tahoma;
+}
+.dxtlInlineEditNode_SoftOrange td.dxtl
+{
+	border: solid 1px #c5c5c5;
+	padding: 1px;
+}
+
+/* Preview */
+.dxtlPreview_SoftOrange
+{
+	background: white;
+	color: black;
+	padding: 14px;
+	border: solid 1px #c5c5c5;
+	font: 9pt Tahoma;	
+}
+
+/* Footers */
+.dxtlGroupFooter_SoftOrange
+{
+	background-color: #E0E0E0;	
+}
+.dxtlFooter_SoftOrange
+{
+	background-color: #dddddd;	
+}
+.dxtlGroupFooter_SoftOrange td.dxtl,
+.dxtlFooter_SoftOrange td.dxtl
+{
+	padding: 4px 8px 5px;
+	white-space: nowrap;
+	text-align: left;
+	border: solid 1px #c5c5c5;
+	font: 9pt Tahoma;
+}
+
+/* Pagers */
+.dxtlPagerTopPanel_SoftOrange 
+{
+	border-bottom: solid 1px #c5c5c5;	
+}
+.dxtlPagerBottomPanel_SoftOrange 
+{	
+	border-top: solid 1px #c5c5c5;	
+}
+.dxtlPagerTopPanel_SoftOrange,
+.dxtlPagerBottomPanel_SoftOrange 
+{
+	padding: 1px 2px;
+	background: #f9f9f9;
+}
+
+/* Editing */
+.dxtlEditForm_SoftOrange
+{
+	background: #FCFCFC;
+	border: solid 1px #c5c5c5;
+	padding: 8px 10px 10px;
+}
+.dxtlEditFormCaption_SoftOrange,
+.dxtlEditFormEditCell_SoftOrange
+{
+	padding: 4px;
+}
+.dxtlEditFormCaption_SoftOrange
+{
+	padding-left: 10px;
+	white-space: nowrap;
+}
+.dxtlError_SoftOrange
+{
+	background: #FFC8C8;
+	color: #FF0000;
+	padding: 6px 10px;
+	border: solid 1px #cfcfcf;
+	font: 9pt Tahoma;		
+}
+
+/* Links */
+.dxtlControl_SoftOrange a,
+.dxtlCommandCell_SoftOrange a 
+{
+	color: #bc3f26;
+}
+.dxtlControl_SoftOrange a:hover 
+{
+	color:  #f15e34;
+}
+.dxtlHeader_SoftOrange a,
+.dxtlHeader_SoftOrange a:hover,
+.dxtlFocusedNode_SoftOrange a,
+.dxtlFocusedNode_SoftOrange a:hover,
+.dxtlSelectedNode_SoftOrange a, 
+.dxtlSelectedNode_SoftOrange a:hover 
+{
+	color: White;
+}
+.dxtlCommandCell_SoftOrange a
+{
+    margin-right: 3px;
+}
+
+/* Loading panel */
+.dxtlLoadingPanel_SoftOrange
+{
+}
+.dxtlLoadingPanel_SoftOrange td.dx
+{
+}
+.dxtlLoadingDiv_SoftOrange
+{
+	background: white;
+	opacity: 0.01;
+	filter: alpha(opacity=1);
+}
+
+/* Disabled */
+.dxtlDisabled_SoftOrange,
+.dxtlDisabled_SoftOrange .dxtl_SoftOrange
+{
+	color: #808080;
+	cursor: default;
+}

@@ -1,0 +1,63 @@
+.dxTreeList_CollapsedButton_SoftOrange,
+.dxTreeList_ExpandedButton_SoftOrange,
+.dxTreeList_SortAsc_SoftOrange,
+.dxTreeList_SortDesc_SoftOrange,
+.dxTreeList_DragAndDropArrowDown_SoftOrange,
+.dxTreeList_DragAndDropArrowUp_SoftOrange,
+.dxTreeList_DragAndDropHide_SoftOrange,
+.dxTreeList_DragAndDropNode_SoftOrange {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxTreeList_CollapsedButton_SoftOrange {
+    background-position: -66px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxTreeList_ExpandedButton_SoftOrange {
+    background-position: -66px -18px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxTreeList_SortAsc_SoftOrange {
+    background-position: -49px 0px;
+    width: 6px;
+    height: 3px;
+}
+
+.dxTreeList_SortDesc_SoftOrange {
+    background-position: -49px -19px;
+    width: 6px;
+    height: 3px;
+}
+
+.dxTreeList_DragAndDropArrowDown_SoftOrange {
+    background-position: -30px 0px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxTreeList_DragAndDropArrowUp_SoftOrange {
+    background-position: -30px -17px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxTreeList_DragAndDropHide_SoftOrange {
+    background-position: 0px 0px;
+    width: 22px;
+    height: 22px;
+}
+
+.dxTreeList_DragAndDropNode_SoftOrange {
+    background-position: -83px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+

@@ -1,0 +1,7 @@
+The Extropy skin demonstrates some of the new capabilities of DNN5
+including the following:
+
+1) Widgets
+2) Super Stylesheets
+3) Object syntax
+

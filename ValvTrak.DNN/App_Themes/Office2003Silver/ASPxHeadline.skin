@@ -1,0 +1,16 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxhl" Namespace="DevExpress.Web.ASPxHeadline" Assembly="DevExpress.Web.v10.2" %>
+
+<dxhl:ASPxHeadline runat="server" CssFilePath="{0}/styles.css" 
+	SpriteCssFilePath="{0}/sprite.css" 
+	CssPostfix="Office2003Silver">
+    <DateStyle Spacing="0px" />
+    <ContentStyle LineHeight="18px" />
+    <LeftPanelStyle Spacing="21px">
+        <Paddings PaddingTop="2px" />
+    </LeftPanelStyle>
+	<TailImage>
+		<SpriteProperties CssClass="dxWeb_hlTail_Office2003Silver" />
+	</TailImage>
+</dxhl:ASPxHeadline>
+

@@ -1,0 +1,15 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v10.2" Namespace="DevExpress.Web.ASPxPivotGrid" TagPrefix="dxwpg" %>
+<%@ Register Assembly="DevExpress.PivotGrid.v10.2.Core" Namespace="DevExpress.XtraPivotGrid" TagPrefix="temp" %>
+<dxwpg:ASPxPivotGrid runat="server">
+    <Images SpriteCssFilePath="{0}/sprite.css">
+        <CustomizationFieldsBackground Url="PivotGrid/pcHeaderBack.gif" />
+        <LoadingPanel Url="PivotGrid/Loading.gif" />
+	</Images>
+	<Styles CssFilePath="{0}/styles.css" CssPostfix="SoftOrange">
+        <MenuStyle GutterWidth="0px" />   
+    </Styles>
+    <OptionsLoadingPanel Text="" />
+    <OptionsPager CurrentPageNumberFormat="{0}">
+    </OptionsPager>
+</dxwpg:ASPxPivotGrid>

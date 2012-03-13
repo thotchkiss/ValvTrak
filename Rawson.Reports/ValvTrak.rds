@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>ValvTrak</Name>
+  <DataSourceID>b20495ba-8e68-4426-b28c-2e687af119f8</DataSourceID>
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=win-b2bf3ol47bl;Initial Catalog=SRD</ConnectString>
+  </ConnectionProperties>
+</RptDataSource>

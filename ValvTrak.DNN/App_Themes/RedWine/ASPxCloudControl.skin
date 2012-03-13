@@ -1,0 +1,8 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxcc" Namespace="DevExpress.Web.ASPxCloudControl" Assembly="DevExpress.Web.v10.2" %>
+
+<dxcc:ASPxCloudControl runat="server" CssFilePath="{0}/styles.css" CssPostfix="RedWine" 
+    MaxColor="#8A0A37" MinColor="#E18297" ValueColor="#E18297" ItemBeginEndTextColor="#8A0A37">
+    <DisabledStyle ForeColor="#bcaab0"></DisabledStyle>
+</dxcc:ASPxCloudControl>
+

@@ -1,0 +1,301 @@
+.dxWeb_rpHeaderTopLeftCorner_SoftOrange,
+.dxWeb_rpHeaderTopRightCorner_SoftOrange,
+.dxWeb_rpBottomLeftCorner_SoftOrange,
+.dxWeb_rpBottomRightCorner_SoftOrange,
+.dxWeb_rpTopLeftCorner_SoftOrange,
+.dxWeb_rpTopRightCorner_SoftOrange,
+.dxWeb_rpGroupBoxBottomLeftCorner_SoftOrange,
+.dxWeb_rpGroupBoxBottomRightCorner_SoftOrange,
+.dxWeb_rpGroupBoxTopLeftCorner_SoftOrange,
+.dxWeb_rpGroupBoxTopRightCorner_SoftOrange,
+.dxWeb_mHorizontalPopOut_SoftOrange,
+.dxWeb_mHorizontalPopOutSelected_SoftOrange,
+.dxWeb_mVerticalPopOut_SoftOrange,
+.dxWeb_mSubMenuItem_SoftOrange,
+.dxWeb_mSubMenuItemChecked_SoftOrange,
+.dxWeb_nbCollapse_SoftOrange,
+.dxWeb_nbExpand_SoftOrange,
+.dxWeb_splVSeparator_SoftOrange,
+.dxWeb_splVSeparatorHover_SoftOrange,
+.dxWeb_splHSeparator_SoftOrange,
+.dxWeb_splHSeparatorHover_SoftOrange,
+.dxWeb_splVCollapseBackwardButton_SoftOrange,
+.dxWeb_splVCollapseBackwardButtonHover_SoftOrange,
+.dxWeb_splHCollapseBackwardButton_SoftOrange,
+.dxWeb_splHCollapseBackwardButtonHover_SoftOrange,
+.dxWeb_splVCollapseForwardButton_SoftOrange,
+.dxWeb_splVCollapseForwardButtonHover_SoftOrange,
+.dxWeb_splHCollapseForwardButton_SoftOrange,
+.dxWeb_splHCollapseForwardButtonHover_SoftOrange,
+.dxWeb_pcCloseButton_SoftOrange,
+.dxWeb_pcSizeGrip_SoftOrange,
+.dxWeb_pAll_SoftOrange,
+.dxWeb_pAllDisabled_SoftOrange,
+.dxWeb_pPrev_SoftOrange,
+.dxWeb_pPrevDisabled_SoftOrange,
+.dxWeb_pNext_SoftOrange,
+.dxWeb_pNextDisabled_SoftOrange,
+.dxWeb_pLast_SoftOrange,
+.dxWeb_pLastDisabled_SoftOrange,
+.dxWeb_pFirst_SoftOrange,
+.dxWeb_pFirstDisabled_SoftOrange,
+.dxWeb_BackToTop_SoftOrange {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxWeb_rpHeaderTopLeftCorner_SoftOrange {
+    background-position: -104px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpHeaderTopRightCorner_SoftOrange {
+    background-position: -117px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpBottomLeftCorner_SoftOrange {
+    background-position: -78px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpBottomRightCorner_SoftOrange {
+    background-position: -91px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpTopLeftCorner_SoftOrange {
+    background-position: -52px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpTopRightCorner_SoftOrange {
+    background-position: -65px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpGroupBoxBottomLeftCorner_SoftOrange {
+    background-position: -26px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpGroupBoxBottomRightCorner_SoftOrange {
+    background-position: -39px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpGroupBoxTopLeftCorner_SoftOrange {
+    background-position: 0px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_rpGroupBoxTopRightCorner_SoftOrange {
+    background-position: -13px -88px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_mHorizontalPopOut_SoftOrange {
+    background-position: -92px -50px;
+    width: 6px;
+    height: 4px;
+}
+
+.dxWeb_mHorizontalPopOutSelected_SoftOrange {
+    background-position: -92px -55px;
+    width: 6px;
+    height: 4px;
+}
+
+.dxWeb_mVerticalPopOut_SoftOrange {
+    background-position: -105px -50px;
+    width: 4px;
+    height: 8px;
+}
+
+.dxWeb_mSubMenuItem_SoftOrange {
+    background-position: -48px -50px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxWeb_mSubMenuItemChecked_SoftOrange {
+    background-position: -70px -50px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxWeb_nbCollapse_SoftOrange {
+    background-position: -129px 0px;
+    width: 18px;
+    height: 18px;
+}
+
+.dxWeb_nbExpand_SoftOrange {
+    background-position: -129px -23px;
+    width: 18px;
+    height: 18px;
+}
+
+.dxWeb_splVSeparator_SoftOrange {
+    background-position: -92px -62px;
+    width: 6px;
+    height: 18px;
+}
+
+.dxWeb_splVSeparatorHover_SoftOrange {
+    background-position: -99px -62px;
+    width: 6px;
+    height: 18px;
+}
+
+.dxWeb_splHSeparator_SoftOrange {
+    background-position: -58px -74px;
+    width: 18px;
+    height: 6px;
+}
+
+.dxWeb_splHSeparatorHover_SoftOrange {
+    background-position: -58px -81px;
+    width: 18px;
+    height: 6px;
+}
+
+.dxWeb_splVCollapseBackwardButton_SoftOrange {
+    background-position: -30px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splVCollapseBackwardButtonHover_SoftOrange {
+    background-position: -37px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splHCollapseBackwardButton_SoftOrange {
+    background-position: 0px -74px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_splHCollapseBackwardButtonHover_SoftOrange {
+    background-position: 0px -81px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_splVCollapseForwardButton_SoftOrange {
+    background-position: -44px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splVCollapseForwardButtonHover_SoftOrange {
+    background-position: -51px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splHCollapseForwardButton_SoftOrange {
+    background-position: -15px -74px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_splHCollapseForwardButtonHover_SoftOrange {
+    background-position: -15px -81px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_pcCloseButton_SoftOrange {
+    background-position: 0px -50px;
+    width: 18px;
+    height: 18px;
+}
+
+.dxWeb_pcSizeGrip_SoftOrange {
+    background-position: -24px -50px;
+    width: 12px;
+    height: 12px;
+}
+
+.dxWeb_pAll_SoftOrange {
+    background-position: 0px 0px;
+    width: 28px;
+    height: 19px;
+}
+
+.dxWeb_pAllDisabled_SoftOrange {
+    background-position: 0px -25px;
+    width: 28px;
+    height: 19px;
+}
+
+.dxWeb_pPrev_SoftOrange {
+    background-position: -105px 0px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxWeb_pPrevDisabled_SoftOrange {
+    background-position: -105px -25px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxWeb_pNext_SoftOrange {
+    background-position: -81px 0px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxWeb_pNextDisabled_SoftOrange {
+    background-position: -81px -25px;
+    width: 19px;
+    height: 19px;
+}
+
+.dxWeb_pLast_SoftOrange {
+    background-position: -55px 0px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxWeb_pLastDisabled_SoftOrange {
+    background-position: -55px -25px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxWeb_pFirst_SoftOrange {
+    background-position: -29px 0px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxWeb_pFirstDisabled_SoftOrange {
+    background-position: -29px -25px;
+    width: 23px;
+    height: 19px;
+}
+
+.dxWeb_BackToTop_SoftOrange {
+    background-position: -115px -50px;
+    width: 5px;
+    height: 7px;
+}
+
+

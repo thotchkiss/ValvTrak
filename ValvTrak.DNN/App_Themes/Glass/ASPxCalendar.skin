@@ -1,0 +1,17 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v10.2" %>
+
+<dxe:ASPxCalendar runat="server" CssFilePath="{0}/styles.css" CssPostfix="Glass" SpriteCssFilePath="{0}/sprite.css" >
+    
+	<ValidationSettings>
+		<ErrorFrameStyle ImageSpacing="4px">
+		<ErrorTextPaddings PaddingLeft="4px"></ErrorTextPaddings>
+		</ErrorFrameStyle>
+	</ValidationSettings>
+
+	<HeaderStyle Spacing="1px" />
+	<FooterStyle Spacing="4px" />
+	<FastNavStyle MonthYearSpacing="4px" />
+	<FastNavFooterStyle Spacing="4px" />
+</dxe:ASPxCalendar>
+

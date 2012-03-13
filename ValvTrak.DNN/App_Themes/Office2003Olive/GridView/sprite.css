@@ -1,0 +1,105 @@
+.dxGridView_gvCollapsedButton_Office2003Olive,
+.dxGridView_gvExpandedButton_Office2003Olive,
+.dxGridView_gvDetailCollapsedButton_Office2003Olive,
+.dxGridView_gvDetailExpandedButton_Office2003Olive,
+.dxGridView_gvFilterRowButton_Office2003Olive,
+.dxGridView_gvHeaderFilter_Office2003Olive,
+.dxGridView_gvHeaderFilterActive_Office2003Olive,
+.dxGridView_gvHeaderSortDown_Office2003Olive,
+.dxGridView_gvHeaderSortUp_Office2003Olive,
+.dxGridView_gvDragAndDropArrowDown_Office2003Olive,
+.dxGridView_gvDragAndDropArrowUp_Office2003Olive,
+.dxGridView_gvDragAndDropHideColumn_Office2003Olive,
+.dxGridView_gvParentGroupRows_Office2003Olive,
+.dxGridView_WindowResizer_Office2003Olive {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxGridView_gvCollapsedButton_Office2003Olive {
+    background-position: -36px 0px;
+    width: 11px;
+    height: 12px;
+}
+
+.dxGridView_gvExpandedButton_Office2003Olive {
+    background-position: -36px -18px;
+    width: 11px;
+    height: 12px;
+}
+
+.dxGridView_gvDetailCollapsedButton_Office2003Olive {
+    background-position: -53px 0px;
+    width: 11px;
+    height: 12px;
+}
+
+.dxGridView_gvDetailExpandedButton_Office2003Olive {
+    background-position: -53px -18px;
+    width: 11px;
+    height: 12px;
+}
+
+.dxGridView_gvFilterRowButton_Office2003Olive {
+    background-position: -100px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvHeaderFilter_Office2003Olive {
+    background-position: 0px -36px;
+    width: 15px;
+    height: 16px;
+}
+
+.dxGridView_gvHeaderFilterActive_Office2003Olive {
+    background-position: -23px -36px;
+    width: 15px;
+    height: 16px;
+}
+
+.dxGridView_gvHeaderSortDown_Office2003Olive {
+    background-position: -19px 0px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxGridView_gvHeaderSortUp_Office2003Olive {
+    background-position: -19px -18px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxGridView_gvDragAndDropArrowDown_Office2003Olive {
+    background-position: 0px 0px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxGridView_gvDragAndDropArrowUp_Office2003Olive {
+    background-position: 0px -17px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxGridView_gvDragAndDropHideColumn_Office2003Olive {
+    background-position: -70px 0px;
+    width: 22px;
+    height: 22px;
+}
+
+.dxGridView_gvParentGroupRows_Office2003Olive {
+    background-position: -70px -36px;
+    width: 18px;
+    height: 13px;
+}
+
+.dxGridView_WindowResizer_Office2003Olive {
+    background-position: -46px -36px;
+    width: 16px;
+    height: 16px;
+}
+
+

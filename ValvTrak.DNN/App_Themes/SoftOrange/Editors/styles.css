@@ -1,0 +1,829 @@
+.dxeLoadingDiv_SoftOrange
+{
+	background: White;
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+    cursor: wait;
+}
+.dxeLoadingPanel_SoftOrange
+{
+	font: 9pt Tahoma;
+	color: #303030;
+}
+.dxeLoadingPanel_SoftOrange td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px 12px 12px 12px;
+}
+
+.dxeBase_SoftOrange
+{
+    font-family: Tahoma;
+    font-size: 9pt;    
+}
+/* -- ErrorFrame -- */
+.dxeErrorCell_SoftOrange, .dxeErrorCell_SoftOrange td
+{
+    font-family: Tahoma;
+	font-size: 9pt;
+	color: red;
+}
+.dxeErrorCell_SoftOrange
+{
+	color: #a91123;
+	padding-left: 4px;	
+}
+.dxeErrorFrame_SoftOrange
+{
+}
+.dxeErrorFrameWithoutError_SoftOrange
+{
+    border: 1px solid Red;
+}
+.dxeErrorFrameWithoutError_SoftOrange .dxeControlsCell_SoftOrange
+{
+    padding: 2px;
+}
+.dxeEditArea_SoftOrange
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	border: 1px solid #A0A0A0;
+}
+/* -- Buttons -- */
+.dxeButtonEdit_SoftOrange 
+{
+	background-color: white;
+	width: 170px;
+}
+.dxeButtonEdit_SoftOrange .dxeEditArea_SoftOrange
+{
+    background-color: white;
+}
+.dxeButtonEdit_SoftOrange .dxeEditArea_SoftOrange, .dxeButtonEdit_SoftOrange td.dxic
+{
+	width: 100%;
+}
+
+.dxeButtonEditButton_SoftOrange, 
+.dxeSpinIncButton_SoftOrange, .dxeSpinDecButton_SoftOrange,
+.dxeSpinLargeIncButton_SoftOrange, .dxeSpinLargeDecButton_SoftOrange
+{	
+	background-color: #f0f0f0;	
+	vertical-align: middle;
+	cursor: pointer;
+} 
+.dxeButtonEditButton_SoftOrange,
+.dxeButtonEditButton_SoftOrange td.dx,
+.dxeSpinIncButton_SoftOrange td.dx, .dxeSpinDecButton_SoftOrange td.dx,
+.dxeSpinLargeIncButton_SoftOrange td.dx, .dxeSpinLargeDecButton_SoftOrange td.dx,
+.dxeSpinIncButton_SoftOrange, .dxeSpinDecButton_SoftOrange,
+.dxeSpinLargeIncButton_SoftOrange, .dxeSpinLargeDecButton_SoftOrange
+{	
+    font-family: Tahoma;
+    font-size: 9pt;  
+	font-weight: normal;    
+	text-align: center;
+} 
+.dxeButtonEditButton_SoftOrange
+{
+	background-image: url('edtButtonEditButtonBack.gif');	
+    background-repeat:repeat-x;
+    background-position:top;
+	background-color: #f0653a;
+	padding: 0px 3px;
+}
+.dxeSpinIncButton_SoftOrange, .dxeSpinDecButton_SoftOrange,
+.dxeSpinLargeIncButton_SoftOrange, .dxeSpinLargeDecButton_SoftOrange
+{
+	border-style: none;
+	padding: 0px;
+}
+
+.dxeButtonEditButton_SoftOrange table.dxbebt 
+{
+	width: 12px;
+}
+.dxeButtonEditButton_SoftOrange table.dxbebt td.dx 
+{
+    color: White;
+}
+/* SpinButtons */
+.dxeSpinLargeIncButton_SoftOrange
+{
+    padding-left: 1px;
+}
+.dxeSpinIncButton_SoftOrange
+{
+	background: url('edtSpinIncBtnBack.gif') repeat-x top left #f67e37;
+	border-bottom: Solid 1px #ffffff;
+}
+.dxeSpinDecButton_SoftOrange
+{
+	background: url('edtSpinDecBtnBack.gif') repeat-x top left #f0653a;
+    border-bottom-style: none;
+}
+.dxeSpinLargeIncButton_SoftOrange, .dxeSpinLargeDecButton_SoftOrange
+{
+   	background: url('edtSpinLargeIncBtnBack.gif') repeat-x top left #f0653a;
+}
+.dxeSpinLargeDecButton_SoftOrange
+{
+}
+.dxeSpinLargeIncButton_SoftOrange
+{
+}
+
+.dxeCalendarButton_SoftOrange
+{
+    font-family: Tahoma;	
+	background: #ef643c url('edtCalendarButtonBack.gif') repeat-x top left;
+	border: solid 1px #cb4b31;
+	padding: 4px 10px;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+.dxeCalendarButton_SoftOrange table.dxbebt
+{
+    width: 30px;
+}
+/* SpinButtons */
+.dxeSpinIncButton_SoftOrange table.dxbebt, .dxeSpinDecButton_SoftOrange table.dxbebt
+{
+	width: 15px;
+}
+.dxeSpinLargeDecButton_SoftOrange table.dxbebt
+{
+	width: 16px;
+}
+.dxeSpinLargeIncButton_SoftOrange table.dxbebt
+{
+	width: 15px;    
+}
+
+.dxeCalendarButton_SoftOrange td.dx
+{
+	text-align: center;
+	white-space: nowrap;
+	color: #FFFFFF;
+	font-size: 9pt;
+    font-family: Tahoma;
+}
+
+/* -- Hover -- */
+.dxeButtonHover_SoftOrange         /* inherits dxeButton */
+{
+	background-color: #E6E3D6;
+}
+.dxeCalendarButtonHover_SoftOrange
+{
+	background-image: url('edtCalendarButtonHoverBack.gif');	
+    background-repeat:repeat-x;
+    background-position:top;
+    border: Solid 1px #cb4b31; 
+  	background-color: #ef643c;   
+}
+.dxeButtonEditButtonHover_SoftOrange
+{
+	background-image: url('edtDropDownButtonHoverBack.gif');	
+    background-repeat:repeat-x;
+    background-position:top;	    
+	background-color: #f88e3d;    
+}
+/* SpinButtons */
+.dxeSpinIncButtonHover_SoftOrange, .dxeSpinDecButtonHover_SoftOrange,
+.dxeSpinLargeIncButtonHover_SoftOrange, .dxeSpinLargeDecButtonHover_SoftOrange
+{
+    border-style: none;    
+}
+.dxeSpinIncButtonHover_SoftOrange
+{
+	background: url('edtSpinIncBtnHBack.gif') repeat-x top left #faa947;
+    border-bottom: Solid 1px #ddf2f9;    
+}
+.dxeSpinDecButtonHover_SoftOrange
+{
+	background: url('edtSpinIncBtnHBack.gif') repeat-x top left #faa947;
+    border-bottom-style: none;
+}
+.dxeSpinLargeIncButtonHover_SoftOrange
+{
+	background: url('edtSpinLargeIncBtnHBack.gif') repeat-x top left #f88e3d;
+}
+.dxeSpinLargeDecButtonHover_SoftOrange
+{
+	background: url('edtSpinLargeIncBtnHBack.gif') repeat-x top left #f88e3d;
+}
+/* -- Pressed -- */
+.dxeButtonPressed_SoftOrange       /* inherits dxeButton */
+{    
+	background-color: #D4D1C3;
+}
+.dxeCalendarButtonPressed_SoftOrange
+{
+	color: #f1bfac;
+	background-image: url('edtCalendarButtonPressedBack.gif');	
+    background-repeat: repeat-x;
+    background-position: top;
+    border: Solid 1px #ba2000;
+  	background-color: #d95626;
+}
+.dxeButtonEditButtonPressed_SoftOrange
+{
+	background-image: url('edtDropDownButtonPressedBack.gif');	
+    background-repeat:repeat-x;
+    background-position:top;
+	background-color: #d34f25;        
+}
+/* SpinButtons */
+.dxeSpinIncButtonPressed_SoftOrange, .dxeSpinDecButtonPressed_SoftOrange,
+.dxeSpinLargeIncButtonPressed_SoftOrange, .dxeSpinLargeDecButtonPressed_SoftOrange
+{
+    border-style: none;    
+}
+.dxeSpinIncButtonPressed_SoftOrange
+{
+	background: url('edtSpinIncBtnPBack.gif') repeat-x  top left #d95526;
+    border-bottom: Solid 1px #ddf2f9;    
+}
+.dxeSpinDecButtonPressed_SoftOrange
+{
+	background: url('edtSpinIncBtnPBack.gif') repeat-x top left #d95526;
+    border-bottom-style: none;
+}
+.dxeSpinLargeIncButtonPressed_SoftOrange
+{
+	background: url('edtSpinLargeIncBtnPBack.gif') repeat-x top left #d95626;
+}
+.dxeSpinLargeDecButtonPressed_SoftOrange
+{
+	background: url('edtSpinLargeIncBtnPBack.gif') repeat-x top left #d95626;
+}
+
+.dxeButtonEdit_SoftOrange
+{
+    border: solid 1px #a0a0a0;
+}
+.dxeButtonEdit_SoftOrange td.dxic
+{
+	padding: 0px 2px 0px 1px;
+}
+.dxeButtonEdit_SoftOrange .dxeIIC img {
+    padding-left: 3px;
+}
+.dxeTextBox_SoftOrange, .dxeMemo_SoftOrange
+{
+	background-color: white;
+    border: Solid 1px #a0a0a0;
+}
+.dxeTextBox_SoftOrange td.dxic
+{
+	padding: 1px 2px;
+	width: 100%;
+}
+.dxeTextBox_SoftOrange .dxeEditArea_SoftOrange
+{
+    background-color: white;
+}
+.dxeRadioButtonList_SoftOrange, .dxeRadioButtonList_SoftOrange table
+{
+    font-family: Tahoma;
+    font-size: 9pt;    
+}
+.dxeRadioButtonList_SoftOrange
+{
+    border: Solid 1px #bfbfbf;
+}
+.dxeRadioButtonList_SoftOrange td.dxe
+{
+    padding: 6px 11px;
+	padding-right: 5px;
+}
+.dxeRadioButtonList_SoftOrange label
+{
+	margin-right: 6px;
+}
+
+/* -- Memo -- */
+.dxeMemo_SoftOrange
+{
+
+}
+.dxeMemoEditArea_SoftOrange
+{
+	background-color: white;
+	font-family: Tahoma;
+	font-size: 9pt;
+}
+.dxeMemo_SoftOrange td
+{
+	padding: 0 0 0 4px;
+	width: 100%;
+}
+
+/* -- Hyperlink -- */
+.dxeHyperlink_SoftOrange
+{
+    font-family: Tahoma;
+    font-size: 9pt;
+	font-weight: normal;    
+    color: #bc3f26;    
+}
+a:hover.dxeHyperlink_SoftOrange
+{
+    color: #f15e34;
+}
+a:visited.dxeHyperlink_SoftOrange
+{
+    color: #a1a1a1;
+}
+
+/* -- ListBox -- */
+.dxeListBox_SoftOrange
+{
+	background-color: white;
+    border: solid 1px #A0A0A0;
+    font-family: Tahoma;
+    font-size: 9pt;
+    height: 98px;
+    width: 70px;
+}
+
+.dxeListBox_SoftOrange div.dxlbd 
+{
+	padding-top: 1px;
+	height: 96px;
+}
+.dxeListBoxItemRow_SoftOrange
+{
+    cursor: default;
+}
+
+.dxeListBoxItem_SoftOrange
+{    
+    border-bottom: solid 1px white;
+    border-left: solid 1px white;
+    border-right: solid 1px white;
+    font-weight: normal;
+    font-family: Tahoma;
+    font-size: 9pt;        
+    padding: 2px 2px 2px 3px;
+    white-space: nowrap;
+    text-align: left;
+    color: black;
+}
+.dxeListBoxItemSelected_SoftOrange     /* inherits dxeListBoxItem */
+{    
+    background-color: #d3d3d3;
+    color: #000000;
+}
+.dxeListBox_SoftOrange td.dxeI, .dxeListBox_SoftOrange td.dxeIM, .dxeListBox_SoftOrange .dxeHIC,
+.dxeListBox_SoftOrange td.dxeFTM, .dxeListBox_SoftOrange td.dxeTM,
+.dxeListBox_SoftOrange td.dxeC, .dxeListBox_SoftOrange td.dxeCM, .dxeListBox_SoftOrange td.dxeHCC, .dxeListBox_SoftOrange td.dxeMI, .dxeListBox_SoftOrange td.dxeMIM
+{
+    border-right-width: 0px!important;
+}
+.dxeListBox_SoftOrange td.dxeCM, .dxeListBox_SoftOrange td.dxeHCC
+{
+    width: 25px;
+}
+.dxeListBox_SoftOrange td.dxeIM
+{
+    width: 0;
+}
+.dxeListBox_SoftOrange td.dxeT
+{
+    width: 100%;    
+    padding-left: 0px!important;
+}
+.dxeListBox_SoftOrange td.dxeT, .dxeListBox_SoftOrange td.dxeMI
+{
+    border-left-width: 0px!important;
+}
+.dxeListBox_SoftOrange td.dxeFTM, .dxeListBox_SoftOrange td.dxeTM, .dxeListBox_SoftOrange td.dxeLTM,
+.dxeListBox_SoftOrange .dxeHFC, .dxeListBox_SoftOrange .dxeHC, .dxeListBox_SoftOrange .dxeHLC
+{
+    overflow: hidden;
+}
+.dxeListBox_SoftOrange td.dxeFTM, .dxeListBox_SoftOrange td.dxeTM, 
+.dxeListBox_SoftOrange .dxeHFC, .dxeListBox_SoftOrange .dxeHC
+{
+    padding-right: 6px!important;
+}
+.dxeListBox_SoftOrange td.dxeLTM, .dxeListBox_SoftOrange td.dxeTM, 
+.dxeListBox_SoftOrange .dxeHC,  .dxeListBox_SoftOrange .dxeHLC
+{
+    padding-left: 6px!important;
+}
+/*Grid lines*/
+.dxeListBox_SoftOrange td.dxeLTM, .dxeListBox_SoftOrange td.dxeTM, .dxeListBox_SoftOrange td.dxeMIM
+{
+    border-left: 1px solid #cfcfcf !important;
+}
+.dxeListBox_SoftOrange td.dxeIM, .dxeListBox_SoftOrange td.dxeFTM, .dxeListBox_SoftOrange td.dxeTM, .dxeListBox_SoftOrange td.dxeLTM,
+.dxeListBox_SoftOrange td.dxeCM, .dxeListBox_SoftOrange td.dxeMIM
+{
+    border-bottom: solid 1px #cfcfcf;
+}
+.dxeListBoxItemHover_SoftOrange        /* inherits dxeListBoxItem */
+{
+    background-color: #ff9460;
+    color: #FFFFFF;
+}
+/*Header*/
+.dxeListBox_SoftOrange .dxeHD
+{
+    background-color: #969696;
+    border-bottom:1px dotted #5C5C5C;
+}
+.dxeListBox_SoftOrange .dxeHFC, .dxeListBox_SoftOrange .dxeHIC, .dxeListBox_SoftOrange .dxeHC,  .dxeListBox_SoftOrange .dxeHLC,
+.dxeListBox_SoftOrange td.dxeHCC, .dxeListBox_SoftOrange td.dxeHMIC
+{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color:White;
+    border-bottom-width: 0px;
+}
+.dxeListBox_SoftOrange .dxeHC,  .dxeListBox_SoftOrange .dxeHLC, .dxeListBox_SoftOrange td.dxeHMIC
+{
+    border-left: 1px dotted #5C5C5C;
+}
+.dxeListBox_SoftOrange .dxeHIC, .dxeListBox_SoftOrange .dxeHFC, .dxeListBox_SoftOrange .dxeHCC
+{
+    border-left:1px solid #969696;
+}
+.dxeListBox_SoftOrange .dxeHFC, .dxeListBox_SoftOrange .dxeHC, .dxeListBox_SoftOrange .dxeHMIC
+{
+    border-right-width:0;
+}
+.dxeListBox_SoftOrange .dxeHLC
+{
+    border-right: 1px solid #969696;
+}
+
+/* -- Calendar -- */
+.dxeCalendar_SoftOrange
+{
+	font-weight: normal;    
+    border: solid 4px #d3d3d3;
+	background-color: White;    
+	padding: 1px;
+}
+.dxeCalendar_SoftOrange td.dxMonthGrid
+{
+    padding: 10px 20px 8px 8px;
+    cursor: default;
+}
+.dxeCalendar_SoftOrange td.dxMonthGridWithWeekNumbers
+{
+    padding: 9px 20px 8px 8px;
+    cursor: default;
+}
+.dxeCalendar_SoftOrange td.dxMonthGrid
+{
+    padding-left: 20px;
+}
+.dxeCalendarDayHeader_SoftOrange
+{
+    font-family: Tahoma;
+    font-size: 13px;
+    padding: 4px;
+    padding-bottom: 3px;
+    color: Black;
+    border-bottom: solid 1px #cfcfcf;
+}
+.dxeCalendarWeekNumber_SoftOrange
+{    
+    font-family: Tahoma;
+    font-size: 7pt;    
+    text-align: right;
+    color: #fbb785;    	
+    padding: 5px 8px 3px 4px;    
+}
+.dxeCalendarDay_SoftOrange
+{    
+    font-family: Tahoma;
+    font-size: 9pt;
+    padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    color:Black;
+	background-color: White;
+    text-align: center;
+}
+.dxeCalendarWeekend_SoftOrange       	/* inherits dxeCalendarDay */
+{
+    color: #fe3c00;
+}
+.dxeCalendarOtherMonth_SoftOrange    	 /* inherits dxeCalendarDay */
+{
+    color: #acacac;
+}
+.dxeCalendarOutOfRange_SoftOrange        /* inherits dxeCalendarDay */
+{
+    color: #d0d0d0;    
+}
+.dxeCalendarSelected_SoftOrange       	/* inherits dxeCalendarDay */
+{
+    background-color: #d7d7d7;
+}
+.dxeCalendarToday_SoftOrange       	        /* inherits dxeCalendarDay */
+{
+    padding: 3px;
+    background-color: #f26f39;
+    color: #FFFFFF;
+}
+.dxeCalendarHeader_SoftOrange
+{
+    font-family: Tahoma;
+    font-size: 13px;        
+    background: #f4f4f4 url('edtCalendarHeader.gif') repeat-x top left;
+    border-bottom: solid 1px #d3d3d3;
+    text-align: center;
+    padding: 4px;
+    padding-bottom: 5px;
+    padding-left:5px;
+    padding-right:5px;
+}
+.dxeCalendarHeader_SoftOrange td.dxe
+{
+    font-family: Tahoma;
+    font-size: 13px;
+    text-align: center;
+	cursor: pointer;
+}
+.dxeCalendarFooter_SoftOrange
+{
+    background: #f4f4f4 url('edtCalendarHeader.gif') repeat-x top left;
+    padding: 8px 0px;
+    padding-bottom: 7px;
+    border-top: dotted 1px #5c5c5c;
+}
+.dxeCalendarFastNav_SoftOrange
+{
+    background: white;
+    border: solid 4px #d3d3d3;
+    border-bottom: 0px;
+    padding: 8px;
+}
+.dxeCalendarFastNavFooter_SoftOrange
+{
+    background: #f4f4f4 url('edtCalendarHeader.gif') repeat-x top left;
+    padding: 6px 0px;
+    border: solid 4px #d3d3d3;
+    border-top: dotted 1px #5c5c5c;
+}
+.dxeCalendarFastNavMonth_SoftOrange, .dxeCalendarFastNavYear_SoftOrange
+{
+    font: 9pt Tahoma;
+    color: Black;
+    padding: 4px 6px;
+    text-align: center;
+	cursor: pointer;
+}
+.dxeCalendarFastNavMonthSelected_SoftOrange, .dxeCalendarFastNavYearSelected_SoftOrange
+{
+    background: #d7d7d7;
+}
+.dxeCalendarFastNavMonthHover_SoftOrange, .dxeCalendarFastNavYearHover_SoftOrange
+{        
+    background: #f26f39;
+    color: #FFFFFF;
+}
+/* Disabled */
+.dxeDisabled_SoftOrange, .dxeDisabled_SoftOrange td.dxe
+{
+	color: #ababab;
+	cursor: default;
+}
+a.dxeDisabled_SoftOrange, a.dxeDisabled_SoftOrange:hover
+{
+    color: #ababab;
+    cursor: default;
+}
+.dxeButtonDisabled_SoftOrange, .dxeButtonDisabled_SoftOrange td.dxe
+{
+	color: #808080;
+	background: #c0c0c0 url('edtButtonEditButtonBackDis.gif') repeat-x top left;
+	border-width: 0px;
+	cursor: default;
+}
+/* -- Button -- */
+.dxbButton_SoftOrange
+{	
+	color: #FFFFFF;
+	font-weight:normal;	
+    font-size: 9pt;
+    font-family: Tahoma;				    
+    vertical-align: middle;	 		
+    border: solid 1px #cb4b31;	
+    background: #EF643C url('edtButtonBack.gif') top;
+    background-repeat:repeat-x;
+    padding: 1px 1px 1px 1px;
+	cursor: pointer;
+}
+.dxbButtonHover_SoftOrange 
+{
+	color: #FFFFFF;
+	background: #f88e3d url('edtButtonHoverBack.gif') top;
+    background-repeat: repeat-x;	
+	border: solid 1px #cb4b31;	
+}
+.dxbButtonChecked_SoftOrange
+{
+    color: #f1bfac;
+	background: #9ABDC1 url('edtButtonCheckedBack.gif') top;
+    background-repeat: repeat-x;	
+	border: solid 1px #ba2000;	
+}
+.dxbButtonPressed_SoftOrange 
+{  	
+    color: #f1bfac;   	
+	background: #d95626 url('edtButtonPressedBack.gif') top;
+    background-repeat: repeat-x;	
+	border: solid 1px #ba2000;	
+}
+.dxbButton_SoftOrange div.dxb
+{    
+    padding: 3px 13px 4px 13px;
+	border: 0px;
+}
+.dxbButton_SoftOrange div.dxbf
+{     
+    padding: 2px 12px 3px 12px;
+	border: dotted 1px #FFFFFF;		
+}
+.dxbButton_SoftOrange div.dxb table
+{    
+	color: #FFFFFF;
+	font-weight:normal;	
+    font-size: 9pt;
+    font-family: Tahoma;				    
+}
+.dxbButton_SoftOrange div.dxb td.dxb
+{    
+    background-color: transparent!important;
+    background-image: url('')!important;
+    border-width: 0px!important;
+    padding: 0px!important;
+}
+/* Disabled */
+.dxbDisabled_SoftOrange
+{
+	background: #cacaca url('edtButtonBackDis.gif') repeat-x top;
+	color: #9d9d9d;
+	border-color: #a2a2a2;
+	cursor: default;
+}
+.dxbDisabled_SoftOrange td.dxb
+{
+	color: #9d9d9d;
+}
+/* -- FilterControl -- */
+.dxfcTable_SoftOrange
+{
+	border-collapse: separate!important;
+}
+.dxfcTable_SoftOrange td.dxfc
+{
+	padding: 0px 0px 0px 3px;
+	vertical-align: middle;
+	font: 9pt Tahoma;
+	color: Black;	
+}
+a.dxfcPropertyName_SoftOrange
+{
+	white-space:nowrap!important;
+	color: Blue!important;
+}
+a.dxfcGroupType_SoftOrange
+{
+	white-space:nowrap!important;
+	padding:0px 3px 0px 3px!important;
+	color: Red!important;
+}
+a.dxfcOperation_SoftOrange
+{
+	white-space:nowrap!important;
+	color: Green!important;
+}
+a.dxfcValue_SoftOrange
+{
+	white-space:nowrap!important;
+	color: Gray!important;
+}
+.dxfcImageButton_SoftOrange 
+{
+	cursor: pointer;
+}
+
+.dxfcLoadingPanel_SoftOrange
+{
+}
+.dxfcLoadingPanel_SoftOrange td.dx
+{
+}
+.dxfcLoadingDiv_SoftOrange
+{
+	background: white;
+	opacity: 0.01;
+	filter: alpha(opacity=1);
+}
+
+.dxeMaskHint_SoftOrange 
+{
+	background: #ffffe1;
+	border: solid 1px black;
+	padding: 2px 5px 3px;
+	color: Black;
+	font: 9pt Tahoma;
+}
+/* -- ProgressBar -- */
+.dxeProgressBar_SoftOrange, .dxeProgressBar_SoftOrange td
+{
+    font-family: Tahoma, Verdana, Arial;
+    font-size: 9pt;
+	color: Black;    
+}
+.dxeProgressBar_SoftOrange .dxePBMainCell, .dxeProgressBar_SoftOrange td
+{
+    padding: 0;
+}
+.dxeProgressBar_SoftOrange
+{
+    border: Solid 3px #D3D3D3;
+    background-color: #E5E5E5;
+}
+.dxeProgressBarIndicator_SoftOrange
+{
+    background-color: #F98936;
+}
+
+/* -- DropDownWindow -- */
+.dxeDropDownWindow_SoftOrange
+{
+    background-color: White;
+    border: solid 1px #a0a0a0;
+}
+
+/*----------------- ColorTable -----------------*/
+.dxeColorIndicator_SoftOrange
+{
+    border: solid 1px #a0a0a0;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.dxeColorTable_SoftOrange
+{
+    background-color: White;
+    border: solid 1px #a0a0a0;
+}
+.dxeColorTable_SoftOrange td.dx
+{
+    padding: 4px 4px;
+}
+.dxeColorTableCell_SoftOrange {
+    padding-left: 3px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    padding-right: 3px;
+    cursor: pointer;
+}
+.dxeColorTableCellDiv_SoftOrange {
+    border: solid 1px #808080;
+    width: 12px;
+    height: 12px;
+    font-size: 0px;
+}
+.dxeColorTableCellSelected_SoftOrange {
+    padding-left: 2px!important;
+    padding-bottom: 2px!important;
+    padding-top: 2px!important;
+    padding-right: 2px!important;
+
+    background-color: #CBCBCB;
+    border: solid 1px #888888;
+}
+.dxeColorTableCellHover_SoftOrange {
+    padding-left: 2px!important;
+    padding-bottom: 2px!important;
+    padding-top: 2px!important;
+    padding-right: 2px!important;
+    
+    background-color: #F2F2F2;
+    border: solid 1px #888888;
+}
+
+/* Focused */
+.dxeFocused_SoftOrange 
+{
+    border: solid 1px #7a7a7a;
+}
+
+.dxeNullText_SoftOrange .dxeEditArea_SoftOrange,
+.dxeNullText_SoftOrange .dxeMemoEditArea_SoftOrange
+{
+    color: #ababab;
+}

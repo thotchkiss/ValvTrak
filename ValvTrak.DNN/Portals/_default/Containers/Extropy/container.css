@@ -1,0 +1,64 @@
+/* 
+================================
+ Container Styles for DotNetNuke
+================================
+*/   
+
+.Module-Wrapper
+{
+    border: solid 1px #e0e0e0;
+    margin: 15px;
+}
+
+.Module-TableWrapper
+{
+    width: 100%;
+}
+
+table.Module-Wrapper
+{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Module-Header
+{
+    background-color: #e0e0e0;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 30px;
+}
+
+.Module-Menu,
+.Module-Icon,
+.Module-Title
+{
+    float: left;
+    padding: 3px;
+}
+
+.Module-Help
+{
+    float: right;
+}
+
+.Module-Content
+{
+    padding: 7px;
+}
+.Module-Content *
+{
+    padding: 1px;
+}
+
+.Module-Footer
+{
+    margin-top: 10px;
+    padding: 7px;
+}
+
+.Module-Footer *
+{
+    padding-right: 3px;
+}

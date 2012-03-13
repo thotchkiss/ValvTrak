@@ -1,0 +1,112 @@
+.dxPivotGrid_pgCollapsedButton_SoftOrange,
+.dxPivotGrid_pgExpandedButton_SoftOrange,
+.dxPivotGrid_pgSortDownButton_SoftOrange,
+.dxPivotGrid_pgSortUpButton_SoftOrange,
+.dxPivotGrid_pgFilterResizer_SoftOrange,
+.dxPivotGrid_pgFilterButton_SoftOrange,
+.dxPivotGrid_pgFilterButtonActive_SoftOrange,
+.dxPivotGrid_pgCustomizationFormCloseButton_SoftOrange,
+.dxPivotGrid_pgDragArrowDown_SoftOrange,
+.dxPivotGrid_pgDragArrowUp_SoftOrange,
+.dxPivotGrid_pgDragHideField_SoftOrange,
+.dxPivotGrid_pgDataHeaders_SoftOrange,
+.dxPivotGrid_pgGroupSeparator_SoftOrange,
+.dxPivotGrid_pgSortByColumn_SoftOrange,
+.dxPivotGrid_pgPrefilterButton_SoftOrange {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxPivotGrid_pgCollapsedButton_SoftOrange {
+    background-position: 0px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxPivotGrid_pgExpandedButton_SoftOrange {
+    background-position: 0px -18px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxPivotGrid_pgSortDownButton_SoftOrange {
+    background-position: -36px 0px;
+    width: 6px;
+    height: 3px;
+}
+
+.dxPivotGrid_pgSortUpButton_SoftOrange {
+    background-position: -36px -18px;
+    width: 6px;
+    height: 3px;
+}
+
+.dxPivotGrid_pgFilterResizer_SoftOrange {
+    background-position: -69px -37px;
+    width: 12px;
+    height: 12px;
+}
+
+.dxPivotGrid_pgFilterButton_SoftOrange {
+    background-position: 0px -36px;
+    width: 21px;
+    height: 21px;
+}
+
+.dxPivotGrid_pgFilterButtonActive_SoftOrange {
+    background-position: -23px -36px;
+    width: 21px;
+    height: 21px;
+}
+
+.dxPivotGrid_pgCustomizationFormCloseButton_SoftOrange {
+    background-position: -46px -39px;
+    width: 18px;
+    height: 18px;
+}
+
+.dxPivotGrid_pgDragArrowDown_SoftOrange {
+    background-position: -17px 0px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxPivotGrid_pgDragArrowUp_SoftOrange {
+    background-position: -17px -17px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxPivotGrid_pgDragHideField_SoftOrange {
+    background-position: -75px 0px;
+    width: 22px;
+    height: 22px;
+}
+
+.dxPivotGrid_pgDataHeaders_SoftOrange {
+    background-position: -53px -19px;
+    width: 12px;
+    height: 12px;
+}
+
+.dxPivotGrid_pgGroupSeparator_SoftOrange {
+    background-position: -105px -21px;
+    width: 5px;
+    height: 1px;
+}
+
+.dxPivotGrid_pgSortByColumn_SoftOrange {
+    background-position: -53px 0px;
+    width: 11px;
+    height: 7px;
+}
+
+.dxPivotGrid_pgPrefilterButton_SoftOrange {
+    background-position: -105px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+

@@ -1,0 +1,315 @@
+.dxWeb_rpHeaderTopLeftCorner_Youthful,
+.dxWeb_rpHeaderTopRightCorner_Youthful,
+.dxWeb_rpBottomLeftCorner_Youthful,
+.dxWeb_rpBottomRightCorner_Youthful,
+.dxWeb_rpTopLeftCorner_Youthful,
+.dxWeb_rpTopRightCorner_Youthful,
+.dxWeb_rpGroupBoxBottomLeftCorner_Youthful,
+.dxWeb_rpGroupBoxBottomRightCorner_Youthful,
+.dxWeb_rpGroupBoxTopLeftCorner_Youthful,
+.dxWeb_rpGroupBoxTopRightCorner_Youthful,
+.dxWeb_mHorizontalPopOut_Youthful,
+.dxWeb_mVerticalPopOut_Youthful,
+.dxWeb_mSubMenuItem_Youthful,
+.dxWeb_mSubMenuItemChecked_Youthful,
+.dxWeb_nbCollapse_Youthful,
+.dxWeb_nbExpand_Youthful,
+.dxWeb_nbItemBullet_Youthful,
+.dxWeb_splVSeparator_Youthful,
+.dxWeb_splVSeparatorHover_Youthful,
+.dxWeb_splHSeparator_Youthful,
+.dxWeb_splHSeparatorHover_Youthful,
+.dxWeb_splVCollapseBackwardButton_Youthful,
+.dxWeb_splVCollapseBackwardButtonHover_Youthful,
+.dxWeb_splHCollapseBackwardButton_Youthful,
+.dxWeb_splHCollapseBackwardButtonHover_Youthful,
+.dxWeb_splVCollapseForwardButton_Youthful,
+.dxWeb_splVCollapseForwardButtonHover_Youthful,
+.dxWeb_splHCollapseForwardButton_Youthful,
+.dxWeb_splHCollapseForwardButtonHover_Youthful,
+.dxWeb_pcCloseButton_Youthful,
+.dxWeb_pcSizeGrip_Youthful,
+.dxWeb_pAll_Youthful,
+.dxWeb_pAllDisabled_Youthful,
+.dxWeb_pPrev_Youthful,
+.dxWeb_pPrevDisabled_Youthful,
+.dxWeb_pNext_Youthful,
+.dxWeb_pNextDisabled_Youthful,
+.dxWeb_pLast_Youthful,
+.dxWeb_pLastDisabled_Youthful,
+.dxWeb_pFirst_Youthful,
+.dxWeb_pFirstDisabled_Youthful,
+.dxWeb_hlTailImage_Youthful,
+.dxWeb_smSecondLevelBullet_Youthful,
+.dxWeb_smThirdLevelBullet_Youthful {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxWeb_rpHeaderTopLeftCorner_Youthful {
+    background-position: -104px -88px;
+    width: 8px;
+    height: 8px;
+}
+
+.dxWeb_rpHeaderTopRightCorner_Youthful {
+    background-position: -117px -88px;
+    width: 8px;
+    height: 8px;
+}
+
+.dxWeb_rpBottomLeftCorner_Youthful {
+    background-position: -78px -88px;
+    width: 8px;
+    height: 8px;
+}
+
+.dxWeb_rpBottomRightCorner_Youthful {
+    background-position: -91px -88px;
+    width: 8px;
+    height: 8px;
+}
+
+.dxWeb_rpTopLeftCorner_Youthful {
+    background-position: -52px -88px;
+    width: 8px;
+    height: 8px;
+}
+
+.dxWeb_rpTopRightCorner_Youthful {
+    background-position: -65px -88px;
+    width: 8px;
+    height: 8px;
+}
+
+.dxWeb_rpGroupBoxBottomLeftCorner_Youthful {
+    background-position: -26px -88px;
+    width: 8px;
+    height: 8px;
+}
+
+.dxWeb_rpGroupBoxBottomRightCorner_Youthful {
+    background-position: -39px -88px;
+    width: 8px;
+    height: 8px;
+}
+
+.dxWeb_rpGroupBoxTopLeftCorner_Youthful {
+    background-position: 0px -88px;
+    width: 8px;
+    height: 8px;
+}
+
+.dxWeb_rpGroupBoxTopRightCorner_Youthful {
+    background-position: -13px -88px;
+    width: 8px;
+    height: 8px;
+}
+
+.dxWeb_mHorizontalPopOut_Youthful {
+    background-position: -92px -50px;
+    width: 10px;
+    height: 7px;
+}
+
+.dxWeb_mVerticalPopOut_Youthful {
+    background-position: -105px -50px;
+    width: 5px;
+    height: 7px;
+}
+
+.dxWeb_mSubMenuItem_Youthful {
+    background-position: -48px -50px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxWeb_mSubMenuItemChecked_Youthful {
+    background-position: -70px -50px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxWeb_nbCollapse_Youthful {
+    background-position: -129px 0px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_nbExpand_Youthful {
+    background-position: -129px -23px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxWeb_nbItemBullet_Youthful {
+    background-position: -113px -50px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxWeb_splVSeparator_Youthful {
+    background-position: -92px -62px;
+    width: 6px;
+    height: 18px;
+}
+
+.dxWeb_splVSeparatorHover_Youthful {
+    background-position: -99px -62px;
+    width: 6px;
+    height: 18px;
+}
+
+.dxWeb_splHSeparator_Youthful {
+    background-position: -58px -74px;
+    width: 18px;
+    height: 6px;
+}
+
+.dxWeb_splHSeparatorHover_Youthful {
+    background-position: -58px -81px;
+    width: 18px;
+    height: 6px;
+}
+
+.dxWeb_splVCollapseBackwardButton_Youthful {
+    background-position: -30px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splVCollapseBackwardButtonHover_Youthful {
+    background-position: -37px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splHCollapseBackwardButton_Youthful {
+    background-position: 0px -74px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_splHCollapseBackwardButtonHover_Youthful {
+    background-position: 0px -81px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_splVCollapseForwardButton_Youthful {
+    background-position: -44px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splVCollapseForwardButtonHover_Youthful {
+    background-position: -51px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splHCollapseForwardButton_Youthful {
+    background-position: -15px -74px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_splHCollapseForwardButtonHover_Youthful {
+    background-position: -15px -81px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_pcCloseButton_Youthful {
+    background-position: 0px -50px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxWeb_pcSizeGrip_Youthful {
+    background-position: -24px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_pAll_Youthful {
+    background-position: 0px 0px;
+    width: 21px;
+    height: 15px;
+}
+
+.dxWeb_pAllDisabled_Youthful {
+    background-position: 0px -25px;
+    width: 21px;
+    height: 15px;
+}
+
+.dxWeb_pPrev_Youthful {
+    background-position: -105px 0px;
+    width: 16px;
+    height: 15px;
+}
+
+.dxWeb_pPrevDisabled_Youthful {
+    background-position: -105px -25px;
+    width: 16px;
+    height: 15px;
+}
+
+.dxWeb_pNext_Youthful {
+    background-position: -81px 0px;
+    width: 16px;
+    height: 15px;
+}
+
+.dxWeb_pNextDisabled_Youthful {
+    background-position: -81px -25px;
+    width: 16px;
+    height: 15px;
+}
+
+.dxWeb_pLast_Youthful {
+    background-position: -55px 0px;
+    width: 21px;
+    height: 15px;
+}
+
+.dxWeb_pLastDisabled_Youthful {
+    background-position: -55px -25px;
+    width: 21px;
+    height: 15px;
+}
+
+.dxWeb_pFirst_Youthful {
+    background-position: -29px 0px;
+    width: 21px;
+    height: 15px;
+}
+
+.dxWeb_pFirstDisabled_Youthful {
+    background-position: -29px -25px;
+    width: 21px;
+    height: 15px;
+}
+
+.dxWeb_hlTailImage_Youthful {
+    background-position: -120px -50px;
+    width: 16px;
+    height: 11px;
+}
+
+.dxWeb_smSecondLevelBullet_Youthful {
+    background-position: -114px -66px;
+    width: 5px;
+    height: 7px;
+}
+
+.dxWeb_smThirdLevelBullet_Youthful {
+    background-position: -121px -66px;
+    width: 3px;
+    height: 5px;
+}
+
+

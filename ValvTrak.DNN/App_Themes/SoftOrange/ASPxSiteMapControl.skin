@@ -1,0 +1,19 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxsm" Namespace="DevExpress.Web.ASPxSiteMapControl" Assembly="DevExpress.Web.v10.2" %>
+
+<dxsm:ASPxSiteMapControl runat="server" CssFilePath="{0}/styles.css" CssPostfix="SoftOrange">
+    <LevelProperties>
+        <dxsm:LevelProperties>
+            <ChildNodesPaddings PaddingTop="11px"></ChildNodesPaddings>
+        </dxsm:LevelProperties>
+        <dxsm:LevelProperties NodeSpacing="1px">
+            <ChildNodesPaddings PaddingTop="1px" PaddingLeft="28px"></ChildNodesPaddings>
+        </dxsm:LevelProperties>
+        <dxsm:LevelProperties NodeSpacing="2px">
+        </dxsm:LevelProperties>
+    </LevelProperties>
+    <DefaultLevelProperties BulletStyle="None">
+        <CurrentNodeStyle BackColor="#F15E34" ForeColor="White"></CurrentNodeStyle>
+    </DefaultLevelProperties>
+</dxsm:ASPxSiteMapControl>
+

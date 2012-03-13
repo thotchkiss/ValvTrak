@@ -1,0 +1,29 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxrp" Namespace="DevExpress.Web.ASPxRoundPanel" Assembly="DevExpress.Web.v10.2" %>
+<%@ Register Assembly="DevExpress.Web.v10.2" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+
+<dxrp:ASPxRoundPanel runat="server" BackColor="#E3E3EC" EnableDefaultAppearance="False" 
+    CssFilePath="{0}/styles.css" CssPostfix="Office2003Silver" SpriteCssFilePath="{0}/sprite.css">
+    <Border BorderColor="#7C7C94" BorderStyle="Solid" BorderWidth="1px" />
+    <ContentPaddings Padding="2px" PaddingTop="10px" PaddingBottom="10px" />
+    <HeaderStyle BackColor="#9593B1">
+        <BorderBottom BorderColor="#7C7C94" BorderStyle="Solid" BorderWidth="1px" />
+        <Paddings Padding="0" PaddingLeft="2px" PaddingRight="2px" PaddingBottom="7px" />
+    </HeaderStyle>
+    <%-- Middles --%>
+    <TopEdge>
+        <BackgroundImage Repeat="RepeatX" VerticalPosition="top" HorizontalPosition="left" ImageUrl="Web/rpTopEdge.png" />
+    </TopEdge>
+    <NoHeaderTopEdge BackColor="#E3E3EC" />
+    <%-- Header --%>
+    <HeaderLeftEdge>
+        <BackgroundImage Repeat="RepeatX" VerticalPosition="top" HorizontalPosition="left" ImageUrl="Web/rpHeader.png" />
+    </HeaderLeftEdge>
+    <HeaderContent>
+        <BackgroundImage Repeat="RepeatX" VerticalPosition="top" HorizontalPosition="left" ImageUrl="Web/rpHeader.png" />
+    </HeaderContent>
+    <HeaderRightEdge>
+        <BackgroundImage Repeat="RepeatX" VerticalPosition="top" HorizontalPosition="left" ImageUrl="Web/rpHeader.png" />
+    </HeaderRightEdge>
+    <DisabledStyle ForeColor="#808080"></DisabledStyle>
+</dxrp:ASPxRoundPanel>

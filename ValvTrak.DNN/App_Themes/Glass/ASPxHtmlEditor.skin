@@ -1,0 +1,54 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register Assembly="DevExpress.Web.ASPxHtmlEditor.v10.2" Namespace="DevExpress.Web.ASPxHtmlEditor" TagPrefix="dxhe" %>
+
+<dxhe:ASPxHtmlEditor runat="server" >
+    <Images>
+        <LoadingPanel Url="HtmlEditor/Loading.gif"></LoadingPanel>
+    </Images>
+	<Styles CssPostfix="Glass" CssFilePath="{0}/styles.css">
+		<ViewArea>
+			<Border BorderStyle="Solid" BorderColor="#4986A2" BorderWidth="1px" />
+		</ViewArea>
+	</Styles>
+	<StylesToolbars>
+		<Toolbar ItemSpacing="0px" SeparatorHeight="100%" />
+	</StylesToolbars>
+	<StylesStatusBar>
+		<Tab>
+			<Paddings PaddingTop="4px" PaddingBottom="5px" />
+		</Tab>
+		<ActiveTab>
+			<Paddings PaddingTop="4px" PaddingBottom="5px" />
+		</ActiveTab>
+		<StatusBar TabSpacing="0px" />
+	</StylesStatusBar>
+	<Images SpriteCssFilePath="{0}/sprite.css"></Images>
+	<PartsRoundPanel>
+		<HeaderRightEdge>
+			<BackgroundImage VerticalPosition="bottom" ImageUrl="HtmlEditor/RoundPanel/herpHeaderRightEdge.gif" />
+		</HeaderRightEdge>
+		<RightEdge>
+			<BackgroundImage Repeat="RepeatX" VerticalPosition="bottom" ImageUrl="HtmlEditor/RoundPanel/herpLeftRightEdge.gif" />
+		</RightEdge>
+		<LeftEdge>
+			<BackgroundImage Repeat="RepeatX" VerticalPosition="bottom" ImageUrl="HtmlEditor/RoundPanel/herpLeftRightEdge.gif" />
+		</LeftEdge>
+		<HeaderLeftEdge>
+			<BackgroundImage Repeat="RepeatX" VerticalPosition="bottom" ImageUrl="HtmlEditor/RoundPanel/herpHeaderLeftEdge.gif" />
+		</HeaderLeftEdge>
+		<NoHeaderTopEdge BackColor="#EBF2F4" />
+		<BottomEdge BackColor="#D7E9F1" />            
+		<HeaderContent>
+			<BackgroundImage Repeat="RepeatX" VerticalPosition="bottom" ImageUrl="HtmlEditor/RoundPanel/herpHeaderBack.gif" />
+		</HeaderContent>
+		<Content>
+			<BackgroundImage Repeat="RepeatX" VerticalPosition="bottom" ImageUrl="HtmlEditor/RoundPanel/herpContentBack.gif" />
+		</Content>
+	</PartsRoundPanel>
+	<StylesRoundPanel>            
+		<ControlStyle BackColor="#EBF2F4">
+			<Border BorderStyle="Solid" BorderWidth="1px" BorderColor="#7EACB1" />
+		</ControlStyle>
+	</StylesRoundPanel>	
+</dxhe:ASPxHtmlEditor>
+

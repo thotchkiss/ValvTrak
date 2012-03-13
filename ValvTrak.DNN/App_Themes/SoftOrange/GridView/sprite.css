@@ -1,0 +1,105 @@
+.dxGridView_gvCollapsedButton_SoftOrange,
+.dxGridView_gvExpandedButton_SoftOrange,
+.dxGridView_gvDetailCollapsedButton_SoftOrange,
+.dxGridView_gvDetailExpandedButton_SoftOrange,
+.dxGridView_gvFilterRowButton_SoftOrange,
+.dxGridView_gvHeaderFilter_SoftOrange,
+.dxGridView_gvHeaderFilterActive_SoftOrange,
+.dxGridView_gvHeaderSortDown_SoftOrange,
+.dxGridView_gvHeaderSortUp_SoftOrange,
+.dxGridView_gvDragAndDropArrowDown_SoftOrange,
+.dxGridView_gvDragAndDropArrowUp_SoftOrange,
+.dxGridView_gvDragAndDropHideColumn_SoftOrange,
+.dxGridView_gvParentGroupRows_SoftOrange,
+.dxGridView_WindowResizer_SoftOrange {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxGridView_gvCollapsedButton_SoftOrange {
+    background-position: -36px 0px;
+    width: 13px;
+    height: 14px;
+}
+
+.dxGridView_gvExpandedButton_SoftOrange {
+    background-position: -36px -18px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvDetailCollapsedButton_SoftOrange {
+    background-position: -53px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvDetailExpandedButton_SoftOrange {
+    background-position: -53px -18px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvFilterRowButton_SoftOrange {
+    background-position: -100px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvHeaderFilter_SoftOrange {
+    background-position: 0px -36px;
+    width: 21px;
+    height: 21px;
+}
+
+.dxGridView_gvHeaderFilterActive_SoftOrange {
+    background-position: -23px -36px;
+    width: 21px;
+    height: 21px;
+}
+
+.dxGridView_gvHeaderSortDown_SoftOrange {
+    background-position: -19px 0px;
+    width: 6px;
+    height: 3px;
+}
+
+.dxGridView_gvHeaderSortUp_SoftOrange {
+    background-position: -19px -18px;
+    width: 6px;
+    height: 3px;
+}
+
+.dxGridView_gvDragAndDropArrowDown_SoftOrange {
+    background-position: 0px 0px;
+    width: 14px;
+    height: 15px;
+}
+
+.dxGridView_gvDragAndDropArrowUp_SoftOrange {
+    background-position: 0px -17px;
+    width: 14px;
+    height: 15px;
+}
+
+.dxGridView_gvDragAndDropHideColumn_SoftOrange {
+    background-position: -70px 0px;
+    width: 22px;
+    height: 22px;
+}
+
+.dxGridView_gvParentGroupRows_SoftOrange {
+    background-position: -70px -36px;
+    width: 18px;
+    height: 13px;
+}
+
+.dxGridView_WindowResizer_SoftOrange {
+    background-position: -46px -36px;
+    width: 12px;
+    height: 12px;
+}
+
+

@@ -1,0 +1,38 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop Media Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}Media] DROP CONSTRAINT [FK_{objectQualifier}Media_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}Media] DROP CONSTRAINT [PK_{objectQualifier}Media]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}Media]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}GetMedia]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}AddMedia]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}UpdateMedia]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}UpgradeMedia]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

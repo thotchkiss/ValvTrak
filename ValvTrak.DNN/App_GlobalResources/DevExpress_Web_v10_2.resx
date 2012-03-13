@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ASPxperienceStringId.Loading">
+    <value>Loading&amp;hellip;</value>
+  </data>
+  <data name="ASPxperienceStringId.Pager_All">
+    <value>All</value>
+  </data>
+  <data name="ASPxperienceStringId.Pager_First">
+    <value>First</value>
+  </data>
+  <data name="ASPxperienceStringId.Pager_Prev">
+    <value>Prev</value>
+  </data>
+  <data name="ASPxperienceStringId.Pager_Next">
+    <value>Next</value>
+  </data>
+  <data name="ASPxperienceStringId.Pager_Last">
+    <value>Last</value>
+  </data>
+  <data name="ASPxperienceStringId.Pager_SummaryFormat">
+    <value>Page {0} of {1} ({2} items)</value>
+  </data>
+  <data name="ASPxperienceStringId.Pager_SummaryAllPagesFormat">
+    <value>Pages: {0} - {1} ({2} items)</value>
+  </data>
+  <data name="ASPxperienceStringId.DataView_PagerSummaryFormat">
+    <value>Page {0} of {1}</value>
+  </data>
+  <data name="ASPxperienceStringId.DataView_PagerSummaryAllPages">
+    <value>All pages</value>
+  </data>
+  <data name="ASPxperienceStringId.DataViewBase_EmptyDataText">
+    <value>No data to display</value>
+  </data>
+  <data name="ASPxperienceStringId.NewsControl_BackToTop">
+    <value>Back to top</value>
+  </data>
+  <data name="ASPxperienceStringId.NewsControl_Page">
+    <value>Page:</value>
+  </data>
+  <data name="ASPxperienceStringId.PopupControl_CloseButton">
+    <value>[Close]</value>
+  </data>
+  <data name="ASPxperienceStringId.PopupControl_SizeGrip">
+    <value>[Resize]</value>
+  </data>
+  <data name="ASPxperienceStringId.TitleIndex_FilterCaption">
+    <value>Filter:&amp;nbsp;&amp;nbsp;&amp;nbsp;</value>
+  </data>
+  <data name="ASPxperienceStringId.TitleIndex_FilterHint">
+    <value>&lt;b&gt;?&lt;/b&gt; = any single character
+&lt;b&gt;*&lt;/b&gt; = any characters</value>
+  </data>
+  <data name="ASPxperienceStringId.TitleIndex_BackToTop">
+    <value>[Back to Top]</value>
+  </data>
+  <data name="ASPxperienceStringId.TitleIndex_NoData">
+    <value>No data for this filter criteria</value>
+  </data>
+  <data name="ASPxperienceStringId.UploadControl_MaxSize">
+    <value>File size exceeds the maximum allowed size, which is {0} bytes</value>
+  </data>
+  <data name="ASPxperienceStringId.UploadControl_GeneralError">
+    <value>File uploading fails because of an external error that doesn't relate to the ASPxUploadControl's functionality</value>
+  </data>
+  <data name="ASPxperienceStringId.UploadControl_EnctypeError">
+    <value>File uploading fails because the form's enctype attribute is not set to 'multipart/form-data'</value>
+  </data>
+  <data name="ASPxperienceStringId.UploadControl_NotAllowedContentTypes">
+    <value>This content type isn't allowed</value>
+  </data>
+  <data name="ASPxperienceStringId.UploadControl_NotAllowedFileExtension">
+    <value>This file extension isn't allowed</value>
+  </data>
+  <data name="ASPxperienceStringId.UploadControl_FileDoesNotExistError">
+    <value>The uploading file doesn't exist</value>
+  </data>
+  <data name="ASPxperienceStringId.UploadControl_RemoveButton">
+    <value>Remove</value>
+  </data>
+  <data name="ASPxperienceStringId.UploadControl_AddButton">
+    <value>Add</value>
+  </data>
+  <data name="ASPxperienceStringId.UploadControl_UploadButton">
+    <value>Upload</value>
+  </data>
+  <data name="ASPxperienceStringId.UploadControl_CancelButton">
+    <value>Cancel</value>
+  </data>
+  <data name="ASPxperienceStringId.UploadControl_InvalidWindowsPath">
+    <value>The file path "{0}" isn't a valid Windows path.</value>
+  </data>
+  <data name="ASPxperienceStringId.UploadControl_MaxRequestLengthExceeded">
+    <value>The total content length of the files selected for uploading exceeds the allowed maximum request length ({0} Kb) defined by the application.</value>
+  </data>
+  <data name="ASPxperienceStringId.TreeView_AltExpand">
+    <value>Expand</value>
+  </data>
+  <data name="ASPxperienceStringId.TreeView_AltCollapse">
+    <value>Collapse</value>
+  </data>
+  <data name="ASPxperienceStringId.TreeView_AltLoading">
+    <value>Loading</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_FolderLocked">
+    <value>Locked for upload</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_Folder">
+    <value>Folder</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_Filter">
+    <value>Filter by:</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_Path">
+    <value>Path:</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_TbCreate">
+    <value>Create</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_TbRename">
+    <value>Rename (F2)</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_TbMove">
+    <value>Move (F6)</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_TbDelete">
+    <value>Delete (Del)</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_TbRefresh">
+    <value>Refresh</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_DeleteConfirm">
+    <value>Are you sure you want to delete '{0}'?</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_MovePopupHeader">
+    <value>Select Destination Folder</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_Ok">
+    <value>Ok</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_Cancel">
+    <value>Cancel</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_ErrorNoAccess">
+    <value>Access denied. The operation cannot be completed.</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_ErrorIO">
+    <value>Unspecified IO error</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_ErrorFileNotFound">
+    <value>File not found</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_ErrorFolderNotFound">
+    <value>Folder not found</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_ErrorOther">
+    <value>Unspecified error</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_ErrorTypeNewName">
+    <value>Type new name</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_ErrorInvalidSymbols">
+    <value>This name contains invalid characters. The operation cannot be completed.</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_ErrorWrongExtension">
+    <value>This file extension is not allowed. The operation cannot be completed.</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_ErrorAlreadyExists">
+    <value>The specified file/folder already exists</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManagerActionList_AllowDelete">
+    <value>Allow Deleting Files and Folders</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManagerActionList_AllowMove">
+    <value>Allow Moving Files and Folders</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManagerActionList_AllowRename">
+    <value>Allow Renaming Files and Folders</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManagerActionList_AllowCreate">
+    <value>Allow Creating Folders</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManagerActionList_ShowUploadPanel">
+    <value>Show Upload Panel</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManagerActionList_AddProgressPanelHttpModule">
+    <value>Enable Progress Bar for Upload Panel (updates Web.Config)</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManagerActionList_AddProgressPanelHttpModuleDescription">
+    <value>Modifies Web.Config with HTTP handlers that are necessary to show the Progress Bar in the Upload Panel</value>
+  </data>
+  <data name="ASPxperienceStringId.FileManager_ErrorUsedByAnotherProcess">
+    <value>The operation cannot be completed because the file/folder is being used by another process</value>
+  </data>
+</root>

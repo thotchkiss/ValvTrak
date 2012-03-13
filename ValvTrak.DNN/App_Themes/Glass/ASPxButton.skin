@@ -1,0 +1,6 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v10.2" %>
+
+<dxe:ASPxButton runat="server" CssFilePath="{0}/styles.css" CssPostfix="Glass">
+</dxe:ASPxButton>
+

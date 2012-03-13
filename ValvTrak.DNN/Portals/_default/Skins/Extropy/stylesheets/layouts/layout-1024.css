@@ -1,0 +1,25 @@
+#Layout-Grid
+{
+    width: 994px;
+}
+
+.Layout-Table
+{
+    width: 912px;
+}
+
+.Layout-SidePane
+{ 
+    width: 210px;
+}
+
+.Layout-LeftHalfPane,
+.Layout-RightHalfPane
+{
+    width: 450px;
+}
+
+
+
+
+

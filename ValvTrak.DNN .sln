@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Web Developer Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rawson.Data.Model", "Rawson.Data.Model\Rawson.Data.Model.csproj", "{EBF20F87-6687-459E-AD92-3B83BC99144E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rawson.Providers", "Rawson.Providers\Rawson.Providers.csproj", "{C1FECB50-7231-4899-9FF0-A9D50A293273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rawson.Reporting.Extensions", "Rawson.Reporting.Extensions\Rawson.Reporting.Extensions.csproj", "{DEB51421-2005-4703-A64B-64240B414CDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rawson.Utilities", "Rawson.Utilities\Rawson.Utilities.csproj", "{3DC2FAFD-9442-412E-B59F-4134D8BED028}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ValvTrak.DNN", "ValvTrak.DNN\", "{4483A01F-57BF-4014-9A9F-025A2BB760F0}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		ProjectReferences = "{EBF20F87-6687-459E-AD92-3B83BC99144E}|Rawson.Data.Model.dll;{C1FECB50-7231-4899-9FF0-A9D50A293273}|Rawson.Providers.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/ValvTrak.DNN"
+		Debug.AspNetCompiler.PhysicalPath = "ValvTrak.DNN\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\ValvTrak.DNN\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/ValvTrak.DNN"
+		Release.AspNetCompiler.PhysicalPath = "ValvTrak.DNN\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\ValvTrak.DNN\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBF20F87-6687-459E-AD92-3B83BC99144E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF20F87-6687-459E-AD92-3B83BC99144E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF20F87-6687-459E-AD92-3B83BC99144E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF20F87-6687-459E-AD92-3B83BC99144E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1FECB50-7231-4899-9FF0-A9D50A293273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1FECB50-7231-4899-9FF0-A9D50A293273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1FECB50-7231-4899-9FF0-A9D50A293273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1FECB50-7231-4899-9FF0-A9D50A293273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEB51421-2005-4703-A64B-64240B414CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEB51421-2005-4703-A64B-64240B414CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEB51421-2005-4703-A64B-64240B414CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEB51421-2005-4703-A64B-64240B414CDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC2FAFD-9442-412E-B59F-4134D8BED028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC2FAFD-9442-412E-B59F-4134D8BED028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC2FAFD-9442-412E-B59F-4134D8BED028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC2FAFD-9442-412E-B59F-4134D8BED028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4483A01F-57BF-4014-9A9F-025A2BB760F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4483A01F-57BF-4014-9A9F-025A2BB760F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4483A01F-57BF-4014-9A9F-025A2BB760F0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{4483A01F-57BF-4014-9A9F-025A2BB760F0}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = ValvTrak.DNN .vsmdi
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,254 @@
+.dxtlControl_PlasticBlue
+{
+	cursor: default;
+	font: 9pt Tahoma;
+	color: black;
+	border: none 1px #cccccc;	
+}
+.dxtlControl_PlasticBlue caption
+{
+	padding: 3px 3px 5px 3px;
+	font-size: 15px;
+	text-align: center;
+	color: #707070;
+	border: Solid 1px #CCCCCC;	
+    border-bottom: 0;
+}
+
+/* Indent cells */
+.dxtlIndent_PlasticBlue, .dxtlIndentWithButton_PlasticBlue
+{			
+	background: white;
+	vertical-align: top;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+.dxtlIndent_PlasticBlue
+{
+	padding: 0 11px;
+}
+.dxtlIndentWithButton_PlasticBlue
+{
+	padding: 7px;
+}
+.dxtlSelectionCell_PlasticBlue
+{
+	padding: 0 2px;
+	border: solid 1px #d9d9d9;
+}
+
+/* Tree-lines cells */
+.dxtlLineFirst_PlasticBlue
+{
+	background-image: url('CssImages/TreeLineFirst.gif');
+}
+.dxtlLineMiddle_PlasticBlue
+{
+	background-image: url('CssImages/TreeLineMiddle.gif');
+}
+.dxtlLineLast_PlasticBlue
+{
+	background-image: url('CssImages/TreeLineLast.gif');
+}
+.dxtlLineRoot_PlasticBlue
+{
+	background-image: url('CssImages/TreeLineRoot.gif');
+	background-repeat: repeat-y;
+}
+
+/* Headers */
+.dxtlHeader_PlasticBlue 
+{    
+	background: url('CssImages/HeaderBack.gif') repeat-x #415698;	
+	border: solid 1px #2c4182;
+	border-top: none 0 white;
+	padding: 7px 6px 8px;
+	font-weight: normal;		
+}
+.dxtlHeader_PlasticBlue table.dxtl 
+{
+	border-collapse: collapse;
+	width: 100%;
+}
+.dxtlHeader_PlasticBlue td.dxtl
+{
+	padding: 0;
+}
+.dxtlHeader_PlasticBlue, .dxtlHeader_PlasticBlue td.dxtl 
+{	
+    color: white;
+	font: 9pt Tahoma;
+	white-space: nowrap;
+	text-align: left;    
+}
+
+/* Nodes */
+.dxtlNode_PlasticBlue
+{
+	background: white;	
+}
+.dxtlAltNode_PlasticBlue
+{
+	background: #F1F1F1;	
+}
+.dxtlSelectedNode_PlasticBlue
+{
+	background: #6d82c5;	
+	color: White;
+}
+.dxtlFocusedNode_PlasticBlue
+{
+	background: #5066ac;
+	color: White;
+}
+.dxtlInlineEditNode_PlasticBlue
+{
+	background: #E8EAF6;
+}
+.dxtlEditFormDisplayNode_PlasticBlue
+{
+	background: #DCE0F0;
+}
+.dxtlNode_PlasticBlue td.dxtl, 
+.dxtlAltNode_PlasticBlue  td.dxtl, 
+.dxtlSelectedNode_PlasticBlue td.dxtl, 
+.dxtlFocusedNode_PlasticBlue td.dxtl,
+.dxtlEditFormDisplayNode_PlasticBlue td.dxtl,
+.dxtlCommandCell_PlasticBlue
+{
+	padding: 4px 6px 5px;
+	border: solid 1px #d9d9d9;
+	white-space: nowrap;
+	font-size: 9pt;
+    font-family: Tahoma;
+}
+.dxtlInlineEditNode_PlasticBlue td.dxtl
+{
+	border: solid 1px #d9d9d9;
+	padding: 1px;
+}
+
+/* Preview */
+.dxtlPreview_PlasticBlue
+{
+	background: #E8E8E8;
+	color: #777777;
+	padding: 15px;
+	border: solid 1px #d9d9d9;
+	font: 9pt Tahoma;	
+}
+
+/* Footers */
+.dxtlGroupFooter_PlasticBlue
+{
+	background-color: #E5E7F0;	
+}
+.dxtlFooter_PlasticBlue
+{
+	background-color: #6D82C5;
+	color: White;
+}
+.dxtlGroupFooter_PlasticBlue td.dxtl,
+.dxtlFooter_PlasticBlue td.dxtl
+{
+	padding: 5px 6px 6px;
+	white-space: nowrap;
+	text-align: left;
+	border: solid 1px #d9d9d9;
+	font: 9pt Tahoma;
+}
+
+/* Pagers */
+.dxtlPagerTopPanel_PlasticBlue
+{	
+	border-bottom: none 1px #cccccc;	
+}
+.dxtlPagerBottomPanel_PlasticBlue 
+{
+	border-top: none 1px #cccccc;
+}
+.dxtlPagerTopPanel_PlasticBlue,
+.dxtlPagerBottomPanel_PlasticBlue  
+{
+	background: #f0f0f0;
+	padding: 10px 4px;
+}
+
+/* Editing */
+.dxtlEditForm_PlasticBlue 
+{
+	background: #E8EAF6;
+	border: solid 1px #d9d9d9;
+	padding: 8px 10px 10px;
+}
+.dxtlEditFormCaption_PlasticBlue,
+.dxtlEditFormEditCell_PlasticBlue
+{
+	padding: 4px;
+}
+.dxtlEditFormCaption_PlasticBlue
+{
+	padding-left: 10px;
+	white-space: nowrap;
+}
+.dxtlError_PlasticBlue
+{
+	background: #FFC8C8;
+	color: #FF0000;
+	padding: 6px 10px;
+	border: solid 1px #cfcfcf;
+	font: 9pt Tahoma;		
+}
+
+/* Links */
+.dxtlControl_PlasticBlue a 
+{
+	color: #5A83D0;
+}
+.dxtlControl_PlasticBlue a:hover 
+{
+	color:  #2443AA;
+}
+.dxtlCommandCell_PlasticBlue a
+{
+    margin-right: 3px;
+}
+
+.dxtlHeader_PlasticBlue a,
+.dxtlHeader_PlasticBlue a:hover,
+.dxtlFocusedNode_PlasticBlue a,
+.dxtlFocusedNode_PlasticBlue a:hover,
+.dxtlSelectedNode_PlasticBlue a, 
+.dxtlSelectedNode_PlasticBlue a:hover 
+{
+	color: White;
+}
+
+/* Loading panel */
+.dxtlLoadingPanel_PlasticBlue
+{
+	border:solid 1px #CCCCCC;
+	background-color: #E8E8E8;
+	font: 9pt Tahoma;
+	color: #303030;
+}
+.dxtlLoadingPanel_PlasticBlue td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px;
+}
+.dxtlLoadingDiv_PlasticBlue
+{
+	background: white;
+	opacity: 0.01;
+	filter: alpha(opacity=1);
+}
+
+/* Disabled */
+.dxtlDisabled_PlasticBlue,
+.dxtlDisabled_PlasticBlue .dxtl_PlasticBlue
+{
+	color: #808080;
+	cursor: default;
+}

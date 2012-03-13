@@ -1,0 +1,14 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxm" Namespace="DevExpress.Web.ASPxMenu" Assembly="DevExpress.Web.v10.2" %>
+
+<dxm:ASPxPopupMenu runat="server" SpriteCssFilePath="{0}/sprite.css" CssFilePath="{0}/styles.css" 
+    GutterWidth="0px" CssPostfix="SoftOrange" ItemSpacing="1px">
+    <SubMenuStyle GutterWidth="0px"></SubMenuStyle>
+
+    <SeparatorPaddings Padding="0px"></SeparatorPaddings>
+    <ItemStyle ImageSpacing="6px" PopOutImageSpacing="10px">
+    </ItemStyle>
+
+    <LoadingPanelImage Url="Web/Loading.gif"></LoadingPanelImage>
+</dxm:ASPxPopupMenu>
+

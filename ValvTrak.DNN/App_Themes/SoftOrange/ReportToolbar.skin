@@ -1,0 +1,17 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxxr" Namespace="DevExpress.XtraReports.Web" Assembly="DevExpress.XtraReports.v10.2.Web" %>
+<dxxr:ReportToolbar runat="server" ItemSpacing="2px" SeparatorHeight="100%" SeparatorWidth="1px" Font-Names="Tahoma" Font-Size="9pt" BackColor="#F9F9F9">
+  <Styles CssPostfix="SoftOrange" CssFilePath="{0}/styles.css">
+    <ButtonStyle VerticalAlign="Middle" HorizontalAlign="Center"></ButtonStyle>
+    <TextBoxStyle>
+        <Margins MarginLeft="2px" MarginRight="2px" />
+    </TextBoxStyle>
+    <ComboBoxStyle>
+        <Margins MarginLeft="3px" MarginRight="3px" />
+    </ComboBoxStyle>
+    <LabelStyle ForeColor="Black">
+        <Margins MarginLeft="3px" MarginRight="3px" />
+    </LabelStyle>
+  </Styles>
+  <Images SpriteCssFilePath="{0}/sprite.css" />
+</dxxr:ReportToolbar>

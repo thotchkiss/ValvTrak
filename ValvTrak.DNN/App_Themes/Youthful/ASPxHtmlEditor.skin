@@ -1,0 +1,35 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register Assembly="DevExpress.Web.ASPxHtmlEditor.v10.2" Namespace="DevExpress.Web.ASPxHtmlEditor" TagPrefix="dxhe" %>
+
+<dxhe:ASPxHtmlEditor runat="server" >
+    <Images SpriteCssFilePath="{0}/sprite.css">
+        <LoadingPanel Url="HtmlEditor/Loading.gif"></LoadingPanel>
+    </Images>
+	<SettingsLoadingPanel Text="" />
+	<Styles CssPostfix="Youthful" CssFilePath="{0}/styles.css">
+		<ViewArea>
+			<Border BorderStyle="Solid" BorderColor="#D3E4A6" BorderWidth="1px" />
+		</ViewArea>
+	</Styles>
+	<StylesToolbars>
+		<Toolbar ItemSpacing="4px" SeparatorHeight="100%" SeparatorWidth="1px" />
+	</StylesToolbars>
+	<PartsRoundPanel>
+	    <%-- Header --%>
+	    <HeaderLeftEdge>
+	        <BackgroundImage VerticalPosition="bottom" ImageUrl="HtmlEditor/RoundPanel/herpHeaderLeftEdge.gif" />
+	    </HeaderLeftEdge>
+	    <HeaderContent>
+	        <BackgroundImage Repeat="RepeatX" VerticalPosition="bottom" ImageUrl="HtmlEditor/RoundPanel/herpHeaderSeparator.gif" />
+	    </HeaderContent>
+	    <HeaderRightEdge>
+	        <BackgroundImage ImageUrl="HtmlEditor/RoundPanel/herpHeaderLeftEdge.gif" VerticalPosition="bottom" />
+	    </HeaderRightEdge>
+	</PartsRoundPanel>
+	<StylesRoundPanel>            
+		<ControlStyle BackColor="#E5EECF">
+			<Border BorderStyle="None" />
+		</ControlStyle>
+	</StylesRoundPanel>	
+</dxhe:ASPxHtmlEditor>
+

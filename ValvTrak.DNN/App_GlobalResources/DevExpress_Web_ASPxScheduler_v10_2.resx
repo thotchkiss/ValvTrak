@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ASPxSchedulerStringId.Caption_RecurrenceType_Daily">
+    <value>Daily</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_RecurrenceType_Weekly">
+    <value>Weekly</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_RecurrenceType_Monthly">
+    <value>Monthly</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_RecurrenceType_Yearly">
+    <value>Yearly</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_RecurenceRange_NoEndDate">
+    <value>No end date</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_RecurenceRange_OccurrenceCount">
+    <value>End after:</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_RecurenceRange_EndBy">
+    <value>End by:</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_Days">
+    <value>day(s)</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_Every">
+    <value>Every</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_EveryWeekday">
+    <value>Every weekday</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_RecurEvery">
+    <value>Recur every</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_WeeksOn">
+    <value>week(s) on:</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_Day">
+    <value>Day</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_The">
+    <value>The</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_OfEvery">
+    <value>of  every</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_Months">
+    <value>month(s)</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_Of">
+    <value>of</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_Occurrences">
+    <value>occurrences</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_Recurrence">
+    <value>Recurrence</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_GotoDate">
+    <value>Go To Date</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_DeleteRecurrentApt">
+    <value>Confirm Delete</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_OpenRecurrentApt">
+    <value>Open Recurring Item</value>
+  </data>
+  <data name="ASPxSchedulerStringId.TooltipViewNavigator_Backward">
+    <value>Backward</value>
+  </data>
+  <data name="ASPxSchedulerStringId.TooltipViewNavigator_Forward">
+    <value>Forward</value>
+  </data>
+  <data name="ASPxSchedulerStringId.TooltipViewNavigator_GotoDate">
+    <value>Go to Date</value>
+  </data>
+  <data name="ASPxSchedulerStringId.CaptionViewNavigator_Today">
+    <value>Today</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_ViewVisibleInterval_Format">
+    <value>{0:D} &amp;ndash; {1:D}</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_OperationToolTip">
+    <value>Press ESC to cancel operation</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_Error">
+    <value>Error</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_Warning">
+    <value>Warning</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_Info">
+    <value>Information</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_DetailInfo">
+    <value>Show detail info</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_ShowMore">
+    <value>Show more</value>
+  </data>
+  <data name="ASPxSchedulerStringId.Caption_LoadError">
+    <value>Can't load {0}</value>
+  </data>
+</root>

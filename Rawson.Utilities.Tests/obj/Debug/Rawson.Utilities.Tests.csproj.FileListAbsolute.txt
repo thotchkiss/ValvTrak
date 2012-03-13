@@ -1,0 +1,9 @@
+C:\Development\ValvTrak\ValvTrak.VS2010.DNN\Rawson.Utilities.Tests\bin\Debug\Rawson.Utilities.Tests.dll
+C:\Development\ValvTrak\ValvTrak.VS2010.DNN\Rawson.Utilities.Tests\bin\Debug\Rawson.Utilities.Tests.pdb
+C:\Development\ValvTrak\ValvTrak.VS2010.DNN\Rawson.Utilities.Tests\bin\Debug\Rawson.Utilities.dll
+C:\Development\ValvTrak\ValvTrak.VS2010.DNN\Rawson.Utilities.Tests\bin\Debug\Rawson.Utilities.pdb
+C:\Development\ValvTrak\ValvTrak.VS2010.DNN\Rawson.Utilities.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\ValvTrak\ValvTrak.VS2010.DNN\Rawson.Utilities.Tests\obj\Debug\Rawson.Utilities.Tests.dll
+C:\Development\ValvTrak\ValvTrak.VS2010.DNN\Rawson.Utilities.Tests\obj\Debug\Rawson.Utilities.Tests.pdb
+C:\Development\ValvTrak\ValvTrak.VS2010.DNN\Rawson.Utilities.Tests\bin\Debug\app.config
+C:\Development\ValvTrak\ValvTrak.VS2010.DNN\Rawson.Utilities.Tests\bin\Debug\Rawson.Utilities.Tests.config

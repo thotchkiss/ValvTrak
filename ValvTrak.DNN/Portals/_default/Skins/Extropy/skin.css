@@ -1,0 +1,522 @@
+/* DotNetNuke Stylesheet Template                           */
+/* Created:     Oct. 13, 2007                               */
+/* Modified:                                                */
+/* Author:      Nik Kalyani                                 */
+/*
+/* Usage:       This stylesheet has been heavily commented  */
+/*              to make it easy to use. Removing comments   */
+/*              prior to production use will reduce the     */
+/*              time needed to download and parse the file. */
+/*
+--------------------------------------------------------------
+  IMPORTED STYLES                                     
+--------------------------------------------------------------
+
+Skins need to be flexible and accessible. The below four stylesheet imports make it possible for a designer to leverage
+a single skin for many different permutations of design attributes -- layout, text size, menu and color palette. 
+Change the placeholder stylesheets below to your choice of default stylesheet for each. You can then enable the 
+end-user to switch the skin's appearance in three ways:
+
+1) Include a Javascript-based widget in your skin to dynamically select a stylesheet for each design 
+   attribute. 
+
+2) Make stylesheets grouping different design attributes and add a simple HTML select element to your skin
+   that allow the user to dynamically select the desired appearance.
+
+3) Create multiple skin templates each with an embedded reference to a stylesheet grouping different design
+   attributes.
+
+Remember to update the comments for each import based on the choices you make available for your skin.
+*/
+
+/* BEGIN IMPORTS ********************************************************************/
+
+/*
+    Browser vary greatly in their baseline CSS implementation. Yahoo! has made available
+    its baseline CSS stylesheets under a BSD license. Including this file provides 
+    cross-browser font normalization, element style baseline setting and support for 
+    Yahoo! grids in your skin.
+
+    With the inclusion of these stylesheets, you can overtly define exactly the style
+    attributes you want in your skin.
+
+    Ref: http://yui.yahooapis.com/2.5.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+    Ref: http://yui.yahooapis.com/2.5.1/build/base/base-min.css 
+*/
+@import url("../../../../resources/shared/stylesheets/yui/reset-fonts-grids.css");
+@import url("../../../../resources/shared/stylesheets/yui/base-min.css"); 
+
+
+/* 
+    --------- TEXT SIZE -----------
+    ** Text size styles for skin **
+*/
+@import url("stylesheets/textsizes/textsize-small.css");        
+
+
+/* 
+    ------------ PALETTE --------------
+    ** Default color palette styles for skin **                                                            
+*/
+@import url("stylesheets/palettes/grayscale/palette-grayscale.css");           
+
+
+/* 
+    ------------ MENU --------------
+*/
+@import url("stylesheets/menus/menu-neutral.css");           
+
+
+/* 
+    ------------ WIDGETS --------------
+    ** Client-side skin widgets      **                                                            
+*/
+@import url("stylesheets/widgets/client-widgets.css");           
+
+/*
+    --------------- LAYOUT -------------------
+    ** Size and positioning styles for skin **
+    Stylesheets available: 
+            layout-flex.css - 100% wide layout
+            layout-1024.css - for 1024 x 768 display resolution
+            layout-1280.css - for 1280 x 1024 display resolution
+            layout-1400.css - for 1400 x 1050 display resolution
+            layout-1680.css - for 1680 x 1050 display resolution
+            layout-1920.css - for 1920 x 1200 display resolution
+*/
+@import url("stylesheets/layouts/layout-1024.css");                            
+
+
+/* END IMPORTS **********************************************************************/
+
+
+
+/* BEGIN SKIN STYLES ****************************************************************/
+/*
+
+---------  IMPORTANT NOTE -----------
+
+You should avoid all of the following in any style you define below:
+- Color for any element
+- Background images with color that is unique to a palette
+- Absolute font sizes; use "em" units instead
+
+Be aware that everything below is impacted by the Layout and TextSize stylesheets selected above. Plan accordingly and make your design
+flexible in both the horizontal and vertical directions.
+
+*/
+
+/*
+--------------------------------------------------------------
+  LAYOUT STYLES                                     
+--------------------------------------------------------------
+  Styles common to all layouts
+*/
+
+/*
+   The page background is defined in a div to ensure that any dynamically
+   injected elements at the top of the page do not disrupt the visual appearance
+*/
+
+body
+{
+    text-align: center;
+    margin: 0px;
+}
+
+tr, td
+{
+    border: 0;
+    padding: 0;
+}
+
+#Layout-Background
+{
+    width: 100%;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    text-align: center; 
+    padding-bottom: 50px;
+}
+
+#Layout-Grid
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.Layout-Table
+{
+    border-collapse: collapse;
+    padding: 0;
+	empty-cells: show;
+}
+.Layout-Table td
+{
+    text-align: left;
+    vertical-align: top;
+}
+
+.Layout-LeftHalfPane
+{
+    float: left;
+}
+
+.Layout-RightHalfPane
+{
+    float: right;
+}
+
+#Layout-Cell-NW,
+#Layout-Cell-NE,
+#Layout-Cell-SW,
+#Layout-Cell-SE
+{
+    width: 76px;
+}
+
+#Layout-Cell-NW,
+#Layout-Cell-NE,
+#Layout-Cell-N,
+#Layout-Masthead
+{
+    height: 241px;
+}
+
+
+#Layout-Cell-NW,
+#Layout-Cell-NE
+{
+    background-repeat: no-repeat;
+}
+
+#Layout-Cell-NW
+{
+    float: left;
+}
+
+#Layout-Cell-NE
+{
+    float: right;
+}
+
+#Layout-Cell-N
+{
+    background-repeat: repeat-x;
+}
+
+#Layout-Cell-W,
+#Layout-Cell-E
+{
+    background-repeat: repeat-y;
+}
+
+#Layout-Cell-W
+{
+    background-position: left;
+}
+
+#Layout-Cell-E
+{
+    background-position: right;
+}
+
+#Layout-Cell-SW,
+#Layout-Cell-SE,
+#Layout-Cell-S
+{
+    height: 151px;
+}
+
+#Layout-Cell-SW,
+#Layout-Cell-SE
+{
+    background-repeat: no-repeat;
+}
+
+#Layout-Cell-S
+{
+    background-repeat: repeat-x;
+}
+
+#Layout-Cell-SW
+{
+    float: left;
+}
+
+#Layout-Cell-SE
+{
+    float: right;
+}
+
+/*
+--------------------------------------------------------------
+  MASTHEAD STYLES                                     
+--------------------------------------------------------------
+*/
+
+/* TopRow is the first row of the table, just above the masthead */
+#Layout-TopRow
+{
+    background-repeat: repeat-x;
+    height: 37px;
+    font-size: 12pt;
+}
+
+#Layout-TopRow-Profile,
+#Layout-TopRow-Search
+{
+    padding-top: 6px;
+}
+
+#Layout-TopRow-Profile
+{
+    float: left;
+    padding-left: 76px;
+}
+
+#Layout-TopRow-Search
+{
+    float: right;
+    padding-right: 76px;
+}
+
+#Layout-TopRow-Profile .ServerSkinWidget
+{
+    margin-right: 20px;
+}
+
+/* The Masthead comprises the graphical identity area, the menu bar and the breadcrumb bar */
+#Layout-Masthead
+{
+    background-repeat: repeat-x;
+    background-position: 0px 14px;
+}
+
+#Layout-Masthead-Identity-Logo,
+#Layout-Masthead-Identity-Graphic
+{
+    height: 129px;
+    margin-top: 14px;
+    position: relative;
+}
+
+#Layout-Masthead-Identity-Logo
+{
+    background-color: white;
+    padding-right: 51px;
+    float: left;
+    background-repeat:no-repeat;
+    background-position: right top;
+    line-height: 129px;
+}
+
+#Layout-Masthead-Identity-Graphic
+{
+    width: 480px;
+    float: right;
+    overflow: hidden;
+}
+
+#Layout-Masthead-NavBar,
+#Layout-Masthead-InfoBar
+{
+    float: left;
+    margin-left: -30px;
+    width: 85%;
+}
+
+#Layout-Masthead-NavBar
+{
+    height: 60px;
+    line-height: 60px
+}
+
+
+#Layout-Masthead-InfoBar
+{
+    line-height: 20px;
+    height: 20px; 
+}
+
+#Layout-Masthead-InfoBar-BreadCrumbs,
+#Layout-Masthead-InfoBar-Date
+{
+    height: 20px;
+    line-height: 20px;
+}
+
+#Layout-Masthead-InfoBar-BreadCrumbs
+{
+    float: left;
+}
+
+#Layout-Masthead-InfoBar-Date
+{
+    float: right;
+}
+
+#Layout-Content
+{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#Layout-Bottom
+{
+    padding-top: 40px;
+}
+
+#Layout-Bottom *
+{
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+#Layout-ToolBox *,
+#Layout-TopRow *,
+#Layout-Bottom *,
+.ServerSkinWidget,
+.ControlPanel
+{
+    font-size: 9pt; /* Does not scale with textlayout widget */
+}
+
+.Layout-ContentPane
+{
+}
+
+.DNNEmptyPane
+{
+    width: 0px !important;
+    overflow: hidden;
+}
+
+/*
+--------------------------------------------------------------
+  LEGACY PORTAL STYLES                                     
+--------------------------------------------------------------
+*/
+
+/* Style for module titles */
+.Head   
+{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+/* Style of item titles on edit and admin pages */
+.SubHead    
+{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Module title style used instead of Head for compact rendering by QuickLinks and Signin modules */
+.SubSubHead 
+{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Text style used for most text rendered by modules */
+.Normal
+{
+}
+
+/* Text style used for textboxes in the admin and edit pages, for Nav compatibility */
+.NormalTextBox
+{
+}
+
+.NormalRed
+{
+    color: #ff0000;
+}
+
+.NormalBold
+{
+    font-weight: bold;
+}
+
+/* Text style for buttons and link buttons used in the portal admin pages */
+.CommandButton     
+{
+}
+    
+/* Hyperlink style for buttons and link buttons used in the portal admin pages */
+a.CommandButton:link 
+{
+}
+
+a.CommandButton:visited  
+{
+}
+
+a.CommandButton:hover    
+{
+}
+    
+a.CommandButton:active   
+{
+}
+
+/* Button style for standard HTML buttons */
+.StandardButton     
+{
+}
+
+.ControlPanel
+{
+    background: transparent;
+	border: 0;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 8pt;
+}
+
+.ControlPanel *
+{
+    margin: 2px;
+}
+
+/*
+--------------------------------------------------------------
+  SERVER-SIDE WIDGET STYLES
+--------------------------------------------------------------
+*/
+
+#Layout-Masthead-InfoBar-BreadCrumbs > span > span
+{
+    /* Breadcrumb separator */
+    /* This is ignored by IE */
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bolder;
+    font-size: 11pt;
+}
+
+.ServerSkinWidget
+{
+	font-weight: bold;
+	font-size: 8.5pt;
+	text-decoration: none;
+}
+
+.Language
+{
+	vertical-align: middle;
+	margin: 0px;
+}
+
+.Language img
+{
+	border: none;
+}
+
+
+
+/* END SKIN STYLES ******************************************************************/
+
+
+

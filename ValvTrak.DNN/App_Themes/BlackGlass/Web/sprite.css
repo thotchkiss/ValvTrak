@@ -1,0 +1,294 @@
+.dxWeb_rpHeaderTopLeftCorner_BlackGlass,
+.dxWeb_rpHeaderTopRightCorner_BlackGlass,
+.dxWeb_rpBottomLeftCorner_BlackGlass,
+.dxWeb_rpBottomRightCorner_BlackGlass,
+.dxWeb_rpTopLeftCorner_BlackGlass,
+.dxWeb_rpTopRightCorner_BlackGlass,
+.dxWeb_rpGroupBoxBottomLeftCorner_BlackGlass,
+.dxWeb_rpGroupBoxBottomRightCorner_BlackGlass,
+.dxWeb_rpGroupBoxTopLeftCorner_BlackGlass,
+.dxWeb_rpGroupBoxTopRightCorner_BlackGlass,
+.dxWeb_mHorizontalPopOut_BlackGlass,
+.dxWeb_mVerticalPopOut_BlackGlass,
+.dxWeb_mSubMenuItem_BlackGlass,
+.dxWeb_mSubMenuItemChecked_BlackGlass,
+.dxWeb_nbCollapse_BlackGlass,
+.dxWeb_nbExpand_BlackGlass,
+.dxWeb_splVSeparator_BlackGlass,
+.dxWeb_splVSeparatorHover_BlackGlass,
+.dxWeb_splHSeparator_BlackGlass,
+.dxWeb_splHSeparatorHover_BlackGlass,
+.dxWeb_splVCollapseBackwardButton_BlackGlass,
+.dxWeb_splVCollapseBackwardButtonHover_BlackGlass,
+.dxWeb_splHCollapseBackwardButton_BlackGlass,
+.dxWeb_splHCollapseBackwardButtonHover_BlackGlass,
+.dxWeb_splVCollapseForwardButton_BlackGlass,
+.dxWeb_splVCollapseForwardButtonHover_BlackGlass,
+.dxWeb_splHCollapseForwardButton_BlackGlass,
+.dxWeb_splHCollapseForwardButtonHover_BlackGlass,
+.dxWeb_pcCloseButton_BlackGlass,
+.dxWeb_pcSizeGrip_BlackGlass,
+.dxWeb_pAll_BlackGlass,
+.dxWeb_pAllDisabled_BlackGlass,
+.dxWeb_pPrev_BlackGlass,
+.dxWeb_pPrevDisabled_BlackGlass,
+.dxWeb_pNext_BlackGlass,
+.dxWeb_pNextDisabled_BlackGlass,
+.dxWeb_pLast_BlackGlass,
+.dxWeb_pLastDisabled_BlackGlass,
+.dxWeb_pFirst_BlackGlass,
+.dxWeb_pFirstDisabled_BlackGlass,
+.dxWeb_smBullet_BlackGlass {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxWeb_rpHeaderTopLeftCorner_BlackGlass {
+    background-position: -104px -88px;
+    width: 10px;
+    height: 7px;
+}
+
+.dxWeb_rpHeaderTopRightCorner_BlackGlass {
+    background-position: -117px -88px;
+    width: 10px;
+    height: 7px;
+}
+
+.dxWeb_rpBottomLeftCorner_BlackGlass {
+    background-position: -78px -88px;
+    width: 10px;
+    height: 10px;
+}
+
+.dxWeb_rpBottomRightCorner_BlackGlass {
+    background-position: -91px -88px;
+    width: 10px;
+    height: 10px;
+}
+
+.dxWeb_rpTopLeftCorner_BlackGlass {
+    background-position: -52px -88px;
+    width: 10px;
+    height: 10px;
+}
+
+.dxWeb_rpTopRightCorner_BlackGlass {
+    background-position: -65px -88px;
+    width: 10px;
+    height: 10px;
+}
+
+.dxWeb_rpGroupBoxBottomLeftCorner_BlackGlass {
+    background-position: -26px -88px;
+    width: 10px;
+    height: 10px;
+}
+
+.dxWeb_rpGroupBoxBottomRightCorner_BlackGlass {
+    background-position: -39px -88px;
+    width: 10px;
+    height: 10px;
+}
+
+.dxWeb_rpGroupBoxTopLeftCorner_BlackGlass {
+    background-position: 0px -88px;
+    width: 10px;
+    height: 10px;
+}
+
+.dxWeb_rpGroupBoxTopRightCorner_BlackGlass {
+    background-position: -13px -88px;
+    width: 10px;
+    height: 10px;
+}
+
+.dxWeb_mHorizontalPopOut_BlackGlass {
+    background-position: -92px -50px;
+    width: 7px;
+    height: 7px;
+}
+
+.dxWeb_mVerticalPopOut_BlackGlass {
+    background-position: -105px -50px;
+    width: 4px;
+    height: 8px;
+}
+
+.dxWeb_mSubMenuItem_BlackGlass {
+    background-position: -48px -50px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxWeb_mSubMenuItemChecked_BlackGlass {
+    background-position: -70px -50px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxWeb_nbCollapse_BlackGlass {
+    background-position: -129px 0px;
+    width: 18px;
+    height: 17px;
+}
+
+.dxWeb_nbExpand_BlackGlass {
+    background-position: -129px -23px;
+    width: 18px;
+    height: 17px;
+}
+
+.dxWeb_splVSeparator_BlackGlass {
+    background-position: -92px -62px;
+    width: 6px;
+    height: 18px;
+}
+
+.dxWeb_splVSeparatorHover_BlackGlass {
+    background-position: -99px -62px;
+    width: 6px;
+    height: 18px;
+}
+
+.dxWeb_splHSeparator_BlackGlass {
+    background-position: -58px -74px;
+    width: 18px;
+    height: 6px;
+}
+
+.dxWeb_splHSeparatorHover_BlackGlass {
+    background-position: -58px -81px;
+    width: 18px;
+    height: 6px;
+}
+
+.dxWeb_splVCollapseBackwardButton_BlackGlass {
+    background-position: -30px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splVCollapseBackwardButtonHover_BlackGlass {
+    background-position: -37px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splHCollapseBackwardButton_BlackGlass {
+    background-position: 0px -74px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_splHCollapseBackwardButtonHover_BlackGlass {
+    background-position: 0px -81px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_splVCollapseForwardButton_BlackGlass {
+    background-position: -44px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splVCollapseForwardButtonHover_BlackGlass {
+    background-position: -51px -74px;
+    width: 6px;
+    height: 7px;
+}
+
+.dxWeb_splHCollapseForwardButton_BlackGlass {
+    background-position: -15px -74px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_splHCollapseForwardButtonHover_BlackGlass {
+    background-position: -15px -81px;
+    width: 7px;
+    height: 6px;
+}
+
+.dxWeb_pcCloseButton_BlackGlass {
+    background-position: 0px -50px;
+    width: 18px;
+    height: 17px;
+}
+
+.dxWeb_pcSizeGrip_BlackGlass {
+    background-position: -24px -50px;
+    width: 12px;
+    height: 12px;
+}
+
+.dxWeb_pAll_BlackGlass {
+    background-position: 0px 0px;
+    width: 25px;
+    height: 18px;
+}
+
+.dxWeb_pAllDisabled_BlackGlass {
+    background-position: 0px -25px;
+    width: 25px;
+    height: 18px;
+}
+
+.dxWeb_pPrev_BlackGlass {
+    background-position: -105px 0px;
+    width: 20px;
+    height: 18px;
+}
+
+.dxWeb_pPrevDisabled_BlackGlass {
+    background-position: -105px -25px;
+    width: 20px;
+    height: 18px;
+}
+
+.dxWeb_pNext_BlackGlass {
+    background-position: -81px 0px;
+    width: 20px;
+    height: 18px;
+}
+
+.dxWeb_pNextDisabled_BlackGlass {
+    background-position: -81px -25px;
+    width: 20px;
+    height: 18px;
+}
+
+.dxWeb_pLast_BlackGlass {
+    background-position: -55px 0px;
+    width: 22px;
+    height: 18px;
+}
+
+.dxWeb_pLastDisabled_BlackGlass {
+    background-position: -55px -25px;
+    width: 22px;
+    height: 18px;
+}
+
+.dxWeb_pFirst_BlackGlass {
+    background-position: -29px 0px;
+    width: 22px;
+    height: 18px;
+}
+
+.dxWeb_pFirstDisabled_BlackGlass {
+    background-position: -29px -25px;
+    width: 22px;
+    height: 18px;
+}
+
+.dxWeb_smBullet_BlackGlass {
+    background-position: -114px -50px;
+    width: 4px;
+    height: 5px;
+}
+
+

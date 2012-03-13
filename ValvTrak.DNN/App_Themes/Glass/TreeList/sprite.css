@@ -1,0 +1,63 @@
+.dxTreeList_CollapsedButton_Glass,
+.dxTreeList_ExpandedButton_Glass,
+.dxTreeList_SortAsc_Glass,
+.dxTreeList_SortDesc_Glass,
+.dxTreeList_DragAndDropArrowDown_Glass,
+.dxTreeList_DragAndDropArrowUp_Glass,
+.dxTreeList_DragAndDropHide_Glass,
+.dxTreeList_DragAndDropNode_Glass {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxTreeList_CollapsedButton_Glass {
+    background-position: -66px 0px;
+    width: 11px;
+    height: 11px;
+}
+
+.dxTreeList_ExpandedButton_Glass {
+    background-position: -66px -18px;
+    width: 11px;
+    height: 11px;
+}
+
+.dxTreeList_SortAsc_Glass {
+    background-position: -49px 0px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxTreeList_SortDesc_Glass {
+    background-position: -49px -19px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxTreeList_DragAndDropArrowDown_Glass {
+    background-position: -30px 0px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxTreeList_DragAndDropArrowUp_Glass {
+    background-position: -30px -17px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxTreeList_DragAndDropHide_Glass {
+    background-position: 0px 0px;
+    width: 22px;
+    height: 22px;
+}
+
+.dxTreeList_DragAndDropNode_Glass {
+    background-position: -83px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+

@@ -1,0 +1,342 @@
+.dxpgControl_Office2003Silver
+{
+	color: Black;
+	font: 9pt Tahoma;
+	border: solid 1px #9C9AB7;
+	background-color: white;
+}
+.dxpgContainerCell_Office2003Silver
+{
+	vertical-align: top;
+}
+.dxpgMainTable_Office2003Silver
+{
+	color: Black;
+	font: 9pt Tahoma;
+	border: 0px;
+	border-collapse: separate;
+	width: 100%;
+}
+.dxpgMainTable_Office2003Silver caption
+{
+	background: url('CaptionBack.gif') repeat-x center top #787797;
+    border-bottom: solid 1px #9c9ab7;
+    color: white;
+    padding: 3px 3px 4px;
+	font-weight: bold;	
+	text-align: center;
+}    
+.dxpgHeader_Office2003Silver
+{
+	color: Black;
+	background: url('pgHeaderBack.gif') repeat-x #9B99B6;
+	cursor: pointer;
+	white-space: nowrap;
+	border: solid 0px #7B7B93;
+}
+.dxpgHeaderTable_Office2003Silver
+{
+	border-width: 1px;
+	width: 100%;
+}
+.dxpgHeaderGroupButton_Office2003Silver
+{
+	padding-left: 4px;
+	vertical-align: middle;
+}
+.dxpgHeaderText_Office2003Silver
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 3px;
+	padding-bottom: 4px;
+}
+.dxpgHeaderSort_Office2003Silver
+{
+	padding-left: 0px;
+	padding-right: 4px;
+	padding-top: 0px;
+	vertical-align: middle;
+}
+.dxpgHeaderFilter_Office2003Silver
+{
+	padding-left: 0px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	vertical-align: middle;	
+}
+.dxpgHeaderHover_Office2003Silver
+{
+	background: url('pgHeaderBackHover.gif') repeat-x #FFD091;
+}
+.dxpgArea_Office2003Silver, .dxpgArea_Office2003Silver table
+{
+	color: Black;
+	font: 9pt Tahoma;
+}
+.dxpgArea_Office2003Silver
+{
+	border: solid 1px #9c9ab7;
+	background-color: #ECEDF4;
+	border-left-style: none;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+}
+.dxpgColumnArea_Office2003Silver
+{
+	border-bottom-style: solid;
+}
+.dxpgRowArea_Office2003Silver
+{
+}
+.dxpgDataArea_Office2003Silver
+{
+}
+.dxpgFilterArea_Office2003Silver
+{
+	background: url('pgHeaderBack.gif') repeat-x #9C9AB7;
+	color: black;
+	border-bottom-style: solid;
+}
+.dxpgEmptyArea_Office2003Silver
+{
+	cursor: default;
+	padding-top: 6px;
+	padding-left: 6px;
+	padding-bottom: 7px;
+	padding-right: 6px;
+}
+.dxpgColumnFieldValue_Office2003Silver
+{
+	background-color: #d7d7e4;
+	border: solid 1px #9c9ab7;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-right-style: none;
+	border-top-style: none;
+	padding: 4px 6px;
+    font-weight: normal;
+    text-align: left;    
+}
+.dxpgColumnTotalFieldValue_Office2003Silver
+{
+	background-color: #c8c8d9;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-right-style: none;
+	border-top-style: none;
+}
+.dxpgColumnGrandTotalFieldValue_Office2003Silver
+{
+	background-color: #a4a2bd;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-right-style: none;
+	border-top-style: none;
+}
+.dxpgRowFieldValue_Office2003Silver
+{
+	background-color: #d7d7e4;
+	border: solid 1px #9c9ab7;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: solid;
+	border-top-style: solid;
+	padding: 4px 6px 4px 6px;
+    font-weight: normal;
+    text-align: left;
+}
+.dxpgRowTotalFieldValue_Office2003Silver
+{
+	background-color: #c8c8d9;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: solid;
+	border-top-style: solid;
+}
+.dxpgRowGrandTotalFieldValue_Office2003Silver
+{
+	background-color: #a4a2bd;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: solid;
+	border-top-style: solid;
+	padding: 6px 6px 6px 6px;
+}
+.dxpgCollapsedButton_Office2003Silver
+{
+	vertical-align: -1px;
+	border: 0px;
+	margin-right: 5px;
+}
+.dxpgSortByColumnImage_Office2003Silver
+{
+	vertical-align: 0px;
+	border: 0px;
+	margin-left: 5px;
+}
+.dxpgCell_Office2003Silver
+{
+	text-align: right;
+	background-color: #FEFEFE;	
+	border-color: #C8C8D9;
+	border-width: 1px;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-bottom-style: none;
+	border-right-style: none;
+	padding: 4px;
+	white-space: nowrap;
+}
+.dxpgKPICell_Office2003Silver
+{
+	text-align: center;
+	vertical-align: middle;
+}
+.dxpgTotalCell_Office2003Silver
+{
+	background-color: #ecedf4;
+}
+.dxpgGrandTotalCell_Office2003Silver
+{
+	background-color: #d7d9e8;
+}
+.dxpgRowGrandTotalCell_Office2003Silver
+{
+	background-color: #d7d9e8;
+}
+.dxpgColumnGrandTotalCell_Office2003Silver
+{
+	background-color: #d7d9e8;
+}
+.dxpgFilterWindow_Office2003Silver
+{
+	color: Black;
+	font: 9pt Tahoma;
+	border: solid 1px #7B7B93;
+}
+.dxpgFilterItemsArea_Office2003Silver
+{
+	color: Black;
+	background-color: White;
+}
+.dxpgFilterItem_Office2003Silver
+{
+	font: 9pt Tahoma;
+}
+.dxpgFilterButton_Office2003Silver
+{
+	font: 9pt Tahoma;
+	padding: 2px 6px;
+}
+.dxpgFilterButtonPanel_Office2003Silver
+{
+	font: 9pt Tahoma;
+	background-color: #ecedf4;	
+	color: Black;
+	border-top: solid 1px #dcdcdc;
+}
+.dxpgLoadingDiv_Office2003Silver
+{
+	background-color:Gray;	
+	opacity: 0.01;
+	filter:progid:DXImageTransform.Microsoft.Alpha(Style=0, Opacity=1);
+}
+.dxpgTopPager_Office2003Silver
+{
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: solid 1px #9c9ab7;	
+}
+.dxpgBottomPager_Office2003Silver
+{
+	border-top: solid 1px #9c9ab7;
+	border-bottom: none;
+	border-right: none;
+	border-left: none;
+}
+.dxpgCustomizationFieldsHeader_Office2003Silver
+{
+	color: White;
+	font: 9pt Tahoma;
+	background: url('pgHeaderBack.gif') repeat-x #9391B0;
+}
+.dxpgCustomizationFieldsContent_Office2003Silver
+{
+	padding: 0px !important;
+}
+.dxpgLoadingPanel_Office2003Silver
+{
+	font: 9pt Tahoma;
+	color: #7C7C94;
+	background-color: White;
+	border: solid 1px #9c9ab7;
+	text-align: center;			
+	cursor: wait;
+}
+.dxpgLoadingPanel_Office2003Silver td.dx
+{
+	padding: 12px 12px 12px 12px;
+}
+.dxpgDataHeadersImage_Office2003Silver
+{
+	margin-right: 5px;
+	vertical-align: -2px;
+}
+
+.dxpgPrefilterPanelContainer_Office2003Silver
+{
+	border-bottom-style: none;
+	border-left-style: none;
+	border-right-style: none;
+}
+.dxpgPrefilterPanel_Office2003Silver
+{
+	border: none;
+	background-color: #c8c8d9;
+}
+.dxpgPrefilterPanelLink_Office2003Silver
+{
+	color: black;
+	text-decoration: underline
+}
+.dxpgPrefilterPanelCheckBoxCell_Office2003Silver
+{
+	padding: 0 3px;
+	padding-right: 7px;
+}
+.dxpgPrefilterPanelImageCell_Office2003Silver
+{
+	padding: 0 3px;
+	padding-right: 1px;
+	cursor: pointer;
+}
+.dxpgPrefilterPanelExpressionCell_Office2003Silver
+{
+	font-size: 9pt;
+	padding: 5px 5px 8px 0;	
+	white-space: nowrap;
+}
+.dxpgPrefilterPanelClearButtonCell_Office2003Silver
+{
+	font-size: 9pt;
+	padding: 5px 6px 8px;
+}
+.dxpgFilterBuilderMainArea_Office2003Silver
+{
+	background: white;
+	padding: 6px 2px;
+} 
+.dxpgFilterBuilderButtonArea_Office2003Silver
+{
+	background-color: #D4D4E2;
+	border-top: solid 1px #BBBBD1;
+	padding: 6px;
+}
+.dxpgGroupSeparator_Office2003Silver
+{
+	vertical-align: middle;
+}

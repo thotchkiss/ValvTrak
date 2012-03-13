@@ -1,0 +1,12 @@
+
+/*****  Containers CSS designed by bind.pt 		*****/
+/*****  00 Clean         					    *****/
+
+                                 .container_clean           { margin-bottom:0px; }
+
+/*-- content pane			--*/ .C00_ContentPane_NT        { margin:0px; }
+
+/*-- bottom icons  			--*/ .C00_Icons                 { margin-right: 0px; }
+                                 .C00_Icons a:hover         { background-color:Transparent; }
+                                 .C00_Icons a, 
+                                 .C00_Icons input           { margin-top:10px; }

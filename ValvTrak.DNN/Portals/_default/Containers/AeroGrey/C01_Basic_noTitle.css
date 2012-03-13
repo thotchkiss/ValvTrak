@@ -1,0 +1,26 @@
+
+/*****  Containers CSS designed by bind.pt 		*****/
+/*****  01 No Title       					    *****/
+
+                                 .container            { margin-bottom:10px; }
+                                    
+/*-- actions   				--*/ .C01_Actions          { float:left; width:0px; }
+
+/*-- content pane			--*/ .C01_ContentPane_NT   { margin:0px 15px; }
+
+/*-- bottom icons  			--*/ .C01_Icons            { margin-top:0px; margin-left: 15px; }
+                                 .C01_Icons a:hover    { background-color:Transparent; }
+                                 .C01_Icons a, 
+                                 .C01_Icons input      { margin-top:10px; }
+
+/*-- round container		--*/ .C01_roundcont        { background-color:#FFFFFF; border-left: 1px solid #E4E4E4; border-right: 1px solid #E4E4E4; }
+
+/*-- round top left	        --*/ .C01_Grey_roundtop_left    { background:url(C01_tl_line.png) no-repeat top left; height:16px; }
+/*-- round top right		--*/ .C01_Grey_roundtop_right   { background:url(C01_tr_line.png) no-repeat top right; height:16px; margin-top:-16px; margin-left:15px; }
+/*-- round bottom 			--*/ .C01_Grey_roundbottom_left { background:url(C01_bl_line.png) no-repeat bottom left; height:16px; }
+/*-- round bottom 			--*/ .C01_Grey_roundbottom_right{ background:url(C01_br_line.png) no-repeat bottom right; height:16px; margin-top:-16px; margin-left:15px;  }
+
+/*-- image of corner		--*/ img.C01_corner_left   { width:15px; height:16px; border: none; display:block !important; }
+/*-- image of corner		--*/ img.C01_corner_right  { height:16px; border: none; display:block !important; }
+
+

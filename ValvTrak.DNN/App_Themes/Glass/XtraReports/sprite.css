@@ -1,0 +1,133 @@
+.dxXtraReports_BtnFirstPage_Glass,
+.dxXtraReports_BtnFirstPageDisabled_Glass,
+.dxXtraReports_BtnLastPage_Glass,
+.dxXtraReports_BtnLastPageDisabled_Glass,
+.dxXtraReports_BtnNextPage_Glass,
+.dxXtraReports_BtnNextPageDisabled_Glass,
+.dxXtraReports_BtnPrevPage_Glass,
+.dxXtraReports_BtnPrevPageDisabled_Glass,
+.dxXtraReports_BtnPrint_Glass,
+.dxXtraReports_BtnPrintDisabled_Glass,
+.dxXtraReports_BtnPrintPage_Glass,
+.dxXtraReports_BtnPrintPageDisabled_Glass,
+.dxXtraReports_BtnSave_Glass,
+.dxXtraReports_BtnSaveDisabled_Glass,
+.dxXtraReports_BtnSaveWindow_Glass,
+.dxXtraReports_BtnSaveWindowDisabled_Glass,
+.dxXtraReports_BtnSearch_Glass,
+.dxXtraReports_BtnSearchDisabled_Glass {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxXtraReports_BtnFirstPage_Glass {
+    background-position: -16px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnFirstPageDisabled_Glass {
+    background-position: -16px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnLastPage_Glass {
+    background-position: -32px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnLastPageDisabled_Glass {
+    background-position: -32px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnNextPage_Glass {
+    background-position: -64px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnNextPageDisabled_Glass {
+    background-position: -64px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrevPage_Glass {
+    background-position: -48px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrevPageDisabled_Glass {
+    background-position: -48px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrint_Glass {
+    background-position: -80px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintDisabled_Glass {
+    background-position: -80px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintPage_Glass {
+    background-position: -96px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintPageDisabled_Glass {
+    background-position: -96px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSave_Glass {
+    background-position: -112px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveDisabled_Glass {
+    background-position: -112px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveWindow_Glass {
+    background-position: -128px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveWindowDisabled_Glass {
+    background-position: -128px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSearch_Glass {
+    background-position: 0px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSearchDisabled_Glass {
+    background-position: 0px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+

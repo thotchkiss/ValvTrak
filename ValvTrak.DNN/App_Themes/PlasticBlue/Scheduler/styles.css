@@ -1,0 +1,454 @@
+.dxscControl_PlasticBlue
+{
+    background: #CCCCCC;
+	border: solid 1px #CCCCCC;
+}
+.dxscLoadingPanel_PlasticBlue
+{
+	font: 9pt Tahoma;
+	color: black;
+	background: #E8E8E8;
+	border: solid 1px #CCCCCC;
+}
+.dxscLoadingPanel_PlasticBlue td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px;
+}
+.dxscLoadingDiv_PlasticBlue
+{
+    cursor: wait;
+	background-color: Gray;
+	opacity: 0.01;
+	filter:alpha(opacity=1);
+
+}
+
+/* Headers */
+.dxscDateHeader_PlasticBlue, 
+.dxscAlternateDateHeader_PlasticBlue,
+.dxscDayHeader_PlasticBlue,
+.dxscDateCellHeader_PlasticBlue,
+.dxscTodayCellHeader_PlasticBlue,
+.dxscTimelineDateHeader_PlasticBlue,
+.dxscHorizontalResourceHeader_PlasticBlue,
+.dxscVerticalResourceHeader_PlasticBlue
+{    
+    color: white;
+    background: url('CssImages/HeaderBack.gif') repeat-x #415698;
+    border: solid 1px #2C4182;
+    border-width: 0 1px 1px 0;
+    padding: 6px 4px;
+	font: 9pt Tahoma;		
+	text-align: center;
+    vertical-align: top;
+    cursor: default;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.dxscAlternateTimelineDateHeader_PlasticBlue,
+.dxscAlternateDateHeader_PlasticBlue ,
+.dxscTodayCellHeader_PlasticBlue
+{
+	background: url('CssImages/HeaderAltBack.gif') repeat-x #657EBC;
+}
+
+.dxscDayHeader_PlasticBlue
+{
+	border-width: 1px 1px 0 0;
+}
+.dxscDateCellHeader_PlasticBlue
+{
+    border-width: 1px;
+}
+.dxscTodayCellHeader_PlasticBlue
+{    
+	border-top-width: 1px;
+}
+.dxscTimelineDateHeader_PlasticBlue
+{
+    border-width: 1px 1px 1px 0;
+}
+.dxscHorizontalResourceHeader_PlasticBlue
+{
+    border-width: 1px 1px 1px 0;
+    background: url('CssImages/ResHeaderBack.gif') repeat-x #304286;
+	border-color: #2C4182;
+}
+.dxscVerticalResourceHeader_PlasticBlue
+{
+    border-width: 1px 1px 0 0;
+    background: #304286;
+    white-space: normal;
+}
+.dxscSelectionBar_PlasticBlue 
+{	
+    border-style: solid;
+	border-width: 0 1px 0 0;
+	height: 30px;
+}
+
+/* Corners */
+.dxscLeftTopCorner_PlasticBlue, 
+.dxscRightTopCorner_PlasticBlue
+{
+    background: #DEDEDE;
+	width: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;	
+	border-width: 0 0 1px;
+}
+.dxscLeftTopCorner_PlasticBlue
+{    
+    border-width: 1px 1px 1px 0px;
+    font: 8pt Tahoma;
+    text-align: center;
+    padding: 2px;
+    overflow: hidden;
+}
+
+/* Separators */
+.dxscGroupSeparatorVertical_PlasticBlue, 
+.dxscGroupSeparatorHorizontal_PlasticBlue
+{
+    background: #FAFAFA;
+    border: solid 1px #CCCCCC;
+}
+
+.dxscGroupSeparatorVertical_PlasticBlue
+{
+    width: 1px; 
+    border-width: 0 1px;
+}
+.dxscGroupSeparatorHorizontal_PlasticBlue
+{
+	height: 1px;
+    border-width: 1px 0 1px 0;
+    font-size: 1px;
+}
+
+/* Apts Area */
+.dxscAllDayArea_PlasticBlue
+{
+    background:#F0F0F0;
+    border: solid 1px #CCCCCC;
+    border-width: 0 1px 1px 0;
+}
+.dxscDateCellBody_PlasticBlue 
+{
+	height: 100px;
+    border: solid 1px;
+    border-width: 0 1px 0 0;
+}
+.dxscTimeCellBody_PlasticBlue
+{
+    border: solid 1px;
+	font: 9pt Tahoma;
+}
+.dxscTimelineCellBody_PlasticBlue
+{
+	height: 300px;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+}
+
+.dxscAppointment_PlasticBlue
+{
+    color: black;
+    font: 8pt Tahoma;    
+    border: solid 1px #8b8b8b;
+    padding: 0;
+	margin: 0;
+	cursor: default;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;	
+}
+.dxscAppointmentInnerBorders_PlasticBlue
+{	
+    border: solid 1px #8b8b8b;
+    padding: 0px;
+}
+.dxscAppointmentHorizontalSeparator_PlasticBlue
+{
+	height: 1px;
+	width: 100%;
+	overflow: hidden;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-right-style: none;
+}
+.dxscMoreButton_PlasticBlue
+{
+    font: 8pt Tahoma;
+    color: #0000cc;    
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Rulers */
+.dxscTimeRulerHoursItem_PlasticBlue, .dxscTimeRulerMinuteItem_PlasticBlue
+{
+    color: #000000;
+    background: #F0F0F0;
+    border: solid 1px #D4D4D4;
+    border-width: 0px 1px 1px 0;
+	vertical-align: top;
+	white-space: nowrap;
+} 
+.dxscTimeRulerHoursItem_PlasticBlue
+{
+    border-right-width: 0;
+    font: 13pt Tahoma;
+	text-align: right;
+	width: 45px;
+    padding: 2px 4px 0px;
+}
+.dxscTimeRulerMinuteItem_PlasticBlue
+{
+    color: #7E7E7E;
+	border-left-width: 0px;
+	text-align: center;
+	width: 13px;
+	font: 8pt Tahoma;
+    padding: 4px;
+    padding-left: 1px;
+}
+
+.dxscTimeRulerHeaderHourItem_PlasticBlue
+{
+    width: 55px;
+}	
+.dxscTimeRulerHeaderMinuteItem_PlasticBlue
+{
+    width: 16px;
+}
+.dxscScrollHeaderItem_PlasticBlue
+{
+    width: 16px;
+}
+
+
+/* Control elements */
+.dxscToolbar_PlasticBlue
+{
+    border: none;
+    background: #F0F0F0;    
+    padding: 4px 7px;    
+}
+.dxscErrorInfo_PlasticBlue
+{
+    color: #853a3a;
+    border: solid 1px #CCCCCC;
+	background: #f1abab;
+	text-align: left;
+	font: bold 8pt Tahoma;
+    padding: 10px;
+	border-width: 1px 0;    
+}
+
+.dxscResourceNavigator_PlasticBlue 
+{    
+    background: #DEDEDE;
+    padding: 7px;
+    border: solid 1px #CCCCCC;
+}
+.dxscViewVisibleInterval_PlasticBlue
+{    
+    color: #303030;
+    font: 9pt Tahoma;
+    white-space: nowrap;
+}
+.dxscInplaceEditor_PlasticBlue
+{
+	background: #F0F0F0;
+	border: solid 2px black;
+	padding: 0;
+	font: 9pt Tahoma;
+	color: #303030;
+}
+.dxscControlAreaForm_PlasticBlue
+{
+	font: 12pt Tahoma;
+	color: black;
+	background-color: #f5f5f5;
+	border: none;
+	white-space: normal;
+	padding: 9px 12px;
+}
+
+/* Buttons */
+.dxscViewNavigatorButton_PlasticBlue 
+{
+	border: solid 1px #2C4182;
+	background: url('CssImages/ViewNavigatorButtonBack.gif') repeat-x #44599B;
+	height: 17px;
+	font: 9pt Tahoma;
+	color: White;
+	padding: 0;
+}
+.dxscViewNavigatorButtonHover_PlasticBlue 
+{
+	background: url('CssImages/ViewNavigatorButtonBackHover.gif') repeat-x #6680C1;
+} 
+.dxscViewNavigatorButtonPressed_PlasticBlue 
+{
+	background: url('CssImages/ViewNavigatorButtonBackPressed.gif') repeat-x #2D4894;
+} 
+ 
+.dxscResourceNavigatorButton_PlasticBlue
+{
+	background: url('CssImages/ButtonBack.gif')  #F5F5F5;
+	border: solid 1px #B8B8B8;
+	padding-top: 1px;
+	height: 50px;
+	vertical-align: bottom;
+}
+.dxscResourceNavigatorButtonHover_PlasticBlue 
+{
+	background: url('CssImages/ButtonHoverBack.gif') #E9E9E9;
+}
+.dxscResourceNavigatorButtonPressed_PlasticBlue
+{
+	background: #DEDEDE;
+}
+
+
+.dxscNavigationButton_PlasticBlue,
+.dxscDVTopMoreButton_PlasticBlue,
+.dxscDVBottomMoreButton_PlasticBlue
+{    
+    border: solid 1px #B8B8B8;
+    font: 8pt Tahoma;
+    color: Black;
+    background: url('CssImages/ButtonBack.gif') #F5F5F5;
+    cursor: pointer;
+}
+.dxscNavigationButtonHover_PlasticBlue,
+.dxscDVTopMoreButtonHover_PlasticBlue,
+.dxscDVBottomMoreButtonHover_PlasticBlue
+{
+    background: url('CssImages/ButtonHoverBack.gif') #E9E9E9;
+}
+.dxscNavigationButtonPressed_PlasticBlue,
+.dxscDVTopMoreButtonPressed_PlasticBlue,
+.dxscDVBottomMoreButtonPressed_PlasticBlue
+{
+    background: #DEDEDE;
+    border-color: #B8B8B8;
+}
+
+.dxscNavigationButton_PlasticBlue,
+.dxscNavigationButtonHover_PlasticBlue,
+.dxscNavigationButtonPressed_PlasticBlue
+{
+	Width: 22px;
+	Height: 20px;
+}
+
+.dxscViewNavigatorButton_PlasticBlue 
+{
+    height: 19px;
+    padding: 0px 7px;
+    cursor: pointer;
+}
+.dxscResourceNavigatorButton_PlasticBlue
+{
+    padding: 0;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+
+.dxscSmartTagButton_PlasticBlue 
+{
+    border: solid 1px black;
+    background: #ffffee;
+    padding: 4px 5px;
+    cursor: pointer;
+}
+
+.dxscViewSelectorButton_PlasticBlue 
+{
+    background: url('CssImages/ButtonBack.gif') #F5F5F5;
+	border: solid 1px #CCCCCC;
+	border-width: 0 0 0 1px;
+	color: Black;
+	padding: 10px 18px;
+	font: 9pt Tahoma;
+    cursor: pointer;
+}
+.dxscViewSelectorButtonHover_PlasticBlue
+{
+    background: url('CssImages/ButtonHoverBack.gif') #E9E9E9;
+}
+.dxscViewSelectorButtonPressed_PlasticBlue
+{
+	background: #DEDEDE;
+}
+.dxscViewSelectorButtonChecked_PlasticBlue
+{
+	background: #DEDEDE;
+}
+
+.dxscNoBorderButton_PlasticBlue
+{
+	background: none;
+    cursor: pointer;
+    border: solid 1px #F0F0F0;
+}
+.dxscNoBorderButtonHover_PlasticBlue
+{
+    border-color: #A8A8A8;
+}
+.dxscViewSelector_PlasticBlue 
+{
+	border-width: 0 0 0 0;
+}
+.dxscToolTipRoundedCornersTopBottomRow_PlasticBlue
+{
+	font-size:1pt;		
+}
+.dxscToolTipRoundedCornersTopSide_PlasticBlue
+{
+	border-top: 1px black solid; 
+	vertical-align:bottom; 
+	height:1px;	
+	background-color:#fafad2;
+}
+.dxscToolTipRoundedCornersLeftSide_PlasticBlue
+{
+	border-left: 1px black solid; 
+	vertical-align:bottom; 
+	background-color:#fafad2;
+}
+.dxscToolTipRoundedCornersRightSide_PlasticBlue
+{
+	border-right: 1px black solid; 
+	vertical-align:bottom; 
+	background-color:#fafad2;
+}
+.dxscToolTipRoundedCornersBottomSide_PlasticBlue
+{
+	border-bottom: 1px black solid; 
+	vertical-align:bottom; 
+	height:1px;	
+	background-color:#fafad2;
+}
+.dxscToolTipRoundedCornersContent_PlasticBlue
+{
+	background-color:#fafad2;
+	padding:0;
+}
+.dxscToolTipSquaredCorners_PlasticBlue
+{
+    background: #f9f9cd;
+    padding: 0;
+    font: 8pt Tahoma;
+    color: #303030;
+    white-space: nowrap;
+    border: solid 1px black;
+}

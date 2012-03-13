@@ -1,0 +1,4 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v10.2" %>
+
+<dxe:ASPxRadioButtonList runat="server" CssPostfix="RedWine" CssFilePath="{0}/styles.css" TextSpacing="2px" />

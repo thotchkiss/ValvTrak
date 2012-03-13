@@ -1,0 +1,541 @@
+/* ----------------- Main ----------------- */
+/* Loading panel */
+.dxheLoadingDiv_Youthful
+{
+    background: white;
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+    cursor: wait;
+}
+.dxheLoadingPanel_Youthful
+{
+    font: 9pt Tahoma;
+    color: #303030;
+}
+.dxheLoadingPanel_Youthful td.dx
+{
+    white-space: nowrap;
+    text-align: center;
+    padding: 12px 12px 12px 12px;
+}
+
+.dxheControl_Youthful
+{
+	border: Solid 1px white
+}
+
+/* Area */
+.dxheContentArea_Youthful
+{
+    padding-top: 1px;
+	padding-bottom: 6px;
+    background-color: white;
+}
+.dxheViewArea_Youthful
+{
+    border: Solid 1px #D3E4A6;    
+}
+.dxheHtmlViewEdit_Youthful, .dxheDesignViewArea_Youthful, .dxhePreviewArea_Youthful 
+{
+    margin: 0px;
+    background-color: #FFFFFF;
+    background-image: none;
+    text-align: left;
+    font-size: smaller;
+    font: normal 12px Arial;
+}
+td.dxheHtmlViewEdit_Youthful, body.dxheDesignViewArea_Youthful, body.dxhePreviewArea_Youthful
+{
+    padding: 0px;
+    padding-left: 4px;
+    padding-bottom: 0px;
+}
+/* Element appearance in DesignView */
+body.dxheDesignViewArea_Youthful table.dxEmptyBorderTable,
+body.dxheDesignViewArea_Youthful table.dxEmptyBorderTable td  {
+    border:1px dotted gray;
+}
+/* Status Bar */
+.dxheStatusBar_Youthful 
+{
+}
+.dxheStatusBarTab_Youthful 
+{    
+}
+.dxheStatusBarActiveTab_Youthful 
+{
+}
+
+/* ----------------- Dialog Forms ----------------- */
+#dxInsertTableForm .buttonsCell, #dxInsertLinkForm .buttonsCell, #dxInsertImageForm .buttonsCell, #dxPasteFromWordForm .buttonsCell,
+#dxTableColumnPropertiesForm .buttonsCell
+{
+	background-color: #9CC525;
+	border-top: solid 1px white;
+
+    padding: 11px;
+}
+#dxInsertTableForm .captionIndent, #dxInsertLinkForm .captionIndent, #dxInsertImageForm .captionIndent,
+#dxTableColumnPropertiesForm .captionIndent
+{
+	overflow: hidden;
+	height: 5px;
+}
+#dxInsertTableForm .contentCell, #dxInsertLinkForm .contentCell, #dxInsertImageForm .contentCell, #dxPasteFromWordForm .contentCell,
+#dxTableColumnPropertiesForm .contentCell
+{
+	padding: 11px;
+}
+#dxInsertLinkForm .typeRadionButtonListCell, #dxInsertImageForm .typeRadionButtonListCell
+{
+	padding-bottom: 12px;
+}
+#dxInsertTableForm .separatorCell, #dxInsertLinkForm .separatorCell, #dxInsertImageForm .separatorCell,
+#dxTableColumnPropertiesForm .separatorCell
+{
+	height: 7px;
+}
+#dxInsertTableForm .buttons, #dxInsertLinkForm .buttons, #dxInsertImageForm .buttons,
+#dxTableColumnPropertiesForm .buttons
+{
+    padding-top: 3px;
+}
+#dxInsertTableForm .cancelButton, #dxInsertLinkForm .cancelButton, #dxInsertImageForm .cancelButton, #dxPasteFromWordForm .cancelButton,
+#dxTableColumnPropertiesForm .cancelButton
+{
+    padding-left: 10px;
+}
+#dxInsertTableForm .captionCell, #dxInsertTableForm .rowsCaptionCell, #dxInsertLinkForm .captionCell,
+#dxTableColumnPropertiesForm .captionCell, #dxTableColumnPropertiesForm .rowsCaptionCell
+{
+    padding-right: 9px;
+    padding-top: 3px;
+    vertical-align: top;
+    white-space: nowrap;
+}
+#dxInsertTableForm .inputCell, #dxInsertTableForm .rowsInputCell, #dxInsertLinkForm .inputCell,
+#dxTableColumnPropertiesForm .inputCell, #dxTableColumnPropertiesForm .rowsInputCell
+{
+    vertical-align: middle;
+}
+
+/* Insert Link Form */
+#dxInsertLinkForm .displayPropertiesCell 
+{
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#dxInsertLinkForm .targetCheckBoxCell
+{
+    padding-top:10px;
+}
+/* Insert Image Form */
+#dxInsertImageForm .fieldSeparator 
+{
+    height: 9px;
+}
+#dxInsertImageForm .imagePreview
+{
+    padding: 10px 0px;
+    padding-top: 5px;
+}
+#dxInsertImageForm .fromTheWeb
+{
+    width: 100%;
+}
+#dxInsertImageForm .imagePreviewCell
+{
+    color: #878787;
+    border: dashed 1px white;
+    text-align:center;
+    width: 100%;
+    height: 170px;
+}
+#dxInsertImageForm .imagePropertiesCell
+{
+    padding-left: 20px;
+    vertical-align:top;
+}
+#dxInsertImageForm .moreOptionsCell
+{
+	padding-top: 11px;
+}
+#dxInsertImageForm .radioButtonTable
+{
+	width: 317px;
+}
+#dxInsertImageForm .saveToServerCheckBoxCell
+{
+    padding-top:0px;
+    padding-bottom: 13px;
+}
+/* Image Properties Form */
+#dxImagePropertiesForm .captionCell
+{
+    padding-right: 2px;
+    white-space: nowrap;
+}
+#dxImagePropertiesForm .constrainProportionsCell
+{
+    padding-left: 4px;
+    padding-top: 2px;
+}
+#dxImagePropertiesForm .imageSizeEditorsCell
+{
+    padding-top: 7px;
+    padding-bottom: 10px;
+}
+#dxImagePropertiesForm .pixelSizeCell
+{
+    padding-left: 7px;
+}
+#dxImagePropertiesForm .hSeparator
+{
+    width: 25px;
+    overflow: hidden;
+}
+#dxImagePropertiesForm .thumbnailFileNameArea
+{
+    padding-top: 8px;
+}
+/* IE, FireFox, WebKit*/
+#dxImagePropertiesForm .ckbWrapTextCell div
+{
+	margin-left: -4px;
+	padding-top: 2px;
+}
+/* Opera hack */
+@media not all and (-webkit-min-device-pixel-ratio) {   
+	#dxImagePropertiesForm .ckbWrapTextCell div
+	{
+		margin-left: 0px;
+	}
+}
+
+/* PasteFromWord Form */
+#dxPasteFromWordForm .pasteContainer
+{
+	width: 450px;
+	height: 300px;
+	border: none;
+	background-color: white;
+}
+#dxPasteFromWordForm .pasteContainerCell
+{
+	padding:0px;
+	padding-top: 10px;
+}
+#dxPasteFromWordForm .pasteContainerCell td
+{
+	border: Solid 1px #AFC185;
+}
+#dxPasteFromWordForm .checkBoxCell
+{
+	padding-top: 10px;
+}
+#dxPasteFromWordForm .contentCell 
+{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* Insert table */
+#dxInsertTableForm .propFieldSeparator, #dxTableColumnPropertiesForm .propFieldSeparator
+{
+    width: 20px;
+}
+#dxInsertTableForm .propGroupSeparator, #dxTableColumnPropertiesForm .propGroupSeparator
+{
+    height: 11px;
+}
+#dxInsertTableForm .propGroupCell, #dxInsertTableForm .accessibilityPropGroupCell,
+#dxTableColumnPropertiesForm .propGroupCell, #dxTableColumnPropertiesForm .accessibilityPropGroupCell
+{
+    font-weight: bold;
+    padding-bottom: 7px;
+}
+#dxInsertTableForm .accessibilityPropGroupCell,
+#dxTableColumnPropertiesForm accessibilityPropGroupCell
+{
+    padding-left: 10px;
+}
+#dxInsertTableForm .propGroupContentCell,
+#dxTableColumnPropertiesForm .propGroupContentCell
+{
+    padding-left: 20px;
+}
+#dxInsertTableForm .sizeTypeCell,
+#dxTableColumnPropertiesForm .sizeTypeCell
+{
+    padding-left: 3px;
+}
+#dxInsertTableForm .rowsInputCell,
+#dxTableColumnPropertiesForm .rowsInputCell
+{
+    padding-left: 9px;
+}
+#dxInsertTableForm .rowsCaptionCell,
+#dxTableColumnPropertiesForm .rowsCaptionCell
+{
+    padding-right: 0px;
+}
+#dxInsertTableForm .rowsSeparator,
+#dxTableColumnPropertiesForm .rowsSeparator
+{
+    height: 18px;
+}
+#dxInsertTableForm .rowsHorizontalSeparator,
+#dxTableColumnPropertiesForm .rowsHorizontalSeparator
+{
+    width: 50px;
+}
+/*----------------- Toolbars -----------------*/
+.dxtbSpacing_Youthful
+{
+	height: 1px;
+}
+.dxtbControl_Youthful 
+{
+	font: 9pt Tahoma;
+	color: black;
+	background-color: white;
+}
+
+.dxtbMenu_Youthful
+{
+    color: Black;
+	background-color: #D3E4A6;
+    font-family: Tahoma, Verdana, Arial;
+    font-size: 9pt;
+	padding: 2px 4px 2px 4px;
+}
+.dxtbMenuSeparator_Youthful
+{
+    background-color: White;
+}
+.dxtbMenuItem_Youthful, .dxtbMenuItemWithImage_Youthful, .dxtbMenuItemWithPopOutImage_Youthful, .dxtbMenuItemWithImageWithPopOutImage_Youthful
+{
+    color: Black;
+    font-family: Tahoma, Verdana, Arial;
+    font-size: 9pt;
+	white-space: nowrap;
+	background-color: #D3E4A6;
+	border: 0px;	
+}
+.dxtbMenuItem_Youthful, .dxtbMenuItemWithImage_Youthful
+{
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+}
+.dxtbMenuItemWithPopOutImage_Youthful, .dxtbMenuItemWithImageWithPopOutImage_Youthful
+{
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+}	
+.dxtbComboBoxMenuItem_Youthful
+{
+    padding-top: 1px;
+	padding-bottom: 1px;
+}
+.dxtbMenuItemSelected_Youthful, .dxtbMenuItemSelectedWithImage_Youthful, .dxtbMenuItemSelectedWithPopOutImage_Youthful, .dxtbMenuItemSelectedWithImageWithPopOutImage_Youthful
+{
+	background-color: #F4921B;
+	border: 0px;
+}
+.dxtbMenuItemSelected_Youthful, .dxtbMenuItemSelectedWithImage_Youthful
+{
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+}
+.dxtbMenuItemSelectedWithPopOutImage_Youthful, .dxtbMenuItemSelectedWithImageWithPopOutImage_Youthful
+{
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+}
+
+.dxtbMenuItemChecked_Youthful, .dxtbMenuItemCheckedWithImage_Youthful, .dxtbMenuItemCheckedWithPopOutImage_Youthful, .dxtbMenuItemCheckedWithImageWithPopOutImage_Youthful
+{
+	background-color: #F4921B;
+	border: 0px;
+}
+.dxtbMenuItemChecked_Youthful, .dxtbMenuItemCheckedWithImage_Youthful
+{
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+}
+.dxtbMenuItemCheckedWithPopOutImage_Youthful, .dxtbMenuItemCheckedWithImageWithPopOutImage_Youthful
+{
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+}	
+
+.dxtbMenuItemHover_Youthful, .dxtbMenuItemHoverWithImage_Youthful, .dxtbMenuItemHoverWithPopOutImage_Youthful, .dxtbMenuItemHoverWithImageWithPopOutImage_Youthful
+{
+	background-color: #F4BD17;
+	border: 0px;
+}
+.dxtbMenuItemHover_Youthful, .dxtbMenuItemHoverWithImage_Youthful
+{
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+}
+.dxtbMenuItemHoverWithPopOutImage_Youthful, .dxtbMenuItemHoverWithImageWithPopOutImage_Youthful
+{
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+}
+
+.dxtbSubMenu_Youthful {
+    color: Black;
+    font-family: Tahoma, Verdana, Arial;
+    font-size: 9pt;
+	border: Solid 1px White;
+	padding: 0px;
+	background-color: #E5EECF;
+}
+.dxtbSubMenuGutter_Youthful {
+	background-color: #E5EECF;
+}
+.dxtbSubMenuSeparator_Youthful {
+	background-color: White;
+}
+.dxtbSubMenuItem_Youthful, .dxtbSubMenuItemWithImage_Youthful, .dxtbSubMenuItemWithPopOutImage_Youthful, .dxtbSubMenuItemWithImageWithPopOutImage_Youthful {
+    color: Black;
+    font-family: Tahoma, Verdana, Arial;
+    font-size: 9pt;
+	white-space: nowrap;
+}
+.dxtbSubMenuItem_Youthful, .dxtbSubMenuItemWithImage_Youthful {
+	padding-top: 5px;
+	padding-right: 12px;
+	padding-bottom: 5px;
+	padding-left: 12px;
+}
+.dxtbSubMenuItemWithPopOutImage_Youthful, .dxtbSubMenuItemWithImageWithPopOutImage_Youthful {
+	padding-top: 5px;
+	padding-right: 12px;
+	padding-bottom: 5px;
+	padding-left: 12px;
+}
+.dxtbSubMenuItemDropDownButton_Youthful
+{
+	padding-right: 5px;
+	padding-left: 6px;
+}
+.dxtbSubMenuItemSelected_Youthful, .dxtbSubMenuItemSelectedWithImage_Youthful, .dxtbSubMenuItemSelectedWithPopOutImage_Youthful, .dxtbSubMenuItemSelectedWithImageWithPopOutImage_Youthful {
+	background-color: #DCE6C3;
+	border: Solid 1px #C4D3A0;
+}
+.dxtbSubMenuItemSelected_Youthful, .dxtbSubMenuItemSelectedWithImage_Youthful {
+	padding-top: 4px;
+	padding-right: 11px;
+	padding-bottom: 4px;
+	padding-left: 11px;
+}
+.dxtbSubMenuItemSelectedWithPopOutImage_Youthful, .dxtbSubMenuItemSelectedWithImageWithPopOutImage_Youthful {
+	padding-top: 4px;
+	padding-right: 11px;
+	padding-bottom: 4px;
+	padding-left: 11px;
+}
+.dxtbSubMenuItemDropDownButtonSelected_Youthful
+{
+	padding-right: 4px;
+	padding-left: 5px;
+}
+.dxtbSubMenuItemChecked_Youthful, .dxtbSubMenuItemCheckedWithImage_Youthful, .dxtbSubMenuItemCheckedWithPopOutImage_Youthful, .dxtbSubMenuItemCheckedWithImageWithPopOutImage_Youthful {
+}
+.dxtbSubMenuItemChecked_Youthful, .dxtbSubMenuItemCheckedWithImage_Youthful {
+}
+.dxtbSubMenuItemCheckedWithPopOutImage_Youthful, .dxtbSubMenuItemCheckedWithImageWithPopOutImage_Youthful {
+}
+.dxtbSubMenuItemDropDownButtonChecked_Youthful
+{
+}
+.dxtbSubMenuItemHover_Youthful, .dxtbSubMenuItemHoverWithImage_Youthful, .dxtbSubMenuItemHoverWithPopOutImage_Youthful, .dxtbSubMenuItemHoverWithImageWithPopOutImage_Youthful {
+	background-color: #F8FCF1;
+	border: Solid 1px #C4D3A0;
+}
+.dxtbSubMenuItemHover_Youthful, .dxtbSubMenuItemHoverWithImage_Youthful {
+	padding-top: 4px;
+	padding-right: 11px;
+	padding-bottom: 4px;
+	padding-left: 11px;
+}
+.dxtbSubMenuItemHoverWithPopOutImage_Youthful, .dxtbSubMenuItemHoverWithImageWithPopOutImage_Youthful {
+	padding-top: 4px;
+	padding-right: 11px;
+	padding-bottom: 4px;
+	padding-left: 11px;
+}
+.dxtbSubMenuItemDropDownButtonHover_Youthful
+{
+	padding-right: 4px;
+	padding-left: 5px;
+}
+.dxtbSubMenuBorderCorrector_Youthful {
+    position: absolute;
+    border: 0px;
+    padding: 0px;
+}
+
+/* ToolbarColorButton */
+.dxtcbControl_Youthful
+{
+	border-collapse:collapse;
+	border-width: 0px;
+}
+.dxtcbControl_Youthful td
+{
+	/*padding: 1px;	*/
+}
+.dxtcbImageCell_Youthful, .dxtcbColorCell_Youthful
+{
+	height:0px;
+}
+.dxtcbColorDiv_Youthful
+{
+	width: 16px;
+	height: 4px;
+	font-size:0pt;
+	background-color: Red;
+}
+/*----------------- RoundPanel -----------------*/
+.dxheRPControl_Youthful td.dxheRP
+{
+	font-size: 9pt;
+	font-family: Tahoma, Verdana, Arial;
+	color: #000000;	
+}
+/* Header */
+.dxheRPHeader_Youthful, .dxrpHeader_Youthful td.dxheRP
+{
+    font-size: 13px;
+    font-weight: bold;
+	font-family: Tahoma, Verdana, Arial;    
+	color: #313131;
+	text-align:left;	
+}
+/* Disabled */
+.dxheRPDisabled_Youthful, .dxheRPDisabled_Youthful td.dxheRP
+{
+	color: #808080;
+	cursor: default;
+}

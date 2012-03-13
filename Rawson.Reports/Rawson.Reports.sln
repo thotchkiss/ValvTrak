@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Rawson.Reports", "Rawson.Reports.rptproj", "{19FBDB1F-A411-467E-AE22-CBB39C8E209B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19FBDB1F-A411-467E-AE22-CBB39C8E209B}.Debug|Default.ActiveCfg = Debug
+		{19FBDB1F-A411-467E-AE22-CBB39C8E209B}.Debug|Default.Build.0 = DebugLocal
+		{19FBDB1F-A411-467E-AE22-CBB39C8E209B}.Debug|Default.Deploy.0 = DebugLocal
+		{19FBDB1F-A411-467E-AE22-CBB39C8E209B}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{19FBDB1F-A411-467E-AE22-CBB39C8E209B}.DebugLocal|Default.Build.0 = DebugLocal
+		{19FBDB1F-A411-467E-AE22-CBB39C8E209B}.Production|Default.ActiveCfg = Production
+		{19FBDB1F-A411-467E-AE22-CBB39C8E209B}.Production|Default.Build.0 = Production
+		{19FBDB1F-A411-467E-AE22-CBB39C8E209B}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

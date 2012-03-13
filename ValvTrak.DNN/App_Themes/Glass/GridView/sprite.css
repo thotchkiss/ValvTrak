@@ -1,0 +1,105 @@
+.dxGridView_gvCollapsedButton_Glass,
+.dxGridView_gvExpandedButton_Glass,
+.dxGridView_gvDetailCollapsedButton_Glass,
+.dxGridView_gvDetailExpandedButton_Glass,
+.dxGridView_gvFilterRowButton_Glass,
+.dxGridView_gvHeaderFilter_Glass,
+.dxGridView_gvHeaderFilterActive_Glass,
+.dxGridView_gvHeaderSortDown_Glass,
+.dxGridView_gvHeaderSortUp_Glass,
+.dxGridView_gvDragAndDropArrowDown_Glass,
+.dxGridView_gvDragAndDropArrowUp_Glass,
+.dxGridView_gvDragAndDropHideColumn_Glass,
+.dxGridView_gvParentGroupRows_Glass,
+.dxGridView_WindowResizer_Glass {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxGridView_gvCollapsedButton_Glass {
+    background-position: -36px 0px;
+    width: 11px;
+    height: 11px;
+}
+
+.dxGridView_gvExpandedButton_Glass {
+    background-position: -36px -18px;
+    width: 11px;
+    height: 11px;
+}
+
+.dxGridView_gvDetailCollapsedButton_Glass {
+    background-position: -53px 0px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxGridView_gvDetailExpandedButton_Glass {
+    background-position: -53px -18px;
+    width: 9px;
+    height: 9px;
+}
+
+.dxGridView_gvFilterRowButton_Glass {
+    background-position: -100px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvHeaderFilter_Glass {
+    background-position: 0px -36px;
+    width: 18px;
+    height: 18px;
+}
+
+.dxGridView_gvHeaderFilterActive_Glass {
+    background-position: -23px -36px;
+    width: 18px;
+    height: 18px;
+}
+
+.dxGridView_gvHeaderSortDown_Glass {
+    background-position: -19px 0px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxGridView_gvHeaderSortUp_Glass {
+    background-position: -19px -18px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxGridView_gvDragAndDropArrowDown_Glass {
+    background-position: 0px 0px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxGridView_gvDragAndDropArrowUp_Glass {
+    background-position: 0px -17px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxGridView_gvDragAndDropHideColumn_Glass {
+    background-position: -70px 0px;
+    width: 22px;
+    height: 22px;
+}
+
+.dxGridView_gvParentGroupRows_Glass {
+    background-position: -70px -36px;
+    width: 18px;
+    height: 13px;
+}
+
+.dxGridView_WindowResizer_Glass {
+    background-position: -46px -36px;
+    width: 13px;
+    height: 13px;
+}
+
+
