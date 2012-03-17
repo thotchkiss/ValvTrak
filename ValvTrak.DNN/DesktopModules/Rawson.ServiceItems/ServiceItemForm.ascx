@@ -1,17 +1,17 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ServiceItemForm.ascx.cs" Inherits="Rawson.ServiceItems.ServiceItemForm" EnableTheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
 
-<%@ Register Assembly="DevExpress.Web.v10.2" Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v10.2" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dxpc" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v10.2" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
-<%@ Register assembly="DevExpress.Web.v10.2" namespace="DevExpress.Web.ASPxPanel" tagprefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dxpc" %>
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.2" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
+<%@ Register assembly="DevExpress.Web.v11.2" namespace="DevExpress.Web.ASPxPanel" tagprefix="dx" %>
 
-<%@ Register assembly="DevExpress.Web.v10.2" namespace="DevExpress.Web.ASPxHiddenField" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v11.2" namespace="DevExpress.Web.ASPxHiddenField" tagprefix="dx" %>
 
 
 <script type="text/javascript">

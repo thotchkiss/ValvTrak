@@ -1,7 +1,11 @@
 .dxGridView_gvCollapsedButton_Aqua,
+.dxGridView_gvCollapsedButtonRtl_Aqua,
 .dxGridView_gvExpandedButton_Aqua,
+.dxGridView_gvExpandedButtonRtl_Aqua,
 .dxGridView_gvDetailCollapsedButton_Aqua,
+.dxGridView_gvDetailCollapsedButtonRtl_Aqua,
 .dxGridView_gvDetailExpandedButton_Aqua,
+.dxGridView_gvDetailExpandedButtonRtl_Aqua,
 .dxGridView_gvFilterRowButton_Aqua,
 .dxGridView_gvHeaderFilter_Aqua,
 .dxGridView_gvHeaderFilterActive_Aqua,
@@ -11,32 +15,62 @@
 .dxGridView_gvDragAndDropArrowUp_Aqua,
 .dxGridView_gvDragAndDropHideColumn_Aqua,
 .dxGridView_gvParentGroupRows_Aqua,
-.dxGridView_WindowResizer_Aqua {
+.dxGridView_WindowResizer_Aqua,
+.dxGridView_WindowResizerRtl_Aqua {
     background-image: url('sprite.png');
     -background-image: url('sprite.gif'); /* for IE6 */
     background-repeat: no-repeat;
     background-color: transparent;
 }
 
-.dxGridView_gvCollapsedButton_Aqua {
+.dxGridView_edtRadioButtonChecked_Aqua,
+.dxGridView_edtRadioButtonUnchecked_Aqua,
+.dxGridView_edtRadioButtonCheckedDisabled_Aqua,
+.dxGridView_edtRadioButtonUncheckedDisabled_Aqua,
+.dxGridView_edtRadioButtonGrayedDisabled_Aqua {
+    background-image : url('../Editors/sprite.png');
+    -background-image: url('../Editors/sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
+}
+.dxGridView_edtRadioButtonUnchecked_Aqua {
+	background-position: 0px -46px; 
+}
+.dxGridView_edtRadioButtonChecked_Aqua {
+	background-position: -15px -46px; 
+}
+.dxGridView_edtRadioButtonUncheckedDisabled_Aqua {
+	background-position: -30px -46px; 
+}
+.dxGridView_edtRadioButtonCheckedDisabled_Aqua {
+	background-position: -45px -46px; 
+}
+
+.dxGridView_gvCollapsedButton_Aqua,
+.dxGridView_gvCollapsedButtonRtl_Aqua {
     background-position: -36px 0px;
     width: 15px;
     height: 15px;
 }
 
-.dxGridView_gvExpandedButton_Aqua {
+.dxGridView_gvExpandedButton_Aqua,
+.dxGridView_gvExpandedButtonRtl_Aqua {
     background-position: -36px -18px;
     width: 15px;
     height: 15px;
 }
 
-.dxGridView_gvDetailCollapsedButton_Aqua {
+.dxGridView_gvDetailCollapsedButton_Aqua,
+.dxGridView_gvDetailCollapsedButtonRtl_Aqua {
     background-position: -53px 0px;
     width: 15px;
     height: 15px;
 }
 
-.dxGridView_gvDetailExpandedButton_Aqua {
+.dxGridView_gvDetailExpandedButton_Aqua,
+.dxGridView_gvDetailExpandedButtonRtl_Aqua {
     background-position: -53px -18px;
     width: 15px;
     height: 15px;
@@ -98,6 +132,12 @@
 
 .dxGridView_WindowResizer_Aqua {
     background-position: -46px -36px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_WindowResizerRtl_Aqua {
+    background-position: -91px -36px;
     width: 13px;
     height: 13px;
 }

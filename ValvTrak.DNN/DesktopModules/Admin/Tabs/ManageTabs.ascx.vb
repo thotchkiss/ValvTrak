@@ -25,10 +25,13 @@ Imports DotNetNuke.Entities.Tabs
 Imports DotNetNuke.Entities.Modules
 Imports DotNetNuke.UI.Utilities
 Imports DotNetNuke.Services.FileSystem
+Imports DotNetNuke.Services.Localization
+Imports DotNetNuke.Services
 Imports DotNetNuke.UI.Skins
 Imports DotNetNuke.Security.Permissions
 Imports System.Linq
 Imports DotNetNuke.Entities.Content
+
 
 Namespace DotNetNuke.Modules.Admin.Tabs
 

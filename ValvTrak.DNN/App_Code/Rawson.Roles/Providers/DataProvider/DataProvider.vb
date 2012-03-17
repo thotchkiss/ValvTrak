@@ -1,4 +1,5 @@
 ﻿Imports Microsoft.VisualBasic
+Imports System.Data
 
 Namespace Rawson.Roles.Data
 

@@ -1,6 +1,0 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
-<%@ Register TagPrefix="dxwschs" Namespace="DevExpress.Web.ASPxScheduler" Assembly="DevExpress.Web.ASPxScheduler.v10.2" %>
-<dxwschs:ASPxDateNavigator runat="server" 
-    CssFilePath="{0}/styles.css" CssPostfix="Office2003Blue" 
-    SpriteCssFilePath="{0}/sprite.css">
-</dxwschs:ASPxDateNavigator>

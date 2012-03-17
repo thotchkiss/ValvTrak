@@ -136,7 +136,7 @@
 							<ItemTemplate>
 								<asp:ImageButton id="btnFileRemove" ImageUrl="~/images/Delete.gif" 
 									runat="server" CommandName="delete" CommandArgument='<%# CType(DataBinder.Eval(Container.DataItem, "FileName"), String) %>'
-									cssclass="CommandButton" resourcekey="cmdDelete" AlternateText="""" />
+									cssclass="CommandButton" resourcekey="cmdDelete" AlternateText="" />
 							</ItemTemplate>
 						</asp:TemplateColumn>
 					</Columns>

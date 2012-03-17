@@ -1,13 +1,13 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
-<%@ Register TagPrefix="dxnc" Namespace="DevExpress.Web.ASPxNewsControl" Assembly="DevExpress.Web.v10.2" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxnc" Namespace="DevExpress.Web.ASPxNewsControl" Assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 
-<dxnc:ASPxNewsControl runat="server" CssFilePath="{0}/styles.css" CssPostfix="RedWine" 
-    SpriteCssFilePath="{0}/sprite.css" LoadingPanelText="" PagerAlign="Center" PagerPanelSpacing="0px">
+<dxnc:ASPxNewsControl runat="server" CssFilePath="~/App_Themes/RedWine/{0}/styles.css" CssPostfix="RedWine" 
+    SpriteCssFilePath="~/App_Themes/RedWine/{0}/sprite.css" LoadingPanelImagePosition="Top" PagerAlign="Center" PagerPanelSpacing="0px">
     <ItemRightPanelStyle Spacing="25px" />
     <ItemLeftPanelStyle Spacing="25px" />
     <ItemDateStyle Spacing="5px" />
     <ItemHeaderStyle Spacing="7px" />
-    <LoadingPanelImage Url="Web/Loading.gif" />
+    <LoadingPanelImage Url="~/App_Themes/RedWine/Web/Loading.gif" />
     <ItemSettings MaxLength="300" TailPosition="KeepWithLastWord" DateVerticalPosition="Header" TailText="See details&hellip;">
     </ItemSettings>
     

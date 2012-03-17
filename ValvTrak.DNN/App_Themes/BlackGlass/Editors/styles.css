@@ -1,159 +1,634 @@
+/* iOS */
+.dxeTrackBar_BlackGlass, 
+.dxeIRadioButton_BlackGlass, 
+.dxeButtonEdit_BlackGlass, 
+.dxeTextBox_BlackGlass, 
+.dxeRadioButtonList_BlackGlass, 
+.dxeCheckBoxList_BlackGlass, 
+.dxeMemo_BlackGlass, 
+.dxeListBox_BlackGlass, 
+.dxeCalendar_BlackGlass, 
+.dxeColorTable_BlackGlass
+{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* TrackBar */
+.dxeTrackBar_BlackGlass
+{
+	user-select: none;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	visibility: hidden;
+}
+
+.dxeDisabled_BlackGlass .dxeTBHSys a,
+.dxeDisabled_BlackGlass .dxeTBVSys a
+{
+    cursor: default;
+}
+
+.dxeTBBarHighlight_BlackGlass
+{
+	font-size: 0;
+}
+
+.dxeTBScale_BlackGlass,
+.dxeTBTrack_BlackGlass,
+.dxeTBBarHighlight_BlackGlass
+{
+	cursor: pointer;
+}
+
+.dxeTBScale_BlackGlass
+{
+	z-index: 1;
+}
+.dxeTBSecondaryDH_BlackGlass,
+.dxeTBMainDH_BlackGlass
+{
+	z-index: 4;
+}
+
+.dxeTBHSys
+{
+	width: 170px;
+	height: 49px;
+}
+.dxeTBVSys
+{
+	height: 170px;
+	width: 49px;
+}
+.dxeTrackBar_BlackGlass.dxeTBBScaleSys.dxeTBVSys
+{
+	width: 70px;
+}
+.dxeTrackBar_BlackGlass.dxeTBBScaleSys.dxeTBHSys
+{	
+	height: 70px;
+}
+
+.dxeTBTrack_BlackGlass
+{
+	z-index: 2;
+	position: absolute;
+}
+
+.dxeTBTrack_BlackGlass, .dxeTBBarHighlight_BlackGlass 
+{
+	border-style: solid;
+	border-color: #A3C0E8;
+}
+
+.dxeTBHSys .dxeTBTrack_BlackGlass, .dxeTBHSys .dxeTBBarHighlight_BlackGlass 
+{
+	border-width: 0px 1px 0px 1px;
+}
+.dxeTBVSys .dxeTBTrack_BlackGlass, .dxeTBVSys .dxeTBBarHighlight_BlackGlass 
+{
+	border-width: 1px 0px 1px 0px;
+}
+
+.dxeTBHSys .dxeTBTrack_BlackGlass
+{
+	background-image:  url('edtTrackBarTrackH.gif');
+}
+.dxeTBVSys .dxeTBTrack_BlackGlass
+{
+	background-image:  url('edtTrackBarTrackV.gif');
+}
+
+.dxeTBHSys .dxeTBTrack_BlackGlass, 
+.dxeTBHSys .dxeTBBarHighlight_BlackGlass
+{
+	height: 4px;
+}
+.dxeTBVSys .dxeTBTrack_BlackGlass, 
+.dxeTBVSys .dxeTBBarHighlight_BlackGlass
+{
+	width: 4px;
+}
+
+.dxeTBHSys .dxeTBMainDH_BlackGlass,
+.dxeTBHSys .dxeTBSecondaryDH_BlackGlass
+{	
+	top: -11px;
+	width: 13px;
+	height: 26px;
+}
+.dxeTBVSys .dxeTBMainDH_BlackGlass,
+.dxeTBVSys .dxeTBSecondaryDH_BlackGlass
+{
+	left: -11px;
+	width: 26px;
+	height: 13px;
+}
+
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBTrack_BlackGlass,
+.dxeTBVSys .dxeTBTrack_BlackGlass
+{
+	left: 13px;
+}
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBTrack_BlackGlass
+{
+	right: 13px;
+	left: auto;
+}
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBTrack_BlackGlass
+{
+	bottom: 13px;
+	top: auto;
+}
+.dxeTBHSys .dxeTBRBScaleSys .dxeTBTrack_BlackGlass,
+.dxeTBHSys .dxeTBTrack_BlackGlass
+{
+	top: 13px;
+}
+
+.dxeTBBarHighlight_BlackGlass
+{
+	left: 0px;
+	top: 0px;
+	position:absolute;
+	z-index: 3;
+}
+
+.dxeTBHSys .dxeTBBarHighlight_BlackGlass
+{
+	background-image:  url('edtTrackBarBarHighlightH.gif');
+}
+.dxeTBVSys .dxeTBBarHighlight_BlackGlass
+{
+	background-image:  url('edtTrackBarBarHighlightV.gif');
+}
+
+.dxeTBRBLabel_BlackGlass,
+.dxeTBLTLabel_BlackGlass
+{
+	font-size: 10px Tahoma;
+	text-align: center;
+	cursor: default;
+}
+.dxeTBSmallTickSys .dxeTBRBLabel_BlackGlass,
+.dxeTBSmallTickSys .dxeTBLTLabel_BlackGlass,
+.dxeTBLargeTickSys .dxeTBRBLabel_BlackGlass,
+.dxeTBLargeTickSys .dxeTBLTLabel_BlackGlass
+{	
+	position: absolute;
+}
+
+.dxeTBHSys .dxeTBRBLabel_BlackGlass,
+.dxeTBHSys .dxeTBLTLabel_BlackGlass
+{
+	width: 100%;
+}
+
+.dxeTBIncBtn_BlackGlass,
+.dxeTBDecBtn_BlackGlass
+{
+	padding: 2px;
+	width: 16px;
+	height: 16px;
+}
+
+.dxeTBVSys .dxeTBRBLabel_BlackGlass,
+.dxeTBVSys .dxeTBLTLabel_BlackGlass
+{
+	padding-top: 2px;
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBRBLabel_BlackGlass
+{
+	margin-left: -4px;
+}
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBRBLabel_BlackGlass,
+.dxeTBVSys .dxeTBBScaleSys .dxeTBLTLabel_BlackGlass
+{
+	right: 0px;
+}
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBLTLabel_BlackGlass,
+.dxeTBVSys .dxeTBBScaleSys .dxeTBRBLabel_BlackGlass
+{
+	left: 0px;
+}
+.dxeTBHSys .dxeTBRBScaleSys .dxeTBRBLabel_BlackGlass,
+.dxeTBHSys .dxeTBBScaleSys .dxeTBLTLabel_BlackGlass
+{
+	bottom: 0px;
+}
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBLTLabel_BlackGlass,
+.dxeTBHSys .dxeTBBScaleSys .dxeTBRBLabel_BlackGlass
+{
+	top: 0px;
+}
+
+.dxeTBHSys .dxeTBItem_BlackGlass .dxeTBRBLabel_BlackGlass,
+.dxeTBHSys .dxeTBItem_BlackGlass .dxeTBLTLabel_BlackGlass
+{
+	display: inline-block;
+	margin-left: 0px!important;
+}
+.dxeTBHSys .dxeTBRBScaleSys .dxeTBItem_BlackGlass .dxeTBRBLabel_BlackGlass
+{
+	padding-top: 12px;
+}
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBItem_BlackGlass .dxeTBLTLabel_BlackGlass
+{
+	margin-top: 8px;
+}
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBItem_BlackGlass .dxeTBRBLabel_BlackGlass 
+{
+	margin-left: 5px;
+}
+
+.dxeTBSelectedItem_BlackGlass .dxeTBRBLabel_BlackGlass,
+.dxeTBSelectedItem_BlackGlass .dxeTBLTLabel_BlackGlass,
+.dxeTBSelectedTick_BlackGlass .dxeTBRBLabel_BlackGlass,
+.dxeTBSelectedTick_BlackGlass .dxeTBLTLabel_BlackGlass
+{
+	color: #2A769D;
+}
+.dxeDisabled_BlackGlass .dxeTBSelectedItem_BlackGlass .dxeTBRBLabel_BlackGlass,
+.dxeDisabled_BlackGlass .dxeTBSelectedItem_BlackGlass .dxeTBLTLabel_BlackGlass,
+.dxeDisabled_BlackGlass .dxeTBSelectedTick_BlackGlass .dxeTBRBLabel_BlackGlass,
+.dxeDisabled_BlackGlass .dxeTBSelectedTick_BlackGlass .dxeTBLTLabel_BlackGlass 
+{
+	color: #E4E4E4;
+}
+
+.dxeTBRBLabel_BlackGlass,
+.dxeTBLTLabel_BlackGlass,
+.dxeTBItem_BlackGlass
+{
+	color: #97BCCF;
+}
+
+.dxeDisabled_BlackGlass .dxeTBRBLabel_BlackGlass,
+.dxeDisabled_BlackGlass .dxeTBLTLabel_BlackGlass,
+.dxeDisabled_BlackGlass .dxeTBItem_BlackGlass
+{
+	color: #E4E4E4;
+}
+
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBItem_BlackGlass
+{
+	text-align: left;
+}
+
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBItem_BlackGlass
+{
+	text-align: right;
+}
+
+.dxeTBVSys .dxeTBBScaleSys .dxeTBItem_BlackGlass
+{
+	text-align: center;
+}
+
+.dxeTBHSys .dxeTBItem_BlackGlass
+{
+	background-image:  url('edtTrackBarLargeTickH.gif');
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBItem_BlackGlass
+{
+	background-image:  url('edtTrackBarDoubleSmallTickH.gif');
+}
+.dxeTBVSys .dxeTBItem_BlackGlass 
+{
+	background-image:  url('edtTrackBarLargeTickV.gif');
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBItem_BlackGlass
+{
+	background-image:  url('edtTrackBarDoubleSmallTickV.gif');
+}
+
+.dxeTBHSys .dxeTBLargeTick_BlackGlass
+{
+	background-image:  url('edtTrackBarLargeTickH.gif');
+}
+.dxeTBVSys .dxeTBLargeTick_BlackGlass
+{
+	background-image: url('edtTrackBarLargeTickV.gif');
+}
+.dxeTBHSys .dxeTBSmallTick_BlackGlass
+{
+	background-image: url('edtTrackBarSmallTickH.gif');
+}
+.dxeTBVSys .dxeTBSmallTick_BlackGlass
+{
+	background-image: url('edtTrackBarSmallTickV.gif');
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBLargeTick_BlackGlass
+{
+	background-image: url('edtTrackBarDoubleLargeTickH.gif');
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBLargeTick_BlackGlass
+{
+	background-image: url('edtTrackBarDoubleLargeTickV.gif');
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBSmallTick_BlackGlass
+{
+	background-image: url('edtTrackBarDoubleSmallTickH.gif');
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBSmallTick_BlackGlass
+{
+	background-image: url('edtTrackBarDoubleSmallTickV.gif');
+}
+
+.dxeTBVSys .dxeTBIncBtn_BlackGlass,
+.dxeTBVSys .dxeReversedDirectionSys .dxeTBDecBtn_BlackGlass
+{
+	bottom: 0px;
+	top: auto;
+}
+.dxeTBVSys .dxeTBDecBtn_BlackGlass,
+.dxeTBVSys .dxeReversedDirectionSys .dxeTBIncBtn_BlackGlass
+{
+	top: 0px;
+	bottom: auto;
+}
+.dxeTBHSys .dxeTBDecBtn_BlackGlass, 
+.dxeTBHSys .dxeReversedDirectionSys .dxeTBIncBtn_BlackGlass
+{
+	left: 0px;
+	right: auto;
+}
+.dxeTBHSys .dxeTBIncBtn_BlackGlass,
+.dxeTBHSys .dxeReversedDirectionSys .dxeTBDecBtn_BlackGlass
+{
+	right: 0px;
+	left: auto;
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBDecBtn_BlackGlass,
+.dxeTBVSys .dxeTBBScaleSys .dxeTBIncBtn_BlackGlass
+{
+	margin-left: -10px;
+	left: 50%;
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBDecBtn_BlackGlass,
+.dxeTBHSys .dxeTBBScaleSys .dxeTBIncBtn_BlackGlass
+{
+	margin-top: -10px;
+	top: 50%;
+}
+.dxeTBVSys .dxeTBBScaleSys .dxeTBTrack_BlackGlass
+{ 
+	margin-left: -2px;
+	left: 50%;
+}
+.dxeTBHSys .dxeTBBScaleSys .dxeTBTrack_BlackGlass
+{ 
+	margin-top: -2px;
+	top: 50%;
+}
+
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBDecBtn_BlackGlass,
+.dxeTBVSys .dxeTBLTScaleSys .dxeTBIncBtn_BlackGlass
+{
+	right: 5px;
+	left: auto;
+}
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBDecBtn_BlackGlass,
+.dxeTBHSys .dxeTBLTScaleSys .dxeTBIncBtn_BlackGlass
+{
+	bottom: 5px;
+	top: auto;
+}
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBDecBtn_BlackGlass,
+.dxeTBVSys .dxeTBRBScaleSys .dxeTBIncBtn_BlackGlass,
+.dxeTBVSys .dxeTBDecBtn_BlackGlass,
+.dxeTBVSys .dxeTBIncBtn_BlackGlass
+{
+	left: 5px;
+}
+.dxeTBHSys .dxeTBRBScaleSys .dxeTBDecBtn_BlackGlass,
+.dxeTBHSys .dxeTBRBScaleSys .dxeTBIncBtn_BlackGlass,
+.dxeTBHSys .dxeTBDecBtn_BlackGlass,
+.dxeTBHSys .dxeTBIncBtn_BlackGlass
+{
+	top: 5px;
+}
+
+.dxeTBValueToolTip_BlackGlass
+{
+	padding: 3px 8px 4px 8px;
+    display: inline;
+    position:absolute;
+    border-radius: 3px;
+    z-index: 41998;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #B2BDBF;
+    font: 12px Tahoma;
+    background: #FFFFFF;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#EEF0F1');
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#EEF0F1));
+	background: -moz-linear-gradient(top,  #FFFFFF,  #EEF0F1);
+}
+
+/* InternalCheckBox */
+.dxeIRBFocused_BlackGlass
+{
+	border: 1px dotted #68a4c0;
+	margin: 0px!important;
+}
+.dxeIRadioButton_BlackGlass
+{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 1px;
+}
 .dxeLoadingDiv_BlackGlass
 {
-	background: White;
-    opacity: 0.85;
-    filter: alpha(opacity=85);
-    cursor: wait;
+	background: White none;
+	opacity: 0.85;
+	filter: alpha(opacity=85);
+	cursor: wait;
 }
+.dxeLoadingDivWithContent_BlackGlass
+{
+	background: White none;
+	opacity: 0.01;
+	filter: alpha(opacity=1);
+}
+
 .dxeLoadingPanel_BlackGlass
 {
-	font: 9pt Tahoma;
+	font: 12px Tahoma;
 	color: #303030;
 }
-.dxeLoadingPanel_BlackGlass td.dx
+.dxeLoadingPanelWithContent_BlackGlass
+{
+	font: 12px Tahoma;
+	color: #303030;
+	border: 1px solid #D3D3D3;
+	background-color: #FFFFFF;
+}
+
+.dxeLoadingPanel_BlackGlass td.dx,
+.dxeLoadingPanelWithContent_BlackGlass td.dx
 {
 	white-space: nowrap;
 	text-align: center;
-	padding: 12px 12px 12px 12px;
+	padding: 12px;
 }
 
 .dxbControl_BlackGlass
 {
-	font: 9pt Tahoma;
+	font: 12px Tahoma;
 	background-color: #C0C0C0;
 	cursor: pointer;
 }
 .dxeBase_BlackGlass
 {
-    font-family: Tahoma;
-    font-size: 9pt;    
+	font: 12px Tahoma;
+}
+td.dxic
+{
+	font-size: 0;
 }
 /* -- ErrorFrame -- */
-.dxeErrorCell_BlackGlass, .dxeErrorCell_BlackGlass td
+.dxeErrorCell_BlackGlass,
+.dxeErrorCell_BlackGlass td
 {
-    font-family: Tahoma;
-	font-size: 9pt;
+	font: 12px Tahoma;
 	color: red;
 }
 .dxeErrorCell_BlackGlass
 {
 	color: #a91123;
-	padding-left: 4px;	
+	padding-left: 4px;
 }
 .dxeErrorFrame_BlackGlass
 {
 }
-.dxeErrorFrameWithoutError_BlackGlass {
-    border: 1px solid Red;
+.dxeErrorFrameWithoutError_BlackGlass
+{
+	border: 1px solid Red;
 }
-.dxeErrorFrameWithoutError_BlackGlass .dxeControlsCell_BlackGlass {
-    padding: 2px;
+.dxeErrorFrameWithoutError_BlackGlass .dxeControlsCell_BlackGlass
+{
+	padding: 2px;
 }
 .dxeEditArea_BlackGlass
 {
-	font-family: Tahoma;
-	font-size: 9pt;
+	font: 12px Tahoma;
 	border: 1px solid #A0A0A0;
 }
+
 /* -- Buttons -- */
-.dxeButtonEdit_BlackGlass 
+.dxeButtonEdit_BlackGlass
 {
 	background-color: white;
 	width: 170px;
 }
-.dxeButtonEdit_BlackGlass .dxeEditArea_BlackGlass {
-    background-color: white;
+.dxeButtonEdit_BlackGlass .dxeEditArea_BlackGlass
+{
+	background-color: white;
 }
-.dxeButtonEdit_BlackGlass .dxeEditArea_BlackGlass, .dxeButtonEdit_BlackGlass td.dxic
+.dxeButtonEdit_BlackGlass .dxeEditArea_BlackGlass,
+.dxeButtonEdit_BlackGlass td.dxic
 {
 	width: 100%;
 }
 
-.dxeButtonEditButton_BlackGlass, .dxeCalendarButton_BlackGlass,
-.dxeSpinIncButton_BlackGlass, .dxeSpinDecButton_BlackGlass,
-.dxeSpinLargeIncButton_BlackGlass, .dxeSpinLargeDecButton_BlackGlass
-{	
-	background-color: #f0f0f0;	
+.dxeButtonEditButton_BlackGlass,
+.dxeCalendarButton_BlackGlass,
+.dxeSpinIncButton_BlackGlass,
+.dxeSpinDecButton_BlackGlass,
+.dxeSpinLargeIncButton_BlackGlass,
+.dxeSpinLargeDecButton_BlackGlass
+{
+	background-color: #f0f0f0;
 	vertical-align: middle;
 	cursor: pointer;
 } 
-.dxeButtonEditButton_BlackGlass, .dxeCalendarButton_BlackGlass, 
-.dxeButtonEditButton_BlackGlass td.dx, .dxeCalendarButton_BlackGlass td.dx,
-.dxeSpinIncButton_BlackGlass, .dxeSpinDecButton_BlackGlass,
-.dxeSpinLargeIncButton_BlackGlass, .dxeSpinLargeDecButton_BlackGlass,
-.dxeSpinIncButton_BlackGlass td.dx, .dxeSpinDecButton_BlackGlass td.dx,
-.dxeSpinLargeIncButton_BlackGlass td.dx, .dxeSpinLargeDecButton_BlackGlass td.dx
-{	
-    font-family: Tahoma;
-    font-size: 9pt;  
-    font-weight: normal;
+.dxeButtonEditButton_BlackGlass,
+.dxeCalendarButton_BlackGlass, 
+.dxeButtonEditButton_BlackGlass td.dx,
+.dxeCalendarButton_BlackGlass td.dx,
+.dxeSpinIncButton_BlackGlass,
+.dxeSpinDecButton_BlackGlass,
+.dxeSpinLargeIncButton_BlackGlass,
+.dxeSpinLargeDecButton_BlackGlass,
+.dxeSpinIncButton_BlackGlass td.dx,
+.dxeSpinDecButton_BlackGlass td.dx,
+.dxeSpinLargeIncButton_BlackGlass td.dx,
+.dxeSpinLargeDecButton_BlackGlass td.dx
+{
+	font: normal 12px Tahoma;
 	text-align: center;
 } 
 .dxeButtonEditButton_BlackGlass
 {
-	background-image: url('edtButtonBack_16.gif');	
-    background-repeat:repeat-x;
-    background-position:top;
-	border: solid 1px Black;    
-	background-color: #303030;	
+	background: #303030 url('edtButtonBack_16.gif') repeat-x top;
+	border: 1px solid Black;
 	padding: 0px 1px;
 }
-.dxeSpinIncButton_BlackGlass, .dxeSpinDecButton_BlackGlass,
-.dxeSpinLargeIncButton_BlackGlass, .dxeSpinLargeDecButton_BlackGlass
+.dxeSpinIncButton_BlackGlass,
+.dxeSpinDecButton_BlackGlass,
+.dxeSpinLargeIncButton_BlackGlass,
+.dxeSpinLargeDecButton_BlackGlass
 {
 	border-style: none;
 	padding: 0px;
 }
-.dxeSpinIncButton_BlackGlass, .dxeSpinDecButton_BlackGlass
+.dxeSpinIncButton_BlackGlass,
+.dxeSpinDecButton_BlackGlass
 {
-    border-style: none;
+	border-style: none;
 }
 
-.dxeButtonEditButton_BlackGlass table.dxbebt 
+.dxeButtonEditButton_BlackGlass table.dxbebt
 {
 	width: 12px;
 }
-.dxeButtonEditButton_BlackGlass table.dxbebt td.dx 
+.dxeButtonEditButton_BlackGlass table.dxbebt td.dx
 {
-    color: White;
+	color: White;
 }
 .dxeSpinLargeIncButton_BlackGlass
 {
-    padding-left: 1px;
+	padding-left: 1px;
 }
 
 .dxeSpinIncButton_BlackGlass
 {
-	background: url('edtSpinIncBtnBack.gif') no-repeat top left #363636;
-	border-bottom: Solid 1px #FFFFFF;
+	background: #363636 url('edtSpinIncBtnBack.gif') no-repeat left top;
+	border-bottom: 1px Solid #FFFFFF;
 }
 .dxeSpinDecButton_BlackGlass
 {
-	background: url('edtSpinDecBtnBack.gif') no-repeat top left #959595;   
-    border-bottom-style: none;
+	background: #959595 url('edtSpinDecBtnBack.gif') no-repeat left top;
+	border-bottom-style: none;
 }
-.dxeSpinLargeIncButton_BlackGlass, .dxeSpinLargeDecButton_BlackGlass
+.dxeSpinLargeIncButton_BlackGlass,
+.dxeSpinLargeDecButton_BlackGlass
 {
-   	background: url('edtSpinLargeIncBtnBack.gif') no-repeat top left #959595;
+	background: #959595 url('edtSpinLargeIncBtnBack.gif') no-repeat left top;
 }
 
 .dxeCalendarButton_BlackGlass
 {
 	color: White;
-	background-image: url('edtCalendarFootBtn.gif');	
-    background-position:top;		    
-	border: solid 1px Black;
-	background-color: #444444;
-	background-repeat:repeat-x;
+	background: #444444 url('edtCalendarFootBtn.gif') repeat-x top;
+	border: 1px solid Black;
 	padding: 5px 10px;
 }
 .dxeCalendarButton_BlackGlass table.dxbebt
 {
 	color: White;
-    width: 30px;
+	width: 30px;
 }
 /* SpinButtons */
-.dxeSpinIncButton_BlackGlass table.dxbebt, .dxeSpinDecButton_BlackGlass table.dxbebt
+.dxeSpinIncButton_BlackGlass table.dxbebt,
+.dxeSpinDecButton_BlackGlass table.dxbebt
 {
 	width: 15px;
 }
@@ -163,7 +638,7 @@
 }
 .dxeSpinLargeIncButton_BlackGlass table.dxbebt
 {
-	width: 15px;    
+	width: 15px;
 }
 
 .dxeCalendarButton_BlackGlass td.dx
@@ -179,99 +654,93 @@
 }
 .dxeCalendarButtonHover_BlackGlass
 {
-	background-image: url('edtCalendarFootBtnH.gif');	
-    background-repeat:repeat-x;
-    background-position:top;
-    border: Solid 1px Black; 
-  	background-color: #82b3ce;   
+	background: #82b3ce url('edtCalendarFootBtnH.gif') repeat-x top;
+	border: 1px Solid Black;
 }
 .dxeButtonEditButtonHover_BlackGlass
 {
-	background-image: url('edtButtonBackH_16.gif');	
-    background-repeat:repeat-x;
-    background-position:top;	    
-    border: Solid 1px Black;    
-	background-color: #86bad6;    
+	background: #86bad6 url('edtButtonBackH_16.gif') repeat-x top;
+	border: 1px Solid Black;
 }
 /* SpinButtons */
-.dxeSpinIncButtonHover_BlackGlass, .dxeSpinDecButtonHover_BlackGlass
+.dxeSpinIncButtonHover_BlackGlass,
+.dxeSpinDecButtonHover_BlackGlass
 {
-    border-style: none;    
+	border-style: none;
 }
-.dxeSpinLargeIncButtonHover_BlackGlass, .dxeSpinLargeDecButtonHover_BlackGlass
+.dxeSpinLargeIncButtonHover_BlackGlass,
+.dxeSpinLargeDecButtonHover_BlackGlass
 {
-	background: url('edtSpinLargeIncBtnHBack.gif') no-repeat top left #86bad6;
+	background: #86bad6 url('edtSpinLargeIncBtnHBack.gif') no-repeat left top;
 	border-style: none;
 }
 
 .dxeSpinIncButtonHover_BlackGlass
 {
-	background: url('edtSpinIncBtnHBack.gif') no-repeat top left #536b78;
-    border-bottom: Solid 1px #FFFFFF;    
+	background: #536b78 url('edtSpinIncBtnHBack.gif') no-repeat left top;
+	border-bottom: 1px Solid #FFFFFF;
 }
 .dxeSpinDecButtonHover_BlackGlass
 {
-	background: url('edtSpinIncBtnHBack.gif') no-repeat top left #536b78;
-    border-bottom-style: none;
+	background: #536b78 url('edtSpinIncBtnHBack.gif') no-repeat left top;
+	border-bottom-style: none;
 }
 
 /* -- Pressed -- */
 .dxeButtonPressed_BlackGlass       /* inherits dxeButton */
-{    
+{
 	background-color: #D4D1C3;
 }
 .dxeCalendarButtonPressed_BlackGlass
 {
-	background-image: url('edtCalendarFootBtnP.gif');	
-    background-repeat:repeat-x;
-    background-position:top;
-    border: Solid 1px Black;
-  	background-color: #cbcbcb;
+	background: #cbcbcb url('edtCalendarFootBtnP.gif') repeat-x top;
+	border: 1px Solid Black;
 }
 .dxeButtonEditButtonPressed_BlackGlass
 {
-	background-image: url('edtButtonBackC_16.gif');	
-    background-repeat:repeat-x;
-    background-position:top;
-    border: Solid 1px Black;    
-	background-color: #bdbdbd;        
+	background: #bdbdbd url('edtButtonBackC_16.gif') repeat-x top;
+	border: 1px Solid Black;
 }
 /* SpinButtons */
-.dxeSpinIncButtonPressed_BlackGlass, .dxeSpinDecButtonPressed_BlackGlass
+.dxeSpinIncButtonPressed_BlackGlass,
+.dxeSpinDecButtonPressed_BlackGlass
 {
-    border-style: none;    
+	border-style: none;
 }
 .dxeSpinIncButtonPressed_BlackGlass
 {
-	background: url('edtSpinIncBtnPBack.gif') no-repeat top left #363636;
-    border-bottom: Solid 1px #FFFFFF;    
+	background: #363636 url('edtSpinIncBtnPBack.gif') no-repeat left top;
+	border-bottom: 1px Solid #FFFFFF;
 }
 .dxeSpinDecButtonPressed_BlackGlass
 {
-	background: url('edtSpinIncBtnPBack.gif') no-repeat top left #959595;
-    border-bottom-style: none;
+	background: #959595 url('edtSpinIncBtnPBack.gif') no-repeat left top;
+	border-bottom-style: none;
 }
-.dxeSpinLargeIncButtonPressed_BlackGlass, .dxeSpinLargeDecButtonPressed_BlackGlass
+.dxeSpinLargeIncButtonPressed_BlackGlass,
+.dxeSpinLargeDecButtonPressed_BlackGlass
 {
-	background: url('edtSpinLargeIncBtnPBack.gif') no-repeat top left #b7b7b7;
+	background: #b7b7b7 url('edtSpinLargeIncBtnPBack.gif') no-repeat left top;
 	border-style: none;
 }
 
 .dxeButtonEdit_BlackGlass
 {
-    border: solid 1px #9F9F9F;
+	border: 1px solid #9F9F9F;
 }
 .dxeButtonEdit_BlackGlass td.dxic
 {
 	padding: 0px 2px 0px 1px;
 }
-.dxeButtonEdit_BlackGlass .dxeIIC img {
-    padding-left: 3px;
+.dxeButtonEdit_BlackGlass .dxeIIC img
+{
+	padding-left: 3px;
 }
-.dxeTextBox_BlackGlass, .dxeMemo_BlackGlass
+.dxeTextBox_BlackGlass,
+.dxeMemo_BlackGlass
 {
 	background-color: white;
-    border: Solid 1px #9F9F9F;
+	border: 1px Solid #9F9F9F;
 }
 .dxeTextBox_BlackGlass td.dxic
 {
@@ -280,34 +749,47 @@
 }
 .dxeTextBox_BlackGlass .dxeEditArea_BlackGlass
 {
-    background-color: white;
+	background-color: white;
 }
-.dxeRadioButtonList_BlackGlass, .dxeRadioButtonList_BlackGlass table {
-    font-family: Tahoma;
-    font-size: 9pt;    
-}
-.dxeRadioButtonList_BlackGlass {
-    border: Solid 1px #9F9F9F;
-}
-.dxeRadioButtonList_BlackGlass td.dxe {
-    padding: 6px 11px;
-    padding-right: 5px;
-}
-.dxeRadioButtonList_BlackGlass label
+.dxeRadioButtonList_BlackGlass,
+.dxeRadioButtonList_BlackGlass table,
+.dxeCheckBoxList_BlackGlass,
+.dxeCheckBoxList_BlackGlass table
 {
-	margin-right: 6px;    
+	font: 12px Tahoma;
+}
+.dxeRadioButtonList_BlackGlass,
+.dxeCheckBoxList_BlackGlass
+{
+	border: 1px Solid #9F9F9F;
+}
+.dxeRadioButtonList_BlackGlass td.dxe,
+.dxeCheckBoxList_BlackGlass td.dxe
+{
+	padding: 6px 5px 6px 11px;
+}
+.dxeRadioButtonList_BlackGlass label,
+.dxeCheckBoxList_BlackGlass label
+{
+	margin-right: 6px;
+}
+
+.dxeRadioButtonList_BlackGlass img,
+.dxeCheckBoxList_BlackGlass img
+{
+	margin-bottom: -4px;
+    padding-right: 5px;
 }
 
 /* -- Memo -- */
 .dxeMemo_BlackGlass
 {
-
 }
 .dxeMemoEditArea_BlackGlass
 {
 	background-color: white;
-	font-family: Tahoma;
-	font-size: 9pt;
+	font: 12px Tahoma;
+	outline: none;
 }
 .dxeMemo_BlackGlass td
 {
@@ -318,18 +800,16 @@
 /* -- Hyperlink -- */
 .dxeHyperlink_BlackGlass
 {
-    font-family: Tahoma;
-    font-size: 9pt; 
-	font-weight: normal;
-    color: #3e6b96;    
+	font: normal 12px Tahoma;
+	color: #3e6b96;
 }
 a.dxeHyperlink_BlackGlass
 {
-    color: #3e6b96;
+	color: #3e6b96;
 }
 a:hover.dxeHyperlink_BlackGlass
 {
-    color: #FF9600;
+	color: #FF9600;
 }
 a:visited.dxeHyperlink_BlackGlass
 {
@@ -339,325 +819,458 @@ a:visited.dxeHyperlink_BlackGlass
 /* -- ListBox -- */
 .dxeListBox_BlackGlass
 {
-    background-color: white;
-    border: solid 1px #A0A0A0;
-    font-family: Tahoma;
-    font-size: 9pt;
-    height: 107px;
-    width: 70px;
+	background-color: white;
+	border: 1px solid #A0A0A0;
+	font: 12px Tahoma;
+	height: 107px;
+	width: 70px;
 }
 
-.dxeListBox_BlackGlass div.dxlbd 
+.dxeListBox_BlackGlass div.dxlbd
 {
 	height: 107px;
 }
 
 .dxeListBoxItemRow_BlackGlass
 {
-    cursor: default;
+	cursor: default;
 }
 .dxeListBoxItem_BlackGlass
-{    
-    border: solid 1px white;
-    font-family: Tahoma;
-    font-size: 9pt;        
-    padding: 2px 2px 3px 3px;
-    white-space: nowrap;
-    text-align: left;
-    color: Black;    
-    font-weight: normal    
+{
+	border: 1px solid white;
+	font: normal 12px Tahoma;
+	padding: 2px 2px 3px 3px;
+	white-space: nowrap;
+	text-align: left;
+	color: Black;
+}
+.dxeListBoxItem_BlackGlass em
+{
+	background: #CEDAE5 none repeat 0 0;
+	color: #333333;
+	font-weight: bold;
+	font-style: normal;
 }
 .dxeListBoxItemSelected_BlackGlass     /* inherits dxeListBoxItem */
-{    
-    background-color: #e0eaec;
+{
+	background-color: #e0eaec;
 }
 .dxeListBoxItemHover_BlackGlass        /* inherits dxeListBoxItem */
 {
-    background-color: #CEDAE5;
+	background-color: #CEDAE5;
 }
-.dxeListBox_BlackGlass td.dxeI, .dxeListBox_BlackGlass td.dxeIM, .dxeListBox_BlackGlass .dxeHIC,
-.dxeListBox_BlackGlass td.dxeFTM, .dxeListBox_BlackGlass td.dxeTM,
-.dxeListBox_BlackGlass td.dxeC, .dxeListBox_BlackGlass td.dxeCM, .dxeListBox_BlackGlass td.dxeHCC, .dxeListBox_BlackGlass td.dxeMI, .dxeListBox_BlackGlass td.dxeMIM
+.dxeListBoxItemHover_BlackGlass em,
+.dxeListBoxItemSelected_BlackGlass em
 {
-    border-right-width: 0px!important;
+	background-image: none;
 }
-.dxeListBox_BlackGlass td.dxeCM, .dxeListBox_BlackGlass td.dxeHCC
+.dxeListBox_BlackGlass td.dxeI,
+.dxeListBox_BlackGlass td.dxeIM,
+.dxeListBox_BlackGlass .dxeHIC,
+.dxeListBox_BlackGlass td.dxeFTM,
+.dxeListBox_BlackGlass td.dxeTM,
+.dxeListBox_BlackGlass td.dxeC,
+.dxeListBox_BlackGlass td.dxeCM,
+.dxeListBox_BlackGlass td.dxeHCC,
+.dxeListBox_BlackGlass td.dxeMI,
+.dxeListBox_BlackGlass td.dxeMIM
 {
-    width: 25px;
+	border-right-width: 0!important;
 }
-.dxeListBox_BlackGlass td.dxeIM
+.dxeListBox_BlackGlass td.dxeIR,
+.dxeListBox_BlackGlass td.dxeIMR,
+.dxeListBox_BlackGlass .dxeHICR,
+.dxeListBox_BlackGlass td.dxeFTMR,
+.dxeListBox_BlackGlass td.dxeTMR,
+.dxeListBox_BlackGlass td.dxeCR,
+.dxeListBox_BlackGlass td.dxeCMR,
+.dxeListBox_BlackGlass td.dxeHCCR,
+.dxeListBox_BlackGlass td.dxeMIR,
+.dxeListBox_BlackGlass td.dxeMIMR
 {
-    width: 0;
+	border-left-width: 0!important;
+}
+.dxeListBox_BlackGlass td.dxeCM,
+.dxeListBox_BlackGlass td.dxeHCC,
+.dxeListBox_BlackGlass td.dxeCMR,
+.dxeListBox_BlackGlass td.dxeHCCR
+{
+	width: 25px;
+}
+.dxeListBox_BlackGlass td.dxeIM,
+.dxeListBox_BlackGlass td.dxeIMR
+{
+	width: 0;
+}
+.dxeListBox_BlackGlass td.dxeC
+{
+	padding-right: 0!important;
 }
 .dxeListBox_BlackGlass td.dxeT
 {
-    width: 100%;    
-    padding-left: 0px!important;
+	width: 100%;
+	padding-left: 0!important;
 }
-.dxeListBox_BlackGlass td.dxeT, .dxeListBox_BlackGlass td.dxeMI
+.dxeListBox_BlackGlass td.dxeTR
 {
-    border-left-width: 0px!important;
+	width: 100%;
+	padding-right: 0!important;
 }
-.dxeListBox_BlackGlass td.dxeFTM, .dxeListBox_BlackGlass td.dxeTM, .dxeListBox_BlackGlass td.dxeLTM,
- .dxeListBox_BlackGlass .dxeHFC, .dxeListBox_BlackGlass .dxeHC, .dxeListBox_BlackGlass .dxeHLC
+.dxeListBox_BlackGlass td.dxeT,
+.dxeListBox_BlackGlass td.dxeMI
 {
-    overflow: hidden;
-    border-top-width: 0px;
+	border-left-width: 0!important;
 }
-.dxeListBox_BlackGlass .dxeCM, .dxeListBox_BlackGlass .dxeIM, .dxeListBox_BlackGlass .dxeMIM
+.dxeListBox_BlackGlass td.dxeTR,
+.dxeListBox_BlackGlass td.dxeMIR
 {
-    border-top-width: 0px;
+	border-right-width: 0!important;
 }
-.dxeListBox_BlackGlass td.dxeFTM, .dxeListBox_BlackGlass td.dxeTM, 
-.dxeListBox_BlackGlass .dxeHFC, .dxeListBox_BlackGlass .dxeHC
+.dxeListBox_BlackGlass td.dxeFTM,
+.dxeListBox_BlackGlass td.dxeTM,
+.dxeListBox_BlackGlass td.dxeLTM,
+.dxeListBox_BlackGlass .dxeHFC,
+.dxeListBox_BlackGlass .dxeHC,
+.dxeListBox_BlackGlass .dxeHLC,
+.dxeListBox_BlackGlass td.dxeFTMR,
+.dxeListBox_BlackGlass td.dxeTMR,
+.dxeListBox_BlackGlass td.dxeLTMR,
+.dxeListBox_BlackGlass .dxeHFCR,
+.dxeListBox_BlackGlass .dxeHCR,
+.dxeListBox_BlackGlass .dxeHLCR
 {
-    padding-right: 6px!important;
+	overflow: hidden;
+	border-top-width: 0;
 }
-.dxeListBox_BlackGlass td.dxeLTM, .dxeListBox_BlackGlass td.dxeTM, 
-.dxeListBox_BlackGlass .dxeHC,  .dxeListBox_BlackGlass .dxeHLC
+.dxeListBox_BlackGlass .dxeCM,
+.dxeListBox_BlackGlass .dxeIM,
+.dxeListBox_BlackGlass .dxeMIM,
+.dxeListBox_BlackGlass .dxeCMR,
+.dxeListBox_BlackGlass .dxeIMR,
+.dxeListBox_BlackGlass .dxeMIMR
 {
-    padding-left: 6px!important;
+	border-top-width: 0;
+}
+.dxeListBox_BlackGlass td.dxeFTM,
+.dxeListBox_BlackGlass td.dxeTM, 
+.dxeListBox_BlackGlass .dxeHFC,
+.dxeListBox_BlackGlass .dxeHC
+{
+	padding-right: 6px!important;
+}
+.dxeListBox_BlackGlass td.dxeFTMR,
+.dxeListBox_BlackGlass td.dxeTMR, 
+.dxeListBox_BlackGlass .dxeHFCR,
+.dxeListBox_BlackGlass .dxeHCR
+{
+	padding-left: 6px!important;
+}
+.dxeListBox_BlackGlass td.dxeLTM,
+.dxeListBox_BlackGlass td.dxeTM, 
+.dxeListBox_BlackGlass .dxeHC,
+.dxeListBox_BlackGlass .dxeHLC
+{
+	padding-left: 6px!important;
+}
+.dxeListBox_BlackGlass td.dxeLTMR,
+.dxeListBox_BlackGlass td.dxeTMR, 
+.dxeListBox_BlackGlass .dxeHCR,
+.dxeListBox_BlackGlass .dxeHLCR
+{
+	padding-right: 6px!important;
 }
 /*Grid lines*/
-.dxeListBox_BlackGlass td.dxeTM, .dxeListBox_BlackGlass td.dxeLTM, .dxeListBox_BlackGlass td.dxeMIM
+.dxeListBox_BlackGlass td.dxeTM,
+.dxeListBox_BlackGlass td.dxeLTM,
+.dxeListBox_BlackGlass td.dxeMIM
 {
-    border-left: 1px solid #A4BED1 !important;
+	border-left: 1px solid #A4BED1!important;
 }
-.dxeListBox_BlackGlass td.dxeIM, .dxeListBox_BlackGlass td.dxeFTM, .dxeListBox_BlackGlass td.dxeTM, .dxeListBox_BlackGlass td.dxeLTM,
-.dxeListBox_BlackGlass td.dxeCM, .dxeListBox_BlackGlass td.dxeMIM
+.dxeListBox_BlackGlass td.dxeTMR,
+.dxeListBox_BlackGlass td.dxeLTMR,
+.dxeListBox_BlackGlass td.dxeMIMR
 {
-    border-bottom: solid 1px #A4BED1;
+	border-right: 1px solid #A4BED1!important;
+}
+.dxeListBox_BlackGlass td.dxeIM,
+.dxeListBox_BlackGlass td.dxeFTM,
+.dxeListBox_BlackGlass td.dxeTM,
+.dxeListBox_BlackGlass td.dxeLTM,
+.dxeListBox_BlackGlass td.dxeCM,
+.dxeListBox_BlackGlass td.dxeMIM,
+.dxeListBox_BlackGlass td.dxeIMR,
+.dxeListBox_BlackGlass td.dxeFTMR,
+.dxeListBox_BlackGlass td.dxeTMR,
+.dxeListBox_BlackGlass td.dxeLTMR,
+.dxeListBox_BlackGlass td.dxeCMR,
+.dxeListBox_BlackGlass td.dxeMIMR
+{
+	border-bottom: 1px solid #A4BED1;
 }
 /*Header*/
 .dxeListBox_BlackGlass .dxeHD
 {
-    background-color:#444444;
-    background-image:url('lbHeaderBackground.gif');
-    background-position:center top;
-    background-repeat:repeat-x;
-    border-bottom: solid 1px #A0A0A0
+	background: #444444 url('lbHeaderBackground.gif') repeat-x top center;
+	border-bottom: 1px solid #A0A0A0;
 }
-.dxeListBox_BlackGlass .dxeHFC, .dxeListBox_BlackGlass .dxeHIC, .dxeListBox_BlackGlass .dxeHC, .dxeListBox_BlackGlass .dxeHLC,
-.dxeListBox_BlackGlass td.dxeHCC, .dxeListBox_BlackGlass td.dxeHMIC
+.dxeListBox_BlackGlass .dxeHFC,
+.dxeListBox_BlackGlass .dxeHIC,
+.dxeListBox_BlackGlass .dxeHC,
+.dxeListBox_BlackGlass .dxeHLC,
+.dxeListBox_BlackGlass td.dxeHCC,
+.dxeListBox_BlackGlass td.dxeHMIC,
+.dxeListBox_BlackGlass .dxeHFCR,
+.dxeListBox_BlackGlass .dxeHICR,
+.dxeListBox_BlackGlass .dxeHCR,
+.dxeListBox_BlackGlass .dxeHLCR,
+.dxeListBox_BlackGlass td.dxeHCCR,
+.dxeListBox_BlackGlass td.dxeHMICR
 {
-    color: White;
-    border-bottom-width: 0px;
-    border-top-width: 0px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+	color: White;
+	border-bottom-width: 0;
+	border-top-width: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
-.dxeListBox_BlackGlass .dxeHC,  .dxeListBox_BlackGlass .dxeHLC, .dxeListBox_BlackGlass td.dxeHMIC
+.dxeListBox_BlackGlass .dxeHC,
+.dxeListBox_BlackGlass .dxeHLC,
+.dxeListBox_BlackGlass td.dxeHMIC
 {
-    border-left: solid 1px #A0A0A0
+	border-left: 1px solid #A0A0A0;
 }
-.dxeListBox_BlackGlass .dxeHIC, .dxeListBox_BlackGlass .dxeHFC, .dxeListBox_BlackGlass .dxeHCC
+.dxeListBox_BlackGlass .dxeHCR,
+.dxeListBox_BlackGlass .dxeHLCR,
+.dxeListBox_BlackGlass td.dxeHMICR
 {
-    border-left:1px solid #444444;
+	border-right: 1px solid #A0A0A0;
+	text-align: right;
 }
-.dxeListBox_BlackGlass .dxeHFC, .dxeListBox_BlackGlass .dxeHC, .dxeListBox_BlackGlass .dxeHMIC
+.dxeListBox_BlackGlass .dxeHIC,
+.dxeListBox_BlackGlass .dxeHFC,
+.dxeListBox_BlackGlass .dxeHCC
 {
-    border-right-width:0;
+	border-left: 1px solid #444444;
+}
+.dxeListBox_BlackGlass .dxeHICR,
+.dxeListBox_BlackGlass .dxeHFCR,
+.dxeListBox_BlackGlass .dxeHCCR
+{
+	border-right: 1px solid #444444;
+	text-align: right;
+}
+.dxeListBox_BlackGlass .dxeHFC,
+.dxeListBox_BlackGlass .dxeHC,
+.dxeListBox_BlackGlass .dxeHMIC
+{
+	border-right-width: 0;
+}
+.dxeListBox_BlackGlass .dxeHFCR,
+.dxeListBox_BlackGlass .dxeHCR,
+.dxeListBox_BlackGlass .dxeHMICR
+{
+	border-left-width: 0;
+	text-align: right;
 }
 .dxeListBox_BlackGlass .dxeHLC
 {
-    border-right: solid 1px #A0A0A0;
+	border-right: 1px solid #A0A0A0;
+}
+.dxeListBox_BlackGlass .dxeHLCR
+{
+	border-left: 1px solid #A0A0A0;
+	text-align: right;
 }
 
 /* -- Calendar -- */
 .dxeCalendar_BlackGlass
 {
 	color: black;
-    border: solid 1px #A0A0A0;
-	background-color: White;    
+	border: 1px solid #A0A0A0;
+	background-color: White;
 	font-weight: normal;
 }
-.dxeCalendar_BlackGlass td.dxMonthGrid, .dxeCalendar_BlackGlass td.dxMonthGridWithWeekNumbers
+.dxeCalendar_BlackGlass td.dxMonthGrid,
+.dxeCalendar_BlackGlass td.dxMonthGridWithWeekNumbers
 {
-    padding: 8px 20px 8px 8px;
-    cursor: default;
+	padding: 8px 20px 8px 8px;
+	cursor: default;
 }
 .dxeCalendar_BlackGlass td.dxMonthGrid
 {
-    padding-left: 20px;
+	padding-left: 20px;
+}
+.dxeCalendar_BlackGlass td.dxMonthGridWithWeekNumbersRtl
+{
+	padding: 8px 8px 8px 20px;
+	cursor: default;
 }
 .dxeCalendarDayHeader_BlackGlass
 {
-    font-family: Tahoma;
-    font-size: 9pt;
-    padding: 4px;
-    color: Black;
-    border-bottom: solid 1px #cfcfcf;
+	font: 12px Tahoma;
+	padding: 4px;
+	color: Black;
+	border-bottom: 1px solid #cfcfcf;
 }
 .dxeCalendarWeekNumber_BlackGlass
-{    
-    font-family: Tahoma;
-    font-size: 8pt;    
-    text-align: right;
-    color: #86b4d8;    	
-    padding: 6px 8px 2px 4px;    
+{
+	font: 11px Tahoma;
+	text-align: right;
+	color: #86b4d8;
+	padding: 6px 8px 2px 4px;
 }
 .dxeCalendarDay_BlackGlass
-{    
-    font-family: Tahoma;
-    font-size: 8pt;
-    padding: 3px;
-    color:Black;
+{
+	font: 11px Tahoma;
+	padding: 3px;
+	color: Black;
 	background-color: White;
-    text-align: center;
+	text-align: center;
 }
 .dxeCalendarWeekend_BlackGlass       	/* inherits dxeCalendarDay */
 {
-    color: #fe3c00;
+	color: #fe3c00;
 }
 .dxeCalendarOtherMonth_BlackGlass    	 /* inherits dxeCalendarDay */
 {
-    color: #acacac;
+	color: #acacac;
 }
 .dxeCalendarOutOfRange_BlackGlass        /* inherits dxeCalendarDay */
 {
-    color: #d0d0d0;    
+	color: #d0d0d0;
 }
 .dxeCalendarSelected_BlackGlass       	/* inherits dxeCalendarDay */
 {
-    background-color: #93a7ba;
-    color: white;
+	background-color: #93a7ba;
+	color: white;
 }
 .dxeCalendarToday_BlackGlass       	        /* inherits dxeCalendarDay */
 {
-    border: solid 1px #ff5c20;
-    padding: 2px;
+	border: 1px solid #ff5c20;
+	padding: 2px;
 }
 .dxeCalendarHeader_BlackGlass
 {
-    font-family: Tahoma;
-    font-size: 9pt;        
-    background-color: #c5d6df;
-    border: solid 1px #a0a0a0;
-	border-width: 1px 0;
-    text-align: center;
-    padding: 1px;
+	font: 12px Tahoma;
+	background-color: #c5d6df;
+	border-top: 1px solid #a0a0a0;
+	border-right: 0 solid #a0a0a0;
+	border-bottom: 1px solid #a0a0a0;
+	border-left: 0 solid #a0a0a0;
+	text-align: center;
+	padding: 1px;
 	height: 18px;
 }
 .dxeCalendarHeader_BlackGlass td.dxe
 {
-    font-family: Tahoma;
-    font-size: 9pt;
-    text-align: center;
+	text-align: center;
 	cursor: pointer;
 }
 .dxeCalendarFooter_BlackGlass
 {
-    background-color: #e4edef;
-    padding: 6px 0px;
-    border-top: solid 1px #a0a0a0;
+	background-color: #e4edef;
+	padding: 6px 0px;
+	border-top: 1px solid #a0a0a0;
 }
 .dxeCalendarFastNav_BlackGlass
 {
-    background: white;
-    border: solid 1px #a0a0a0;
-    border-bottom: 0px;
-    padding: 8px;
+	background: white none;
+	border-top: 1px solid #a0a0a0;
+	border-right: 1px solid #a0a0a0;
+	border-bottom: 0px solid #a0a0a0;
+	border-left: 1px solid #a0a0a0;
+	padding: 8px;
 }
 .dxeCalendarFastNavFooter_BlackGlass
 {
-    background: #e4edef;
-    padding: 6px 0px;
-    border: solid 1px #a0a0a0;    
+	background: #e4edef none;
+	padding: 6px 0px;
+	border: 1px solid #a0a0a0;
 }
-.dxeCalendarFastNavMonth_BlackGlass, .dxeCalendarFastNavYear_BlackGlass
+.dxeCalendarFastNavMonth_BlackGlass,
+.dxeCalendarFastNavYear_BlackGlass
 {
-    font: 9pt Tahoma;
-    color: Black;
-    padding: 4px 6px;
-    text-align: center;
+	font: 12px Tahoma;
+	color: Black;
+	padding: 4px 6px;
+	text-align: center;
 	cursor: pointer;
 }
-.dxeCalendarFastNavMonthSelected_BlackGlass, .dxeCalendarFastNavYearSelected_BlackGlass
+.dxeCalendarFastNavMonthSelected_BlackGlass,
+.dxeCalendarFastNavYearSelected_BlackGlass
 {
-    background: #93a7ba;
+	background: #93a7ba none;
 }
-.dxeCalendarFastNavMonthHover_BlackGlass, .dxeCalendarFastNavYearHover_BlackGlass
-{        
-    background: #c1ced9;
+.dxeCalendarFastNavMonthHover_BlackGlass,
+.dxeCalendarFastNavYearHover_BlackGlass
+{
+	background: #c1ced9 none;
 }
 /* Disabled */
-.dxeDisabled_BlackGlass, .dxeDisabled_BlackGlass td.dxe
+.dxeDisabled_BlackGlass,
+.dxeDisabled_BlackGlass td.dxe
 {
 	color: #bebebe;
 	cursor: default;
 }
 a.dxeDisabled_BlackGlass, a.dxeDisabled_BlackGlass:hover
 {
-    color: #9f9f9f;
+	color: #9f9f9f;
 }
-.dxeButtonDisabled_BlackGlass, .dxeButtonDisabled_BlackGlass td.dxe
+.dxeButtonDisabled_BlackGlass,
+.dxeButtonDisabled_BlackGlass td.dxe
 {
 	color: #808080;
-	background: #b6b6b6 url('edtButtonBackDis_16.gif') repeat-x top left;
+	background: #b6b6b6 url('edtButtonBackDis_16.gif') repeat-x left top;
 	border-color: #a5a5a5;
 	cursor: default;
 }
 /* -- Button -- */
 .dxbButton_BlackGlass
-{	
-    color: #FFFFFF;   
-    font-size: 9pt;
-    font-family: Tahoma;				    
-	font-weight:normal;
-    vertical-align: middle;	 		
-    border: solid 1px #000000;	
-    background: #424242 url('edtButtonBack.gif') top;
-    background-repeat:repeat-x;
-    padding: 1px 1px 1px 1px;
+{
+	color: #FFFFFF;
+	font: normal 12px Tahoma;
+	vertical-align: middle;
+	border: 1px solid #000000;
+	background: #424242 url('edtButtonBack.gif') repeat-x top;
+	padding: 1px;
 	cursor: pointer;
 }
-.dxbButtonHover_BlackGlass 
+.dxbButtonHover_BlackGlass
 {
-  	color: #FFFFFF;   
-	background: #759DB3 url('edtButtonHoverBack.gif') top;
-    background-repeat: repeat-x;
+	color: #FFFFFF;
+	background: #759DB3 url('edtButtonHoverBack.gif') repeat-x top;
 }
-.dxbButtonChecked_BlackGlass 
+.dxbButtonChecked_BlackGlass
 {
-    color: #FFFFFF;
-	background: #3D677F url('edtButtonCheckedBack.gif') top;
-    background-repeat: repeat-x;	
+	color: #FFFFFF;
+	background: #3D677F url('edtButtonCheckedBack.gif') repeat-x top;
 }
-.dxbButtonPressed_BlackGlass 
+.dxbButtonPressed_BlackGlass
 {
-  	color: #FFFFFF;        
-	background: #AEAEAE url('edtButtonPressedBack.gif') top;
-    background-repeat: repeat-x;
+	color: #FFFFFF;
+	background: #AEAEAE url('edtButtonPressedBack.gif') repeat-x top;
 }
 .dxbButton_BlackGlass div.dxb
-{    
-    padding: 2px 12px 3px 12px;
-	border: 0px;
+{
+	padding: 2px 12px 3px;
+	border-width: 0px;
 }
 .dxbButton_BlackGlass div.dxbf
-{     
-    padding: 1px 11px 2px 11px;
-	border: dotted 1px #C2E4F6;		
-}
-.dxbButton_BlackGlass div.dxb table
-{    
-    color: #FFFFFF;   
-    font-size: 9pt;
-    font-family: Tahoma;				    
-	font-weight:normal;
+{
+	padding: 1px 11px 2px;
+	border: 1px dotted #C2E4F6;
 }
 .dxbButton_BlackGlass div.dxb td.dxb
-{    
-    background-color: transparent!important;
-    background-image: url('')!important;
-    border-width: 0px!important;
-    padding: 0px!important;
+{
+	background: transparent url('')!important;
+	border-width: 0px!important;
+	padding: 0px!important;
 }
 /* Disabled */
 .dxbDisabled_BlackGlass
 {
-    background: #a1a1a1 url('edtButtonBackDis.gif') repeat-x top;
-    border-color: #a5a5a5;
+	background: #a1a1a1 url('edtButtonBackDis.gif') repeat-x top;
+	border-color: #a5a5a5;
 	color: #ffffff;
 	cursor: default;
 }
@@ -671,28 +1284,28 @@ a.dxeDisabled_BlackGlass, a.dxeDisabled_BlackGlass:hover
 {
 	padding: 0px 0px 0px 3px;
 	vertical-align: middle;
-	font: 9pt Tahoma;
-	color: Black;	
+	font: 12px Tahoma;
+	color: Black;
 }
 a.dxfcPropertyName_BlackGlass
 {
-	white-space:nowrap!important;
+	white-space: nowrap!important;
 	color: Blue!important;
 }
 a.dxfcGroupType_BlackGlass
 {
-	white-space:nowrap!important;
-	padding:0px 3px 0px 3px!important;
+	white-space: nowrap!important;
+	padding: 0px 3px!important;
 	color: Red!important;
 }
 a.dxfcOperation_BlackGlass
 {
-	white-space:nowrap!important;
+	white-space: nowrap!important;
 	color: Green!important;
 }
 a.dxfcValue_BlackGlass
 {
-	white-space:nowrap!important;
+	white-space: nowrap!important;
 	color: Gray!important;
 }
 .dxfcImageButton_BlackGlass
@@ -701,9 +1314,9 @@ a.dxfcValue_BlackGlass
 }
 .dxfcLoadingPanel_BlackGlass
 {
-	border: solid 1px #303030;
-	background: white;
-	font: 9pt Tahoma;
+	border: 1px solid #303030;
+	background: white none;
+	font: 12px Tahoma;
 	color: #303030;
 }
 .dxfcLoadingPanel_BlackGlass td.dx
@@ -714,105 +1327,204 @@ a.dxfcValue_BlackGlass
 }
 .dxfcLoadingDiv_BlackGlass
 {
-	background: white;
+	background: white none;
 	opacity: 0.01;
 	filter: alpha(opacity=1);
 }
 
-.dxeMaskHint_BlackGlass 
+.dxeMaskHint_BlackGlass
 {
-	background: #ffffe1;
-	border: solid 1px black;
+	background: #ffffe1 none;
+	border: 1px solid black;
 	padding: 2px 5px 3px;
 	color: Black;
-	font: 9pt Tahoma;
+	font: 12px Tahoma;
 }
 /* -- ProgressBar -- */
-.dxeProgressBar_BlackGlass, .dxeProgressBar_BlackGlass td
+.dxeProgressBar_BlackGlass,
+.dxeProgressBar_BlackGlass td
 {
-    font-family: Tahoma, Verdana, Arial;
-    font-size: 9pt;
-	color: #FFFFFF;    
+	font: 12px Tahoma;
+	color: #FFFFFF;
 }
-.dxeProgressBar_BlackGlass .dxePBMainCell, .dxeProgressBar_BlackGlass td.dxe
+.dxeProgressBar_BlackGlass .dxePBMainCell,
+.dxeProgressBar_BlackGlass td.dxe
 {
-    padding: 0;
+	padding: 0;
 }
 .dxeProgressBar_BlackGlass
 {
-    border: Solid 1px #000000;
-    background-color: #8A8B8B;
+	border: 1px Solid #000000;
+	background-color: #8A8B8B;
 }
 .dxeProgressBarIndicator_BlackGlass
 {
-    background-color: #464646;
-	background-image: url('edtProgressIndicatorBack.gif');
-    background-repeat: repeat-x;    
+	background: #464646 url('edtProgressIndicatorBack.gif') repeat-x;
 }
 
 /* -- DropDownWindow -- */
 .dxeDropDownWindow_BlackGlass
 {
-    background-color: white;
-    border: solid 1px #9F9F9F;
+	background-color: white;
+	border: 1px solid #9F9F9F;
 }
 
-/*----------------- ColorTable -----------------*/
+/*----------------- ColorTable  -----------------*/
 .dxeColorIndicator_BlackGlass
 {
-    border: solid 1px #9F9F9F;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
+	border: 1px solid #9F9F9F;
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
 }
 .dxeColorTable_BlackGlass
 {
-    background-color: white;
-    border: solid 1px #9F9F9F;
+	background-color: white;
+	border: 1px solid #9F9F9F;
 }
-.dxeColorTable_BlackGlass td.dx
+.dxeItemPicker_BlackGlass
 {
-   padding: 4px 4px;
+	background-color: #e8edf1;
+	border: 1px solid #4e4f51;
 }
-.dxeColorTableCell_BlackGlass {
-    padding-left: 3px;
-    padding-bottom: 3px;
-    padding-top: 3px;
-    padding-right: 3px;
-    cursor: pointer;
-}
-.dxeColorTableCellDiv_BlackGlass {
-    border: solid 1px #808080;
-    width: 12px;
-    height: 12px;
-    font-size: 0px;
-}
-.dxeColorTableCellSelected_BlackGlass {
-    padding-left: 2px!important;
-    padding-bottom: 2px!important;
-    padding-top: 2px!important;
-    padding-right: 2px!important;
-
-    background-color: #CBCBCB;
-    border: solid 1px #888888;
-}
-.dxeColorTableCellHover_BlackGlass {
-    padding-left: 2px!important;
-    padding-bottom: 2px!important;
-    padding-top: 2px!important;
-    padding-right: 2px!important;
-    
-    background-color: #F2F2F2;
-    border: solid 1px #888888;
-}
-
-/* Focused */
-.dxeFocused_BlackGlass 
+.dxeColorTable_BlackGlass td.dx,
+.dxeItemPicker_BlackGlass td.dx
 {
-    border: solid 1px Black;
+	padding: 4px;
 }
+.dxeColorTableCell_BlackGlass,
+.dxeItemPickerCell_BlackGlass
+{
+	padding: 3px;
+	cursor: pointer;
+}
+.dxeColorTableCellDiv_BlackGlass
+{
+	border: 1px solid #808080;
+	width: 12px;
+	height: 12px;
+	font-size: 0px;
+}
+.dxeColorTableCellSelected_BlackGlass
+{
+	padding: 2px!important;
+	background-color: #CBCBCB;
+	border: 1px solid #888888;
+}
+.dxeColorTableCellHover_BlackGlass,
+.dxeItemPickerCellHover_BlackGlass
+{
+	padding: 2px!important;
+}
+.dxeColorTableCellHover_BlackGlass
+{
+	background-color: #F2F2F2;
+	border: 1px solid #888888;
+}
+.dxeItemPickerCellHover_BlackGlass
+{
+	background-color: #c1ced9;
+	border: 1px solid #a4bed1;
+}
+
+/* -- Invalid Style -- */
+.dxeInvalid_BlackGlass
+{
+}
+.dxeInvalid_BlackGlass .dxeEditArea_BlackGlass,
+.dxeInvalid_BlackGlass .dxeMemoEditArea_BlackGlass
+{
+}
+
+/* -- Focused Style -- */
+.dxeFocused_BlackGlass
+{
+	border: 1px solid Black;
+}
+
+.dxeFocused_BlackGlass.dxeTrackBar_BlackGlass
+{	
+	border: 0px;
+}
+
+/* -- Null Text Style -- */
 .dxeNullText_BlackGlass .dxeEditArea_BlackGlass,
 .dxeNullText_BlackGlass .dxeMemoEditArea_BlackGlass
 {
-    color: #bebebe;
+	color: #bebebe;
 }
+
+/* -- Captcha -- */
+.dxcaControl_BlackGlass 
+{
+}
+
+.dxcaRefreshButton_BlackGlass
+{
+	font: 13px Tahoma;
+	text-decoration: none;
+	color: #4688aa;
+}
+
+.dxcaDisabledRefreshButton_BlackGlass
+{
+	color: #9f9f9f;
+}
+
+.dxcaRefreshButtonCell_BlackGlass
+{
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.dxcaRefreshButtonText_BlackGlass
+{
+	text-decoration: underline;
+}
+
+.dxcaDisabledRefreshButtonText_BlackGlass
+{
+	text-decoration: none;
+}
+
+.dxcaTextBoxCell_BlackGlass
+{
+	font: 12px Tahoma;
+}
+
+.dxcaTextBoxCell_BlackGlass,
+.dxcaTextBoxCellNoIndent_BlackGlass
+{
+	font: 12px Tahoma;
+}
+
+.dxcaTextBoxCellNoIndent_BlackGlass .dxeErrorCell_BlackGlass
+{
+	padding-left: 0px;
+	padding-top: 4px;
+	color: Red;
+}
+
+.dxcaTextBoxLabel_BlackGlass
+{
+	padding-bottom: 4px;
+	display: block;
+}
+
+.dxcaLoadingPanel_BlackGlass
+{
+	font: 12px Tahoma;
+	color: #303030;
+	border: 1px solid #D3D3D3;
+	background-color: #FFFFFF;
+}
+
+.dxcaLoadingPanel_BlackGlass td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px;
+}
+
+
+

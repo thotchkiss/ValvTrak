@@ -1,7 +1,7 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
-<%@ Register Assembly="DevExpress.Web.v10.2" Namespace="DevExpress.Web.ASPxCloudControl" TagPrefix="dxcc" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register Assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxCloudControl" TagPrefix="dxcc" %>
 
-<dxcc:ASPxCloudControl runat="server" CssFilePath="{0}/styles.css" CssPostfix="BlackGlass"
+<dxcc:ASPxCloudControl runat="server" CssFilePath="~/App_Themes/BlackGlass/{0}/styles.css" CssPostfix="BlackGlass"
     MinColor="#B5D5EF" MaxColor="#325678" HorizontalAlign="Justify">
     <RankProperties>
         <dxcc:RankProperties ForeColor="#AACFEC" Font-Size="10px"></dxcc:RankProperties>

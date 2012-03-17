@@ -1,9 +1,0 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
-<%@ Register TagPrefix="dxrp" Namespace="DevExpress.Web.ASPxRoundPanel" Assembly="DevExpress.Web.v10.2" %>
-<%@ Register TagPrefix="dxcp" Namespace="DevExpress.Web.ASPxCallbackPanel" Assembly="DevExpress.Web.v10.2" %>
-<%@ Register Assembly="DevExpress.Web.v10.2" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
-
-<dxcp:ASPxCallbackPanel runat="server" CssFilePath="{0}/styles.css" CssPostfix="Office2003Silver">
-    <LoadingPanelImage Url="Web/Loading.gif"></LoadingPanelImage>
-</dxcp:ASPxCallbackPanel>
-

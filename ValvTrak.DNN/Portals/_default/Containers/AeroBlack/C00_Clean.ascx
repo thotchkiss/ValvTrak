@@ -9,7 +9,7 @@
    <div class="C00_Actions">
         <dnn:SOLPARTACTIONS runat="server" id="dnnSOLPARTACTIONS" />
    </div>
-   <div runat="server" id="ContentPane" class="C00_ContentPane_NT/>
+   <div runat="server" id="ContentPane" class="C00_ContentPane_NT"/>
    <span class="C00_Icons"><dnn:ACTIONBUTTON runat="server" id="dnnACTIONBUTTON" CommandName="SyndicateModule.Action" DisplayIcon="True" DisplayLink="False" /> <dnn:PRINTMODULE runat="server" id="dnnPRINTMODULE" /></span>
 </div>
 

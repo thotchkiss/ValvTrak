@@ -1,7 +1,11 @@
 .dxGridView_gvCollapsedButton_RedWine,
+.dxGridView_gvCollapsedButtonRtl_RedWine,
 .dxGridView_gvExpandedButton_RedWine,
+.dxGridView_gvExpandedButtonRtl_RedWine,
 .dxGridView_gvDetailCollapsedButton_RedWine,
+.dxGridView_gvDetailCollapsedButtonRtl_RedWine,
 .dxGridView_gvDetailExpandedButton_RedWine,
+.dxGridView_gvDetailExpandedButtonRtl_RedWine,
 .dxGridView_gvFilterRowButton_RedWine,
 .dxGridView_gvHeaderFilter_RedWine,
 .dxGridView_gvHeaderFilterActive_RedWine,
@@ -11,32 +15,37 @@
 .dxGridView_gvDragAndDropArrowUp_RedWine,
 .dxGridView_gvDragAndDropHideColumn_RedWine,
 .dxGridView_gvParentGroupRows_RedWine,
-.dxGridView_WindowResizer_RedWine {
+.dxGridView_WindowResizer_RedWine,
+.dxGridView_WindowResizerRtl_RedWine {
     background-image: url('sprite.png');
     -background-image: url('sprite.gif'); /* for IE6 */
     background-repeat: no-repeat;
     background-color: transparent;
 }
 
-.dxGridView_gvCollapsedButton_RedWine {
+.dxGridView_gvCollapsedButton_RedWine,
+.dxGridView_gvCollapsedButtonRtl_RedWine {
     background-position: -36px 0px;
     width: 15px;
     height: 15px;
 }
 
-.dxGridView_gvExpandedButton_RedWine {
+.dxGridView_gvExpandedButton_RedWine,
+.dxGridView_gvExpandedButtonRtl_RedWine {
     background-position: -36px -18px;
     width: 15px;
     height: 15px;
 }
 
-.dxGridView_gvDetailCollapsedButton_RedWine {
+.dxGridView_gvDetailCollapsedButton_RedWine,
+.dxGridView_gvDetailCollapsedButtonRtl_RedWine {
     background-position: -53px 0px;
     width: 11px;
     height: 12px;
 }
 
-.dxGridView_gvDetailExpandedButton_RedWine {
+.dxGridView_gvDetailExpandedButton_RedWine,
+.dxGridView_gvDetailExpandedButtonRtl_RedWine {
     background-position: -53px -18px;
     width: 11px;
     height: 12px;
@@ -98,6 +107,12 @@
 
 .dxGridView_WindowResizer_RedWine {
     background-position: -46px -36px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_WindowResizerRtl_RedWine {
+    background-position: -91px -36px;
     width: 13px;
     height: 13px;
 }

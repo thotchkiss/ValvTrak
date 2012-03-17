@@ -10,6 +10,8 @@ Imports DotNetNuke.Framework.Providers
 Imports DotNetNuke.Security.Membership.Data
 Imports DotNetNuke.Security.Roles
 Imports DotNetNuke.Services.Exceptions
+Imports System.Data
+Imports System.Collections
 
 Namespace Rawson.Roles
 

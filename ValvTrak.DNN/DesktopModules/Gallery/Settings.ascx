@@ -1,8 +1,9 @@
+<%@ Control language="vb" CodeBehind="Settings.ascx.vb" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Gallery.Settings" Explicit="true" %>
+
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="SectionHead" Src="~/controls/SectionHeadControl.ascx" %>
 <%@ Register TagPrefix="TTP" TagName="LookupControl" Src="./Controls/ControlLookup.ascx" %>
 <%@ Register TagPrefix="dnn" NameSpace="DotNetNuke.Modules.Gallery.Views" Assembly="DotNetNuke.Modules.Gallery" %>
-<%@ Control language="vb" CodeBehind="Settings.ascx.vb" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Gallery.Settings" Explicit="true" %>
 
 <script type="text/javascript" language="javascript" src='<%= Page.ResolveUrl("DesktopModules/Gallery/Popup/gallerypopup.js") %>'>
 </script>
@@ -180,7 +181,7 @@
 					includerule="True" section="tblFeatureSettings" cssclass="Gallery_AltHeaderText" isExpanded="False"></dnn:sectionhead>
 				<table id="tblFeatureSettings" cellspacing="1" cellpadding="0" style="width:100%" runat="server">
 					<tr>
-						<td class="Gallery_RowPanel" style="width:220px; height:24px>&nbsp;
+						<td class="Gallery_RowPanel" style="width:220px; height:24px">&nbsp;
 							<dnn:label id="plSlideshowSpeed" runat="server" text="Slideshow Speed:" controlname="txtSlideshowSpeed"></dnn:label></td>
 						<td class="Gallery_Row" align="left"><asp:textbox id="txtSlideshowSpeed" runat="server" cssclass="NormalTextBox" width="75px" columns="26"></asp:textbox>&nbsp;<asp:RequiredFieldValidator id="valSlideShowSpeed1" runat="server" cssclass="NormalRed" resourcekey="RequiredField.ErrorMessage"
 								controltovalidate="txtSlideshowSpeed" Display="Dynamic" errormessage="Value cannot be blank"></asp:RequiredFieldValidator><asp:RangeValidator ID="valSlideShowSpeed2" runat="server" cssclass="NormalRed" ControlToValidate="txtSlideShowSpeed" Display="Dynamic"

@@ -10,8 +10,19 @@
 .dxWeb_rpGroupBoxTopRightCorner_RedWine,
 .dxWeb_mHorizontalPopOut_RedWine,
 .dxWeb_mVerticalPopOut_RedWine,
+.dxWeb_mVerticalPopOutRtl_RedWine,
 .dxWeb_mSubMenuItem_RedWine,
 .dxWeb_mSubMenuItemChecked_RedWine,
+.dxWeb_mScrollUp_RedWine,
+.dxWeb_mScrollDown_RedWine,
+.dxWeb_tcScrollLeft_RedWine,
+.dxWeb_tcScrollRight_RedWine,
+.dxWeb_tcScrollLeftHover_RedWine,
+.dxWeb_tcScrollRightHover_RedWine,
+.dxWeb_tcScrollLeftPressed_RedWine,
+.dxWeb_tcScrollRightPressed_RedWine,
+.dxWeb_tcScrollLeftDisabled_RedWine,
+.dxWeb_tcScrollRightDisabled_RedWine,
 .dxWeb_nbCollapse_RedWine,
 .dxWeb_nbExpand_RedWine,
 .dxWeb_splVSeparator_RedWine,
@@ -28,6 +39,7 @@
 .dxWeb_splHCollapseForwardButtonHover_RedWine,
 .dxWeb_pcCloseButton_RedWine,
 .dxWeb_pcSizeGrip_RedWine,
+.dxWeb_pcSizeGripRtl_RedWine,
 .dxWeb_pAll_RedWine,
 .dxWeb_pAllDisabled_RedWine,
 .dxWeb_pPrev_RedWine,
@@ -39,11 +51,84 @@
 .dxWeb_pFirst_RedWine,
 .dxWeb_pFirstDisabled_RedWine,
 .dxWeb_tiBackToTop_RedWine,
-.dxWeb_smLevelBullet_RedWine {
+.dxWeb_smBullet_RedWine,
+.dxWeb_tvColBtn_RedWine,
+.dxWeb_tvColBtnRtl_RedWine,
+.dxWeb_tvExpBtn_RedWine,
+.dxWeb_tvExpBtnRtl_RedWine,
+.dxWeb_fmFolder_RedWine,
+.dxWeb_fmFolderLocked_RedWine,
+.dxWeb_fmCreateButton_RedWine,
+.dxWeb_fmMoveButton_RedWine,
+.dxWeb_fmRenameButton_RedWine,
+.dxWeb_fmDeleteButton_RedWine,
+.dxWeb_fmRefreshButton_RedWine,
+.dxWeb_fmDwnlButton_RedWine,
+.dxWeb_fmCreateButtonDisabled_RedWine,
+.dxWeb_fmMoveButtonDisabled_RedWine,
+.dxWeb_fmRenameButtonDisabled_RedWine,
+.dxWeb_fmDeleteButtonDisabled_RedWine,
+.dxWeb_fmRefreshButtonDisabled_RedWine,
+.dxWeb_fmDwnlButtonDisabled_RedWine,
+.dxWeb_ucClearButton_RedWine,
+.dxWeb_ucClearButtonDisabled_RedWine {
     background-image: url('sprite.png');
     -background-image: url('sprite.gif'); /* for IE6 */
     background-repeat: no-repeat;
     background-color: transparent;
+    display:block;
+}
+.dxWeb_mScrollUp_RedWine, .dxWeb_mScrollDown_RedWine
+{
+	margin: auto;
+}
+.dxWeb_pAll_RedWine,
+.dxWeb_pAllDisabled_RedWine,
+.dxWeb_pPrev_RedWine,
+.dxWeb_pPrevDisabled_RedWine,
+.dxWeb_pNext_RedWine,
+.dxWeb_pNextDisabled_RedWine,
+.dxWeb_pLast_RedWine,
+.dxWeb_pLastDisabled_RedWine,
+.dxWeb_pFirst_RedWine,
+.dxWeb_pFirstDisabled_RedWine,
+.dxWeb_smBullet_RedWine,
+.dxWeb_tiBackToTop_RedWine
+{
+	display:inline;
+}
+
+.dxWeb_edtCheckBoxChecked_RedWine,
+.dxWeb_edtCheckBoxUnchecked_RedWine,
+.dxWeb_edtCheckBoxGrayed_RedWine,
+.dxWeb_edtCheckBoxCheckedDisabled_RedWine,
+.dxWeb_edtCheckBoxUncheckedDisabled_RedWine,
+.dxWeb_edtCheckBoxGrayedDisabled_RedWine {
+	background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+	width: 15px;
+    height: 15px;
+}
+
+.dxWeb_edtCheckBoxUnchecked_RedWine {
+	background-position: -142px -101px;
+}
+.dxWeb_edtCheckBoxChecked_RedWine {
+	background-position: -142px -116px; 
+}
+.dxWeb_edtCheckBoxGrayed_RedWine {
+	background-position: -142px -131px;
+}
+.dxWeb_edtCheckBoxUncheckedDisabled_RedWine {
+	background-position: -158px -101px;
+}
+.dxWeb_edtCheckBoxCheckedDisabled_RedWine {
+	background-position: -158px -116px;
+}
+.dxWeb_edtCheckBoxGrayedDisabled_RedWine {
+	background-position: -158px -131px;
 }
 
 .dxWeb_rpHeaderTopLeftCorner_RedWine {
@@ -118,6 +203,12 @@
     height: 11px;
 }
 
+.dxWeb_mVerticalPopOutRtl_RedWine {
+    background-position: -107px -62px;
+    width: 11px;
+    height: 11px;
+}
+
 .dxWeb_mSubMenuItem_RedWine {
     background-position: -48px -50px;
     width: 14px;
@@ -128,6 +219,74 @@
     background-position: -70px -50px;
     width: 14px;
     height: 14px;
+}
+
+.dxWeb_mScrollUp_RedWine {
+    background-position: -118px -50px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxWeb_mScrollDown_RedWine {
+    background-position: -118px -57px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxWeb_tcScrollLeft_RedWine 
+{
+	background-position: -147px 0;
+	width: 21px;
+	height: 21px;
+}
+
+.dxWeb_tcScrollRight_RedWine
+{
+	background-position: -169px 0;
+	width: 21px;
+	height: 21px;
+}
+
+.dxWeb_tcScrollLeftHover_RedWine
+{
+	background-position: -147px -22px;
+	width: 21px;
+	height: 21px;
+}
+
+.dxWeb_tcScrollRightHover_RedWine
+{
+	background-position: -169px -22px;
+	width: 21px;
+	height: 21px;
+}
+
+.dxWeb_tcScrollLeftPressed_RedWine
+{
+	background-position: -147px -44px;
+	width: 21px;
+	height: 21px;
+}
+
+.dxWeb_tcScrollRightPressed_RedWine
+{
+	background-position: -169px -44px;
+	width: 21px;
+	height: 21px;
+}
+
+.dxWeb_tcScrollLeftDisabled_RedWine
+{
+	background-position: -147px -66px;
+	width: 21px;
+	height: 21px;
+}
+
+.dxWeb_tcScrollRightDisabled_RedWine
+{
+	background-position: -169px -66px;
+	width: 21px;
+	height: 21px;
 }
 
 .dxWeb_nbCollapse_RedWine {
@@ -226,6 +385,12 @@
     height: 13px;
 }
 
+.dxWeb_pcSizeGripRtl_RedWine {
+    background-position: -39px -95px;
+    width: 13px;
+    height: 13px;
+}
+
 .dxWeb_pAll_RedWine {
     background-position: 0px 0px;
     width: 24px;
@@ -292,10 +457,114 @@
     height: 13px;
 }
 
-.dxWeb_smLevelBullet_RedWine {
+.dxWeb_smBullet_RedWine {
     background-position: -130px -66px;
     width: 5px;
     height: 5px;
 }
 
+.dxWeb_tvColBtn_RedWine,
+.dxWeb_tvColBtnRtl_RedWine {
+	background-position: -19px -95px;
+    width: 17px;
+    height: 17px;
+}
 
+.dxWeb_tvExpBtn_RedWine,
+.dxWeb_tvExpBtnRtl_RedWine {
+	background-position: 0px -95px;
+    width: 17px;
+    height: 17px;
+}
+
+.dxWeb_fmFolder_RedWine {
+	background-position: 0px -113px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmFolderLocked_RedWine {
+	background-position: -20px -113px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmCreateButton_RedWine {
+	background-position: -40px -113px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmRenameButton_RedWine {
+	background-position: -60px -113px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmMoveButton_RedWine {
+	background-position: -80px -113px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmDeleteButton_RedWine {
+	background-position: -100px -113px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmRefreshButton_RedWine {
+	background-position: -120px -113px;
+    width: 16px;
+    height: 16px;
+}
+.dxWeb_fmDwnlButton_RedWine {
+	background-position: 0px -137px;
+    width: 16px;
+    height: 16px;
+}
+.dxWeb_fmDwnlButtonDisabled_RedWine {
+	background-position: -20px -137px;
+    width: 16px;
+    height: 16px;
+}
+.dxWeb_fmCreateButtonDisabled_RedWine {
+	background-position: -40px -137px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmRenameButtonDisabled_RedWine {
+	background-position: -60px -137px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmMoveButtonDisabled_RedWine {
+	background-position: -80px -137px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmDeleteButtonDisabled_RedWine {
+	background-position: -100px -137px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmRefreshButtonDisabled_RedWine {
+	background-position: -120px -137px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_ucClearButton_RedWine {
+    background-position: -100px -113px;
+    width: 16px;
+    height: 16px;
+}
+.dxWeb_ucClearButtonDisabled_RedWine {
+    background-position: -100px -137px;
+    width: 16px;
+    height: 16px;
+}

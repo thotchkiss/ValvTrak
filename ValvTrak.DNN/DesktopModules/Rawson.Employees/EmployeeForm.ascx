@@ -1,23 +1,23 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="EmployeeForm.ascx.cs" Inherits="Rawson.Employees.EmployeeForm" EnableTheming="true" %>
-<%@ Register Assembly="DevExpress.Web.ASPxGridView.v10.2.Export"
+<%@ Register Assembly="DevExpress.Web.ASPxGridView.v11.2.Export"
     Namespace="DevExpress.Web.ASPxGridView.Export" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxHiddenField" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.ASPxGridView.v10.2"
+<%@ Register Assembly="DevExpress.Web.ASPxGridView.v11.2"
     Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v10.2"
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.2"
     Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
 
 <script type="text/javascript">

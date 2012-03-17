@@ -1,7 +1,11 @@
 .dxGridView_gvCollapsedButton_BlackGlass,
+.dxGridView_gvCollapsedButtonRtl_BlackGlass,
 .dxGridView_gvExpandedButton_BlackGlass,
+.dxGridView_gvExpandedButtonRtl_BlackGlass,
 .dxGridView_gvDetailCollapsedButton_BlackGlass,
+.dxGridView_gvDetailCollapsedButtonRtl_BlackGlass,
 .dxGridView_gvDetailExpandedButton_BlackGlass,
+.dxGridView_gvDetailExpandedButtonRtl_BlackGlass,
 .dxGridView_gvFilterRowButton_BlackGlass,
 .dxGridView_gvHeaderFilter_BlackGlass,
 .dxGridView_gvHeaderFilterActive_BlackGlass,
@@ -11,32 +15,37 @@
 .dxGridView_gvDragAndDropArrowUp_BlackGlass,
 .dxGridView_gvDragAndDropHideColumn_BlackGlass,
 .dxGridView_gvParentGroupRows_BlackGlass,
-.dxGridView_WindowResizer_BlackGlass {
+.dxGridView_WindowResizer_BlackGlass,
+.dxGridView_WindowResizerRtl_BlackGlass {
     background-image: url('sprite.png');
     -background-image: url('sprite.gif'); /* for IE6 */
     background-repeat: no-repeat;
     background-color: transparent;
 }
 
-.dxGridView_gvCollapsedButton_BlackGlass {
+.dxGridView_gvCollapsedButton_BlackGlass,
+.dxGridView_gvCollapsedButtonRtl_BlackGlass {
     background-position: -36px 0px;
     width: 11px;
     height: 12px;
 }
 
-.dxGridView_gvExpandedButton_BlackGlass {
+.dxGridView_gvExpandedButton_BlackGlass,
+.dxGridView_gvExpandedButtonRtl_BlackGlass {
     background-position: -36px -18px;
     width: 11px;
     height: 11px;
 }
 
-.dxGridView_gvDetailCollapsedButton_BlackGlass {
+.dxGridView_gvDetailCollapsedButton_BlackGlass,
+.dxGridView_gvDetailCollapsedButtonRtl_BlackGlass {
     background-position: -53px 0px;
     width: 11px;
     height: 11px;
 }
 
-.dxGridView_gvDetailExpandedButton_BlackGlass {
+.dxGridView_gvDetailExpandedButton_BlackGlass,
+.dxGridView_gvDetailExpandedButtonRtl_BlackGlass {
     background-position: -53px -18px;
     width: 11px;
     height: 11px;
@@ -98,6 +107,12 @@
 
 .dxGridView_WindowResizer_BlackGlass {
     background-position: -46px -36px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_WindowResizerRtl_BlackGlass {
+    background-position: -91px -36px;
     width: 13px;
     height: 13px;
 }

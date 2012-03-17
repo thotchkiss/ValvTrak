@@ -1,15 +1,15 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
-<%@ Register TagPrefix="dxwgv" Namespace="DevExpress.Web.ASPxGridView" Assembly="DevExpress.Web.ASPxGridView.v10.2" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxwgv" Namespace="DevExpress.Web.ASPxGridView" Assembly="DevExpress.Web.ASPxGridView.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 
-<dxwgv:ASPxGridView runat="server" CssFilePath="{0}/styles.css" CssPostfix="BlackGlass">
-    <Images SpriteCssFilePath="{0}/sprite.css">
-        <LoadingPanel Url="GridView/Loading.gif"></LoadingPanel>
-        <LoadingPanelOnStatusBar Url="GridView/gvLoadingOnStatusBar.gif"></LoadingPanelOnStatusBar>
+<dxwgv:ASPxGridView runat="server" CssFilePath="~/App_Themes/BlackGlass/{0}/styles.css" CssPostfix="BlackGlass">
+    <Images SpriteCssFilePath="~/App_Themes/BlackGlass/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/BlackGlass/GridView/Loading.gif"></LoadingPanel>
+        <LoadingPanelOnStatusBar Url="~/App_Themes/BlackGlass/GridView/gvLoadingOnStatusBar.gif"></LoadingPanelOnStatusBar>
     </Images>
     <ImagesFilterControl>
-        <LoadingPanel Url="Editors/Loading.gif"></LoadingPanel>
+        <LoadingPanel Url="~/App_Themes/BlackGlass/Editors/Loading.gif"></LoadingPanel>
     </ImagesFilterControl>
-    <Styles CssPostfix="BlackGlass" CssFilePath="{0}/styles.css">
+    <Styles CssPostfix="BlackGlass" CssFilePath="~/App_Themes/BlackGlass/{0}/styles.css">
         <Header SortingImageSpacing="5px" ImageSpacing="5px"></Header>
     </Styles>
     <SettingsPager CurrentPageNumberFormat="{0}">

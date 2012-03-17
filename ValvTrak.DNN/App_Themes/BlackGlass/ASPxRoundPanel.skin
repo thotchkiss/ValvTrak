@@ -1,43 +1,12 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
-<%@ Register TagPrefix="dxrp" Namespace="DevExpress.Web.ASPxRoundPanel" Assembly="DevExpress.Web.v10.2" %>
-<%@ Register Assembly="DevExpress.Web.v10.2" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxrp" Namespace="DevExpress.Web.ASPxRoundPanel" Assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register Assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
 
-<dxrp:ASPxRoundPanel runat="server" CssPostfix="BlackGlass" SpriteCssFilePath="{0}/sprite.css" 
-    CssFilePath="{0}/styles.css">
-    <Border BorderStyle="None" />
-    <BorderTop BorderStyle="Solid" BorderColor="Black" BorderWidth="1px" />
+<dxrp:ASPxRoundPanel runat="server" CssPostfix="BlackGlass" SpriteCssFilePath="~/App_Themes/BlackGlass/{0}/sprite.css" 
+    CssFilePath="~/App_Themes/BlackGlass/{0}/styles.css" GroupBoxCaptionOffsetY="-22">
     <ContentPaddings PaddingTop="5px" PaddingLeft="2px" PaddingBottom="5px" />
-    <HeaderStyle BackColor="White" Height="23px" HorizontalAlign="Left">
+    <HeaderStyle Height="23px">
         <Paddings PaddingTop="0px" PaddingBottom="0px" PaddingLeft="3px" />
-        <BackgroundImage Repeat="RepeatX" VerticalPosition="bottom" ImageUrl="Web/rpHeaderBack.gif" />
-        <Border BorderStyle="None" />
     </HeaderStyle>
-    <%-- Header parts --%>
-    <HeaderLeftEdge BackColor="#444545">
-        <BackgroundImage Repeat="RepeatX" VerticalPosition="top" HorizontalPosition="left" ImageUrl="Web/rpHeaderLeftEdge.png" />
-    </HeaderLeftEdge>
-    <HeaderContent BackColor="#444545">
-        <BackgroundImage Repeat="RepeatX" VerticalPosition="top" HorizontalPosition="left" ImageUrl="Web/rpHeaderBack.gif" />
-    </HeaderContent>
-    <HeaderRightEdge BackColor="#444545">
-        <BackgroundImage Repeat="NoRepeat" VerticalPosition="top" HorizontalPosition="right" ImageUrl="Web/rpHeaderRightEdge.png" />
-    </HeaderRightEdge>
-    <%-- Middle parts --%>
-    <Content BackColor="#C9D7DC">
-        <BackgroundImage VerticalPosition="top" ImageUrl="Web/rpContentBack.gif" />
-    </Content>
-    <TopEdge BackColor="#444545">
-        <BackgroundImage Repeat="RepeatX" VerticalPosition="top" HorizontalPosition="left" ImageUrl="Web/rpTopEdge.gif" />
-    </TopEdge>
-    <NoHeaderTopEdge BackColor="#C9D7DC" />
-    <RightEdge BackColor="#C9D7DC">
-        <BackgroundImage Repeat="RepeatY" VerticalPosition="top" HorizontalPosition="right" ImageUrl="Web/rpContentRightEdge.gif" />
-    </RightEdge>
-    <BottomEdge BackColor="#C9D7DC">
-        <BackgroundImage Repeat="RepeatX" VerticalPosition="bottom" ImageUrl="Web/rpContentBottomEdge.gif" />
-    </BottomEdge>
-    <LeftEdge BackColor="#C9D7DC">
-        <BackgroundImage Repeat="RepeatY" VerticalPosition="top" HorizontalPosition="left" ImageUrl="Web/rpContentLeftEdge.gif" />
-    </LeftEdge>
 </dxrp:ASPxRoundPanel>
 

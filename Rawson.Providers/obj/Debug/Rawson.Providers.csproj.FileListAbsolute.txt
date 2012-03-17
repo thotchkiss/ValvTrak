@@ -36,3 +36,17 @@ D:\SRD\ValvTrak.VS2010.DNN\Rawson.Providers\bin\Debug\Microsoft.Practices.Unity.
 D:\SRD\ValvTrak.VS2010.DNN\Rawson.Providers\obj\Debug\ResolveAssemblyReference.cache
 D:\SRD\ValvTrak.VS2010.DNN\Rawson.Providers\obj\Debug\Rawson.Providers.dll
 D:\SRD\ValvTrak.VS2010.DNN\Rawson.Providers\obj\Debug\Rawson.Providers.pdb
+C:\Users\Tim\ValvTrak\Rawson.Providers\bin\Debug\Rawson.Providers.dll
+C:\Users\Tim\ValvTrak\Rawson.Providers\bin\Debug\Rawson.Providers.pdb
+C:\Users\Tim\ValvTrak\Rawson.Providers\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Tim\ValvTrak\Rawson.Providers\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.dll
+C:\Users\Tim\ValvTrak\Rawson.Providers\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll
+C:\Users\Tim\ValvTrak\Rawson.Providers\bin\Debug\Rawson.Data.Model.dll
+C:\Users\Tim\ValvTrak\Rawson.Providers\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Tim\ValvTrak\Rawson.Providers\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Tim\ValvTrak\Rawson.Providers\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Users\Tim\ValvTrak\Rawson.Providers\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Tim\ValvTrak\Rawson.Providers\bin\Debug\Rawson.Data.Model.pdb
+C:\Users\Tim\ValvTrak\Rawson.Providers\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Tim\ValvTrak\Rawson.Providers\obj\Debug\Rawson.Providers.dll
+C:\Users\Tim\ValvTrak\Rawson.Providers\obj\Debug\Rawson.Providers.pdb

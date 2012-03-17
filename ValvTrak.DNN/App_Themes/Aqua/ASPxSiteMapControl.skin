@@ -1,7 +1,8 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
-<%@ Register TagPrefix="dxsm" Namespace="DevExpress.Web.ASPxSiteMapControl" Assembly="DevExpress.Web.v10.2" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxsm" Namespace="DevExpress.Web.ASPxSiteMapControl" Assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 
-<dxsm:ASPxSiteMapControl runat="server" CssFilePath="{0}/styles.css" CssPostfix="Aqua">
+<dxsm:ASPxSiteMapControl runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css" 
+    SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" CssPostfix="Aqua">
     <DefaultLevelProperties ImageSpacing="10px" NodeSpacing="8px">
         <ChildNodesPaddings PaddingBottom="0px" PaddingLeft="16px" PaddingTop="8px" />
         <NodePaddings PaddingRight="60px" />
@@ -18,22 +19,22 @@
         </dxsm:LevelProperties>        
         <dxsm:LevelProperties>
 			<Image>
-				<SpriteProperties CssClass="dxWeb_smLevelBullet_Aqua"></SpriteProperties>
+				<SpriteProperties CssClass="dxWeb_smBullet_Aqua"></SpriteProperties>
 			</Image>
         </dxsm:LevelProperties>
         <dxsm:LevelProperties>
 			<Image>
-				<SpriteProperties CssClass="dxWeb_smLevelBullet_Aqua"></SpriteProperties>
+				<SpriteProperties CssClass="dxWeb_smBullet_Aqua"></SpriteProperties>
 			</Image>
         </dxsm:LevelProperties>
         <dxsm:LevelProperties>
 			<Image>
-				<SpriteProperties CssClass="dxWeb_smLevelBullet_Aqua"></SpriteProperties>
+				<SpriteProperties CssClass="dxWeb_smBullet_Aqua"></SpriteProperties>
 			</Image>		
         </dxsm:LevelProperties>
         <dxsm:LevelProperties>
 			<Image>
-				<SpriteProperties CssClass="dxWeb_smLevelBullet_Aqua"></SpriteProperties>
+				<SpriteProperties CssClass="dxWeb_smBullet_Aqua"></SpriteProperties>
 			</Image>		
         </dxsm:LevelProperties>
     </LevelProperties>

@@ -1,8 +1,8 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
-<%@ Register TagPrefix="dxpg" Namespace="DevExpress.Web.ASPxPager" Assembly="DevExpress.Web.v10.2" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxpg" Namespace="DevExpress.Web.ASPxPager" Assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 
-<dxpg:ASPxPager runat="server" CssFilePath="{0}/styles.css" CssPostfix="Aqua" 
-    SpriteCssFilePath="{0}/sprite.css" CurrentPageNumberFormat="{0}" ShowNumericButtons="True">
+<dxpg:ASPxPager runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
+    SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" CurrentPageNumberFormat="{0}" ShowNumericButtons="True">
     <Summary Visible="False" />
     <NextPageButton Visible="True"></NextPageButton>
     <PrevPageButton Visible="True"></PrevPageButton>

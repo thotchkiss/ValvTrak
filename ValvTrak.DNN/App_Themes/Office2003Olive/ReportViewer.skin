@@ -1,7 +1,0 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
-<%@ Register TagPrefix="dxxr" Namespace="DevExpress.XtraReports.Web" Assembly="DevExpress.XtraReports.v10.2.Web" %>
-<dxxr:ReportViewer runat="server" CssFilePath="{0}/styles.css" CssPostfix="Office2003Olive" SpriteCssFilePath="{0}/sprite.css">
-  <LoadingPanelStyle ForeColor="#758D5E"></LoadingPanelStyle>
-  <LoadingPanelImage Url="Web/Loading.gif"></LoadingPanelImage>
-</dxxr:ReportViewer>
-

@@ -243,7 +243,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="SubHead" valign="top"  style="width:160px;>
+                                    <td class="SubHead" valign="top"  style="width:160px;">
                                         <dnn:Label ID="lblNotifyEmailMessage" runat="server"></dnn:Label>
                                     </td>
                                     <td class="SubHead" valign="top" style="white-space:nowrap;">

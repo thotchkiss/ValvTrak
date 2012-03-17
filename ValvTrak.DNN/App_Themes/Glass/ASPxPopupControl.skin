@@ -1,9 +1,0 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
-<%@ Register TagPrefix="dxpc" Namespace="DevExpress.Web.ASPxPopupControl" Assembly="DevExpress.Web.v10.2" %>
-
-<dxpc:ASPxPopupControl runat="server" CssFilePath="{0}/styles.css" CssPostfix="Glass" SpriteCssFilePath="{0}/sprite.css">
-    <HeaderStyle>
-        <Paddings PaddingTop="1px" PaddingRight="6px" PaddingLeft="10px"></Paddings>
-    </HeaderStyle>
-</dxpc:ASPxPopupControl>
-

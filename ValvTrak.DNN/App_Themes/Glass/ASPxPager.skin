@@ -1,7 +1,0 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
-<%@ Register TagPrefix="dxpg" Namespace="DevExpress.Web.ASPxPager" Assembly="DevExpress.Web.v10.2" %>
-
-<dxpg:ASPxPager runat="server" CurrentPageNumberFormat="{0}" CssFilePath="{0}/styles.css" CssPostfix="Glass" 
-    SpriteCssFilePath="{0}/sprite.css">
-</dxpg:ASPxPager>
-

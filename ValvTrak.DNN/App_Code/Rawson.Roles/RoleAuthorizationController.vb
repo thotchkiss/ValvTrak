@@ -9,6 +9,7 @@ Imports DotNetNuke.Entities.Users
 Imports DotNetNuke.Services.Mail
 Imports System.Xml
 Imports System.Collections.Generic
+Imports System.Data
 
 Namespace Rawson.Roles
 

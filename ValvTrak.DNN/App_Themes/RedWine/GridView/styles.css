@@ -1,29 +1,17 @@
 .dxgvControl_RedWine,
 .dxgvDisabled_RedWine
 {
-	border: Solid 1px #8A0A37;
-	font: 9pt Tahoma;
+	border: 1px Solid #8A0A37;
+	font: 12px Tahoma;
 	background-color: #EFEFEF;
 	color: #000000;
 	cursor: default;
 }
-.dxgvControl_RedWine .dxpControl_RedWine 
-{
-	background-color: #EFEFEF;
-}
-.dxgvControl_RedWine .dxpControl_RedWine td.dxpCtrl
-{
-	padding: 6px 0px 6px 0px;
-}
-.dxgvControl_RedWine .dxpSummary_RedWine 
-{
-	color: #727272;
-}
-.dxgvDisabled_RedWine 
+.dxgvDisabled_RedWine
 {
 	color: Gray;
 }
-.dxgvControl_RedWine a 
+.dxgvControl_RedWine a
 {
 	color: #8A0A37;
 }
@@ -31,38 +19,39 @@
 {
 	color: #BE458B;
 }
-.dxgvControl_RedWine a:visited
-{
-	color: #928489;
-}
 .dxgvDisabled_RedWine a
 {
 	color: Gray;
 }
 .dxgvLoadingPanel_RedWine
 {
+	font: 12px Tahoma;
+	color: #767676;
+	background-color: #f6f6f6;
+	border: 1px solid #898989;
 }
 .dxgvLoadingPanel_RedWine td
 {
-	padding: 0px;
+	white-space: nowrap;
+	text-align: center;
+	padding: 10px 20px 6px;
 }
 .dxgvLoadingPanelStatusBar_RedWine
 {
 	background-color: transparent;
-	font: 12px Tahoma;
 }
 .dxgvLoadingPanelStatusBar_RedWine td
 {
 	white-space: nowrap;
 	text-align: center;
-	padding: 0px 2px 0px 2px;
+	padding: 0px 2px;
 }
 
 .dxgvFilterPopupWindow_RedWine
 {
 	color: Black;
-	font: 9pt Tahoma;
-	border: solid 1px #8a0a37;
+	font: 12px Tahoma;
+	border: 1px solid #8a0a37;
 }
 .dxgvFilterPopupItemsArea_RedWine
 {
@@ -71,10 +60,9 @@
 }
 .dxgvFilterPopupButtonPanel_RedWine
 {
-	font: 9pt Tahoma;
 	background-color: #eed8e3;
 	border: 1px solid #dcdcdc;
-	border-left-width: 0px;
+	border-left: 0px solid #dcdcdc;
 	color: Black;
 }
 
@@ -87,26 +75,25 @@
 	border-top: 1px solid #f5ecf1;
 	border-right: 1px solid #f5ecf1;
 	cursor: default;
-	white-space: nowrap;	
+	white-space: nowrap;
 }
 .dxgvFilterPopupActiveItem_RedWine
 {
-	background: #dbbbda;
-    color: Black;
+	background: #dbbbda none;
+	color: Black;
 }
 .dxgvFilterPopupSelectedItem_RedWine
 {
-    color: White;
-    background: #8A0A37;
+	color: White;
+	background: #8A0A37 none;
 }
 
 .dxgvTable_RedWine
 {
 	background-color: #FFFFFF;
-	border: 0;
+	border-width: 0;
 	border-collapse: separate!important;
 	overflow: hidden;
-	font: 9pt Tahoma;
 	color: #000000;
 }
 .dxgvInlineEditRow_RedWine,
@@ -115,25 +102,32 @@
 }
 .dxgvInlineEditRow_RedWine td.dxgv
 {
-	border-bottom: Solid 1px #D5D5D5;
-	border-right: Solid 1px #D5D5D5;
+	border-bottom: 1px Solid #D5D5D5;
+	border-right: 1px Solid #D5D5D5;
 }
 .dxgvDataRowAlt_RedWine
 {
 	background-color: #F8EDEF;
 }
-.dxgvFilterRow_RedWine 
+.dxgvFilterRow_RedWine
 {
 	background-color: #E2A4BA;
 }
-.dxgvEditForm_RedWine 
+.dxgvEditForm_RedWine
 {
 	background-color: #F6EBF6;
 }
 .dxgvEditForm_RedWine td.dxgv
 {
-	border-bottom: Solid 1px #D5D5D5;
-	padding: 15px 15px 15px 15px;
+	border-bottom: 1px Solid #D5D5D5;
+	padding: 15px;
+}
+.dxgvEditForm_RedWine td.dxgvIndentCell
+{
+	background: #ebebeb none;
+	border-right: 1px Solid #d5d5d5;
+	border-left: 1px Solid #d5d5d5;
+	border-top-width: 0px;
 }
 .dxgvSelectedRow_RedWine
 {
@@ -143,13 +137,13 @@
 .dxgvFocusedRow_RedWine
 {
 	background-color: #8A0A37;
-    color: #FFFFFF;
+	color: #FFFFFF;
 }
 .dxgvSelectedRow_RedWine td.dxgvCommandColumn_RedWine a, 
 .dxgvFocusedRow_RedWine td.dxgvCommandColumn_RedWine a,
 .dxgvFocusedRow_RedWine a.dxeHyperlink
 {
-    color: #FFFFFF;
+	color: #FFFFFF;
 }
 .dxgvPreviewRow_RedWine
 {
@@ -161,10 +155,10 @@
 .dxgvEmptyDataRow_RedWine td.dxgv
 {
 	padding: 30px 2px 30px 4px;
-	border-bottom: Solid 1px #D5D5D5;
-	border-top: 0;
-	border-left: 0;
-	border-right: 0;
+	border-bottom: 1px Solid #D5D5D5;
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
 }
 .dxgvPreviewRow_RedWine td.dxgv
 {
@@ -172,13 +166,13 @@
 }
 .dxgvDetailCell_RedWine
 {
-	padding: 19px 19px 19px 0px;
+	padding: 19px;
 }
-.dxgvDetailRow_RedWine td.dxgvIndentCell 
+.dxgvDetailRow_RedWine td.dxgvIndentCell
 {
-    padding-left: 0px;
-    padding-right: 0px;
-    border-bottom: Solid 1px #D5D5D5;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-bottom: 1px Solid #D5D5D5;
 }
 
 .dxgvEmptyDataRow_RedWine
@@ -198,11 +192,11 @@
 .dxgvFocusedRow_RedWine td.dxgv
 {
 	overflow: hidden;
-	border-bottom: Solid 1px #D5D5D5;
-	border-right: Solid 1px #D5D5D5;
-	border-top: 0;
-	border-left: 0;
-	padding: 4px 5px 5px 5px;
+	border-bottom: 1px Solid #D5D5D5;
+	border-right: 1px Solid #D5D5D5;
+	border-top-width: 0;
+	border-left-width: 0;
+	padding: 4px 5px 5px;
 }
 .dxgvEditFormDisplayRow_RedWine td.dxgvCommandColumn_RedWine,
 .dxgvDataRow_RedWine td.dxgvCommandColumn_RedWine,
@@ -210,14 +204,21 @@
 .dxgvSelectedRow_RedWine td.dxgvCommandColumn_RedWine,
 .dxgvFocusedRow_RedWine td.dxgvCommandColumn_RedWine
 {
-	padding: 4px 5px 5px 5px;
+	padding: 4px 5px 5px;
 }
 .dxgvEditFormDisplayRow_RedWine
 {
-    background-color: #F1E3F1;
+	background-color: #F1E3F1;
 }
-.dxgvEditFormDisplayRow_RedWine td.dxgv 
+.dxgvEditFormDisplayRow_RedWine td.dxgv
 {
+}
+.dxgvEditFormDisplayRow_RedWine td.dxgvIndentCell
+{
+	background: #ebebeb none;
+	border-right: 1px Solid #d5d5d5;
+	border-left: 1px Solid #d5d5d5;
+	border-top-width: 0px;
 }
 .dxgvEditingErrorRow_RedWine
 {
@@ -227,20 +228,21 @@
 .dxgvEditingErrorRow_RedWine td.dxgv
 {
 	white-space: pre-wrap;
-	border-bottom: Solid 1px #D5D5D5;
-	border-right: 0;
-	border-top: 0;
-	border-left: 0;
-	padding: 6px 12px 6px 12px;
+	border-bottom: 1px Solid #D5D5D5;
+	border-right-width: 0;
+	border-top-width: 0;
+	border-left-width: 0;
+	padding: 6px 12px;
 }
 
 .dxgvFilterRow_RedWine td.dxgv
 {
-	border-bottom: Solid 1px #BC758E;
-	border-right: 0px;
-	border-top: 0;
-	border-left: 0;
-	padding: 2px 1px 2px 1px;
+	border-bottom: 1px Solid #BC758E;
+	border-right-width: 0px;
+	border-top-width: 0;
+	border-left-width: 0;
+	padding: 2px 1px;
+	overflow: hidden;
 }
 .dxgvGroupRow_RedWine
 {
@@ -250,74 +252,75 @@
 .dxgvFocusedGroupRow_RedWine
 {
 	background-color: #8A0A37;
-    color: #FFFFFF;
+	color: #FFFFFF;
 }
 .dxgvGroupRow_RedWine td.dxgv,
 .dxgvFocusedGroupRow_RedWine td.dxgv
 {
-	border: none 0;
+	border-top: 0px none;
+	border: 0 none;
 	vertical-align: middle;
 	white-space: nowrap;
-	border-top: 0px;
-	border-bottom: Solid 1px #D5D5D5;
-	padding: 4px 5px 4px 5px;
+	border-bottom: 1px Solid #D5D5D5;
+	padding: 4px 5px;
 }
 .dxgvFocusedRow_RedWine td.dxgvIndentCell,
 .dxgvFocusedGroupRow_RedWine td.dxgvIndentCell,
 .dxgvSelectedRow_RedWine td.dxgvIndentCell
 {
 	background-color: #EBEBEB!important;
-	border-right: solid 1px #D5D5D5;
-	border-top: 0px;
+	border-right: 1px solid #D5D5D5;
+	border-left: 1px solid #D5D5D5;
+	border-top-width: 0px;
 }
-.dxgvHeaderPanel_RedWine {
+.dxgvHeaderPanel_RedWine
+{
 	background-color: #F27AA4;
 	color: #FFFFFF;
 	padding: 8px 4px 8px 3px;
-	border-bottom: Solid 1px #8A0A37;
+	border-bottom: 1px Solid #8A0A37;
 }
 
-.dxgvHeader_RedWine {
+.dxgvHeader_RedWine
+{
 	cursor: pointer;
 	white-space: nowrap;
-	padding: 5px 5px 5px 5px;
-	border: Solid 1px #8A0A37;
-	background-image: url('gvHeaderBackground.gif');
-	background-position: top;
-	background-repeat: repeat-x;
-	background-color: #F27AA4;
+	padding: 5px;
+	border: 1px Solid #8A0A37;
+	background: #F27AA4 url('gvHeaderBackground.gif') repeat-x top;
 	overflow: hidden;
-    font-weight: normal;
-    text-align: left;
+	font-weight: normal;
+	text-align: left;
 }
 
 .dxgvHeader_RedWine a,
-.dxgvHeader_RedWine a:hover,
-.dxgvHeader_RedWine a:visited {
+.dxgvHeader_RedWine a:hover
+{
 	color: White;
 }
 
-.dxgvHeader_RedWine, .dxgvHeader_RedWine table {
+.dxgvHeader_RedWine,
+.dxgvHeader_RedWine table
+{
 	color: #FFFFFF;
-	font: 9pt Tahoma;
 }
-.dxgvHeader_RedWine td {
+.dxgvHeader_RedWine td
+{
 	white-space: nowrap;
 }
 .dxgvCustomization_RedWine, 
 .dxgvPopupEditForm_RedWine
 {
-	width: 100%;
-	padding: 0 0 0 0;
-	margin: 0 0 0 0;
+	padding: 0;
+	margin: 0;
 }
 .dxgvGroupPanel_RedWine
 {
-    font-size: 10px;
+	font-size: 10px;
 	white-space: nowrap;
 	background-color: #AA1248;
 	color: #E3ACBF;
-	border-bottom: Solid 1px #8A0A37;
+	border-bottom: 1px Solid #8A0A37;
 	padding: 7px 4px 8px 6px;
 }
 .dxgvFooter_RedWine
@@ -327,9 +330,9 @@
 }
 .dxgvFooter_RedWine td.dxgv
 {
-	padding: 6px 5px 7px 5px;
-	border-bottom: Solid 1px #CB9FB4;
-	border-right: 0px;
+	padding: 6px 5px 7px;
+	border-bottom: 1px Solid #CB9FB4;
+	border-right-width: 0px;
 }
 .dxgvGroupFooter_RedWine
 {
@@ -338,40 +341,40 @@
 }
 .dxgvGroupFooter_RedWine td.dxgv
 {
-	padding: 6px 5px 7px 5px;
-	border-bottom: Solid 1px #D5D5D5;
-	border-right: 0px;
+	padding: 6px 5px 7px;
+	border-bottom: 1px Solid #D5D5D5;
+	border-right-width: 0px;
 }
 
 .dxgvDataRow_RedWine td.dxgvIndentCell,
 .dxgvGroupRow_RedWine td.dxgvIndentCell,
 .dxgvGroupFooter_RedWine td.dxgvIndentCell
 {
-    background-color: #EBEBEB;
-	border-right: solid 1px #D5D5D5;
-	border-top: 0px;
+	background-color: #EBEBEB;
+	border-right: 1px solid #D5D5D5;
+	border-left: 1px solid #D5D5D5;
+	border-top-width: 0px;
 }
 
 .dxgvTitlePanel_RedWine,
 .dxgvTable_RedWine caption
 {
 	font-weight: normal;
-	padding: 5px;
-	padding-bottom: 6px;
-	text-align: center;	
-	border-bottom: Solid 1px #8A0A37;
+	padding: 5px 5px 6px;
+	text-align: center;
+	border-bottom: 1px Solid #8A0A37;
 	color: #8A0A37;
 	background-color: #EED8E3;
 }
 .dxgvLoadingDiv_RedWine
 {
-	background-color:Gray;	
+	background-color: Gray;
 	opacity: 0.01;
-	filter:progid:DXImageTransform.Microsoft.Alpha(Style=0, Opacity=1);
+	filter: progid:DXImageTransform.Microsoft.Alpha(Style=0, Opacity=1);
 }
-.dxgvStatusBar_RedWine 
+.dxgvStatusBar_RedWine
 {
-	border-top: Solid 1px #D5D5D5;
+	border-top: 1px Solid #D5D5D5;
 }
 .dxgvStatusBar_RedWine tr.dxgv
 {
@@ -386,46 +389,51 @@
 	margin: 0px 3px 0px 0px;
 }
 .dxgvCommandColumnItem_RedWine
-{	
+{
 }
 .dxgvEditFormTable_RedWine
 {
-    margin: 10px 0px 10px 0px;
+	margin: 10px 0px;
 	padding: 0px;
-	font: 9pt Tahoma;
 	color: #000000;
 }
 .dxgvEditFormCaption_RedWine
 {
-	padding: 4px 4px 4px 8px; 
+	padding: 4px 4px 4px 8px;
 	white-space: nowrap;
 }
 
 .dxgvInlineEditCell_RedWine
 {
-	padding: 1px; 
+	padding: 1px;
 }
 .dxgvInlineEditCell_RedWine .dxeButtonEdit_RedWine td.dxgv,
-.dxgvInlineEditCell_RedWine .dxeTextBox_RedWine td.dxgv  
+.dxgvInlineEditCell_RedWine .dxeTextBox_RedWine td.dxgv
 {
 	padding-left: 1px;
 }
 
 .dxgvEditFormCell_RedWine
 {
-	padding: 4px 4px 4px 4px; 
-	border: 0;
+	padding: 4px;
+	border-width: 0;
 }
 
-.dxgvFilterBar_RedWine 
+.dxgvPagerTopPanel_RedWine,
+.dxgvPagerBottomPanel_RedWine
 {
-	border-top: solid 1px #e2ccd4;	
-	background: #efe2e8;
+	padding: 4px 0;
+}
+
+.dxgvFilterBar_RedWine
+{
+	border-top: 1px solid #e2ccd4;
+	background: #efe2e8 none;
 }
 .dxgvFilterBar_RedWine a
 {
 	color: #8A0A37;
-	text-decoration: underline;		
+	text-decoration: underline;
 }
 .dxgvFilterBar_RedWine a:hover
 {
@@ -433,40 +441,48 @@
 }
 .dxgvFilterBarCheckBoxCell_RedWine
 {
-	padding: 0 3px;
-	padding-right: 7px;
+	padding: 0 7px 0 3px;
 }
 .dxgvFilterBarImageCell_RedWine
 {
-	padding: 0 3px;
-	padding-right: 1px;
+	padding: 0 1px 0 3px;
 	cursor: pointer;
 }
 .dxgvFilterBarExpressionCell_RedWine
 {
-	font-size: 9pt;
-	padding: 5px 5px 8px 0;	
+	padding: 5px 5px 8px 0;
 	white-space: nowrap;
 }
 .dxgvFilterBarClearButtonCell_RedWine
 {
-	font-size: 9pt;
-	padding: 5px 6px 8px;	
+	padding: 5px 6px 8px;
 }
-.dxgvFilterBuilderMainArea_RedWine 
+.dxgvFilterBuilderMainArea_RedWine
 {
-	background: white;
+	background: white none;
 	padding: 6px 2px;
 } 
 .dxgvFilterBuilderButtonArea_RedWine
 {
 	background-color: #EED8E3;
-	border-top: solid 1px #CB9FB4;
+	border-top: 1px solid #CB9FB4;
 	padding: 6px;
 }
 
 .dxgvDataRowHover_RedWine
 {
-	background: #DBBBDA;
+	background: #DBBBDA none;
 	color: Black;
+}
+
+.dxgvControl_RedWine .dxpSummary_RedWine,
+.dxgvControl_RedWine .dxpLite_RedWine .dx-summary
+{
+	color: #727272;
+}
+
+/* iOS */
+.dxgvTable_RedWine
+{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }

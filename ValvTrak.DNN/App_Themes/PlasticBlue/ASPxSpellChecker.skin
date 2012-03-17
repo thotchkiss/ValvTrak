@@ -1,8 +1,0 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
-<%@ Register TagPrefix="dxwsc" Namespace="DevExpress.Web.ASPxSpellChecker" Assembly="DevExpress.Web.ASPxSpellChecker.v10.2" %>
-
-<dxwsc:ASPxSpellChecker runat="server" CssFilePath="{0}/styles.css" CssPostfix="PlasticBlue" 
-    SpriteCssFilePath="{0}/sprite.css">
-    <LoadingPanelImage Url="SpellChecker/Loading.gif"></LoadingPanelImage>
-</dxwsc:ASPxSpellChecker>
-

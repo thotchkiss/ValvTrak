@@ -1,8 +1,8 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
-<%@ Register TagPrefix="dxnc" Namespace="DevExpress.Web.ASPxNewsControl" Assembly="DevExpress.Web.v10.2" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxnc" Namespace="DevExpress.Web.ASPxNewsControl" Assembly="DevExpress.Web.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 
-<dxnc:ASPxNewsControl runat="server" SpriteCssFilePath="{0}/sprite.css"
-    CssFilePath="{0}/styles.css" PagerPanelSpacing="15px" ItemSpacing="30px" CssPostfix="BlackGlass">
+<dxnc:ASPxNewsControl runat="server" SpriteCssFilePath="~/App_Themes/BlackGlass/{0}/sprite.css"
+    CssFilePath="~/App_Themes/BlackGlass/{0}/styles.css" PagerPanelSpacing="15px" ItemSpacing="30px" CssPostfix="BlackGlass">
 
     <ItemDateStyle Spacing="0px"></ItemDateStyle>
     <PagerCurrentPageNumberStyle Font-Bold="False"></PagerCurrentPageNumberStyle>
@@ -16,7 +16,7 @@
     </PagerSummaryStyle>
 
     <ItemSettings TailText="More"></ItemSettings>
-    <LoadingPanelImage Url="BlackGlass/Loading.gif"></LoadingPanelImage>
+    <LoadingPanelImage Url="~/App_Themes/BlackGlass/Web/Loading.gif"></LoadingPanelImage>
 
     <PagerSettings CurrentPageNumberFormat="{0}">
         <AllButton Text="">

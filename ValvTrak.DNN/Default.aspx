@@ -1,4 +1,4 @@
-<%@ Page Language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Framework.DefaultPage" CodeFile="Default.aspx.vb" EnableTheming="false" %>
+<%@ Page Language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Framework.DefaultPage" CodeFile="Default.aspx.vb" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Common.Controls" Assembly="DotNetNuke" %>
 <%@ Register TagPrefix="dnnui" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web" %>
 <asp:literal id="skinDocType" runat="server"></asp:literal>

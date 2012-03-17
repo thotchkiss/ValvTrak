@@ -1,8 +1,8 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
-<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v10.2" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 
-<dxe:ASPxCalendar runat="server" CssFilePath="{0}/styles.css" CssPostfix="BlackGlass" 
-    SpriteCssFilePath="{0}/sprite.css" >
+<dxe:ASPxCalendar runat="server" CssFilePath="~/App_Themes/BlackGlass/{0}/styles.css" CssPostfix="BlackGlass" 
+    SpriteCssFilePath="~/App_Themes/BlackGlass/{0}/sprite.css" >
     <FooterStyle Spacing="4px" />
     <ValidationSettings>
         <ErrorFrameStyle ImageSpacing="4px">
@@ -14,6 +14,6 @@
     </FastNavFooterStyle>
         <FastNavStyle MonthYearSpacing="4px">
     </FastNavStyle>
-
+    <LoadingPanelImage Url="~/App_Themes/BlackGlass/Editors/Loading.gif"></LoadingPanelImage>
 </dxe:ASPxCalendar>
 

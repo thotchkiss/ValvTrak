@@ -10,8 +10,21 @@
 .dxWeb_rpGroupBoxTopRightCorner_Aqua,
 .dxWeb_mHorizontalPopOut_Aqua,
 .dxWeb_mVerticalPopOut_Aqua,
+.dxWeb_mVerticalPopOutRtl_Aqua,
 .dxWeb_mSubMenuItem_Aqua,
 .dxWeb_mSubMenuItemChecked_Aqua,
+.dxWeb_mScrollUp_Aqua,
+.dxWeb_mScrollUpDisabled_Aqua,
+.dxWeb_mScrollDown_Aqua,
+.dxWeb_mScrollDownDisabled_Aqua,
+.dxWeb_tcScrollLeft_Aqua,
+.dxWeb_tcScrollRight_Aqua,
+.dxWeb_tcScrollLeftHover_Aqua,
+.dxWeb_tcScrollRightHover_Aqua,
+.dxWeb_tcScrollLeftPressed_Aqua,
+.dxWeb_tcScrollRightPressed_Aqua,
+.dxWeb_tcScrollLeftDisabled_Aqua,
+.dxWeb_tcScrollRightDisabled_Aqua,
 .dxWeb_nbCollapse_Aqua,
 .dxWeb_nbExpand_Aqua,
 .dxWeb_splVSeparator_Aqua,
@@ -28,6 +41,7 @@
 .dxWeb_splHCollapseForwardButtonHover_Aqua,
 .dxWeb_pcCloseButton_Aqua,
 .dxWeb_pcSizeGrip_Aqua,
+.dxWeb_pcSizeGripRtl_Aqua,
 .dxWeb_pAll_Aqua,
 .dxWeb_pAllDisabled_Aqua,
 .dxWeb_pPrev_Aqua,
@@ -39,11 +53,84 @@
 .dxWeb_pFirst_Aqua,
 .dxWeb_pFirstDisabled_Aqua,
 .dxWeb_tiBackToTop_Aqua,
-.dxWeb_smLevelBullet_Aqua {
+.dxWeb_smBullet_Aqua,
+.dxWeb_tvColBtn_Aqua,
+.dxWeb_tvColBtnRtl_Aqua,
+.dxWeb_tvExpBtn_Aqua,
+.dxWeb_tvExpBtnRtl_Aqua,
+.dxWeb_fmFolder_Aqua,
+.dxWeb_fmFolderLocked_Aqua,
+.dxWeb_fmCreateButton_Aqua,
+.dxWeb_fmMoveButton_Aqua,
+.dxWeb_fmRenameButton_Aqua,
+.dxWeb_fmDeleteButton_Aqua,
+.dxWeb_fmRefreshButton_Aqua,
+.dxWeb_fmDwnlButton_Aqua,
+.dxWeb_fmCreateButtonDisabled_Aqua,
+.dxWeb_fmMoveButtonDisabled_Aqua,
+.dxWeb_fmRenameButtonDisabled_Aqua,
+.dxWeb_fmDeleteButtonDisabled_Aqua,
+.dxWeb_fmRefreshButtonDisabled_Aqua,
+.dxWeb_fmDwnlButtonDisabled_Aqua,
+.dxWeb_ucClearButton_Aqua,
+.dxWeb_ucClearButtonDisabled_Aqua {
     background-image: url('sprite.png');
     -background-image: url('sprite.gif'); /* for IE6 */
     background-repeat: no-repeat;
     background-color: transparent;
+    display:block;
+}
+.dxWeb_mScrollUp_Aqua, .dxWeb_mScrollDown_Aqua
+{
+	margin: auto;
+}
+.dxWeb_pAll_Aqua,
+.dxWeb_pAllDisabled_Aqua,
+.dxWeb_pPrev_Aqua,
+.dxWeb_pPrevDisabled_Aqua,
+.dxWeb_pNext_Aqua,
+.dxWeb_pNextDisabled_Aqua,
+.dxWeb_pLast_Aqua,
+.dxWeb_pLastDisabled_Aqua,
+.dxWeb_pFirst_Aqua,
+.dxWeb_pFirstDisabled_Aqua,
+.dxWeb_smBullet_Aqua,
+.dxWeb_tiBackToTop_Aqua
+{
+	display:inline;
+}
+
+.dxWeb_edtCheckBoxChecked_Aqua,
+.dxWeb_edtCheckBoxUnchecked_Aqua,
+.dxWeb_edtCheckBoxGrayed_Aqua,
+.dxWeb_edtCheckBoxCheckedDisabled_Aqua,
+.dxWeb_edtCheckBoxUncheckedDisabled_Aqua,
+.dxWeb_edtCheckBoxGrayedDisabled_Aqua {
+	background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+	width: 15px;
+    height: 15px;
+}
+
+.dxWeb_edtCheckBoxUnchecked_Aqua {
+	background-position: -190px -3px;
+}
+.dxWeb_edtCheckBoxChecked_Aqua {
+	background-position: -190px -18px; 
+}
+.dxWeb_edtCheckBoxGrayed_Aqua {
+	background-position: -190px -33px;
+}
+.dxWeb_edtCheckBoxUncheckedDisabled_Aqua {
+	background-position: -190px -48px;
+}
+.dxWeb_edtCheckBoxCheckedDisabled_Aqua {
+	background-position: -190px -63px;
+}
+.dxWeb_edtCheckBoxGrayedDisabled_Aqua {
+	background-position: -190px -78px;
 }
 
 .dxWeb_rpHeaderTopLeftCorner_Aqua {
@@ -118,6 +205,12 @@
     height: 11px;
 }
 
+.dxWeb_mVerticalPopOutRtl_Aqua {
+    background-position: -114px -62px;
+    width: 11px;
+    height: 11px;
+}
+
 .dxWeb_mSubMenuItem_Aqua {
     background-position: -48px -50px;
     width: 14px;
@@ -128,6 +221,74 @@
     background-position: -70px -50px;
     width: 14px;
     height: 14px;
+}
+
+.dxWeb_mScrollUp_Aqua {
+    background-position: -118px -50px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxWeb_mScrollDown_Aqua {
+    background-position: -118px -56px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxWeb_tcScrollLeft_Aqua 
+{
+	background-position: -147px 0;
+	width: 19px;
+	height: 19px;
+}
+
+.dxWeb_tcScrollRight_Aqua
+{
+	background-position: -167px 0;
+	width: 19px;
+	height: 19px;
+}
+
+.dxWeb_tcScrollLeftHover_Aqua
+{
+	background-position: -147px -20px;
+	width: 19px;
+	height: 19px;
+}
+
+.dxWeb_tcScrollRightHover_Aqua
+{
+	background-position: -167px -20px;
+	width: 19px;
+	height: 19px;
+}
+
+.dxWeb_tcScrollLeftPressed_Aqua
+{
+	background-position: -147px -40px;
+	width: 19px;
+	height: 19px;
+}
+
+.dxWeb_tcScrollRightPressed_Aqua
+{
+	background-position: -167px -40px;
+	width: 19px;
+	height: 19px;
+}
+
+.dxWeb_tcScrollLeftDisabled_Aqua
+{
+	background-position: -147px -60px;
+	width: 19px;
+	height: 19px;
+}
+
+.dxWeb_tcScrollRightDisabled_Aqua
+{
+	background-position: -167px -60px;
+	width: 19px;
+	height: 19px;
 }
 
 .dxWeb_nbCollapse_Aqua {
@@ -226,6 +387,12 @@
     height: 12px;
 }
 
+.dxWeb_pcSizeGripRtl_Aqua {
+    background-position: -40px -98px;
+    width: 12px;
+    height: 12px;
+}
+
 .dxWeb_pAll_Aqua {
     background-position: 0px 0px;
     width: 27px;
@@ -292,10 +459,116 @@
     height: 13px;
 }
 
-.dxWeb_smLevelBullet_Aqua {
+.dxWeb_smBullet_Aqua {
     background-position: -130px -65px;
     width: 5px;
     height: 5px;
 }
 
+.dxWeb_tvColBtn_Aqua,
+.dxWeb_tvColBtnRtl_Aqua {
+	background-position: -20px -98px;
+    width: 17px;
+    height: 17px;
+}
 
+.dxWeb_tvExpBtn_Aqua,
+.dxWeb_tvExpBtnRtl_Aqua {
+    background-position: 0px -98px;
+    width: 17px;
+    height: 17px;
+}
+
+.dxWeb_fmFolder_Aqua {
+	background-position: 0px -123px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmFolderLocked_Aqua {
+	background-position: -20px -123px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmCreateButton_Aqua {
+	background-position: -40px -123px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmRenameButton_Aqua {
+	background-position: -60px -123px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmMoveButton_Aqua {
+	background-position: -80px -123px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmDeleteButton_Aqua {
+	background-position: -100px -123px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmRefreshButton_Aqua {
+	background-position: -120px -123px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmDwnlButton_Aqua {
+	background-position: 0px -147px;
+    width: 16px;
+    height: 16px;
+}
+.dxWeb_fmDwnlButtonDisabled_Aqua {
+	background-position: -20px -147px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmCreateButtonDisabled_Aqua {
+	background-position: -40px -147px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmRenameButtonDisabled_Aqua {
+	background-position: -60px -147px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmMoveButtonDisabled_Aqua {
+	background-position: -80px -147px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmDeleteButtonDisabled_Aqua {
+	background-position: -100px -147px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_fmRefreshButtonDisabled_Aqua {
+	background-position: -120px -147px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxWeb_ucClearButton_Aqua {
+    background-position: -100px -123px;
+    width: 16px;
+    height: 16px;
+}
+.dxWeb_ucClearButtonDisabled_Aqua {
+    background-position: -100px -147px;
+    width: 16px;
+    height: 16px;
+}

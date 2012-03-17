@@ -1,5 +1,0 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
-<%@ Register TagPrefix="dxrc" Namespace="DevExpress.Web.ASPxRatingControl" Assembly="DevExpress.Web.v10.2" %>
-
-<dxrc:ASPxRatingControl runat="server" ImageMapUrl="Web/rcMapImage.png" ItemWidth="27" ItemHeight="25">
-</dxrc:ASPxRatingControl>

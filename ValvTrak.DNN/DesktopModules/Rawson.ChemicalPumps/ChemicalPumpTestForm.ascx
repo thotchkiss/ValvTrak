@@ -1,10 +1,10 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ChemicalPumpTestForm.ascx.cs" Inherits="Rawson.ChemicalPumps.ChemicalPumpTestForm" EnableTheming="true" %>
-<%@ Register assembly="DevExpress.Web.v10.2" namespace="DevExpress.Web.ASPxCallbackPanel" tagprefix="dx" %>
-<%@ Register assembly="DevExpress.Web.v10.2" namespace="DevExpress.Web.ASPxPanel" tagprefix="dx" %>
-<%@ Register assembly="DevExpress.Web.ASPxEditors.v10.2" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v11.2" namespace="DevExpress.Web.ASPxCallbackPanel" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v11.2" namespace="DevExpress.Web.ASPxPanel" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.ASPxEditors.v11.2" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
 
-<%@ Register assembly="DevExpress.Web.v10.2" namespace="DevExpress.Web.ASPxGlobalEvents" tagprefix="dx" %>
-<%@ Register assembly="DevExpress.Web.v10.2" namespace="DevExpress.Web.ASPxLoadingPanel" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v11.2" namespace="DevExpress.Web.ASPxGlobalEvents" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v11.2" namespace="DevExpress.Web.ASPxLoadingPanel" tagprefix="dx" %>
 
 <style type="text/css">
     .style1

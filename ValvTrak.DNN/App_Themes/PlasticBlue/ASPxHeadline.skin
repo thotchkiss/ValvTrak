@@ -1,8 +1,0 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v10.2" %>
-<%@ Register TagPrefix="dxhl" Namespace="DevExpress.Web.ASPxHeadline" Assembly="DevExpress.Web.v10.2" %>
-
-<dxhl:ASPxHeadline runat="server" DateVerticalPosition="Header" CssFilePath="{0}/styles.css" 
-    CssPostfix="PlasticBlue" TailPosition="KeepWithLastWord" >
-    <DateStyle Spacing="0px"></DateStyle>
-    <HeaderStyle Spacing="7px"></HeaderStyle>
-</dxhl:ASPxHeadline>
