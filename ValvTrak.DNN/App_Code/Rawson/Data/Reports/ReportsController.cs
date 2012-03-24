@@ -10,20 +10,27 @@ using System.IO;
 using ICSharpCode.SharpZipLib.Zip;
 using System.Diagnostics;
 using Microsoft.Practices.EnterpriseLibrary.ExceptionHandling;
+using System.Text;
+using System.Configuration;
 
 namespace Rawson.Reports
 {
     /// <summary>
     /// Summary description for ReportsController
     /// </summary>
-    public class ReportsController
+    public class ReportsController : IDisposable
     {
         ReportingService _rs;
+
         public ReportsController()
         {
             _rs = new ReportingService();
-            _rs.Credentials = new NetworkCredential("valvtrak", "V@1vtr@k", "RES");
-            //_rs.Credentials = new NetworkCredential("tim.hotchkiss", "h0tchk1ss", "RES");
+
+            string user = ConfigurationManager.AppSettings["Reporting.user"];
+            string password = ConfigurationManager.AppSettings["Reporting.password"];
+            string domain = ConfigurationManager.AppSettings["Reporting.domain"];
+
+            _rs.Credentials = new NetworkCredential(user, password, domain);
         }
 
         public ReportsController( string rsUrl ) : this()
@@ -106,7 +113,22 @@ namespace Rawson.Reports
 
         private byte[] RenderDocument(string reportPath, Dictionary<string, object> parameters, string format)
         {
-            EventLog.WriteEntry("ValvTrak", String.Format("Report Path =  {0}, # Parameters = {1}, RS = {2}", reportPath, parameters.Count, (_rs != null).ToString()), EventLogEntryType.Information);
+            Func<Dictionary<string, object>, string> writeParams = (d) =>
+            {
+                StringBuilder sb = new StringBuilder();
+
+                foreach (KeyValuePair<string, object> kv in d)
+                {
+                    sb.Append(Environment.NewLine);
+                    sb.AppendFormat("Name : {0}, Value : {1}", kv.Key, kv.Value);
+                }
+
+                sb.Append(Environment.NewLine);
+
+                return sb.ToString();
+            };
+
+            EventLog.WriteEntry("ValvTrak", String.Format("Report Path =  {0}\r\n# Parameters = {1}" + writeParams(parameters) + "\r\nRS = {2}", reportPath, parameters.Count, (_rs != null)), EventLogEntryType.Information);
 
             string deviceInfo = null;
             Byte[] document = null;
@@ -155,5 +177,30 @@ namespace Rawson.Reports
 
             return parms.ToArray();
         }
+
+        #region IDisposable
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+                if (_rs != null)
+                {
+                    _rs.Dispose();
+                    _rs = null;
+                }
+        }
+
+        ~ReportsController()
+        {
+            Dispose(false);
+        }
+
+        #endregion
     }
 }
