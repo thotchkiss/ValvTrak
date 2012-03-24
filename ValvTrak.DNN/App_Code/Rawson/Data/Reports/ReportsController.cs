@@ -157,12 +157,10 @@ namespace Rawson.Reports
             catch (SoapException sex)
             {
                 ExceptionPolicy.HandleException(sex, "Default");
-                //throw sex;
             }
             catch (Exception ex)
             {
                 ExceptionPolicy.HandleException(ex, "Default");
-                //throw ex;
             }
 
             return document;
