@@ -53,6 +53,7 @@
       <Association Name="ClientLocation_ClientLocationContact" Member="ClientLocationContacts" ThisKey="ClientLocationID" OtherKey="ClientLocationID" Type="ClientLocationContact" />
       <Association Name="ClientLocation_Job" Member="Jobs" ThisKey="ClientLocationID" OtherKey="ClientLocationID" Type="Job" />
       <Association Name="ClientLocation_ServiceItem" Member="ServiceItems" ThisKey="ClientLocationID" OtherKey="ClientLocationID" Type="ServiceItem" />
+      <Association Name="ClientLocation_ClientLocationServiceSchedule" Member="ClientLocationServiceSchedules" ThisKey="ClientLocationID" OtherKey="ClientLocationId" Type="ClientLocationServiceSchedule" />
       <Association Name="Client_ClientLocation" Member="Client" ThisKey="ClientID" OtherKey="ClientID" Type="Client" IsForeignKey="true" />
     </Type>
   </Table>
@@ -199,6 +200,7 @@
       <Column Name="Type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Association Name="JobType_Job" Member="Jobs" ThisKey="JobTypeID" OtherKey="JobTypeID" Type="Job" />
+      <Association Name="JobType_ClientLocationServiceSchedule" Member="ClientLocationServiceSchedules" ThisKey="JobTypeID" OtherKey="JobTypeId" Type="ClientLocationServiceSchedule" />
     </Type>
   </Table>
   <Table Name="dbo.Lists" Member="Lists">
@@ -439,6 +441,30 @@
       <Association Name="Employee_ChemicalPumpTest" Member="Employee" ThisKey="CreatedBy" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
       <Association Name="Employee_ChemicalPumpTest1" Member="Employee1" ThisKey="ModifiedBy" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
       <Association Name="Job_ChemicalPumpTest" Member="Job" ThisKey="JobID" OtherKey="JobID" Type="Job" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServiceIntervals" Member="ServiceIntervals">
+    <Type Name="ServiceInterval">
+      <Column Name="ServiceIntervalId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Years" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Months" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Days" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="ServiceInterval_ClientLocationServiceSchedule" Member="ClientLocationServiceSchedules" ThisKey="ServiceIntervalId" OtherKey="ServiceIntervalId" Type="ClientLocationServiceSchedule" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientLocationServiceSchedules" Member="ClientLocationServiceSchedules">
+    <Type Name="ClientLocationServiceSchedule">
+      <Column Name="ClientLocationServiceScheduleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientLocationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="JobTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceIntervalId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastServiceDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NextServiceDate" Type="System.DateTime" DbType="SmallDateTime" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ClientLocation_ClientLocationServiceSchedule" Member="ClientLocation" ThisKey="ClientLocationId" OtherKey="ClientLocationID" Type="ClientLocation" IsForeignKey="true" />
+      <Association Name="JobType_ClientLocationServiceSchedule" Member="JobType" ThisKey="JobTypeId" OtherKey="JobTypeID" Type="JobType" IsForeignKey="true" />
+      <Association Name="ServiceInterval_ClientLocationServiceSchedule" Member="ServiceInterval" ThisKey="ServiceIntervalId" OtherKey="ServiceIntervalId" Type="ServiceInterval" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.ClientLocations_GetAll" Method="ClientLocations_GetAll">

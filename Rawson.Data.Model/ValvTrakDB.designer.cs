@@ -103,6 +103,12 @@ namespace Rawson.Data
     partial void InsertChemicalPumpTest(Rawson.Data.Model.ChemicalPumpTest instance);
     partial void UpdateChemicalPumpTest(Rawson.Data.Model.ChemicalPumpTest instance);
     partial void DeleteChemicalPumpTest(Rawson.Data.Model.ChemicalPumpTest instance);
+    partial void InsertServiceInterval(Rawson.Data.Model.ServiceInterval instance);
+    partial void UpdateServiceInterval(Rawson.Data.Model.ServiceInterval instance);
+    partial void DeleteServiceInterval(Rawson.Data.Model.ServiceInterval instance);
+    partial void InsertClientLocationServiceSchedule(Rawson.Data.Model.ClientLocationServiceSchedule instance);
+    partial void UpdateClientLocationServiceSchedule(Rawson.Data.Model.ClientLocationServiceSchedule instance);
+    partial void DeleteClientLocationServiceSchedule(Rawson.Data.Model.ClientLocationServiceSchedule instance);
     #endregion
 		
 		public ValvTrakDBDataContext() : 
@@ -332,6 +338,22 @@ namespace Rawson.Data
 			get
 			{
 				return this.GetTable<Rawson.Data.Model.ChemicalPumpTest>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Rawson.Data.Model.ServiceInterval> ServiceIntervals
+		{
+			get
+			{
+				return this.GetTable<Rawson.Data.Model.ServiceInterval>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Rawson.Data.Model.ClientLocationServiceSchedule> ClientLocationServiceSchedules
+		{
+			get
+			{
+				return this.GetTable<Rawson.Data.Model.ClientLocationServiceSchedule>();
 			}
 		}
 		
@@ -1114,6 +1136,8 @@ namespace Rawson.Data.Model
 		
 		private EntitySet<ServiceItem> _ServiceItems;
 		
+		private EntitySet<ClientLocationServiceSchedule> _ClientLocationServiceSchedules;
+		
 		private EntityRef<Client> _Client;
 		
     #region Extensibility Method Definitions
@@ -1159,6 +1183,7 @@ namespace Rawson.Data.Model
 			this._ClientLocationContacts = new EntitySet<ClientLocationContact>(new Action<ClientLocationContact>(this.attach_ClientLocationContacts), new Action<ClientLocationContact>(this.detach_ClientLocationContacts));
 			this._Jobs = new EntitySet<Job>(new Action<Job>(this.attach_Jobs), new Action<Job>(this.detach_Jobs));
 			this._ServiceItems = new EntitySet<ServiceItem>(new Action<ServiceItem>(this.attach_ServiceItems), new Action<ServiceItem>(this.detach_ServiceItems));
+			this._ClientLocationServiceSchedules = new EntitySet<ClientLocationServiceSchedule>(new Action<ClientLocationServiceSchedule>(this.attach_ClientLocationServiceSchedules), new Action<ClientLocationServiceSchedule>(this.detach_ClientLocationServiceSchedules));
 			this._Client = default(EntityRef<Client>);
 			OnCreated();
 		}
@@ -1526,6 +1551,19 @@ namespace Rawson.Data.Model
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ClientLocation_ClientLocationServiceSchedule", Storage="_ClientLocationServiceSchedules", ThisKey="ClientLocationID", OtherKey="ClientLocationId")]
+		public EntitySet<ClientLocationServiceSchedule> ClientLocationServiceSchedules
+		{
+			get
+			{
+				return this._ClientLocationServiceSchedules;
+			}
+			set
+			{
+				this._ClientLocationServiceSchedules.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_ClientLocation", Storage="_Client", ThisKey="ClientID", OtherKey="ClientID", IsForeignKey=true)]
 		public Client Client
 		{
@@ -1611,6 +1649,18 @@ namespace Rawson.Data.Model
 		}
 		
 		private void detach_ServiceItems(ServiceItem entity)
+		{
+			this.SendPropertyChanging();
+			entity.ClientLocation = null;
+		}
+		
+		private void attach_ClientLocationServiceSchedules(ClientLocationServiceSchedule entity)
+		{
+			this.SendPropertyChanging();
+			entity.ClientLocation = this;
+		}
+		
+		private void detach_ClientLocationServiceSchedules(ClientLocationServiceSchedule entity)
 		{
 			this.SendPropertyChanging();
 			entity.ClientLocation = null;
@@ -4746,6 +4796,8 @@ namespace Rawson.Data.Model
 		
 		private EntitySet<Job> _Jobs;
 		
+		private EntitySet<ClientLocationServiceSchedule> _ClientLocationServiceSchedules;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -4761,6 +4813,7 @@ namespace Rawson.Data.Model
 		public JobType()
 		{
 			this._Jobs = new EntitySet<Job>(new Action<Job>(this.attach_Jobs), new Action<Job>(this.detach_Jobs));
+			this._ClientLocationServiceSchedules = new EntitySet<ClientLocationServiceSchedule>(new Action<ClientLocationServiceSchedule>(this.attach_ClientLocationServiceSchedules), new Action<ClientLocationServiceSchedule>(this.detach_ClientLocationServiceSchedules));
 			OnCreated();
 		}
 		
@@ -4837,6 +4890,19 @@ namespace Rawson.Data.Model
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="JobType_ClientLocationServiceSchedule", Storage="_ClientLocationServiceSchedules", ThisKey="JobTypeID", OtherKey="JobTypeId")]
+		public EntitySet<ClientLocationServiceSchedule> ClientLocationServiceSchedules
+		{
+			get
+			{
+				return this._ClientLocationServiceSchedules;
+			}
+			set
+			{
+				this._ClientLocationServiceSchedules.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -4864,6 +4930,18 @@ namespace Rawson.Data.Model
 		}
 		
 		private void detach_Jobs(Job entity)
+		{
+			this.SendPropertyChanging();
+			entity.JobType = null;
+		}
+		
+		private void attach_ClientLocationServiceSchedules(ClientLocationServiceSchedule entity)
+		{
+			this.SendPropertyChanging();
+			entity.JobType = this;
+		}
+		
+		private void detach_ClientLocationServiceSchedules(ClientLocationServiceSchedule entity)
 		{
 			this.SendPropertyChanging();
 			entity.JobType = null;
@@ -10391,6 +10469,521 @@ namespace Rawson.Data.Model
 						this._JobID = default(int);
 					}
 					this.SendPropertyChanged("Job");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ServiceIntervals")]
+	public partial class ServiceInterval : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ServiceIntervalId;
+		
+		private string _Name;
+		
+		private int _Years;
+		
+		private int _Months;
+		
+		private int _Days;
+		
+		private bool _IsActive;
+		
+		private EntitySet<ClientLocationServiceSchedule> _ClientLocationServiceSchedules;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnServiceIntervalIdChanging(int value);
+    partial void OnServiceIntervalIdChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnYearsChanging(int value);
+    partial void OnYearsChanged();
+    partial void OnMonthsChanging(int value);
+    partial void OnMonthsChanged();
+    partial void OnDaysChanging(int value);
+    partial void OnDaysChanged();
+    partial void OnIsActiveChanging(bool value);
+    partial void OnIsActiveChanged();
+    #endregion
+		
+		public ServiceInterval()
+		{
+			this._ClientLocationServiceSchedules = new EntitySet<ClientLocationServiceSchedule>(new Action<ClientLocationServiceSchedule>(this.attach_ClientLocationServiceSchedules), new Action<ClientLocationServiceSchedule>(this.detach_ClientLocationServiceSchedules));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceIntervalId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ServiceIntervalId
+		{
+			get
+			{
+				return this._ServiceIntervalId;
+			}
+			set
+			{
+				if ((this._ServiceIntervalId != value))
+				{
+					this.OnServiceIntervalIdChanging(value);
+					this.SendPropertyChanging();
+					this._ServiceIntervalId = value;
+					this.SendPropertyChanged("ServiceIntervalId");
+					this.OnServiceIntervalIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Years", DbType="Int NOT NULL")]
+		public int Years
+		{
+			get
+			{
+				return this._Years;
+			}
+			set
+			{
+				if ((this._Years != value))
+				{
+					this.OnYearsChanging(value);
+					this.SendPropertyChanging();
+					this._Years = value;
+					this.SendPropertyChanged("Years");
+					this.OnYearsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Months", DbType="Int NOT NULL")]
+		public int Months
+		{
+			get
+			{
+				return this._Months;
+			}
+			set
+			{
+				if ((this._Months != value))
+				{
+					this.OnMonthsChanging(value);
+					this.SendPropertyChanging();
+					this._Months = value;
+					this.SendPropertyChanged("Months");
+					this.OnMonthsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Days", DbType="Int NOT NULL")]
+		public int Days
+		{
+			get
+			{
+				return this._Days;
+			}
+			set
+			{
+				if ((this._Days != value))
+				{
+					this.OnDaysChanging(value);
+					this.SendPropertyChanging();
+					this._Days = value;
+					this.SendPropertyChanged("Days");
+					this.OnDaysChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive", DbType="Bit NOT NULL")]
+		public bool IsActive
+		{
+			get
+			{
+				return this._IsActive;
+			}
+			set
+			{
+				if ((this._IsActive != value))
+				{
+					this.OnIsActiveChanging(value);
+					this.SendPropertyChanging();
+					this._IsActive = value;
+					this.SendPropertyChanged("IsActive");
+					this.OnIsActiveChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ServiceInterval_ClientLocationServiceSchedule", Storage="_ClientLocationServiceSchedules", ThisKey="ServiceIntervalId", OtherKey="ServiceIntervalId")]
+		public EntitySet<ClientLocationServiceSchedule> ClientLocationServiceSchedules
+		{
+			get
+			{
+				return this._ClientLocationServiceSchedules;
+			}
+			set
+			{
+				this._ClientLocationServiceSchedules.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_ClientLocationServiceSchedules(ClientLocationServiceSchedule entity)
+		{
+			this.SendPropertyChanging();
+			entity.ServiceInterval = this;
+		}
+		
+		private void detach_ClientLocationServiceSchedules(ClientLocationServiceSchedule entity)
+		{
+			this.SendPropertyChanging();
+			entity.ServiceInterval = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ClientLocationServiceSchedules")]
+	public partial class ClientLocationServiceSchedule : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ClientLocationServiceScheduleId;
+		
+		private int _ClientLocationId;
+		
+		private int _JobTypeId;
+		
+		private int _ServiceIntervalId;
+		
+		private System.DateTime _LastServiceDate;
+		
+		private System.Nullable<System.DateTime> _NextServiceDate;
+		
+		private EntityRef<ClientLocation> _ClientLocation;
+		
+		private EntityRef<JobType> _JobType;
+		
+		private EntityRef<ServiceInterval> _ServiceInterval;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnClientLocationServiceScheduleIdChanging(int value);
+    partial void OnClientLocationServiceScheduleIdChanged();
+    partial void OnClientLocationIdChanging(int value);
+    partial void OnClientLocationIdChanged();
+    partial void OnJobTypeIdChanging(int value);
+    partial void OnJobTypeIdChanged();
+    partial void OnServiceIntervalIdChanging(int value);
+    partial void OnServiceIntervalIdChanged();
+    partial void OnLastServiceDateChanging(System.DateTime value);
+    partial void OnLastServiceDateChanged();
+    partial void OnNextServiceDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnNextServiceDateChanged();
+    #endregion
+		
+		public ClientLocationServiceSchedule()
+		{
+			this._ClientLocation = default(EntityRef<ClientLocation>);
+			this._JobType = default(EntityRef<JobType>);
+			this._ServiceInterval = default(EntityRef<ServiceInterval>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientLocationServiceScheduleId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ClientLocationServiceScheduleId
+		{
+			get
+			{
+				return this._ClientLocationServiceScheduleId;
+			}
+			set
+			{
+				if ((this._ClientLocationServiceScheduleId != value))
+				{
+					this.OnClientLocationServiceScheduleIdChanging(value);
+					this.SendPropertyChanging();
+					this._ClientLocationServiceScheduleId = value;
+					this.SendPropertyChanged("ClientLocationServiceScheduleId");
+					this.OnClientLocationServiceScheduleIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientLocationId", DbType="Int NOT NULL")]
+		public int ClientLocationId
+		{
+			get
+			{
+				return this._ClientLocationId;
+			}
+			set
+			{
+				if ((this._ClientLocationId != value))
+				{
+					if (this._ClientLocation.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnClientLocationIdChanging(value);
+					this.SendPropertyChanging();
+					this._ClientLocationId = value;
+					this.SendPropertyChanged("ClientLocationId");
+					this.OnClientLocationIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JobTypeId", DbType="Int NOT NULL")]
+		public int JobTypeId
+		{
+			get
+			{
+				return this._JobTypeId;
+			}
+			set
+			{
+				if ((this._JobTypeId != value))
+				{
+					if (this._JobType.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnJobTypeIdChanging(value);
+					this.SendPropertyChanging();
+					this._JobTypeId = value;
+					this.SendPropertyChanged("JobTypeId");
+					this.OnJobTypeIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ServiceIntervalId", DbType="Int NOT NULL")]
+		public int ServiceIntervalId
+		{
+			get
+			{
+				return this._ServiceIntervalId;
+			}
+			set
+			{
+				if ((this._ServiceIntervalId != value))
+				{
+					if (this._ServiceInterval.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnServiceIntervalIdChanging(value);
+					this.SendPropertyChanging();
+					this._ServiceIntervalId = value;
+					this.SendPropertyChanged("ServiceIntervalId");
+					this.OnServiceIntervalIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastServiceDate", DbType="SmallDateTime NOT NULL")]
+		public System.DateTime LastServiceDate
+		{
+			get
+			{
+				return this._LastServiceDate;
+			}
+			set
+			{
+				if ((this._LastServiceDate != value))
+				{
+					this.OnLastServiceDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastServiceDate = value;
+					this.SendPropertyChanged("LastServiceDate");
+					this.OnLastServiceDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NextServiceDate", AutoSync=AutoSync.Always, DbType="SmallDateTime", IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		public System.Nullable<System.DateTime> NextServiceDate
+		{
+			get
+			{
+				return this._NextServiceDate;
+			}
+			set
+			{
+				if ((this._NextServiceDate != value))
+				{
+					this.OnNextServiceDateChanging(value);
+					this.SendPropertyChanging();
+					this._NextServiceDate = value;
+					this.SendPropertyChanged("NextServiceDate");
+					this.OnNextServiceDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ClientLocation_ClientLocationServiceSchedule", Storage="_ClientLocation", ThisKey="ClientLocationId", OtherKey="ClientLocationID", IsForeignKey=true)]
+		public ClientLocation ClientLocation
+		{
+			get
+			{
+				return this._ClientLocation.Entity;
+			}
+			set
+			{
+				ClientLocation previousValue = this._ClientLocation.Entity;
+				if (((previousValue != value) 
+							|| (this._ClientLocation.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ClientLocation.Entity = null;
+						previousValue.ClientLocationServiceSchedules.Remove(this);
+					}
+					this._ClientLocation.Entity = value;
+					if ((value != null))
+					{
+						value.ClientLocationServiceSchedules.Add(this);
+						this._ClientLocationId = value.ClientLocationID;
+					}
+					else
+					{
+						this._ClientLocationId = default(int);
+					}
+					this.SendPropertyChanged("ClientLocation");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="JobType_ClientLocationServiceSchedule", Storage="_JobType", ThisKey="JobTypeId", OtherKey="JobTypeID", IsForeignKey=true)]
+		public JobType JobType
+		{
+			get
+			{
+				return this._JobType.Entity;
+			}
+			set
+			{
+				JobType previousValue = this._JobType.Entity;
+				if (((previousValue != value) 
+							|| (this._JobType.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._JobType.Entity = null;
+						previousValue.ClientLocationServiceSchedules.Remove(this);
+					}
+					this._JobType.Entity = value;
+					if ((value != null))
+					{
+						value.ClientLocationServiceSchedules.Add(this);
+						this._JobTypeId = value.JobTypeID;
+					}
+					else
+					{
+						this._JobTypeId = default(int);
+					}
+					this.SendPropertyChanged("JobType");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ServiceInterval_ClientLocationServiceSchedule", Storage="_ServiceInterval", ThisKey="ServiceIntervalId", OtherKey="ServiceIntervalId", IsForeignKey=true)]
+		public ServiceInterval ServiceInterval
+		{
+			get
+			{
+				return this._ServiceInterval.Entity;
+			}
+			set
+			{
+				ServiceInterval previousValue = this._ServiceInterval.Entity;
+				if (((previousValue != value) 
+							|| (this._ServiceInterval.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ServiceInterval.Entity = null;
+						previousValue.ClientLocationServiceSchedules.Remove(this);
+					}
+					this._ServiceInterval.Entity = value;
+					if ((value != null))
+					{
+						value.ClientLocationServiceSchedules.Add(this);
+						this._ServiceIntervalId = value.ServiceIntervalId;
+					}
+					else
+					{
+						this._ServiceIntervalId = default(int);
+					}
+					this.SendPropertyChanged("ServiceInterval");
 				}
 			}
 		}
