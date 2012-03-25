@@ -1,7 +1,7 @@
 USE [SRD]
 GO
 
-/****** Object:  Table [dbo].[ClientLocationServiceSchedules]    Script Date: 03/24/2012 22:44:40 ******/
+/****** Object:  Table [dbo].[ClientLocationServiceSchedules]    Script Date: 03/25/2012 00:05:00 ******/
 SET ANSI_NULLS ON
 GO
 
