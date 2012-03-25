@@ -1,7 +1,7 @@
 USE [SRD]
 GO
 
-/****** Object:  Table [dbo].[ClientLocationServiceSchedules]    Script Date: 03/25/2012 00:05:00 ******/
+/****** Object:  Table [dbo].[ClientLocationServiceSchedules]    Script Date: 03/25/2012 09:45:33 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -15,6 +15,7 @@ CREATE TABLE [dbo].[ClientLocationServiceSchedules](
 	[ServiceIntervalId] [int] NOT NULL,
 	[LastServiceDate] [smalldatetime] NOT NULL,
 	[NextServiceDate]  AS ([dbo].[fn_GetNextLocationServiceDate]([LastServiceDate],[ServiceIntervalId])),
+	[CountDown]  AS (datediff(day,getdate(),[dbo].[fn_GetNextLocationServiceDate]([LastServiceDate],[ServiceIntervalId]))),
  CONSTRAINT [PK_ClientLocationServiceSchedules] PRIMARY KEY CLUSTERED 
 (
 	[ClientLocationServiceScheduleId] ASC
@@ -43,5 +44,4 @@ GO
 
 ALTER TABLE [dbo].[ClientLocationServiceSchedules] CHECK CONSTRAINT [FK_ClientLocationServiceSchedules_ServiceIntervals]
 GO
-
 

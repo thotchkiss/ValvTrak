@@ -9,6 +9,10 @@
   </DataSources>
   <Reports>
     <ProjectItem>
+      <Name>Active Clients and Locations.rdl</Name>
+      <FullPath>Active Clients and Locations.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>BP Monthly Report.rdl</Name>
       <FullPath>BP Monthly Report.rdl</FullPath>
     </ProjectItem>
@@ -41,8 +45,8 @@
       <FullPath>WellSafetyFieldReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Active Clients and Locations.rdl</Name>
-      <FullPath>Active Clients and Locations.rdl</FullPath>
+      <Name>Service Schedule By Client and Location.rdl</Name>
+      <FullPath>Service Schedule By Client and Location.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>
