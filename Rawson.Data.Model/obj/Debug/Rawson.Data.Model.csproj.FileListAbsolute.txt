@@ -10,9 +10,3 @@ D:\SRD\ValvTrak.VS2010.DNN\Rawson.Data.Model\bin\Debug\Rawson.Data.Model.pdb
 D:\SRD\ValvTrak.VS2010.DNN\Rawson.Data.Model\obj\Debug\ResolveAssemblyReference.cache
 D:\SRD\ValvTrak.VS2010.DNN\Rawson.Data.Model\obj\Debug\Rawson.Data.Model.dll
 D:\SRD\ValvTrak.VS2010.DNN\Rawson.Data.Model\obj\Debug\Rawson.Data.Model.pdb
-C:\Users\Tim\ValvTrak\Rawson.Data.Model\bin\Debug\Rawson.Data.Model.dll.config
-C:\Users\Tim\ValvTrak\Rawson.Data.Model\bin\Debug\Rawson.Data.Model.dll
-C:\Users\Tim\ValvTrak\Rawson.Data.Model\bin\Debug\Rawson.Data.Model.pdb
-C:\Users\Tim\ValvTrak\Rawson.Data.Model\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Tim\ValvTrak\Rawson.Data.Model\obj\Debug\Rawson.Data.Model.dll
-C:\Users\Tim\ValvTrak\Rawson.Data.Model\obj\Debug\Rawson.Data.Model.pdb

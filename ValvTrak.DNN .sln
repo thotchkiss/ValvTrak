@@ -28,6 +28,29 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ValvTrak.DNN", "ValvTrak.DN
 		VWDPort = "2549"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ValvTrak.Silverlight.Web", "ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Web\", "{643561F1-5E7E-442F-9AF1-10C6F6588EDB}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/ValvTrak.Silverlight.Web"
+		Debug.AspNetCompiler.PhysicalPath = "ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\ValvTrak.Silverlight.Web\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/ValvTrak.Silverlight.Web"
+		Release.AspNetCompiler.PhysicalPath = "ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\ValvTrak.Silverlight.Web\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3105"
+		ProjOutputReferences = "{5ABD20C3-FFFA-4592-BA39-39FB13A04C6E}|ClientBin|false;"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValvTrak.Silverlight.Maps", "ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps.csproj", "{5ABD20C3-FFFA-4592-BA39-39FB13A04C6E}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = ValvTrak.DNN .vsmdi
@@ -53,6 +76,14 @@ Global
 		{4483A01F-57BF-4014-9A9F-025A2BB760F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4483A01F-57BF-4014-9A9F-025A2BB760F0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{4483A01F-57BF-4014-9A9F-025A2BB760F0}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{643561F1-5E7E-442F-9AF1-10C6F6588EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{643561F1-5E7E-442F-9AF1-10C6F6588EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{643561F1-5E7E-442F-9AF1-10C6F6588EDB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{643561F1-5E7E-442F-9AF1-10C6F6588EDB}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{5ABD20C3-FFFA-4592-BA39-39FB13A04C6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ABD20C3-FFFA-4592-BA39-39FB13A04C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ABD20C3-FFFA-4592-BA39-39FB13A04C6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ABD20C3-FFFA-4592-BA39-39FB13A04C6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

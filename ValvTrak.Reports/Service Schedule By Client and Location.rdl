@@ -1576,10 +1576,9 @@ select 'Well Saftey', 11</CommandText>
             <Width>0.875in</Width>
           </TableColumn>
         </TableColumns>
-        <Height>0.89in</Height>
       </Table>
     </ReportItems>
-    <Height>1.765in</Height>
+    <Height>1.515in</Height>
   </Body>
   <Language>en-US</Language>
   <TopMargin>0.25in</TopMargin>
