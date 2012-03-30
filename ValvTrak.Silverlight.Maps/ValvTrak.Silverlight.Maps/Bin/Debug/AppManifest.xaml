@@ -1,0 +1,33 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="ValvTrak.Silverlight.Maps" EntryPointType="ValvTrak.Silverlight.Maps.App" RuntimeVersion="5.0.61118.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="ValvTrak.Silverlight.Maps" Source="ValvTrak.Silverlight.Maps.dll" />
+    <AssemblyPart x:Name="DevExpress.Data.v11.2" Source="DevExpress.Data.v11.2.dll" />
+    <AssemblyPart x:Name="DevExpress.Printing.v11.2.Core" Source="DevExpress.Printing.v11.2.Core.dll" />
+    <AssemblyPart x:Name="DevExpress.Xpf.Core.v11.2" Source="DevExpress.Xpf.Core.v11.2.dll" />
+    <AssemblyPart x:Name="DevExpress.Xpf.Docking.v11.2" Source="DevExpress.Xpf.Docking.v11.2.dll" />
+    <AssemblyPart x:Name="DevExpress.Xpf.Layout.v11.2.Core" Source="DevExpress.Xpf.Layout.v11.2.Core.dll" />
+    <AssemblyPart x:Name="DevExpress.Xpf.Map.v11.2" Source="DevExpress.Xpf.Map.v11.2.dll" />
+    <AssemblyPart x:Name="DevExpress.Xpf.NavBar.v11.2" Source="DevExpress.Xpf.NavBar.v11.2.dll" />
+    <AssemblyPart x:Name="DevExpress.Xpf.Themes.Office2007Blue.v11.2" Source="DevExpress.Xpf.Themes.Office2007Blue.v11.2.dll" />
+    <AssemblyPart x:Name="Microsoft.Expression.Interactions" Source="Microsoft.Expression.Interactions.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.EnterpriseLibrary.Common.Silverlight" Source="Microsoft.Practices.EnterpriseLibrary.Common.Silverlight.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Silverlight" Source="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.Silverlight.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Silverlight" Source="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Silverlight.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.EnterpriseLibrary.Logging.Silverlight" Source="Microsoft.Practices.EnterpriseLibrary.Logging.Silverlight.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.Prism" Source="Microsoft.Practices.Prism.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.Prism.Interactivity" Source="Microsoft.Practices.Prism.Interactivity.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.Prism.MefExtensions" Source="Microsoft.Practices.Prism.MefExtensions.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.ServiceLocation" Source="Microsoft.Practices.ServiceLocation.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.Unity.Interception.Silverlight" Source="Microsoft.Practices.Unity.Interception.Silverlight.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.Unity.Silverlight" Source="Microsoft.Practices.Unity.Silverlight.dll" />
+    <AssemblyPart x:Name="System.ComponentModel.Composition" Source="System.ComponentModel.Composition.dll" />
+    <AssemblyPart x:Name="System.Data.Services.Client" Source="System.Data.Services.Client.dll" />
+    <AssemblyPart x:Name="System.Xml.Linq" Source="System.Xml.Linq.dll" />
+    <AssemblyPart x:Name="System.Windows.Data" Source="System.Windows.Data.dll" />
+    <AssemblyPart x:Name="System.ComponentModel.DataAnnotations" Source="System.ComponentModel.DataAnnotations.dll" />
+    <AssemblyPart x:Name="System.Xml.Serialization" Source="System.Xml.Serialization.dll" />
+    <AssemblyPart x:Name="System.Windows.Interactivity" Source="System.Windows.Interactivity.dll" />
+    <AssemblyPart x:Name="System.Windows.Controls" Source="System.Windows.Controls.dll" />
+    <AssemblyPart x:Name="System.ComponentModel.Composition.Initialization" Source="System.ComponentModel.Composition.Initialization.dll" />
+  </Deployment.Parts>
+</Deployment>

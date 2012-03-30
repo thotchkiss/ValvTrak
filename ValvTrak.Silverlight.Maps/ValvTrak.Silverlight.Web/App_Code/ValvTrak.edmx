@@ -1,0 +1,2537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ValvTrak.Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ValvTrakModelStoreContainer">
+          <EntitySet Name="ClientLocations" EntityType="ValvTrak.Model.Store.ClientLocations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ClientLocationServiceSchedules" EntityType="ValvTrak.Model.Store.ClientLocationServiceSchedules" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Clients" EntityType="ValvTrak.Model.Store.Clients" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DeliveryMethods" EntityType="ValvTrak.Model.Store.DeliveryMethods" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Employees" EntityType="ValvTrak.Model.Store.Employees" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GreasingRecordItems" EntityType="ValvTrak.Model.Store.GreasingRecordItems" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GreasingRecords" EntityType="ValvTrak.Model.Store.GreasingRecords" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Jobs" EntityType="ValvTrak.Model.Store.Jobs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="JobStatus" EntityType="ValvTrak.Model.Store.JobStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="JobTypes" EntityType="ValvTrak.Model.Store.JobTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lists" EntityType="ValvTrak.Model.Store.Lists" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ManufacturerModels" EntityType="ValvTrak.Model.Store.ManufacturerModels" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Manufacturers" EntityType="ValvTrak.Model.Store.Manufacturers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServiceIntervals" EntityType="ValvTrak.Model.Store.ServiceIntervals" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServiceItemCategories" EntityType="ValvTrak.Model.Store.ServiceItemCategories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServiceItems" EntityType="ValvTrak.Model.Store.ServiceItems" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServiceItemTypes" EntityType="ValvTrak.Model.Store.ServiceItemTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ValveTests" EntityType="ValvTrak.Model.Store.ValveTests" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WellSafetyTests" EntityType="ValvTrak.Model.Store.WellSafetyTests" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_ClientLocations_Clients" Association="ValvTrak.Model.Store.FK_ClientLocations_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="ClientLocations" EntitySet="ClientLocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClientLocationServiceSchedules_ClientLocations" Association="ValvTrak.Model.Store.FK_ClientLocationServiceSchedules_ClientLocations">
+            <End Role="ClientLocations" EntitySet="ClientLocations" />
+            <End Role="ClientLocationServiceSchedules" EntitySet="ClientLocationServiceSchedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClientLocationServiceSchedules_JobTypes" Association="ValvTrak.Model.Store.FK_ClientLocationServiceSchedules_JobTypes">
+            <End Role="JobTypes" EntitySet="JobTypes" />
+            <End Role="ClientLocationServiceSchedules" EntitySet="ClientLocationServiceSchedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClientLocationServiceSchedules_ServiceIntervals" Association="ValvTrak.Model.Store.FK_ClientLocationServiceSchedules_ServiceIntervals">
+            <End Role="ServiceIntervals" EntitySet="ServiceIntervals" />
+            <End Role="ClientLocationServiceSchedules" EntitySet="ClientLocationServiceSchedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GreasingRecordItems_Employees" Association="ValvTrak.Model.Store.FK_GreasingRecordItems_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="GreasingRecordItems" EntitySet="GreasingRecordItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GreasingRecordItems_GreasingRecords" Association="ValvTrak.Model.Store.FK_GreasingRecordItems_GreasingRecords">
+            <End Role="GreasingRecords" EntitySet="GreasingRecords" />
+            <End Role="GreasingRecordItems" EntitySet="GreasingRecordItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GreasingRecordItems_ServiceItems" Association="ValvTrak.Model.Store.FK_GreasingRecordItems_ServiceItems">
+            <End Role="ServiceItems" EntitySet="ServiceItems" />
+            <End Role="GreasingRecordItems" EntitySet="GreasingRecordItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GreasingRecords_Employees" Association="ValvTrak.Model.Store.FK_GreasingRecords_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="GreasingRecords" EntitySet="GreasingRecords" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GreasingRecords_Employees_ModifiedBy" Association="ValvTrak.Model.Store.FK_GreasingRecords_Employees_ModifiedBy">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="GreasingRecords" EntitySet="GreasingRecords" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GreasingRecords_Jobs" Association="ValvTrak.Model.Store.FK_GreasingRecords_Jobs">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="GreasingRecords" EntitySet="GreasingRecords" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_ClientLocations" Association="ValvTrak.Model.Store.FK_Jobs_ClientLocations">
+            <End Role="ClientLocations" EntitySet="ClientLocations" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_DeliveryMethods" Association="ValvTrak.Model.Store.FK_Jobs_DeliveryMethods">
+            <End Role="DeliveryMethods" EntitySet="DeliveryMethods" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_Employees" Association="ValvTrak.Model.Store.FK_Jobs_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_Employees1" Association="ValvTrak.Model.Store.FK_Jobs_Employees1">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_Employees2" Association="ValvTrak.Model.Store.FK_Jobs_Employees2">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_Employees3" Association="ValvTrak.Model.Store.FK_Jobs_Employees3">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_Employees4" Association="ValvTrak.Model.Store.FK_Jobs_Employees4">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_JobStatus" Association="ValvTrak.Model.Store.FK_Jobs_JobStatus">
+            <End Role="JobStatus" EntitySet="JobStatus" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_JobTypes" Association="ValvTrak.Model.Store.FK_Jobs_JobTypes">
+            <End Role="JobTypes" EntitySet="JobTypes" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ManufacturerModels_Manufacturers" Association="ValvTrak.Model.Store.FK_ManufacturerModels_Manufacturers">
+            <End Role="Manufacturers" EntitySet="Manufacturers" />
+            <End Role="ManufacturerModels" EntitySet="ManufacturerModels" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceItems_ClientLocations" Association="ValvTrak.Model.Store.FK_ServiceItems_ClientLocations">
+            <End Role="ClientLocations" EntitySet="ClientLocations" />
+            <End Role="ServiceItems" EntitySet="ServiceItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceItems_ManufacturerModels" Association="ValvTrak.Model.Store.FK_ServiceItems_ManufacturerModels">
+            <End Role="ManufacturerModels" EntitySet="ManufacturerModels" />
+            <End Role="ServiceItems" EntitySet="ServiceItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceItems_Manufacturers" Association="ValvTrak.Model.Store.FK_ServiceItems_Manufacturers">
+            <End Role="Manufacturers" EntitySet="Manufacturers" />
+            <End Role="ServiceItems" EntitySet="ServiceItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceItems_ServiceItemTypes" Association="ValvTrak.Model.Store.FK_ServiceItems_ServiceItemTypes">
+            <End Role="ServiceItemTypes" EntitySet="ServiceItemTypes" />
+            <End Role="ServiceItems" EntitySet="ServiceItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceItemTypes_ServiceItemCategories" Association="ValvTrak.Model.Store.FK_ServiceItemTypes_ServiceItemCategories">
+            <End Role="ServiceItemCategories" EntitySet="ServiceItemCategories" />
+            <End Role="ServiceItemTypes" EntitySet="ServiceItemTypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValveTests_Employees" Association="ValvTrak.Model.Store.FK_ValveTests_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="ValveTests" EntitySet="ValveTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValveTests_Employees1" Association="ValvTrak.Model.Store.FK_ValveTests_Employees1">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="ValveTests" EntitySet="ValveTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValveTests_Employees2" Association="ValvTrak.Model.Store.FK_ValveTests_Employees2">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="ValveTests" EntitySet="ValveTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValveTests_Jobs" Association="ValvTrak.Model.Store.FK_ValveTests_Jobs">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="ValveTests" EntitySet="ValveTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValveTests_Lists" Association="ValvTrak.Model.Store.FK_ValveTests_Lists">
+            <End Role="Lists" EntitySet="Lists" />
+            <End Role="ValveTests" EntitySet="ValveTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValveTests_ServiceItems" Association="ValvTrak.Model.Store.FK_ValveTests_ServiceItems">
+            <End Role="ServiceItems" EntitySet="ServiceItems" />
+            <End Role="ValveTests" EntitySet="ValveTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WellSafetyTests_Employees" Association="ValvTrak.Model.Store.FK_WellSafetyTests_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="WellSafetyTests" EntitySet="WellSafetyTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WellSafetyTests_Employees_CreatedBy" Association="ValvTrak.Model.Store.FK_WellSafetyTests_Employees_CreatedBy">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="WellSafetyTests" EntitySet="WellSafetyTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WellSafetyTests_Jobs" Association="ValvTrak.Model.Store.FK_WellSafetyTests_Jobs">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="WellSafetyTests" EntitySet="WellSafetyTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WellSafetyTests_ServiceItems" Association="ValvTrak.Model.Store.FK_WellSafetyTests_ServiceItems">
+            <End Role="ServiceItems" EntitySet="ServiceItems" />
+            <End Role="WellSafetyTests" EntitySet="WellSafetyTests" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ClientLocations">
+          <Key>
+            <PropertyRef Name="ClientLocationID" />
+          </Key>
+          <Property Name="ClientLocationID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClientID" Type="int" />
+          <Property Name="ClientLocationTypeID" Type="int" />
+          <Property Name="PropertyNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="State" Type="varchar" MaxLength="2" />
+          <Property Name="ZipCode" Type="varchar" MaxLength="50" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="Longitude" Type="varchar" MaxLength="50" />
+          <Property Name="Latitude" Type="varchar" MaxLength="50" />
+          <Property Name="ServiceDate" Type="smalldatetime" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="CreationDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="Version" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ClientLocationServiceSchedules">
+          <Key>
+            <PropertyRef Name="ClientLocationServiceScheduleId" />
+          </Key>
+          <Property Name="ClientLocationServiceScheduleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClientLocationId" Type="int" Nullable="false" />
+          <Property Name="JobTypeId" Type="int" Nullable="false" />
+          <Property Name="ServiceIntervalId" Type="int" Nullable="false" />
+          <Property Name="LastServiceDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="NextServiceDate" Type="smalldatetime" StoreGeneratedPattern="Computed" />
+          <Property Name="CountDown" Type="int" StoreGeneratedPattern="Computed" />
+          <Property Name="Version" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="ClientID" />
+          </Key>
+          <Property Name="ClientID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Address" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="City" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="State" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="ZipCode" Type="varchar" MaxLength="15" />
+          <Property Name="Phone" Type="varchar" MaxLength="20" />
+          <Property Name="Website" Type="varchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="SysProNumber" Type="varchar" MaxLength="50" />
+          <Property Name="ParentID" Type="int" Nullable="false" />
+          <Property Name="Version" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="DeliveryMethods">
+          <Key>
+            <PropertyRef Name="DeliveryMethodID" />
+          </Key>
+          <Property Name="DeliveryMethodID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Method" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="WorkPhone" Type="varchar" MaxLength="50" />
+          <Property Name="CellPhone" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="EFC_LocationID" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="Version" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="GreasingRecordItems">
+          <Key>
+            <PropertyRef Name="GreasingRecordItemID" />
+          </Key>
+          <Property Name="GreasingRecordItemID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GreasingRecordID" Type="int" Nullable="false" />
+          <Property Name="ServiceItemID" Type="int" Nullable="false" />
+          <Property Name="ValveLocation" Type="varchar" MaxLength="50" />
+          <Property Name="ActuatorInspected" Type="int" />
+          <Property Name="ActuatorLubed" Type="int" />
+          <Property Name="PercentCycled" Type="int" />
+          <Property Name="ValveSecured" Type="int" />
+          <Property Name="FlangeOrScrew" Type="char" MaxLength="1" />
+          <Property Name="EaseOfOperation" Type="int" />
+          <Property Name="SeatsChecked" Type="int" />
+          <Property Name="SeatsLubed" Type="int" />
+          <Property Name="Leaking" Type="int" />
+          <Property Name="LubeTypeID" Type="int" />
+          <Property Name="AmountInjected" Type="float" Nullable="false" />
+          <Property Name="Notes" Type="varchar" MaxLength="200" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Version" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="GreasingRecords">
+          <Key>
+            <PropertyRef Name="GreasingRecordID" />
+          </Key>
+          <Property Name="GreasingRecordID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="JobID" Type="int" Nullable="false" />
+          <Property Name="ClientFieldOffice" Type="varchar" MaxLength="50" />
+          <Property Name="PipelineSegment" Type="varchar" MaxLength="100" />
+          <Property Name="Field" Type="varchar" MaxLength="50" />
+          <Property Name="SapPSV" Type="varchar" MaxLength="50" />
+          <Property Name="FSRNum" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Version" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Jobs">
+          <Key>
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SalesOrderNum" Type="varchar" MaxLength="50" />
+          <Property Name="CallDate" Type="smalldatetime" />
+          <Property Name="RequestedByID" Type="int" />
+          <Property Name="JobTypeID" Type="int" Nullable="false" />
+          <Property Name="ClientLocationID" Type="int" Nullable="false" />
+          <Property Name="JobStatusID" Type="int" Nullable="false" />
+          <Property Name="ServiceDate" Type="smalldatetime" />
+          <Property Name="CompletionDate" Type="smalldatetime" />
+          <Property Name="AssignedByID" Type="int" Nullable="false" />
+          <Property Name="AssignedToID" Type="int" />
+          <Property Name="ApprovedByID" Type="int" />
+          <Property Name="DeliveryMethodID" Type="int" />
+          <Property Name="PM" Type="smallmoney" />
+          <Property Name="NP" Type="smallmoney" />
+          <Property Name="FS" Type="smallmoney" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="DotNumber" Type="varchar" MaxLength="50" />
+          <Property Name="VRstamp" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreationDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="Version" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="SapWoNum" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="JobStatus">
+          <Key>
+            <PropertyRef Name="JobStatusID" />
+          </Key>
+          <Property Name="JobStatusID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sequence" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="JobTypes">
+          <Key>
+            <PropertyRef Name="JobTypeID" />
+          </Key>
+          <Property Name="JobTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Lists">
+          <Key>
+            <PropertyRef Name="ListID" />
+          </Key>
+          <Property Name="ListID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ListKey" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ListValue" Type="int" Nullable="false" />
+          <Property Name="SortOrder" Type="int" Nullable="false" />
+          <Property Name="Display1" Type="varchar" MaxLength="50" />
+          <Property Name="Display2" Type="varchar" MaxLength="50" />
+          <Property Name="Abbr" Type="varchar" MaxLength="20" />
+          <Property Name="SysCode" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ManufacturerModels">
+          <Key>
+            <PropertyRef Name="ManufacturerModelID" />
+          </Key>
+          <Property Name="ManufacturerModelID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ManufacturerID" Type="int" Nullable="false" />
+          <Property Name="Model" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="Version" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Manufacturers">
+          <Key>
+            <PropertyRef Name="ManufacturerID" />
+          </Key>
+          <Property Name="ManufacturerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Manufacturer" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="Version" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ServiceIntervals">
+          <Key>
+            <PropertyRef Name="ServiceIntervalId" />
+          </Key>
+          <Property Name="ServiceIntervalId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Years" Type="int" Nullable="false" />
+          <Property Name="Months" Type="int" Nullable="false" />
+          <Property Name="Days" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="Version" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ServiceItemCategories">
+          <Key>
+            <PropertyRef Name="ServiceItemCategoryID" />
+          </Key>
+          <Property Name="ServiceItemCategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Category" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ServiceItems">
+          <Key>
+            <PropertyRef Name="ServiceItemID" />
+          </Key>
+          <Property Name="ServiceItemID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceItemTypeID" Type="int" />
+          <Property Name="ClientLocationID" Type="int" />
+          <Property Name="ManufacturerID" Type="int" />
+          <Property Name="ManufacturerModelID" Type="int" />
+          <Property Name="SerialNum" Type="varchar" MaxLength="255" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="Version" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="SapEquipNum" Type="varchar" MaxLength="255" />
+          <Property Name="Threaded" Type="bit" />
+          <Property Name="Flanged" Type="bit" />
+          <Property Name="InletSize" Type="decimal" Precision="9" Scale="3" />
+          <Property Name="OutletSize" Type="decimal" Precision="9" Scale="3" />
+          <Property Name="InletFlangeRating" Type="decimal" Precision="9" Scale="3" />
+          <Property Name="OutletFlangeRating" Type="decimal" Precision="9" Scale="3" />
+        </EntityType>
+        <EntityType Name="ServiceItemTypes">
+          <Key>
+            <PropertyRef Name="ServiceItemTypeID" />
+          </Key>
+          <Property Name="ServiceItemTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ServiceItemCategoryID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ValveTests">
+          <Key>
+            <PropertyRef Name="ValveTestID" />
+          </Key>
+          <Property Name="ValveTestID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="JobID" Type="int" Nullable="false" />
+          <Property Name="ServiceItemID" Type="int" Nullable="false" />
+          <Property Name="FSRNum" Type="varchar" MaxLength="50" />
+          <Property Name="DateTested" Type="datetime" />
+          <Property Name="SetPressure" Type="float" />
+          <Property Name="BackPressure" Type="float" />
+          <Property Name="ColdDiffPressure" Type="float" />
+          <Property Name="TempCorr" Type="float" />
+          <Property Name="Capacity" Type="float" />
+          <Property Name="CapacityTypeID" Type="int" />
+          <Property Name="SealNum" Type="varchar" MaxLength="50" />
+          <Property Name="GaugeNum" Type="varchar" MaxLength="50" />
+          <Property Name="CalibrationDue" Type="datetime" />
+          <Property Name="Coded" Type="bit" />
+          <Property Name="ValveDate" Type="datetime" />
+          <Property Name="SetPressureFound" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="SetPressureLeft" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="TestResultID" Type="int" />
+          <Property Name="Notes" Type="varchar" MaxLength="2000" />
+          <Property Name="TechID" Type="int" />
+          <Property Name="CustomerWitness" Type="varchar" MaxLength="50" />
+          <Property Name="CostCenter" Type="varchar" MaxLength="50" />
+          <Property Name="PsvApplication" Type="varchar" MaxLength="255" />
+          <Property Name="IsolationValve" Type="bit" />
+          <Property Name="ReliefValveSupport" Type="int" />
+          <Property Name="TestPort" Type="bit" />
+          <Property Name="WeatherCap" Type="int" />
+          <Property Name="DotLocation" Type="bit" />
+          <Property Name="JsaComplete" Type="bit" Nullable="false" />
+          <Property Name="ReviewItems" Type="varchar" MaxLength="500" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Version" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="SapPsv" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="WellSafetyTests">
+          <Key>
+            <PropertyRef Name="WellSafetyTestID" />
+          </Key>
+          <Property Name="WellSafetyTestID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="JobID" Type="int" Nullable="false" />
+          <Property Name="ServiceItemID" Type="int" Nullable="false" />
+          <Property Name="FSR_Num" Type="varchar" MaxLength="50" />
+          <Property Name="SSV_SAP_Num" Type="varchar" MaxLength="50" />
+          <Property Name="FormDate" Type="smalldatetime" />
+          <Property Name="BodyMaterial" Type="varchar" MaxLength="2" />
+          <Property Name="PlugMaterial" Type="varchar" MaxLength="2" />
+          <Property Name="SteamMaterial" Type="varchar" MaxLength="2" />
+          <Property Name="GateMaterial" Type="varchar" MaxLength="2" />
+          <Property Name="PortSize" Type="varchar" MaxLength="50" />
+          <Property Name="PressClass" Type="varchar" MaxLength="50" />
+          <Property Name="ActuatorType" Type="varchar" MaxLength="2" />
+          <Property Name="ActuatorModel" Type="varchar" MaxLength="50" />
+          <Property Name="ActuatorSerialNum" Type="varchar" MaxLength="50" />
+          <Property Name="AirSupplyMedium" Type="varchar" MaxLength="1" />
+          <Property Name="Condition" Type="varchar" MaxLength="50" />
+          <Property Name="DateManufactured" Type="smalldatetime" />
+          <Property Name="SystemLocation" Type="varchar" MaxLength="3" />
+          <Property Name="ControllerType" Type="varchar" MaxLength="50" />
+          <Property Name="HI" Type="varchar" MaxLength="50" />
+          <Property Name="LO" Type="varchar" MaxLength="50" />
+          <Property Name="Notes" Type="varchar" MaxLength="2000" />
+          <Property Name="CustomerWitness" Type="varchar" MaxLength="50" />
+          <Property Name="ManualOverride" Type="varchar" MaxLength="3" />
+          <Property Name="TestResultID" Type="int" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Version" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <Association Name="FK_ClientLocations_Clients">
+          <End Role="Clients" Type="ValvTrak.Model.Store.Clients" Multiplicity="0..1" />
+          <End Role="ClientLocations" Type="ValvTrak.Model.Store.ClientLocations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="ClientID" />
+            </Principal>
+            <Dependent Role="ClientLocations">
+              <PropertyRef Name="ClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClientLocationServiceSchedules_ClientLocations">
+          <End Role="ClientLocations" Type="ValvTrak.Model.Store.ClientLocations" Multiplicity="1" />
+          <End Role="ClientLocationServiceSchedules" Type="ValvTrak.Model.Store.ClientLocationServiceSchedules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientLocations">
+              <PropertyRef Name="ClientLocationID" />
+            </Principal>
+            <Dependent Role="ClientLocationServiceSchedules">
+              <PropertyRef Name="ClientLocationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClientLocationServiceSchedules_JobTypes">
+          <End Role="JobTypes" Type="ValvTrak.Model.Store.JobTypes" Multiplicity="1" />
+          <End Role="ClientLocationServiceSchedules" Type="ValvTrak.Model.Store.ClientLocationServiceSchedules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="JobTypes">
+              <PropertyRef Name="JobTypeID" />
+            </Principal>
+            <Dependent Role="ClientLocationServiceSchedules">
+              <PropertyRef Name="JobTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClientLocationServiceSchedules_ServiceIntervals">
+          <End Role="ServiceIntervals" Type="ValvTrak.Model.Store.ServiceIntervals" Multiplicity="1" />
+          <End Role="ClientLocationServiceSchedules" Type="ValvTrak.Model.Store.ClientLocationServiceSchedules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceIntervals">
+              <PropertyRef Name="ServiceIntervalId" />
+            </Principal>
+            <Dependent Role="ClientLocationServiceSchedules">
+              <PropertyRef Name="ServiceIntervalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GreasingRecordItems_Employees">
+          <End Role="Employees" Type="ValvTrak.Model.Store.Employees" Multiplicity="0..1" />
+          <End Role="GreasingRecordItems" Type="ValvTrak.Model.Store.GreasingRecordItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="GreasingRecordItems">
+              <PropertyRef Name="ModifiedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GreasingRecordItems_GreasingRecords">
+          <End Role="GreasingRecords" Type="ValvTrak.Model.Store.GreasingRecords" Multiplicity="1" />
+          <End Role="GreasingRecordItems" Type="ValvTrak.Model.Store.GreasingRecordItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GreasingRecords">
+              <PropertyRef Name="GreasingRecordID" />
+            </Principal>
+            <Dependent Role="GreasingRecordItems">
+              <PropertyRef Name="GreasingRecordID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GreasingRecordItems_ServiceItems">
+          <End Role="ServiceItems" Type="ValvTrak.Model.Store.ServiceItems" Multiplicity="1" />
+          <End Role="GreasingRecordItems" Type="ValvTrak.Model.Store.GreasingRecordItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceItems">
+              <PropertyRef Name="ServiceItemID" />
+            </Principal>
+            <Dependent Role="GreasingRecordItems">
+              <PropertyRef Name="ServiceItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GreasingRecords_Employees">
+          <End Role="Employees" Type="ValvTrak.Model.Store.Employees" Multiplicity="0..1" />
+          <End Role="GreasingRecords" Type="ValvTrak.Model.Store.GreasingRecords" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="GreasingRecords">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GreasingRecords_Employees_ModifiedBy">
+          <End Role="Employees" Type="ValvTrak.Model.Store.Employees" Multiplicity="0..1" />
+          <End Role="GreasingRecords" Type="ValvTrak.Model.Store.GreasingRecords" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="GreasingRecords">
+              <PropertyRef Name="ModifiedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GreasingRecords_Jobs">
+          <End Role="Jobs" Type="ValvTrak.Model.Store.Jobs" Multiplicity="1" />
+          <End Role="GreasingRecords" Type="ValvTrak.Model.Store.GreasingRecords" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="JobID" />
+            </Principal>
+            <Dependent Role="GreasingRecords">
+              <PropertyRef Name="JobID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_ClientLocations">
+          <End Role="ClientLocations" Type="ValvTrak.Model.Store.ClientLocations" Multiplicity="1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Store.Jobs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientLocations">
+              <PropertyRef Name="ClientLocationID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="ClientLocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_DeliveryMethods">
+          <End Role="DeliveryMethods" Type="ValvTrak.Model.Store.DeliveryMethods" Multiplicity="0..1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Store.Jobs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeliveryMethods">
+              <PropertyRef Name="DeliveryMethodID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="DeliveryMethodID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_Employees">
+          <End Role="Employees" Type="ValvTrak.Model.Store.Employees" Multiplicity="0..1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Store.Jobs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="RequestedByID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_Employees1">
+          <End Role="Employees" Type="ValvTrak.Model.Store.Employees" Multiplicity="0..1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Store.Jobs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_Employees2">
+          <End Role="Employees" Type="ValvTrak.Model.Store.Employees" Multiplicity="1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Store.Jobs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="AssignedByID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_Employees3">
+          <End Role="Employees" Type="ValvTrak.Model.Store.Employees" Multiplicity="0..1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Store.Jobs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="AssignedToID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_Employees4">
+          <End Role="Employees" Type="ValvTrak.Model.Store.Employees" Multiplicity="0..1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Store.Jobs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="ApprovedByID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_JobStatus">
+          <End Role="JobStatus" Type="ValvTrak.Model.Store.JobStatus" Multiplicity="1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Store.Jobs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="JobStatus">
+              <PropertyRef Name="JobStatusID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="JobStatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_JobTypes">
+          <End Role="JobTypes" Type="ValvTrak.Model.Store.JobTypes" Multiplicity="1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Store.Jobs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="JobTypes">
+              <PropertyRef Name="JobTypeID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="JobTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ManufacturerModels_Manufacturers">
+          <End Role="Manufacturers" Type="ValvTrak.Model.Store.Manufacturers" Multiplicity="1" />
+          <End Role="ManufacturerModels" Type="ValvTrak.Model.Store.ManufacturerModels" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturers">
+              <PropertyRef Name="ManufacturerID" />
+            </Principal>
+            <Dependent Role="ManufacturerModels">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceItems_ClientLocations">
+          <End Role="ClientLocations" Type="ValvTrak.Model.Store.ClientLocations" Multiplicity="0..1" />
+          <End Role="ServiceItems" Type="ValvTrak.Model.Store.ServiceItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientLocations">
+              <PropertyRef Name="ClientLocationID" />
+            </Principal>
+            <Dependent Role="ServiceItems">
+              <PropertyRef Name="ClientLocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceItems_ManufacturerModels">
+          <End Role="ManufacturerModels" Type="ValvTrak.Model.Store.ManufacturerModels" Multiplicity="0..1" />
+          <End Role="ServiceItems" Type="ValvTrak.Model.Store.ServiceItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ManufacturerModels">
+              <PropertyRef Name="ManufacturerModelID" />
+            </Principal>
+            <Dependent Role="ServiceItems">
+              <PropertyRef Name="ManufacturerModelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceItems_Manufacturers">
+          <End Role="Manufacturers" Type="ValvTrak.Model.Store.Manufacturers" Multiplicity="0..1" />
+          <End Role="ServiceItems" Type="ValvTrak.Model.Store.ServiceItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturers">
+              <PropertyRef Name="ManufacturerID" />
+            </Principal>
+            <Dependent Role="ServiceItems">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceItems_ServiceItemTypes">
+          <End Role="ServiceItemTypes" Type="ValvTrak.Model.Store.ServiceItemTypes" Multiplicity="0..1" />
+          <End Role="ServiceItems" Type="ValvTrak.Model.Store.ServiceItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceItemTypes">
+              <PropertyRef Name="ServiceItemTypeID" />
+            </Principal>
+            <Dependent Role="ServiceItems">
+              <PropertyRef Name="ServiceItemTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceItemTypes_ServiceItemCategories">
+          <End Role="ServiceItemCategories" Type="ValvTrak.Model.Store.ServiceItemCategories" Multiplicity="1" />
+          <End Role="ServiceItemTypes" Type="ValvTrak.Model.Store.ServiceItemTypes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceItemCategories">
+              <PropertyRef Name="ServiceItemCategoryID" />
+            </Principal>
+            <Dependent Role="ServiceItemTypes">
+              <PropertyRef Name="ServiceItemCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValveTests_Employees">
+          <End Role="Employees" Type="ValvTrak.Model.Store.Employees" Multiplicity="0..1" />
+          <End Role="ValveTests" Type="ValvTrak.Model.Store.ValveTests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="ValveTests">
+              <PropertyRef Name="TechID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValveTests_Employees1">
+          <End Role="Employees" Type="ValvTrak.Model.Store.Employees" Multiplicity="0..1" />
+          <End Role="ValveTests" Type="ValvTrak.Model.Store.ValveTests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="ValveTests">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValveTests_Employees2">
+          <End Role="Employees" Type="ValvTrak.Model.Store.Employees" Multiplicity="0..1" />
+          <End Role="ValveTests" Type="ValvTrak.Model.Store.ValveTests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="ValveTests">
+              <PropertyRef Name="ModifiedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValveTests_Jobs">
+          <End Role="Jobs" Type="ValvTrak.Model.Store.Jobs" Multiplicity="1" />
+          <End Role="ValveTests" Type="ValvTrak.Model.Store.ValveTests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="JobID" />
+            </Principal>
+            <Dependent Role="ValveTests">
+              <PropertyRef Name="JobID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValveTests_Lists">
+          <End Role="Lists" Type="ValvTrak.Model.Store.Lists" Multiplicity="0..1" />
+          <End Role="ValveTests" Type="ValvTrak.Model.Store.ValveTests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lists">
+              <PropertyRef Name="ListID" />
+            </Principal>
+            <Dependent Role="ValveTests">
+              <PropertyRef Name="CapacityTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValveTests_ServiceItems">
+          <End Role="ServiceItems" Type="ValvTrak.Model.Store.ServiceItems" Multiplicity="1" />
+          <End Role="ValveTests" Type="ValvTrak.Model.Store.ValveTests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceItems">
+              <PropertyRef Name="ServiceItemID" />
+            </Principal>
+            <Dependent Role="ValveTests">
+              <PropertyRef Name="ServiceItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WellSafetyTests_Employees">
+          <End Role="Employees" Type="ValvTrak.Model.Store.Employees" Multiplicity="0..1" />
+          <End Role="WellSafetyTests" Type="ValvTrak.Model.Store.WellSafetyTests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="WellSafetyTests">
+              <PropertyRef Name="ModifiedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WellSafetyTests_Employees_CreatedBy">
+          <End Role="Employees" Type="ValvTrak.Model.Store.Employees" Multiplicity="0..1" />
+          <End Role="WellSafetyTests" Type="ValvTrak.Model.Store.WellSafetyTests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="WellSafetyTests">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WellSafetyTests_Jobs">
+          <End Role="Jobs" Type="ValvTrak.Model.Store.Jobs" Multiplicity="1" />
+          <End Role="WellSafetyTests" Type="ValvTrak.Model.Store.WellSafetyTests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="JobID" />
+            </Principal>
+            <Dependent Role="WellSafetyTests">
+              <PropertyRef Name="JobID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WellSafetyTests_ServiceItems">
+          <End Role="ServiceItems" Type="ValvTrak.Model.Store.ServiceItems" Multiplicity="1" />
+          <End Role="WellSafetyTests" Type="ValvTrak.Model.Store.WellSafetyTests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceItems">
+              <PropertyRef Name="ServiceItemID" />
+            </Principal>
+            <Dependent Role="WellSafetyTests">
+              <PropertyRef Name="ServiceItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ValvTrak.Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ValvTrakEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ClientLocations" EntityType="ValvTrak.Model.ClientLocation" />
+          <EntitySet Name="ClientLocationServiceSchedules" EntityType="ValvTrak.Model.ClientLocationServiceSchedule" />
+          <EntitySet Name="Clients" EntityType="ValvTrak.Model.Client" />
+          <EntitySet Name="DeliveryMethods" EntityType="ValvTrak.Model.DeliveryMethod" />
+          <EntitySet Name="Employees" EntityType="ValvTrak.Model.Employee" />
+          <EntitySet Name="GreasingRecordItems" EntityType="ValvTrak.Model.GreasingRecordItem" />
+          <EntitySet Name="GreasingRecords" EntityType="ValvTrak.Model.GreasingRecord" />
+          <EntitySet Name="Jobs" EntityType="ValvTrak.Model.Job" />
+          <EntitySet Name="JobStatuses" EntityType="ValvTrak.Model.JobStatus" />
+          <EntitySet Name="JobTypes" EntityType="ValvTrak.Model.JobType" />
+          <EntitySet Name="Lists" EntityType="ValvTrak.Model.List" />
+          <EntitySet Name="ManufacturerModels" EntityType="ValvTrak.Model.ManufacturerModel" />
+          <EntitySet Name="Manufacturers" EntityType="ValvTrak.Model.Manufacturer" />
+          <EntitySet Name="ServiceIntervals" EntityType="ValvTrak.Model.ServiceInterval" />
+          <EntitySet Name="ServiceItemCategories" EntityType="ValvTrak.Model.ServiceItemCategory" />
+          <EntitySet Name="ServiceItems" EntityType="ValvTrak.Model.ServiceItem" />
+          <EntitySet Name="ServiceItemTypes" EntityType="ValvTrak.Model.ServiceItemType" />
+          <EntitySet Name="ValveTests" EntityType="ValvTrak.Model.ValveTest" />
+          <EntitySet Name="WellSafetyTests" EntityType="ValvTrak.Model.WellSafetyTest" />
+          <AssociationSet Name="FK_ClientLocations_Clients" Association="ValvTrak.Model.FK_ClientLocations_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="ClientLocations" EntitySet="ClientLocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClientLocationServiceSchedules_ClientLocations" Association="ValvTrak.Model.FK_ClientLocationServiceSchedules_ClientLocations">
+            <End Role="ClientLocations" EntitySet="ClientLocations" />
+            <End Role="ClientLocationServiceSchedules" EntitySet="ClientLocationServiceSchedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_ClientLocations" Association="ValvTrak.Model.FK_Jobs_ClientLocations">
+            <End Role="ClientLocations" EntitySet="ClientLocations" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceItems_ClientLocations" Association="ValvTrak.Model.FK_ServiceItems_ClientLocations">
+            <End Role="ClientLocations" EntitySet="ClientLocations" />
+            <End Role="ServiceItems" EntitySet="ServiceItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClientLocationServiceSchedules_JobTypes" Association="ValvTrak.Model.FK_ClientLocationServiceSchedules_JobTypes">
+            <End Role="JobTypes" EntitySet="JobTypes" />
+            <End Role="ClientLocationServiceSchedules" EntitySet="ClientLocationServiceSchedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClientLocationServiceSchedules_ServiceIntervals" Association="ValvTrak.Model.FK_ClientLocationServiceSchedules_ServiceIntervals">
+            <End Role="ServiceIntervals" EntitySet="ServiceIntervals" />
+            <End Role="ClientLocationServiceSchedules" EntitySet="ClientLocationServiceSchedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_DeliveryMethods" Association="ValvTrak.Model.FK_Jobs_DeliveryMethods">
+            <End Role="DeliveryMethods" EntitySet="DeliveryMethods" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GreasingRecordItems_Employees" Association="ValvTrak.Model.FK_GreasingRecordItems_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="GreasingRecordItems" EntitySet="GreasingRecordItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GreasingRecords_Employees" Association="ValvTrak.Model.FK_GreasingRecords_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="GreasingRecords" EntitySet="GreasingRecords" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GreasingRecords_Employees_ModifiedBy" Association="ValvTrak.Model.FK_GreasingRecords_Employees_ModifiedBy">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="GreasingRecords" EntitySet="GreasingRecords" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_Employees" Association="ValvTrak.Model.FK_Jobs_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_Employees1" Association="ValvTrak.Model.FK_Jobs_Employees1">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_Employees2" Association="ValvTrak.Model.FK_Jobs_Employees2">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_Employees3" Association="ValvTrak.Model.FK_Jobs_Employees3">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_Employees4" Association="ValvTrak.Model.FK_Jobs_Employees4">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValveTests_Employees" Association="ValvTrak.Model.FK_ValveTests_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="ValveTests" EntitySet="ValveTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValveTests_Employees1" Association="ValvTrak.Model.FK_ValveTests_Employees1">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="ValveTests" EntitySet="ValveTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValveTests_Employees2" Association="ValvTrak.Model.FK_ValveTests_Employees2">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="ValveTests" EntitySet="ValveTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WellSafetyTests_Employees" Association="ValvTrak.Model.FK_WellSafetyTests_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="WellSafetyTests" EntitySet="WellSafetyTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WellSafetyTests_Employees_CreatedBy" Association="ValvTrak.Model.FK_WellSafetyTests_Employees_CreatedBy">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="WellSafetyTests" EntitySet="WellSafetyTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GreasingRecordItems_GreasingRecords" Association="ValvTrak.Model.FK_GreasingRecordItems_GreasingRecords">
+            <End Role="GreasingRecords" EntitySet="GreasingRecords" />
+            <End Role="GreasingRecordItems" EntitySet="GreasingRecordItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GreasingRecordItems_ServiceItems" Association="ValvTrak.Model.FK_GreasingRecordItems_ServiceItems">
+            <End Role="ServiceItems" EntitySet="ServiceItems" />
+            <End Role="GreasingRecordItems" EntitySet="GreasingRecordItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GreasingRecords_Jobs" Association="ValvTrak.Model.FK_GreasingRecords_Jobs">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="GreasingRecords" EntitySet="GreasingRecords" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_JobStatus" Association="ValvTrak.Model.FK_Jobs_JobStatus">
+            <End Role="JobStatus" EntitySet="JobStatuses" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Jobs_JobTypes" Association="ValvTrak.Model.FK_Jobs_JobTypes">
+            <End Role="JobTypes" EntitySet="JobTypes" />
+            <End Role="Jobs" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValveTests_Jobs" Association="ValvTrak.Model.FK_ValveTests_Jobs">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="ValveTests" EntitySet="ValveTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WellSafetyTests_Jobs" Association="ValvTrak.Model.FK_WellSafetyTests_Jobs">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="WellSafetyTests" EntitySet="WellSafetyTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValveTests_Lists" Association="ValvTrak.Model.FK_ValveTests_Lists">
+            <End Role="Lists" EntitySet="Lists" />
+            <End Role="ValveTests" EntitySet="ValveTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ManufacturerModels_Manufacturers" Association="ValvTrak.Model.FK_ManufacturerModels_Manufacturers">
+            <End Role="Manufacturers" EntitySet="Manufacturers" />
+            <End Role="ManufacturerModels" EntitySet="ManufacturerModels" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceItems_ManufacturerModels" Association="ValvTrak.Model.FK_ServiceItems_ManufacturerModels">
+            <End Role="ManufacturerModels" EntitySet="ManufacturerModels" />
+            <End Role="ServiceItems" EntitySet="ServiceItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceItems_Manufacturers" Association="ValvTrak.Model.FK_ServiceItems_Manufacturers">
+            <End Role="Manufacturers" EntitySet="Manufacturers" />
+            <End Role="ServiceItems" EntitySet="ServiceItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceItemTypes_ServiceItemCategories" Association="ValvTrak.Model.FK_ServiceItemTypes_ServiceItemCategories">
+            <End Role="ServiceItemCategories" EntitySet="ServiceItemCategories" />
+            <End Role="ServiceItemTypes" EntitySet="ServiceItemTypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceItems_ServiceItemTypes" Association="ValvTrak.Model.FK_ServiceItems_ServiceItemTypes">
+            <End Role="ServiceItemTypes" EntitySet="ServiceItemTypes" />
+            <End Role="ServiceItems" EntitySet="ServiceItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ValveTests_ServiceItems" Association="ValvTrak.Model.FK_ValveTests_ServiceItems">
+            <End Role="ServiceItems" EntitySet="ServiceItems" />
+            <End Role="ValveTests" EntitySet="ValveTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WellSafetyTests_ServiceItems" Association="ValvTrak.Model.FK_WellSafetyTests_ServiceItems">
+            <End Role="ServiceItems" EntitySet="ServiceItems" />
+            <End Role="WellSafetyTests" EntitySet="WellSafetyTests" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ClientLocation">
+          <Key>
+            <PropertyRef Name="ClientLocationID" />
+          </Key>
+          <Property Name="ClientLocationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientID" Type="Int32" />
+          <Property Name="ClientLocationTypeID" Type="Int32" />
+          <Property Name="PropertyNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="State" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="ZipCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Longitude" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Latitude" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ServiceDate" Type="DateTime" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" />
+          <Property Name="Version" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="Client" Relationship="ValvTrak.Model.FK_ClientLocations_Clients" FromRole="ClientLocations" ToRole="Clients" />
+          <NavigationProperty Name="ClientLocationServiceSchedules" Relationship="ValvTrak.Model.FK_ClientLocationServiceSchedules_ClientLocations" FromRole="ClientLocations" ToRole="ClientLocationServiceSchedules" />
+          <NavigationProperty Name="Jobs" Relationship="ValvTrak.Model.FK_Jobs_ClientLocations" FromRole="ClientLocations" ToRole="Jobs" />
+          <NavigationProperty Name="ServiceItems" Relationship="ValvTrak.Model.FK_ServiceItems_ClientLocations" FromRole="ClientLocations" ToRole="ServiceItems" />
+        </EntityType>
+        <EntityType Name="ClientLocationServiceSchedule">
+          <Key>
+            <PropertyRef Name="ClientLocationServiceScheduleId" />
+          </Key>
+          <Property Name="ClientLocationServiceScheduleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientLocationId" Type="Int32" Nullable="false" />
+          <Property Name="JobTypeId" Type="Int32" Nullable="false" />
+          <Property Name="ServiceIntervalId" Type="Int32" Nullable="false" />
+          <Property Name="LastServiceDate" Type="DateTime" Nullable="false" />
+          <Property Name="NextServiceDate" Type="DateTime" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CountDown" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Version" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ClientLocation" Relationship="ValvTrak.Model.FK_ClientLocationServiceSchedules_ClientLocations" FromRole="ClientLocationServiceSchedules" ToRole="ClientLocations" />
+          <NavigationProperty Name="JobType" Relationship="ValvTrak.Model.FK_ClientLocationServiceSchedules_JobTypes" FromRole="ClientLocationServiceSchedules" ToRole="JobTypes" />
+          <NavigationProperty Name="ServiceInterval" Relationship="ValvTrak.Model.FK_ClientLocationServiceSchedules_ServiceIntervals" FromRole="ClientLocationServiceSchedules" ToRole="ServiceIntervals" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ClientID" />
+          </Key>
+          <Property Name="ClientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="ZipCode" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Website" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="SysProNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ParentID" Type="Int32" Nullable="false" />
+          <Property Name="Version" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ClientLocations" Relationship="ValvTrak.Model.FK_ClientLocations_Clients" FromRole="Clients" ToRole="ClientLocations" />
+        </EntityType>
+        <EntityType Name="DeliveryMethod">
+          <Key>
+            <PropertyRef Name="DeliveryMethodID" />
+          </Key>
+          <Property Name="DeliveryMethodID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Method" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Jobs" Relationship="ValvTrak.Model.FK_Jobs_DeliveryMethods" FromRole="DeliveryMethods" ToRole="Jobs" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="WorkPhone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CellPhone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="EFC_LocationID" Type="Int32" Nullable="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="Version" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="GreasingRecordItems" Relationship="ValvTrak.Model.FK_GreasingRecordItems_Employees" FromRole="Employees" ToRole="GreasingRecordItems" />
+          <NavigationProperty Name="GreasingRecords" Relationship="ValvTrak.Model.FK_GreasingRecords_Employees" FromRole="Employees" ToRole="GreasingRecords" />
+          <NavigationProperty Name="GreasingRecords1" Relationship="ValvTrak.Model.FK_GreasingRecords_Employees_ModifiedBy" FromRole="Employees" ToRole="GreasingRecords" />
+          <NavigationProperty Name="Jobs" Relationship="ValvTrak.Model.FK_Jobs_Employees" FromRole="Employees" ToRole="Jobs" />
+          <NavigationProperty Name="Jobs1" Relationship="ValvTrak.Model.FK_Jobs_Employees1" FromRole="Employees" ToRole="Jobs" />
+          <NavigationProperty Name="Jobs2" Relationship="ValvTrak.Model.FK_Jobs_Employees2" FromRole="Employees" ToRole="Jobs" />
+          <NavigationProperty Name="Jobs3" Relationship="ValvTrak.Model.FK_Jobs_Employees3" FromRole="Employees" ToRole="Jobs" />
+          <NavigationProperty Name="Jobs4" Relationship="ValvTrak.Model.FK_Jobs_Employees4" FromRole="Employees" ToRole="Jobs" />
+          <NavigationProperty Name="ValveTests" Relationship="ValvTrak.Model.FK_ValveTests_Employees" FromRole="Employees" ToRole="ValveTests" />
+          <NavigationProperty Name="ValveTests1" Relationship="ValvTrak.Model.FK_ValveTests_Employees1" FromRole="Employees" ToRole="ValveTests" />
+          <NavigationProperty Name="ValveTests2" Relationship="ValvTrak.Model.FK_ValveTests_Employees2" FromRole="Employees" ToRole="ValveTests" />
+          <NavigationProperty Name="WellSafetyTests" Relationship="ValvTrak.Model.FK_WellSafetyTests_Employees" FromRole="Employees" ToRole="WellSafetyTests" />
+          <NavigationProperty Name="WellSafetyTests1" Relationship="ValvTrak.Model.FK_WellSafetyTests_Employees_CreatedBy" FromRole="Employees" ToRole="WellSafetyTests" />
+        </EntityType>
+        <EntityType Name="GreasingRecordItem">
+          <Key>
+            <PropertyRef Name="GreasingRecordItemID" />
+          </Key>
+          <Property Name="GreasingRecordItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GreasingRecordID" Type="Int32" Nullable="false" />
+          <Property Name="ServiceItemID" Type="Int32" Nullable="false" />
+          <Property Name="ValveLocation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ActuatorInspected" Type="Int32" />
+          <Property Name="ActuatorLubed" Type="Int32" />
+          <Property Name="PercentCycled" Type="Int32" />
+          <Property Name="ValveSecured" Type="Int32" />
+          <Property Name="FlangeOrScrew" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="EaseOfOperation" Type="Int32" />
+          <Property Name="SeatsChecked" Type="Int32" />
+          <Property Name="SeatsLubed" Type="Int32" />
+          <Property Name="Leaking" Type="Int32" />
+          <Property Name="LubeTypeID" Type="Int32" />
+          <Property Name="AmountInjected" Type="Double" Nullable="false" />
+          <Property Name="Notes" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" />
+          <Property Name="Version" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="Employee" Relationship="ValvTrak.Model.FK_GreasingRecordItems_Employees" FromRole="GreasingRecordItems" ToRole="Employees" />
+          <NavigationProperty Name="GreasingRecord" Relationship="ValvTrak.Model.FK_GreasingRecordItems_GreasingRecords" FromRole="GreasingRecordItems" ToRole="GreasingRecords" />
+          <NavigationProperty Name="ServiceItem" Relationship="ValvTrak.Model.FK_GreasingRecordItems_ServiceItems" FromRole="GreasingRecordItems" ToRole="ServiceItems" />
+        </EntityType>
+        <EntityType Name="GreasingRecord">
+          <Key>
+            <PropertyRef Name="GreasingRecordID" />
+          </Key>
+          <Property Name="GreasingRecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JobID" Type="Int32" Nullable="false" />
+          <Property Name="ClientFieldOffice" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PipelineSegment" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Field" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SapPSV" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FSRNum" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" />
+          <Property Name="Version" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="Employee" Relationship="ValvTrak.Model.FK_GreasingRecords_Employees" FromRole="GreasingRecords" ToRole="Employees" />
+          <NavigationProperty Name="Employee1" Relationship="ValvTrak.Model.FK_GreasingRecords_Employees_ModifiedBy" FromRole="GreasingRecords" ToRole="Employees" />
+          <NavigationProperty Name="GreasingRecordItems" Relationship="ValvTrak.Model.FK_GreasingRecordItems_GreasingRecords" FromRole="GreasingRecords" ToRole="GreasingRecordItems" />
+          <NavigationProperty Name="Job" Relationship="ValvTrak.Model.FK_GreasingRecords_Jobs" FromRole="GreasingRecords" ToRole="Jobs" />
+        </EntityType>
+        <EntityType Name="Job">
+          <Key>
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SalesOrderNum" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CallDate" Type="DateTime" />
+          <Property Name="RequestedByID" Type="Int32" />
+          <Property Name="JobTypeID" Type="Int32" Nullable="false" />
+          <Property Name="ClientLocationID" Type="Int32" Nullable="false" />
+          <Property Name="JobStatusID" Type="Int32" Nullable="false" />
+          <Property Name="ServiceDate" Type="DateTime" />
+          <Property Name="CompletionDate" Type="DateTime" />
+          <Property Name="AssignedByID" Type="Int32" Nullable="false" />
+          <Property Name="AssignedToID" Type="Int32" />
+          <Property Name="ApprovedByID" Type="Int32" />
+          <Property Name="DeliveryMethodID" Type="Int32" />
+          <Property Name="PM" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="NP" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="FS" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="DotNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="VRstamp" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" />
+          <Property Name="Version" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="SapWoNum" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="ClientLocation" Relationship="ValvTrak.Model.FK_Jobs_ClientLocations" FromRole="Jobs" ToRole="ClientLocations" />
+          <NavigationProperty Name="DeliveryMethod" Relationship="ValvTrak.Model.FK_Jobs_DeliveryMethods" FromRole="Jobs" ToRole="DeliveryMethods" />
+          <NavigationProperty Name="Employee" Relationship="ValvTrak.Model.FK_Jobs_Employees" FromRole="Jobs" ToRole="Employees" />
+          <NavigationProperty Name="Employee1" Relationship="ValvTrak.Model.FK_Jobs_Employees1" FromRole="Jobs" ToRole="Employees" />
+          <NavigationProperty Name="Employee2" Relationship="ValvTrak.Model.FK_Jobs_Employees2" FromRole="Jobs" ToRole="Employees" />
+          <NavigationProperty Name="Employee3" Relationship="ValvTrak.Model.FK_Jobs_Employees3" FromRole="Jobs" ToRole="Employees" />
+          <NavigationProperty Name="Employee4" Relationship="ValvTrak.Model.FK_Jobs_Employees4" FromRole="Jobs" ToRole="Employees" />
+          <NavigationProperty Name="GreasingRecords" Relationship="ValvTrak.Model.FK_GreasingRecords_Jobs" FromRole="Jobs" ToRole="GreasingRecords" />
+          <NavigationProperty Name="JobStatu" Relationship="ValvTrak.Model.FK_Jobs_JobStatus" FromRole="Jobs" ToRole="JobStatus" />
+          <NavigationProperty Name="JobType" Relationship="ValvTrak.Model.FK_Jobs_JobTypes" FromRole="Jobs" ToRole="JobTypes" />
+          <NavigationProperty Name="ValveTests" Relationship="ValvTrak.Model.FK_ValveTests_Jobs" FromRole="Jobs" ToRole="ValveTests" />
+          <NavigationProperty Name="WellSafetyTests" Relationship="ValvTrak.Model.FK_WellSafetyTests_Jobs" FromRole="Jobs" ToRole="WellSafetyTests" />
+        </EntityType>
+        <EntityType Name="JobStatus">
+          <Key>
+            <PropertyRef Name="JobStatusID" />
+          </Key>
+          <Property Name="JobStatusID" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Sequence" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Jobs" Relationship="ValvTrak.Model.FK_Jobs_JobStatus" FromRole="JobStatus" ToRole="Jobs" />
+        </EntityType>
+        <EntityType Name="JobType">
+          <Key>
+            <PropertyRef Name="JobTypeID" />
+          </Key>
+          <Property Name="JobTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ClientLocationServiceSchedules" Relationship="ValvTrak.Model.FK_ClientLocationServiceSchedules_JobTypes" FromRole="JobTypes" ToRole="ClientLocationServiceSchedules" />
+          <NavigationProperty Name="Jobs" Relationship="ValvTrak.Model.FK_Jobs_JobTypes" FromRole="JobTypes" ToRole="Jobs" />
+        </EntityType>
+        <EntityType Name="List">
+          <Key>
+            <PropertyRef Name="ListID" />
+          </Key>
+          <Property Name="ListID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ListKey" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ListValue" Type="Int32" Nullable="false" />
+          <Property Name="SortOrder" Type="Int32" Nullable="false" />
+          <Property Name="Display1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Display2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Abbr" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SysCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="ValveTests" Relationship="ValvTrak.Model.FK_ValveTests_Lists" FromRole="Lists" ToRole="ValveTests" />
+        </EntityType>
+        <EntityType Name="ManufacturerModel">
+          <Key>
+            <PropertyRef Name="ManufacturerModelID" />
+          </Key>
+          <Property Name="ManufacturerModelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ManufacturerID" Type="Int32" Nullable="false" />
+          <Property Name="Model" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="Version" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="Manufacturer" Relationship="ValvTrak.Model.FK_ManufacturerModels_Manufacturers" FromRole="ManufacturerModels" ToRole="Manufacturers" />
+          <NavigationProperty Name="ServiceItems" Relationship="ValvTrak.Model.FK_ServiceItems_ManufacturerModels" FromRole="ManufacturerModels" ToRole="ServiceItems" />
+        </EntityType>
+        <EntityType Name="Manufacturer">
+          <Key>
+            <PropertyRef Name="ManufacturerID" />
+          </Key>
+          <Property Name="ManufacturerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Manufacturer1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="Version" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ManufacturerModels" Relationship="ValvTrak.Model.FK_ManufacturerModels_Manufacturers" FromRole="Manufacturers" ToRole="ManufacturerModels" />
+          <NavigationProperty Name="ServiceItems" Relationship="ValvTrak.Model.FK_ServiceItems_Manufacturers" FromRole="Manufacturers" ToRole="ServiceItems" />
+        </EntityType>
+        <EntityType Name="ServiceInterval">
+          <Key>
+            <PropertyRef Name="ServiceIntervalId" />
+          </Key>
+          <Property Name="ServiceIntervalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Years" Type="Int32" Nullable="false" />
+          <Property Name="Months" Type="Int32" Nullable="false" />
+          <Property Name="Days" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="Version" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ClientLocationServiceSchedules" Relationship="ValvTrak.Model.FK_ClientLocationServiceSchedules_ServiceIntervals" FromRole="ServiceIntervals" ToRole="ClientLocationServiceSchedules" />
+        </EntityType>
+        <EntityType Name="ServiceItemCategory">
+          <Key>
+            <PropertyRef Name="ServiceItemCategoryID" />
+          </Key>
+          <Property Name="ServiceItemCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Category" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="ServiceItemTypes" Relationship="ValvTrak.Model.FK_ServiceItemTypes_ServiceItemCategories" FromRole="ServiceItemCategories" ToRole="ServiceItemTypes" />
+        </EntityType>
+        <EntityType Name="ServiceItem">
+          <Key>
+            <PropertyRef Name="ServiceItemID" />
+          </Key>
+          <Property Name="ServiceItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceItemTypeID" Type="Int32" />
+          <Property Name="ClientLocationID" Type="Int32" />
+          <Property Name="ManufacturerID" Type="Int32" />
+          <Property Name="ManufacturerModelID" Type="Int32" />
+          <Property Name="SerialNum" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="Version" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="SapEquipNum" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Threaded" Type="Boolean" />
+          <Property Name="Flanged" Type="Boolean" />
+          <Property Name="InletSize" Type="Decimal" Precision="9" Scale="3" />
+          <Property Name="OutletSize" Type="Decimal" Precision="9" Scale="3" />
+          <Property Name="InletFlangeRating" Type="Decimal" Precision="9" Scale="3" />
+          <Property Name="OutletFlangeRating" Type="Decimal" Precision="9" Scale="3" />
+          <NavigationProperty Name="ClientLocation" Relationship="ValvTrak.Model.FK_ServiceItems_ClientLocations" FromRole="ServiceItems" ToRole="ClientLocations" />
+          <NavigationProperty Name="GreasingRecordItems" Relationship="ValvTrak.Model.FK_GreasingRecordItems_ServiceItems" FromRole="ServiceItems" ToRole="GreasingRecordItems" />
+          <NavigationProperty Name="ManufacturerModel" Relationship="ValvTrak.Model.FK_ServiceItems_ManufacturerModels" FromRole="ServiceItems" ToRole="ManufacturerModels" />
+          <NavigationProperty Name="Manufacturer" Relationship="ValvTrak.Model.FK_ServiceItems_Manufacturers" FromRole="ServiceItems" ToRole="Manufacturers" />
+          <NavigationProperty Name="ServiceItemType" Relationship="ValvTrak.Model.FK_ServiceItems_ServiceItemTypes" FromRole="ServiceItems" ToRole="ServiceItemTypes" />
+          <NavigationProperty Name="ValveTests" Relationship="ValvTrak.Model.FK_ValveTests_ServiceItems" FromRole="ServiceItems" ToRole="ValveTests" />
+          <NavigationProperty Name="WellSafetyTests" Relationship="ValvTrak.Model.FK_WellSafetyTests_ServiceItems" FromRole="ServiceItems" ToRole="WellSafetyTests" />
+        </EntityType>
+        <EntityType Name="ServiceItemType">
+          <Key>
+            <PropertyRef Name="ServiceItemTypeID" />
+          </Key>
+          <Property Name="ServiceItemTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ServiceItemCategoryID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ServiceItemCategory" Relationship="ValvTrak.Model.FK_ServiceItemTypes_ServiceItemCategories" FromRole="ServiceItemTypes" ToRole="ServiceItemCategories" />
+          <NavigationProperty Name="ServiceItems" Relationship="ValvTrak.Model.FK_ServiceItems_ServiceItemTypes" FromRole="ServiceItemTypes" ToRole="ServiceItems" />
+        </EntityType>
+        <EntityType Name="ValveTest">
+          <Key>
+            <PropertyRef Name="ValveTestID" />
+          </Key>
+          <Property Name="ValveTestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JobID" Type="Int32" Nullable="false" />
+          <Property Name="ServiceItemID" Type="Int32" Nullable="false" />
+          <Property Name="FSRNum" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DateTested" Type="DateTime" />
+          <Property Name="SetPressure" Type="Double" />
+          <Property Name="BackPressure" Type="Double" />
+          <Property Name="ColdDiffPressure" Type="Double" />
+          <Property Name="TempCorr" Type="Double" />
+          <Property Name="Capacity" Type="Double" />
+          <Property Name="CapacityTypeID" Type="Int32" />
+          <Property Name="SealNum" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="GaugeNum" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CalibrationDue" Type="DateTime" />
+          <Property Name="Coded" Type="Boolean" />
+          <Property Name="ValveDate" Type="DateTime" />
+          <Property Name="SetPressureFound" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="SetPressureLeft" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="TestResultID" Type="Int32" />
+          <Property Name="Notes" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="TechID" Type="Int32" />
+          <Property Name="CustomerWitness" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CostCenter" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PsvApplication" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="IsolationValve" Type="Boolean" />
+          <Property Name="ReliefValveSupport" Type="Int32" />
+          <Property Name="TestPort" Type="Boolean" />
+          <Property Name="WeatherCap" Type="Int32" />
+          <Property Name="DotLocation" Type="Boolean" />
+          <Property Name="JsaComplete" Type="Boolean" Nullable="false" />
+          <Property Name="ReviewItems" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" />
+          <Property Name="Version" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="SapPsv" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Employee" Relationship="ValvTrak.Model.FK_ValveTests_Employees" FromRole="ValveTests" ToRole="Employees" />
+          <NavigationProperty Name="Employee1" Relationship="ValvTrak.Model.FK_ValveTests_Employees1" FromRole="ValveTests" ToRole="Employees" />
+          <NavigationProperty Name="Employee2" Relationship="ValvTrak.Model.FK_ValveTests_Employees2" FromRole="ValveTests" ToRole="Employees" />
+          <NavigationProperty Name="Job" Relationship="ValvTrak.Model.FK_ValveTests_Jobs" FromRole="ValveTests" ToRole="Jobs" />
+          <NavigationProperty Name="List" Relationship="ValvTrak.Model.FK_ValveTests_Lists" FromRole="ValveTests" ToRole="Lists" />
+          <NavigationProperty Name="ServiceItem" Relationship="ValvTrak.Model.FK_ValveTests_ServiceItems" FromRole="ValveTests" ToRole="ServiceItems" />
+        </EntityType>
+        <EntityType Name="WellSafetyTest">
+          <Key>
+            <PropertyRef Name="WellSafetyTestID" />
+          </Key>
+          <Property Name="WellSafetyTestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JobID" Type="Int32" Nullable="false" />
+          <Property Name="ServiceItemID" Type="Int32" Nullable="false" />
+          <Property Name="FSR_Num" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SSV_SAP_Num" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FormDate" Type="DateTime" />
+          <Property Name="BodyMaterial" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="PlugMaterial" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="SteamMaterial" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="GateMaterial" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="PortSize" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PressClass" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ActuatorType" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="ActuatorModel" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ActuatorSerialNum" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AirSupplyMedium" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="Condition" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DateManufactured" Type="DateTime" />
+          <Property Name="SystemLocation" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="ControllerType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="HI" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="CustomerWitness" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ManualOverride" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="TestResultID" Type="Int32" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" />
+          <Property Name="Version" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="Employee" Relationship="ValvTrak.Model.FK_WellSafetyTests_Employees" FromRole="WellSafetyTests" ToRole="Employees" />
+          <NavigationProperty Name="Employee1" Relationship="ValvTrak.Model.FK_WellSafetyTests_Employees_CreatedBy" FromRole="WellSafetyTests" ToRole="Employees" />
+          <NavigationProperty Name="Job" Relationship="ValvTrak.Model.FK_WellSafetyTests_Jobs" FromRole="WellSafetyTests" ToRole="Jobs" />
+          <NavigationProperty Name="ServiceItem" Relationship="ValvTrak.Model.FK_WellSafetyTests_ServiceItems" FromRole="WellSafetyTests" ToRole="ServiceItems" />
+        </EntityType>
+        <Association Name="FK_ClientLocations_Clients">
+          <End Role="Clients" Type="ValvTrak.Model.Client" Multiplicity="0..1" />
+          <End Role="ClientLocations" Type="ValvTrak.Model.ClientLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="ClientID" />
+            </Principal>
+            <Dependent Role="ClientLocations">
+              <PropertyRef Name="ClientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClientLocationServiceSchedules_ClientLocations">
+          <End Role="ClientLocations" Type="ValvTrak.Model.ClientLocation" Multiplicity="1" />
+          <End Role="ClientLocationServiceSchedules" Type="ValvTrak.Model.ClientLocationServiceSchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientLocations">
+              <PropertyRef Name="ClientLocationID" />
+            </Principal>
+            <Dependent Role="ClientLocationServiceSchedules">
+              <PropertyRef Name="ClientLocationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_ClientLocations">
+          <End Role="ClientLocations" Type="ValvTrak.Model.ClientLocation" Multiplicity="1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientLocations">
+              <PropertyRef Name="ClientLocationID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="ClientLocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceItems_ClientLocations">
+          <End Role="ClientLocations" Type="ValvTrak.Model.ClientLocation" Multiplicity="0..1" />
+          <End Role="ServiceItems" Type="ValvTrak.Model.ServiceItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientLocations">
+              <PropertyRef Name="ClientLocationID" />
+            </Principal>
+            <Dependent Role="ServiceItems">
+              <PropertyRef Name="ClientLocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClientLocationServiceSchedules_JobTypes">
+          <End Role="JobTypes" Type="ValvTrak.Model.JobType" Multiplicity="1" />
+          <End Role="ClientLocationServiceSchedules" Type="ValvTrak.Model.ClientLocationServiceSchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="JobTypes">
+              <PropertyRef Name="JobTypeID" />
+            </Principal>
+            <Dependent Role="ClientLocationServiceSchedules">
+              <PropertyRef Name="JobTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClientLocationServiceSchedules_ServiceIntervals">
+          <End Role="ServiceIntervals" Type="ValvTrak.Model.ServiceInterval" Multiplicity="1" />
+          <End Role="ClientLocationServiceSchedules" Type="ValvTrak.Model.ClientLocationServiceSchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceIntervals">
+              <PropertyRef Name="ServiceIntervalId" />
+            </Principal>
+            <Dependent Role="ClientLocationServiceSchedules">
+              <PropertyRef Name="ServiceIntervalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_DeliveryMethods">
+          <End Role="DeliveryMethods" Type="ValvTrak.Model.DeliveryMethod" Multiplicity="0..1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeliveryMethods">
+              <PropertyRef Name="DeliveryMethodID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="DeliveryMethodID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GreasingRecordItems_Employees">
+          <End Role="Employees" Type="ValvTrak.Model.Employee" Multiplicity="0..1" />
+          <End Role="GreasingRecordItems" Type="ValvTrak.Model.GreasingRecordItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="GreasingRecordItems">
+              <PropertyRef Name="ModifiedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GreasingRecords_Employees">
+          <End Role="Employees" Type="ValvTrak.Model.Employee" Multiplicity="0..1" />
+          <End Role="GreasingRecords" Type="ValvTrak.Model.GreasingRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="GreasingRecords">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GreasingRecords_Employees_ModifiedBy">
+          <End Role="Employees" Type="ValvTrak.Model.Employee" Multiplicity="0..1" />
+          <End Role="GreasingRecords" Type="ValvTrak.Model.GreasingRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="GreasingRecords">
+              <PropertyRef Name="ModifiedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_Employees">
+          <End Role="Employees" Type="ValvTrak.Model.Employee" Multiplicity="0..1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="RequestedByID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_Employees1">
+          <End Role="Employees" Type="ValvTrak.Model.Employee" Multiplicity="0..1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_Employees2">
+          <End Role="Employees" Type="ValvTrak.Model.Employee" Multiplicity="1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="AssignedByID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_Employees3">
+          <End Role="Employees" Type="ValvTrak.Model.Employee" Multiplicity="0..1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="AssignedToID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_Employees4">
+          <End Role="Employees" Type="ValvTrak.Model.Employee" Multiplicity="0..1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="ApprovedByID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValveTests_Employees">
+          <End Role="Employees" Type="ValvTrak.Model.Employee" Multiplicity="0..1" />
+          <End Role="ValveTests" Type="ValvTrak.Model.ValveTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="ValveTests">
+              <PropertyRef Name="TechID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValveTests_Employees1">
+          <End Role="Employees" Type="ValvTrak.Model.Employee" Multiplicity="0..1" />
+          <End Role="ValveTests" Type="ValvTrak.Model.ValveTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="ValveTests">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValveTests_Employees2">
+          <End Role="Employees" Type="ValvTrak.Model.Employee" Multiplicity="0..1" />
+          <End Role="ValveTests" Type="ValvTrak.Model.ValveTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="ValveTests">
+              <PropertyRef Name="ModifiedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WellSafetyTests_Employees">
+          <End Role="Employees" Type="ValvTrak.Model.Employee" Multiplicity="0..1" />
+          <End Role="WellSafetyTests" Type="ValvTrak.Model.WellSafetyTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="WellSafetyTests">
+              <PropertyRef Name="ModifiedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WellSafetyTests_Employees_CreatedBy">
+          <End Role="Employees" Type="ValvTrak.Model.Employee" Multiplicity="0..1" />
+          <End Role="WellSafetyTests" Type="ValvTrak.Model.WellSafetyTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="WellSafetyTests">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GreasingRecordItems_GreasingRecords">
+          <End Role="GreasingRecords" Type="ValvTrak.Model.GreasingRecord" Multiplicity="1" />
+          <End Role="GreasingRecordItems" Type="ValvTrak.Model.GreasingRecordItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GreasingRecords">
+              <PropertyRef Name="GreasingRecordID" />
+            </Principal>
+            <Dependent Role="GreasingRecordItems">
+              <PropertyRef Name="GreasingRecordID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GreasingRecordItems_ServiceItems">
+          <End Role="ServiceItems" Type="ValvTrak.Model.ServiceItem" Multiplicity="1" />
+          <End Role="GreasingRecordItems" Type="ValvTrak.Model.GreasingRecordItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceItems">
+              <PropertyRef Name="ServiceItemID" />
+            </Principal>
+            <Dependent Role="GreasingRecordItems">
+              <PropertyRef Name="ServiceItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GreasingRecords_Jobs">
+          <End Role="Jobs" Type="ValvTrak.Model.Job" Multiplicity="1" />
+          <End Role="GreasingRecords" Type="ValvTrak.Model.GreasingRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="JobID" />
+            </Principal>
+            <Dependent Role="GreasingRecords">
+              <PropertyRef Name="JobID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_JobStatus">
+          <End Role="JobStatus" Type="ValvTrak.Model.JobStatus" Multiplicity="1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="JobStatus">
+              <PropertyRef Name="JobStatusID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="JobStatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Jobs_JobTypes">
+          <End Role="JobTypes" Type="ValvTrak.Model.JobType" Multiplicity="1" />
+          <End Role="Jobs" Type="ValvTrak.Model.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="JobTypes">
+              <PropertyRef Name="JobTypeID" />
+            </Principal>
+            <Dependent Role="Jobs">
+              <PropertyRef Name="JobTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValveTests_Jobs">
+          <End Role="Jobs" Type="ValvTrak.Model.Job" Multiplicity="1" />
+          <End Role="ValveTests" Type="ValvTrak.Model.ValveTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="JobID" />
+            </Principal>
+            <Dependent Role="ValveTests">
+              <PropertyRef Name="JobID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WellSafetyTests_Jobs">
+          <End Role="Jobs" Type="ValvTrak.Model.Job" Multiplicity="1" />
+          <End Role="WellSafetyTests" Type="ValvTrak.Model.WellSafetyTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="JobID" />
+            </Principal>
+            <Dependent Role="WellSafetyTests">
+              <PropertyRef Name="JobID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValveTests_Lists">
+          <End Role="Lists" Type="ValvTrak.Model.List" Multiplicity="0..1" />
+          <End Role="ValveTests" Type="ValvTrak.Model.ValveTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lists">
+              <PropertyRef Name="ListID" />
+            </Principal>
+            <Dependent Role="ValveTests">
+              <PropertyRef Name="CapacityTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ManufacturerModels_Manufacturers">
+          <End Role="Manufacturers" Type="ValvTrak.Model.Manufacturer" Multiplicity="1" />
+          <End Role="ManufacturerModels" Type="ValvTrak.Model.ManufacturerModel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturers">
+              <PropertyRef Name="ManufacturerID" />
+            </Principal>
+            <Dependent Role="ManufacturerModels">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceItems_ManufacturerModels">
+          <End Role="ManufacturerModels" Type="ValvTrak.Model.ManufacturerModel" Multiplicity="0..1" />
+          <End Role="ServiceItems" Type="ValvTrak.Model.ServiceItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ManufacturerModels">
+              <PropertyRef Name="ManufacturerModelID" />
+            </Principal>
+            <Dependent Role="ServiceItems">
+              <PropertyRef Name="ManufacturerModelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceItems_Manufacturers">
+          <End Role="Manufacturers" Type="ValvTrak.Model.Manufacturer" Multiplicity="0..1" />
+          <End Role="ServiceItems" Type="ValvTrak.Model.ServiceItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturers">
+              <PropertyRef Name="ManufacturerID" />
+            </Principal>
+            <Dependent Role="ServiceItems">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceItemTypes_ServiceItemCategories">
+          <End Role="ServiceItemCategories" Type="ValvTrak.Model.ServiceItemCategory" Multiplicity="1" />
+          <End Role="ServiceItemTypes" Type="ValvTrak.Model.ServiceItemType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceItemCategories">
+              <PropertyRef Name="ServiceItemCategoryID" />
+            </Principal>
+            <Dependent Role="ServiceItemTypes">
+              <PropertyRef Name="ServiceItemCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceItems_ServiceItemTypes">
+          <End Role="ServiceItemTypes" Type="ValvTrak.Model.ServiceItemType" Multiplicity="0..1" />
+          <End Role="ServiceItems" Type="ValvTrak.Model.ServiceItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceItemTypes">
+              <PropertyRef Name="ServiceItemTypeID" />
+            </Principal>
+            <Dependent Role="ServiceItems">
+              <PropertyRef Name="ServiceItemTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ValveTests_ServiceItems">
+          <End Role="ServiceItems" Type="ValvTrak.Model.ServiceItem" Multiplicity="1" />
+          <End Role="ValveTests" Type="ValvTrak.Model.ValveTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceItems">
+              <PropertyRef Name="ServiceItemID" />
+            </Principal>
+            <Dependent Role="ValveTests">
+              <PropertyRef Name="ServiceItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WellSafetyTests_ServiceItems">
+          <End Role="ServiceItems" Type="ValvTrak.Model.ServiceItem" Multiplicity="1" />
+          <End Role="WellSafetyTests" Type="ValvTrak.Model.WellSafetyTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceItems">
+              <PropertyRef Name="ServiceItemID" />
+            </Principal>
+            <Dependent Role="WellSafetyTests">
+              <PropertyRef Name="ServiceItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ValvTrakModelStoreContainer" CdmEntityContainer="ValvTrakEntities">
+          <EntitySetMapping Name="ClientLocations"><EntityTypeMapping TypeName="ValvTrak.Model.ClientLocation"><MappingFragment StoreEntitySet="ClientLocations">
+            <ScalarProperty Name="ClientLocationID" ColumnName="ClientLocationID" />
+            <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+            <ScalarProperty Name="ClientLocationTypeID" ColumnName="ClientLocationTypeID" />
+            <ScalarProperty Name="PropertyNumber" ColumnName="PropertyNumber" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="City" ColumnName="City" />
+            <ScalarProperty Name="State" ColumnName="State" />
+            <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+            <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+            <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+            <ScalarProperty Name="ServiceDate" ColumnName="ServiceDate" />
+            <ScalarProperty Name="Active" ColumnName="Active" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="Version" ColumnName="Version" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ClientLocationServiceSchedules"><EntityTypeMapping TypeName="ValvTrak.Model.ClientLocationServiceSchedule"><MappingFragment StoreEntitySet="ClientLocationServiceSchedules">
+            <ScalarProperty Name="ClientLocationServiceScheduleId" ColumnName="ClientLocationServiceScheduleId" />
+            <ScalarProperty Name="ClientLocationId" ColumnName="ClientLocationId" />
+            <ScalarProperty Name="JobTypeId" ColumnName="JobTypeId" />
+            <ScalarProperty Name="ServiceIntervalId" ColumnName="ServiceIntervalId" />
+            <ScalarProperty Name="LastServiceDate" ColumnName="LastServiceDate" />
+            <ScalarProperty Name="NextServiceDate" ColumnName="NextServiceDate" />
+            <ScalarProperty Name="CountDown" ColumnName="CountDown" />
+            <ScalarProperty Name="Version" ColumnName="Version" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Clients"><EntityTypeMapping TypeName="ValvTrak.Model.Client"><MappingFragment StoreEntitySet="Clients">
+            <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="City" ColumnName="City" />
+            <ScalarProperty Name="State" ColumnName="State" />
+            <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+            <ScalarProperty Name="Website" ColumnName="Website" />
+            <ScalarProperty Name="Active" ColumnName="Active" />
+            <ScalarProperty Name="SysProNumber" ColumnName="SysProNumber" />
+            <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+            <ScalarProperty Name="Version" ColumnName="Version" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DeliveryMethods"><EntityTypeMapping TypeName="ValvTrak.Model.DeliveryMethod"><MappingFragment StoreEntitySet="DeliveryMethods">
+            <ScalarProperty Name="DeliveryMethodID" ColumnName="DeliveryMethodID" />
+            <ScalarProperty Name="Method" ColumnName="Method" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Employees"><EntityTypeMapping TypeName="ValvTrak.Model.Employee"><MappingFragment StoreEntitySet="Employees">
+            <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+            <ScalarProperty Name="LastName" ColumnName="LastName" />
+            <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+            <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="EFC_LocationID" ColumnName="EFC_LocationID" />
+            <ScalarProperty Name="Active" ColumnName="Active" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="Version" ColumnName="Version" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="GreasingRecordItems"><EntityTypeMapping TypeName="ValvTrak.Model.GreasingRecordItem"><MappingFragment StoreEntitySet="GreasingRecordItems">
+            <ScalarProperty Name="GreasingRecordItemID" ColumnName="GreasingRecordItemID" />
+            <ScalarProperty Name="GreasingRecordID" ColumnName="GreasingRecordID" />
+            <ScalarProperty Name="ServiceItemID" ColumnName="ServiceItemID" />
+            <ScalarProperty Name="ValveLocation" ColumnName="ValveLocation" />
+            <ScalarProperty Name="ActuatorInspected" ColumnName="ActuatorInspected" />
+            <ScalarProperty Name="ActuatorLubed" ColumnName="ActuatorLubed" />
+            <ScalarProperty Name="PercentCycled" ColumnName="PercentCycled" />
+            <ScalarProperty Name="ValveSecured" ColumnName="ValveSecured" />
+            <ScalarProperty Name="FlangeOrScrew" ColumnName="FlangeOrScrew" />
+            <ScalarProperty Name="EaseOfOperation" ColumnName="EaseOfOperation" />
+            <ScalarProperty Name="SeatsChecked" ColumnName="SeatsChecked" />
+            <ScalarProperty Name="SeatsLubed" ColumnName="SeatsLubed" />
+            <ScalarProperty Name="Leaking" ColumnName="Leaking" />
+            <ScalarProperty Name="LubeTypeID" ColumnName="LubeTypeID" />
+            <ScalarProperty Name="AmountInjected" ColumnName="AmountInjected" />
+            <ScalarProperty Name="Notes" ColumnName="Notes" />
+            <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+            <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+            <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+            <ScalarProperty Name="Version" ColumnName="Version" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="GreasingRecords"><EntityTypeMapping TypeName="ValvTrak.Model.GreasingRecord"><MappingFragment StoreEntitySet="GreasingRecords">
+            <ScalarProperty Name="GreasingRecordID" ColumnName="GreasingRecordID" />
+            <ScalarProperty Name="JobID" ColumnName="JobID" />
+            <ScalarProperty Name="ClientFieldOffice" ColumnName="ClientFieldOffice" />
+            <ScalarProperty Name="PipelineSegment" ColumnName="PipelineSegment" />
+            <ScalarProperty Name="Field" ColumnName="Field" />
+            <ScalarProperty Name="SapPSV" ColumnName="SapPSV" />
+            <ScalarProperty Name="FSRNum" ColumnName="FSRNum" />
+            <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+            <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+            <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+            <ScalarProperty Name="Version" ColumnName="Version" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Jobs"><EntityTypeMapping TypeName="ValvTrak.Model.Job"><MappingFragment StoreEntitySet="Jobs">
+            <ScalarProperty Name="JobID" ColumnName="JobID" />
+            <ScalarProperty Name="SalesOrderNum" ColumnName="SalesOrderNum" />
+            <ScalarProperty Name="CallDate" ColumnName="CallDate" />
+            <ScalarProperty Name="RequestedByID" ColumnName="RequestedByID" />
+            <ScalarProperty Name="JobTypeID" ColumnName="JobTypeID" />
+            <ScalarProperty Name="ClientLocationID" ColumnName="ClientLocationID" />
+            <ScalarProperty Name="JobStatusID" ColumnName="JobStatusID" />
+            <ScalarProperty Name="ServiceDate" ColumnName="ServiceDate" />
+            <ScalarProperty Name="CompletionDate" ColumnName="CompletionDate" />
+            <ScalarProperty Name="AssignedByID" ColumnName="AssignedByID" />
+            <ScalarProperty Name="AssignedToID" ColumnName="AssignedToID" />
+            <ScalarProperty Name="ApprovedByID" ColumnName="ApprovedByID" />
+            <ScalarProperty Name="DeliveryMethodID" ColumnName="DeliveryMethodID" />
+            <ScalarProperty Name="PM" ColumnName="PM" />
+            <ScalarProperty Name="NP" ColumnName="NP" />
+            <ScalarProperty Name="FS" ColumnName="FS" />
+            <ScalarProperty Name="Active" ColumnName="Active" />
+            <ScalarProperty Name="DotNumber" ColumnName="DotNumber" />
+            <ScalarProperty Name="VRstamp" ColumnName="VRstamp" />
+            <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="Version" ColumnName="Version" />
+            <ScalarProperty Name="SapWoNum" ColumnName="SapWoNum" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="JobStatuses"><EntityTypeMapping TypeName="ValvTrak.Model.JobStatus"><MappingFragment StoreEntitySet="JobStatus">
+            <ScalarProperty Name="JobStatusID" ColumnName="JobStatusID" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="JobTypes"><EntityTypeMapping TypeName="ValvTrak.Model.JobType"><MappingFragment StoreEntitySet="JobTypes">
+            <ScalarProperty Name="JobTypeID" ColumnName="JobTypeID" />
+            <ScalarProperty Name="Type" ColumnName="Type" />
+            <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Lists"><EntityTypeMapping TypeName="ValvTrak.Model.List"><MappingFragment StoreEntitySet="Lists">
+            <ScalarProperty Name="ListID" ColumnName="ListID" />
+            <ScalarProperty Name="ListKey" ColumnName="ListKey" />
+            <ScalarProperty Name="ListValue" ColumnName="ListValue" />
+            <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+            <ScalarProperty Name="Display1" ColumnName="Display1" />
+            <ScalarProperty Name="Display2" ColumnName="Display2" />
+            <ScalarProperty Name="Abbr" ColumnName="Abbr" />
+            <ScalarProperty Name="SysCode" ColumnName="SysCode" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ManufacturerModels"><EntityTypeMapping TypeName="ValvTrak.Model.ManufacturerModel"><MappingFragment StoreEntitySet="ManufacturerModels">
+            <ScalarProperty Name="ManufacturerModelID" ColumnName="ManufacturerModelID" />
+            <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+            <ScalarProperty Name="Model" ColumnName="Model" />
+            <ScalarProperty Name="Active" ColumnName="Active" />
+            <ScalarProperty Name="Version" ColumnName="Version" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Manufacturers"><EntityTypeMapping TypeName="ValvTrak.Model.Manufacturer"><MappingFragment StoreEntitySet="Manufacturers">
+            <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+            <ScalarProperty Name="Manufacturer1" ColumnName="Manufacturer" />
+            <ScalarProperty Name="Active" ColumnName="Active" />
+            <ScalarProperty Name="Version" ColumnName="Version" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ServiceIntervals"><EntityTypeMapping TypeName="ValvTrak.Model.ServiceInterval"><MappingFragment StoreEntitySet="ServiceIntervals">
+            <ScalarProperty Name="ServiceIntervalId" ColumnName="ServiceIntervalId" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Years" ColumnName="Years" />
+            <ScalarProperty Name="Months" ColumnName="Months" />
+            <ScalarProperty Name="Days" ColumnName="Days" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="Version" ColumnName="Version" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ServiceItemCategories"><EntityTypeMapping TypeName="ValvTrak.Model.ServiceItemCategory"><MappingFragment StoreEntitySet="ServiceItemCategories">
+            <ScalarProperty Name="ServiceItemCategoryID" ColumnName="ServiceItemCategoryID" />
+            <ScalarProperty Name="Category" ColumnName="Category" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ServiceItems"><EntityTypeMapping TypeName="ValvTrak.Model.ServiceItem"><MappingFragment StoreEntitySet="ServiceItems">
+            <ScalarProperty Name="ServiceItemID" ColumnName="ServiceItemID" />
+            <ScalarProperty Name="ServiceItemTypeID" ColumnName="ServiceItemTypeID" />
+            <ScalarProperty Name="ClientLocationID" ColumnName="ClientLocationID" />
+            <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+            <ScalarProperty Name="ManufacturerModelID" ColumnName="ManufacturerModelID" />
+            <ScalarProperty Name="SerialNum" ColumnName="SerialNum" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Active" ColumnName="Active" />
+            <ScalarProperty Name="Version" ColumnName="Version" />
+            <ScalarProperty Name="SapEquipNum" ColumnName="SapEquipNum" />
+            <ScalarProperty Name="Threaded" ColumnName="Threaded" />
+            <ScalarProperty Name="Flanged" ColumnName="Flanged" />
+            <ScalarProperty Name="InletSize" ColumnName="InletSize" />
+            <ScalarProperty Name="OutletSize" ColumnName="OutletSize" />
+            <ScalarProperty Name="InletFlangeRating" ColumnName="InletFlangeRating" />
+            <ScalarProperty Name="OutletFlangeRating" ColumnName="OutletFlangeRating" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ServiceItemTypes"><EntityTypeMapping TypeName="ValvTrak.Model.ServiceItemType"><MappingFragment StoreEntitySet="ServiceItemTypes">
+            <ScalarProperty Name="ServiceItemTypeID" ColumnName="ServiceItemTypeID" />
+            <ScalarProperty Name="Type" ColumnName="Type" />
+            <ScalarProperty Name="ServiceItemCategoryID" ColumnName="ServiceItemCategoryID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ValveTests"><EntityTypeMapping TypeName="ValvTrak.Model.ValveTest"><MappingFragment StoreEntitySet="ValveTests">
+            <ScalarProperty Name="ValveTestID" ColumnName="ValveTestID" />
+            <ScalarProperty Name="JobID" ColumnName="JobID" />
+            <ScalarProperty Name="ServiceItemID" ColumnName="ServiceItemID" />
+            <ScalarProperty Name="FSRNum" ColumnName="FSRNum" />
+            <ScalarProperty Name="DateTested" ColumnName="DateTested" />
+            <ScalarProperty Name="SetPressure" ColumnName="SetPressure" />
+            <ScalarProperty Name="BackPressure" ColumnName="BackPressure" />
+            <ScalarProperty Name="ColdDiffPressure" ColumnName="ColdDiffPressure" />
+            <ScalarProperty Name="TempCorr" ColumnName="TempCorr" />
+            <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+            <ScalarProperty Name="CapacityTypeID" ColumnName="CapacityTypeID" />
+            <ScalarProperty Name="SealNum" ColumnName="SealNum" />
+            <ScalarProperty Name="GaugeNum" ColumnName="GaugeNum" />
+            <ScalarProperty Name="CalibrationDue" ColumnName="CalibrationDue" />
+            <ScalarProperty Name="Coded" ColumnName="Coded" />
+            <ScalarProperty Name="ValveDate" ColumnName="ValveDate" />
+            <ScalarProperty Name="SetPressureFound" ColumnName="SetPressureFound" />
+            <ScalarProperty Name="SetPressureLeft" ColumnName="SetPressureLeft" />
+            <ScalarProperty Name="TestResultID" ColumnName="TestResultID" />
+            <ScalarProperty Name="Notes" ColumnName="Notes" />
+            <ScalarProperty Name="TechID" ColumnName="TechID" />
+            <ScalarProperty Name="CustomerWitness" ColumnName="CustomerWitness" />
+            <ScalarProperty Name="CostCenter" ColumnName="CostCenter" />
+            <ScalarProperty Name="PsvApplication" ColumnName="PsvApplication" />
+            <ScalarProperty Name="IsolationValve" ColumnName="IsolationValve" />
+            <ScalarProperty Name="ReliefValveSupport" ColumnName="ReliefValveSupport" />
+            <ScalarProperty Name="TestPort" ColumnName="TestPort" />
+            <ScalarProperty Name="WeatherCap" ColumnName="WeatherCap" />
+            <ScalarProperty Name="DotLocation" ColumnName="DotLocation" />
+            <ScalarProperty Name="JsaComplete" ColumnName="JsaComplete" />
+            <ScalarProperty Name="ReviewItems" ColumnName="ReviewItems" />
+            <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+            <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+            <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+            <ScalarProperty Name="Version" ColumnName="Version" />
+            <ScalarProperty Name="SapPsv" ColumnName="SapPsv" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="WellSafetyTests"><EntityTypeMapping TypeName="ValvTrak.Model.WellSafetyTest"><MappingFragment StoreEntitySet="WellSafetyTests">
+            <ScalarProperty Name="WellSafetyTestID" ColumnName="WellSafetyTestID" />
+            <ScalarProperty Name="JobID" ColumnName="JobID" />
+            <ScalarProperty Name="ServiceItemID" ColumnName="ServiceItemID" />
+            <ScalarProperty Name="FSR_Num" ColumnName="FSR_Num" />
+            <ScalarProperty Name="SSV_SAP_Num" ColumnName="SSV_SAP_Num" />
+            <ScalarProperty Name="FormDate" ColumnName="FormDate" />
+            <ScalarProperty Name="BodyMaterial" ColumnName="BodyMaterial" />
+            <ScalarProperty Name="PlugMaterial" ColumnName="PlugMaterial" />
+            <ScalarProperty Name="SteamMaterial" ColumnName="SteamMaterial" />
+            <ScalarProperty Name="GateMaterial" ColumnName="GateMaterial" />
+            <ScalarProperty Name="PortSize" ColumnName="PortSize" />
+            <ScalarProperty Name="PressClass" ColumnName="PressClass" />
+            <ScalarProperty Name="ActuatorType" ColumnName="ActuatorType" />
+            <ScalarProperty Name="ActuatorModel" ColumnName="ActuatorModel" />
+            <ScalarProperty Name="ActuatorSerialNum" ColumnName="ActuatorSerialNum" />
+            <ScalarProperty Name="AirSupplyMedium" ColumnName="AirSupplyMedium" />
+            <ScalarProperty Name="Condition" ColumnName="Condition" />
+            <ScalarProperty Name="DateManufactured" ColumnName="DateManufactured" />
+            <ScalarProperty Name="SystemLocation" ColumnName="SystemLocation" />
+            <ScalarProperty Name="ControllerType" ColumnName="ControllerType" />
+            <ScalarProperty Name="HI" ColumnName="HI" />
+            <ScalarProperty Name="LO" ColumnName="LO" />
+            <ScalarProperty Name="Notes" ColumnName="Notes" />
+            <ScalarProperty Name="CustomerWitness" ColumnName="CustomerWitness" />
+            <ScalarProperty Name="ManualOverride" ColumnName="ManualOverride" />
+            <ScalarProperty Name="TestResultID" ColumnName="TestResultID" />
+            <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+            <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+            <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+            <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+            <ScalarProperty Name="Version" ColumnName="Version" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ValvTrak">
+        <EntityTypeShape EntityType="ValvTrak.Model.ClientLocation" Width="1.5" PointX="6.75" PointY="8.625" Height="4.8648079427083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.ClientLocationServiceSchedule" Width="1.5" PointX="9" PointY="22.75" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.Client" Width="1.5" PointX="4.5" PointY="9.25" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.DeliveryMethod" Width="1.5" PointX="6.75" PointY="21.25" Height="1.595683593749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.Employee" Width="1.5" PointX="0.75" PointY="15.125" Height="5.4417122395833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.GreasingRecordItem" Width="1.5" PointX="3" PointY="15" Height="5.6340136718750014" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.GreasingRecord" Width="1.5" PointX="6" PointY="15.75" Height="4.0956022135416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.Job" Width="1.5" PointX="9" PointY="14" Height="7.7493294270833335" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.JobStatus" Width="1.5" PointX="6.75" PointY="23.5" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.JobType" Width="1.5" PointX="6.75" PointY="26.125" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.List" Width="1.5" PointX="9" PointY="10.5" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.ManufacturerModel" Width="1.5" PointX="1.5" PointY="4.625" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.Manufacturer" Width="1.5" PointX="1.5" PointY="0.75" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.ServiceInterval" Width="1.5" PointX="6.75" PointY="29" Height="2.5571907552083388" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.ServiceItemCategory" Width="1.5" PointX="1.5" PointY="25" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.ServiceItem" Width="1.5" PointX="0.75" PointY="8.5" Height="5.4417122395833388" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.ServiceItemType" Width="1.5" PointX="1.5" PointY="21.75" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.ValveTest" Width="1.5" PointX="11.25" PointY="13.125" Height="9.2877408854166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ValvTrak.Model.WellSafetyTest" Width="1.5" PointX="14.25" PointY="14" Height="7.74932942708333" IsExpanded="true" />
+        <AssociationConnector Association="ValvTrak.Model.FK_ClientLocations_Clients" ManuallyRouted="false">
+          <ConnectorPoint PointX="6" PointY="11.009348958333334" />
+          <ConnectorPoint PointX="6.75" PointY="11.009348958333334" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_ClientLocationServiceSchedules_ClientLocations" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="13.482883865785256" />
+          <ConnectorPoint PointX="8.65625" PointY="13.889133865785256" />
+          <ConnectorPoint PointX="8.65625" PointY="24.317047526041666" />
+          <ConnectorPoint PointX="8.7291666666666661" PointY="24.317047526041666" />
+          <ConnectorPoint PointX="8.8958333333333339" PointY="24.317047526041666" />
+          <ConnectorPoint PointX="9" PointY="24.317047526041666" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_Jobs_ClientLocations" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="13.464422327323717" />
+          <ConnectorPoint PointX="8.5" PointY="13.714422327323717" />
+          <ConnectorPoint PointX="8.5" PointY="13.5" />
+          <ConnectorPoint PointX="9" PointY="14" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_ServiceItems_ClientLocations" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="13.1605029296875" />
+          <ConnectorPoint PointX="3.8020833333333335" PointY="13.1605029296875" />
+          <ConnectorPoint PointX="3.6354166666666665" PointY="13.1605029296875" />
+          <ConnectorPoint PointX="2.6458333333333335" PointY="13.1605029296875" />
+          <ConnectorPoint PointX="2.4791666666666665" PointY="13.1605029296875" />
+          <ConnectorPoint PointX="2.25" PointY="13.1605029296875" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_ClientLocationServiceSchedules_JobTypes" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="27.115143229166669" />
+          <ConnectorPoint PointX="9.2604141666666653" PointY="27.115143229166669" />
+          <ConnectorPoint PointX="9.4270808333333331" PointY="27.115143229166669" />
+          <ConnectorPoint PointX="9.75" PointY="27.115143229166669" />
+          <ConnectorPoint PointX="9.75" PointY="25.884095052083332" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_ClientLocationServiceSchedules_ServiceIntervals" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="30.278595377604169" />
+          <ConnectorPoint PointX="9.3437475" PointY="30.278595377604169" />
+          <ConnectorPoint PointX="9.3437475" PointY="25.884095052083332" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_Jobs_DeliveryMethods" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="21.499664713541666" />
+          <ConnectorPoint PointX="8.2916666666666661" PointY="21.499664713541662" />
+          <ConnectorPoint PointX="8.9583333333333339" PointY="21.499664713541666" />
+          <ConnectorPoint PointX="9" PointY="21.499664713541666" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_GreasingRecordItems_Employees" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="17.845856119791666" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="17.845856119791666" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="17.845856119791666" />
+          <ConnectorPoint PointX="3" PointY="17.845856119791666" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_GreasingRecords_Employees" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="20.566712239583332" />
+          <ConnectorPoint PointX="1.5" PointY="20.816712239583332" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="20.816712239583332" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="20.816712239583332" />
+          <ConnectorPoint PointX="2.0260454166666664" PointY="20.816712239583332" />
+          <ConnectorPoint PointX="2.1927120833333333" PointY="20.816712239583332" />
+          <ConnectorPoint PointX="2.4791666666666665" PointY="20.816712239583332" />
+          <ConnectorPoint PointX="2.6458333333333335" PointY="20.816712239583332" />
+          <ConnectorPoint PointX="2.7916666666666665" PointY="20.816712239583332" />
+          <ConnectorPoint PointX="2.9583333333333335" PointY="20.816712239583332" />
+          <ConnectorPoint PointX="5.625" PointY="20.816712239583332" />
+          <ConnectorPoint PointX="5.625" PointY="17.797801106770834" />
+          <ConnectorPoint PointX="6" PointY="17.797801106770834" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_GreasingRecords_Employees_ModifiedBy" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="15.125" />
+          <ConnectorPoint PointX="1.5" PointY="14.75" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="14.75" />
+          <ConnectorPoint PointX="2.6458333333333335" PointY="14.75" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="14.75" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="14.75" />
+          <ConnectorPoint PointX="3.6354166666666665" PointY="14.75" />
+          <ConnectorPoint PointX="3.8020833333333335" PointY="14.75" />
+          <ConnectorPoint PointX="5.625" PointY="14.75" />
+          <ConnectorPoint PointX="5.625" PointY="16.742648553385415" />
+          <ConnectorPoint PointX="6" PointY="16.742648553385415" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_Jobs_Employees" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062525" PointY="20.566712239583332" />
+          <ConnectorPoint PointX="1.9062525" PointY="21.002106119791666" />
+          <ConnectorPoint PointX="2.0260454166666664" PointY="21.002106119791666" />
+          <ConnectorPoint PointX="2.1927120833333333" PointY="21.002106119791666" />
+          <ConnectorPoint PointX="2.4791666666666665" PointY="21.002106119791666" />
+          <ConnectorPoint PointX="2.6458333333333335" PointY="21.002106119791666" />
+          <ConnectorPoint PointX="8.2916666666666661" PointY="21.002106119791666" />
+          <ConnectorPoint PointX="8.4583333333333339" PointY="21.002106119791666" />
+          <ConnectorPoint PointX="8.5729166666666661" PointY="21.002106119791666" />
+          <ConnectorPoint PointX="8.9583333333333339" PointY="21.002106119791666" />
+          <ConnectorPoint PointX="9" PointY="21.002106119791666" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_Jobs_Employees1" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.0937475" PointY="20.566712239583332" />
+          <ConnectorPoint PointX="1.0937475" PointY="20.878156679687507" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="20.878156679687507" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="20.878156679687507" />
+          <ConnectorPoint PointX="2.0260454166666664" PointY="20.878156679687507" />
+          <ConnectorPoint PointX="2.1927120833333333" PointY="20.878156679687507" />
+          <ConnectorPoint PointX="2.4791666666666665" PointY="20.878156679687507" />
+          <ConnectorPoint PointX="2.6458333333333335" PointY="20.878156679687507" />
+          <ConnectorPoint PointX="8.2916666666666661" PointY="20.878156679687507" />
+          <ConnectorPoint PointX="8.4583333333333339" PointY="20.878156679687507" />
+          <ConnectorPoint PointX="8.5729166666666661" PointY="20.878156679687507" />
+          <ConnectorPoint PointX="8.9583333333333339" PointY="20.878156679687507" />
+          <ConnectorPoint PointX="9" PointY="20.878156679687507" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_Jobs_Employees2" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.10937875" PointY="20.566712239583332" />
+          <ConnectorPoint PointX="2.10937875" PointY="21.126055559895825" />
+          <ConnectorPoint PointX="2.4791666666666665" PointY="21.126055559895825" />
+          <ConnectorPoint PointX="2.6458333333333335" PointY="21.126055559895825" />
+          <ConnectorPoint PointX="8.2916666666666661" PointY="21.126055559895821" />
+          <ConnectorPoint PointX="8.9583333333333339" PointY="21.126055559895825" />
+          <ConnectorPoint PointX="9" PointY="21.126055559895825" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_Jobs_Employees3" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.70312625" PointY="20.566712239583332" />
+          <ConnectorPoint PointX="1.70312625" PointY="20.847434459635419" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="20.847434459635419" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="20.847434459635419" />
+          <ConnectorPoint PointX="2.0260454166666664" PointY="20.847434459635419" />
+          <ConnectorPoint PointX="2.1927120833333333" PointY="20.847434459635419" />
+          <ConnectorPoint PointX="2.4791666666666665" PointY="20.847434459635419" />
+          <ConnectorPoint PointX="2.6458333333333335" PointY="20.847434459635419" />
+          <ConnectorPoint PointX="2.7916666666666665" PointY="20.847434459635419" />
+          <ConnectorPoint PointX="2.9583333333333335" PointY="20.847434459635419" />
+          <ConnectorPoint PointX="8.2916666666666661" PointY="20.847434459635419" />
+          <ConnectorPoint PointX="8.4583333333333339" PointY="20.847434459635419" />
+          <ConnectorPoint PointX="8.5729166666666661" PointY="20.847434459635419" />
+          <ConnectorPoint PointX="8.9583333333333339" PointY="20.847434459635419" />
+          <ConnectorPoint PointX="9" PointY="20.847434459635419" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_Jobs_Employees4" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.29687375" PointY="20.566712239583332" />
+          <ConnectorPoint PointX="1.29687375" PointY="20.908878899739591" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="20.908878899739591" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="20.908878899739591" />
+          <ConnectorPoint PointX="2.0260454166666664" PointY="20.908878899739591" />
+          <ConnectorPoint PointX="2.1927120833333333" PointY="20.908878899739591" />
+          <ConnectorPoint PointX="2.4791666666666665" PointY="20.908878899739591" />
+          <ConnectorPoint PointX="2.6458333333333335" PointY="20.908878899739591" />
+          <ConnectorPoint PointX="8.2916666666666661" PointY="20.908878899739591" />
+          <ConnectorPoint PointX="8.4583333333333339" PointY="20.908878899739591" />
+          <ConnectorPoint PointX="8.5729166666666661" PointY="20.908878899739591" />
+          <ConnectorPoint PointX="8.9583333333333339" PointY="20.908878899739591" />
+          <ConnectorPoint PointX="9" PointY="20.908878899739591" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_ValveTests_Employees" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="16.454176059895833" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="16.454176059895833" />
+          <ConnectorPoint PointX="2.6458333333333335" PointY="16.454176059895833" />
+          <ConnectorPoint PointX="2.75" PointY="16.454176059895833" />
+          <ConnectorPoint PointX="2.75" PointY="20.696513671875003" />
+          <ConnectorPoint PointX="2.7916666666666665" PointY="20.696513671875003" />
+          <ConnectorPoint PointX="2.9583333333333335" PointY="20.696513671875003" />
+          <ConnectorPoint PointX="5.541666666666667" PointY="20.696513671875003" />
+          <ConnectorPoint PointX="5.708333333333333" PointY="20.696513671875003" />
+          <ConnectorPoint PointX="8.5729166666666661" PointY="20.696513671875003" />
+          <ConnectorPoint PointX="8.8333333333333339" PointY="20.696513671875003" />
+          <ConnectorPoint PointX="8.875" PointY="20.696513671875003" />
+          <ConnectorPoint PointX="8.875" PointY="21.999329427083332" />
+          <ConnectorPoint PointX="10.791666666666666" PointY="21.999329427083332" />
+          <ConnectorPoint PointX="10.958333333333334" PointY="21.999329427083332" />
+          <ConnectorPoint PointX="11" PointY="21.999329427083332" />
+          <ConnectorPoint PointX="11" PointY="22.662740885416667" />
+          <ConnectorPoint PointX="11.041666666666666" PointY="22.662740885416667" />
+          <ConnectorPoint PointX="11.208333333333334" PointY="22.662740885416667" />
+          <ConnectorPoint PointX="11.510414666666666" PointY="22.662740885416667" />
+          <ConnectorPoint PointX="11.677081333333334" PointY="22.662740885416667" />
+          <ConnectorPoint PointX="12" PointY="22.662740885416667" />
+          <ConnectorPoint PointX="12" PointY="22.412740885416667" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_ValveTests_Employees1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="19.2375361796875" />
+          <ConnectorPoint PointX="2.5" PointY="19.2375361796875" />
+          <ConnectorPoint PointX="2.5" PointY="13.75" />
+          <ConnectorPoint PointX="3.6354166666666665" PointY="13.75" />
+          <ConnectorPoint PointX="3.8020833333333335" PointY="13.75" />
+          <ConnectorPoint PointX="8.43378280088141" PointY="13.75" />
+          <ConnectorPoint PointX="8.6004494675480778" PointY="13.75" />
+          <ConnectorPoint PointX="8.6666666666666661" PointY="13.75" />
+          <ConnectorPoint PointX="8.8333333333333339" PointY="13.75" />
+          <ConnectorPoint PointX="10.666666666666666" PointY="13.75" />
+          <ConnectorPoint PointX="10.833333333333334" PointY="13.75" />
+          <ConnectorPoint PointX="11" PointY="13.75" />
+          <ConnectorPoint PointX="11" PointY="12.875" />
+          <ConnectorPoint PointX="11.510414166666665" PointY="12.875" />
+          <ConnectorPoint PointX="11.677080833333333" PointY="12.875" />
+          <ConnectorPoint PointX="12" PointY="12.875" />
+          <ConnectorPoint PointX="12" PointY="13.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_ValveTests_Employees2" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="18.541696149739582" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="18.541696149739582" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="18.541696149739582" />
+          <ConnectorPoint PointX="2.875" PointY="18.541696149739582" />
+          <ConnectorPoint PointX="2.875" PointY="20.946513671875003" />
+          <ConnectorPoint PointX="8.2916666666666661" PointY="20.946513671875003" />
+          <ConnectorPoint PointX="8.4583333333333339" PointY="20.946513671875003" />
+          <ConnectorPoint PointX="8.5" PointY="20.946513671875003" />
+          <ConnectorPoint PointX="8.5" PointY="22.249329427083332" />
+          <ConnectorPoint PointX="8.5729166666666661" PointY="22.249329427083332" />
+          <ConnectorPoint PointX="8.8958333333333339" PointY="22.249329427083332" />
+          <ConnectorPoint PointX="10.75" PointY="22.249329427083332" />
+          <ConnectorPoint PointX="10.75" PointY="22.912740885416667" />
+          <ConnectorPoint PointX="11.593748" PointY="22.912740885416667" />
+          <ConnectorPoint PointX="11.593748" PointY="22.412740885416667" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_WellSafetyTests_Employees" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="17.150016089843749" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="17.150016089843749" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="17.150016089843749" />
+          <ConnectorPoint PointX="2.625" PointY="17.150016089843749" />
+          <ConnectorPoint PointX="2.625" PointY="20.759013671875003" />
+          <ConnectorPoint PointX="2.7916666666666665" PointY="20.759013671875003" />
+          <ConnectorPoint PointX="2.9583333333333335" PointY="20.759013671875003" />
+          <ConnectorPoint PointX="8.375" PointY="20.759013671875003" />
+          <ConnectorPoint PointX="8.375" PointY="21.999329427083332" />
+          <ConnectorPoint PointX="8.4166666666666661" PointY="21.999329427083332" />
+          <ConnectorPoint PointX="8.8958333333333339" PointY="21.999329427083332" />
+          <ConnectorPoint PointX="10.791666666666666" PointY="21.999329427083332" />
+          <ConnectorPoint PointX="10.958333333333334" PointY="21.999329427083332" />
+          <ConnectorPoint PointX="11.125" PointY="21.999329427083332" />
+          <ConnectorPoint PointX="11.125" PointY="22.787740885416667" />
+          <ConnectorPoint PointX="11.510414666666666" PointY="22.787740885416667" />
+          <ConnectorPoint PointX="11.677081333333334" PointY="22.787740885416667" />
+          <ConnectorPoint PointX="15" PointY="22.787740885416667" />
+          <ConnectorPoint PointX="15" PointY="21.749329427083332" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_WellSafetyTests_Employees_CreatedBy" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="15.758336029947916" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="15.758336029947916" />
+          <ConnectorPoint PointX="2.6458333333333335" PointY="15.758336029947916" />
+          <ConnectorPoint PointX="2.75" PointY="15.758336029947916" />
+          <ConnectorPoint PointX="2.75" PointY="13.875" />
+          <ConnectorPoint PointX="3.6354166666666665" PointY="13.875" />
+          <ConnectorPoint PointX="3.8020833333333335" PointY="13.875" />
+          <ConnectorPoint PointX="8.7916666666666661" PointY="13.875" />
+          <ConnectorPoint PointX="8.9583333333333339" PointY="13.875" />
+          <ConnectorPoint PointX="10.75" PointY="13.875" />
+          <ConnectorPoint PointX="10.75" PointY="12.625" />
+          <ConnectorPoint PointX="11.510414166666665" PointY="12.625" />
+          <ConnectorPoint PointX="11.677080833333333" PointY="12.625" />
+          <ConnectorPoint PointX="14.510414166666665" PointY="12.625" />
+          <ConnectorPoint PointX="14.677080833333333" PointY="12.625" />
+          <ConnectorPoint PointX="15" PointY="12.625" />
+          <ConnectorPoint PointX="15" PointY="14" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_GreasingRecordItems_GreasingRecords" ManuallyRouted="false">
+          <ConnectorPoint PointX="6" PointY="18.884201660156251" />
+          <ConnectorPoint PointX="5.708333333333333" PointY="18.884201660156251" />
+          <ConnectorPoint PointX="5.541666666666667" PointY="18.884201660156251" />
+          <ConnectorPoint PointX="4.5" PointY="18.884201660156251" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_GreasingRecordItems_ServiceItems" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="10.798998964843756" />
+          <ConnectorPoint PointX="3.71875" PointY="10.798998964843756" />
+          <ConnectorPoint PointX="3.71875" PointY="15" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_GreasingRecords_Jobs" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="17.797801106770834" />
+          <ConnectorPoint PointX="8.8333333333333339" PointY="17.797801106770834" />
+          <ConnectorPoint PointX="8.5729166666666661" PointY="17.797801106770834" />
+          <ConnectorPoint PointX="7.5" PointY="17.797801106770834" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_Jobs_JobStatus" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="23.5" />
+          <ConnectorPoint PointX="8.59732443490112" PointY="23.152675565098878" />
+          <ConnectorPoint PointX="8.7151755650988783" PointY="23.034824434901122" />
+          <ConnectorPoint PointX="8.75" PointY="23" />
+          <ConnectorPoint PointX="8.75" PointY="15.898900553385417" />
+          <ConnectorPoint PointX="9" PointY="15.898900553385417" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_Jobs_JobTypes" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="26.125" />
+          <ConnectorPoint PointX="8.8125" PointY="25.5625" />
+          <ConnectorPoint PointX="8.8125" PointY="19.278409889322912" />
+          <ConnectorPoint PointX="9" PointY="19.278409889322912" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_ValveTests_Jobs" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.5" PointY="17.874664713541666" />
+          <ConnectorPoint PointX="10.791666666666666" PointY="17.874664713541666" />
+          <ConnectorPoint PointX="10.958333333333334" PointY="17.874664713541666" />
+          <ConnectorPoint PointX="11.25" PointY="17.874664713541666" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_WellSafetyTests_Jobs" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.5" PointY="15.90608035677084" />
+          <ConnectorPoint PointX="10.875" PointY="15.90608035677084" />
+          <ConnectorPoint PointX="10.875" PointY="22.537740885416667" />
+          <ConnectorPoint PointX="10.916666666666666" PointY="22.537740885416667" />
+          <ConnectorPoint PointX="11.208333333333334" PointY="22.537740885416667" />
+          <ConnectorPoint PointX="11.510414666666666" PointY="22.537740885416667" />
+          <ConnectorPoint PointX="11.677081333333334" PointY="22.537740885416667" />
+          <ConnectorPoint PointX="11.916666666666666" PointY="22.537740885416667" />
+          <ConnectorPoint PointX="12.083333333333334" PointY="22.537740885416667" />
+          <ConnectorPoint PointX="14.593748" PointY="22.537740885416667" />
+          <ConnectorPoint PointX="14.593748" PointY="21.749329427083332" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_ValveTests_Lists" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.5" PointY="11.5625" />
+          <ConnectorPoint PointX="11.5937475" PointY="11.5625" />
+          <ConnectorPoint PointX="11.5937475" PointY="13.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_ManufacturerModels_Manufacturers" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.922587890624996" />
+          <ConnectorPoint PointX="2.25" PointY="4.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_ServiceItems_ManufacturerModels" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.875" PointY="6.9898893229166674" />
+          <ConnectorPoint PointX="1.875" PointY="8.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_ServiceItems_Manufacturers" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="1.836293945312498" />
+          <ConnectorPoint PointX="1.1249995" PointY="1.836293945312498" />
+          <ConnectorPoint PointX="1.1249995" PointY="8.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_ServiceItemTypes_ServiceItemCategories" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="25" />
+          <ConnectorPoint PointX="2.25" PointY="23.730286458333339" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_ServiceItems_ServiceItemTypes" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.5625" PointY="21.75" />
+          <ConnectorPoint PointX="2.5625" PointY="11.979750947265629" />
+          <ConnectorPoint PointX="2.25" PointY="11.979750947265629" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_ValveTests_ServiceItems" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="13.588653971354166" />
+          <ConnectorPoint PointX="2.4791666666666665" PointY="13.588653971354166" />
+          <ConnectorPoint PointX="2.6458333333333335" PointY="13.588653971354166" />
+          <ConnectorPoint PointX="3.6354166666666665" PointY="13.588653971354166" />
+          <ConnectorPoint PointX="3.8020833333333335" PointY="13.588653971354166" />
+          <ConnectorPoint PointX="8.2724367722355758" PointY="13.588653971354166" />
+          <ConnectorPoint PointX="8.4575649773637842" PointY="13.588653971354166" />
+          <ConnectorPoint PointX="8.5053206380208319" PointY="13.588653971354166" />
+          <ConnectorPoint PointX="8.6719873046875" PointY="13.588653971354166" />
+          <ConnectorPoint PointX="10.666666666666666" PointY="13.588653971354166" />
+          <ConnectorPoint PointX="10.833333333333334" PointY="13.588653971354166" />
+          <ConnectorPoint PointX="10.916666666666666" PointY="13.588653971354166" />
+          <ConnectorPoint PointX="11.083333333333334" PointY="13.588653971354166" />
+          <ConnectorPoint PointX="11.25" PointY="13.588653971354166" />
+        </AssociationConnector>
+        <AssociationConnector Association="ValvTrak.Model.FK_WellSafetyTests_ServiceItems" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="8.53125" />
+          <ConnectorPoint PointX="14.5937475" PointY="8.53125" />
+          <ConnectorPoint PointX="14.5937475" PointY="14" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
