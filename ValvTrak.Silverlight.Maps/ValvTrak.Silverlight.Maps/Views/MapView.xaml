@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="ValvTrak.Silverlight.Maps.Views.MapView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dxm="http://schemas.devexpress.com/winfx/2008/xaml/map"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+        <dxm:MapControl Name="mainMap" CenterPoint="36.00,-95.00" ZoomLevel="5">
+            <dxm:ImageTilesLayer>
+                <dxm:ImageTilesLayer.DataProvider>
+                    <dxm:BingMapDataProvider Kind="Area"
+                                             BingKey="Al9r3gDHyo2cMc3wFnxHFrJt-8FSFOsEnnoM4ynFhnPBJlHV91ACO0X-ENzoEyzE"/>
+                </dxm:ImageTilesLayer.DataProvider>
+            </dxm:ImageTilesLayer>
+        </dxm:MapControl>
+    </Grid>
+</UserControl>
