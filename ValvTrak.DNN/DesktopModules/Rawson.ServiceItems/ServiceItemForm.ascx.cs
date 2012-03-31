@@ -11,11 +11,20 @@ using DotNetNuke.Common.Utilities;
 using Rawson.App;
 using Rawson.Data.Specifications;
 using Rawson.Data.Model;
+using Mehroz;
 
 namespace Rawson.ServiceItems
 {
     public partial class ServiceItemForm : System.Web.UI.UserControl
     {
+        //****************************
+        //Variables used for Fractions
+        //****************************
+
+        Fraction inlet;
+        Fraction outlet;
+
+        //****************************
 
         public int ClientLocationID
         {
@@ -157,8 +166,73 @@ namespace Rawson.ServiceItems
             si.Threaded = chkThreaded.Checked;
             si.Flanged = chkFlanged.Checked;
 
-            si.InletSize = seInletSize.Number;
-            si.OutletSize = seOutletSize.Number;
+            /// *******************************************************
+            /// The logic below is to parse the input form the inlet
+            /// and outlet textboxes from fraction => double => string
+            /// => decimal which is the final format being saved to
+            /// the database
+            /// *******************************************************
+            if (txtInletFrac.Text.Contains("."))
+            {
+                si.InletSize = decimal.Parse(txtInletFrac.Text);
+            }
+            else
+            {
+                //check for whitespace or dashes denoting whole numbers
+                if (txtInletFrac.Text.Contains(" ")||txtInletFrac.Text.Contains("-"))
+                {
+                    inlet = new Fraction();//initialize fraction
+                    string theFraction = txtInletFrac.Text;//get the string
+                    int spacer = theFraction.IndexOf(" ");//find the space for the integer
+                    string theInteger = theFraction.Substring(0, spacer);//get the integer
+                    theFraction = theFraction.Substring(spacer+1);//get the fraction string
+
+                    inlet = Fraction.ToFraction(theFraction); //make the string a fraction
+                    double inletdbl = double.Parse(theInteger) + inlet.ToDouble(); // convert to a double
+                    si.InletSize = decimal.Parse(inletdbl.ToString()); // convert to decimal and store
+                }
+                else
+                {
+                inlet = new Fraction();
+                inlet = Fraction.ToFraction(txtInletFrac.Text);
+                double inletdbl = inlet.ToDouble();
+                si.InletSize = decimal.Parse(inletdbl.ToString());
+                }
+            }
+                
+
+            if (txtOutletFrac.Text.Contains("."))
+            {
+                si.OutletSize = decimal.Parse(txtOutletFrac.Text);
+            }
+            else
+            {
+                //check for whitespace or dashes denoting whole numbers
+                if (txtOutletFrac.Text.Contains(" ") || txtOutletFrac.Text.Contains("-"))
+                {
+                    outlet = new Fraction();//initialize fraction
+                    string theFraction = txtOutletFrac.Text;//get the string
+                    int spacer = theFraction.IndexOf(" ");//find the space for the integer
+                    string theInteger = theFraction.Substring(0, spacer);//get the integer
+                    theFraction = theFraction.Substring(spacer + 1);//get the fraction string
+
+                    outlet = Fraction.ToFraction(theFraction); //make the string a fraction
+                    double outletdbl = double.Parse(theInteger) + outlet.ToDouble(); // convert to a double
+                    si.OutletSize = decimal.Parse(outletdbl.ToString()); // convert to decimal and store
+                }
+                else
+                {
+                    outlet = new Fraction();
+                    outlet = Fraction.ToFraction(txtOutletFrac.Text);
+                    double outletdbl = outlet.ToDouble();
+                    si.OutletSize = decimal.Parse(outletdbl.ToString());
+                }
+            }
+
+            ///********************************************************
+            
+            //si.InletSize = seInletSize.Number;
+            //si.OutletSize = seOutletSize.Number;
             si.InletFlangeRating = seInletFlangeRating.Number;
             si.OutletFlangeRating = seOutletFlangeRating.Number;
 
@@ -166,7 +240,7 @@ namespace Rawson.ServiceItems
 
             if (si.Version == null)
                 controller.Detach();
-
+            
             if (controller.Validate())
             {
                 ServiceItemSaveAction.JSProperties.Add("cpHasErrors", false);
@@ -227,8 +301,35 @@ namespace Rawson.ServiceItems
 
             chkThreaded.Checked = controller.Entity.Threaded.HasValue ? controller.Entity.Threaded.Value : false;
             chkFlanged.Checked = controller.Entity.Flanged.HasValue ? controller.Entity.Flanged.Value : false;
-            seInletSize.Value = controller.Entity.InletSize.HasValue ? controller.Entity.InletSize : 0;
-            seOutletSize.Value = controller.Entity.OutletSize.HasValue ? controller.Entity.OutletSize : 0;
+            
+            ///***********************
+            ///Logic to load fractions
+            ///***********************            
+            //seInletSize.Value = controller.Entity.InletSize.HasValue ? controller.Entity.InletSize : 0;
+            //seOutletSize.Value = controller.Entity.OutletSize.HasValue ? controller.Entity.OutletSize : 0;
+            
+            if (controller.Entity.InletSize.HasValue)
+            {
+                //decimal size = controller.Entity.InletSize.Value;
+                //decimal frac = size - Math.Truncate(size);
+                //seInletSize.Value = Math.Truncate(size);
+                //txtInletFrac.Text = Fraction.ToFraction(float.Parse(frac.ToString()));
+                txtInletFrac.Text = controller.Entity.InletSize.Value.ToString();
+            }
+
+            if (controller.Entity.OutletSize.HasValue)
+            {
+                //decimal size = controller.Entity.OutletSize.Value;
+                //decimal frac = size - Math.Truncate(size);
+                //seOutletSize.Value = Math.Truncate(size);
+                //txtOutletFrac.Text = Fraction.ToFraction(float.Parse(frac.ToString()));
+                txtOutletFrac.Text = controller.Entity.OutletSize.Value.ToString();
+            }
+            ///**********************
+
+            //seInletSize.Value = controller.Entity.InletSize.HasValue ? controller.Entity.InletSize : 0;
+            //seOutletSize.Value = controller.Entity.OutletSize.HasValue ? controller.Entity.OutletSize : 0;
+
             seInletFlangeRating.Value = controller.Entity.InletFlangeRating.HasValue ? controller.Entity.InletFlangeRating : 0;
             seOutletFlangeRating.Value = controller.Entity.OutletFlangeRating.HasValue ? controller.Entity.OutletFlangeRating : 0;
 

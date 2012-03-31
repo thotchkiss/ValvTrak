@@ -67,6 +67,7 @@ namespace Rawson.WellSafetyTests
             ServiceItemSelect.ClientLocationID = wt.Job.ClientLocationID;
             ServiceItemSelect.ServiceItemID = wt.ServiceItemID;
 
+
             JobIDLabel.Text = wt.Job.JobID.ToString();
             SalesOrderNumLabel.Text = wt.Job.SalesOrderNum;
             FSR_NumTextBox.Text = wt.FSR_Num ?? "";
@@ -142,6 +143,7 @@ namespace Rawson.WellSafetyTests
             wt.CustomerWitness = CustomerWitnessTextBox.Text;
             wt.ManualOverride = String.IsNullOrEmpty((string)ManualOverrideSelect.Value) ? null : (string)ManualOverrideSelect.Value;
             wt.TestResultID = (TestResultIDSelect.Value == "-1") ? (int?)null : Convert.ToInt32(TestResultIDSelect.Value);
+            
             //wt.CreatedDate = Convert.ToDateTime(CreatedDateLabel.Text);
 
             if (wt.Version == null)

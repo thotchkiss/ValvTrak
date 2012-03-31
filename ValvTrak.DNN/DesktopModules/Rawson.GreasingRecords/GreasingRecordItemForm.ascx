@@ -78,6 +78,7 @@
                                 ValueType="System.Int32" TabIndex="4" EnableIncrementalFiltering="True" 
                                 IncrementalFilteringMode="StartsWith" ShowLoadingPanel="False">
                                 <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
+<ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }"></ClientSideEvents>
                                 <Items>
                                     <dxe:ListEditItem Text="N/A" Value="0" />
                                     <dxe:ListEditItem Text="Yes" Value="1" />
@@ -95,6 +96,7 @@
                                 ValueType="System.Int32" TabIndex="5" EnableIncrementalFiltering="True" 
                                 IncrementalFilteringMode="StartsWith">
                                 <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
+<ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }"></ClientSideEvents>
                                 <Items>
                                     <dxe:ListEditItem Text="N/A" Value="0" />
                                     <dxe:ListEditItem Text="Yes" Value="1" />
@@ -123,6 +125,7 @@
                                 ValueType="System.Int32" TabIndex="7" EnableIncrementalFiltering="True" 
                                 IncrementalFilteringMode="StartsWith">
                                 <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
+<ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }"></ClientSideEvents>
                                 <Items>
                                     <dxe:ListEditItem Text="N/A" Value="0" />
                                     <dxe:ListEditItem Text="Yes" Value="1" />
@@ -140,6 +143,7 @@
                                 ValueType="System.String" TabIndex="8" EnableIncrementalFiltering="True" 
                                 IncrementalFilteringMode="StartsWith">
                                 <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
+<ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }"></ClientSideEvents>
                                 <Items>
                                     <dxe:ListEditItem Text="N/A" Value="" />
                                     <dxe:ListEditItem Text="Flanged" Value="F" />
@@ -157,6 +161,7 @@
                                 ValueType="System.Int32" Width="80px" TabIndex="9" 
                                 EnableIncrementalFiltering="True" IncrementalFilteringMode="StartsWith">
                                 <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
+<ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }"></ClientSideEvents>
                                 <Items>
                                     <dxe:ListEditItem Text="0" Value="0" />
                                     <dxe:ListEditItem Text="1" Value="1" />
@@ -178,6 +183,7 @@
                                 ValueType="System.Int32" TabIndex="10" EnableIncrementalFiltering="True" 
                                 IncrementalFilteringMode="StartsWith">
                                 <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
+<ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }"></ClientSideEvents>
                                 <Items>
                                     <dxe:ListEditItem Text="N/A" Value="0" />
                                     <dxe:ListEditItem Text="Yes" Value="1" />
@@ -195,6 +201,7 @@
                                 ValueType="System.Int32" TabIndex="11" EnableIncrementalFiltering="True" 
                                 IncrementalFilteringMode="StartsWith">
                                 <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
+<ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }"></ClientSideEvents>
                                 <Items>
                                     <dxe:ListEditItem Text="N/A" Value="0" />
                                     <dxe:ListEditItem Text="Yes" Value="1" />
@@ -212,6 +219,7 @@
                                 Width="80px" TabIndex="12" EnableIncrementalFiltering="True" 
                                 IncrementalFilteringMode="StartsWith">
                                 <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
+<ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }"></ClientSideEvents>
                                 <Items>
                                     <dxe:ListEditItem Text="N/A" Value="0" />
                                     <dxe:ListEditItem Text="Yes" Value="1" />
@@ -235,6 +243,7 @@
                                 IncrementalFilteringMode="StartsWith">
                                 <ClientSideEvents Init="function(s, e) {DevExComboUnboundItem(s, e, '-- None --', -1)}" 
                                     Gotfocus="function(s, e) { s.ShowDropDown(); }" />
+<ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" Init="function(s, e) {DevExComboUnboundItem(s, e, &#39;-- None --&#39;, -1)}"></ClientSideEvents>
                             </dxe:ASPxComboBox>
                         </td>
                         <td></td>
@@ -253,8 +262,19 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                                <td class="style1">
+                                    &nbsp;
+                                </td>
+                                <td class="style1">
+                                    <table cellpadding="0" cellspacing="3px" border="0" width="100%" >
+                                    <tr>
+                                        <td>
+                                            &nbsp;</td>
+                                        <td>
+                                            &nbsp;</td>
+                                    </tr>
+                                    </table>
+                                </td>
                         <td></td>
                         <td></td>
                         <td></td>

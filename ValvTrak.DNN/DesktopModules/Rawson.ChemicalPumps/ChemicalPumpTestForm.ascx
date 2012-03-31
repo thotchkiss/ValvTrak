@@ -110,11 +110,25 @@
                 </tr>
                 <tr>
                     <td>
-                        <dx:ASPxImage ID="ASPxImage5" runat="server" Height="10px" 
-                            ImageUrl="~/spacer.gif">
-                        </dx:ASPxImage>
+                        <dx:ASPxLabel ID="ASPxLabel38" runat="server" Text="Coordinates:">
+                        </dx:ASPxLabel>
                     </td>
-                    <td></td>
+                    <td><table cellpadding="0" cellspacing="3px" border="0" width="100%" >
+                                    <tr>
+                                        <td>
+                                            <dx:ASPxLabel ID="lblCoords0" runat="server" Text="Lattitude">
+                                            </dx:ASPxLabel>
+                                            <dx:ASPxTextBox ID="txtLatitude" runat="server" TabIndex="1" Width="100px">
+                                            </dx:ASPxTextBox>
+                                        </td>
+                                        <td>
+                                            <dx:ASPxLabel ID="ASPxLabel37" runat="server" Text="Longitude">
+                                            </dx:ASPxLabel>
+                                            <dx:ASPxTextBox ID="txtLongitude" runat="server" TabIndex="2" Width="100px">
+                                            </dx:ASPxTextBox>
+                                        </td>
+                                    </tr>
+                                    </table></td>
                     <td></td>
                     <td></td>
                     <td></td>

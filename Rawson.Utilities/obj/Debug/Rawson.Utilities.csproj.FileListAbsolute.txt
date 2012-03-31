@@ -19,3 +19,10 @@ C:\Users\Tim\ValvTrak\Rawson.Utilities\bin\Debug\Rawson.Utilities.dll.config
 C:\Users\Tim\ValvTrak\Rawson.Utilities\bin\Debug\Rawson.Utilities.dll
 C:\Users\Tim\ValvTrak\Rawson.Utilities\bin\Debug\Rawson.Utilities.pdb
 C:\Users\Tim\ValvTrak\Rawson.Utilities\obj\Debug\Rawson.Utilities.pdb
+C:\Users\mil8924\Documents\Personal\Outside Work\ValvTrak\Rawson.Utilities\bin\Debug\app.config
+C:\Users\mil8924\Documents\Personal\Outside Work\ValvTrak\Rawson.Utilities\bin\Debug\Rawson.Utilities.dll.config
+C:\Users\mil8924\Documents\Personal\Outside Work\ValvTrak\Rawson.Utilities\bin\Debug\Rawson.Utilities.dll
+C:\Users\mil8924\Documents\Personal\Outside Work\ValvTrak\Rawson.Utilities\bin\Debug\Rawson.Utilities.pdb
+C:\Users\mil8924\Documents\Personal\Outside Work\ValvTrak\Rawson.Utilities\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mil8924\Documents\Personal\Outside Work\ValvTrak\Rawson.Utilities\obj\Debug\Rawson.Utilities.dll
+C:\Users\mil8924\Documents\Personal\Outside Work\ValvTrak\Rawson.Utilities\obj\Debug\Rawson.Utilities.pdb

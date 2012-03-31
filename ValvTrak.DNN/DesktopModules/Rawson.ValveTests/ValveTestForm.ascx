@@ -110,6 +110,27 @@
 										TabIndex="2"></dxe:ASPxTextBox>
 								</td>
 							</tr>
+                            <tr align="left">
+                                <td class="style1">
+                                    &nbsp;
+                                </td>
+                                <td class="style1">
+                                    <table cellpadding="0" cellspacing="3px" border="0" width="100%" >
+                                    <tr>
+                                        <td>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    </table>
+                                </td>
+                                <td class="style1">
+                                    &nbsp;</td>
+                                <td class="style1">
+                                    &nbsp;</td>
+                                <td class="style1">
+                                    &nbsp;</td>
+                            </tr>
 							<tr>
 								<td>
 									<dxe:ASPxLabel ID="ASPxLabel7" runat="server" Text="Valve :">

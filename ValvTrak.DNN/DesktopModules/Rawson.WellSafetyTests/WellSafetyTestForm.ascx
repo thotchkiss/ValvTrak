@@ -70,12 +70,33 @@
                                 </td>
                             </tr>
                             <tr align="left">
+                                <td class="style1">
+                                    &nbsp;
+                                </td>
+                                <td class="style1">
+                                    <table cellpadding="0" cellspacing="3px" border="0" width="100%" >
+                                    <tr>
+                                        <td>
+                                            &nbsp;</td>
+                                        <td>
+                                            &nbsp;</td>
+                                    </tr>
+                                    </table>
+                                </td>
+                                <td class="style1">
+                                    &nbsp;</td>
+                                <td class="style1">
+                                    &nbsp;</td>
+                                <td class="style1">
+                                    &nbsp;</td>
+                            </tr>
+                            <tr align="left">
                                 <td>
                                     <dxe:ASPxLabel ID="ASPxLabel4" runat="server" Text="FSR# :">
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dxe:ASPxTextBox ID="FSR_NumTextBox" runat="server" Width="170px" TabIndex="1">
+                                    <dxe:ASPxTextBox ID="FSR_NumTextBox" runat="server" Width="170px" TabIndex="3">
                                     </dxe:ASPxTextBox>
                                 </td>
                                 <td></td>
@@ -94,7 +115,7 @@
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dxe:ASPxTextBox ID="SSV_SAP_TextBox" runat="server" Width="170px" TabIndex="2">
+                                    <dxe:ASPxTextBox ID="SSV_SAP_TextBox" runat="server" Width="170px" TabIndex="4">
                                     </dxe:ASPxTextBox>
                                 </td>
                                 <td></td>
@@ -103,7 +124,7 @@
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dxe:ASPxDateEdit ID="FormDateEdit" runat="server" Width="100px" TabIndex="3">
+                                    <dxe:ASPxDateEdit ID="FormDateEdit" runat="server" Width="100px" TabIndex="5">
                                     </dxe:ASPxDateEdit>
                                 </td>
                             </tr>
@@ -137,6 +158,9 @@
                                         <ClientSideEvents GotFocus="function(s, e) {
 	s.ShowDropDown();
 }" />
+<ClientSideEvents GotFocus="function(s, e) {
+	s.ShowDropDown();
+}"></ClientSideEvents>
                                         <Items>
                                             <dxe:ListEditItem Selected="True" Text="-- Select Actuator Type --" Value="" />
                                             <dxe:ListEditItem Text="Diaphragm" Value="DP" />
@@ -166,6 +190,9 @@
                                         <ClientSideEvents GotFocus="function(s, e) {
 	s.ShowDropDown();
 }" />
+<ClientSideEvents GotFocus="function(s, e) {
+	s.ShowDropDown();
+}"></ClientSideEvents>
                                         <Items>
                                             <dxe:ListEditItem Text="-- Select Body Material --" Value="" />
                                             <dxe:ListEditItem Text="Stainless Steel" Value="SS" />
@@ -196,6 +223,9 @@
                                         <ClientSideEvents GotFocus="function(s, e) {
 	s.ShowDropDown();
 }" />
+<ClientSideEvents GotFocus="function(s, e) {
+	s.ShowDropDown();
+}"></ClientSideEvents>
                                         <Items>
                                             <dxe:ListEditItem Text="-- Select Plug Material --" Value="" />
                                             <dxe:ListEditItem Text="Stainless Steel" Value="SS" />
@@ -227,6 +257,9 @@
                                         <ClientSideEvents GotFocus="function(s, e) {
 	s.ShowDropDown();
 }" />
+<ClientSideEvents GotFocus="function(s, e) {
+	s.ShowDropDown();
+}"></ClientSideEvents>
                                         <Items>
                                             <dxe:ListEditItem Text="-- Select Steam Material --" Value="" />
                                             <dxe:ListEditItem Text="Stainless Steel" Value="SS" />
@@ -246,6 +279,9 @@
                                         <ClientSideEvents GotFocus="function(s, e) {
 	s.ShowDropDown();
 }" />
+<ClientSideEvents GotFocus="function(s, e) {
+	s.ShowDropDown();
+}"></ClientSideEvents>
                                         <Items>
                                             <dxe:ListEditItem Selected="True" Text="-- Select Air Supply Medium --" 
                                                 Value="" />
@@ -267,6 +303,9 @@
                                         <ClientSideEvents GotFocus="function(s, e) {
 	s.ShowDropDown();
 }" />
+<ClientSideEvents GotFocus="function(s, e) {
+	s.ShowDropDown();
+}"></ClientSideEvents>
                                         <Items>
                                             <dxe:ListEditItem Text="-- Select Gate Material --" Value="" />
                                             <dxe:ListEditItem Text="Stainless Steel" Value="SS" />
@@ -326,6 +365,9 @@
                                         <ClientSideEvents GotFocus="function(s, e) {
 	s.ShowDropDown();
 }" />
+<ClientSideEvents GotFocus="function(s, e) {
+	s.ShowDropDown();
+}"></ClientSideEvents>
                                         <Items>
                                             <dxe:ListEditItem Selected="True" Text="-- Select System Location --" 
                                                 Value="" />
@@ -394,6 +436,7 @@
                                     <dxe:ASPxButton ID="checkButton" runat="server" AutoPostBack="False" 
                                         ClientInstanceName="checkButton" Text="Check Spelling ..." Width="170px">
                                         <ClientSideEvents Click="function(s, e) { spellChecker.Check(); }" />
+<ClientSideEvents Click="function(s, e) { spellChecker.Check(); }"></ClientSideEvents>
                                     </dxe:ASPxButton>
                                     <dxsc:ASPxSpellChecker ID="NotesSpellChecker" runat="server" 
                                         CheckedElementID="NotesTextBox" ClientInstanceName="spellChecker" 
@@ -402,6 +445,7 @@
                                         ShowLoadingPanel="False">
                                         <ClientSideEvents AfterCheck="function(s, e) { checkButton.SetEnabled(true); }" 
                                             BeforeCheck="function(s, e) {    checkButton.SetEnabled(false); }" />
+<ClientSideEvents BeforeCheck="function(s, e) {    checkButton.SetEnabled(false); }" AfterCheck="function(s, e) { checkButton.SetEnabled(true); }"></ClientSideEvents>
                                         <Dictionaries>
                                             <dxsc:ASPxSpellCheckerOpenOfficeDictionary Culture="en-US" 
                                                 DictionaryPath="~/Dictionaries/en_US/en_US.dic" 
@@ -444,6 +488,9 @@
                                         <ClientSideEvents GotFocus="function(s, e) {
 	s.ShowDropDown();
 }" />
+<ClientSideEvents GotFocus="function(s, e) {
+	s.ShowDropDown();
+}"></ClientSideEvents>
                                         <Items>
                                             <dxe:ListEditItem Text="-- Select Manual Override --" Value="" />
                                             <dxe:ListEditItem Text="Engaged" Value="ENG" />
@@ -474,6 +521,9 @@
                                         <ClientSideEvents GotFocus="function(s, e) {
 	s.ShowDropDown();
 }" />
+<ClientSideEvents GotFocus="function(s, e) {
+	s.ShowDropDown();
+}"></ClientSideEvents>
                                         <Items>
                                             <dxe:ListEditItem Text="-- Select Test Result ID --" Value="-1" />
                                             <dxe:ListEditItem Text="Tested Good" Value="5" />
@@ -501,6 +551,7 @@
                                     <dxe:ASPxButton ID="btnSave" runat="server" AutoPostBack="False" Text="Save" 
                                         Width="170px" TabIndex="27">
                                         <ClientSideEvents Click="function(s,e){ saveAction.PerformCallback(); }" />
+<ClientSideEvents Click="function(s,e){ saveAction.PerformCallback(); }"></ClientSideEvents>
                                     </dxe:ASPxButton>
                                 </td>
                             </tr>

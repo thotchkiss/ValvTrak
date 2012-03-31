@@ -69,6 +69,8 @@ namespace Rawson.ValveTests
             siEdit.ClientLocationID = vt.Job.ClientLocationID;
             siEdit.ServiceItemID = vt.ServiceItemID;
 
+
+
             SalesOrderLabel.Text = vt.Job.SalesOrderNum ?? "";
             FSRNumTextBox.Text = vt.FSRNum ?? "";
             CustomerLabel.Text = vt.Job.ClientLocation.Client.Name;
@@ -208,6 +210,7 @@ namespace Rawson.ValveTests
             vt.GaugeNum = GuageNumTextBox.Text;
             vt.CalibrationDue = (DateTime?)CalibrationDueDateEdit.Value;
             vt.ValveDate = (DateTime?)ValveDateEdit.Value;
+
 
             bool? CodedVar = null;
             if ( (int)CodedSelect.Value == -1 )
