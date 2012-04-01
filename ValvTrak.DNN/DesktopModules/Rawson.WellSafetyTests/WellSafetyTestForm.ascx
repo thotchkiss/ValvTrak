@@ -333,6 +333,7 @@
                                             <dxe:ListEditItem Text="Line Heater" Value="LH" />
                                             <dxe:ListEditItem Text="Flow Line" Value="FL" />
                                             <dxe:ListEditItem Text="Meater Run" Value="MR" />
+                                            <dxe:ListEditItem Text="Wellhead" Value="WH" />
                                         </Items>
                                     </dxe:ASPxComboBox>
                                 </td>
