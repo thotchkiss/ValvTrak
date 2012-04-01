@@ -68,8 +68,6 @@ namespace Rawson.ValveTests
             //bind the serviceitems
             siEdit.ClientLocationID = vt.Job.ClientLocationID;
             siEdit.ServiceItemID = vt.ServiceItemID;
-            siEdit.ServiceItemCategoryID = siEdit.ServiceItemCategoryID = vt.ServiceItem == null ? 2 : vt.ServiceItem.ServiceItemTypeID.Value;
-
 
             SalesOrderLabel.Text = vt.Job.SalesOrderNum ?? "";
             FSRNumTextBox.Text = vt.FSRNum ?? "";

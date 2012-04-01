@@ -66,7 +66,6 @@ namespace Rawson.WellSafetyTests
             //bind the serviceitems
             ServiceItemSelect.ClientLocationID = wt.Job.ClientLocationID;
             ServiceItemSelect.ServiceItemID = wt.ServiceItemID;
-            ServiceItemSelect.ServiceItemCategoryID = wt.ServiceItem == null ? 2 : wt.ServiceItem.ServiceItemTypeID.Value;
 
             JobIDLabel.Text = wt.Job.JobID.ToString();
             SalesOrderNumLabel.Text = wt.Job.SalesOrderNum;

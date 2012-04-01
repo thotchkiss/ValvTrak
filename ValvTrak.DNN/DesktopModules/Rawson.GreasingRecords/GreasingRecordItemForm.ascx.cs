@@ -65,7 +65,6 @@ namespace Rawson.GreasingRecords
             //bind the serviceitems
             siEdit.ClientLocationID = item.GreasingRecord.Job.ClientLocationID;
             siEdit.ServiceItemID = item.ServiceItemID;
-            siEdit.ServiceItemCategoryID = item.ServiceItem == null ? 2 : item.ServiceItem.ServiceItemTypeID.Value;
 
             ActuatorInspSelect.Value = item.ActuatorInspected.GetValueOrDefault(0);
             ActuatorLubedSelect.Value = item.ActuatorLubed.GetValueOrDefault(0);

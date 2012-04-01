@@ -124,7 +124,7 @@
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <vt:SvcItemEdit ID="ServiceItemSelect" runat="server" TabIndex="4"></vt:SvcItemEdit>
+                                    <vt:SvcItemEdit ID="ServiceItemSelect" runat="server" ServiceItemCategoryID="2" TabIndex="4"></vt:SvcItemEdit>
                                 </td>
                                 <td></td>
                                 <td>
