@@ -145,7 +145,7 @@
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <vt:SvcItemEdit ID="ServiceItemSelect" runat="server" TabIndex="4"></vt:SvcItemEdit>
+                                    <vt:SvcItemEdit ID="ServiceItemSelect" runat="server" ServiceItemCategoryID="2" TabIndex="4"></vt:SvcItemEdit>
                                 </td>
                                 <td></td>
                                 <td>
@@ -375,6 +375,7 @@
                                             <dxe:ListEditItem Text="Line Heater" Value="LH" />
                                             <dxe:ListEditItem Text="Flow Line" Value="FL" />
                                             <dxe:ListEditItem Text="Meater Run" Value="MR" />
+                                            <dxe:ListEditItem Text="Wellhead" Value="WH" />
                                         </Items>
                                     </dxe:ASPxComboBox>
                                 </td>

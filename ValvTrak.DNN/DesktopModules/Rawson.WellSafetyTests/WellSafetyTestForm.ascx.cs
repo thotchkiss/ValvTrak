@@ -71,7 +71,7 @@ namespace Rawson.WellSafetyTests
             JobIDLabel.Text = wt.Job.JobID.ToString();
             SalesOrderNumLabel.Text = wt.Job.SalesOrderNum;
             FSR_NumTextBox.Text = wt.FSR_Num ?? "";
-            CompletionDateLabel.Text = wt.Job.CompletionDate.Value.ToString("d");
+            CompletionDateLabel.Text = wt.Job.CompletionDate.HasValue ? wt.Job.CompletionDate.Value.ToString("d") : "Not Completed";
 
             ClientLocationIdLabel.Text = wt.Job.ClientLocation.Name;
             SSV_SAP_TextBox.Text = wt.SSV_SAP_Num ?? "";

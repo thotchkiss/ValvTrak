@@ -1,0 +1,4 @@
+C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\DXSilverlightApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\DXSilverlightApplication1\obj\Debug\App.g.i.cs
+C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\DXSilverlightApplication1\obj\Debug\MainPage.g.i.cs
+C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\DXSilverlightApplication1\obj\Debug\DXSilverlightApplication1.g.resources

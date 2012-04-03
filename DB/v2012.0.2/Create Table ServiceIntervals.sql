@@ -1,7 +1,7 @@
 USE [SRD]
 GO
 
-/****** Object:  Table [dbo].[ServiceIntervals]    Script Date: 03/24/2012 22:47:06 ******/
+/****** Object:  Table [dbo].[ServiceIntervals]    Script Date: 03/25/2012 17:06:24 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -18,6 +18,7 @@ CREATE TABLE [dbo].[ServiceIntervals](
 	[Months] [int] NOT NULL,
 	[Days] [int] NOT NULL,
 	[IsActive] [bit] NOT NULL,
+	[Version] [timestamp] NOT NULL,
  CONSTRAINT [PK_ServiceIntervals] PRIMARY KEY CLUSTERED 
 (
 	[ServiceIntervalId] ASC
@@ -40,5 +41,4 @@ GO
 
 ALTER TABLE [dbo].[ServiceIntervals] ADD  CONSTRAINT [DF_ServiceIntervals_IsActive]  DEFAULT ((1)) FOR [IsActive]
 GO
-
 

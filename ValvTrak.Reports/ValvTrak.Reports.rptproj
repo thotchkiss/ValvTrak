@@ -9,6 +9,10 @@
   </DataSources>
   <Reports>
     <ProjectItem>
+      <Name>Active Clients and Locations.rdl</Name>
+      <FullPath>Active Clients and Locations.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>BP Monthly Report.rdl</Name>
       <FullPath>BP Monthly Report.rdl</FullPath>
     </ProjectItem>
@@ -33,6 +37,10 @@
       <FullPath>GreasingRecordItemSubreport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
+      <Name>Service Schedule By Client and Location.rdl</Name>
+      <FullPath>Service Schedule By Client and Location.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
       <Name>ValveTestFieldReport.rdl</Name>
       <FullPath>ValveTestFieldReport.rdl</FullPath>
     </ProjectItem>
@@ -40,10 +48,11 @@
       <Name>WellSafetyFieldReport.rdl</Name>
       <FullPath>WellSafetyFieldReport.rdl</FullPath>
     </ProjectItem>
-    <ProjectItem>
-      <Name>Active Clients and Locations.rdl</Name>
-      <FullPath>Active Clients and Locations.rdl</FullPath>
-    </ProjectItem>
+    <ResourceProjectItem>
+      <Name>rawson_logo.gif</Name>
+      <FullPath>rawson_logo.gif</FullPath>
+      <MimeType>image/gif</MimeType>
+    </ResourceProjectItem>
   </Reports>
   <Configurations>
     <Configuration>
