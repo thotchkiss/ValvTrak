@@ -89,6 +89,7 @@ namespace Rawson.GreasingRecords
             FSRTextBox.Text = gr.FSRNum;
             lblSapWoNum.Text = gr.Job.SapWoNum ?? "";
 
+
             if (gr.Job.CompletionDate.HasValue)
                 CompletionDateLabel.Text = gr.Job.CompletionDate.Value.ToString("d");
 
@@ -173,6 +174,7 @@ namespace Rawson.GreasingRecords
             gr.Field = FieldTextBox.Text;
             gr.SapPSV = txtSapPsv.Text;
             gr.FSRNum = FSRTextBox.Text;
+
 
             if (gr.Version == null)
             {

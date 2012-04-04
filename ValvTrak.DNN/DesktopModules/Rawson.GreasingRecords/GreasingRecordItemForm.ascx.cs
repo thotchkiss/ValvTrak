@@ -66,6 +66,7 @@ namespace Rawson.GreasingRecords
             siEdit.ClientLocationID = item.GreasingRecord.Job.ClientLocationID;
             siEdit.ServiceItemID = item.ServiceItemID;
 
+
             ActuatorInspSelect.Value = item.ActuatorInspected.GetValueOrDefault(0);
             ActuatorLubedSelect.Value = item.ActuatorLubed.GetValueOrDefault(0);
             sePercentCycled.Value = item.PercentCycled.GetValueOrDefault(0);
@@ -120,6 +121,7 @@ namespace Rawson.GreasingRecords
             gri.LubeTypeID = (LubeTypeSelect.Value == "-1") ? (int?)null : Convert.ToInt32(LubeTypeSelect.Value);
             gri.AmountInjected = Convert.ToSingle(seAmountInjected.Number);
             gri.Notes = RemarksTextBox.Text;
+
 
             if (gri.Version == null)
             {

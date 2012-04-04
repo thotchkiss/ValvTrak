@@ -42,6 +42,12 @@ namespace Rawson.ClientLocations
             e.Result = controller.GetStatesList();
         }
 
+        protected void LocationClientsList_Selecting(object sender, LinqDataSourceSelectEventArgs e)
+        {
+            ClientFormController controller = Context.Items["#boController"] as ClientFormController;
+            e.Result = controller.GetParentClientList();
+        }
+        
         protected void ClientDetailsPanel_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
         {
             string action = (string)hfSelectedClient["Action"];
@@ -98,6 +104,8 @@ namespace Rawson.ClientLocations
 
                 ClientLocation location = controller.GetLocation(Convert.ToInt32(e.Parameter));
 
+                cbAssociatedClient.Text = location.Client.Name;
+                
                 txtLocationName.Text = location.Name;
                 txtLocationAddress.Text = location.Address;
                 txtLocationCity.Text = location.City;
@@ -124,6 +132,13 @@ namespace Rawson.ClientLocations
             }
             else // New
             {
+                ClientFormController controller = Context.Items["#boController"] as ClientFormController;
+                controller.Load(hfSelectedClient["ClientID"]);
+
+                ClientLocation location = controller.GetLocation(Convert.ToInt32(e.Parameter));
+
+                cbAssociatedClient.Text = location.Client.Name;
+
                 txtLocationName.Text = String.Empty;
                 txtLocationAddress.Text = String.Empty;
                 txtLocationCity.Text = String.Empty;
@@ -200,6 +215,7 @@ namespace Rawson.ClientLocations
 
             ClientLocation location = action == "New" ? controller.GetLocation(-1) : controller.GetLocation((int)hfSelectedLocation["ClientLocationID"]);
 
+            location.ClientID = int.Parse(cbAssociatedClient.Value.ToString());
             location.Name = txtLocationName.Text;
             location.Address = txtLocationAddress.Text;
             location.City = txtLocationCity.Text;
@@ -266,5 +282,9 @@ namespace Rawson.ClientLocations
         {
             ClientsGrid.DataBind();
         }
-    }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+}
 }

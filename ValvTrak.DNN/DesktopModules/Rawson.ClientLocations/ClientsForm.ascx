@@ -320,6 +320,17 @@
                         <table cellpadding="0" cellspacing="3px" border="0">
                             <tr>
                                 <td>
+                                    <dx:ASPxLabel ID="ASPxLabel18" runat="server" Text="Associated Client :">
+                                    </dx:ASPxLabel>
+                                </td>
+                                <td>
+                                    <dx:ASPxComboBox ID="cbAssociatedClient" runat="server" 
+                                        DataSourceID="ClientsGridSource" TextField="Name" ValueField="ClientID">
+                                    </dx:ASPxComboBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
                                     <dx:ASPxLabel ID="ASPxLabel7" runat="server" Text="Name :">
                                     </dx:ASPxLabel>
                                 </td>
@@ -445,8 +456,14 @@
         </dx:PopupControlContentControl>
     </ContentCollection>
 </dx:ASPxPopupControl>
+
 <asp:LinqDataSource ID="ClientsGridSource" runat="server" 
     onselecting="ClientsGridSource_Selecting">
+</asp:LinqDataSource>
+<asp:LinqDataSource ID="LocationClientsList" runat="server" 
+    ContextTypeName="Rawson.Data.ValvTrakDBDataContext" EntityTypeName="" 
+    OrderBy="Name" Select="new (ClientID, Name)" TableName="Clients"
+    onselecting="LocationClientsList_Selecting" EnableInsert="True">
 </asp:LinqDataSource>
 <asp:LinqDataSource ID="LocationsGridSource" runat="server" 
     onselecting="LocationsGridSource_Selecting">

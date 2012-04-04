@@ -32,7 +32,7 @@
     }
 
     function IsNumeric(sText) {
-        var ValidChars = "0123456789.";
+        var ValidChars = "0123456789.-/";
         for (i = 0; i < sText.length; i++) {
             if (ValidChars.indexOf(sText.charAt(i)) == -1) {
                 return false;
@@ -293,10 +293,9 @@
                                                 <table cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td>
-                                                            <dxe:ASPxSpinEdit ID="seInletSize" runat="server" Number="0"
-                                                                DecimalPlaces="3" AllowUserInput="true" Width="75" TabIndex="113" 
-                                                                MaxValue="10000">
-                                                            </dxe:ASPxSpinEdit>
+                                                            <dxe:ASPxTextBox ID="txtInletFrac" runat="server" Width="75px" 
+                                                                ToolTip="Enter fractions as '##-##/##'" TabIndex="114" >
+                                                            </dxe:ASPxTextBox>
                                                         </td>
                                                         <td>
                                                             <dxe:ASPxLabel ID="ASPxLabel9" runat="server" Text="(Inlet)">
@@ -308,11 +307,10 @@
                                             <td>
                                                 <table cellpadding="0" cellspacing="0">
                                                     <tr>
-                                                        <td>
-                                                            <dxe:ASPxSpinEdit ID="seOutletSize" runat="server" Number="0" 
-                                                                DecimalPlaces="3" AllowUserInput="true" Width="75" TabIndex="114" 
-                                                                MaxValue="10000">
-                                                            </dxe:ASPxSpinEdit>
+                                                        <td>    
+                                                            <dxe:ASPxTextBox ID="txtOutletFrac" runat="server" Width="75px" 
+                                                                ToolTip="Enter fractions as '##-##/##'" TabIndex="116">
+                                                            </dxe:ASPxTextBox>
                                                         </td>
                                                         <td>
                                                             <dxe:ASPxLabel ID="ASPxLabel10" runat="server" Text="(Outlet)">
@@ -323,6 +321,14 @@
                                             </td>
                                         </tr>
                                     </table>                        
+                                </td>
+                            </tr>
+                            <tr>
+                            <td>
+                            </td>
+                                <td>
+                                    <dxe:ASPxLabel ID="ASPxLabel16" runat="server" Text="Enter Decimal or Fractions">
+                                    </dxe:ASPxLabel>
                                 </td>
                             </tr>
                             <tr>
@@ -338,7 +344,7 @@
                                                     <tr>
                                                         <td>
                                                             <dxe:ASPxSpinEdit ID="seInletFlangeRating" runat="server" Number="0"
-                                                                DecimalPlaces="2" AllowUserInput="true" Width="75" TabIndex="115" 
+                                                                DecimalPlaces="2" AllowUserInput="true" Width="75" TabIndex="117" 
                                                                 MaxValue="10000">
                                                             </dxe:ASPxSpinEdit>
                                                         </td>
@@ -354,7 +360,7 @@
                                                     <tr>
                                                         <td>
                                                             <dxe:ASPxSpinEdit ID="seOutletFlangeRating" runat="server" Number="0" 
-                                                                DecimalPlaces="2" AllowUserInput="true" Width="75" TabIndex="116" 
+                                                                DecimalPlaces="2" AllowUserInput="true" Width="75" TabIndex="118" 
                                                                 MaxValue="10000">
                                                             </dxe:ASPxSpinEdit>
                                                         </td>
@@ -383,7 +389,7 @@
                                         <tr>
                                             <td>
                                                 <dxe:ASPxButton ID="btnOK" runat="server" AutoPostBack="false" Text="Save" 
-                                                    ClientInstanceName="btnOK" TabIndex="118" >
+                                                    ClientInstanceName="btnOK" TabIndex="119" >
                                                     <ClientSideEvents Click="function(s,e) { siSaveAction.PerformCallback(); }" />
                                                 </dxe:ASPxButton>
                                             </td>
@@ -393,7 +399,7 @@
                                             </td>
                                             <td>
                                                 <dxe:ASPxButton ID="btnCancel" runat="server" AutoPostBack="false" 
-                                                    Text="Cancel" TabIndex="119">
+                                                    Text="Cancel" TabIndex="120">
                                                     <ClientSideEvents Click="function(s, e) { siDetails.Hide(); }"></ClientSideEvents>
                                                 </dxe:ASPxButton>
                                             </td>
@@ -543,6 +549,17 @@
             else
                 models.PerformCallback(s.cpManufacturerModelID) }" />
 </dx:ASPxCallback>
+
+                                                            <!--
+                                                            <dxe:ASPxSpinEdit ID="seInletSize" runat="server" Number="0"
+                                                                DecimalPlaces="0" AllowUserInput="true" Width="75" TabIndex="113" 
+                                                                MaxValue="10000" ToolTip="Whole Numbers only" NumberType="Integer">
+                                                            </dxe:ASPxSpinEdit>
+                                                           <dxe:ASPxSpinEdit ID="seOutletSize" runat="server" Number="0" 
+                                                                DecimalPlaces="0" AllowUserInput="true" Width="75" TabIndex="115" 
+                                                                MaxValue="10000" ToolTip="Whole Numbers only" NumberType="Integer">
+                                                            </dxe:ASPxSpinEdit>
+                                                            -->
 <dx:ASPxHiddenField ID="hfServiceItem" runat="server" ClientInstanceName="siLocalData"
     SyncWithServer="true">
 </dx:ASPxHiddenField>
