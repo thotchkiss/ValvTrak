@@ -275,8 +275,10 @@ namespace Rawson.ServiceItems
 
             chkThreaded.Checked = false;
             chkFlanged.Checked = false;
-            seInletSize.Value = 0;
-            seOutletSize.Value = 0;
+            txtInletFrac.Value = 0;
+            txtOutletFrac.Value = 0;
+            //seInletSize.Value = 0;
+            //seOutletSize.Value = 0;
             seInletFlangeRating.Value = 0;
             seOutletFlangeRating.Value = 0;
 

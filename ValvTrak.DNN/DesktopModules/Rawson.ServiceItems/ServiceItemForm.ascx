@@ -550,16 +550,6 @@
                 models.PerformCallback(s.cpManufacturerModelID) }" />
 </dx:ASPxCallback>
 
-                                                            <!--
-                                                            <dxe:ASPxSpinEdit ID="seInletSize" runat="server" Number="0"
-                                                                DecimalPlaces="0" AllowUserInput="true" Width="75" TabIndex="113" 
-                                                                MaxValue="10000" ToolTip="Whole Numbers only" NumberType="Integer">
-                                                            </dxe:ASPxSpinEdit>
-                                                           <dxe:ASPxSpinEdit ID="seOutletSize" runat="server" Number="0" 
-                                                                DecimalPlaces="0" AllowUserInput="true" Width="75" TabIndex="115" 
-                                                                MaxValue="10000" ToolTip="Whole Numbers only" NumberType="Integer">
-                                                            </dxe:ASPxSpinEdit>
-                                                            -->
 <dx:ASPxHiddenField ID="hfServiceItem" runat="server" ClientInstanceName="siLocalData"
     SyncWithServer="true">
 </dx:ASPxHiddenField>
