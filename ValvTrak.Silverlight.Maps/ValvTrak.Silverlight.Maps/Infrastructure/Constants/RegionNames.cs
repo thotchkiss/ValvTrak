@@ -15,6 +15,6 @@ namespace ValvTrak.Silverlight.Maps.Infrastructure.Constants
     {
         public const string MapRegion = "MapRegion";
         public const string NavigationRegion = "NavigationRegion";
-        public const string DetailsRegion = "DetailsRegion";
+        public const string LocationRegion = "LocationRegion";
     }
 }

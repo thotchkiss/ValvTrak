@@ -213,3 +213,5 @@ C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\De
 C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\zh-Hant\System.ComponentModel.Composition.Initialization.resources.dll
 C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\Shell.g.i.cs
 C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\Views\MapView.g.i.cs
+C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\Views\LocationView.g.i.cs
+C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\Views\NavigationView.g.i.cs

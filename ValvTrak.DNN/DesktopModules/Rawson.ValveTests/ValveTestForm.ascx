@@ -20,6 +20,10 @@
 	{
 		height: 18px;
 	}
+	.style2
+	{
+		height: 22px;
+	}
 </style>
 
 <script type="text/javascript">
@@ -110,27 +114,27 @@
 										TabIndex="2"></dxe:ASPxTextBox>
 								</td>
 							</tr>
-                            <tr align="left">
-                                <td class="style1">
-                                    &nbsp;
-                                </td>
-                                <td class="style1">
-                                    <table cellpadding="0" cellspacing="3px" border="0" width="100%" >
-                                    <tr>
-                                        <td>
-                                        </td>
-                                        <td>
-                                        </td>
-                                    </tr>
-                                    </table>
-                                </td>
-                                <td class="style1">
-                                    &nbsp;</td>
-                                <td class="style1">
-                                    &nbsp;</td>
-                                <td class="style1">
-                                    &nbsp;</td>
-                            </tr>
+							<tr align="left">
+								<td class="style1">
+									&nbsp;
+								</td>
+								<td class="style1">
+									<table cellpadding="0" cellspacing="3px" border="0" width="100%" >
+									<tr>
+										<td>
+										</td>
+										<td>
+										</td>
+									</tr>
+									</table>
+								</td>
+								<td class="style1">
+									&nbsp;</td>
+								<td class="style1">
+									&nbsp;</td>
+								<td class="style1">
+									&nbsp;</td>
+							</tr>
 							<tr>
 								<td>
 									<dxe:ASPxLabel ID="ASPxLabel7" runat="server" Text="Valve :">
@@ -156,7 +160,7 @@
 								<td class="style1"></td>
 							</tr>
 							<tr>
-								<td>
+								<td nowrap="nowrap">
 									<dxe:ASPxLabel ID="ASPxLabel9" runat="server" Text="Date Tested :">
 									</dxe:ASPxLabel>
 								</td>
@@ -176,7 +180,7 @@
 									</dxe:ASPxTextBox>
 								</td>
 								<td>&nbsp;</td>
-								<td>
+								<td nowrap="nowrap">
 									<dxe:ASPxLabel ID="ASPxLabel8" runat="server" Text="PSV Appl. :">
 									</dxe:ASPxLabel>
 								</td>
@@ -185,6 +189,36 @@
 										TabIndex="5">
 									</dxe:ASPxTextBox>
 								</td>
+							</tr>
+							<tr>
+								<td class="style2">
+									<asp:Label ID="Label1" runat="server" Text="Latitude :"></asp:Label>
+								</td>
+								<td class="style2">
+
+									<dxe:ASPxTextBox ID="txtLatitude" runat="server" Height="21px" Width="100px" 
+										NullText="Add Latitude">
+										<MaskSettings PromptChar=" " />
+										<NullTextStyle ForeColor="Silver">
+										</NullTextStyle>
+									</dxe:ASPxTextBox>
+
+								</td>
+								<td class="style2"></td>
+								<td class="style2">
+									<asp:Label ID="Label2" runat="server" Text="Longitude :"></asp:Label>
+								</td>
+								<td class="style2">
+									<dxe:ASPxTextBox ID="txtLongitude" runat="server" Height="21px" Width="100px" 
+										NullText="Add Longitude">
+										<MaskSettings PromptChar=" " />
+										<NullTextStyle ForeColor="Silver">
+										</NullTextStyle>
+									</dxe:ASPxTextBox>
+								</td>
+								<td class="style2"></td>
+								<td class="style2"></td>
+								<td class="style2"></td>
 							</tr>
 							<tr>
 								<td>
@@ -205,7 +239,7 @@
 								<td>
 									&nbsp;
 								</td>
-								<td>
+								<td nowrap="nowrap">
 									<dxe:ASPxLabel ID="ASPxLabel11" runat="server" Text="Back Pressure :">
 									</dxe:ASPxLabel>
 								</td>
@@ -232,7 +266,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td>
+								<td nowrap="nowrap">
 									<dxe:ASPxLabel ID="ASPxLabel13" runat="server" Text="Temp. Corr. :">
 									</dxe:ASPxLabel>
 								</td>
@@ -442,7 +476,7 @@
 								</td>
 								<td>
 									&nbsp;</td>
-								<td>
+								<td nowrap="nowrap">
 									<dxe:ASPxLabel ID="ASPxLabel25" runat="server" Text="JSA Complete :">
 									</dxe:ASPxLabel>
 								</td>
@@ -526,7 +560,7 @@
 										</tr>
 									</table>
 								</td>
-								<td>
+								<td nowrap="nowrap">
 									<dxe:ASPxLabel ID="ASPxLabel29" runat="server" Text="Test Result :">
 									</dxe:ASPxLabel>
 								</td>
@@ -657,7 +691,7 @@
 									</dxe:ASPxComboBox>
 								</td>
 								<td></td>
-								<td>
+								<td nowrap="nowrap">
 									<dxe:ASPxLabel ID="ASPxLabel33" runat="server" Text="Customer Witness :">
 									</dxe:ASPxLabel>
 								</td>

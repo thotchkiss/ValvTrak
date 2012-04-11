@@ -118,6 +118,26 @@ left outer join employees on greasingrecorditems.createdby = employees.employeei
 where (greasingrecorditems.createddate between @StartDate and @EndDate )
         and (@EmployeeID is null or employees.employeeid = @EmployeeID)
 
+union
+
+select 
+	employees.firstname + ' ' + employees.lastname,
+	wellsafetytests.createddate,
+    'Well Safety',
+	jobs.jobid, 
+	jobs.salesordernum,
+	wellsafetytests.wellsafetytestid, 
+	wellsafetytests.fsr_num,
+	clients.name, 
+	clientlocations.name
+from jobs
+inner join clientlocations on jobs.clientlocationid = clientlocations.clientlocationid
+inner join clients on clientlocations.clientid = clients.clientid
+inner join wellsafetytests on wellsafetytests.jobid = jobs.jobid
+left outer join employees on wellsafetytests.createdby = employees.employeeid
+where (wellsafetytests.createddate between @StartDate and @EndDate )
+        and (@EmployeeID is null or employees.employeeid = @EmployeeID)
+
 order by Employee, DateCreated, SRO</CommandText>
         <QueryParameters>
           <QueryParameter Name="@StartDate">

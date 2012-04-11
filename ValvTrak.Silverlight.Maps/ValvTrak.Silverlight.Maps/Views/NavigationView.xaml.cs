@@ -9,26 +9,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
-using DevExpress.Xpf.Core;
-using DevExpress.Xpf.Bars;
-using DevExpress.Xpf.Layout.Core;
-using DevExpress.Xpf.Docking;
-using System.ComponentModel.Composition;
+using ValvTrak.Silverlight.Maps.Infrastructure.Behaviors;
+using ValvTrak.Silverlight.Maps.Infrastructure.Constants;
 
-
-namespace ValvTrak.Silverlight.Maps
+namespace ValvTrak.Silverlight.Maps.Views
 {
-    [Export]
-    public partial class Shell : UserControl
+    [ViewExport(RegionName=RegionNames.NavigationRegion)]
+    public partial class NavigationView : UserControl
     {
-        public Shell()
+        public NavigationView()
         {
             InitializeComponent();
-            ThemeManager.ApplicationThemeName = "Office2007Blue";
-
         }
-
     }
-
-
 }

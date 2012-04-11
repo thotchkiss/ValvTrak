@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -275,8 +275,6 @@ namespace Rawson.ServiceItems
 
             chkThreaded.Checked = false;
             chkFlanged.Checked = false;
-            txtInletFrac.Value = 0;
-            txtOutletFrac.Value = 0;
             //seInletSize.Value = 0;
             //seOutletSize.Value = 0;
             seInletFlangeRating.Value = 0;
