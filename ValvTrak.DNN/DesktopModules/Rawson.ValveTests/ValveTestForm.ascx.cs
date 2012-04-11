@@ -69,8 +69,6 @@ namespace Rawson.ValveTests
             siEdit.ClientLocationID = vt.Job.ClientLocationID;
             siEdit.ServiceItemID = vt.ServiceItemID;
 
-
-
             SalesOrderLabel.Text = vt.Job.SalesOrderNum ?? "";
             FSRNumTextBox.Text = vt.FSRNum ?? "";
             CustomerLabel.Text = vt.Job.ClientLocation.Client.Name;
@@ -81,6 +79,9 @@ namespace Rawson.ValveTests
             SapPsvTextBox.Text = vt.SapPsv;
             PsvApplicationTextBox.Text = vt.PsvApplication;
             DateTestedEdit.Value = vt.DateTested;
+
+            txtLatitude.Text = vt.Job.ClientLocation.Latitude;
+            txtLongitude.Text = vt.Job.ClientLocation.Longitude;
 
             if ( vt.Coded == null )
                 CodedSelect.Value = -1;
@@ -200,6 +201,13 @@ namespace Rawson.ValveTests
             vt.PsvApplication = PsvApplicationTextBox.Text;
             vt.SapPsv = SapPsvTextBox.Text;
             vt.DateTested = (DateTime?)DateTestedEdit.Value;
+
+            decimal latitude = 0;
+            decimal longitude = 0;
+
+            vt.Job.ClientLocation.Latitude = Decimal.TryParse(txtLatitude.Text, out latitude) ? latitude.ToString() : null;
+            vt.Job.ClientLocation.Longitude = Decimal.TryParse(txtLongitude.Text, out longitude) ? longitude.ToString() : null;
+
             vt.SetPressure = Convert.ToDouble(seSetPressure.Number);
             vt.BackPressure = Convert.ToDouble(seBackPressure.Number);
             vt.ColdDiffPressure = Convert.ToDouble(seSetPressure.Number - seBackPressure.Number);
@@ -210,7 +218,6 @@ namespace Rawson.ValveTests
             vt.GaugeNum = GuageNumTextBox.Text;
             vt.CalibrationDue = (DateTime?)CalibrationDueDateEdit.Value;
             vt.ValveDate = (DateTime?)ValveDateEdit.Value;
-
 
             bool? CodedVar = null;
             if ( (int)CodedSelect.Value == -1 )
