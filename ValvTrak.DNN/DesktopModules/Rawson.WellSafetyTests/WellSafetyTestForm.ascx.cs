@@ -72,7 +72,7 @@ namespace Rawson.WellSafetyTests
             txtLongitude.Text = wt.Job.ClientLocation.Longitude;
 
             JobIDLabel.Text = wt.Job.JobID.ToString();
-            SalesOrderNumLabel.Text = wt.Job.SalesOrderNum;
+            SalesOrderNumLabel.Text = wt.Job.SalesOrderNum.Trim();
             FSR_NumTextBox.Text = wt.FSR_Num ?? "";
             CompletionDateLabel.Text = wt.Job.CompletionDate.HasValue ? wt.Job.CompletionDate.Value.ToString("d") : "Not Completed";
 
