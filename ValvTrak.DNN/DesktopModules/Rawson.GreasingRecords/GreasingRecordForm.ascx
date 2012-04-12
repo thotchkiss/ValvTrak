@@ -211,14 +211,28 @@
                             </tr>
                             <tr>
                                 <td>
-                                    &nbsp;</td>
+                                    <asp:Label ID="Label1" runat="server" Text="Latitude :"></asp:Label>
+                                </td>
                                 <td>
-                                    &nbsp;</td>
+                                    <dxe:ASPxTextBox ID="txtLatitude" runat="server" Height="21px" 
+                                        NullText="Add Latitude" Width="100px">
+                                        <MaskSettings PromptChar=" " />
+                                        <NullTextStyle ForeColor="Silver">
+                                        </NullTextStyle>
+                                    </dxe:ASPxTextBox>
+                                </td>
                                 <td></td>
                                 <td>
-                                    &nbsp;</td>
+                                    <asp:Label ID="Label2" runat="server" Text="Longitude :"></asp:Label>
+                                </td>
                                 <td>
-                                    &nbsp;</td>
+                                    <dxe:ASPxTextBox ID="txtLongitude" runat="server" Height="21px" 
+                                        NullText="Add Longitude" Width="100px">
+                                        <MaskSettings PromptChar=" " />
+                                        <NullTextStyle ForeColor="Silver">
+                                        </NullTextStyle>
+                                    </dxe:ASPxTextBox>
+                                </td>
                                 <td></td>
                                 <td>
                                     &nbsp;</td>

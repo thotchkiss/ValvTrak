@@ -1,1 +1,0 @@
-C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Web\ValvTrak.Silverlight.Web.csproj,634683890134382991,Properties\AssemblyInfo.cs,

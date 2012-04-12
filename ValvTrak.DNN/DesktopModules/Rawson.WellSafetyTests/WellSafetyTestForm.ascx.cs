@@ -67,6 +67,9 @@ namespace Rawson.WellSafetyTests
             ServiceItemSelect.ClientLocationID = wt.Job.ClientLocationID;
             ServiceItemSelect.ServiceItemID = wt.ServiceItemID;
 
+            // load Latitude and Longitude if available
+            txtLatitude.Text = wt.Job.ClientLocation.Latitude;
+            txtLongitude.Text = wt.Job.ClientLocation.Longitude;
 
             JobIDLabel.Text = wt.Job.JobID.ToString();
             SalesOrderNumLabel.Text = wt.Job.SalesOrderNum;
@@ -143,6 +146,12 @@ namespace Rawson.WellSafetyTests
             wt.CustomerWitness = CustomerWitnessTextBox.Text;
             wt.ManualOverride = String.IsNullOrEmpty((string)ManualOverrideSelect.Value) ? null : (string)ManualOverrideSelect.Value;
             wt.TestResultID = (TestResultIDSelect.Value == "-1") ? (int?)null : Convert.ToInt32(TestResultIDSelect.Value);
+
+            decimal latitude = 0;
+            decimal longitude = 0;
+
+            wt.Job.ClientLocation.Latitude = Decimal.TryParse(txtLatitude.Text, out latitude) ? latitude.ToString() : null;
+            wt.Job.ClientLocation.Longitude = Decimal.TryParse(txtLongitude.Text, out longitude) ? longitude.ToString() : null;
             
             //wt.CreatedDate = Convert.ToDateTime(CreatedDateLabel.Text);
 
