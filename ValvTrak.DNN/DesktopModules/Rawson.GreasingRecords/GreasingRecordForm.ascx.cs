@@ -79,10 +79,15 @@ namespace Rawson.GreasingRecords
             {
                 GreasingRecordIDLabel.Text = gr.GreasingRecordID.ToString();
 
+
+
                 lnkNewItem.NavigateUrl = DotNetNuke.Common.Globals.NavigateURL(TabId, "GreaseItem", "mid=" + ModuleId, "GreasingRecordID=" + gr.GreasingRecordID.ToString());
                 lnkNewItem.Enabled = true;
             }
 
+                // load Latitude and Longitude if available
+                txtLatitude.Text = gr.Job.ClientLocation.Latitude;
+                txtLongitude.Text = gr.Job.ClientLocation.Longitude;
             lblClientName.Text = gr.Job.ClientLocation.Client.Name;
             LocationLabel.Text = gr.Job.ClientLocation.Name;
             txtPipeLineSegment.Text = gr.PipelineSegment ?? "";
@@ -175,6 +180,11 @@ namespace Rawson.GreasingRecords
             gr.SapPSV = txtSapPsv.Text;
             gr.FSRNum = FSRTextBox.Text;
 
+            decimal latitude = 0;
+            decimal longitude = 0;
+
+            gr.Job.ClientLocation.Latitude = Decimal.TryParse(txtLatitude.Text, out latitude) ? latitude.ToString() : null;
+            gr.Job.ClientLocation.Longitude = Decimal.TryParse(txtLongitude.Text, out longitude) ? longitude.ToString() : null;
 
             if (gr.Version == null)
             {

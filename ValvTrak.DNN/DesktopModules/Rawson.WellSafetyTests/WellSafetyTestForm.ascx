@@ -127,7 +127,40 @@
                                     <dxe:ASPxDateEdit ID="FormDateEdit" runat="server" Width="100px" TabIndex="5">
                                     </dxe:ASPxDateEdit>
                                 </td>
-                            </tr>
+                            </tr><tr>
+								<td class="style2">
+									<asp:Label ID="Label1" runat="server" Text="Latitude :"></asp:Label>
+								</td>
+								<td class="style1" align="left">
+
+									<dxe:ASPxTextBox ID="txtLatitude" runat="server" Height="21px" Width="100px" 
+										NullText="Add Latitude">
+										<MaskSettings PromptChar=" " />
+<MaskSettings PromptChar=" "></MaskSettings>
+
+										<NullTextStyle ForeColor="Silver">
+										</NullTextStyle>
+									</dxe:ASPxTextBox>
+
+								</td>
+								<td class="style2"></td>
+								<td class="style2">
+									<asp:Label ID="Label2" runat="server" Text="Longitude :"></asp:Label>
+								</td>
+								<td class="style2" align="left">
+									<dxe:ASPxTextBox ID="txtLongitude" runat="server" Height="21px" Width="100px" 
+										NullText="Add Longitude">
+										<MaskSettings PromptChar=" " />
+<MaskSettings PromptChar=" "></MaskSettings>
+
+										<NullTextStyle ForeColor="Silver">
+										</NullTextStyle>
+									</dxe:ASPxTextBox>
+								</td>
+								<td class="style2"></td>
+								<td class="style2"></td>
+								<td class="style2"></td>
+							</tr>
                             <tr align="left">
                                 <td>
                                     &nbsp;</td>
@@ -461,6 +494,7 @@
                                     </dxe:ASPxLabel>
                                 </td>
                             </tr>
+                            
                             <tr align="left">
                                 <td></td>
                                 <td></td>
