@@ -32,9 +32,9 @@ namespace Rawson.Providers
             double? setPressure = ((ValveTest)currentTarget).SetPressure;
             double? backPressure = ((ValveTest)currentTarget).BackPressure;
 
-            if (setPressure.HasValue && setPressure.Value > 0)
+            if (setPressure.HasValue && setPressure.Value >= 0)
             {
-                if (backPressure.HasValue && backPressure.Value > 0)
+                if (backPressure.HasValue && backPressure.Value >= 0)
                     setPressure = setPressure - backPressure;
 
                 var sp = Convert.ToDecimal(setPressure.Value);
@@ -53,7 +53,7 @@ namespace Rawson.Providers
             }
             else
             {
-                LogValidationResult(validationResults, "Set pressure can not be zero.", currentTarget, key);
+                LogValidationResult(validationResults, "Set pressure can not less than zero.", currentTarget, key);
             }
 
             

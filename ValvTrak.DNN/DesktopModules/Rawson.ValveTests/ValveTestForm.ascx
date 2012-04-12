@@ -197,7 +197,7 @@
 								<td class="style2">
 
 									<dxe:ASPxTextBox ID="txtLatitude" runat="server" Height="21px" Width="100px" 
-										NullText="Add Latitude">
+										NullText="Add Latitude" TabIndex="6">
 										<MaskSettings PromptChar=" " />
 										<NullTextStyle ForeColor="Silver">
 										</NullTextStyle>
@@ -210,7 +210,7 @@
 								</td>
 								<td class="style2">
 									<dxe:ASPxTextBox ID="txtLongitude" runat="server" Height="21px" Width="100px" 
-										NullText="Add Longitude">
+										NullText="Add Longitude" TabIndex="6">
 										<MaskSettings PromptChar=" " />
 										<NullTextStyle ForeColor="Silver">
 										</NullTextStyle>
@@ -228,7 +228,7 @@
 								<td>
 									<dxe:ASPxSpinEdit ID="seSetPressure" runat="server" 
 										ClientInstanceName="setPressure" Height="21px" Number="0" Width="100px" 
-										TabIndex="6" MaxValue="10000">
+										TabIndex="6" MaxValue="15000" DecimalPlaces="2" EnableClientSideAPI="True">
 										<ClientSideEvents NumberChanged="function(s,e){ 
 																			var sp = s.GetValue();
 																			var bp = backPressure.GetValue();
@@ -246,7 +246,7 @@
 								<td>
 									<dxe:ASPxSpinEdit ID="seBackPressure" runat="server" 
 										ClientInstanceName="backPressure" Height="21px" Number="0" Width="100px" 
-										TabIndex="7" MaxValue="10000">
+										TabIndex="7" MaxValue="10000" DecimalPlaces="2">
 										<ClientSideEvents NumberChanged="function(s,e){ 
 																			var sp = setPressure.GetValue();
 																			var bp = s.GetValue();
@@ -261,7 +261,7 @@
 								</td>
 								<td>
 									<dxe:ASPxTextBox ID="ColdDiffPressureTextBox" runat="server" ClientInstanceName="coldDiffPressure" Width="100px" 
-										TabIndex="8" ReadOnly="True">
+										TabIndex="8" ReadOnly="True" Enabled="false">
 									</dxe:ASPxTextBox>
 								</td>
 							</tr>

@@ -104,7 +104,7 @@ namespace Rawson.ClientLocations
 
                 ClientLocation location = controller.GetLocation(Convert.ToInt32(e.Parameter));
 
-                cbAssociatedClient.Text = location.Client.Name;
+                cbAssociatedClient.Value = location.ClientID;
                 
                 txtLocationName.Text = location.Name;
                 txtLocationAddress.Text = location.Address;
@@ -135,9 +135,7 @@ namespace Rawson.ClientLocations
                 ClientFormController controller = Context.Items["#boController"] as ClientFormController;
                 controller.Load(hfSelectedClient["ClientID"]);
 
-                ClientLocation location = controller.GetLocation(Convert.ToInt32(e.Parameter));
-
-                cbAssociatedClient.Text = location.Client.Name;
+                cbAssociatedClient.Value = controller.Entity.ClientID;
 
                 txtLocationName.Text = String.Empty;
                 txtLocationAddress.Text = String.Empty;
