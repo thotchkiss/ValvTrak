@@ -81,15 +81,9 @@
                                     </dxe:ASPxImage>
                                 </td>
                                 <td>
-                                    <dxe:ASPxLabel ID="ASPxLabel2" runat="server" Text="Assigned By :">
-                                    </dxe:ASPxLabel>
-                                </td>
+                                    &nbsp;</td>
                                 <td>
-                                    <dxe:ASPxComboBox ID="AssignedByFilter" runat="server" DataSourceID="EmployeeDataSource"
-                                        TextField="DisplayMember" ValueField="ValueMember" Width="170px"
-                                        EnableIncrementalFiltering="True" ValueType="System.Int32" >
-                                    </dxe:ASPxComboBox>
-                                </td>
+                                    &nbsp;</td>
                                 <td rowspan="5" valign="top">
                                     <table>
                                         <tr>
@@ -154,35 +148,15 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <dxe:ASPxLabel ID="ASPxLabel12" runat="server" Text="SO # :">
-                                    </dxe:ASPxLabel>
-                                </td>
-                                <td>
-                                    <dxe:ASPxTextBox ID="SalesOrderFilter" runat="server" Width="170px" 
-                                        NullText="-- Enter Sales Order No. --"></dxe:ASPxTextBox>
-                                </td>
-                                <td></td>
-                                <td>
-                                    <dxe:ASPxLabel ID="ASPxLabel13" runat="server" Text="Approved By :">
-                                    </dxe:ASPxLabel>
-                                </td>
-                                <td>
-                                    <dxe:ASPxComboBox ID="ApprovedByFilter" runat="server" DataSourceID="EmployeeDataSource"
-                                        TextField="DisplayMember" ValueField="ValueMember" Width="170px" 
-                                        EnableIncrementalFiltering="True" ValueType="System.Int32" >
-                                    </dxe:ASPxComboBox>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
                                     <dxe:ASPxLabel ID="ASPxLabel14" runat="server" Text="Job Type :">
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
                                     <dxe:ASPxComboBox ID="JobTypeFilter" runat="server" 
-                                        DataSourceID="JobTypeDataSource" Width="170px"
-                                        TextField="DisplayMember" ValueField="ValueMember" 
-                                        EnableIncrementalFiltering="True" ValueType="System.Int32" SelectedIndex="0">
+                                        DataSourceID="JobTypeDataSource" EnableIncrementalFiltering="True" 
+                                        IncrementalFilteringMode="StartsWith" SelectedIndex="0" 
+                                        TextField="DisplayMember" ValueField="ValueMember" ValueType="System.Int32" 
+                                        Width="170px">
                                     </dxe:ASPxComboBox>
                                 </td>
                                 <td></td>
@@ -191,9 +165,10 @@
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dxe:ASPxComboBox ID="AssignedToFilter" runat="server" DataSourceID="EmployeeDataSource"
-                                        TextField="DisplayMember" ValueField="ValueMember" Width="170px"
-                                        EnableIncrementalFiltering="True" ValueType="System.Int32">
+                                    <dxe:ASPxComboBox ID="AssignedToFilter" runat="server" 
+                                        DataSourceID="EmployeeDataSource" EnableIncrementalFiltering="True" 
+                                        IncrementalFilteringMode="StartsWith" TextField="DisplayMember" 
+                                        ValueField="ValueMember" ValueType="System.Int32" Width="170px">
                                     </dxe:ASPxComboBox>
                                 </td>
                             </tr>
@@ -203,10 +178,11 @@
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dxe:ASPxComboBox ID="ClientFilter" runat="server" DataSourceID="ClientDataSource"
-                                        TextField="DisplayMember" ValueField="ValueMember" AutoPostBack="false"
-                                        EnableIncrementalFiltering="True" Width="170px" ValueType="System.Int32" 
-                                        EnableCallbackMode="True" ShowLoadingPanel="False">
+                                    <dxe:ASPxComboBox ID="ClientFilter" runat="server" 
+                                        DataSourceID="ClientDataSource" EnableCallbackMode="True" 
+                                        EnableIncrementalFiltering="True" IncrementalFilteringMode="StartsWith" 
+                                        ShowLoadingPanel="False" TextField="DisplayMember" ValueField="ValueMember" 
+                                        ValueType="System.Int32" Width="170px">
                                         <ClientSideEvents SelectedIndexChanged="function(s,e){ locations.PerformCallback(); }" />
                                     </dxe:ASPxComboBox>
                                 </td>
@@ -217,9 +193,10 @@
                                 </td>
                                 <td>
                                     <dxe:ASPxComboBox ID="JobStatusFilter" runat="server" 
-                                        DataSourceID="JobStatusDataSource" Width="170px"
-                                        TextField="DisplayMember" ValueField="ValueMember" 
-                                        EnableIncrementalFiltering="True" ValueType="System.Int32" SelectedIndex="0">
+                                        DataSourceID="JobStatusDataSource" EnableIncrementalFiltering="True" 
+                                        IncrementalFilteringMode="StartsWith" SelectedIndex="0" 
+                                        TextField="DisplayMember" ValueField="ValueMember" ValueType="System.Int32" 
+                                        Width="170px">
                                     </dxe:ASPxComboBox>
                                 </td>
                             </tr>
@@ -229,31 +206,36 @@
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dxe:ASPxComboBox ID="LocationFilter" runat="server" DataSourceID="LocationDataSource"
-                                        TextField="DisplayMember" ValueField="ValueMember" Width="170px"
-                                        EnableIncrementalFiltering="True" EnableClientSideAPI="true" 
-                                        ClientInstanceName="locations" OnCallback="LocationFilter_Callback" 
-                                        ValueType="System.Int32" EnableCallbackMode="True" 
-                                        ShowLoadingPanel="False" >
+                                    <dxe:ASPxComboBox ID="LocationFilter" runat="server" 
+                                        ClientInstanceName="locations" DataSourceID="LocationDataSource" 
+                                        EnableCallbackMode="True" EnableClientSideAPI="True" 
+                                        EnableIncrementalFiltering="True" IncrementalFilteringMode="StartsWith" 
+                                        OnCallback="LocationFilter_Callback" ShowLoadingPanel="False" 
+                                        TextField="DisplayMember" ValueField="ValueMember" ValueType="System.Int32" 
+                                        Width="170px">
                                     </dxe:ASPxComboBox>
                                 </td>
                                 <td></td>
                                 <td>
-                                    <dxe:ASPxLabel ID="ASPxLabel20" runat="server" Text="Active :">
+                                    <dxe:ASPxLabel ID="ASPxLabel12" runat="server" Text="SO # :">
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dxe:ASPxComboBox ID="ActiveFilter" runat="server" 
-                                        EnableIncrementalFiltering="True" IncrementalFilteringMode="StartsWith" 
-                                        SelectedIndex="0" ShowLoadingPanel="False" ValueType="System.Int32" 
-                                        Width="120px">
-                                        <Items>
-                                            <dxe:ListEditItem Selected="True" Text="-- All --" Value='-1' />
-                                            <dxe:ListEditItem Text="Active" Value='1' />
-                                            <dxe:ListEditItem Text="Inactive" Value='0' />
-                                        </Items>
-                                    </dxe:ASPxComboBox>
+                                    <dxe:ASPxTextBox ID="SalesOrderFilter" runat="server" 
+                                        NullText="-- Enter Sales Order No. --" Width="170px">
+                                    </dxe:ASPxTextBox>
                                 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &nbsp;</td>
+                                <td>
+                                    &nbsp;</td>
+                                <td></td>
+                                <td>
+                                    &nbsp;</td>
+                                <td>
+                                    &nbsp;</td>
                             </tr>
                             <tr valign="top">
                                 <td>

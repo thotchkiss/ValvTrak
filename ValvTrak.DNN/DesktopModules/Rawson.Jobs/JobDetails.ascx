@@ -11,6 +11,13 @@
 <%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
 <%@ Register assembly="DevExpress.Web.v11.2" namespace="DevExpress.Data.Linq" tagprefix="dx" %>
 
+<style type="text/css">
+    .style1
+    {
+        height: 23px;
+    }
+</style>
+
 <script type="text/javascript">
     function DevExComboUnboundItem(s, e, itemText, itemValue) {
         if (s.GetSelectedIndex() == -1) {
@@ -82,6 +89,19 @@
                                     </dxe:ASPxImage>
                                 </td>
                                 <td>
+                                    <dxe:ASPxLabel ID="ASPxLabel19" runat="server" Text="DOT # :">
+                                    </dxe:ASPxLabel>
+                                </td>
+                                <td>
+                                    <dxe:ASPxTextBox ID="DotNumberTextBox" runat="server" TabIndex="10" 
+                                        Width="170px">
+                                    </dxe:ASPxTextBox>
+                                </td>
+                                <td>
+                                    <dxe:ASPxImage ID="ASPxImage2" runat="server" ImageUrl="~/spacer.gif" AlternateText=" " Width="10px">
+                                    </dxe:ASPxImage>
+                                </td>
+                                <td>
                                     <dxe:ASPxLabel ID="ASPxLabel2" runat="server" Text="Date Created :">
                                     </dxe:ASPxLabel>
                                 </td>
@@ -89,25 +109,13 @@
                                     <dxe:ASPxLabel ID="CreationDateLabel" runat="server">
                                     </dxe:ASPxLabel>
                                 </td>
-                                <td>
-                                    <dxe:ASPxImage ID="ASPxImage2" runat="server" ImageUrl="~/spacer.gif" AlternateText=" " Width="10px">
-                                    </dxe:ASPxImage>
-                                </td>
-                                <td>
-                                    <dxe:ASPxLabel ID="ASPxLabel3" runat="server" Text="Created By :">
-                                    </dxe:ASPxLabel>
-                                </td>
-                                <td>
-                                    <dxe:ASPxLabel ID="CreatedByLabel" runat="server">
-                                    </dxe:ASPxLabel>
-                                </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="style1">
                                     <dxe:ASPxLabel ID="ASPxLabel4" runat="server" Text="Client :">
                                     </dxe:ASPxLabel>
                                 </td>
-                                <td>
+                                <td class="style1">
                                     <dxe:ASPxComboBox ID="ClientSelect" runat="server" AutoPostBack="true" 
                                         DataSourceID="ClientDataSource" TextField="DisplayMember" 
                                         ValueField="ValueMember" ValueType="System.Int32" OnSelectedIndexChanged="OnClientSelectedIndexChanged" 
@@ -118,29 +126,23 @@
                                     </dxe:ASPxComboBox>
                                     <!--SelectedIndexChanged="function(s,e) { locations.PerformCallback(); }"-->
                                 </td>
-                                <td></td>
-                                <td>
-                                    <dxe:ASPxLabel ID="ASPxLabel5" runat="server" Text="Call Date :">
+                                <td class="style1"></td>
+                                <td class="style1">
+                                    <dxe:ASPxLabel ID="ASPxLabel21" runat="server" Text="VR Stamp :">
                                     </dxe:ASPxLabel>
                                 </td>
-                                <td>
-                                    <dxe:ASPxDateEdit ID="CallDateEdit" runat="server" Width="100px" TabIndex="6">
-                                        <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
-                                    </dxe:ASPxDateEdit>
+                                <td class="style1">
+                                    <dxe:ASPxTextBox ID="VRstampTextBox" runat="server" TabIndex="11" Width="170px">
+                                    </dxe:ASPxTextBox>
                                 </td>
-                                <td></td>
-                                <td>
-                                    <dxe:ASPxLabel ID="ASPxLabel6" runat="server" Text="Requested By :">
+                                <td class="style1"></td>
+                                <td class="style1">
+                                    <dxe:ASPxLabel ID="ASPxLabel3" runat="server" Text="Created By :">
                                     </dxe:ASPxLabel>
                                 </td>
-                                <td>
-                                    <dxe:ASPxComboBox ID="RequestedBySelect" runat="server" 
-                                        DataSourceID="EmployeeDataSource" TextField="DisplayMember" ValueField="ValueMember" 
-                                        ValueType="System.Int32" TabIndex="12" EnableIncrementalFiltering="True">
-                                        <ClientSideEvents 
-                                            Init="function(s, e) { DevExComboUnboundItem(s, e, '-- Requested By --', -1); }"
-                                            GotFocus="function(s, e) { s.SelectAll(); s.ShowDropDown(); }" />
-                                    </dxe:ASPxComboBox>
+                                <td class="style1">
+                                    <dxe:ASPxLabel ID="CreatedByLabel" runat="server">
+                                    </dxe:ASPxLabel>
                                 </td>
                             </tr>
                             <tr>
@@ -161,85 +163,13 @@
                                 </td>
                                 <td></td>
                                 <td>
-                                    <dxe:ASPxLabel ID="ASPxLabel8" runat="server" Text="Sched. Date :">
+                                    <dxe:ASPxLabel ID="ASPxLabel5" runat="server" Text="Call Date :">
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dxe:ASPxDateEdit ID="ServiceDateEdit" runat="server" Width="100px" 
-                                        TabIndex="7">
+                                    <dxe:ASPxDateEdit ID="CallDateEdit" runat="server" TabIndex="6" Width="100px">
                                         <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
                                     </dxe:ASPxDateEdit>
-                                </td>
-                                <td></td>
-                                <td>
-                                    <dxe:ASPxLabel ID="ASPxLabel9" runat="server" Text="Assigned By :">
-                                    </dxe:ASPxLabel>
-                                </td>
-                                <td>
-                                    <dxe:ASPxComboBox ID="AssignedBySelect" runat="server" 
-                                        DataSourceID="EmployeeDataSource" TextField="DisplayMember" ValueField="ValueMember" 
-                                        ValueType="System.Int32" TabIndex="13" EnableIncrementalFiltering="True">
-                                        <ClientSideEvents 
-                                            Init="function(s, e) { DevExComboUnboundItem(s, e, '-- Assigned By --', -1); }" 
-                                            GotFocus="function(s, e) { s.SelectAll(); s.ShowDropDown(); }" />
-                                    </dxe:ASPxComboBox>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <dxe:ASPxLabel ID="ASPxLabel10" runat="server" Text="SO # :">
-                                    </dxe:ASPxLabel>
-                                </td>
-                                <td>
-                                    <dxe:ASPxTextBox ID="SalesOrderNumTextBox" runat="server" Width="170px" 
-                                        TabIndex="3" />
-                                </td>
-                                <td></td>
-                                <td>
-                                    <dxe:ASPxLabel ID="ASPxLabel11" runat="server" Text="Date Completed :">
-                                    </dxe:ASPxLabel>
-                                </td>
-                                <td>
-                                    <dxe:ASPxDateEdit ID="CompletionDateEdit" runat="server" Width="100px"
-                                        OnValidation="CompletionDateEdit_Validation" TabIndex="8">
-                                        <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
-                                    </dxe:ASPxDateEdit>
-                                </td>
-                                <td></td>
-                                <td>
-                                    <dxe:ASPxLabel ID="ASPxLabel12" runat="server" Text="Approved By :">
-                                    </dxe:ASPxLabel>
-                                </td>
-                                <td>
-                                    <dxe:ASPxComboBox ID="ApprovedbySelect" runat="server" 
-                                        DataSourceID="EmployeeDataSource" TextField="DisplayMember" ValueField="ValueMember" 
-                                        ValueType="System.Int32" TabIndex="14" EnableIncrementalFiltering="True">
-                                        <ClientSideEvents Init="function(s, e) { DevExComboUnboundItem(s, e, '-- Approved By --', -1); }" 
-                                            GotFocus="function(s, e) { s.SelectAll(); s.ShowDropDown(); }" />
-                                    </dxe:ASPxComboBox>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <dxe:ASPxLabel ID="ASPxLabel23" runat="server" Text="SAP WO :">
-                                    </dxe:ASPxLabel>
-                                </td>
-                                <td>
-                                    <dxe:ASPxTextBox ID="txtSapWoNum" runat="server" Width="170px" TabIndex="4">
-                                    </dxe:ASPxTextBox>
-                                </td>
-                                <td></td>
-                                <td>
-                                    <dxe:ASPxLabel ID="ASPxLabel13" runat="server" Text="Job Status :">
-                                    </dxe:ASPxLabel>
-                                </td>
-                                <td>
-                                    <dxe:ASPxComboBox ID="JobStatusSelect" runat="server" 
-                                        DataSourceID="JobStatusDataSource" EnableIncrementalFiltering="True" 
-                                        IncrementalFilteringMode="StartsWith" TabIndex="9" TextField="DisplayMember" 
-                                        ValueField="ValueMember" ValueType="System.Int32">
-                                        <ClientSideEvents  GotFocus="function(s, e) { s.SelectAll(); s.ShowDropDown(); }" />
-                                    </dxe:ASPxComboBox>
                                 </td>
                                 <td></td>
                                 <td>
@@ -248,10 +178,11 @@
                                 </td>
                                 <td>
                                     <dxe:ASPxComboBox ID="AssignedToSelect" runat="server" 
-                                        DataSourceID="EmployeeDataSource" TextField="DisplayMember" ValueField="ValueMember" 
-                                        ValueType="System.Int32" TabIndex="16" EnableIncrementalFiltering="True">
-                                        <ClientSideEvents Init="function(s, e) { DevExComboUnboundItem(s, e, '-- Assigned To --', -1); }" 
-                                            GotFocus="function(s, e) { s.SelectAll(); s.ShowDropDown(); }" />
+                                        DataSourceID="EmployeeDataSource" EnableIncrementalFiltering="True" 
+                                        IncrementalFilteringMode="StartsWith" TabIndex="16" TextField="DisplayMember" 
+                                        ValueField="ValueMember" ValueType="System.Int32">
+                                        <ClientSideEvents GotFocus="function(s, e) { s.SelectAll(); s.ShowDropDown(); }" 
+                                            Init="function(s, e) { DevExComboUnboundItem(s, e, '-- Assigned To --', -1); }" />
                                     </dxe:ASPxComboBox>
                                 </td>
                             </tr>
@@ -265,18 +196,74 @@
                                         DataSourceID="JobTypeDataSource" EnableIncrementalFiltering="True" 
                                         IncrementalFilteringMode="StartsWith" TabIndex="5" TextField="DisplayMember" 
                                         ValueField="ValueMember" ValueType="System.Int32">
-                                        <ClientSideEvents  GotFocus="function(s, e) { s.SelectAll(); s.ShowDropDown(); }" />
+                                        <ClientSideEvents GotFocus="function(s, e) { s.SelectAll(); s.ShowDropDown(); }" />
                                     </dxe:ASPxComboBox>
                                 </td>
                                 <td></td>
                                 <td>
-                                    <dxe:ASPxLabel ID="ASPxLabel19" runat="server" Text="DOT # :">
+                                    <dxe:ASPxLabel ID="ASPxLabel8" runat="server" Text="Sched. Date :">
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dxe:ASPxTextBox ID="DotNumberTextBox" runat="server" TabIndex="10" 
+                                    <dxe:ASPxDateEdit ID="ServiceDateEdit" runat="server" TabIndex="7" 
+                                        Width="100px">
+                                        <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
+                                    </dxe:ASPxDateEdit>
+                                </td>
+                                <td></td>
+                                <td>
+                                    &nbsp;</td>
+                                <td>
+                                    &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <dxe:ASPxLabel ID="ASPxLabel10" runat="server" Text="SO # :">
+                                    </dxe:ASPxLabel>
+                                </td>
+                                <td>
+                                    <dxe:ASPxTextBox ID="SalesOrderNumTextBox" runat="server" TabIndex="3" 
                                         Width="170px">
                                     </dxe:ASPxTextBox>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <dxe:ASPxLabel ID="ASPxLabel11" runat="server" Text="Date Completed :">
+                                    </dxe:ASPxLabel>
+                                </td>
+                                <td>
+                                    <dxe:ASPxDateEdit ID="CompletionDateEdit" runat="server" 
+                                        OnValidation="CompletionDateEdit_Validation" TabIndex="8" Width="100px">
+                                        <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
+                                    </dxe:ASPxDateEdit>
+                                </td>
+                                <td></td>
+                                <td>
+                                    &nbsp;</td>
+                                <td>
+                                    &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <dxe:ASPxLabel ID="ASPxLabel23" runat="server" Text="SAP WO :">
+                                    </dxe:ASPxLabel>
+                                </td>
+                                <td>
+                                    <dxe:ASPxTextBox ID="txtSapWoNum" runat="server" TabIndex="4" Width="170px">
+                                    </dxe:ASPxTextBox>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <dxe:ASPxLabel ID="ASPxLabel13" runat="server" Text="Job Status :">
+                                    </dxe:ASPxLabel>
+                                </td>
+                                <td>
+                                    <dxe:ASPxComboBox ID="JobStatusSelect" runat="server" 
+                                        DataSourceID="JobStatusDataSource" EnableIncrementalFiltering="True" 
+                                        IncrementalFilteringMode="StartsWith" TabIndex="9" TextField="DisplayMember" 
+                                        ValueField="ValueMember" ValueType="System.Int32">
+                                        <ClientSideEvents GotFocus="function(s, e) { s.SelectAll(); s.ShowDropDown(); }" />
+                                    </dxe:ASPxComboBox>
                                 </td>
                                 <td></td>
                                 <td>
@@ -291,13 +278,9 @@
                                     &nbsp;</td>
                                 <td>&nbsp;</td>
                                 <td>
-                                    <dxe:ASPxLabel ID="ASPxLabel21" runat="server" Text="VR Stamp :">
-                                    </dxe:ASPxLabel>
-                                </td>
+                                    &nbsp;</td>
                                 <td>
-                                    <dxe:ASPxTextBox ID="VRstampTextBox" runat="server" TabIndex="11" Width="170px">
-                                    </dxe:ASPxTextBox>
-                                </td>
+                                    &nbsp;</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>

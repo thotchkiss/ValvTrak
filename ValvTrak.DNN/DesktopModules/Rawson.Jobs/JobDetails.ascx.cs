@@ -94,20 +94,18 @@ namespace Rawson.Jobs
                 SalesOrderNumTextBox.Text = job.SalesOrderNum ?? "";
                 txtSapWoNum.Text = job.SapWoNum ?? "";
                 CallDateEdit.Value = job.CallDate;
-                RequestedBySelect.Value = job.RequestedByID ?? -1;
+                //RequestedBySelect.Value = job.RequestedByID ?? -1;
 
                 JobTypeSelect.Value = job.Version == null ? -1 : job.JobTypeID;
                 JobStatusSelect.Value = job.Version == null ? -1 : job.JobStatusID;
                 ServiceDateEdit.Value = job.ServiceDate;
                 CompletionDateEdit.Value = job.CompletionDate;
-                AssignedBySelect.Value = job.AssignedByID;
+                //AssignedBySelect.Value = job.AssignedByID;
                 AssignedToSelect.Value = job.AssignedToID ?? -1;
-                ApprovedbySelect.Value = job.ApprovedByID ?? -1;
+                //ApprovedbySelect.Value = job.ApprovedByID ?? -1;
                 DotNumberTextBox.Text = job.DotNumber ?? "";
                 VRstampTextBox.Text = job.VRstamp ?? "";
 
-                // ToDo: Implement DataViewer role
-                //  requires moving current Employees table to Memebership.
                 CreatedByLabel.Text = ( job.CreatedBy == null ) ? "" : controller.GetEmployeeName ( job.CreatedBy.Value );
                 CreationDateLabel.Text = job.CreationDate.ToShortDateString();
 
@@ -297,10 +295,10 @@ namespace Rawson.Jobs
             job.JobStatusID = Convert.ToInt32(JobStatusSelect.Value);
             job.ServiceDate = (DateTime?)ServiceDateEdit.Value;
             job.CompletionDate = (DateTime?)CompletionDateEdit.Value;
-            job.RequestedByID = (int)RequestedBySelect.Value == -1 ? (int?)null : Convert.ToInt32(RequestedBySelect.Value);
-            job.AssignedByID = Convert.ToInt32(AssignedBySelect.Value);
+            //job.RequestedByID = (int)RequestedBySelect.Value == -1 ? (int?)null : Convert.ToInt32(RequestedBySelect.Value);
+            //job.AssignedByID = Convert.ToInt32(AssignedBySelect.Value);
             job.AssignedToID = (int)AssignedToSelect.Value == -1 ? (int?)null : Convert.ToInt32(AssignedToSelect.Value);
-            job.ApprovedByID = (int)ApprovedbySelect.Value == -1 ? (int?)null : Convert.ToInt32(ApprovedbySelect.Value);
+            //job.ApprovedByID = (int)ApprovedbySelect.Value == -1 ? (int?)null : Convert.ToInt32(ApprovedbySelect.Value);
             job.DotNumber = DotNumberTextBox.Text;
             job.VRstamp = VRstampTextBox.Text;
             job.Active = true;
@@ -316,7 +314,10 @@ namespace Rawson.Jobs
                 SaveAction.JSProperties.Add("cpHasErrors", false);
 
                 if (controller.Save())
+                {
+                    controller.UpdateServiceSchedule();
                     Response.RedirectLocation = DotNetNuke.Common.Globals.NavigateURL(TabId, "Job", "mid=" + ModuleId, "JobID=" + job.JobID.ToString());
+                }
                 else
                     Exceptions.ProcessModuleLoadException(controller.ErrorMessage, this, controller.ErrorException);
             }

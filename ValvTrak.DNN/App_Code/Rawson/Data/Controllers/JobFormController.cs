@@ -9,6 +9,7 @@ using Rawson.App.Security;
 using Rawson.Data.Model;
 using Microsoft.Practices.EnterpriseLibrary.Validation;
 using DotNetNuke.Common.Utilities;
+using System.Data.Linq;
 
 namespace Rawson.Data.Controllers
 {
@@ -67,6 +68,37 @@ namespace Rawson.Data.Controllers
 
             return forms;
 
+        }
+
+        public void UpdateServiceSchedule()
+        {
+            try
+            {
+                if (Entity.CompletionDate.HasValue)
+                {
+                    ClientLocationServiceSchedule schedule = Context.ClientLocationServiceSchedules.FirstOrDefault(clss => clss.ClientLocationId == Entity.ClientLocationID && clss.JobTypeId == Entity.JobTypeID);
+
+                    if (schedule == null)
+                    {
+                        schedule = new ClientLocationServiceSchedule();
+
+                        schedule.ClientLocationId = Entity.ClientLocationID;
+                        schedule.JobTypeId = Entity.JobTypeID;
+                        schedule.ServiceIntervalId = 1; // One year default
+
+                        Table<ClientLocationServiceSchedule> table = this.Context.GetTable(typeof(ClientLocationServiceSchedule)) as Table<ClientLocationServiceSchedule>;
+                        table.InsertOnSubmit(schedule);
+                    }
+
+                    schedule.LastServiceDate = Entity.CompletionDate.Value;
+
+                    Context.SubmitChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         public override List<ComboBoxValue<int>> GetAuthorizedClients(int userId)

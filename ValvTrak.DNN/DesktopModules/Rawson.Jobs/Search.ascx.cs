@@ -50,11 +50,11 @@ public partial class JobsSearch : PortalModuleBase
                 JobTypeFilter.Value = q.JobType;
                 ClientFilter.Value = q.Client;
                 LocationFilter.Value = q.ClientLocation;
-                AssignedByFilter.Value = q.AssignedBy;
-                ApprovedByFilter.Value = q.ApprovedBy;
+                //AssignedByFilter.Value = q.AssignedBy;
+                //ApprovedByFilter.Value = q.ApprovedBy;
                 AssignedToFilter.Value = q.AssignedTo;
                 JobStatusFilter.Value = q.JobStatus;
-                ActiveFilter.Value = q.Active;
+                //ActiveFilter.Value = q.Active;
                 CallInStartDate.Text = q.CallInStartDate;
                 CallInEndDate.Text = q.CallInEndDate;
                 ServiceStartDate.Text = q.ServiceStartDate;
@@ -72,9 +72,9 @@ public partial class JobsSearch : PortalModuleBase
                 CompletionStartDate.Text = end.AddDays ( -30 ).ToString ( "d" );
 
                 ClientFilter.Value = -1;
-                AssignedByFilter.Value = -1;
+                //AssignedByFilter.Value = -1;
                 AssignedToFilter.Value = -1;
-                ApprovedByFilter.Value = -1;
+                //ApprovedByFilter.Value = -1;
                 LocationFilter.Value = -1;
 
                 SaveQuery ();
@@ -93,11 +93,11 @@ public partial class JobsSearch : PortalModuleBase
         q.JobType = JobTypeFilter.Value == null ? -1 : (int)JobTypeFilter.Value;
         q.Client = ClientFilter.Value == null ? -1 : (int)ClientFilter.Value;
         q.ClientLocation = LocationFilter.Value == null ? -1 : (int)LocationFilter.Value;
-        q.AssignedBy = AssignedByFilter.Value == null ? -1 : (int)AssignedByFilter.Value;
-        q.ApprovedBy = ApprovedByFilter.Value == null ? -1 : (int)ApprovedByFilter.Value;
+        //q.AssignedBy = AssignedByFilter.Value == null ? -1 : (int)AssignedByFilter.Value;
+        //q.ApprovedBy = ApprovedByFilter.Value == null ? -1 : (int)ApprovedByFilter.Value;
         q.AssignedTo = AssignedToFilter.Value == null ? -1 :  (int)AssignedToFilter.Value;
         q.JobStatus = JobStatusFilter.Value == null ? -1 : (int)JobStatusFilter.Value;
-        q.Active = ActiveFilter.Value == null ? -1 : (int)ActiveFilter.Value;
+        //q.Active = ActiveFilter.Value == null ? -1 : (int)ActiveFilter.Value;
         q.CallInStartDate = CallInStartDate.Text;
         q.CallInEndDate = CallInEndDate.Text;
         q.ServiceStartDate = ServiceStartDate.Text;

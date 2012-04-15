@@ -1,23 +1,9 @@
-DB/SRD_Portal_backup_201203092200.zip
-DB/SRD_Portal_backup_201203092200.bak
-DB/SRD_backup_201203092200.zip
-DB/SRD_backup_201203092200.bak
-ValvTrak.DNN .sln.docstates.suo
-ValvTrak.DNN .sln.docstates.suo
-ValvTrak.DNN .suo
-ValvTrak.DNN/Portals/0/Cache/
-ValvTrak.DNN/Portals/0/Cache/
-ValvTrak.DNN/Portals/0/Cache/Modules/91_ACABA51644A302FBB325E30E7931BAF8.attrib.resources
-ValvTrak.DNN/Portals/0/Cache/Modules/
-ValvTrak.DNN/Portals/0/Cache/Modules/91_ACABA51644A302FBB325E30E7931BAF8.attrib.resources
-ValvTrak.Silverlight.Maps/ValvTrak.Silverlight.Maps/obj/Debug/*.*
-ValvTrak.Silverlight.Maps/ValvTrak.Silverlight.Maps/obj/Debug/*.*
-Rawson.Data.Model/obj/Debug/*.*
-Rawson.Data.Model/obj/Debug/*.*
-
 #ignore thumbnails created by windows
 Thumbs.db
 #Ignore files build by Visual Studio
+ValvTrak.DNN .sln.docstates.suo
+ValvTrak.DNN .sln.docstates.suo
+ValvTrak.DNN .suo
 *.obj
 *.exe
 *.pdb
@@ -37,6 +23,9 @@ Thumbs.db
 *.log
 *.lib
 *.sbr
-obj/
+DB/
+Cache/
+[Oo]bj/
 _ReSharper*/
 [Tt]est[Rr]esult*
+*.suo
