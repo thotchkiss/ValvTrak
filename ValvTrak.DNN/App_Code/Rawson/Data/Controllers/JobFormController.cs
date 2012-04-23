@@ -117,9 +117,9 @@ namespace Rawson.Data.Controllers
             return list;
         }
 
-        public override List<ComboBoxValue<int>> GetJobTypes()
+        public override List<ComboBoxValue<int>> GetJobTypesList()
         {
-            List<ComboBoxValue<int>> list = base.GetJobTypes();
+            List<ComboBoxValue<int>> list = base.GetJobTypesList();
             list.Insert(0, new ComboBoxValue<int> { DisplayMember = "-- Select Job Type --", ValueMember = -1 });
 
             return list;

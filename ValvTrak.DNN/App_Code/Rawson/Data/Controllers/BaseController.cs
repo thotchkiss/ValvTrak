@@ -94,7 +94,7 @@ namespace Rawson.Data.Controllers
                 return emp.EmployeeID;
         }
 
-        public virtual List<ComboBoxValue<int>> GetJobTypes()
+        public virtual List<ComboBoxValue<int>> GetJobTypesList()
         {
             return Context.JobTypes.Where(jt => jt.Enabled == true).Select(jt => new ComboBoxValue<int> { DisplayMember = jt.Type, ValueMember = jt.JobTypeID }).OrderBy(cb => cb.DisplayMember).ToList();
         }
@@ -102,6 +102,11 @@ namespace Rawson.Data.Controllers
         public virtual List<ComboBoxValue<int>> GetJobStatuses()
         {
             return Context.JobStatus.Select(js => new ComboBoxValue<int> { DisplayMember = js.Status, ValueMember = js.JobStatusID }).OrderBy(cb => cb.DisplayMember).ToList();
+        }
+
+        public virtual List<ComboBoxValue<int>> GetServiceIntervalsList()
+        {
+            return Context.ServiceIntervals.Select(si => new ComboBoxValue<int> { DisplayMember = si.Name, ValueMember = si.ServiceIntervalId }).OrderBy(cb => cb.DisplayMember).ToList();
         }
 
         public virtual Dictionary<string, string> GetStates()

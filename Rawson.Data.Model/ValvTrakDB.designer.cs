@@ -10722,6 +10722,8 @@ namespace Rawson.Data.Model
 		
 		private System.Nullable<System.DateTime> _NextServiceDate;
 		
+		private byte[] _Version;
+		
 		private EntityRef<ClientLocation> _ClientLocation;
 		
 		private EntityRef<JobType> _JobType;
@@ -10744,6 +10746,8 @@ namespace Rawson.Data.Model
     partial void OnLastServiceDateChanged();
     partial void OnNextServiceDateChanging(System.Nullable<System.DateTime> value);
     partial void OnNextServiceDateChanged();
+    partial void OnVersionChanging(byte[] value);
+    partial void OnVersionChanged();
     #endregion
 		
 		public ClientLocationServiceSchedule()
@@ -10882,6 +10886,26 @@ namespace Rawson.Data.Model
 					this._NextServiceDate = value;
 					this.SendPropertyChanged("NextServiceDate");
 					this.OnNextServiceDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Version", CanBeNull=false, IsDbGenerated=true, IsVersion=true)]
+		public byte[] Version
+		{
+			get
+			{
+				return this._Version;
+			}
+			set
+			{
+				if ((this._Version != value))
+				{
+					this.OnVersionChanging(value);
+					this.SendPropertyChanging();
+					this._Version = value;
+					this.SendPropertyChanged("Version");
+					this.OnVersionChanged();
 				}
 			}
 		}

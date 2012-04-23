@@ -217,7 +217,7 @@ public partial class JobsSearch : PortalModuleBase
     protected void JobTypeDataSource_Selecting(object sender, LinqDataSourceSelectEventArgs e)
     {
         JobSearchController controller = Context.Items["#boController"] as JobSearchController;
-        List<ComboBoxValue<int>> list = controller.GetJobTypes();
+        List<ComboBoxValue<int>> list = controller.GetJobTypesList();
 
         list.Insert(0, new ComboBoxValue<int> { DisplayMember = "-- All --", ValueMember = -1 });
         e.Result = list;

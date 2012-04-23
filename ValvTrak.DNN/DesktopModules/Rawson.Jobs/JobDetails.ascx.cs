@@ -336,7 +336,7 @@ namespace Rawson.Jobs
         protected void JobTypeDataSource_Selecting(object sender, LinqDataSourceSelectEventArgs e)
         {
             JobFormController controller = Context.Items["#boController"] as JobFormController;
-            e.Result = controller.GetJobTypes();
+            e.Result = controller.GetJobTypesList();
         }
 }
 }

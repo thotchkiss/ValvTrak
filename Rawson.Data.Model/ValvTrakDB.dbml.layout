@@ -161,7 +161,7 @@
         <classShapeMoniker Id="720dd6a4-ae20-4e27-a840-a2bd76d8dc7a" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 17.2989005533854); (3.04166666666667 : 17.2989005533854 : JumpStart); (3.20833333333333 : 17.2989005533854 : JumpEnd); (3.5 : 17.2989005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 17.2989005533854); (3.5 : 17.2989005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ValvTrakDBDataContext/Client/Client_ClientContact" />
       <nodes>
         <classShapeMoniker Id="34fad4bc-1bac-42e5-9326-f952ee2d623c" />
@@ -175,7 +175,7 @@
         <classShapeMoniker Id="e87093b8-9241-466d-88d2-0672777d23a8" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(14 : 21.2460034179688); (14.4166666666667 : 21.2460034179688 : JumpStart); (14.5833333333333 : 21.2460034179688 : JumpEnd); (14.75 : 21.2460034179688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(14 : 21.2460034179688); (14.75 : 21.2460034179688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ValvTrakDBDataContext/GreasingRecord/GreasingRecord_GreasingRecordItem" />
       <nodes>
         <classShapeMoniker Id="95986cb4-ec8d-4847-b858-5dc31c911499" />
@@ -196,7 +196,7 @@
         <classShapeMoniker Id="72df5ea3-8fef-412d-8fcf-8b4baddc93cb" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.40625 : 17.5689925130208); (8.40625 : 20.800901344401); (8.66666666666667 : 20.800901344401 : JumpStart); (8.83333333333333 : 20.800901344401 : JumpEnd); (9.25 : 20.800901344401)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(8.40625 : 17.5689925130208); (8.40625 : 20.800901344401); (9.25 : 20.800901344401)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ValvTrakDBDataContext/DeliveryMethod/DeliveryMethod_Job" />
       <nodes>
         <classShapeMoniker Id="e024c011-db61-4175-bd66-5d79d3aeab7c" />
@@ -217,14 +217,14 @@
         <classShapeMoniker Id="72df5ea3-8fef-412d-8fcf-8b4baddc93cb" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 29.2892976888021); (2.91666666666667 : 29.2892976888021 : JumpStart); (3.08333333333333 : 29.2892976888021 : JumpEnd); (3.29166666666667 : 29.2892976888021 : JumpStart); (3.45833333333333 : 29.2892976888021 : JumpEnd); (3.5 : 29.2892976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 29.2892976888021); (3.29166666666667 : 29.2892976888021 : JumpStart); (3.45833333333333 : 29.2892976888021 : JumpEnd); (3.5 : 29.2892976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ValvTrakDBDataContext/Manufacturer/Manufacturer_ManufacturerModel" />
       <nodes>
         <classShapeMoniker Id="26051896-4b4b-4849-ab72-2993d329bceb" />
         <classShapeMoniker Id="920ef4d1-c8ba-404c-84bb-c888d134a779" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7.25 : 21.25); (7.25 : 21); (8.36979166666667 : 21 : JumpStart); (8.53645833333333 : 21 : JumpEnd); (8.66666666666667 : 21 : JumpStart); (8.83333333333333 : 21 : JumpEnd); (9 : 21); (9 : 23.9823225911458); (9.04166666666667 : 23.9823225911458 : JumpStart); (9.20833333333333 : 23.9823225911458 : JumpEnd); (9.36978791666667 : 23.9823225911458 : JumpStart); (9.53645458333333 : 23.9823225911458 : JumpEnd); (9.63541416666667 : 23.9823225911458 : JumpStart); (9.80208083333333 : 23.9823225911458 : JumpEnd); (9.90104041666667 : 23.9823225911458 : JumpStart); (10.0677070833333 : 23.9823225911458 : JumpEnd); (10.1666666666667 : 23.9823225911458 : JumpStart); (10.3333333333333 : 23.9823225911458 : JumpEnd); (10.4322929166667 : 23.9823225911458 : JumpStart); (10.5989595833333 : 23.9823225911458 : JumpEnd); (10.6979191666667 : 23.9823225911458 : JumpStart); (10.8645858333333 : 23.9823225911458 : JumpEnd); (10.9635454166667 : 23.9823225911458 : JumpStart); (11.1302120833333 : 23.9823225911458 : JumpEnd); (11.2916666666667 : 23.9823225911458 : JumpStart); (11.7083333333333 : 23.9823225911458 : JumpEnd); (11.75 : 23.9823225911458); (11.75 : 23); (11.7916666666667 : 23 : JumpStart); (12.0208333333333 : 23 : JumpEnd); (12.3854146666667 : 23 : JumpStart); (12.5520813333333 : 23 : JumpEnd); (14.0416666666667 : 23 : JumpStart); (14.2083333333333 : 23 : JumpEnd); (14.375 : 23); (14.375 : 22.3417542089844); (14.4166666666667 : 22.3417542089844 : JumpStart); (14.5833333333333 : 22.3417542089844 : JumpEnd); (14.75 : 22.3417542089844)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(7.25 : 21.25); (7.25 : 21); (9 : 21); (9 : 23.9823225911458); (11.75 : 23.9823225911458); (11.75 : 23); (14.375 : 23); (14.375 : 22.3417542089844); (14.75 : 22.3417542089844)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ValvTrakDBDataContext/ServiceItem/ServiceItem_GreasingRecordItem" />
       <nodes>
         <classShapeMoniker Id="7ce9b307-e4e2-4d70-ae78-0dfdee7bbfb2" />
@@ -259,7 +259,7 @@
         <classShapeMoniker Id="7ce9b307-e4e2-4d70-ae78-0dfdee7bbfb2" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 26.9719962565104); (3.29166666666667 : 26.9719962565104 : JumpStart); (3.45833333333333 : 26.9719962565104 : JumpEnd); (3.5 : 26.9719962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 26.9719962565104); (2.91666666666667 : 26.9719962565104 : JumpStart); (3.08333333333333 : 26.9719962565104 : JumpEnd); (3.10416666666667 : 26.9719962565104 : JumpStart); (3.27083333333333 : 26.9719962565104 : JumpEnd); (3.29166666666667 : 26.9719962565104 : JumpStart); (3.45833333333333 : 26.9719962565104 : JumpEnd); (3.5 : 26.9719962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ValvTrakDBDataContext/ServiceItemCategory/ServiceItemCategory_ServiceItemType" />
       <nodes>
         <classShapeMoniker Id="e8f8bf00-41e6-42e2-a869-00e26f342195" />
@@ -301,7 +301,7 @@
         <classShapeMoniker Id="000aef1a-9e86-463c-bf0b-1e8704d944c0" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.25 : 24.621767578125); (9.36978791666667 : 24.621767578125 : JumpStart); (9.53645458333333 : 24.621767578125 : JumpEnd); (9.63541416666667 : 24.621767578125 : JumpStart); (9.80208083333333 : 24.621767578125 : JumpEnd); (9.90104041666667 : 24.621767578125 : JumpStart); (10.0677070833333 : 24.621767578125 : JumpEnd); (10.1666666666667 : 24.621767578125 : JumpStart); (10.3333333333333 : 24.621767578125 : JumpEnd); (11.5416666666667 : 24.621767578125 : JumpStart); (11.7083333333333 : 24.621767578125 : JumpEnd); (12 : 24.621767578125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(8.25 : 24.621767578125); (9.36978791666667 : 24.621767578125 : JumpStart); (9.53645458333333 : 24.621767578125 : JumpEnd); (9.63541416666667 : 24.621767578125 : JumpStart); (9.80208083333333 : 24.621767578125 : JumpEnd); (9.90104041666667 : 24.621767578125 : JumpStart); (10.0677070833333 : 24.621767578125 : JumpEnd); (10.1666666666667 : 24.621767578125 : JumpStart); (10.3333333333333 : 24.621767578125 : JumpEnd); (10.6979191666667 : 24.621767578125 : JumpStart); (10.8645858333333 : 24.621767578125 : JumpEnd); (11.4166666666667 : 24.621767578125 : JumpStart); (11.7083333333333 : 24.621767578125 : JumpEnd); (12 : 24.621767578125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ValvTrakDBDataContext/ServiceItem/ServiceItem_WellSafetyTest" />
       <nodes>
         <classShapeMoniker Id="7ce9b307-e4e2-4d70-ae78-0dfdee7bbfb2" />
@@ -398,7 +398,7 @@
         <classShapeMoniker Id="065e3a90-af42-4dba-8b41-446190a11502" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 25.5122833909255); (3.375 : 26.5720183559696); (3.375 : 30.3957340494792); (11.8426923076923 : 30.3957340494792); (12 : 30.2384263571715)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 25.5122833909255); (3.14516650297039 : 26.1823182072646 : JumpStart); (3.22983349702961 : 26.3258775256482 : JumpEnd); (3.375 : 26.5720183559696); (3.375 : 30.3957340494792); (11.8426923076923 : 30.3957340494792); (12 : 30.2384263571715)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ValvTrakDBDataContext/Employee/Employee_WellSafetyTest" />
       <nodes>
         <classShapeMoniker Id="1e15e806-434f-430c-9daf-7157c8629a4c" />
@@ -452,20 +452,20 @@
         <elementListCompartment Id="657fc3ae-dd3b-4d01-a989-0588e1df44fb" absoluteBounds="3.39, 3.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="9b33a892-fe8e-46a3-8b73-937578f7287d" absoluteBounds="0.5, 4.125, 2, 1.9631982421875">
+    <classShape Id="9b33a892-fe8e-46a3-8b73-937578f7287d" absoluteBounds="0.5, 4.125, 2, 2.1554996744791666">
       <DataClassMoniker Name="/ValvTrakDBDataContext/ClientLocationServiceSchedule" />
       <nestedChildShapes>
-        <elementListCompartment Id="98632fcf-aab3-451f-b331-4029d30bc46f" absoluteBounds="0.51500000000000012, 4.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="98632fcf-aab3-451f-b331-4029d30bc46f" absoluteBounds="0.51500000000000012, 4.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.5 : 20.2508023502604); (3.20833333333333 : 20.2508023502604 : JumpStart); (3.04166666666667 : 20.2508023502604 : JumpEnd); (0.942706083333333 : 20.2508023502604 : JumpStart); (0.776039416666667 : 20.2508023502604 : JumpEnd); (0.59375 : 20.2508023502604); (0.59375 : 6.0881982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(3.5 : 20.2508023502604); (3.20833333333333 : 20.2508023502604 : JumpStart); (3.04166666666667 : 20.2508023502604 : JumpEnd); (0.942706083333333 : 20.2508023502604 : JumpStart); (0.776039416666667 : 20.2508023502604 : JumpEnd); (0.59375 : 20.2508023502604); (0.59375 : 6.28049967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ValvTrakDBDataContext/ClientLocation/ClientLocation_ClientLocationServiceSchedule" />
       <nodes>
         <classShapeMoniker Id="e87093b8-9241-466d-88d2-0672777d23a8" />
         <classShapeMoniker Id="9b33a892-fe8e-46a3-8b73-937578f7287d" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(6.5 : 29.0681469726563); (6.42708333333333 : 29.0681469726563 : JumpStart); (6.26041666666667 : 29.0681469726563 : JumpEnd); (5.625 : 29.0681469726563); (5.625 : 6.4631982421875); (1.578127 : 6.4631982421875); (1.578127 : 6.0881982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.5 : 29.0681469726563); (6.42708333333333 : 29.0681469726563 : JumpStart); (6.26041666666667 : 29.0681469726563 : JumpEnd); (5.625 : 29.0681469726563); (5.625 : 6.65549967447917); (1.578127 : 6.65549967447917); (1.578127 : 6.28049967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ValvTrakDBDataContext/JobType/JobType_ClientLocationServiceSchedule" />
       <nodes>
         <classShapeMoniker Id="25358ad4-2d96-4009-b08c-dbafd439916f" />

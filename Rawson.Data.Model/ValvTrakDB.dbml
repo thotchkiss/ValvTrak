@@ -456,12 +456,13 @@
   </Table>
   <Table Name="dbo.ClientLocationServiceSchedules" Member="ClientLocationServiceSchedules">
     <Type Name="ClientLocationServiceSchedule">
-      <Column Name="ClientLocationServiceScheduleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ClientLocationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="JobTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ServiceIntervalId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="LastServiceDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
-      <Column Name="NextServiceDate" Type="System.DateTime" DbType="SmallDateTime" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ClientLocationServiceScheduleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ClientLocationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="JobTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="ServiceIntervalId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="LastServiceDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="NextServiceDate" Type="System.DateTime" DbType="SmallDateTime" IsDbGenerated="true" CanBeNull="true" />
+      <Column Member="Version" AutoSync="Never" Type="System.Byte[]" CanBeNull="false" UpdateCheck="Always" IsVersion="true" />
       <Association Name="ClientLocation_ClientLocationServiceSchedule" Member="ClientLocation" ThisKey="ClientLocationId" OtherKey="ClientLocationID" Type="ClientLocation" IsForeignKey="true" />
       <Association Name="JobType_ClientLocationServiceSchedule" Member="JobType" ThisKey="JobTypeId" OtherKey="JobTypeID" Type="JobType" IsForeignKey="true" />
       <Association Name="ServiceInterval_ClientLocationServiceSchedule" Member="ServiceInterval" ThisKey="ServiceIntervalId" OtherKey="ServiceIntervalId" Type="ServiceInterval" IsForeignKey="true" />

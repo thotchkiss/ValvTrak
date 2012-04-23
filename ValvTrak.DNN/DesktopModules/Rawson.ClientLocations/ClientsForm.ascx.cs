@@ -47,7 +47,19 @@ namespace Rawson.ClientLocations
             ClientFormController controller = Context.Items["#boController"] as ClientFormController;
             e.Result = controller.GetParentClientList();
         }
-        
+
+        protected void JobTypesDataSource_Selecting(object sender, LinqDataSourceSelectEventArgs e)
+        {
+            ClientFormController controller = Context.Items["#boController"] as ClientFormController;
+            e.Result = controller.Scheduler.GetJobTypesList();
+        }
+
+        protected void ServiceIntervalsDataSource_Selecting(object sender, LinqDataSourceSelectEventArgs e)
+        {
+            ClientFormController controller = Context.Items["#boController"] as ClientFormController;
+            e.Result = controller.Scheduler.GetServiceIntervalsList();
+        }
+
         protected void ClientDetailsPanel_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
         {
             string action = (string)hfSelectedClient["Action"];
@@ -129,6 +141,8 @@ namespace Rawson.ClientLocations
                 chkLocationActive.Checked = location.Active;
 
                 hfSelectedLocation["ClientLocationID"] = location.ClientLocationID;
+
+                btnSetServiceSchedules.Enabled = true;
             }
             else // New
             {
@@ -149,6 +163,8 @@ namespace Rawson.ClientLocations
                 chkLocationActive.Checked = true;
 
                 hfSelectedLocation["ClientLocationID"] = -1;
+
+                btnSetServiceSchedules.Enabled = false;
             }
         }
 
@@ -265,7 +281,6 @@ namespace Rawson.ClientLocations
             //}
         }
 
-
         protected void btnExport_Click(object sender, EventArgs e)
         {
             ClientsGridViewExporter.WriteXlsToResponse();
@@ -280,9 +295,56 @@ namespace Rawson.ClientLocations
         {
             ClientsGrid.DataBind();
         }
-        protected void Page_Load(object sender, EventArgs e)
-        {
 
+        protected void LocationSchedulingCallbackPanel_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        {
+            ClientFormController controller = Context.Items["#boController"] as ClientFormController;
+
+            int locId = Convert.ToInt32(hfScheduling["ClientLocationID"]);
+            int jtId = cmbSchedJob.Value == null ? -1 : (int)cmbSchedJob.Value;
+            string action = hfScheduling["Action"].ToString();
+
+            ClientLocation loc = controller.Scheduler.GetClientLocation(locId);
+            ClientLocationServiceSchedule schedule = controller.Scheduler.GetLocationServiceScheduleForJobType(locId, jtId);
+
+            if (action == "Apply")
+            {
+                if (schedule == null)
+                {
+                    schedule = controller.Scheduler.Load(-1);
+                    schedule.JobTypeId = jtId;
+                }
+                else
+                    schedule = controller.Scheduler.Load(schedule.ClientLocationServiceScheduleId);
+
+                schedule.ServiceIntervalId = cmbSchedInterval.Value == null ? -1 : (int)cmbSchedInterval.Value;
+                schedule.LastServiceDate = deSchedLastDate.Value == null ? DateTime.Today : Convert.ToDateTime(deSchedLastDate.Value);
+
+                controller.Scheduler.Save();
+
+                lblSchedNextDate.Text = schedule.NextServiceDate.Value.ToShortDateString();
+
+            }
+            else if (action == "JobTypeChanged")
+            {
+                if (schedule != null)
+                {
+                    cmbSchedJob.Value = schedule.JobTypeId;
+                    cmbSchedInterval.Value = schedule.ServiceIntervalId;
+
+                    deSchedLastDate.Value = schedule.LastServiceDate;
+                    lblSchedNextDate.Text = schedule.NextServiceDate.Value.ToShortDateString();
+                }
+                else
+                {
+                    deSchedLastDate.Value = null;
+                    lblSchedNextDate.Text = String.Empty;
+                }
+                
+            }
+
+            
+            
         }
-}
+    }
 }

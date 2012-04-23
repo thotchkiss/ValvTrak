@@ -86,5 +86,17 @@ namespace Rawson.Data.Controllers
 
             return vr.IsValid;
         } 
+
+        private ClientLocationSchedulingController _scheduler;
+        public ClientLocationSchedulingController Scheduler
+        {
+            get
+            {
+                if (_scheduler == null)
+                    _scheduler = new ClientLocationSchedulingController();
+
+                return _scheduler;
+            }
+        }
     }
 }

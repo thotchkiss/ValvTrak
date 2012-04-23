@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ClientsForm.ascx.cs" Inherits="Rawson.ClientLocations.ClientsForm" EnableTheming="true" %>
+
 <%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxHiddenField" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
@@ -9,8 +10,8 @@
 <%@ Register Assembly="DevExpress.Web.ASPxGridView.v11.2" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
-
 <%@ Register assembly="DevExpress.Web.ASPxGridView.v11.2.Export" namespace="DevExpress.Web.ASPxGridView.Export" tagprefix="dx" %>
+<%@ Register Assembly="System.Web.Extensions" Namespace="System.Web.UI.WebControls" TagPrefix="asp" %>
 
 <script type="text/javascript">
 	
@@ -25,10 +26,63 @@
 
 		selectedLocation.Set("ClientLocationID", value);
 		selectedLocation.Set("Action", "Edit");
-		locationDetailsPanel.PerformCallback(value);    
-	}
+
+		locationDetailsPanel.PerformCallback(value);
+    }
+
+    function OnShowSchedulingWindow() {
+
+        var location = selectedLocation.Get("ClientLocationID");
+
+        scheduledLocation.Set("ClientLocationID", location);
+        scheduledLocation.Set("Action", "Load");
+
+        schedulingWindow.Show();
+        schedulingPanel.PerformCallback();
+    }
+
+    function OnApplyScheduling() {
+
+        var location = selectedLocation.Get("ClientLocationID");
+
+        scheduledLocation.Set("ClientLocationID", location);
+        scheduledLocation.Set("Action", "Apply");
+
+        schedulingPanel.PerformCallback();
+    }
+
+    function OnSchedulingJobTypeChanged() {
+
+        var location = selectedLocation.Get("ClientLocationID");
+
+        scheduledLocation.Set("ClientLocationID", location);
+        scheduledLocation.Set("Action", "JobTypeChanged");
+
+        schedulingPanel.PerformCallback();
+    }
 
 </script>
+
+<asp:LinqDataSource ID="ClientsGridSource" runat="server" 
+	onselecting="ClientsGridSource_Selecting">
+</asp:LinqDataSource>
+<asp:LinqDataSource ID="LocationClientsList" runat="server" 
+	ContextTypeName="Rawson.Data.ValvTrakDBDataContext" EntityTypeName="" 
+	OrderBy="Name" Select="new (ClientID, Name)" TableName="Clients"
+	onselecting="LocationClientsList_Selecting" EnableInsert="True">
+</asp:LinqDataSource>
+<asp:LinqDataSource ID="LocationsGridSource" runat="server" 
+	onselecting="LocationsGridSource_Selecting">
+</asp:LinqDataSource>
+<asp:LinqDataSource ID="StatesDataSource" runat="server" 
+	onselecting="StatesDataSource_Selecting">
+</asp:LinqDataSource>
+<asp:LinqDataSource ID="JobTypesDataSource" runat="server" 
+	onselecting="JobTypesDataSource_Selecting">
+</asp:LinqDataSource>
+<asp:LinqDataSource ID="ServiceIntervalsDataSource" runat="server" 
+	onselecting="ServiceIntervalsDataSource_Selecting">
+</asp:LinqDataSource>
 
 <table cellpadding="0" cellspacing="5px" border="0" width="910px">
 	<tr>
@@ -436,6 +490,14 @@
 									</dx:ASPxCheckBox>
 								</td>
 							</tr>
+                            <tr>
+                                <td colspan="2">
+                                    <dx:ASPxButton ID="btnSetServiceSchedules" runat="server" Text="Set Service Schedules" ClientInstanceName="btnSetSchedules" AutoPostBack="False">
+                                        <ClientSideEvents 
+                                            Click="function(s,e) { OnShowSchedulingWindow(); }" />
+                                    </dx:ASPxButton>
+                                </td>
+                            </tr>
 							<tr align="right">
 								<td>
 									&nbsp;</td>
@@ -456,21 +518,128 @@
 		</dx:PopupControlContentControl>
 	</ContentCollection>
 </dx:ASPxPopupControl>
+<dx:ASPxPopupControl ID="LocationSchedulingWindow" runat="server" ClientInstanceName="schedulingWindow"
+    Modal="true" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" AllowDragging="true"
+	AllowResize="true" Width="350px" HeaderText="Location Service Schedules">
+	<ContentCollection>
+		<dx:PopupControlContentControl>
+			<dx:ASPxCallbackPanel ID="LocationSchedulingCallbackPanel" runat="server" 
+                ClientInstanceName="schedulingPanel" 
+                OnCallback="LocationSchedulingCallbackPanel_Callback">
+				<PanelCollection>
+					<dxp:PanelContent>
+						<table>
+							<tr>
+								<td colspan="2">
+									<dx:ASPxLabel ID="lblSchedLocation" runat="server"></dx:ASPxLabel>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table>
+										<tr>
+											<td>
+												<dx:ASPxLabel ID="lblSchedJob" runat="server" Text="Job Type"></dx:ASPxLabel>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<dx:ASPxComboBox ID="cmbSchedJob" runat="server" ValueType="System.Int32"
+													DataSourceID="JobTypesDataSource" TextField="DisplayMember" ValueField="ValueMember" >
+                                                    <ClientSideEvents SelectedIndexChanged="function(s,e) { OnSchedulingJobTypeChanged(); }" />
+                                                </dx:ASPxComboBox>
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<td>
+												<dx:ASPxLabel ID="lblSchedInterval" runat="server" Text="Service Interval"></dx:ASPxLabel>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<dx:ASPxComboBox ID="cmbSchedInterval" runat="server" ValueType="System.Int32"
+													DataSourceID="ServiceIntervalsDataSource" TextField="DisplayMember" ValueField="ValueMember"></dx:ASPxComboBox>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table>
+										<tr>
+											<td>
+												<dx:ASPxLabel ID="lblSchedLastDate" runat="server" Text="Last Serv. Date" ></dx:ASPxLabel>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<dx:ASPxDateEdit ID="deSchedLastDate" runat="server" Width="100px" ></dx:ASPxDateEdit>
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<td>
+												<dx:ASPxLabel ID="lblSchedNext" runat="server" Text="Next Serv. Date"></dx:ASPxLabel>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<dx:ASPxLabel ID="lblSchedNextDate" runat="server"></dx:ASPxLabel>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+								<td align="right">
+									<table >
+										<tr>
+											<td>
+												<dx:ASPxButton ID="btnSchedApply" runat="server" Text="Apply" AutoPostBack="false">
+													<ClientSideEvents 
+														Click="function(s,e) { OnApplyScheduling(); }" />
+												</dx:ASPxButton>
+											</td>
+											<td>
+												<dx:ASPxButton ID="btnSchedDone" runat="server" Text="Done" AutoPostBack="false">
+													<ClientSideEvents Click="function(s,e) { schedulingWindow.Hide(); }" />
+												</dx:ASPxButton>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+                        <dx:ASPxHiddenField ID="hfScheduling" runat="server" 
+							ClientInstanceName="scheduledLocation">
+						</dx:ASPxHiddenField>
+					</dxp:PanelContent>
+				</PanelCollection>
+			</dx:ASPxCallbackPanel>
+		</dx:PopupControlContentControl>
+	</ContentCollection>
+</dx:ASPxPopupControl>
 
-<asp:LinqDataSource ID="ClientsGridSource" runat="server" 
-	onselecting="ClientsGridSource_Selecting">
-</asp:LinqDataSource>
-<asp:LinqDataSource ID="LocationClientsList" runat="server" 
-	ContextTypeName="Rawson.Data.ValvTrakDBDataContext" EntityTypeName="" 
-	OrderBy="Name" Select="new (ClientID, Name)" TableName="Clients"
-	onselecting="LocationClientsList_Selecting" EnableInsert="True">
-</asp:LinqDataSource>
-<asp:LinqDataSource ID="LocationsGridSource" runat="server" 
-	onselecting="LocationsGridSource_Selecting">
-</asp:LinqDataSource>
-<asp:LinqDataSource ID="StatesDataSource" runat="server" 
-	onselecting="StatesDataSource_Selecting">
-</asp:LinqDataSource>
+<dx:ASPxPopupControl ID="pcValidation" runat="server" ClientInstanceName="validation"
+		Modal="false" ShowFooter="false" HeaderText="Validation Errrors" 
+		AllowDragging="true" AllowResize="true" AutoUpdatePosition="true" 
+		PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter">
+	<ContentCollection>
+		<dx:PopupControlContentControl ID="PopupControlContentControl1" runat="server">
+		</dx:PopupControlContentControl>
+	</ContentCollection>
+</dx:ASPxPopupControl>
+
 <dx:ASPxGlobalEvents ID="ASPxGlobalEvents1" runat="server">
 	<ClientSideEvents BeginCallback="function(s,e){ lpanel.Show(); }" 
 			EndCallback="function(s,e){ lpanel.Hide(); }" />
@@ -478,6 +647,7 @@
 <dx:ASPxLoadingPanel ID="ASPxLoadingPanel1" runat="server"  ClientInstanceName="lpanel" Modal="true">
 	<ClientSideEvents Init="function(s,e){ s.SetText('Loading....'); }" />
 </dx:ASPxLoadingPanel>
+
 <dx:ASPxCallback ID="ClientSaveAction" runat="server" ClientInstanceName="clientSaveAction" 
 	oncallback="ClientSaveAction_Callback">
 	<ClientSideEvents EndCallback="function(s,e){
@@ -520,14 +690,6 @@
 <dx:ASPxGridViewExporter ID="LocationsGridViewExporter" runat="server" 
 	GridViewID="LocationsGrid">
 </dx:ASPxGridViewExporter>
-<dx:ASPxPopupControl ID="pcValidation" runat="server" ClientInstanceName="validation"
-		Modal="false" ShowFooter="false" HeaderText="Validation Errrors" 
-		AllowDragging="true" AllowResize="true" AutoUpdatePosition="true" 
-		PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter">
-	<ContentCollection>
-		<dx:PopupControlContentControl ID="PopupControlContentControl1" runat="server">
-		</dx:PopupControlContentControl>
-	</ContentCollection>
-</dx:ASPxPopupControl>
+
 
 
