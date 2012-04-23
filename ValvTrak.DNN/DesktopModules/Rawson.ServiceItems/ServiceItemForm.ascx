@@ -294,7 +294,7 @@
                                                     <tr>
                                                         <td>
                                                             <dxe:ASPxTextBox ID="txtInletFrac" runat="server" Width="75px" 
-																ToolTip="Enter fractions as '## ##/##'" TabIndex="114" >
+																ToolTip="Enter fractions as '## ##/##'" TabIndex="113" >
 															</dxe:ASPxTextBox>
                                                         </td>
                                                         <td>
@@ -309,7 +309,7 @@
                                                     <tr>
                                                         <td>
                                                             <dxe:ASPxTextBox ID="txtOutletFrac" runat="server" Width="75px" 
-																ToolTip="Enter fractions as '##-##/##'" TabIndex="116">
+																ToolTip="Enter fractions as '##-##/##'" TabIndex="114">
 															</dxe:ASPxTextBox>
                                                         </td>
                                                         <td>
