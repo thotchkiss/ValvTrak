@@ -43,18 +43,18 @@
         return confirm("Do you wish to delete greasing record item " + grID + "?");
     }
 </script>
-<script type="text/javascript">
+<script id="scrCustomPager" type="text/javascript">
     function pageBarFirstButton_Click() {
-        formGrid.GotoPage(0);
+        grid.GotoPage(0);
     }
     function pageBarPrevButton_Click() {
-        formGrid.PrevPage();
+        grid.PrevPage();
     }
     function pageBarNextButton_Click() {
-        formGrid.NextPage();
+        grid.NextPage();
     }
     function pageBarLastButton_Click(s, e) {
-        formGrid.GotoPage(formGrid.cpPageCount - 1);
+        grid.GotoPage(grid.cpPageCount - 1);
     }
     function pageBarTextBox_Init(s, e) {
         s.SetText(s.cpText);
@@ -65,14 +65,14 @@
         e.htmlEvent.cancelBubble = true;
         e.htmlEvent.returnValue = false;
         var pageIndex = (parseInt(s.GetText()) <= 0) ? 0 : parseInt(s.GetText()) - 1;
-        formGrid.GotoPage(pageIndex);
+        grid.GotoPage(pageIndex);
     }
     function pageBarTextBox_ValueChanged(s, e) {
         var pageIndex = (parseInt(s.GetText()) <= 0) ? 0 : parseInt(s.GetText()) - 1;
-        formGrid.GotoPage(pageIndex);
+        grid.GotoPage(pageIndex);
     }
     function pagerBarComboBox_SelectedIndexChanged(s, e) {
-        formGrid.PerformCallback(s.GetSelectedItem().text);
+        grid.PerformCallback(s.GetSelectedItem().text);
     }
 </script>
 

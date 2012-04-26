@@ -55,6 +55,7 @@ namespace Rawson.GreasingRecords
         protected void Page_Load(object sender, EventArgs e)
         {
             GreasingItemsGrid.Templates.PagerBar = new CustomPagerBarTemplate();
+            GreasingItemsGrid.SettingsPager.AlwaysShowPager = true;
 
             if (!Page.IsPostBack)
             {
@@ -85,9 +86,10 @@ namespace Rawson.GreasingRecords
                 lnkNewItem.Enabled = true;
             }
 
-                // load Latitude and Longitude if available
-                txtLatitude.Text = gr.Job.ClientLocation.Latitude;
-                txtLongitude.Text = gr.Job.ClientLocation.Longitude;
+            // load Latitude and Longitude if available
+            txtLatitude.Text = gr.Job.ClientLocation.Latitude;
+            txtLongitude.Text = gr.Job.ClientLocation.Longitude;
+
             lblClientName.Text = gr.Job.ClientLocation.Client.Name;
             LocationLabel.Text = gr.Job.ClientLocation.Name;
             txtPipeLineSegment.Text = gr.PipelineSegment ?? "";
