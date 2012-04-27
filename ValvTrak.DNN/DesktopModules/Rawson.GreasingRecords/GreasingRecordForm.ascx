@@ -321,47 +321,49 @@
                     <dxwgv:GridViewDataTextColumn FieldName="ServiceItemID" VisibleIndex="4" 
                         Visible="False">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="ValveLocation" VisibleIndex="5">
+                    <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.SerialNum" VisibleIndex="5">
+                    </dxwgv:GridViewDataTextColumn>
+                    <dxwgv:GridViewDataTextColumn FieldName="ValveLocation" VisibleIndex="6">
                          <CellStyle Wrap="False"></CellStyle>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="ActuatorInspected" VisibleIndex="6" 
+                    <dxwgv:GridViewDataTextColumn FieldName="ActuatorInspected" VisibleIndex="7" 
                         Caption="Actuator Inspected" UnboundType="String">
                          <CellStyle Wrap="False"></CellStyle>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="ActuatorLubed" VisibleIndex="7" 
+                    <dxwgv:GridViewDataTextColumn FieldName="ActuatorLubed" VisibleIndex="8" 
                         Caption="Actuator Lubed" UnboundType="String">
                          <CellStyle Wrap="False"></CellStyle>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="PercentCycled" VisibleIndex="8">
+                    <dxwgv:GridViewDataTextColumn FieldName="PercentCycled" VisibleIndex="9">
                          <CellStyle Wrap="False"></CellStyle>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="ValveSecured" VisibleIndex="9" 
+                    <dxwgv:GridViewDataTextColumn FieldName="ValveSecured" VisibleIndex="10" 
                         Caption="Valve Secured" UnboundType="String">
                          <CellStyle Wrap="False"></CellStyle>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="FlangeOrScrew" VisibleIndex="10">
+                    <dxwgv:GridViewDataTextColumn FieldName="FlangeOrScrew" VisibleIndex="11">
                          <CellStyle Wrap="False"></CellStyle>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="EaseOfOperation" VisibleIndex="11">
+                    <dxwgv:GridViewDataTextColumn FieldName="EaseOfOperation" VisibleIndex="12">
                          <CellStyle Wrap="False"></CellStyle>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="SeatsChecked" VisibleIndex="12" 
+                    <dxwgv:GridViewDataTextColumn FieldName="SeatsChecked" VisibleIndex="13" 
                         Caption="Seats Checked" UnboundType="String" Visible="False">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="SeatsLubed" VisibleIndex="13" 
+                    <dxwgv:GridViewDataTextColumn FieldName="SeatsLubed" VisibleIndex="14" 
                         Caption="Seats Lubed" UnboundType="String" Visible="False">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="Leaking" VisibleIndex="14" 
+                    <dxwgv:GridViewDataTextColumn FieldName="Leaking" VisibleIndex="15" 
                         Caption="Leaking" UnboundType="String" Visible="False">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="LubeTypeID" VisibleIndex="15" 
+                    <dxwgv:GridViewDataTextColumn FieldName="LubeTypeID" VisibleIndex="16" 
                         Caption="Lube Type" UnboundType="String">
                          <CellStyle Wrap="False"></CellStyle>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="AmountInjected" VisibleIndex="16" 
+                    <dxwgv:GridViewDataTextColumn FieldName="AmountInjected" VisibleIndex="17" 
                         Visible="False">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="Notes" VisibleIndex="17" 
+                    <dxwgv:GridViewDataTextColumn FieldName="Notes" VisibleIndex="18" 
                         Visible="False">
                     </dxwgv:GridViewDataTextColumn>
                 </Columns>
