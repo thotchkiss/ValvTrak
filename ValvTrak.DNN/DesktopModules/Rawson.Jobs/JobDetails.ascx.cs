@@ -56,6 +56,7 @@ namespace Rawson.Jobs
         protected void Page_Load ( object sender, EventArgs e )
         {
             ServiceDetailsGrid.Templates.PagerBar = new CustomPagerBarTemplate();
+            ClientSelect.Focus();
 
             if ( !Page.IsPostBack )
             {

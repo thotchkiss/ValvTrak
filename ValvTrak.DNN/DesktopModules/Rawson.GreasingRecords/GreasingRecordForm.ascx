@@ -215,7 +215,7 @@
                                 </td>
                                 <td>
                                     <dxe:ASPxTextBox ID="txtLatitude" runat="server" Height="21px" 
-                                        NullText="Add Latitude" Width="100px">
+                                        NullText="Add Latitude" Width="100px" TabIndex="5">
                                         <MaskSettings PromptChar=" " />
                                         <NullTextStyle ForeColor="Silver">
                                         </NullTextStyle>
@@ -227,7 +227,7 @@
                                 </td>
                                 <td>
                                     <dxe:ASPxTextBox ID="txtLongitude" runat="server" Height="21px" 
-                                        NullText="Add Longitude" Width="100px">
+                                        NullText="Add Longitude" Width="100px" TabIndex="6">
                                         <MaskSettings PromptChar=" " />
                                         <NullTextStyle ForeColor="Silver">
                                         </NullTextStyle>
@@ -259,7 +259,7 @@
                                 <td>
                                     &nbsp;</td>
                                 <td class="style1">
-                                    <dxe:ASPxButton ID="btnSave" runat="server" AutoPostBack="False" TabIndex="5" 
+                                    <dxe:ASPxButton ID="btnSave" runat="server" AutoPostBack="False" TabIndex="7" 
                                         Text="Save" Width="170px">
                                         <ClientSideEvents Click="function(s,e){ saveAction.PerformCallback(); }" />
                                     </dxe:ASPxButton>
@@ -279,7 +279,8 @@
     </tr>
     <tr>
         <td align="right">
-            <dxe:ASPxHyperLink ID="lnkNewItem" runat="server" Text="Add New" TabIndex="6" ClientInstanceName="lnkNew">
+            <dxe:ASPxHyperLink ID="lnkNewItem" runat="server" Text="Add New" TabIndex="8" 
+                ClientInstanceName="lnkNew">
             </dxe:ASPxHyperLink>
         </td>
     </tr>
@@ -293,7 +294,7 @@
                 oncustomcallback="GreasingItemsGrid_CustomCallback" 
                 ondatabound="GreasingItemsGrid_DataBound" 
                 oncustomcolumndisplaytext="GreasingItemsGrid_CustomColumnDisplayText" 
-                Width="100%" TabIndex="7" >
+                Width="100%" TabIndex="9" >
                 <Settings ShowHorizontalScrollBar="true" />
                 <SettingsLoadingPanel Mode="Disabled" />
                 <ClientSideEvents CustomButtonClick="function(s,e) { e.processOnServer = true; if (e.buttonID == 'btnDelete') { e.processOnServer = OnConfirmCustomButtonClick(grid.GetRowKey(e.visibleIndex)); } }" />

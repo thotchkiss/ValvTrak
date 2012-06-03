@@ -99,7 +99,7 @@
 									</dxe:ASPxLabel>
 								</td>
 								<td align="left">
-									<dxe:ASPxTextBox ID="FSR_NumTextBox" runat="server" Width="170px" TabIndex="3">
+									<dxe:ASPxTextBox ID="FSR_NumTextBox" runat="server" Width="170px" TabIndex="1">
 									</dxe:ASPxTextBox>
 								</td>
 								<td></td>
@@ -118,7 +118,7 @@
 									</dxe:ASPxLabel>
 								</td>
 								<td align="left">
-									<dxe:ASPxTextBox ID="SSV_SAP_TextBox" runat="server" Width="170px" TabIndex="4">
+									<dxe:ASPxTextBox ID="SSV_SAP_TextBox" runat="server" Width="170px" TabIndex="2">
 									</dxe:ASPxTextBox>
 								</td>
 								<td></td>
@@ -127,7 +127,7 @@
 									</dxe:ASPxLabel>
 								</td>
 								<td align="left">
-									<dxe:ASPxDateEdit ID="FormDateEdit" runat="server" Width="100px" TabIndex="5">
+									<dxe:ASPxDateEdit ID="FormDateEdit" runat="server" Width="100px" TabIndex="3">
 									</dxe:ASPxDateEdit>
 								</td>
 							</tr><tr>
@@ -137,7 +137,7 @@
 								<td class="style1" align="left">
 
 									<dxe:ASPxTextBox ID="txtLatitude" runat="server" Height="21px" Width="100px" 
-										NullText="Add Latitude">
+										NullText="Add Latitude" TabIndex="4">
 										<MaskSettings PromptChar=" " />
 <MaskSettings PromptChar=" "></MaskSettings>
 
@@ -152,7 +152,7 @@
 								</td>
 								<td class="style2" align="left">
 									<dxe:ASPxTextBox ID="txtLongitude" runat="server" Height="21px" Width="100px" 
-										NullText="Add Longitude">
+										NullText="Add Longitude" TabIndex="5">
 										<MaskSettings PromptChar=" " />
 <MaskSettings PromptChar=" "></MaskSettings>
 
@@ -181,7 +181,8 @@
 									</dxe:ASPxLabel>
 								</td>
 								<td>
-									<vt:SvcItemEdit ID="ServiceItemSelect" runat="server" ServiceItemCategoryID="2" TabIndex="4"></vt:SvcItemEdit>
+									<vt:SvcItemEdit ID="ServiceItemSelect" runat="server" ServiceItemCategoryID="2" 
+                                        TabIndex="6"></vt:SvcItemEdit>
 								</td>
 								<td></td>
 								<td>

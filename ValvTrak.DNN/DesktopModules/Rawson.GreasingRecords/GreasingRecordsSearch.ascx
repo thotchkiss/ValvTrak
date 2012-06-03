@@ -349,12 +349,6 @@
             <dxwgv:GridViewDataTextColumn FieldName="GreasingRecord.SapPSV" VisibleIndex="11"
                 Caption="Wellhead SAP PSV">
             </dxwgv:GridViewDataTextColumn>
-            <dxwgv:GridViewDataTextColumn FieldName="GreasingRecord.Job.Employee.FirstName" VisibleIndex="12"
-                Caption="Technician First Name">  
-            </dxwgv:GridViewDataTextColumn>
-            <dxwgv:GridViewDataTextColumn FieldName="GreasingRecord.Job.Employee.LastName" VisibleIndex="13"
-                Caption="Technician Last Name">  
-            </dxwgv:GridViewDataTextColumn>
             <dxwgv:GridViewDataTextColumn FieldName="GreasingRecord.Job.SalesOrderNum" VisibleIndex="14"
                 Caption="S/O Num">
             </dxwgv:GridViewDataTextColumn>
@@ -376,18 +370,25 @@
             <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.ManufacturerModel.Model" VisibleIndex="22"
                 Caption="Model Num">
             </dxwgv:GridViewDataTextColumn>
-            <dxwgv:GridViewDataTextColumn FieldName="ValveLocation" VisibleIndex="23">
+            <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.InletSize" VisibleIndex="24"
+                Caption="Inlet Size">
             </dxwgv:GridViewDataTextColumn>
-            <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.ModelSize" VisibleIndex="24"
-                Caption="Size/Rating">
+            <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.InletFlangeRating" VisibleIndex="25"
+                Caption="Inlet Rating">
             </dxwgv:GridViewDataTextColumn>
-            <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.Longitude" VisibleIndex="25"
+            <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.OutletSize" VisibleIndex="26"
+                Caption="Outlet Size">
+            </dxwgv:GridViewDataTextColumn>
+            <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.OutletFlangeRating" VisibleIndex="27"
+                Caption="Outlet Rating">
+            </dxwgv:GridViewDataTextColumn>
+            <dxwgv:GridViewDataTextColumn FieldName="GreasingRecord.Job.ClientLocation.Longitude" VisibleIndex="28"
                 Caption="Longitude">
             </dxwgv:GridViewDataTextColumn>
-            <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.Latitude" VisibleIndex="26"
+            <dxwgv:GridViewDataTextColumn FieldName="GreasingRecord.Job.ClientLocation.Latitude" VisibleIndex="29"
                 Caption="Latitude">
             </dxwgv:GridViewDataTextColumn>
-            <dxwgv:GridViewDataComboBoxColumn FieldName="ActuatorInspected" VisibleIndex="27" 
+            <dxwgv:GridViewDataComboBoxColumn FieldName="ActuatorInspected" VisibleIndex="30" 
                 Caption="Actuator Inspected">
                 <PropertiesComboBox ValueType="System.Int32">
                     <Items>
@@ -399,7 +400,7 @@
                 <Settings SortMode="DisplayText" />
                 <EditFormSettings Visible="True" />
             </dxwgv:GridViewDataComboBoxColumn>            
-            <dxwgv:GridViewDataComboBoxColumn FieldName="ActuatorLubed" VisibleIndex="28" 
+            <dxwgv:GridViewDataComboBoxColumn FieldName="ActuatorLubed" VisibleIndex="31" 
                 Caption="Actuator Lubed">
                 <PropertiesComboBox ValueType="System.Int32">
                     <Items>
@@ -411,9 +412,9 @@
                 <Settings SortMode="DisplayText" />
                 <EditFormSettings Visible="True" />
             </dxwgv:GridViewDataComboBoxColumn>
-            <dxwgv:GridViewDataTextColumn FieldName="PercentCycled" VisibleIndex="29">
+            <dxwgv:GridViewDataTextColumn FieldName="PercentCycled" VisibleIndex="32">
             </dxwgv:GridViewDataTextColumn>
-            <dxwgv:GridViewDataComboBoxColumn FieldName="ValveSecured" VisibleIndex="30" 
+            <dxwgv:GridViewDataComboBoxColumn FieldName="ValveSecured" VisibleIndex="33" 
                 Caption="Valve Secured">
                 <PropertiesComboBox ValueType="System.Int32">
                     <Items>
@@ -425,7 +426,7 @@
                 <Settings SortMode="DisplayText" />
                 <EditFormSettings Visible="True" />
             </dxwgv:GridViewDataComboBoxColumn>
-            <dxwgv:GridViewDataComboBoxColumn FieldName="FlangeOrScrew" VisibleIndex="31" 
+            <dxwgv:GridViewDataComboBoxColumn FieldName="FlangeOrScrew" VisibleIndex="34" 
                 Caption="Flange Or Screw">
                 <PropertiesComboBox ValueType="System.String">
                     <Items>
@@ -437,7 +438,7 @@
                 <Settings SortMode="DisplayText" />
                 <EditFormSettings Visible="True" />
             </dxwgv:GridViewDataComboBoxColumn>
-            <dxwgv:GridViewDataComboBoxColumn FieldName="EaseOfOperation" VisibleIndex="32" 
+            <dxwgv:GridViewDataComboBoxColumn FieldName="EaseOfOperation" VisibleIndex="35" 
                 Caption="Ease Of Operation">
                 <PropertiesComboBox ValueType="System.Int32">
                     <Items>
@@ -452,7 +453,7 @@
                 <Settings SortMode="DisplayText" />
                 <EditFormSettings Visible="True" />
             </dxwgv:GridViewDataComboBoxColumn>
-            <dxwgv:GridViewDataComboBoxColumn FieldName="SeatsChecked" VisibleIndex="33" 
+            <dxwgv:GridViewDataComboBoxColumn FieldName="SeatsChecked" VisibleIndex="36" 
                 Caption="Seats Checked">
                 <PropertiesComboBox ValueType="System.Int32">
                     <Items>
@@ -464,7 +465,7 @@
                 <Settings SortMode="DisplayText" />
                 <EditFormSettings Visible="True" />
             </dxwgv:GridViewDataComboBoxColumn>
-            <dxwgv:GridViewDataComboBoxColumn FieldName="SeatsLubed" VisibleIndex="34" 
+            <dxwgv:GridViewDataComboBoxColumn FieldName="SeatsLubed" VisibleIndex="37" 
                 Caption="Seats Lubed">
                 <PropertiesComboBox ValueType="System.Int32">
                     <Items>
@@ -476,7 +477,7 @@
                 <Settings SortMode="DisplayText" />
                 <EditFormSettings Visible="True" />
             </dxwgv:GridViewDataComboBoxColumn>
-            <dxwgv:GridViewDataComboBoxColumn FieldName="Leaking" VisibleIndex="35" 
+            <dxwgv:GridViewDataComboBoxColumn FieldName="Leaking" VisibleIndex="38" 
                 Caption="Leaking">
                 <PropertiesComboBox ValueType="System.Int32">
                     <Items>
@@ -488,7 +489,7 @@
                 <Settings SortMode="DisplayText" />
                 <EditFormSettings Visible="True" />
             </dxwgv:GridViewDataComboBoxColumn>
-            <dxwgv:GridViewDataComboBoxColumn FieldName="LubeTypeID" VisibleIndex="36" 
+            <dxwgv:GridViewDataComboBoxColumn FieldName="LubeTypeID" VisibleIndex="39" 
                 Caption="Lube Type" Width="150px">
                 <PropertiesComboBox ValueType="System.Int32" 
                     DataSourceID="LubeTypeDataSource" TextField="DisplayMember" ValueField="ValueMember">
@@ -496,20 +497,20 @@
                 <Settings SortMode="DisplayText" />
                 <EditFormSettings Visible="True" />
             </dxwgv:GridViewDataComboBoxColumn>
-            <dxwgv:GridViewDataTextColumn FieldName="AmountInjected" VisibleIndex="37">
+            <dxwgv:GridViewDataTextColumn FieldName="AmountInjected" VisibleIndex="40">
             </dxwgv:GridViewDataTextColumn>
-            <dxwgv:GridViewDataTextColumn FieldName="Notes" VisibleIndex="38" Width="250px">
+            <dxwgv:GridViewDataTextColumn FieldName="Notes" VisibleIndex="41" Width="250px">
             </dxwgv:GridViewDataTextColumn>
-            <dxwgv:GridViewDataTextColumn FieldName="GreasingRecordID" VisibleIndex="39">
+            <dxwgv:GridViewDataTextColumn FieldName="GreasingRecordID" VisibleIndex="42">
             </dxwgv:GridViewDataTextColumn>
-            <dxwgv:GridViewDataTextColumn FieldName="ServiceItemID" VisibleIndex="40">
+            <dxwgv:GridViewDataTextColumn FieldName="ServiceItemID" VisibleIndex="43">
             </dxwgv:GridViewDataTextColumn>
             <dxwgv:GridViewDataTextColumn FieldName="GreasingRecordItemID" ReadOnly="True" 
-                VisibleIndex="43" Visible="False">
+                VisibleIndex="44" Visible="False">
                 <EditFormSettings Visible="False" />
             </dxwgv:GridViewDataTextColumn>
             <dxwgv:GridViewDataTextColumn FieldName="GreasingRecord.JobID" ReadOnly="True" 
-                VisibleIndex="44" Visible="False">
+                VisibleIndex="45" Visible="False">
                 <EditFormSettings Visible="False" />
             </dxwgv:GridViewDataTextColumn>
         </Columns>

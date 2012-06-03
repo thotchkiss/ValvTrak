@@ -93,7 +93,7 @@
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dxe:ASPxTextBox ID="DotNumberTextBox" runat="server" TabIndex="10" 
+                                    <dxe:ASPxTextBox ID="DotNumberTextBox" runat="server" TabIndex="6" 
                                         Width="170px">
                                     </dxe:ASPxTextBox>
                                 </td>
@@ -132,7 +132,7 @@
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td class="style1">
-                                    <dxe:ASPxTextBox ID="VRstampTextBox" runat="server" TabIndex="11" Width="170px">
+                                    <dxe:ASPxTextBox ID="VRstampTextBox" runat="server" TabIndex="7" Width="170px">
                                     </dxe:ASPxTextBox>
                                 </td>
                                 <td class="style1"></td>
@@ -167,7 +167,7 @@
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dxe:ASPxDateEdit ID="CallDateEdit" runat="server" TabIndex="6" Width="100px">
+                                    <dxe:ASPxDateEdit ID="CallDateEdit" runat="server" TabIndex="8" Width="100px">
                                         <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
                                     </dxe:ASPxDateEdit>
                                 </td>
@@ -179,7 +179,7 @@
                                 <td>
                                     <dxe:ASPxComboBox ID="AssignedToSelect" runat="server" 
                                         DataSourceID="EmployeeDataSource" EnableIncrementalFiltering="True" 
-                                        IncrementalFilteringMode="StartsWith" TabIndex="16" TextField="DisplayMember" 
+                                        IncrementalFilteringMode="StartsWith" TabIndex="12" TextField="DisplayMember" 
                                         ValueField="ValueMember" ValueType="System.Int32">
                                         <ClientSideEvents GotFocus="function(s, e) { s.SelectAll(); s.ShowDropDown(); }" 
                                             Init="function(s, e) { DevExComboUnboundItem(s, e, '-- Assigned To --', -1); }" />
@@ -194,7 +194,7 @@
                                 <td>
                                     <dxe:ASPxComboBox ID="JobTypeSelect" runat="server" 
                                         DataSourceID="JobTypeDataSource" EnableIncrementalFiltering="True" 
-                                        IncrementalFilteringMode="StartsWith" TabIndex="5" TextField="DisplayMember" 
+                                        IncrementalFilteringMode="StartsWith" TabIndex="3" TextField="DisplayMember" 
                                         ValueField="ValueMember" ValueType="System.Int32">
                                         <ClientSideEvents GotFocus="function(s, e) { s.SelectAll(); s.ShowDropDown(); }" />
                                     </dxe:ASPxComboBox>
@@ -205,7 +205,7 @@
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dxe:ASPxDateEdit ID="ServiceDateEdit" runat="server" TabIndex="7" 
+                                    <dxe:ASPxDateEdit ID="ServiceDateEdit" runat="server" TabIndex="9" 
                                         Width="100px">
                                         <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
                                     </dxe:ASPxDateEdit>
@@ -222,7 +222,7 @@
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dxe:ASPxTextBox ID="SalesOrderNumTextBox" runat="server" TabIndex="3" 
+                                    <dxe:ASPxTextBox ID="SalesOrderNumTextBox" runat="server" TabIndex="4" 
                                         Width="170px">
                                     </dxe:ASPxTextBox>
                                 </td>
@@ -233,7 +233,7 @@
                                 </td>
                                 <td>
                                     <dxe:ASPxDateEdit ID="CompletionDateEdit" runat="server" 
-                                        OnValidation="CompletionDateEdit_Validation" TabIndex="8" Width="100px">
+                                        OnValidation="CompletionDateEdit_Validation" TabIndex="10" Width="100px">
                                         <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
                                     </dxe:ASPxDateEdit>
                                 </td>
@@ -249,7 +249,7 @@
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dxe:ASPxTextBox ID="txtSapWoNum" runat="server" TabIndex="4" Width="170px">
+                                    <dxe:ASPxTextBox ID="txtSapWoNum" runat="server" TabIndex="5" Width="170px">
                                     </dxe:ASPxTextBox>
                                 </td>
                                 <td></td>
@@ -260,7 +260,7 @@
                                 <td>
                                     <dxe:ASPxComboBox ID="JobStatusSelect" runat="server" 
                                         DataSourceID="JobStatusDataSource" EnableIncrementalFiltering="True" 
-                                        IncrementalFilteringMode="StartsWith" TabIndex="9" TextField="DisplayMember" 
+                                        IncrementalFilteringMode="StartsWith" TabIndex="11" TextField="DisplayMember" 
                                         ValueField="ValueMember" ValueType="System.Int32">
                                         <ClientSideEvents GotFocus="function(s, e) { s.SelectAll(); s.ShowDropDown(); }" />
                                     </dxe:ASPxComboBox>
@@ -297,7 +297,7 @@
                                     &nbsp;</td>
                                 <td></td>
                                 <td align="right" colspan="2">
-                                    <dxe:ASPxButton ID="btnSave" runat="server" AutoPostBack="False" TabIndex="16" 
+                                    <dxe:ASPxButton ID="btnSave" runat="server" AutoPostBack="False" TabIndex="13" 
                                         Text="Save" Width="200px" >
                                         <ClientSideEvents Click="function(s,e) { 
                                             saveAction.PerformCallback(); }" />
@@ -340,8 +340,9 @@
                         </dxe:ASPxLabel>
                     </td>
                     <td align="right">
-                        <dxe:ASPxHyperLink ID="lnkNew" runat="server" Text="Add New Form" EnableClientSideAPI="true" ClientInstanceName="lnkNew" 
-                            TabIndex="17" >
+                        <dxe:ASPxHyperLink ID="lnkNew" runat="server" Text="Add New Form" 
+                            EnableClientSideAPI="true" ClientInstanceName="lnkNew" 
+                            TabIndex="14" >
                         </dxe:ASPxHyperLink>
                     </td>
                 </tr>
