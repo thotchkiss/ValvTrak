@@ -141,7 +141,7 @@
 									</dxe:ASPxLabel>
 								</td>
 								<td colspan="4">
-									<vt:SvcItemEdit ID="siEdit" runat="server" TabIndex="3" ServiceItemCategoryID="3"  />
+									<vt:SvcItemEdit ID="siEdit" runat="server" TabIndex="3" ServiceItemCategoryID="2"  />
 								</td>
 								<td></td>
 								<td></td>
@@ -222,7 +222,7 @@
 							</tr>
 							<tr>
 								<td>
-									<dxe:ASPxLabel ID="ASPxLabel10" runat="server" Text="Set Presure :">
+									<dxe:ASPxLabel ID="ASPxLabel10" runat="server" Text="Set Pressure :">
 									</dxe:ASPxLabel>
 								</td>
 								<td>
@@ -261,7 +261,7 @@
 								</td>
 								<td>
 									<dxe:ASPxTextBox ID="ColdDiffPressureTextBox" runat="server" 
-                                        ClientInstanceName="coldDiffPressure" Width="100px" 
+										ClientInstanceName="coldDiffPressure" Width="100px" 
 										TabIndex="10" ReadOnly="True" Enabled="false">
 									</dxe:ASPxTextBox>
 								</td>
@@ -319,7 +319,7 @@
 							</tr>
 							<tr>
 								<td>
-									<dxe:ASPxLabel ID="ASPxLabel16" runat="server" Text="Guage # :">
+									<dxe:ASPxLabel ID="ASPxLabel16" runat="server" Text="Gauge # :">
 									</dxe:ASPxLabel>
 								</td>
 								<td>

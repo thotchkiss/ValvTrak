@@ -182,13 +182,16 @@
 													EnableIncrementalFiltering="True" IncrementalFilteringMode="StartsWith" 
 													ValueType="System.Int32" EnableCallbackMode="True" 
 													ShowLoadingPanel="False" >
-													<ClientSideEvents EndCallback="function(s,e){ 
+													<ClientSideEvents 
+														EndCallback="function(s,e){ 
 																					if (s.cpManufacturerID != undefined) 
 																						s.SetValue(parseInt(s.cpManufacturerID));
 	
 																					models.PerformCallback(); 
 																				}"  
-														SelectedIndexChanged="function(s,e) { models.PerformCallback(); }" GotFocus="function(s, e) {
+														SelectedIndexChanged="function(s,e) { models.PerformCallback(); }" 
+														
+														GotFocus="function(s, e) {
 																				s.SelectAll();
 																				s.ShowDropDown();
 																			}" />
@@ -228,7 +231,12 @@
 																							if (s.cpManufacturerModelID != undefined)
 																								s.SetValue(parseInt(s.cpManufacturerModelID)); 
 
-																							modelAdd.Focus();}" 
+																							s.Focus();
+																							
+																							s.SelectAll();
+																							s.ShowDropDown();
+
+																							}" 
 																		GotFocus="function(s, e) {
 																						s.SelectAll();
 																						s.ShowDropDown(); }" />
@@ -269,8 +277,7 @@
 									<table cellpadding="0" cellspacing="0" width="100%">
 										<tr>
 											<td style="padding-bottom: 5px">
-												<dxe:ASPxCheckBox ID="chkThreaded" runat="server" Text="Threaded" 
-													TabIndex="111">
+												<dxe:ASPxCheckBox ID="chkThreaded" runat="server" Text="Threaded" ClientInstanceName="chkThreaded" TabIndex="111">
 												</dxe:ASPxCheckBox>
 											</td>
 											<td style="padding-bottom: 5px">
