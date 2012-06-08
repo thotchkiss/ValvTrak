@@ -252,7 +252,8 @@ namespace Rawson.ClientLocations
 
             if (controller.Save())
             {
-                LocationSaveAction.JSProperties["cpClientID"] = location.ClientID;
+                //LocationSaveAction.JSProperties["cpClientID"] = location.ClientID;
+                LocationSaveAction.JSProperties["cpClientID"] = controller.Entity.ClientID;
             }
             else
             {

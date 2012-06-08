@@ -28,38 +28,38 @@
 		selectedLocation.Set("Action", "Edit");
 
 		locationDetailsPanel.PerformCallback(value);
-    }
+	}
 
-    function OnShowSchedulingWindow() {
+	function OnShowSchedulingWindow() {
 
-        var location = selectedLocation.Get("ClientLocationID");
+		var location = selectedLocation.Get("ClientLocationID");
 
-        scheduledLocation.Set("ClientLocationID", location);
-        scheduledLocation.Set("Action", "Load");
+		scheduledLocation.Set("ClientLocationID", location);
+		scheduledLocation.Set("Action", "Load");
 
-        schedulingWindow.Show();
-        schedulingPanel.PerformCallback();
-    }
+		schedulingWindow.Show();
+		schedulingPanel.PerformCallback();
+	}
 
-    function OnApplyScheduling() {
+	function OnApplyScheduling() {
 
-        var location = selectedLocation.Get("ClientLocationID");
+		var location = selectedLocation.Get("ClientLocationID");
 
-        scheduledLocation.Set("ClientLocationID", location);
-        scheduledLocation.Set("Action", "Apply");
+		scheduledLocation.Set("ClientLocationID", location);
+		scheduledLocation.Set("Action", "Apply");
 
-        schedulingPanel.PerformCallback();
-    }
+		schedulingPanel.PerformCallback();
+	}
 
-    function OnSchedulingJobTypeChanged() {
+	function OnSchedulingJobTypeChanged() {
 
-        var location = selectedLocation.Get("ClientLocationID");
+		var location = selectedLocation.Get("ClientLocationID");
 
-        scheduledLocation.Set("ClientLocationID", location);
-        scheduledLocation.Set("Action", "JobTypeChanged");
+		scheduledLocation.Set("ClientLocationID", location);
+		scheduledLocation.Set("Action", "JobTypeChanged");
 
-        schedulingPanel.PerformCallback();
-    }
+		schedulingPanel.PerformCallback();
+	}
 
 </script>
 
@@ -490,14 +490,14 @@
 									</dx:ASPxCheckBox>
 								</td>
 							</tr>
-                            <tr>
-                                <td colspan="2">
-                                    <dx:ASPxButton ID="btnSetServiceSchedules" runat="server" Text="Set Service Schedules" ClientInstanceName="btnSetSchedules" AutoPostBack="False">
-                                        <ClientSideEvents 
-                                            Click="function(s,e) { OnShowSchedulingWindow(); }" />
-                                    </dx:ASPxButton>
-                                </td>
-                            </tr>
+							<tr>
+								<td colspan="2">
+									<dx:ASPxButton ID="btnSetServiceSchedules" runat="server" Text="Set Service Schedules" ClientInstanceName="btnSetSchedules" AutoPostBack="False">
+										<ClientSideEvents 
+											Click="function(s,e) { OnShowSchedulingWindow(); }" />
+									</dx:ASPxButton>
+								</td>
+							</tr>
 							<tr align="right">
 								<td>
 									&nbsp;</td>
@@ -519,13 +519,13 @@
 	</ContentCollection>
 </dx:ASPxPopupControl>
 <dx:ASPxPopupControl ID="LocationSchedulingWindow" runat="server" ClientInstanceName="schedulingWindow"
-    Modal="true" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" AllowDragging="true"
+	Modal="true" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" AllowDragging="true"
 	AllowResize="true" Width="350px" HeaderText="Location Service Schedules">
 	<ContentCollection>
 		<dx:PopupControlContentControl>
 			<dx:ASPxCallbackPanel ID="LocationSchedulingCallbackPanel" runat="server" 
-                ClientInstanceName="schedulingPanel" 
-                OnCallback="LocationSchedulingCallbackPanel_Callback">
+				ClientInstanceName="schedulingPanel" 
+				OnCallback="LocationSchedulingCallbackPanel_Callback">
 				<PanelCollection>
 					<dxp:PanelContent>
 						<table>
@@ -546,8 +546,8 @@
 											<td>
 												<dx:ASPxComboBox ID="cmbSchedJob" runat="server" ValueType="System.Int32"
 													DataSourceID="JobTypesDataSource" TextField="DisplayMember" ValueField="ValueMember" >
-                                                    <ClientSideEvents SelectedIndexChanged="function(s,e) { OnSchedulingJobTypeChanged(); }" />
-                                                </dx:ASPxComboBox>
+													<ClientSideEvents SelectedIndexChanged="function(s,e) { OnSchedulingJobTypeChanged(); }" />
+												</dx:ASPxComboBox>
 											</td>
 										</tr>
 									</table>
@@ -620,7 +620,7 @@
 								</td>
 							</tr>
 						</table>
-                        <dx:ASPxHiddenField ID="hfScheduling" runat="server" 
+						<dx:ASPxHiddenField ID="hfScheduling" runat="server" 
 							ClientInstanceName="scheduledLocation">
 						</dx:ASPxHiddenField>
 					</dxp:PanelContent>
