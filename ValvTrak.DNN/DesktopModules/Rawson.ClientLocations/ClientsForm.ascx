@@ -129,6 +129,7 @@
 					</dx:GridViewCommandColumn>
 					<dx:GridViewDataTextColumn Caption="Name" FieldName="Name" Name="colName" 
 						ReadOnly="True" VisibleIndex="1">
+						<Settings AutoFilterCondition="Contains" />
 					</dx:GridViewDataTextColumn>
 					<dx:GridViewDataTextColumn Caption="Address" FieldName="Address" 
 						Name="colAddress" ReadOnly="True" VisibleIndex="2">
@@ -305,6 +306,7 @@
 											</dx:GridViewCommandColumn>
 											<dx:GridViewDataTextColumn Caption="Name" FieldName="Name" Name="colLocName" 
 												ReadOnly="True" ShowInCustomizationForm="True" VisibleIndex="1">
+												<Settings AutoFilterCondition="Contains" />
 											</dx:GridViewDataTextColumn>
 											<dx:GridViewDataTextColumn Caption="Property Number" FieldName="PropertyNumber" 
 												Name="colPropertyNumber" ReadOnly="True" ShowInCustomizationForm="True" 
