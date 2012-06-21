@@ -182,14 +182,7 @@
 													EnableIncrementalFiltering="True" IncrementalFilteringMode="StartsWith" 
 													ValueType="System.Int32" EnableCallbackMode="True" 
 													ShowLoadingPanel="False" >
-													<ClientSideEvents 
-														<%--EndCallback="function(s,e){ 
-																					if (s.cpManufacturerID != undefined) 
-																						s.SetValue(parseInt(s.cpManufacturerID));
-	
-																					models.PerformCallback(); 
-																				}"  --%>
-														SelectedIndexChanged="function(s,e) { models.PerformCallback(); }" 
+													<ClientSideEvents SelectedIndexChanged="function(s,e) { models.PerformCallback(); }" 
 														
 														GotFocus="function(s, e) {
 																				s.SelectAll();
@@ -227,17 +220,7 @@
 													    TabIndex="107" EnableIncrementalFiltering="True" 
 													    IncrementalFilteringMode="StartsWith" ValueType="System.Int32" 
 													    EnableCallbackMode="True" ShowLoadingPanel="False">
-														<ClientSideEvents EndCallback="function(s,e){ 
-																							if (s.cpManufacturerModelID != undefined)
-																								s.SetValue(parseInt(s.cpManufacturerModelID)); 
-
-																							s.Focus();
-																							
-																							s.SelectAll();
-																							s.ShowDropDown();
-
-																							}" 
-																		GotFocus="function(s, e) {
+														<ClientSideEvents GotFocus="function(s, e) {
 																						s.SelectAll();
 																						s.ShowDropDown(); }" />
 												</dxe:ASPxComboBox>
