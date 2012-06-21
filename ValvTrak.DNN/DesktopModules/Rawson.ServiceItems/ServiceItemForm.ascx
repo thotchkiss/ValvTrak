@@ -183,12 +183,12 @@
 													ValueType="System.Int32" EnableCallbackMode="True" 
 													ShowLoadingPanel="False" >
 													<ClientSideEvents 
-														EndCallback="function(s,e){ 
+														<%--EndCallback="function(s,e){ 
 																					if (s.cpManufacturerID != undefined) 
 																						s.SetValue(parseInt(s.cpManufacturerID));
 	
 																					models.PerformCallback(); 
-																				}"  
+																				}"  --%>
 														SelectedIndexChanged="function(s,e) { models.PerformCallback(); }" 
 														
 														GotFocus="function(s, e) {
@@ -223,10 +223,10 @@
 											<td>
 												<dxe:ASPxComboBox ID="ModelSelect" runat="server" EnableClientSideAPI="true" ClientInstanceName="models"
 														DataSourceID="ModelDataSource" TextField="DisplayMember" Width="200" 
-														ValueField="ValueMember" OnCallback="ModelSelect_Callback" 
-													TabIndex="107" EnableIncrementalFiltering="True" 
-													IncrementalFilteringMode="StartsWith" ValueType="System.Int32" 
-													EnableCallbackMode="True" ShowLoadingPanel="False">
+														ValueField="ValueMember" OnCallback="ModelSelect_Callback" AutoPostBack="false"
+													    TabIndex="107" EnableIncrementalFiltering="True" 
+													    IncrementalFilteringMode="StartsWith" ValueType="System.Int32" 
+													    EnableCallbackMode="True" ShowLoadingPanel="False">
 														<ClientSideEvents EndCallback="function(s,e){ 
 																							if (s.cpManufacturerModelID != undefined)
 																								s.SetValue(parseInt(s.cpManufacturerModelID)); 
