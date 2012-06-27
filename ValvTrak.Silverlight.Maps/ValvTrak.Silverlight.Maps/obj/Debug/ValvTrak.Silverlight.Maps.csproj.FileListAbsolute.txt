@@ -3,12 +3,6 @@ C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\De
 C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\AppManifest.xaml
 C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\ValvTrak.Silverlight.Maps.xap
 C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\ValvTrakSilverlightMapsTestPage.html
-C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\DevExpress.Data.v11.2.dll
-C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\DevExpress.Printing.v11.2.Core.dll
-C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\DevExpress.Xpf.Core.v11.2.dll
-C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\DevExpress.Xpf.Docking.v11.2.dll
-C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\DevExpress.Xpf.Layout.v11.2.Core.dll
-C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\DevExpress.Xpf.Themes.Office2007Blue.v11.2.dll
 C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\System.Xml.Linq.dll
 C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\System.Windows.Data.dll
 C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\System.Data.Services.Client.dll
@@ -116,8 +110,6 @@ C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\De
 C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\ValvTrak.Silverlight.Maps.dll
 C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\ValvTrak.Silverlight.Maps.pdb
 C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\XapCacheFile.xml
-C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\DevExpress.Xpf.Map.v11.2.dll
-C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\DevExpress.Xpf.NavBar.v11.2.dll
 C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\DevExpress.Xpf.Map.v11.2.xml
 C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\DevExpress.Xpf.NavBar.v11.2.xml
 C:\Users\Tim\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\Bin\Debug\de\DevExpress.Xpf.NavBar.v11.2.resources.dll
