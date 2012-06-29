@@ -169,7 +169,10 @@
 			<dx:ASPxCallbackPanel ID="ClientDetailsPanel" runat="server" Width="100%" 
 				ClientInstanceName="clientDetailsPanel" 
 				OnCallback="ClientDetailsPanel_Callback">
-				<ClientSideEvents EndCallback="function(s,e){ clientDetailsWindow.Show(); }" />
+				<ClientSideEvents EndCallback="function(s,e){ 
+						clientDetailsWindow.Show();
+						clientName.Focus(); 
+					}" />
 				<PanelCollection>
 					<dxp:PanelContent>
 						<table cellpadding="0" cellspacing="3px" border="0">
@@ -370,7 +373,10 @@
 			<dx:ASPxCallbackPanel ID="LocationDetailsPanel" runat="server" Width="100%" 
 				ClientInstanceName="locationDetailsPanel" 
 				OnCallback="LocationDetailsPanel_Callback">
-				<ClientSideEvents EndCallback="function(s,e){ locationDetailsWindow.Show(); }" />
+				<ClientSideEvents EndCallback="function(s,e){ 
+						locationDetailsWindow.Show(); 
+						locationName.Focus();
+				}" />
 				<PanelCollection>
 					<dxp:PanelContent>
 						<table cellpadding="0" cellspacing="3px" border="0">
@@ -391,7 +397,7 @@
 									</dx:ASPxLabel>
 								</td>
 								<td>
-									<dx:ASPxTextBox ID="txtLocationName" runat="server" Width="170px">
+									<dx:ASPxTextBox ID="txtLocationName" runat="server" Width="170px" ClientInstanceName="locationName">
 									</dx:ASPxTextBox>
 								</td>
 							</tr>

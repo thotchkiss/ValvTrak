@@ -220,9 +220,11 @@
 													    TabIndex="107" EnableIncrementalFiltering="True" 
 													    IncrementalFilteringMode="StartsWith" ValueType="System.Int32" 
 													    EnableCallbackMode="True" ShowLoadingPanel="False">
-														<ClientSideEvents GotFocus="function(s, e) {
-																						s.SelectAll();
-																						s.ShowDropDown(); }" />
+														<ClientSideEvents GotFocus="function(s, e) 
+                                                            {
+															    s.SelectAll();
+																s.ShowDropDown(); 
+                                                            }" />
 												</dxe:ASPxComboBox>
 											</td>
 											<td>

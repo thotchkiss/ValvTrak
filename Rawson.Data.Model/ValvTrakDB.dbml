@@ -412,7 +412,9 @@
       <Association Name="Employee_WellSafetyTest1" Member="WellSafetyTests1" ThisKey="EmployeeID" OtherKey="CreatedBy" Type="WellSafetyTest" />
       <Association Name="Employee_ChemicalPumpTest" Member="ChemicalPumpTests" ThisKey="EmployeeID" OtherKey="CreatedBy" Type="ChemicalPumpTest" />
       <Association Name="Employee_ChemicalPumpTest1" Member="ChemicalPumpTests1" ThisKey="EmployeeID" OtherKey="ModifiedBy" Type="ChemicalPumpTest" />
-      <Association Name="Employee_RateValveTest" Member="RateValveTests" ThisKey="EmployeeID" OtherKey="TechID" Type="RateValveTest" />
+      <Association Name="Employee_RateValveTest" Member="RateValveTests" ThisKey="EmployeeID" OtherKey="CreatedBy" Type="RateValveTest" />
+      <Association Name="Employee_RateValveTest1" Member="RateValveTests1" ThisKey="EmployeeID" OtherKey="TechID" Type="RateValveTest" />
+      <Association Name="Employee_RateValveTest2" Member="RateValveTests2" ThisKey="EmployeeID" OtherKey="ModifiedBy" Type="RateValveTest" />
     </Type>
   </Table>
   <Table Name="dbo.ChemicalPumpTests" Member="ChemicalPumpTests">
@@ -471,6 +473,25 @@
       <Association Name="ServiceInterval_ClientLocationServiceSchedule" Member="ServiceInterval" ThisKey="ServiceIntervalId" OtherKey="ServiceIntervalId" Type="ServiceInterval" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.RateValveParts" Member="RateValveParts">
+    <Type Name="RateValvePart">
+      <Column Name="RateValvePartID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PartNumber" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Version" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="RateValvePart_RateValveTestPartsUsed" Member="RateValveTestParts" Storage="_RateValveTestPartsUseds" ThisKey="RateValvePartID" OtherKey="RateValvePartID" Type="RateValveTestPart" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RateValveTestPartsUsed" Member="RateValveTestParts">
+    <Type Name="RateValveTestPart">
+      <Column Name="RateValveTestID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RateValvePartID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Version" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="RateValvePart_RateValveTestPartsUsed" Member="RateValvePart" ThisKey="RateValvePartID" OtherKey="RateValvePartID" Type="RateValvePart" IsForeignKey="true" />
+      <Association Name="RateValveTest_RateValveTestPart" Member="RateValveTest" ThisKey="RateValveTestID" OtherKey="RateValveTestID" Type="RateValveTest" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.RateValveTests" Member="RateValveTests">
     <Type Name="RateValveTest">
       <Column Name="RateValveTestID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -483,31 +504,19 @@
       <Column Name="PercentDiscWear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ExternalCondition" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Remarks" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
-      <Column Name="TechID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TechID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CustomerWitness" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateModified" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
       <Column Name="Version" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
-      <Association Name="RateValveTest_RateValveTestPartsUsed" Member="RateValveTestPartsUseds" ThisKey="RateValveTestID" OtherKey="RateValveTestID" Type="RateValveTestPartsUsed" />
-      <Association Name="Employee_RateValveTest" Member="Employee" ThisKey="TechID" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+      <Association Name="RateValveTest_RateValveTestPart" Member="RateValveTestParts" ThisKey="RateValveTestID" OtherKey="RateValveTestID" Type="RateValveTestPart" />
+      <Association Name="Employee_RateValveTest" Member="Employee" ThisKey="CreatedBy" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
+      <Association Name="Employee_RateValveTest1" Member="Employee1" ThisKey="TechID" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
       <Association Name="Job_RateValveTest" Member="Job" ThisKey="JobID" OtherKey="JobID" Type="Job" IsForeignKey="true" />
+      <Association Name="Employee_RateValveTest2" Member="Employee2" ThisKey="ModifiedBy" OtherKey="EmployeeID" Type="Employee" IsForeignKey="true" />
       <Association Name="ServiceItem_RateValveTest" Member="ServiceItem" ThisKey="ServiceItemID" OtherKey="ServiceItemID" Type="ServiceItem" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.RateValveParts" Member="RateValveParts">
-    <Type Name="RateValvePart">
-      <Column Name="RateValvePartID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="PartNumber" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="Description" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="Version" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
-      <Association Name="RateValvePart_RateValveTestPartsUsed" Member="RateValveTestPartsUseds" ThisKey="RateValvePartID" OtherKey="RateValvePartID" Type="RateValveTestPartsUsed" />
-    </Type>
-  </Table>
-  <Table Name="dbo.RateValveTestPartsUsed" Member="RateValveTestPartsUseds">
-    <Type Name="RateValveTestPartsUsed">
-      <Column Name="RateValveTestID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="RateValvePartID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Version" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
-      <Association Name="RateValvePart_RateValveTestPartsUsed" Member="RateValvePart" ThisKey="RateValvePartID" OtherKey="RateValvePartID" Type="RateValvePart" IsForeignKey="true" />
-      <Association Name="RateValveTest_RateValveTestPartsUsed" Member="RateValveTest" ThisKey="RateValveTestID" OtherKey="RateValveTestID" Type="RateValveTest" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.ClientLocations_GetAll" Method="ClientLocations_GetAll">

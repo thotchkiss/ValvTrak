@@ -132,7 +132,10 @@
         <dx:PopupControlContentControl>
             <dx:ASPxCallbackPanel ID="DetailsPanel" runat="server" Width="100%" 
                 ClientInstanceName="detailsPanel" OnCallback="DetailsPanel_Callback">
-                <ClientSideEvents EndCallback="function(s,e){ detailsWindow.Show(); }" />
+                <ClientSideEvents EndCallback="function(s,e){ 
+                        detailsWindow.Show();
+                        empFirstName.Focus(); 
+                    }" />
                 <PanelCollection>
                     <dx:PanelContent>
                         <table cellpadding="0" cellspacing="3px" border="0">
@@ -142,7 +145,7 @@
                                     </dx:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dx:ASPxTextBox ID="txtFirstName" runat="server" Width="170px">
+                                    <dx:ASPxTextBox ID="txtFirstName" runat="server" Width="170px" ClientInstanceName="empFirstName">
                                     </dx:ASPxTextBox>
                                 </td>
                             </tr>

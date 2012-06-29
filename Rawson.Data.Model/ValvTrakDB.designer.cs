@@ -109,15 +109,15 @@ namespace Rawson.Data
     partial void InsertClientLocationServiceSchedule(Rawson.Data.Model.ClientLocationServiceSchedule instance);
     partial void UpdateClientLocationServiceSchedule(Rawson.Data.Model.ClientLocationServiceSchedule instance);
     partial void DeleteClientLocationServiceSchedule(Rawson.Data.Model.ClientLocationServiceSchedule instance);
-    partial void InsertRateValveTest(Rawson.Data.Model.RateValveTest instance);
-    partial void UpdateRateValveTest(Rawson.Data.Model.RateValveTest instance);
-    partial void DeleteRateValveTest(Rawson.Data.Model.RateValveTest instance);
     partial void InsertRateValvePart(Rawson.Data.Model.RateValvePart instance);
     partial void UpdateRateValvePart(Rawson.Data.Model.RateValvePart instance);
     partial void DeleteRateValvePart(Rawson.Data.Model.RateValvePart instance);
-    partial void InsertRateValveTestPartsUsed(Rawson.Data.Model.RateValveTestPartsUsed instance);
-    partial void UpdateRateValveTestPartsUsed(Rawson.Data.Model.RateValveTestPartsUsed instance);
-    partial void DeleteRateValveTestPartsUsed(Rawson.Data.Model.RateValveTestPartsUsed instance);
+    partial void InsertRateValveTestPart(Rawson.Data.Model.RateValveTestPart instance);
+    partial void UpdateRateValveTestPart(Rawson.Data.Model.RateValveTestPart instance);
+    partial void DeleteRateValveTestPart(Rawson.Data.Model.RateValveTestPart instance);
+    partial void InsertRateValveTest(Rawson.Data.Model.RateValveTest instance);
+    partial void UpdateRateValveTest(Rawson.Data.Model.RateValveTest instance);
+    partial void DeleteRateValveTest(Rawson.Data.Model.RateValveTest instance);
     #endregion
 		
 		public ValvTrakDBDataContext() : 
@@ -366,14 +366,6 @@ namespace Rawson.Data
 			}
 		}
 		
-		public System.Data.Linq.Table<Rawson.Data.Model.RateValveTest> RateValveTests
-		{
-			get
-			{
-				return this.GetTable<Rawson.Data.Model.RateValveTest>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Rawson.Data.Model.RateValvePart> RateValveParts
 		{
 			get
@@ -382,11 +374,19 @@ namespace Rawson.Data
 			}
 		}
 		
-		public System.Data.Linq.Table<Rawson.Data.Model.RateValveTestPartsUsed> RateValveTestPartsUseds
+		public System.Data.Linq.Table<Rawson.Data.Model.RateValveTestPart> RateValveTestParts
 		{
 			get
 			{
-				return this.GetTable<Rawson.Data.Model.RateValveTestPartsUsed>();
+				return this.GetTable<Rawson.Data.Model.RateValveTestPart>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Rawson.Data.Model.RateValveTest> RateValveTests
+		{
+			get
+			{
+				return this.GetTable<Rawson.Data.Model.RateValveTest>();
 			}
 		}
 		
@@ -9189,6 +9189,10 @@ namespace Rawson.Data.Model
 		
 		private EntitySet<RateValveTest> _RateValveTests;
 		
+		private EntitySet<RateValveTest> _RateValveTests1;
+		
+		private EntitySet<RateValveTest> _RateValveTests2;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -9233,6 +9237,8 @@ namespace Rawson.Data.Model
 			this._ChemicalPumpTests = new EntitySet<ChemicalPumpTest>(new Action<ChemicalPumpTest>(this.attach_ChemicalPumpTests), new Action<ChemicalPumpTest>(this.detach_ChemicalPumpTests));
 			this._ChemicalPumpTests1 = new EntitySet<ChemicalPumpTest>(new Action<ChemicalPumpTest>(this.attach_ChemicalPumpTests1), new Action<ChemicalPumpTest>(this.detach_ChemicalPumpTests1));
 			this._RateValveTests = new EntitySet<RateValveTest>(new Action<RateValveTest>(this.attach_RateValveTests), new Action<RateValveTest>(this.detach_RateValveTests));
+			this._RateValveTests1 = new EntitySet<RateValveTest>(new Action<RateValveTest>(this.attach_RateValveTests1), new Action<RateValveTest>(this.detach_RateValveTests1));
+			this._RateValveTests2 = new EntitySet<RateValveTest>(new Action<RateValveTest>(this.attach_RateValveTests2), new Action<RateValveTest>(this.detach_RateValveTests2));
 			OnCreated();
 		}
 		
@@ -9631,7 +9637,7 @@ namespace Rawson.Data.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_RateValveTest", Storage="_RateValveTests", ThisKey="EmployeeID", OtherKey="TechID")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_RateValveTest", Storage="_RateValveTests", ThisKey="EmployeeID", OtherKey="CreatedBy")]
 		public EntitySet<RateValveTest> RateValveTests
 		{
 			get
@@ -9641,6 +9647,32 @@ namespace Rawson.Data.Model
 			set
 			{
 				this._RateValveTests.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_RateValveTest1", Storage="_RateValveTests1", ThisKey="EmployeeID", OtherKey="TechID")]
+		public EntitySet<RateValveTest> RateValveTests1
+		{
+			get
+			{
+				return this._RateValveTests1;
+			}
+			set
+			{
+				this._RateValveTests1.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_RateValveTest2", Storage="_RateValveTests2", ThisKey="EmployeeID", OtherKey="ModifiedBy")]
+		public EntitySet<RateValveTest> RateValveTests2
+		{
+			get
+			{
+				return this._RateValveTests2;
+			}
+			set
+			{
+				this._RateValveTests2.Assign(value);
 			}
 		}
 		
@@ -9854,6 +9886,30 @@ namespace Rawson.Data.Model
 		{
 			this.SendPropertyChanging();
 			entity.Employee = null;
+		}
+		
+		private void attach_RateValveTests1(RateValveTest entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee1 = this;
+		}
+		
+		private void detach_RateValveTests1(RateValveTest entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee1 = null;
+		}
+		
+		private void attach_RateValveTests2(RateValveTest entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee2 = this;
+		}
+		
+		private void detach_RateValveTests2(RateValveTest entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee2 = null;
 		}
 	}
 	
@@ -11150,6 +11206,384 @@ namespace Rawson.Data.Model
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.RateValveParts")]
+	public partial class RateValvePart : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _RateValvePartID;
+		
+		private string _PartNumber;
+		
+		private string _Description;
+		
+		private System.Data.Linq.Binary _Version;
+		
+		private EntitySet<RateValveTestPart> _RateValveTestPartsUseds;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnRateValvePartIDChanging(int value);
+    partial void OnRateValvePartIDChanged();
+    partial void OnPartNumberChanging(string value);
+    partial void OnPartNumberChanged();
+    partial void OnDescriptionChanging(string value);
+    partial void OnDescriptionChanged();
+    partial void OnVersionChanging(System.Data.Linq.Binary value);
+    partial void OnVersionChanged();
+    #endregion
+		
+		public RateValvePart()
+		{
+			this._RateValveTestPartsUseds = new EntitySet<RateValveTestPart>(new Action<RateValveTestPart>(this.attach_RateValveTestPartsUseds), new Action<RateValveTestPart>(this.detach_RateValveTestPartsUseds));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RateValvePartID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		public int RateValvePartID
+		{
+			get
+			{
+				return this._RateValvePartID;
+			}
+			set
+			{
+				if ((this._RateValvePartID != value))
+				{
+					this.OnRateValvePartIDChanging(value);
+					this.SendPropertyChanging();
+					this._RateValvePartID = value;
+					this.SendPropertyChanged("RateValvePartID");
+					this.OnRateValvePartIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PartNumber", DbType="VarChar(255) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string PartNumber
+		{
+			get
+			{
+				return this._PartNumber;
+			}
+			set
+			{
+				if ((this._PartNumber != value))
+				{
+					this.OnPartNumberChanging(value);
+					this.SendPropertyChanging();
+					this._PartNumber = value;
+					this.SendPropertyChanged("PartNumber");
+					this.OnPartNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="VarChar(255) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this.OnDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._Description = value;
+					this.SendPropertyChanged("Description");
+					this.OnDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Version", AutoSync=AutoSync.Always, DbType="rowversion NOT NULL", CanBeNull=false, IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary Version
+		{
+			get
+			{
+				return this._Version;
+			}
+			set
+			{
+				if ((this._Version != value))
+				{
+					this.OnVersionChanging(value);
+					this.SendPropertyChanging();
+					this._Version = value;
+					this.SendPropertyChanged("Version");
+					this.OnVersionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RateValvePart_RateValveTestPartsUsed", Storage="_RateValveTestPartsUseds", ThisKey="RateValvePartID", OtherKey="RateValvePartID")]
+		public EntitySet<RateValveTestPart> RateValveTestParts
+		{
+			get
+			{
+				return this._RateValveTestPartsUseds;
+			}
+			set
+			{
+				this._RateValveTestPartsUseds.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_RateValveTestPartsUseds(RateValveTestPart entity)
+		{
+			this.SendPropertyChanging();
+			entity.RateValvePart = this;
+		}
+		
+		private void detach_RateValveTestPartsUseds(RateValveTestPart entity)
+		{
+			this.SendPropertyChanging();
+			entity.RateValvePart = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.RateValveTestPartsUsed")]
+	public partial class RateValveTestPart : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _RateValveTestID;
+		
+		private int _RateValvePartID;
+		
+		private int _Quantity;
+		
+		private System.Data.Linq.Binary _Version;
+		
+		private EntityRef<RateValvePart> _RateValvePart;
+		
+		private EntityRef<RateValveTest> _RateValveTest;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnRateValveTestIDChanging(int value);
+    partial void OnRateValveTestIDChanged();
+    partial void OnRateValvePartIDChanging(int value);
+    partial void OnRateValvePartIDChanged();
+    partial void OnQuantityChanging(int value);
+    partial void OnQuantityChanged();
+    partial void OnVersionChanging(System.Data.Linq.Binary value);
+    partial void OnVersionChanged();
+    #endregion
+		
+		public RateValveTestPart()
+		{
+			this._RateValvePart = default(EntityRef<RateValvePart>);
+			this._RateValveTest = default(EntityRef<RateValveTest>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RateValveTestID", DbType="Int NOT NULL", IsPrimaryKey=true, UpdateCheck=UpdateCheck.Never)]
+		public int RateValveTestID
+		{
+			get
+			{
+				return this._RateValveTestID;
+			}
+			set
+			{
+				if ((this._RateValveTestID != value))
+				{
+					if (this._RateValveTest.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnRateValveTestIDChanging(value);
+					this.SendPropertyChanging();
+					this._RateValveTestID = value;
+					this.SendPropertyChanged("RateValveTestID");
+					this.OnRateValveTestIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RateValvePartID", DbType="Int NOT NULL", IsPrimaryKey=true, UpdateCheck=UpdateCheck.Never)]
+		public int RateValvePartID
+		{
+			get
+			{
+				return this._RateValvePartID;
+			}
+			set
+			{
+				if ((this._RateValvePartID != value))
+				{
+					if (this._RateValvePart.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnRateValvePartIDChanging(value);
+					this.SendPropertyChanging();
+					this._RateValvePartID = value;
+					this.SendPropertyChanged("RateValvePartID");
+					this.OnRateValvePartIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantity", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public int Quantity
+		{
+			get
+			{
+				return this._Quantity;
+			}
+			set
+			{
+				if ((this._Quantity != value))
+				{
+					this.OnQuantityChanging(value);
+					this.SendPropertyChanging();
+					this._Quantity = value;
+					this.SendPropertyChanged("Quantity");
+					this.OnQuantityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Version", AutoSync=AutoSync.Always, DbType="rowversion NOT NULL", CanBeNull=false, IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary Version
+		{
+			get
+			{
+				return this._Version;
+			}
+			set
+			{
+				if ((this._Version != value))
+				{
+					this.OnVersionChanging(value);
+					this.SendPropertyChanging();
+					this._Version = value;
+					this.SendPropertyChanged("Version");
+					this.OnVersionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RateValvePart_RateValveTestPartsUsed", Storage="_RateValvePart", ThisKey="RateValvePartID", OtherKey="RateValvePartID", IsForeignKey=true)]
+		public RateValvePart RateValvePart
+		{
+			get
+			{
+				return this._RateValvePart.Entity;
+			}
+			set
+			{
+				RateValvePart previousValue = this._RateValvePart.Entity;
+				if (((previousValue != value) 
+							|| (this._RateValvePart.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._RateValvePart.Entity = null;
+						previousValue.RateValveTestParts.Remove(this);
+					}
+					this._RateValvePart.Entity = value;
+					if ((value != null))
+					{
+						value.RateValveTestParts.Add(this);
+						this._RateValvePartID = value.RateValvePartID;
+					}
+					else
+					{
+						this._RateValvePartID = default(int);
+					}
+					this.SendPropertyChanged("RateValvePart");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RateValveTest_RateValveTestPart", Storage="_RateValveTest", ThisKey="RateValveTestID", OtherKey="RateValveTestID", IsForeignKey=true)]
+		public RateValveTest RateValveTest
+		{
+			get
+			{
+				return this._RateValveTest.Entity;
+			}
+			set
+			{
+				RateValveTest previousValue = this._RateValveTest.Entity;
+				if (((previousValue != value) 
+							|| (this._RateValveTest.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._RateValveTest.Entity = null;
+						previousValue.RateValveTestParts.Remove(this);
+					}
+					this._RateValveTest.Entity = value;
+					if ((value != null))
+					{
+						value.RateValveTestParts.Add(this);
+						this._RateValveTestID = value.RateValveTestID;
+					}
+					else
+					{
+						this._RateValveTestID = default(int);
+					}
+					this.SendPropertyChanged("RateValveTest");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.RateValveTests")]
 	public partial class RateValveTest : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -11176,15 +11610,29 @@ namespace Rawson.Data.Model
 		
 		private string _Remarks;
 		
-		private int _TechID;
+		private System.Nullable<int> _TechID;
+		
+		private string _CustomerWitness;
+		
+		private System.Nullable<int> _CreatedBy;
+		
+		private System.Nullable<System.DateTime> _DateCreated;
+		
+		private System.Nullable<int> _ModifiedBy;
+		
+		private System.Nullable<System.DateTime> _DateModified;
 		
 		private System.Data.Linq.Binary _Version;
 		
-		private EntitySet<RateValveTestPartsUsed> _RateValveTestPartsUseds;
+		private EntitySet<RateValveTestPart> _RateValveTestParts;
 		
 		private EntityRef<Employee> _Employee;
 		
+		private EntityRef<Employee> _Employee1;
+		
 		private EntityRef<Job> _Job;
+		
+		private EntityRef<Employee> _Employee2;
 		
 		private EntityRef<ServiceItem> _ServiceItem;
 		
@@ -11212,17 +11660,29 @@ namespace Rawson.Data.Model
     partial void OnExternalConditionChanged();
     partial void OnRemarksChanging(string value);
     partial void OnRemarksChanged();
-    partial void OnTechIDChanging(int value);
+    partial void OnTechIDChanging(System.Nullable<int> value);
     partial void OnTechIDChanged();
+    partial void OnCustomerWitnessChanging(string value);
+    partial void OnCustomerWitnessChanged();
+    partial void OnCreatedByChanging(System.Nullable<int> value);
+    partial void OnCreatedByChanged();
+    partial void OnDateCreatedChanging(System.Nullable<System.DateTime> value);
+    partial void OnDateCreatedChanged();
+    partial void OnModifiedByChanging(System.Nullable<int> value);
+    partial void OnModifiedByChanged();
+    partial void OnDateModifiedChanging(System.Nullable<System.DateTime> value);
+    partial void OnDateModifiedChanged();
     partial void OnVersionChanging(System.Data.Linq.Binary value);
     partial void OnVersionChanged();
     #endregion
 		
 		public RateValveTest()
 		{
-			this._RateValveTestPartsUseds = new EntitySet<RateValveTestPartsUsed>(new Action<RateValveTestPartsUsed>(this.attach_RateValveTestPartsUseds), new Action<RateValveTestPartsUsed>(this.detach_RateValveTestPartsUseds));
+			this._RateValveTestParts = new EntitySet<RateValveTestPart>(new Action<RateValveTestPart>(this.attach_RateValveTestParts), new Action<RateValveTestPart>(this.detach_RateValveTestParts));
 			this._Employee = default(EntityRef<Employee>);
+			this._Employee1 = default(EntityRef<Employee>);
 			this._Job = default(EntityRef<Job>);
+			this._Employee2 = default(EntityRef<Employee>);
 			this._ServiceItem = default(EntityRef<ServiceItem>);
 			OnCreated();
 		}
@@ -11435,8 +11895,8 @@ namespace Rawson.Data.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TechID", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public int TechID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TechID", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		public System.Nullable<int> TechID
 		{
 			get
 			{
@@ -11446,7 +11906,7 @@ namespace Rawson.Data.Model
 			{
 				if ((this._TechID != value))
 				{
-					if (this._Employee.HasLoadedOrAssignedValue)
+					if (this._Employee1.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -11455,6 +11915,114 @@ namespace Rawson.Data.Model
 					this._TechID = value;
 					this.SendPropertyChanged("TechID");
 					this.OnTechIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomerWitness", DbType="VarChar(255)", UpdateCheck=UpdateCheck.Never)]
+		public string CustomerWitness
+		{
+			get
+			{
+				return this._CustomerWitness;
+			}
+			set
+			{
+				if ((this._CustomerWitness != value))
+				{
+					this.OnCustomerWitnessChanging(value);
+					this.SendPropertyChanging();
+					this._CustomerWitness = value;
+					this.SendPropertyChanged("CustomerWitness");
+					this.OnCustomerWitnessChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedBy", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		public System.Nullable<int> CreatedBy
+		{
+			get
+			{
+				return this._CreatedBy;
+			}
+			set
+			{
+				if ((this._CreatedBy != value))
+				{
+					if (this._Employee.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnCreatedByChanging(value);
+					this.SendPropertyChanging();
+					this._CreatedBy = value;
+					this.SendPropertyChanged("CreatedBy");
+					this.OnCreatedByChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateCreated", DbType="SmallDateTime", UpdateCheck=UpdateCheck.Never)]
+		public System.Nullable<System.DateTime> DateCreated
+		{
+			get
+			{
+				return this._DateCreated;
+			}
+			set
+			{
+				if ((this._DateCreated != value))
+				{
+					this.OnDateCreatedChanging(value);
+					this.SendPropertyChanging();
+					this._DateCreated = value;
+					this.SendPropertyChanged("DateCreated");
+					this.OnDateCreatedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedBy", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		public System.Nullable<int> ModifiedBy
+		{
+			get
+			{
+				return this._ModifiedBy;
+			}
+			set
+			{
+				if ((this._ModifiedBy != value))
+				{
+					if (this._Employee2.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnModifiedByChanging(value);
+					this.SendPropertyChanging();
+					this._ModifiedBy = value;
+					this.SendPropertyChanged("ModifiedBy");
+					this.OnModifiedByChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateModified", DbType="SmallDateTime", UpdateCheck=UpdateCheck.Never)]
+		public System.Nullable<System.DateTime> DateModified
+		{
+			get
+			{
+				return this._DateModified;
+			}
+			set
+			{
+				if ((this._DateModified != value))
+				{
+					this.OnDateModifiedChanging(value);
+					this.SendPropertyChanging();
+					this._DateModified = value;
+					this.SendPropertyChanged("DateModified");
+					this.OnDateModifiedChanged();
 				}
 			}
 		}
@@ -11479,20 +12047,20 @@ namespace Rawson.Data.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RateValveTest_RateValveTestPartsUsed", Storage="_RateValveTestPartsUseds", ThisKey="RateValveTestID", OtherKey="RateValveTestID")]
-		public EntitySet<RateValveTestPartsUsed> RateValveTestPartsUseds
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RateValveTest_RateValveTestPart", Storage="_RateValveTestParts", ThisKey="RateValveTestID", OtherKey="RateValveTestID")]
+		public EntitySet<RateValveTestPart> RateValveTestParts
 		{
 			get
 			{
-				return this._RateValveTestPartsUseds;
+				return this._RateValveTestParts;
 			}
 			set
 			{
-				this._RateValveTestPartsUseds.Assign(value);
+				this._RateValveTestParts.Assign(value);
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_RateValveTest", Storage="_Employee", ThisKey="TechID", OtherKey="EmployeeID", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_RateValveTest", Storage="_Employee", ThisKey="CreatedBy", OtherKey="EmployeeID", IsForeignKey=true)]
 		public Employee Employee
 		{
 			get
@@ -11515,13 +12083,47 @@ namespace Rawson.Data.Model
 					if ((value != null))
 					{
 						value.RateValveTests.Add(this);
+						this._CreatedBy = value.EmployeeID;
+					}
+					else
+					{
+						this._CreatedBy = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Employee");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_RateValveTest1", Storage="_Employee1", ThisKey="TechID", OtherKey="EmployeeID", IsForeignKey=true)]
+		public Employee Employee1
+		{
+			get
+			{
+				return this._Employee1.Entity;
+			}
+			set
+			{
+				Employee previousValue = this._Employee1.Entity;
+				if (((previousValue != value) 
+							|| (this._Employee1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Employee1.Entity = null;
+						previousValue.RateValveTests1.Remove(this);
+					}
+					this._Employee1.Entity = value;
+					if ((value != null))
+					{
+						value.RateValveTests1.Add(this);
 						this._TechID = value.EmployeeID;
 					}
 					else
 					{
-						this._TechID = default(int);
+						this._TechID = default(Nullable<int>);
 					}
-					this.SendPropertyChanged("Employee");
+					this.SendPropertyChanged("Employee1");
 				}
 			}
 		}
@@ -11556,6 +12158,40 @@ namespace Rawson.Data.Model
 						this._JobID = default(int);
 					}
 					this.SendPropertyChanged("Job");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_RateValveTest2", Storage="_Employee2", ThisKey="ModifiedBy", OtherKey="EmployeeID", IsForeignKey=true)]
+		public Employee Employee2
+		{
+			get
+			{
+				return this._Employee2.Entity;
+			}
+			set
+			{
+				Employee previousValue = this._Employee2.Entity;
+				if (((previousValue != value) 
+							|| (this._Employee2.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Employee2.Entity = null;
+						previousValue.RateValveTests2.Remove(this);
+					}
+					this._Employee2.Entity = value;
+					if ((value != null))
+					{
+						value.RateValveTests2.Add(this);
+						this._ModifiedBy = value.EmployeeID;
+					}
+					else
+					{
+						this._ModifiedBy = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Employee2");
 				}
 			}
 		}
@@ -11614,394 +12250,16 @@ namespace Rawson.Data.Model
 			}
 		}
 		
-		private void attach_RateValveTestPartsUseds(RateValveTestPartsUsed entity)
+		private void attach_RateValveTestParts(RateValveTestPart entity)
 		{
 			this.SendPropertyChanging();
 			entity.RateValveTest = this;
 		}
 		
-		private void detach_RateValveTestPartsUseds(RateValveTestPartsUsed entity)
+		private void detach_RateValveTestParts(RateValveTestPart entity)
 		{
 			this.SendPropertyChanging();
 			entity.RateValveTest = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.RateValveParts")]
-	public partial class RateValvePart : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _RateValvePartID;
-		
-		private string _PartNumber;
-		
-		private string _Description;
-		
-		private System.Data.Linq.Binary _Version;
-		
-		private EntitySet<RateValveTestPartsUsed> _RateValveTestPartsUseds;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnRateValvePartIDChanging(int value);
-    partial void OnRateValvePartIDChanged();
-    partial void OnPartNumberChanging(string value);
-    partial void OnPartNumberChanged();
-    partial void OnDescriptionChanging(string value);
-    partial void OnDescriptionChanged();
-    partial void OnVersionChanging(System.Data.Linq.Binary value);
-    partial void OnVersionChanged();
-    #endregion
-		
-		public RateValvePart()
-		{
-			this._RateValveTestPartsUseds = new EntitySet<RateValveTestPartsUsed>(new Action<RateValveTestPartsUsed>(this.attach_RateValveTestPartsUseds), new Action<RateValveTestPartsUsed>(this.detach_RateValveTestPartsUseds));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RateValvePartID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
-		public int RateValvePartID
-		{
-			get
-			{
-				return this._RateValvePartID;
-			}
-			set
-			{
-				if ((this._RateValvePartID != value))
-				{
-					this.OnRateValvePartIDChanging(value);
-					this.SendPropertyChanging();
-					this._RateValvePartID = value;
-					this.SendPropertyChanged("RateValvePartID");
-					this.OnRateValvePartIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PartNumber", DbType="VarChar(255) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string PartNumber
-		{
-			get
-			{
-				return this._PartNumber;
-			}
-			set
-			{
-				if ((this._PartNumber != value))
-				{
-					this.OnPartNumberChanging(value);
-					this.SendPropertyChanging();
-					this._PartNumber = value;
-					this.SendPropertyChanged("PartNumber");
-					this.OnPartNumberChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="VarChar(255) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public string Description
-		{
-			get
-			{
-				return this._Description;
-			}
-			set
-			{
-				if ((this._Description != value))
-				{
-					this.OnDescriptionChanging(value);
-					this.SendPropertyChanging();
-					this._Description = value;
-					this.SendPropertyChanged("Description");
-					this.OnDescriptionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Version", AutoSync=AutoSync.Always, DbType="rowversion NOT NULL", CanBeNull=false, IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary Version
-		{
-			get
-			{
-				return this._Version;
-			}
-			set
-			{
-				if ((this._Version != value))
-				{
-					this.OnVersionChanging(value);
-					this.SendPropertyChanging();
-					this._Version = value;
-					this.SendPropertyChanged("Version");
-					this.OnVersionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RateValvePart_RateValveTestPartsUsed", Storage="_RateValveTestPartsUseds", ThisKey="RateValvePartID", OtherKey="RateValvePartID")]
-		public EntitySet<RateValveTestPartsUsed> RateValveTestPartsUseds
-		{
-			get
-			{
-				return this._RateValveTestPartsUseds;
-			}
-			set
-			{
-				this._RateValveTestPartsUseds.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_RateValveTestPartsUseds(RateValveTestPartsUsed entity)
-		{
-			this.SendPropertyChanging();
-			entity.RateValvePart = this;
-		}
-		
-		private void detach_RateValveTestPartsUseds(RateValveTestPartsUsed entity)
-		{
-			this.SendPropertyChanging();
-			entity.RateValvePart = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.RateValveTestPartsUsed")]
-	public partial class RateValveTestPartsUsed : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _RateValveTestID;
-		
-		private int _RateValvePartID;
-		
-		private int _Quantity;
-		
-		private System.Data.Linq.Binary _Version;
-		
-		private EntityRef<RateValvePart> _RateValvePart;
-		
-		private EntityRef<RateValveTest> _RateValveTest;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnRateValveTestIDChanging(int value);
-    partial void OnRateValveTestIDChanged();
-    partial void OnRateValvePartIDChanging(int value);
-    partial void OnRateValvePartIDChanged();
-    partial void OnQuantityChanging(int value);
-    partial void OnQuantityChanged();
-    partial void OnVersionChanging(System.Data.Linq.Binary value);
-    partial void OnVersionChanged();
-    #endregion
-		
-		public RateValveTestPartsUsed()
-		{
-			this._RateValvePart = default(EntityRef<RateValvePart>);
-			this._RateValveTest = default(EntityRef<RateValveTest>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RateValveTestID", DbType="Int NOT NULL", IsPrimaryKey=true, UpdateCheck=UpdateCheck.Never)]
-		public int RateValveTestID
-		{
-			get
-			{
-				return this._RateValveTestID;
-			}
-			set
-			{
-				if ((this._RateValveTestID != value))
-				{
-					if (this._RateValveTest.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnRateValveTestIDChanging(value);
-					this.SendPropertyChanging();
-					this._RateValveTestID = value;
-					this.SendPropertyChanged("RateValveTestID");
-					this.OnRateValveTestIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RateValvePartID", DbType="Int NOT NULL", IsPrimaryKey=true, UpdateCheck=UpdateCheck.Never)]
-		public int RateValvePartID
-		{
-			get
-			{
-				return this._RateValvePartID;
-			}
-			set
-			{
-				if ((this._RateValvePartID != value))
-				{
-					if (this._RateValvePart.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnRateValvePartIDChanging(value);
-					this.SendPropertyChanging();
-					this._RateValvePartID = value;
-					this.SendPropertyChanged("RateValvePartID");
-					this.OnRateValvePartIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Quantity", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
-		public int Quantity
-		{
-			get
-			{
-				return this._Quantity;
-			}
-			set
-			{
-				if ((this._Quantity != value))
-				{
-					this.OnQuantityChanging(value);
-					this.SendPropertyChanging();
-					this._Quantity = value;
-					this.SendPropertyChanged("Quantity");
-					this.OnQuantityChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Version", AutoSync=AutoSync.Always, DbType="rowversion NOT NULL", CanBeNull=false, IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary Version
-		{
-			get
-			{
-				return this._Version;
-			}
-			set
-			{
-				if ((this._Version != value))
-				{
-					this.OnVersionChanging(value);
-					this.SendPropertyChanging();
-					this._Version = value;
-					this.SendPropertyChanged("Version");
-					this.OnVersionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RateValvePart_RateValveTestPartsUsed", Storage="_RateValvePart", ThisKey="RateValvePartID", OtherKey="RateValvePartID", IsForeignKey=true)]
-		public RateValvePart RateValvePart
-		{
-			get
-			{
-				return this._RateValvePart.Entity;
-			}
-			set
-			{
-				RateValvePart previousValue = this._RateValvePart.Entity;
-				if (((previousValue != value) 
-							|| (this._RateValvePart.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._RateValvePart.Entity = null;
-						previousValue.RateValveTestPartsUseds.Remove(this);
-					}
-					this._RateValvePart.Entity = value;
-					if ((value != null))
-					{
-						value.RateValveTestPartsUseds.Add(this);
-						this._RateValvePartID = value.RateValvePartID;
-					}
-					else
-					{
-						this._RateValvePartID = default(int);
-					}
-					this.SendPropertyChanged("RateValvePart");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RateValveTest_RateValveTestPartsUsed", Storage="_RateValveTest", ThisKey="RateValveTestID", OtherKey="RateValveTestID", IsForeignKey=true)]
-		public RateValveTest RateValveTest
-		{
-			get
-			{
-				return this._RateValveTest.Entity;
-			}
-			set
-			{
-				RateValveTest previousValue = this._RateValveTest.Entity;
-				if (((previousValue != value) 
-							|| (this._RateValveTest.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._RateValveTest.Entity = null;
-						previousValue.RateValveTestPartsUseds.Remove(this);
-					}
-					this._RateValveTest.Entity = value;
-					if ((value != null))
-					{
-						value.RateValveTestPartsUseds.Add(this);
-						this._RateValveTestID = value.RateValveTestID;
-					}
-					else
-					{
-						this._RateValveTestID = default(int);
-					}
-					this.SendPropertyChanged("RateValveTest");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 	

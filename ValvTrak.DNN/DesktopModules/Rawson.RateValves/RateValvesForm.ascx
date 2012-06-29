@@ -59,7 +59,7 @@
 									</dxe:ASPxLabel>
 								</td>
 								<td>
-									<dxe:ASPxLabel ID="ValveTestIDLabel" runat="server">
+									<dxe:ASPxLabel ID="RateValveTestIDLabel" runat="server">
 									</dxe:ASPxLabel>
 								</td>
 								<td>
@@ -106,13 +106,9 @@
 								</td>
 								<td>&nbsp;</td>
 								<td>
-									<dxe:ASPxLabel ID="ASPxLabel6" runat="server" Text="Cost Ctr. :">
-									</dxe:ASPxLabel>
-								</td>
+									&nbsp;</td>
 								<td>
-									<dxe:ASPxTextBox ID="CostCenterTextBox" runat="server" Width="170px" 
-										TabIndex="2"></dxe:ASPxTextBox>
-								</td>
+									&nbsp;</td>
 							</tr>
 							<tr align="left">
 								<td class="style1">
@@ -211,48 +207,47 @@
 							</tr>
 							<tr>
 								<td>
-									<dxe:ASPxLabel ID="ASPxLabel10" runat="server" Text="Set Pressure :">
+									<dxe:ASPxLabel ID="ASPxLabel10" runat="server" Text="Cond. Wear Sleeve :">
 									</dxe:ASPxLabel>
 								</td>
 								<td>
-									<dxe:ASPxSpinEdit ID="seSetPressure" runat="server" 
-										ClientInstanceName="setPressure" Height="21px" Number="0" Width="100px" 
-										TabIndex="8" MaxValue="15000" DecimalPlaces="2" EnableClientSideAPI="True">
-										<ClientSideEvents NumberChanged="function(s,e){ 
-																			var sp = s.GetValue();
-																			var bp = backPressure.GetValue();
-																						
-																			coldDiffPressure.SetText(String(sp - bp)); }" />
-									</dxe:ASPxSpinEdit>
+									<dxe:ASPxComboBox ID="cmbWearSleeve" runat="server" Width="120px" ValueType="System.Int32">
+                                        <Items>
+                                            <dxe:ListEditItem Text="Good" Value="0" />
+                                            <dxe:ListEditItem Text="Needs Replaced" Value="1" />
+                                            <dxe:ListEditItem Text="Replaced" Value="2" />
+                                        </Items>
+                                    </dxe:ASPxComboBox>
 								</td>
 								<td>
 									&nbsp;
 								</td>
 								<td nowrap="nowrap">
-									<dxe:ASPxLabel ID="ASPxLabel11" runat="server" Text="Back Pressure :">
+									<dxe:ASPxLabel ID="ASPxLabel11" runat="server" Text="Cond. Disc :">
 									</dxe:ASPxLabel>
 								</td>
 								<td>
-									<dxe:ASPxSpinEdit ID="seBackPressure" runat="server" 
-										ClientInstanceName="backPressure" Height="21px" Number="0" Width="100px" 
-										TabIndex="9" MaxValue="10000" DecimalPlaces="2">
-										<ClientSideEvents NumberChanged="function(s,e){ 
-																			var sp = setPressure.GetValue();
-																			var bp = s.GetValue();
-																						
-																			coldDiffPressure.SetText(String(sp - bp)); }" />
-									</dxe:ASPxSpinEdit>
+									<dxe:ASPxComboBox ID="cmbCondDisc" runat="server" Width="120px" ValueType="System.Int32">
+                                        <Items>
+                                            <dxe:ListEditItem Text="Good" Value="0" />
+                                            <dxe:ListEditItem Text="Needs Replaced" Value="1" />
+                                            <dxe:ListEditItem Text="Replaced" Value="2" />
+                                        </Items>
+                                    </dxe:ASPxComboBox>
 								</td>
 								<td></td>
 								<td>
-									<dxe:ASPxLabel ID="ASPxLabel12" runat="server" Text="Cold Diff. Pressure :" >
+									<dxe:ASPxLabel ID="ASPxLabel12" runat="server" Text="External Cond. :" >
 									</dxe:ASPxLabel>
 								</td>
 								<td>
-									<dxe:ASPxTextBox ID="ColdDiffPressureTextBox" runat="server" 
-										ClientInstanceName="coldDiffPressure" Width="100px" 
-										TabIndex="10" ReadOnly="True" Enabled="false">
-									</dxe:ASPxTextBox>
+									<dxe:ASPxComboBox ID="cmbExternalCond" runat="server" Width="120px" ValueType="System.Int32">
+                                        <Items>
+                                            <dxe:ListEditItem Text="Good" Value="0" />
+                                            <dxe:ListEditItem Text="Needs Replaced" Value="1" />
+                                            <dxe:ListEditItem Text="Replaced" Value="2" />
+                                        </Items>
+                                    </dxe:ASPxComboBox>
 								</td>
 							</tr>
 							<tr>
@@ -268,6 +263,44 @@
 								<td></td>
 								<td></td>
 							</tr>
+                            							<tr>
+								<td>
+									&nbsp;</td>
+								<td>
+									&nbsp;</td>
+								<td></td>
+								<td>
+                                    <dxe:ASPxLabel ID="ASPxLabel14" runat="server" Text="% Disc Wear :">
+                                    </dxe:ASPxLabel>
+                                </td>
+								<td>
+                                    <dxe:ASPxComboBox ID="cmbPercDiscWear" runat="server" Width="120px" ValueType="System.Int32">
+                                        <Items>
+                                            <dxe:ListEditItem Text="30 %" Value="30" />
+                                            <dxe:ListEditItem Text="40 %" Value="40" />
+                                            <dxe:ListEditItem Text="50 %" Value="50" />
+                                            <dxe:ListEditItem Text="60 %" Value="60" />
+                                        </Items>
+                                    </dxe:ASPxComboBox>
+                                </td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<dxe:ASPxImage ID="ASPxImage5" runat="server" ImageUrl="~/spacer.gif" Height="10px">
+									</dxe:ASPxImage>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+
                             <tr>
 								<td>
 									<dxe:ASPxLabel ID="ASPxLabel30" runat="server" Text="Remarks :">
@@ -356,7 +389,7 @@
                                         </thead>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit1" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="seCD1" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -371,7 +404,7 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit2" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="seCD2" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -384,7 +417,7 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit3" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="seCSKSFDAL2015" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -399,12 +432,14 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit4" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="seWSXA0066" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
-                                                WSXA0066</td>
+                                                <dxe:ASPxLabel ID="ASPxLabel100" runat="server" Text="WSXA0066">
+                                                </dxe:ASPxLabel>
+                                            </td>
                                             <td align="right">
                                                 <dxe:ASPxLabel ID="ASPxLabel19" runat="server" Text="Wear Slv. Assm.">
                                                 </dxe:ASPxLabel>
@@ -412,7 +447,7 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit5" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="seCST00022" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -427,7 +462,7 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit6" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="seDRV38" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -442,7 +477,7 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit7" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="seFT000024" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -457,7 +492,7 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit8" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="seCSKSFDAL2050D2" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -472,7 +507,7 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit9" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="seCST00051" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -487,7 +522,7 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit10" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="seCRKFBA2006" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -513,7 +548,7 @@
                                         </thead>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit11" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="seBSE00001" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -528,7 +563,7 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit12" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="seBBL00025" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -543,7 +578,7 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit13" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="seBST00008" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -558,7 +593,7 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit14" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="seSB140125" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -573,7 +608,7 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit15" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="se51974200" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -588,7 +623,7 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit16" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="se52070434" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -603,7 +638,7 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit17" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="se51961525" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -618,7 +653,7 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit18" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="se52119435" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>
@@ -633,7 +668,7 @@
                                         </tr>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="ASPxSpinEdit19" runat="server" Height="21px" Number="0" 
+                                                <dxe:ASPxSpinEdit ID="se51960230" runat="server" Height="21px" Number="0" 
                                                     Width="50px">
                                                 </dxe:ASPxSpinEdit>
                                             </td>

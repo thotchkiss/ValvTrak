@@ -11,7 +11,7 @@
 <%@ Register assembly="DevExpress.Web.v11.2" namespace="DevExpress.Web.ASPxPopupControl" tagprefix="dx" %>
 
 <script type="text/javascript">
-    
+
     function OnGetManufacturerRowID(value) {
 
         manufacturerGridLocalData.Set("ManufacturerID", value);
@@ -20,8 +20,22 @@
         modelGridPanel.PerformCallback();
     }
 
+    function OnGetManufacturerRowIdWithEdit(value) {
+
+        manufacturerGridLocalData.Set("ManufacturerID", value);
+        modelGridLocalData.Set("ManufacturerID", value);
+
+        modelGridPanel.PerformCallback();
+        manufacturerPanel.PerformCallback(); 
+    }
+
     function OnGetModelRowID(value) {
         modelGridLocalData.Set("ManufacturerModelID", value);
+    }
+
+    function OnGetModelRowIdWithEdit(value) {
+        modelGridLocalData.Set("ManufacturerModelID", value);
+        modelPanel.PerformCallback(); 
     }
 
 </script>
@@ -43,7 +57,11 @@
                                 }" 
                                 CustomButtonClick="function(s,e) {
                                     e.processOnServer = false;
-                                    manufacturerPanel.PerformCallback(e.visibleIndex); }"  />
+                                    
+                                    manufacturerGrid.SetFocusedRowIndex(e.visibleIndex);
+                                    manufacturerGrid.GetRowValues(e.visibleIndex, 'ManufacturerID', OnGetManufacturerRowIdWithEdit);
+
+                                }"  />
                             <Columns>
                                 <dx:GridViewCommandColumn ButtonType="Image" Caption=" " 
                                     ShowInCustomizationForm="True" VisibleIndex="0" Width="20px">
@@ -115,8 +133,12 @@
                                     modelGrid.GetRowValues(modelGrid.GetFocusedRowIndex(), 'ManufacturerModelID', OnGetModelRowID);
                                 }" 
                                 CustomButtonClick="function(s,e) {
-                                    e.processOnServer = false;
-                                    modelPanel.PerformCallback(e.visibleIndex); }" />
+                                        e.processOnServer = false;
+
+                                        modelGrid.SetFocusedRowIndex(e.visibleIndex);
+                                        modelGrid.GetRowValues(e.visibleIndex, 'ManufacturerModelID', OnGetModelRowIdWithEdit);
+
+                                    }" />
                             <Columns>
                                 <dx:GridViewCommandColumn ButtonType="Image" Caption=" " 
                                     ShowInCustomizationForm="True" VisibleIndex="0" Width="40px">
@@ -201,7 +223,10 @@
             <dx:ASPxCallbackPanel ID="ManufacturerPanel" 
                 ClientInstanceName="manufacturerPanel" runat="server" Width="100%" 
                 OnCallback="ManufacturerPanel_Callback">
-                <ClientSideEvents EndCallback="function(s,e){ manufacturerWindow.Show(); }" />
+                <ClientSideEvents EndCallback="function(s,e){ 
+                        manufacturerWindow.Show(); 
+                        manufName.Focus();
+                }" />
                 <PanelCollection>
                     <dx:PanelContent>
                         <table cellpadding="0" cellspacing="3px" border="0" width="100%">
@@ -211,7 +236,7 @@
                                     </dx:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dx:ASPxTextBox ID="txtManufacturerName" runat="server" Width="170px">
+                                    <dx:ASPxTextBox ID="txtManufacturerName" runat="server" Width="170px" ClientInstanceName="manufName">
                                     </dx:ASPxTextBox>
                                 </td>
                                 <td>
@@ -241,7 +266,10 @@
         <dx:PopupControlContentControl>
             <dx:ASPxCallbackPanel ID="ModelPanel" ClientInstanceName="modelPanel" 
                 runat="server" Width="100%" OnCallback="ModelPanel_Callback">
-                <ClientSideEvents EndCallback="function(s,e){ modelWindow.Show(); }" />
+                <ClientSideEvents EndCallback="function(s,e){ 
+                        modelWindow.Show(); 
+                        modelName.Focus();
+                }" />
                 <PanelCollection>
                     <dx:PanelContent>
                         <table cellpadding="0" cellspacing="3px" border="0" width="100%">
