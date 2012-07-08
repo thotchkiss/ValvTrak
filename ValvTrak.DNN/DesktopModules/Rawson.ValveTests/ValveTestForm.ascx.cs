@@ -20,7 +20,7 @@ namespace Rawson.ValveTests
         {
             ValveTestFormController controller = new ValveTestFormController ();
 
-            if ( Request.QueryString[ "ValveTestID" ] == null )
+            if ( Request.QueryString[ "RateValveTestID" ] == null )
             {
                 controller.Options.TrackingMode = TrackingModes.Disconnected;
                 controller.NewEntity ();
@@ -34,13 +34,13 @@ namespace Rawson.ValveTests
             else
             {
                 int vtId;
-                if ( int.TryParse ( Request.QueryString[ "ValveTestID" ], out vtId ) )
+                if ( int.TryParse ( Request.QueryString[ "RateValveTestID" ], out vtId ) )
                 {
                     controller.Options.TrackingMode = TrackingModes.Connected;
                     controller.Load ( vtId );
                 }
                 else
-                    Exceptions.ProcessModuleLoadException ( "Unable to match ValveTestID", this, null );
+                    Exceptions.ProcessModuleLoadException ( "Unable to match RateValveTestID", this, null );
             }
 
             Context.Items.Add ( "#boController", controller );

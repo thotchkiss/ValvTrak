@@ -36,17 +36,23 @@ public class RateValveFormController : BaseController<RateValveTest>
         return Entity.ServiceItem;
     }
 
-    public List<RateValveTestPart> CreatePartsList()
+    public List<RateValveTestPart> SetPartsList()
     {
-        return Context.RateValveParts.Select(rvp => new RateValveTestPart { RateValvePartID = rvp.RateValvePartID, RateValveTestID = Entity.RateValveTestID, Quantity = 0 }).ToList();
-    }
+        var parts = Context.RateValveParts.ToList();
+        List<RateValveTestPart> testParts = new List<RateValveTestPart>();
 
-    public List<RateValveTestPart> SetPartsList(int rateValveTestId)
-    {
-        List<RateValveTestPart> parts = Context.RateValveTestParts.Where(rvtpu => rvtpu.RateValveTestID == rateValveTestId).ToList();
-        Entity.RateValveTestParts.AddRange(parts);
+        parts.ForEach((rvp) => 
+            {
+                var rvtp = Activator.CreateInstance<RateValveTestPart>();
 
-        return parts;
+                rvtp.RateValvePartID = rvtp.RateValvePartID;
+                rvtp.RateValveTestID = Entity.RateValveTestID;
+
+                Entity.RateValveTestParts.Add(rvtp);
+                testParts.Add(rvtp);
+            });
+
+        return testParts;
     }
 
     public override void Detach()

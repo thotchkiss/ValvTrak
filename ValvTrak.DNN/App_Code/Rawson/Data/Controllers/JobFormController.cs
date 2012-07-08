@@ -34,7 +34,7 @@ namespace Rawson.Data.Controllers
 
             switch (jobTypeId)
             {
-                case (int)JobTypeEnum.Testing:
+                case (int)JobTypeEnum.ReliefValve:
                     forms = Context.ValveTests.Where(vt => vt.JobID == jobId).Select(vt => new JobFormGridItem
                                        {
                                            ID = vt.ValveTestID,

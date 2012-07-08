@@ -26,26 +26,26 @@ namespace Rawson.Jobs
 {
     public partial class Details : PortalModuleBase
     {
-        protected void Page_Init ( object sender, EventArgs e )
+        protected void Page_Init(object sender, EventArgs e)
         {
-            JobFormController controller = new JobFormController ();
-            
-            if ( Request.QueryString[ "JobID" ] == null )
+            JobFormController controller = new JobFormController();
+
+            if (Request.QueryString["JobID"] == null)
             {
                 controller.Options.TrackingMode = TrackingModes.Disconnected;
-                controller.NewEntity ();
+                controller.NewEntity();
             }
             else
             {
                 int jobId;
-                if ( int.TryParse ( Request.QueryString[ "JobID" ], out jobId ) )
+                if (int.TryParse(Request.QueryString["JobID"], out jobId))
                 {
                     controller.Options.TrackingMode = TrackingModes.Connected;
-                    controller.Load ( jobId );
+                    controller.Load(jobId);
                 }
                 else
                 {
-                    Exceptions.ProcessModuleLoadException ( "Unable to match JobID", this, new Exception ( "Unable to match JobID" ) );
+                    Exceptions.ProcessModuleLoadException("Unable to match JobID", this, new Exception("Unable to match JobID"));
                 }
             }
 
@@ -53,27 +53,27 @@ namespace Rawson.Jobs
         }
 
 
-        protected void Page_Load ( object sender, EventArgs e )
+        protected void Page_Load(object sender, EventArgs e)
         {
             ServiceDetailsGrid.Templates.PagerBar = new CustomPagerBarTemplate();
             ClientSelect.Focus();
 
-            if ( !Page.IsPostBack )
+            if (!Page.IsPostBack)
             {
                 LoadData();
             }
         }
 
-        private void LoadData ()
+        private void LoadData()
         {
             try
             {
                 JobFormController controller = Context.Items["#boController"] as JobFormController;
                 Job job = controller.Entity;
 
-                if ( job.Version == null ) // new Job
+                if (job.Version == null) // new Job
                 {
-                    lblJobID.Text = "NEW";                   
+                    lblJobID.Text = "NEW";
 
                     job.CreatedBy = controller.ResolveEmployeeID(UserId);
                     job.CreationDate = DateTime.Now;
@@ -83,9 +83,9 @@ namespace Rawson.Jobs
                 }
                 else
                 {
-                    lblJobID.Text = job.JobID.ToString ();
+                    lblJobID.Text = job.JobID.ToString();
 
-                    lnkNew.NavigateUrl = GetNewFormUrl ( job.JobTypeID, job.JobID );
+                    lnkNew.NavigateUrl = GetNewFormUrl(job.JobTypeID, job.JobID);
                     lnkNew.Enabled = true;
                 }
 
@@ -107,7 +107,7 @@ namespace Rawson.Jobs
                 DotNumberTextBox.Text = job.DotNumber ?? "";
                 VRstampTextBox.Text = job.VRstamp ?? "";
 
-                CreatedByLabel.Text = ( job.CreatedBy == null ) ? "" : controller.GetEmployeeName ( job.CreatedBy.Value );
+                CreatedByLabel.Text = (job.CreatedBy == null) ? "" : controller.GetEmployeeName(job.CreatedBy.Value);
                 CreationDateLabel.Text = job.CreationDate.ToShortDateString();
 
                 // Set up forms grid
@@ -115,8 +115,8 @@ namespace Rawson.Jobs
 
                 switch (job.JobTypeID)
                 {
-                    case (int)JobTypeEnum.Testing:
-                        labelText = "Testing Forms";
+                    case (int)JobTypeEnum.ReliefValve:
+                        labelText = "Valve Testing Forms";
                         break;
                     case (int)JobTypeEnum.Greasing:
                         labelText = "Greasing Records";
@@ -129,6 +129,10 @@ namespace Rawson.Jobs
                     case (int)JobTypeEnum.WellSafety:
                         labelText = "Well Safety Forms";
                         break;
+                    case (int)JobTypeEnum.RateValve:
+                        labelText = "Rate Valve Forms";
+                        ServiceDetailsGrid.Columns["Result"].Visible = false;
+                        break;
                     default:
                         labelText = "Forms";
                         break;
@@ -137,77 +141,80 @@ namespace Rawson.Jobs
                 this.FormListLabel.Text = labelText;
                 this.ClientSelect.Focus();
             }
-            catch ( Exception ex )
+            catch (Exception ex)
             {
-                Exceptions.ProcessModuleLoadException ( ex.Message + ex.StackTrace, this, ex );
+                Exceptions.ProcessModuleLoadException(ex.Message + ex.StackTrace, this, ex);
             }
         }
 
-        protected void ServiceDetailDataSource_Selecting ( object sender, LinqDataSourceSelectEventArgs e )
+        protected void ServiceDetailDataSource_Selecting(object sender, LinqDataSourceSelectEventArgs e)
         {
-            JobFormController controller = Context.Items[ "#boController" ] as JobFormController;
+            JobFormController controller = Context.Items["#boController"] as JobFormController;
             e.Result = controller.GetCurrentJobServiceForms();
         }
 
-        protected void ClientDataSource_Selecting ( object sender, LinqDataSourceSelectEventArgs e )
+        protected void ClientDataSource_Selecting(object sender, LinqDataSourceSelectEventArgs e)
         {
             JobFormController controller = Context.Items["#boController"] as JobFormController;
             e.Result = controller.GetAuthorizedClients(UserId);
         }
 
-        protected void LocationDataSource_Selecting ( object sender, LinqDataSourceSelectEventArgs e )
+        protected void LocationDataSource_Selecting(object sender, LinqDataSourceSelectEventArgs e)
         {
             int clientID;
             if (ClientSelect.Value == null && !int.TryParse((string)ClientSelect.ClientValue, out clientID))
                 clientID = -1;
             else
                 clientID = (int)ClientSelect.Value;
-                
+
             JobFormController controller = Context.Items["#boController"] as JobFormController;
             e.Result = controller.GetAuthorizedLocations(UserId, clientID);
         }
 
-        protected void EmployeeDataSource_Selecting ( object sender, LinqDataSourceSelectEventArgs e )
+        protected void EmployeeDataSource_Selecting(object sender, LinqDataSourceSelectEventArgs e)
         {
             JobFormController controller = Context.Items["#boController"] as JobFormController;
             e.Result = controller.GetEmployeesList();
         }
 
-        protected void CompletionDateEdit_Validation ( object sender, DevExpress.Web.ASPxEditors.ValidationEventArgs e )
+        protected void CompletionDateEdit_Validation(object sender, DevExpress.Web.ASPxEditors.ValidationEventArgs e)
         {
-            if ( !( e.Value is DateTime ) )
+            if (!(e.Value is DateTime))
                 return;
             DateTime selectedDate = (DateTime)e.Value;
             DateTime currentDate = DateTime.Now;
-            if ( selectedDate > currentDate )
+            if (selectedDate > currentDate)
                 e.IsValid = false;
         }
 
-        protected void ServiceDetailsGrid_CustomButtonCallback ( object sender, ASPxGridViewCustomButtonCallbackEventArgs e )
+        protected void ServiceDetailsGrid_CustomButtonCallback(object sender, ASPxGridViewCustomButtonCallbackEventArgs e)
         {
-            JobFormController manager = Context.Items[ "#boController" ] as JobFormController;
+            JobFormController manager = Context.Items["#boController"] as JobFormController;
 
             int jobId = manager.Entity.JobID;
             int jobTypeId = manager.Entity.JobTypeID;
 
             ASPxGridView grid = sender as ASPxGridView;
 
-            object[] values = grid.GetRowValues ( e.VisibleIndex, "ID", "ServiceItemID", "JobTypeID" ) as object[];
-            
+            object[] values = grid.GetRowValues(e.VisibleIndex, "ID", "ServiceItemID", "JobTypeID") as object[];
+
             grid.JSProperties["cpShowReport"] = false;
 
-            if ( e.ButtonID == "btnEdit" )
+            if (e.ButtonID == "btnEdit")
             {
-                switch ( jobTypeId )
+                switch (jobTypeId)
                 {
-                    case (int)JobTypeEnum.Testing:
-                        Response.RedirectLocation = DotNetNuke.Common.Globals.NavigateURL ( TabId, "Valve", "mid=" + ModuleId, "JobID=" + jobId.ToString (), "ValveTestID=" + values[ 0 ] );
+                    case (int)JobTypeEnum.ReliefValve:
+                        Response.RedirectLocation = DotNetNuke.Common.Globals.NavigateURL(TabId, "Valve", "mid=" + ModuleId, "JobID=" + jobId.ToString(), "ValveTestID=" + values[0]);
                         break;
                     case (int)JobTypeEnum.Greasing:
-                        Response.RedirectLocation = DotNetNuke.Common.Globals.NavigateURL ( TabId, "Grease", "mid=" + ModuleId, "JobID=" + jobId.ToString (), "GreasingRecordID=" + values[ 0 ] );
+                        Response.RedirectLocation = DotNetNuke.Common.Globals.NavigateURL(TabId, "Grease", "mid=" + ModuleId, "JobID=" + jobId.ToString(), "GreasingRecordID=" + values[0]);
                         break;
                     case (int)JobTypeEnum.WellSafety:
-                        Response.RedirectLocation = DotNetNuke.Common.Globals.NavigateURL ( TabId, "Well", "mid=" + ModuleId, "JobID=" + jobId.ToString (), "WellSafetyTestID=" + values[ 0 ] );
+                        Response.RedirectLocation = DotNetNuke.Common.Globals.NavigateURL(TabId, "Well", "mid=" + ModuleId, "JobID=" + jobId.ToString(), "WellSafetyTestID=" + values[0]);
+                        break;
+                    case (int)JobTypeEnum.RateValve:
+                        Response.RedirectLocation = DotNetNuke.Common.Globals.NavigateURL(TabId, "RateValve", "mid=" + ModuleId, "JobID=" + jobId.ToString(), "RateValveTestID=" + values[0]);
                         break;
                     default:
                         break;
@@ -219,9 +226,9 @@ namespace Rawson.Jobs
 
                 grid.JSProperties["cpShowReport"] = true;
 
-                switch ( jobTypeId )
+                switch (jobTypeId)
                 {
-                    case (int)JobTypeEnum.Testing:
+                    case (int)JobTypeEnum.ReliefValve:
                         grid.JSProperties["cpReportUrl"] = ResourcePaths.DownloadHelperPath + DocumentPaths.ValveTestFieldReport;
                         break;
                     case (int)JobTypeEnum.Greasing:
@@ -230,26 +237,32 @@ namespace Rawson.Jobs
                     case (int)JobTypeEnum.WellSafety:
                         grid.JSProperties["cpReportUrl"] = ResourcePaths.DownloadHelperPath + DocumentPaths.WellSafetyFieldReport;
                         break;
+                    case (int)JobTypeEnum.RateValve:
+                        grid.JSProperties["cpReportUrl"] = ResourcePaths.DownloadHelperPath + DocumentPaths.RateValveFieldReport;
+                        break;
                     default:
                         break;
                 }
             }
         }
 
-        private string GetNewFormUrl ( int jobTypeId, int jobId)
+        private string GetNewFormUrl(int jobTypeId, int jobId)
         {
             string url = "";
 
-            switch ( jobTypeId )
+            switch (jobTypeId)
             {
-                case (int)JobTypeEnum.Testing:
-                    url = DotNetNuke.Common.Globals.NavigateURL ( TabId, "Valve", "mid=" + ModuleId, "JobID=" + jobId.ToString () );
+                case (int)JobTypeEnum.ReliefValve:
+                    url = DotNetNuke.Common.Globals.NavigateURL(TabId, "Valve", "mid=" + ModuleId, "JobID=" + jobId.ToString());
                     break;
                 case (int)JobTypeEnum.Greasing:
-                    url = DotNetNuke.Common.Globals.NavigateURL ( TabId, "Grease", "mid=" + ModuleId, "JobID=" + jobId.ToString () );
+                    url = DotNetNuke.Common.Globals.NavigateURL(TabId, "Grease", "mid=" + ModuleId, "JobID=" + jobId.ToString());
                     break;
                 case (int)JobTypeEnum.WellSafety:
-                    url = DotNetNuke.Common.Globals.NavigateURL ( TabId, "Well", "mid=" + ModuleId, "JobID=" + jobId.ToString () );
+                    url = DotNetNuke.Common.Globals.NavigateURL(TabId, "Well", "mid=" + ModuleId, "JobID=" + jobId.ToString());
+                    break;
+                case (int)JobTypeEnum.RateValve:
+                    url = DotNetNuke.Common.Globals.NavigateURL(TabId, "RateValve", "mid=" + ModuleId, "JobID=" + jobId.ToString());
                     break;
                 default:
                     break;
@@ -296,10 +309,7 @@ namespace Rawson.Jobs
             job.JobStatusID = Convert.ToInt32(JobStatusSelect.Value);
             job.ServiceDate = (DateTime?)ServiceDateEdit.Value;
             job.CompletionDate = (DateTime?)CompletionDateEdit.Value;
-            //job.RequestedByID = (int)RequestedBySelect.Value == -1 ? (int?)null : Convert.ToInt32(RequestedBySelect.Value);
-            //job.AssignedByID = Convert.ToInt32(AssignedBySelect.Value);
             job.AssignedToID = (int)AssignedToSelect.Value == -1 ? (int?)null : Convert.ToInt32(AssignedToSelect.Value);
-            //job.ApprovedByID = (int)ApprovedbySelect.Value == -1 ? (int?)null : Convert.ToInt32(ApprovedbySelect.Value);
             job.DotNumber = DotNumberTextBox.Text;
             job.VRstamp = VRstampTextBox.Text;
             job.Active = true;
@@ -339,5 +349,5 @@ namespace Rawson.Jobs
             JobFormController controller = Context.Items["#boController"] as JobFormController;
             e.Result = controller.GetJobTypesList();
         }
-}
+    }
 }

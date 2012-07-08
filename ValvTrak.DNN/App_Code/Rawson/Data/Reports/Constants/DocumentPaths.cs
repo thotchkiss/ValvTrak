@@ -13,5 +13,6 @@ namespace Rawson.Reports.Constants
         public const string ValveTestFieldReport = "/ValvTrak.Reports/ValveTestFieldReport";
         public const string GreasingRecordFieldReport = "/ValvTrak.Reports/GreasingRecordFieldReport";
         public const string WellSafetyFieldReport = "/ValvTrak.Reports/WellSafetyFieldReport";
+        public const string RateValveFieldReport = "/ValvTrak.Reports/RateValveFieldReport";
     }
 }

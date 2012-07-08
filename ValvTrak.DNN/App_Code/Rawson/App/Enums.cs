@@ -6,14 +6,15 @@
         Maintenance = 2,
         Troubleshoot = 3,
         Repair = 4,
-        Testing = 5,
+        ReliefValve = 5,
         Greasing = 6,
         Install = 7,
         Exchange = 8,
         ShopRepair = 9,
         FSR = 10,
         WellSafety = 11,
-        ChemPump = 12
+        ChemPump = 12,
+        RateValve = 13
     };
 
     public enum EditModeEnum

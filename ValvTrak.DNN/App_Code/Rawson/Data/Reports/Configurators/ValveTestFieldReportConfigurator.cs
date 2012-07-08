@@ -29,7 +29,7 @@ namespace Rawson.Reports
             adapter.Connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ValvTrakData"].ConnectionString;
 
             DataTable dt = adapter.GetData();
-            dt.DefaultView.RowFilter = String.Format("ValveTestID IN ({0})", HttpContext.Current.Session["ReportData"]);
+            dt.DefaultView.RowFilter = String.Format("RateValveTestID IN ({0})", HttpContext.Current.Session["ReportData"]);
 
             HttpContext.Current.Session["ReportData"] = null;
 

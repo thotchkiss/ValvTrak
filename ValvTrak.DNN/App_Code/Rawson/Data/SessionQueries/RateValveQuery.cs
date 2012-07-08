@@ -13,7 +13,7 @@ public class RateValveQuery
 	{
         //initialize properties to defaults
         this.JobID = -1;
-        this.ValveTestID = -1;
+        this.RateValveTestID = -1;
         this.SerialNum = "";
         this.Client = -1;
         this.ClientLocation = -1;
@@ -28,7 +28,7 @@ public class RateValveQuery
 	}
 
     public int JobID { get; set; }
-    public int ValveTestID { get; set; }
+    public int RateValveTestID { get; set; }
     public string FSRNum { get; set; }
     public string SerialNum { get; set; }
     public int Client { get; set; }

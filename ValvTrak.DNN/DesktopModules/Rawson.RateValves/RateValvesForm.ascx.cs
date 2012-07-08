@@ -142,7 +142,7 @@ public partial class RateValvesForm : PortalModuleBase
         rvt.CustomerWitness = CustomerWitnessTextBox.Text;
 
         if (rvt.RateValveTestParts.Count == 0)
-            rvt.RateValveTestParts.AddRange(controller.CreatePartsList());
+            controller.SetPartsList();
 
         rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "51960230").Quantity = (int)se51960230.Value;
         rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "51961525").Quantity = (int)se51961525.Value;
@@ -167,8 +167,8 @@ public partial class RateValvesForm : PortalModuleBase
         if (rvt.Version == null)
         {
             // Remove active datacontext relations
-            controller.Detach();
-            rvt = controller.Entity;
+            //controller.Detach();
+            //rvt = controller.Entity;
             //////////////////////////////////////
 
             rvt.CreatedBy = controller.ResolveEmployeeID(UserId);
