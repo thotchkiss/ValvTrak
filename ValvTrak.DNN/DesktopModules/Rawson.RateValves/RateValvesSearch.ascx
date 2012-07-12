@@ -334,43 +334,33 @@
                             <%# CanEdit == true ? "<a href='" + DotNetNuke.Common.Globals.NavigateURL(61, "Job", "mid=393", "JobID=" + Eval("JobID")) + "'>" + Eval("JobID") + "</a>" : Eval("JobID") %>
                         </DataItemTemplate>
                     </dxwgv:GridViewDataHyperLinkColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.SerialNum" VisibleIndex="7"
-                        Caption="Serial Num" Width="200px">
+                    <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.SerialNum" VisibleIndex="7" Caption="Serial Num" Width="200px">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="Job.SalesOrderNum" VisibleIndex="8"
-                        Caption="Sales Order Num">
+                    <dxwgv:GridViewDataTextColumn FieldName="Job.SalesOrderNum" VisibleIndex="8" Caption="Sales Order Num">
                     </dxwgv:GridViewDataTextColumn>
                     <dxwgv:GridViewDataTextColumn FieldName="FSRNum" VisibleIndex="9">
                     </dxwgv:GridViewDataTextColumn> 
-                    <dxwgv:GridViewDataTextColumn FieldName="Job.ClientLocation.Client.Name" VisibleIndex="10"
-                        Caption="Customer" Width="200px">
+                    <dxwgv:GridViewDataTextColumn FieldName="Job.ClientLocation.Client.Name" VisibleIndex="10" Caption="Customer" Width="200px">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="Job.ClientLocation.Name" VisibleIndex="11"
-                        Caption="Location" Width="150px">
+                    <dxwgv:GridViewDataTextColumn FieldName="Job.ClientLocation.Name" VisibleIndex="11" Caption="Location" Width="150px">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataDateColumn FieldName="ValveDate" VisibleIndex="12">
-                    </dxwgv:GridViewDataDateColumn>
                     <dxwgv:GridViewDataDateColumn FieldName="DateTested" VisibleIndex="13">
                     </dxwgv:GridViewDataDateColumn>        
-                    <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.ManufacturerModel.Manufacturer.Name" VisibleIndex="14"
-                        Caption="Manufacturer">
+                    <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.ManufacturerModel.Manufacturer.Name" VisibleIndex="14" Caption="Manufacturer">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.ManufacturerModel.Model" VisibleIndex="15"
-                        Caption="Model" Width="75px">
+                    <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.ManufacturerModel.Model" VisibleIndex="15" Caption="Model" Width="75px">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="Notes" VisibleIndex="33" Width="250px">
+                    <dxwgv:GridViewDataTextColumn FieldName="Remarks" VisibleIndex="33" Width="250px">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="Employee.FirstName" VisibleIndex="34"
-                        Caption="Tech First Name">  
+                    <dxwgv:GridViewDataTextColumn FieldName="Employee.FirstName" VisibleIndex="34" Caption="Tech First Name">  
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="Employee.LastName" VisibleIndex="35"
-                        Caption="Tech Last Name">  
+                    <dxwgv:GridViewDataTextColumn FieldName="Employee.LastName" VisibleIndex="35" Caption="Tech Last Name">  
                     </dxwgv:GridViewDataTextColumn>
                     <dxwgv:GridViewDataTextColumn FieldName="CustomerWitness" VisibleIndex="36">
                     </dxwgv:GridViewDataTextColumn>
                     <dxwgv:GridViewDataTextColumn FieldName="CreatedBy" VisibleIndex="37">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataDateColumn FieldName="CreatedDate" VisibleIndex="38">
+                    <dxwgv:GridViewDataDateColumn FieldName="DateCreated" VisibleIndex="38">
                     </dxwgv:GridViewDataDateColumn>
                 </Columns>
                 <SettingsBehavior AllowDragDrop="False" AllowGroup="False" />

@@ -66,6 +66,19 @@ namespace Rawson.Data.Controllers
             return vr.IsValid;
         }
 
+        public override bool Save()
+        {
+            if (AutoValidate && !Validate())
+                return false;
+
+            var orig = Context.GreasingRecords.GetOriginalEntityState(Entity);
+
+            if (orig == null)
+                Context.GreasingRecords.Attach(Entity);
+
+            return SubmitChanges();
+        }
+
         public override void Detach()
         {
             GreasingRecord gr = Activator.CreateInstance<GreasingRecord>();

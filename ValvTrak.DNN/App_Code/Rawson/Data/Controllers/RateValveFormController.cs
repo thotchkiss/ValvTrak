@@ -36,7 +36,7 @@ public class RateValveFormController : BaseController<RateValveTest>
         return Entity.ServiceItem;
     }
 
-    public List<RateValveTestPart> SetPartsList()
+    public List<RateValveTestPart> CreatePartsList()
     {
         var parts = Context.RateValveParts.ToList();
         List<RateValveTestPart> testParts = new List<RateValveTestPart>();
@@ -45,14 +45,29 @@ public class RateValveFormController : BaseController<RateValveTest>
             {
                 var rvtp = Activator.CreateInstance<RateValveTestPart>();
 
-                rvtp.RateValvePartID = rvtp.RateValvePartID;
-                rvtp.RateValveTestID = Entity.RateValveTestID;
+                rvtp.RateValvePart = rvp;
+                rvp.RateValveTestParts.Add(rvtp);
 
+                rvtp.RateValveTest = Entity;
                 Entity.RateValveTestParts.Add(rvtp);
+
                 testParts.Add(rvtp);
             });
 
         return testParts;
+    }
+
+    public override bool Save()
+    {
+        if (AutoValidate && !Validate())
+            return false;
+
+        var orig = Context.RateValveTests.GetOriginalEntityState(Entity);
+
+        if (orig == null)
+            Context.RateValveTests.Attach(Entity);
+
+        return SubmitChanges();
     }
 
     public override void Detach()

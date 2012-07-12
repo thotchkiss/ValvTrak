@@ -41,6 +41,19 @@ namespace Rawson.Data.Controllers
             return vr.IsValid;
         }
 
+        public override bool Save()
+        {
+            if (AutoValidate && !Validate())
+                return false;
+
+            var orig = Context.WellSafetyTests.GetOriginalEntityState(Entity);
+
+            if (orig == null)
+                Context.WellSafetyTests.Attach(Entity);
+
+            return SubmitChanges();
+        }
+
         public override void Detach()
         {
             WellSafetyTest wt = Activator.CreateInstance<WellSafetyTest>();

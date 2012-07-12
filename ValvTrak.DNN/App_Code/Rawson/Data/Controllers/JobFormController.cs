@@ -64,6 +64,16 @@ namespace Rawson.Data.Controllers
                                               Result = ws.TestResult.Result
                                           }).ToList();
                     break;
+                case (int)JobTypeEnum.RateValve:
+                    forms = Context.RateValveTests.Where(rvt => rvt.JobID == jobId).Select(rvt => new JobFormGridItem
+                    {
+                        ID = rvt.RateValveTestID,
+                        ServiceItemID = rvt.ServiceItemID,
+                        JobTypeID = jobTypeId,
+                        SerialNum = rvt.ServiceItem.SerialNum,
+                        Result = ""
+                    }).ToList();
+                    break;
             }
 
             return forms;

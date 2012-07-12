@@ -190,9 +190,10 @@ namespace Rawson.GreasingRecords
 
             if (gr.Version == null)
             {
+                gr.Job.GreasingRecords.Add(gr);
                 // Remove active datacontext relations
-                controller.Detach();
-                gr = controller.Entity;
+                //controller.Detach();
+                //gr = controller.Entity;
                 //////////////////////////////////////
 
                 gr.CreatedBy = controller.ResolveEmployeeID(UserId);

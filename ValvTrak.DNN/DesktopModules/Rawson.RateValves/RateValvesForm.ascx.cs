@@ -132,40 +132,41 @@ public partial class RateValvesForm : PortalModuleBase
         rvt.Job.ClientLocation.Latitude = Decimal.TryParse(txtLatitude.Text, out latitude) ? latitude.ToString() : null;
         rvt.Job.ClientLocation.Longitude = Decimal.TryParse(txtLongitude.Text, out longitude) ? longitude.ToString() : null;
 
-        rvt.ConditionOfWearSleeve = (int)cmbWearSleeve.Value;
-        rvt.ConditionOfDisc = (int)cmbCondDisc.Value;
-        rvt.PercentDiscWear = (int)cmbPercDiscWear.Value;
-        rvt.ExternalCondition = (int)cmbExternalCond.Value;
+        rvt.ConditionOfWearSleeve = Convert.ToInt32(cmbWearSleeve.Value);
+        rvt.ConditionOfDisc = Convert.ToInt32(cmbCondDisc.Value);
+        rvt.PercentDiscWear = Convert.ToInt32(cmbPercDiscWear.Value);
+        rvt.ExternalCondition = Convert.ToInt32(cmbExternalCond.Value);
 
         rvt.Remarks = RemarksTextBox.Text;
-        rvt.TechID = (int)TechIDSelect.Value;
+        rvt.TechID = Convert.ToInt32(TechIDSelect.Value);
         rvt.CustomerWitness = CustomerWitnessTextBox.Text;
 
         if (rvt.RateValveTestParts.Count == 0)
-            controller.SetPartsList();
+            controller.CreatePartsList();
 
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "51960230").Quantity = (int)se51960230.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "51961525").Quantity = (int)se51961525.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "51974200").Quantity = (int)se51974200.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "52070434").Quantity = (int)se52070434.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "52119435").Quantity = (int)se52119435.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "BBL00025").Quantity = (int)seBBL00025.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "BSE00001").Quantity = (int)seBSE00001.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "BST00008").Quantity = (int)seBST00008.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "CD1").Quantity = (int)seCD1.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "CD2").Quantity = (int)seCD2.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "CRK-FBA2006").Quantity = (int)seCRKFBA2006.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "CSK-SFDAL2015").Quantity = (int)seCSKSFDAL2015.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "CSK-SFDAL2050-D2").Quantity = (int)seCSKSFDAL2050D2.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "CST00022").Quantity = (int)seCST00022.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "CST00051").Quantity = (int)seCST00051.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "DRV38").Quantity = (int)seDRV38.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "FT000024").Quantity = (int)seFT000024.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "SB140125").Quantity = (int)seSB140125.Value;
-        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "WSXA0066").Quantity = (int)seWSXA0066.Value;
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "51960230").Quantity = Convert.ToInt32(se51960230.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "51961525").Quantity = Convert.ToInt32(se51961525.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "51974200").Quantity = Convert.ToInt32(se51974200.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "52070434").Quantity = Convert.ToInt32(se52070434.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "52119435").Quantity = Convert.ToInt32(se52119435.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "BBL00025").Quantity = Convert.ToInt32(seBBL00025.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "BSE00001").Quantity = Convert.ToInt32(seBSE00001.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "BST00008").Quantity = Convert.ToInt32(seBST00008.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "CD1").Quantity = Convert.ToInt32(seCD1.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "CD2").Quantity = Convert.ToInt32(seCD2.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "CRK-FBA2006").Quantity = Convert.ToInt32(seCRKFBA2006.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "CSK-SFDAL2015").Quantity = Convert.ToInt32(seCSKSFDAL2015.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "CSK-SFDAL2050-D2").Quantity = Convert.ToInt32(seCSKSFDAL2050D2.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "CST00022").Quantity = Convert.ToInt32(seCST00022.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "CST00051").Quantity = Convert.ToInt32(seCST00051.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "DRV38").Quantity = Convert.ToInt32(seDRV38.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "FT000024").Quantity = Convert.ToInt32(seFT000024.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "SB140125").Quantity = Convert.ToInt32(seSB140125.Value);
+        rvt.RateValveTestParts.First(rvtp => rvtp.RateValvePart.PartNumber == "WSXA0066").Quantity = Convert.ToInt32(seWSXA0066.Value);
 
         if (rvt.Version == null)
         {
+            rvt.Job.RateValveTests.Add(rvt);
             // Remove active datacontext relations
             //controller.Detach();
             //rvt = controller.Entity;

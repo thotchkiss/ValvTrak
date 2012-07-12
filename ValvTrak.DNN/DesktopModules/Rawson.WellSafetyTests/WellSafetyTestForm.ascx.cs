@@ -157,9 +157,10 @@ namespace Rawson.WellSafetyTests
 
             if (wt.Version == null)
             {
+                wt.Job.WellSafetyTests.Add(wt);
                 // Remove active datacontext relations
-                controller.Detach();
-                wt = controller.Entity;
+                //controller.Detach();
+                //wt = controller.Entity;
                 //////////////////////////////////////
 
                 wt.CreatedBy = controller.ResolveEmployeeID(UserId);

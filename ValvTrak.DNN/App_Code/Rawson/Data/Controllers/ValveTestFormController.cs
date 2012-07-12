@@ -49,6 +49,19 @@ namespace Rawson.Data.Controllers
                     .Select ( l => new ComboBoxValue<string> { DisplayMember = l.Display1, ValueMember = l.ListValue.ToString () } ).ToList ();
         }
 
+        public override bool Save()
+        {
+            if (AutoValidate && !Validate())
+                return false;
+
+            var orig = Context.ValveTests.GetOriginalEntityState(Entity);
+
+            if (orig == null)
+                Context.ValveTests.Attach(Entity);
+
+            return SubmitChanges();
+        }
+
         public override void Detach()
         {
             ValveTest dvt = Activator.CreateInstance<ValveTest>();
