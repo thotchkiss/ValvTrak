@@ -149,7 +149,7 @@ public partial class RateValvesSearch : PortalModuleBase
             /*******************************************************************************************************************/
 
             reportingGrid.JSProperties["cpShowReport"] = true;
-            reportingGrid.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.ValveTestFieldReport, cacheKey);
+            reportingGrid.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.RateValveFieldReport, cacheKey);
         }
         else
         {

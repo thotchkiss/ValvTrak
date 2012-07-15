@@ -105,8 +105,8 @@
         <CommandType>StoredProcedure</CommandType>
         <CommandText>rpt_RateValveFieldReport</CommandText>
         <QueryParameters>
-          <QueryParameter Name="@RateValveTestID">
-            <Value>=Parameters!RateValveTestID.Value</Value>
+          <QueryParameter Name="@RateValveTestIDs">
+            <Value>=Parameters!RateValveTestIDs.Value</Value>
           </QueryParameter>
         </QueryParameters>
       </Query>

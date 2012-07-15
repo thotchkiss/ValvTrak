@@ -224,21 +224,26 @@ namespace Rawson.Jobs
             {
                 Session["ReportData"] = values[0];
 
+                string cacheKey = Guid.NewGuid().ToString();
+                DataCache.SetCache(cacheKey, values[0].ToString(), new TimeSpan(0, 3, 0));
+
+                /*******************************************************************************************************************/
+
                 grid.JSProperties["cpShowReport"] = true;
 
                 switch (jobTypeId)
                 {
                     case (int)JobTypeEnum.ReliefValve:
-                        grid.JSProperties["cpReportUrl"] = ResourcePaths.DownloadHelperPath + DocumentPaths.ValveTestFieldReport;
+                        grid.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.ValveTestFieldReport, cacheKey);
                         break;
                     case (int)JobTypeEnum.Greasing:
-                        grid.JSProperties["cpReportUrl"] = ResourcePaths.DownloadHelperPath + DocumentPaths.GreasingRecordFieldReport;
+                        grid.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.GreasingRecordFieldReport, cacheKey);
                         break;
                     case (int)JobTypeEnum.WellSafety:
-                        grid.JSProperties["cpReportUrl"] = ResourcePaths.DownloadHelperPath + DocumentPaths.WellSafetyFieldReport;
+                        grid.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.WellSafetyFieldReport, cacheKey);
                         break;
                     case (int)JobTypeEnum.RateValve:
-                        grid.JSProperties["cpReportUrl"] = ResourcePaths.DownloadHelperPath + DocumentPaths.RateValveFieldReport;
+                        grid.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.RateValveFieldReport, cacheKey);
                         break;
                     default:
                         break;

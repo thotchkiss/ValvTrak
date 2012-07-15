@@ -479,7 +479,7 @@
       <Column Name="PartNumber" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
       <Column Name="Description" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
       <Column Name="Version" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
-      <Association Name="RateValvePart_RateValveTestPartsUsed" Member="RateValveTestParts" Storage="_RateValveTestPartsUseds" ThisKey="RateValvePartID" OtherKey="RateValvePartID" Type="RateValveTestPart" />
+      <Association Name="RateValvePart_RateValveTestPart" Member="RateValveTestParts" Storage="_RateValveTestPartsUseds" ThisKey="RateValvePartID" OtherKey="RateValvePartID" Type="RateValveTestPart" />
     </Type>
   </Table>
   <Table Name="dbo.RateValveTestPartsUsed" Member="RateValveTestParts">
@@ -488,7 +488,7 @@
       <Column Name="RateValvePartID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Version" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
-      <Association Name="RateValvePart_RateValveTestPartsUsed" Member="RateValvePart" ThisKey="RateValvePartID" OtherKey="RateValvePartID" Type="RateValvePart" IsForeignKey="true" />
+      <Association Name="RateValvePart_RateValveTestPart" Member="RateValvePart" ThisKey="RateValvePartID" OtherKey="RateValvePartID" Type="RateValvePart" IsForeignKey="true" />
       <Association Name="RateValveTest_RateValveTestPart" Member="RateValveTest" ThisKey="RateValveTestID" OtherKey="RateValveTestID" Type="RateValveTest" IsForeignKey="true" />
     </Type>
   </Table>

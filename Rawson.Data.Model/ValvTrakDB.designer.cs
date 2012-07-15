@@ -11322,7 +11322,7 @@ namespace Rawson.Data.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RateValvePart_RateValveTestPartsUsed", Storage="_RateValveTestPartsUseds", ThisKey="RateValvePartID", OtherKey="RateValvePartID")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RateValvePart_RateValveTestPart", Storage="_RateValveTestPartsUseds", ThisKey="RateValvePartID", OtherKey="RateValvePartID")]
 		public EntitySet<RateValveTestPart> RateValveTestParts
 		{
 			get
@@ -11495,7 +11495,7 @@ namespace Rawson.Data.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RateValvePart_RateValveTestPartsUsed", Storage="_RateValvePart", ThisKey="RateValvePartID", OtherKey="RateValvePartID", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RateValvePart_RateValveTestPart", Storage="_RateValvePart", ThisKey="RateValvePartID", OtherKey="RateValvePartID", IsForeignKey=true)]
 		public RateValvePart RateValvePart
 		{
 			get
