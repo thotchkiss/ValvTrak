@@ -18,6 +18,40 @@
   <rd:SnapToGrid>true</rd:SnapToGrid>
   <RightMargin>1in</RightMargin>
   <LeftMargin>1in</LeftMargin>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>0.625in</Top>
+        <Width>3in</Width>
+        <Style>
+          <FontSize>14pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.25in</Left>
+        <Value>Rate Valve Inspection Report</Value>
+      </Textbox>
+      <Image Name="image1">
+        <Sizing>Fit</Sizing>
+        <Width>2.125in</Width>
+        <MIMEType />
+        <Source>External</Source>
+        <Style />
+        <Height>0.625in</Height>
+        <Value>rawson_logo.gif</Value>
+      </Image>
+    </ReportItems>
+    <Height>1in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
   <BottomMargin>1in</BottomMargin>
   <rd:ReportID>d500cf30-d1b1-4635-8040-2001622ba86b</rd:ReportID>
   <DataSets>
@@ -116,7 +150,6 @@
   <Body>
     <ReportItems>
       <List Name="list1">
-        <ZIndex>2</ZIndex>
         <DataSetName>ValvTrak</DataSetName>
         <KeepTogether>true</KeepTogether>
         <ReportItems>
@@ -951,39 +984,10 @@
             <Value>FSR # : </Value>
           </Textbox>
         </ReportItems>
-        <Top>1in</Top>
         <PageBreakAtEnd>true</PageBreakAtEnd>
       </List>
-      <Textbox Name="textbox1">
-        <rd:DefaultName>textbox1</rd:DefaultName>
-        <Top>0.625in</Top>
-        <Width>3in</Width>
-        <Style>
-          <FontSize>14pt</FontSize>
-          <FontWeight>700</FontWeight>
-          <TextAlign>Center</TextAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>1</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Left>2.25in</Left>
-        <Height>0.375in</Height>
-        <Value>Rate Valve Inspection Report</Value>
-      </Textbox>
-      <Image Name="image1">
-        <Sizing>Fit</Sizing>
-        <Width>2.125in</Width>
-        <MIMEType />
-        <Source>External</Source>
-        <Style />
-        <Height>0.625in</Height>
-        <Value>rawson_logo.gif</Value>
-      </Image>
     </ReportItems>
-    <Height>9.625in</Height>
+    <Height>8.625in</Height>
   </Body>
   <Language>en-US</Language>
   <TopMargin>1in</TopMargin>

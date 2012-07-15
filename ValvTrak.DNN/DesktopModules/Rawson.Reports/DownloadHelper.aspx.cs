@@ -53,6 +53,9 @@ namespace Rawson.Reports
                 case DocumentPaths.WellSafetyFieldReport:
                     parameters.Add("WellSafetyTestIds", data);
                     break;
+                case DocumentPaths.RateValveFieldReport:
+                    parameters.Add("RateValveTestIDs", data);
+                    break;
             }
 
             DotNetNuke.Services.Cache.CachingProvider.Instance().Remove(cacheKey);
