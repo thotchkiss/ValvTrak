@@ -6,6 +6,7 @@ using Rawson.Data.Model;
 using Microsoft.Practices.EnterpriseLibrary.Validation;
 using Rawson.App;
 using Rawson.Data.Specifications;
+using DevExpress.Web.ASPxEditors;
 
 namespace Rawson.Data.Controllers
 {
@@ -75,6 +76,60 @@ namespace Rawson.Data.Controllers
             list.Insert(0, new ComboBoxValue<int> { DisplayMember = "-- Select Model --", ValueMember = -1 });
 
             return list;
+        }
+
+        public List<ComboBoxValue<int>> GetManufacturerItemsRequestedByFilterCondition(ListEditItemsRequestedByFilterConditionEventArgs e)
+        {
+            var skip = e.BeginIndex;
+            var take = e.EndIndex - e.BeginIndex + 1;
+
+            var query = Context.Manufacturers
+                                                .Where(m => m.Name.StartsWith(e.Filter))
+                                                .OrderBy(m => m.Name)
+                                                .Select(m => new ComboBoxValue<int> { DisplayMember = m.Name, ValueMember = m.ManufacturerID });
+
+            var list = query.Skip(skip).Take(take).OrderBy(cbv => cbv.DisplayMember).ToList();
+
+            return list;
+        }
+
+        public List<ComboBoxValue<int>> GetManufacturerItemRequestedByValue(ListEditItemRequestedByValueEventArgs e)
+        {
+            var query = Context.Manufacturers
+                                    .Where(mm => mm.ManufacturerID == Convert.ToInt32(e.Value))
+                                    .OrderBy(m => m.Name)
+                                    .Select(m => new ComboBoxValue<int> { DisplayMember = m.Name, ValueMember = m.ManufacturerID });
+
+            return query.ToList();
+
+        }
+
+        public List<ComboBoxValue<int>> GetModelItemsRequestedByFilterCondition(int manufacturerID, ListEditItemsRequestedByFilterConditionEventArgs e)
+        {
+            var skip = e.BeginIndex;
+            var take = e.EndIndex - e.BeginIndex + 1;
+
+            var query = Context.ManufacturerModels
+                                                .Where(mm => mm.ManufacturerID == manufacturerID)
+                                                .Where(mm => mm.Model.StartsWith(e.Filter))
+                                                .OrderBy(m => m.Model)
+                                                .Select(m => new ComboBoxValue<int> { DisplayMember = m.Model, ValueMember = m.ManufacturerModelID });
+
+            var list = query.Skip(skip).Take(take).OrderBy(cbv => cbv.DisplayMember).ToList();
+
+            return list;
+        }
+
+        public List<ComboBoxValue<int>> GetModelItemRequestedByValue(int manufacturerID, ListEditItemRequestedByValueEventArgs e)
+        {
+            var query = Context.ManufacturerModels
+                                    .Where(mm => mm.ManufacturerID == manufacturerID)
+                                    .Where(mm => mm.ManufacturerModelID == Convert.ToInt32(e.Value))
+                                    .OrderBy(m => m.Model)
+                                    .Select(m => new ComboBoxValue<int> { DisplayMember = m.Model, ValueMember = m.ManufacturerModelID });
+
+            return query.ToList();
+
         }
 
         public int CreateManufacturer(string name)

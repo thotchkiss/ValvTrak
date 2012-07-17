@@ -43,15 +43,6 @@
 
 </script>
 
-<asp:LinqDataSource ID="ServiceItemDataSource" runat="server" onselecting="ServiceItemDataSource_Selecting">
-</asp:LinqDataSource>
-<asp:LinqDataSource ID="ServiceItemTypeDataSource" runat="server" OnSelecting="ServiceItemTypeDataSource_Selecting">
-</asp:LinqDataSource>
-<asp:LinqDataSource ID="ManufacturerDataSource" runat="server" OnSelecting="ManufacturerDataSource_Selecting">
-</asp:LinqDataSource>
-<asp:LinqDataSource ID="ModelDataSource" runat="server" OnSelecting="ModelDataSource_Selecting">
-</asp:LinqDataSource>
-
 <table>
 	<tr>
 		<td>
@@ -175,13 +166,14 @@
 										<tr>
 											<td>
 												<dxe:ASPxComboBox ID="ManufacturerSelect" runat="server" Width="200" 
-														DataSourceID="ManufacturerDataSource" TextField="DisplayMember" AutoPostBack="false" 
+														TextField="DisplayMember" AutoPostBack="false" 
 														ValueField="ValueMember" EnableClientSideAPI="true" 
 														ClientInstanceName="manufacturers" TabIndex="106" 
 														OnCallback="ManufacturerSelect_Callback" 
 													EnableIncrementalFiltering="True" IncrementalFilteringMode="StartsWith" 
 													ValueType="System.Int32" EnableCallbackMode="True" 
-													ShowLoadingPanel="False" >
+													ShowLoadingPanel="False" OnItemRequestedByValue="ManufacturerSelect_ItemRequestedByValue" 
+                                                    OnItemsRequestedByFilterCondition="ManufacturerSelect_ItemsRequestedByFilterCondition" >
 													<ClientSideEvents SelectedIndexChanged="function(s,e) { models.PerformCallback(); }" 
 														
 														GotFocus="function(s, e) {
@@ -215,11 +207,13 @@
 										<tr>
 											<td>
 												<dxe:ASPxComboBox ID="ModelSelect" runat="server" EnableClientSideAPI="true" ClientInstanceName="models"
-														DataSourceID="ModelDataSource" TextField="DisplayMember" Width="200" 
+														TextField="DisplayMember" Width="200" 
 														ValueField="ValueMember" OnCallback="ModelSelect_Callback" AutoPostBack="false"
-													    TabIndex="107" EnableIncrementalFiltering="True" 
-													    IncrementalFilteringMode="StartsWith" ValueType="System.Int32" 
-													    EnableCallbackMode="True" ShowLoadingPanel="False">
+													    TabIndex="107" IncrementalFilteringMode="StartsWith" ValueType="System.Int32" 
+													    EnableCallbackMode="true" CallbackPageSize="150" DropDownStyle="DropDown"
+                                                        ShowLoadingPanel="False" 
+                                                    OnItemRequestedByValue="ModelSelect_ItemRequestedByValue" 
+                                                    OnItemsRequestedByFilterCondition="ModelSelect_ItemsRequestedByFilterCondition">
 														<ClientSideEvents GotFocus="function(s, e) 
                                                             {
 															    s.SelectAll();
@@ -536,4 +530,13 @@
 <dx:ASPxHiddenField ID="hfServiceItem" runat="server" ClientInstanceName="siLocalData"
 	SyncWithServer="true">
 </dx:ASPxHiddenField>
+
+<asp:LinqDataSource ID="ServiceItemDataSource" runat="server" onselecting="ServiceItemDataSource_Selecting">
+</asp:LinqDataSource>
+<asp:LinqDataSource ID="ServiceItemTypeDataSource" runat="server" OnSelecting="ServiceItemTypeDataSource_Selecting">
+</asp:LinqDataSource>
+<asp:LinqDataSource ID="ManufacturerDataSource" runat="server" OnSelecting="ManufacturerDataSource_Selecting">
+</asp:LinqDataSource>
+<asp:LinqDataSource ID="ModelDataSource" runat="server" OnSelecting="ModelDataSource_Selecting">
+</asp:LinqDataSource>
 

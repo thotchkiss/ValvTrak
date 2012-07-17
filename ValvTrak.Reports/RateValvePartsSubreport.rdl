@@ -16,9 +16,6 @@
   <rd:DrawGrid>true</rd:DrawGrid>
   <InteractiveWidth>8.5in</InteractiveWidth>
   <rd:SnapToGrid>true</rd:SnapToGrid>
-  <RightMargin>1in</RightMargin>
-  <LeftMargin>1in</LeftMargin>
-  <BottomMargin>1in</BottomMargin>
   <rd:ReportID>ad2bd33c-d6c5-4028-a194-dd2461e7fc79</rd:ReportID>
   <DataSets>
     <DataSet Name="ValvTrak">
@@ -264,6 +261,7 @@
       </Query>
     </DataSet>
   </DataSets>
+  <Code />
   <Width>7.5in</Width>
   <Body>
     <ReportItems>
@@ -2271,5 +2269,4 @@
     <Height>2.75in</Height>
   </Body>
   <Language>en-US</Language>
-  <TopMargin>1in</TopMargin>
 </Report>
