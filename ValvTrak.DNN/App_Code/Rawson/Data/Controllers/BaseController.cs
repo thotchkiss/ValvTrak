@@ -70,7 +70,7 @@ namespace Rawson.Data.Controllers
 
         public virtual List<ComboBoxValue<int>> GetEmployeesList()
         {
-            return Context.Employees.Select(e => new ComboBoxValue<int> { DisplayMember = e.FirstName + " " + e.LastName, ValueMember = e.EmployeeID })
+            return Context.Employees.Where(e => e.Active == true).Select(e => new ComboBoxValue<int> { DisplayMember = e.FirstName + " " + e.LastName, ValueMember = e.EmployeeID })
                 .OrderBy(c => c.DisplayMember).ToList();
         }
 
