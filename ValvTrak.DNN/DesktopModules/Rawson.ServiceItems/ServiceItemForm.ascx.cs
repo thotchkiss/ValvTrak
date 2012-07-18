@@ -265,7 +265,7 @@ namespace Rawson.ServiceItems
         private void ClearData()
         {
             ServiceItemFormController controller = Context.Items[this.UniqueID + "_boController"] as ServiceItemFormController;
-            controller.Load(ServiceItemID);
+            //controller.Load(ServiceItemID);
 
             SerialNum.Text = String.Empty;
             txtSapEquipNum.Text = String.Empty;
@@ -346,7 +346,7 @@ namespace Rawson.ServiceItems
         protected void ManufacturerSelect_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
         {
             ServiceItemFormController controller = Context.Items[this.UniqueID + "_boController"] as ServiceItemFormController;
-            controller.Load(ServiceItemID);
+            //controller.Load(ServiceItemID);
 
             ManufacturerSelect.DataSource = controller.GetManufacturers();
             ManufacturerSelect.DataBind();
@@ -361,7 +361,7 @@ namespace Rawson.ServiceItems
         protected void ModelSelect_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
         {
             ServiceItemFormController controller = Context.Items[this.UniqueID + "_boController"] as ServiceItemFormController;
-            controller.Load(ServiceItemID);
+            //controller.Load(ServiceItemID);
 
             ModelSelect.DataSource = controller.GetManufacturerModels(Convert.ToInt32(ManufacturerSelect.Value));
             ModelSelect.DataBind();
