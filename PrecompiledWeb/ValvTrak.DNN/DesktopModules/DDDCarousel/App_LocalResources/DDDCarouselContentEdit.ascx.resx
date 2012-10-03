@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cmdCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="cmdCancelItem.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="cmdUpdate.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="ErrorNoImagePath.Text" xml:space="preserve">
+    <value>Please insert an Image Path!</value>
+  </data>
+  <data name="lblContent1.Help" xml:space="preserve">
+    <value>Specifies the text to display in the first text field on the DetailPage, or in the Content area of the Lightbox.&lt;br /&gt;&lt;br&gt;
+
+To change the text format, choose "Edit Configuration" from the module menu and edit the "DetailPage | Textfield1" settings. Enable the "HTML" setting to activate HTML support for the text field.&lt;br /&gt;&lt;br /&gt;
+
+HTML Support for DetailPage:
+The following HTML tags are supported for the text fields on the DetailPage.&lt;br /&gt;
+Anchor: &amp;lt;a ...&amp;gt;&lt;br /&gt;
+Bold: &amp;lt;b&amp;gt;&lt;br /&gt;
+Font: &amp;lt;font ...&amp;gt;&lt;br /&gt;
+Italic: &amp;lt;i&amp;gt;&lt;br /&gt;
+Paragraph: &amp;lt;p ...&amp;gt;&lt;br /&gt;
+Underline: &amp;lt;u&amp;gt;&lt;br /&gt;
+Break: &amp;lt;br&amp;gt;&lt;br /&gt;
+Image: &amp;lt;img ...&amp;gt;&lt;br /&gt;
+List Item: &amp;lt;li&amp;gt;&lt;br /&gt;&lt;br /&gt;
+
+HTML Support for Lightbox:&lt;br /&gt;
+The full range of standard HTML tags are supported when you choose Lightbox display.</value>
+  </data>
+  <data name="lblContent1.Text" xml:space="preserve">
+    <value>Textfield 1</value>
+  </data>
+  <data name="lblContent2.Help" xml:space="preserve">
+    <value>Specifies the text to display in the second text field on the DetailPage, or in the Content area of the Lightbox.&lt;br /&gt;&lt;br&gt;
+
+To change the text format, choose "Edit Configuration" from the module menu and edit the "DetailPage | Textfield2" settings. Enable the "HTML" setting to activate HTML support for the text field.&lt;br /&gt;&lt;br /&gt;
+
+HTML Support for DetailPage:
+The following HTML tags are supported for the text fields on the DetailPage.&lt;br /&gt;
+Anchor: &amp;lt;a ...&amp;gt;&lt;br /&gt;
+Bold: &amp;lt;b&amp;gt;&lt;br /&gt;
+Font: &amp;lt;font ...&amp;gt;&lt;br /&gt;
+Italic: &amp;lt;i&amp;gt;&lt;br /&gt;
+Paragraph: &amp;lt;p ...&amp;gt;&lt;br /&gt;
+Underline: &amp;lt;u&amp;gt;&lt;br /&gt;
+Break: &amp;lt;br&amp;gt;&lt;br /&gt;
+Image: &amp;lt;img ...&amp;gt;&lt;br /&gt;
+List Item: &amp;lt;li&amp;gt;&lt;br /&gt;&lt;br /&gt;
+
+HTML Support for Lightbox:&lt;br /&gt;
+The full range of standard HTML tags are supported when you choose Lightbox display.</value>
+  </data>
+  <data name="lblContent2.Text" xml:space="preserve">
+    <value>Textfield 2</value>
+  </data>
+  <data name="lblImagePath.Help" xml:space="preserve">
+    <value>Specifies the path of the image displayed in the Gallery</value>
+  </data>
+  <data name="lblImagePath.Text" xml:space="preserve">
+    <value>Image Path</value>
+  </data>
+  <data name="lblLink.Help" xml:space="preserve">
+    <value>Specifies the link to the page to be loaded when clicking on the image.&lt;br&gt;&lt;br&gt;
+Attention: In "Edit Configuration" you must have selected "Image Click Action: Open Link".</value>
+  </data>
+  <data name="lblLink.Text" xml:space="preserve">
+    <value>Image Link / Target</value>
+  </data>
+  <data name="lblToolTip.Help" xml:space="preserve">
+    <value>Specifies the text to display in the Tooltip text field.&lt;br /&gt;&lt;br&gt;
+
+To change the text format, choose "Edit Configuration" from the module menu and edit the "Gallery Tooltip" settings. Enable the "HTML" setting to activate HTML support for the text field.&lt;br /&gt;&lt;br /&gt;
+
+The following HTML tags are supported for the Tooltip text field.&lt;br /&gt;
+Anchor: &amp;lt;a ...&amp;gt;&lt;br /&gt;
+Bold: &amp;lt;b&amp;gt;&lt;br /&gt;
+Font: &amp;lt;font ...&amp;gt;&lt;br /&gt;
+Italic: &amp;lt;i&amp;gt;&lt;br /&gt;
+Paragraph: &amp;lt;p ...&amp;gt;&lt;br /&gt;
+Underline: &amp;lt;u&amp;gt;&lt;br /&gt;
+Break: &amp;lt;br&amp;gt;&lt;br /&gt;
+Image: &amp;lt;img ...&amp;gt;&lt;br /&gt;
+List Item: &amp;lt;li&amp;gt;&lt;br /&gt;</value>
+  </data>
+  <data name="lblToolTip.Text" xml:space="preserve">
+    <value>Tooltip</value>
+  </data>
+  <data name="lblVisible.Help" xml:space="preserve">
+    <value>Defines whether the item should be displayed in the Gallery.&lt;br&gt;
+This property can be used for temporarily excluding an item from the Gallery.</value>
+  </data>
+  <data name="lblVisible.Text" xml:space="preserve">
+    <value>Visible</value>
+  </data>
+  <data name="optDetailImagePath0.Text" xml:space="preserve">
+    <value>Use Gallery Image</value>
+  </data>
+  <data name="optDetailImagePath1.Text" xml:space="preserve">
+    <value>New Image</value>
+  </data>
+  <data name="itemLinkTargetBlank.Text" xml:space="preserve">
+    <value>open in new window (_blank) *</value>
+  </data>
+  <data name="itemLinkTargetParent.Text" xml:space="preserve">
+    <value>open in parent window (_parent)</value>
+  </data>
+  <data name="itemLinkTargetSelf.Text" xml:space="preserve">
+    <value>open in same window (_self)</value>
+  </data>
+  <data name="itemLinkTargetTop.Text" xml:space="preserve">
+    <value>open in top window (_top)</value>
+  </data>
+  <data name="lblDetailPageCaption.Text" xml:space="preserve">
+    <value>Detail Page / Lightbox</value>
+  </data>
+  <data name="lblImageCaption.Text" xml:space="preserve">
+    <value>Gallery Image</value>
+  </data>
+  <data name="lblJSFunction." xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblJSFunction.Help" xml:space="preserve">
+    <value>DEPRECATED!&lt;br&gt;
+This feature is deprecated. It may become obsolete in future versions, consider using =&gt;Module Menu: 'Developer Tools' | 'JS Functions' instead.&lt;br&gt;
+Specifies name and parameter of the JavaScript function to be called up by clicking on an image.&lt;br&gt;
+&lt;br&gt;
+Example:&lt;br&gt;
+MyFunction('text1', 'text2', 3)&lt;br&gt;
+&lt;br&gt;
+This gives you the possibility to create own JavaScript functions via which the animation can communicate with the other modules. The JavaScript function must be on the same page with the 3D Carousel, e. g., in an DotNetNuke-Text/HTML module.&lt;br&gt;
+&lt;br&gt;
+Example - JavaScript function in a DotNetNuke-Text/HTML module:&lt;br&gt;
+&amp;lt;script language="javascript"&amp;gt;&lt;br&gt;
+function MyFunction(v1, v2, v3)&lt;br&gt;
+{&lt;br&gt;
+alert(v1);&lt;br&gt;
+alert(v2);&lt;br&gt;
+alert(v3);&lt;br&gt;
+}&lt;br&gt;
+&amp;lt;/script&amp;gt;&lt;br&gt;&lt;br&gt;
+
+Please note: If you set the token :afterclick: in front of the function name, the JavaScript function will be called up after(!) all effects have been carried out.&lt;br&gt; Example:&lt;br&gt;
+:afterclick:MyFunction('text1', 'text2', 3)</value>
+  </data>
+  <data name="lblJSFunction.Text" xml:space="preserve">
+    <value>JS Function (deprecated)</value>
+  </data>
+</root>

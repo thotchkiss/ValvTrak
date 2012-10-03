@@ -1,0 +1,92 @@
+﻿<dotnetnuke type="Package" version="5.0">
+  <packages>
+    <package name="MinimalExtropyContainer" type="Container" version="1.0.2">
+      <friendlyName>Minimal Extropy Container</friendlyName>
+      <description>The Minimal Extropy Container is the Default Container for DotNetNuke.</description>
+      <owner>
+        <name>DotNetNuke</name>
+        <organization>DotNetNuke Corporation</organization>
+        <url>www.dotnetnuke.com</url>
+        <email>support@dotnetnuke.com</email>
+      </owner>
+      <license src="license.txt" />
+      <releaseNotes src="releasenotes.txt" />
+      <components>
+        <component type="Container">
+          <containerFiles>
+            <containerName>MinimalExtropy</containerName>
+            <basePath>Portals\_default\Containers\MinimalExtropy</basePath>
+            <containerFile>
+              <name>license.txt</name>
+            </containerFile>
+            <containerFile>
+              <name>releaseNotes.txt</name>
+            </containerFile>
+            <containerFile>
+              <path>images</path>
+              <name>dnn-minus.gif</name>
+            </containerFile>
+            <containerFile>
+              <path>images</path>
+              <name>dnn-plus.gif</name>
+            </containerFile>
+            <containerFile>
+              <name>container.css</name>
+            </containerFile>
+            <containerFile>
+              <name>license.txt</name>
+            </containerFile>
+            <containerFile>
+              <name>ReleaseNotes.txt</name>
+            </containerFile>
+            <containerFile>
+              <name>thumbnail_title_blue.jpg</name>
+            </containerFile>
+            <containerFile>
+              <name>thumbnail_title_grey.jpg</name>
+            </containerFile>
+            <containerFile>
+              <name>thumbnail_title_red.jpg</name>
+            </containerFile>
+            <containerFile>
+              <name>Title_Blue.ascx</name>
+            </containerFile>
+            <containerFile>
+              <name>Title_Blue.css</name>
+            </containerFile>
+            <containerFile>
+              <name>Title_Blue.htm</name>
+            </containerFile>
+            <containerFile>
+              <name>Title_Blue.jpg</name>
+            </containerFile>
+            <containerFile>
+              <name>Title_Grey.ascx</name>
+            </containerFile>
+            <containerFile>
+              <name>Title_Grey.css</name>
+            </containerFile>
+            <containerFile>
+              <name>Title_Grey.htm</name>
+            </containerFile>
+            <containerFile>
+              <name>Title_Grey.jpg</name>
+            </containerFile>
+            <containerFile>
+              <name>Title_Red.ascx</name>
+            </containerFile>
+            <containerFile>
+              <name>Title_Red.css</name>
+            </containerFile>
+            <containerFile>
+              <name>Title_Red.htm</name>
+            </containerFile>
+            <containerFile>
+              <name>Title_Red.jpg</name>
+            </containerFile>
+          </containerFiles>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>

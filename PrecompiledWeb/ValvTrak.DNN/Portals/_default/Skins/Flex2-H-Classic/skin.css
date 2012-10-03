@@ -1,0 +1,369 @@
+/*---------------------------------------------------------*/
+/*  ___      _  _      _               ___ _          ___  */
+/* |   \ _ _| \| |_  _| |_____   ___  | __| |_____ __|_  ) */
+/* | |) | '_| .` | || | / / -_) |___| | _|| / -_) \ / / /  */
+/* |___/|_| |_|\_|\_,_|_\_\___|       |_| |_\___/_\_\/___| */
+/*                                                         */
+/*      Skin Styles for DotNetNuke - Flex2 by DrNuke       */
+/*              http://www.DrNuke.co.uk/flex2              */
+/*       Copyright DrNuke Ltd - All rights reserved        */
+/*---------------------------------------------------------*/
+
+/*----------------------------------------------------*/
+/* General Page Styles								  */
+/*----------------------------------------------------*/
+html { height:100%; margin:0; padding:0; }
+#Body { height:100%; margin:0; padding:0; }
+form { height:100%; margin:0; padding:0; }
+p { font-size:11px; color:#2c2c2c; margin-top:0; }
+.normal, .Normal { font-size:11px; color:#2c2c2c; }
+.NormalBold { font-family:arial,helvetica; font-size:11px; font-weight:bold; color:#2c2c2c; }
+.NormalRed { color:#c50000; font-family:arial,helvetica; font-weight:bold; font-size:11px; }
+.fullheight { height:100%; }
+.fullwidth { width:100%; }
+.clear { clear:both; line-height:0; margin:0; padding:0; font-size:0; height:0; }
+.hidden { display:none; }	
+
+/*----------------------------------------------------*/
+/* Page Structure									  */
+/*----------------------------------------------------*/
+#OuterContainer { height:100%; margin:0 auto; }
+#InnerContainer { margin:0; background:#ffffff; }
+#LogoContainer { margin:0 5px 0 5px; overflow:hidden; font-size:0; }
+#LogoRightContainer { text-align:right; margin:0 5px 0 0; }
+#LanguageContainer { margin:5px 12px 7px 0; text-align:right; }
+#SearchContainer { margin:7px 5px 7px 0; text-align:right; }
+#DateContainer { margin:0 9px 7px 0; text-align:right; }
+#MenuContainer { height:29px; overflow:hidden; margin:0 5px 0 5px; }
+#MenuBottomContainer { height:8px; margin:0 5px 0 5px; }
+#UnderBannerContainer { height:31px; margin:0 5px 0 5px; background:#e4e4e4; }
+#LoginContainer { height:27px; margin:4px 4px 0 0; float:right;}
+#UserContainer { height:27px; margin:4px 8px 0 0; float:right; }
+#BreadcrumbContainer { height:23px; margin:8px 0 0 0; float:left; }
+#ContentContainerCell { padding:10px 14px 0 14px; vertical-align:top; }
+#CopyrightContainer { text-align:left; margin:0 0 0 5px; float:left; }
+#TermsContainer { text-align:right; margin:0 5px 0 5px; float:right; }
+#PrivacyContainer { text-align:right; margin:0 5px 0 5px; float:right; }
+
+/*----------------------------------------------------*/
+/* Banners											  */
+/*----------------------------------------------------*/
+#BannerOuterContainer { margin:0 5px 0 5px; }	
+#BannerContainer { }
+#CustomBannerContainer { }
+#FlashBannerContainer { text-align:center; }
+#FlashBannerContainer img { border:none; }
+
+/*-----------------------------------------------------------------------*/
+/* Search																 */
+/*-----------------------------------------------------------------------*/
+.SearchBoxL { width:155px; height:33px; padding:0 0 0 14px; margin:0; line-height:0; background-image:url(images/search-left.gif); background-repeat:no-repeat; background-position:top left; }
+.SearchBox { width:100%; height:33px; vertical-align:top; font-size:0; line-height:0; margin:0; padding:0; background-image:url(images/search-bg.gif); background-repeat:no-repeat; background-position:right; }
+.SearchBox input { height:18px; background:#ffffff; width:114px; color:#666666; margin:9px 0 9px 0; padding:0; border:none; cursor:text; z-index:1; float:left; }
+.SearchBox a img { float:right; margin:0; padding:0; border:none; }
+.SearchBox img { width:25px; height:33px; }
+
+/*-----------------------------------------------------------------------*/
+/* Links																 */
+/*-----------------------------------------------------------------------*/
+a:link, a:visited, a:active { text-decoration:none; }
+a:hover { text-decoration:underline; }
+a.CommandButton:link, a.CommandButton:visited, a.CommandButton:active { color:#666666; font-weight:bold; font-size:11px; text-decoration:underline; }
+a.CommandButton:hover{ color:#444444; font-size:11px; text-decoration:underline; }
+
+/*-----------------------------------------------------------------------*/
+/* Headings																 */
+/*-----------------------------------------------------------------------*/
+h1 { font-weight:bold; margin:0; padding:0; line-height:1.5em; }
+h2 { font-weight:bold; margin:0; padding:0; line-height:1.5em; }
+h3 { font-weight:bold; margin:0; padding:0; line-height:1.5em; }
+h4 { font-weight:bold; margin:0; padding:0; line-height:1.5em; }
+h5 { font-weight:bold; margin:0; padding:0; line-height:1.5em; }
+h6 { font-weight:bold; margin:0; padding:0; line-height:1.5em; }
+.Head { font-family:arial; font-size:14px; color:#28509a; font-weight:bold; padding:0; }
+.SubHead { font-family:arial; font-size:12px; font-weight:bold; color:#585858; padding:0; }
+
+/*-----------------------------------------------------------------------*/
+/* Date																     */
+/*-----------------------------------------------------------------------*/
+.DateToken { color:#777777; font-size:11px; font-weight:normal; }
+
+/*-----------------------------------------------------------------------*/
+/* Login																 */
+/*-----------------------------------------------------------------------*/
+#LoginContainer table { margin:1px 0 0 0; }
+#LoginContainer div { height:22px; overflow:hidden; background-image:url(images/loginbutton-r.gif); background-position:top right; background-repeat:no-repeat; }
+#LoginContainer td { height:22px; white-space:nowrap; padding:0; background-image:url(images/loginbutton-bg.png); background-position:top left; background-repeat:no-repeat; }
+/*.LoginToken, a.LoginToken:link, a.LoginToken:visited, a.LoginToken:active { color:#777777; background-image:url(images/loginbutton-l.png); background-repeat:no-repeat; background-position:center left; font-size:11px; font-weight:normal; text-decoration:none; height:22px; float:left; line-height:20px; padding:0 10px 0 26px; margin:0; }
+a.LoginToken:hover { color:#444444; background-image:url(images/loginbuttonon-l.png); background-repeat:no-repeat; background-position:center left; }*/
+
+/* Data Springs Drop Down Login */
+
+#LoginContainer { position: relative; }
+#LoginContainer div #signin_menu { height: auto; background-image: none; }
+#LoginContainer div #signin_menu div { height: auto; background-image: none; }
+#LoginContainer div #signin_menu td { height: auto; background-image: none; white-space:normal; }
+
+.signin, a.signin:link, a.signin:visited, a.signin:active { color:#777777; background-image:url(images/loginbutton-l.png); background-repeat:no-repeat; background-position:center left; font-size:11px; font-weight:normal; text-decoration:none; height:22px; float:left; line-height:20px; padding:0 10px 0 26px; margin:0; }
+a.signin:hover { color:#444444; background-image:url(images/loginbuttonon-l.png); background-repeat:no-repeat; background-position:center left; }
+
+/*a.signin
+{
+    background: #88bbd4;
+    padding: 4px 6px 6px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 4px12px6px;
+}
+a.signin:hover
+{
+    background: #59B;
+    padding: 4px12px6px;
+}
+a.signin, a.signin:hover
+{
+    background-position: 03px !important;
+}
+a.signin
+{
+    position: relative;
+	margin-left: 3px;
+	margin-top: 3px;
+	padding-top:6px;
+}*/
+
+a.signin span
+{
+    background-position: 100% 50%;
+    padding: 4px 16px 6px 0;
+}
+#topnav a.menu-open
+{
+    background: #ddeef6 !important;
+    color: #666 !important;
+    outline: none;
+}
+#small_signup
+{
+    display: inline;
+    float: none;
+    line-height: 23px;
+    margin: 25px 0 0;
+    width: 170px;
+}
+/*a.signin.menu-open
+{
+    background-color: #ddeef6;
+    color: #789;
+}*/
+#signin_menu
+{
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    display: none;
+    background-color: #ddeef6;
+    position: absolute;
+    width: 200px;
+    z-index: 100;
+    border: 1px transparent;
+    text-align: left;
+    padding: 12px;
+    top: 24.5px;
+    right: 0px;
+    margin-top: 5px;
+    margin-right: 0px;
+    margin-right: -1px;
+    color: #789;
+    font-size: 11px;
+    line-height: 20px;
+}
+#signin_menu input[type=text], #signin_menu input[type=password]
+{
+    display: block;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border: 1px solid #ACE;
+    font-size: 13px;
+    margin: 0 0 5px;
+    padding: 5px;
+    width: 203px;
+}
+#signin_menu p
+{
+    margin: 0;
+}
+#signin_menu a
+{
+    color: #6AC;
+}
+#signin_menu label
+{
+    font-weight: normal;
+}
+#signin_menu p.remember
+{
+    padding: 10px 0;
+}
+#signin_menu p.forgot, #signin_menu p.complete
+{
+    clear: both;
+    margin: 5px 0;
+}
+#signin_menu p a
+{
+    color: #27B !important;
+}
+.signin_submit
+{
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background-color: #3399DD;
+    border: 1px solid #39D;
+    color: #fff;
+    text-shadow: 0 -1px 0 #39d;
+    padding: 4px 10px 5px;
+    font-size: 11px;
+    margin: 0 5px 0 0;
+    font-weight: bold;
+    text-shadow: 0 -1px 0 #3399DD;
+}
+.signin_submit::-moz-focus-inner
+{
+    padding: 0;
+    border: 0;
+}
+.signin_submit:hover, #signin_submit:focus
+{
+    background-position: 0 -5px;
+    cursor: pointer;
+}
+a.signin img 
+{
+    vertical-align:middle;
+    visibility: hidden;
+	border-width:0;
+}
+
+/*-----------------------------------------------------------------------*/
+/* User																	 */
+/*-----------------------------------------------------------------------*/
+#UserContainer table { margin:1px 0 0 0; }
+#UserContainer div { height:22px; overflow:hidden; background-image:url(images/userbutton-r.gif); background-position:top right; background-repeat:no-repeat; }
+#UserContainer td { height:22px; white-space:nowrap; padding:0; background-image:url(images/loginbutton-bg.png); background-position:top left; background-repeat:no-repeat; }
+.UserToken, a.UserToken:link, a.UserToken:visited, a.UserToken:active { color:#777777; background-image:url(images/userbutton-l.png); background-repeat:no-repeat; background-position:center left; font-size:11px; font-weight:normal; text-decoration:none; height:22px; float:left; line-height:20px; padding:0 10px 0 26px; margin:0; }
+a.UserToken:hover { color:#444444; background-image:url(images/userbuttonon-l.png); background-repeat:no-repeat; background-position:center left; }
+
+/*-----------------------------------------------------------------------*/
+/* Breadcrumbs															 */
+/*-----------------------------------------------------------------------*/
+#BreadcrumbContainer img { width:14px; height:14px; }
+#BreadcrumbContainer span { float:left; vertical-align:middle; }
+#BreadcrumbContainer .BreadcrumbSpan { line-height:14px; float:left; font-size:0; margin:0 10px 0 10px; }
+#BreadcrumbContainer a { float:left; }
+.BreadcrumbToken, a.BreadcrumbToken:link, a.BreadcrumbToken:visited, a.BreadcrumbToken:active { color:#424242; font-size:11px; text-decoration:underline; font-weight:normal; }
+a.BreadcrumbToken:hover { color:#666666; font-size:11px; text-decoration:none; font-weight:normal; }
+
+/*-----------------------------------------------------------------------*/
+/* Copyright, privacy, terms											 */
+/*-----------------------------------------------------------------------*/
+#FooterCell { vertical-align:top; }
+.FooterToken { }
+a.FooterToken:link, a.FooterToken:visited, a.FooterToken:active { color:#28509a; font-weight:normal; text-decoration:underline; }
+a.FooterToken:hover { color:#577aba; font-weight:normal; text-decoration:none; }
+
+/*-----------------------------------------------------------------------*/
+/* Main Menu    														 */
+/*-----------------------------------------------------------------------*/
+#MenuBarL { width:6px; padding:0; margin:0; font-size:0; }
+#MenuBarL img { width:6px; height:8px; }
+#MenuBarM { width:100%; }
+#MenuBarR { width:6px; padding:0; margin:0; font-size:0; }
+#MenuBarR img { width:6px; height:8px; }
+#MenuBar { padding:0 0 0 17px; }
+
+.mainmenu-idle { float:left; padding:0; margin:0; font-size:11px; font-weight:bold; color:#c3c3c3; cursor:pointer; }
+.mainmenu-idle span { position:relative; line-height:30px; display:block; float:left; background:none; }
+.mainmenu-idle .tab-left { background:none; height:30px; }
+.mainmenu-idle .tab-right { background:none; height:30px; }
+.mainmenu-idle .tab-left img { width:7px; height:7px; margin-right:7px; }
+.mainmenu-idle .tab-right img { width:7px; height:7px; margin-left:7px; }
+
+.mainmenu-breadcrumbactive { float:left; padding:0; margin:0; font-size:11px; font-weight:bold; color:#f5f5f5; cursor:pointer; }
+.mainmenu-breadcrumbactive span { position:relative; line-height:30px; display:block; float:left; background:none; }
+.mainmenu-breadcrumbactive .tab-left { background:none; height:30px; }
+.mainmenu-breadcrumbactive .tab-right { background:none; height:30px; }
+.mainmenu-breadcrumbactive .tab-left img { width:7px; height:7px; margin-right:7px; }
+.mainmenu-breadcrumbactive .tab-right img { width:7px; height:7px; margin-left:7px; }
+
+.mainmenu-selected { float:left; padding:0; margin:0; background:transparent; font-size:11px; font-weight:bold; color:#f5f5f5; cursor:pointer;}
+.mainmenu-selected span { position:relative; line-height:30px; display:block; float:left; background:none; }
+.mainmenu-selected .tab-left { background:none; height:30px; }
+.mainmenu-selected .tab-right { background:none; height:30px; }
+.mainmenu-selected .tab-left img { width:7px; height:7px; margin-right:7px; }
+.mainmenu-selected .tab-right img { width:7px; height:7px; margin-left:7px; }
+
+.mainmenu-submenu { padding:0; margin:0; border:1px solid #cacaca; z-index:1000; font-weight:normal; }
+.mainmenu-menuitem { color:#2c2c2c; cursor:pointer; }
+.mainmenu-menuitem span { font-size:11px; font-weight:normal; font-style:normal; }
+.mainmenu-menuitem td { padding:0 5px 0 5px; margin:0; height:25px; }
+.submenu-menuitemsel { color:#f1f1f1; }
+
+/*-----------------------------------------------------------------------*/
+/* Module Menus															 */
+/*-----------------------------------------------------------------------*/
+.ModuleTitle_SubMenu { background:#ffffff; padding:0; margin:0; border:1px solid #1f1f1f; z-index:1000; font-weight:normal; }
+.ModuleTitle_MenuItem { border:none; }
+.ModuleTitle_MenuItem td { background:#ffffff; color:#1f1f1f; font-family:arial,helvetica,verdana; font-size:11px; font-weight:bold; padding:0 5px 0 5px !important; height:20px; white-space:nowrap; }
+.ModuleTitle_MenuItemSel { border:none; background:none; }
+.ModuleTitle_MenuItemSel td { background:#bababa; }
+.ModuleTitle_MenuIcon { border:none; background:#e5e5e5 !important; border-right:1px solid #e5e5e5; }
+.ModuleTitle_MenuIcon img { margin:0; }
+.ModuleTitle_MenuBreak td { background:#e5e5e5; height:1px; }
+
+/*-----------------------------------------------------------------------*/
+/* Control Panels														 */
+/*-----------------------------------------------------------------------*/
+.ControlPanel select, .ControlPanel input { font-size:11px; color:#000000; }
+.FCKImageGalleryContainer { background:#ffffff; }
+.FCKLinkGalleryContainer { background:#ffffff; }
+#fckinstanceoptions_tblEditorOptions { background:#ffffff; }
+
+/*----------------------------------------------------*/
+/* Content Panes									  */
+/*----------------------------------------------------*/
+.BannerPane { width:100%; vertical-align:top; }
+.CustomBannerPane { width:100%; padding:0; vertical-align:top; }
+.TopPane { width:100%; padding:0; vertical-align:top; }
+.TopPane2 { width:100%; padding:0; vertical-align:top; }
+.LeftPane { padding:0 7px 0 0; width:50%; vertical-align:top; }
+.RightPane { padding:0 0 0 7px; width:50%; vertical-align:top; }
+.LeftPane2 { padding:0 7px 0 0; width:33%; vertical-align:top; }
+.ContentPane1 { padding:0 7px 0 7px; vertical-align:top; }
+.ContentPane { padding:0; vertical-align:top; }
+.RightPane2 { padding:0 0 0 7px; width:33%; vertical-align:top; }
+.MiddlePane { width:100%; padding:0; vertical-align:top; }
+.ContentPane2 { padding:0 7px 0 0; vertical-align:top; }
+.RightPane3 { padding:0 0 0 7px; width:33%; vertical-align:top; }
+.LeftPane3 { padding:0 7px 0 0; width:33%; vertical-align:top; }
+.ContentPane3 { padding:0 0 0 7px; vertical-align:top; }
+.BottomPane { width:100%; padding:0; vertical-align:top; }
+.LeftPane4 { padding:0 3px 0 0; width:33%; vertical-align:top; }
+.ContentPane4 { padding:0 3px 0 3px; vertical-align:top; }
+.RightPane4 { padding:0 0 0 3px; width:33%; vertical-align:top; }
+.BottomPane2 { width:100%; padding:0; vertical-align:top; }
+.FooterPane { width:100%; padding:0 5px 0 5px; vertical-align:top; }
+
+/* End Flex2 By DrNuke Style Sheet */
+/*----------------------------------------------------*/
+
+
+
+

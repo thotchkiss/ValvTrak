@@ -1,0 +1,12 @@
+The DNN Minimal Extropy Containers package is the default set of containers for DotNetNuke and 
+have been designed to show some of the capabilities available in DotNetNuke.
+
+Minimal Extropy v1.0 Beta includes minimal usage of the new client widget framework.  The final
+release version of the continers will contain more extensive use of widgets to enhance functionality
+and provide a working example of the widget framework.
+
+Known issues:
+1.  Limited widget implementation
+2.  May show PNG rendering issues in IE6
+3.  Does not include use of default containers for panes
+4.  Limited number of container variations.  The final release will include a number of additional container variations.

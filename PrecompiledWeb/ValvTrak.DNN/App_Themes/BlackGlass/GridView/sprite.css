@@ -1,0 +1,120 @@
+.dxGridView_gvCollapsedButton_BlackGlass,
+.dxGridView_gvCollapsedButtonRtl_BlackGlass,
+.dxGridView_gvExpandedButton_BlackGlass,
+.dxGridView_gvExpandedButtonRtl_BlackGlass,
+.dxGridView_gvDetailCollapsedButton_BlackGlass,
+.dxGridView_gvDetailCollapsedButtonRtl_BlackGlass,
+.dxGridView_gvDetailExpandedButton_BlackGlass,
+.dxGridView_gvDetailExpandedButtonRtl_BlackGlass,
+.dxGridView_gvFilterRowButton_BlackGlass,
+.dxGridView_gvHeaderFilter_BlackGlass,
+.dxGridView_gvHeaderFilterActive_BlackGlass,
+.dxGridView_gvHeaderSortDown_BlackGlass,
+.dxGridView_gvHeaderSortUp_BlackGlass,
+.dxGridView_gvDragAndDropArrowDown_BlackGlass,
+.dxGridView_gvDragAndDropArrowUp_BlackGlass,
+.dxGridView_gvDragAndDropHideColumn_BlackGlass,
+.dxGridView_gvParentGroupRows_BlackGlass,
+.dxGridView_WindowResizer_BlackGlass,
+.dxGridView_WindowResizerRtl_BlackGlass {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxGridView_gvCollapsedButton_BlackGlass,
+.dxGridView_gvCollapsedButtonRtl_BlackGlass {
+    background-position: -36px 0px;
+    width: 11px;
+    height: 12px;
+}
+
+.dxGridView_gvExpandedButton_BlackGlass,
+.dxGridView_gvExpandedButtonRtl_BlackGlass {
+    background-position: -36px -18px;
+    width: 11px;
+    height: 11px;
+}
+
+.dxGridView_gvDetailCollapsedButton_BlackGlass,
+.dxGridView_gvDetailCollapsedButtonRtl_BlackGlass {
+    background-position: -53px 0px;
+    width: 11px;
+    height: 11px;
+}
+
+.dxGridView_gvDetailExpandedButton_BlackGlass,
+.dxGridView_gvDetailExpandedButtonRtl_BlackGlass {
+    background-position: -53px -18px;
+    width: 11px;
+    height: 11px;
+}
+
+.dxGridView_gvFilterRowButton_BlackGlass {
+    background-position: -100px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvHeaderFilter_BlackGlass {
+    background-position: 0px -36px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxGridView_gvHeaderFilterActive_BlackGlass {
+    background-position: -23px -36px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxGridView_gvHeaderSortDown_BlackGlass {
+    background-position: -19px 0px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxGridView_gvHeaderSortUp_BlackGlass {
+    background-position: -19px -18px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxGridView_gvDragAndDropArrowDown_BlackGlass {
+    background-position: 0px 0px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxGridView_gvDragAndDropArrowUp_BlackGlass {
+    background-position: 0px -17px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxGridView_gvDragAndDropHideColumn_BlackGlass {
+    background-position: -70px 0px;
+    width: 22px;
+    height: 22px;
+}
+
+.dxGridView_gvParentGroupRows_BlackGlass {
+    background-position: -70px -36px;
+    width: 18px;
+    height: 13px;
+}
+
+.dxGridView_WindowResizer_BlackGlass {
+    background-position: -46px -36px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_WindowResizerRtl_BlackGlass {
+    background-position: -91px -36px;
+    width: 13px;
+    height: 13px;
+}
+
+

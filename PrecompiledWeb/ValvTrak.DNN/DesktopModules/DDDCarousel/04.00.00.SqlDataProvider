@@ -1,0 +1,95 @@
+﻿
+--------------------------------------------------------------
+-- Drop Existing Table MediaANT_3DCarouselPro --
+--------------------------------------------------------------
+if EXISTS (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}MediaANT_3DCarousel]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+drop table {databaseOwner}[{objectQualifier}MediaANT_3DCarousel]
+go
+
+--------------------------------------------------------------
+-- Create Table MediaANT_3DCarousel --
+--------------------------------------------------------------
+create table {databaseOwner}[{objectQualifier}MediaANT_3DCarousel] (
+	[ModuleId] [int] NOT NULL,
+	[CarouselXML] [ntext]) ON [PRIMARY]
+go
+
+alter table {databaseOwner}[{objectQualifier}MediaANT_3DCarousel] add 
+constraint [PK_{objectQualifier}MediaANT_3DCarousel] primary key clustered 
+(
+	[ModuleId]
+) ON [PRIMARY] 
+
+--------------------------------------------------------------
+-- Drop Existing Stored Procedures --
+--------------------------------------------------------------
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}MediaANT_3DCarousel_Select]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}MediaANT_3DCarousel_Select
+go
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}MediaANT_3DCarousel_Insert]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}MediaANT_3DCarousel_Insert
+go
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}MediaANT_3DCarousel_Update]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}MediaANT_3DCarousel_Update
+go
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}MediaANT_3DCarousel_Delete]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}MediaANT_3DCarousel_Delete
+go
+
+--------------------------------------------------------------
+-- Create SP MediaANT_3DCarousel_Select --
+--------------------------------------------------------------
+create procedure {databaseOwner}[{objectQualifier}MediaANT_3DCarousel_Select] 
+(
+	@ModuleId int 
+)
+as
+	select 
+	ModuleId,CarouselXML
+	from {objectQualifier}MediaANT_3DCarousel
+	where (ModuleId = @ModuleId)
+go
+
+--------------------------------------------------------------
+-- Create SP MediaANT_3DCarousel_Delete --
+--------------------------------------------------------------
+create procedure {databaseOwner}[{objectQualifier}MediaANT_3DCarousel_Delete] 
+(
+	@ModuleId int
+)
+as
+	delete from {objectQualifier}MediaANT_3DCarousel
+	where (ModuleId = @ModuleId)
+go
+
+--------------------------------------------------------------
+-- Create SP MediaANT_3DCarousel_Insert --
+--------------------------------------------------------------
+create procedure {databaseOwner}[{objectQualifier}MediaANT_3DCarousel_Insert] 
+(
+	@ModuleId int,
+	@CarouselXML ntext
+)
+as
+	
+	insert into {objectQualifier}MediaANT_3DCarousel
+	(		ModuleId,CarouselXML)
+	values (@ModuleId, @CarouselXML)
+go
+
+--------------------------------------------------------------
+-- Create SP MediaANT_3DCarousel_Update --
+--------------------------------------------------------------
+create procedure {databaseOwner}[{objectQualifier}MediaANT_3DCarousel_Update] 
+(
+	@ModuleId int,
+	@CarouselXML ntext
+)
+as
+	update {objectQualifier}MediaANT_3DCarousel
+	set CarouselXML = @CarouselXML
+	where (ModuleId = @ModuleId)
+

@@ -1,0 +1,26 @@
+/*****  Containers CSS designed by bind.pt 		*****/
+/*****  02 Basic - no Title                     *****/
+
+                                 .container                 { margin-bottom:10px; }
+                                    
+/*-- actions   				--*/ .C02_Actions               { float:left; width:0px; }
+
+/*-- content pane			--*/ .C02_ContentPane_NT        { margin:0px 15px; }
+
+/*-- bottom icons  			--*/ .C02_Icons                 { margin-top:0px; margin-left: 15px; }
+                                 .C02_Icons a:hover         { background-color:Transparent; }
+                                 .C02_Icons a, 
+                                 .C02_Icons input           { margin-top:10px; }
+
+/*-- round container		--*/ .C02_Basic_roundcont       { background-color:#F4F4F4; }
+                    
+/*-- round top left	        --*/ .C02_Basic_roundtop_leftD        { background:url(C02_tl_Basic.png) no-repeat top left; height:16px; }
+/*-- round top right		--*/ .C02_Basic_roundtop_rightD       { background:url(C02_tr_Basic.png) no-repeat top right; height:16px; margin-top:-16px; margin-left:15px; }
+                                  
+/*-- round bottom left  	--*/ .C02_Basic_roundbottom_leftD     { background:url(C02_bl_Basic.png) no-repeat bottom left; height:16px; }
+/*-- round bottom right 	--*/ .C02_Basic_roundbottom_rightD    { background:url(C02_br_Basic.png) no-repeat bottom right; height:16px; margin-top:-16px; margin-left:15px;  }
+
+/*-- image of corner		--*/ img.C02_corner_left        { width:15px; height:16px; border: none; display:block !important; }
+/*-- image of corner		--*/ img.C02_corner_right       { height:16px; border: none; display:block !important; }
+
+

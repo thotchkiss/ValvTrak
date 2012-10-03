@@ -1,0 +1,22 @@
+
+/*****  Containers CSS designed by bind.pt 		*****/
+/*****  00 in Dark Black Title				    *****/
+
+                                 .container                 { margin-bottom:10px; }
+
+/*-- title line				--*/ .C00_DarkBlack_TitleLine   { margin:0; position:relative; height:25px; }
+/*-- title   				--*/ .C00_Black_DarkTitle       { float:left; font-family:Arial; font-size:16px; font-weight:300; line-height:120%; color:#000000; text-transform:lowercase; }
+/*-- actions   				--*/ .C00_Actions               { float:left; width:0px; }
+/*-- visibility  			--*/ .C00_Visibility            { float:right; }
+                                 .C00_Visibility a:hover    { background-color:Transparent; }
+
+
+/*-- content pane			--*/ .C00_ContentPane           { margin:10px 0px 0px; }
+
+/*-- bottom icons  			--*/ .C00_Icons                 { margin-right: 0px; }
+                                 .C00_Icons a:hover         { background-color:Transparent; }
+                                 .C00_Icons a, 
+                                 .C00_Icons input           { margin-top:10px; }
+
+
+

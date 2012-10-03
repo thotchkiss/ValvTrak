@@ -1,0 +1,133 @@
+.dxXtraReports_BtnFirstPage_BlackGlass,
+.dxXtraReports_BtnFirstPageDisabled_BlackGlass,
+.dxXtraReports_BtnLastPage_BlackGlass,
+.dxXtraReports_BtnLastPageDisabled_BlackGlass,
+.dxXtraReports_BtnNextPage_BlackGlass,
+.dxXtraReports_BtnNextPageDisabled_BlackGlass,
+.dxXtraReports_BtnPrevPage_BlackGlass,
+.dxXtraReports_BtnPrevPageDisabled_BlackGlass,
+.dxXtraReports_BtnPrint_BlackGlass,
+.dxXtraReports_BtnPrintDisabled_BlackGlass,
+.dxXtraReports_BtnPrintPage_BlackGlass,
+.dxXtraReports_BtnPrintPageDisabled_BlackGlass,
+.dxXtraReports_BtnSave_BlackGlass,
+.dxXtraReports_BtnSaveDisabled_BlackGlass,
+.dxXtraReports_BtnSaveWindow_BlackGlass,
+.dxXtraReports_BtnSaveWindowDisabled_BlackGlass,
+.dxXtraReports_BtnSearch_BlackGlass,
+.dxXtraReports_BtnSearchDisabled_BlackGlass {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxXtraReports_BtnFirstPage_BlackGlass {
+    background-position: -16px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnFirstPageDisabled_BlackGlass {
+    background-position: -16px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnLastPage_BlackGlass {
+    background-position: -32px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnLastPageDisabled_BlackGlass {
+    background-position: -32px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnNextPage_BlackGlass {
+    background-position: -64px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnNextPageDisabled_BlackGlass {
+    background-position: -64px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrevPage_BlackGlass {
+    background-position: -48px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrevPageDisabled_BlackGlass {
+    background-position: -48px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrint_BlackGlass {
+    background-position: -80px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintDisabled_BlackGlass {
+    background-position: -80px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintPage_BlackGlass {
+    background-position: -96px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintPageDisabled_BlackGlass {
+    background-position: -96px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSave_BlackGlass {
+    background-position: -112px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveDisabled_BlackGlass {
+    background-position: -112px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveWindow_BlackGlass {
+    background-position: -128px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveWindowDisabled_BlackGlass {
+    background-position: -128px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSearch_BlackGlass {
+    background-position: 0px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSearchDisabled_BlackGlass {
+    background-position: 0px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+

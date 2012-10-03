@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            <xsd:complexType>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" />
+                            <xsd:attribute name="type" type="xsd:string" />
+                            <xsd:attribute name="mimetype" type="xsd:string" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" />
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
+            </xsd:complexType>
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="ResMimeType">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="Version">
+        <value>1.0.0.0</value>
+    </resheader>
+    <resheader name="Reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="Writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="plURL.Text">
+        <value>Media</value>
+    </data>
+    <data name="plURL.Help">
+        <value>Select a Media file</value>
+    </data>
+    <data name="plAlt.Text">
+        <value>Alternate Text</value>
+    </data>
+    <data name="plAlt.Help">
+        <value>Enter text that will be displayed by browsers that are not able to display the Media</value>
+    </data>
+    <data name="valAltText.ErrorMessage">
+        <value>&lt;br&gt;Alternate Text Is Required</value>
+    </data>
+    <data name="valWidth.ErrorMessage">
+        <value>&lt;br&gt;Width Must Be A Valid Integer</value>
+    </data>
+    <data name="valHeight.ErrorMessage">
+        <value>&lt;br&gt;Height Must Be A Valid Integer</value>
+    </data>
+    <data name="plWidth.Text">
+        <value>Width</value>
+    </data>
+    <data name="plWidth.Help">
+        <value>Enter a width (in pixels) for the Media</value>
+    </data>
+    <data name="plHeight.Text">
+        <value>Height</value>
+    </data>
+    <data name="plHeight.Help">
+        <value>Enter a height (in pixels) for the Media</value>
+    </data>
+    <data name="plNavigateUrl.Text">
+        <value>Link</value>
+    </data>
+    <data name="plNavigateUrl.Help">
+        <value>Specify a URL to link to, if desired (Note: The link setting is only applicable to image types; other media types are not supported)</value>
+    </data>
+    <data name="ModuleHelp.Text">
+        <value>&lt;h1&gt;About The Media Module&lt;/h1&gt;
+
+&lt;p&gt;The Media Module renders media from a relative or absolute URL.  The media file does not need to reside on the host system. Height and width attributes for the media can be entered, which provides adjustment of the media dimensions.  Alternative text is mandatory.&lt;/p&gt;
+
+&lt;h1&gt;Edit Media Options&lt;/h1&gt;
+
+&lt;ol&gt;&lt;li&gt;Add an &lt;b&gt;Media&lt;/b&gt; module, or go to an existing &lt;b&gt;Media&lt;/b&gt; module.&lt;/li&gt;
+&lt;li&gt;Click &lt;b&gt;Edit Media Options&lt;/b&gt;.
+&lt;li&gt;At &lt;b&gt;Media&lt;/b&gt;, select the &lt;b&gt;media&lt;/b&gt; or click &lt;b&gt;Upload New File&lt;/b&gt;.
+&lt;li&gt;At &lt;b&gt;Alternate Text&lt;/b&gt;, enter the text to be displayed on media mouse over.
+&lt;li&gt;Click &lt;b&gt;Update&lt;/b&gt;.&lt;/ol&gt;</value>
+    </data>
+    <data name="ControlTitle_edit.Text">
+        <value>Edit Media</value>
+    </data>
+    <data name="UseModuleSettings.Text">
+        <value>Use Module Settings Value</value>
+    </data>
+    <data name="None.Text">
+        <value>None</value>
+    </data>
+    <data name="Left.Text">
+        <value>Left</value>
+    </data>
+    <data name="Center.Text">
+        <value>Center</value>
+    </data>
+    <data name="Right.Text">
+        <value>Right</value>
+    </data>
+    <data name="plAlignment.Text">
+        <value>Media Alignment</value>
+    </data>
+    <data name="plAlignment.Help">
+        <value>Use this setting for better control over the alignment of the media.</value>
+    </data>
+</root>

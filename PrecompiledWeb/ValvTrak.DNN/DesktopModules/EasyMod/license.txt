@@ -1,0 +1,49 @@
+<strong>DRNUKE END USER LICENSE AGREEMENT (EULA)</strong>
+<br/><br/>
+This is a CONTRACT between you (either an individual or a single entity) and DRNUKE, which covers your use of "Flex2" and "EasyMod" and related software components. All such software is referred to herein as the "Software Product".
+<br/><br/>
+A software license issued to a designated user only by DRNUKE or its authorised agents is required for each use of the Software Product as described under the section LIMITED USAGE GRANTED.
+<br/><br/>
+If you do not agree to the terms of this EULA, then do not install or use the Software Product or the Software Product License. By explicitly accepting this End User License Agreement (EULA) you are acknowledging and agreeing to be bound by the following terms:
+<br/><br/>
+<strong>1) REDISTRIBUTION NOT PERMITTED</strong>
+<br/><br/>
+The resale and/or redistribution of the Software Product is strictly prohibited.
+<br/><br/>
+<strong>2) LIMITED USAGE GRANTED</strong>
+<br/><br/>
+You may use this Software Product on one top-level domain or Parent Portal, and up to five subdomains or Child Portals, all within the same DotNetNuke installation. You may install this Software Product on up to two non-public DotNetNuke installations for development purposes.
+<br/><br/>
+<strong>3) INTELLECTUAL PROPERTY RIGHTS RESERVED BY DRNUKE.</strong>
+<br/><br/>
+The Software Product is owned by DRNUKE and is protected by English and international copyright laws and treaties, as well as other intellectual property laws and treaties. You must not remove or alter any copyright notices on any copies of the Software Product. This Software Product copy is licensed, not sold. You may not use, copy, or distribute the Software Product, except as granted by this EULA, without written authorisation from DRNUKE. Furthermore, this EULA does not grant you any rights in connection with any trademarks or service marks of DRNUKE. DRNUKE reserves all intellectual property rights, including copyrights, and trademark rights.
+<br/><br/>
+<strong>4) IMAGERY</strong>
+<br/><br/>
+All imagery used in our Software Product is royalty-free and are an integral part of our products. Limited-usage License gives you the right to use images only as a part of the website you build using this Software Product. You can use imagery to develop one project only. Any kind of separate usage or distribution is prohibited.
+<br/><br/>
+<strong>5) MODIFICATIONS</strong>
+<br/><br/>
+You are authorised to make any necessary modification(s) to our Software Product to fit your purposes.
+<br/><br/>
+Although rights to modification of the Software Product are granted by this EULA, you may not tamper with, alter, or use the software in a way that disables, circumvents, or otherwise defeats its built-in licensing verification and enforcement capabilities. The right to modification of the Software Product also does not include the right to remove or alter any trademark, logo, copyright or other proprietary notice, legend, symbol or label in the software.
+<br/><br/>
+<strong>6) UNAUTHORISED USE</strong>
+<br/><br/>
+You may not place any of our products, modified or unmodified, on a diskette, CD, website or any other medium and offer them for redistribution or resale of any kind without prior written consent from DRNUKE. 
+<br/><br/>
+<strong>7) ASSIGNABILITY</strong>
+<br/><br/>
+You may not sub-license, assign, or transfer this license to anyone else without prior written consent from DRNUKE.
+<br/><br/>
+<strong>8) OWNERSHIP</strong>
+<br/><br/>
+You may not claim intellectual or exclusive ownership to any of our products, modified or unmodified. 
+<br/><br/>
+<strong>9) NO WARRANTY</strong>
+<br/><br/>
+Our products are provided "as is" without warranty of any kind, either expressed or implied. In no event shall we be liable for any damages including, but not limited to, direct, indirect, special, incidental or consequential damages or other losses arising out of the use of or inability to use our products.
+<br/><br/>
+<strong>10) LIMITATION OF LIABILITY</strong>
+<br/><br/>
+In no event will DRNUKE be liable to you for any damages, claims or costs whatsoever or any consequential, indirect, incidental damages, or any lost profits or lost savings or for any claim by any third party.

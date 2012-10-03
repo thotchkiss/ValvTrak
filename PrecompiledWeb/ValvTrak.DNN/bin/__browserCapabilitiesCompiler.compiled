@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="2" virtualPath="/ValvTrak.DNN/App_Browsers/" hash="ffffffffbc39f1d1" filehash="a4e47fe2c818e76d" flags="110000" assembly="App_Browsers" type="ASP.ApplicationBrowserCapabilitiesFactory">
+    <filedeps>
+        <filedep name="/ValvTrak.DNN/App_Browsers/MozillaPatch.browser" />
+        <filedep name="/ValvTrak.DNN/App_Browsers/Net4Patch.browser" />
+        <filedep name="/ValvTrak.DNN/App_Browsers/OceanAppleWebKit.browser" />
+        <filedep name="/ValvTrak.DNN/App_Browsers/OceanSpiders.browser" />
+        <filedep name="/ValvTrak.DNN/App_Browsers/w3cvalidator.browser" />
+    </filedeps>
+</preserve>

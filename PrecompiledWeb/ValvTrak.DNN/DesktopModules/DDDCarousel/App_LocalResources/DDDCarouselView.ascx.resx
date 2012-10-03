@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddContent.Action" xml:space="preserve">
+    <value>Add Content</value>
+  </data>
+  <data name="DefaultContent.Text" xml:space="preserve">
+    <value>Here is some sample content</value>
+  </data>
+  <data name="menuDeveloperTools.Text" xml:space="preserve">
+    <value>Developer Tools</value>
+  </data>
+  <data name="menuEditConfiguration.Text" xml:space="preserve">
+    <value>Edit Configuration</value>
+  </data>
+  <data name="menuExportModule.Text" xml:space="preserve">
+    <value>Export Module</value>
+  </data>
+  <data name="menuImportModule.Text" xml:space="preserve">
+    <value>Import Module</value>
+  </data>
+  <data name="menuManageContent.Text" xml:space="preserve">
+    <value>Manage Content</value>
+  </data>
+  <data name="menuManageTemplates.Text" xml:space="preserve">
+    <value>Manage Templates</value>
+  </data>
+  <data name="ModuleHelp.Text" xml:space="preserve">
+    <value>&lt;h3&gt;
+    3D Gallery 4.1 - Settings Help&lt;/h3&gt;
+  &lt;br /&gt;&lt;span style="text-decoration: underline"&gt;&lt;strong&gt;Flash Player&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;
+    &lt;br /&gt;
+    &lt;strong&gt;Width: &lt;/strong&gt;Specifies the width of the animation area.&lt;br /&gt;
+  Default: 600&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Height: &lt;/strong&gt;Specifies the height of the animation area.&lt;br /&gt;
+  Default: 350&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Position Left: &lt;/strong&gt;Specifies the margin between the animation window
+  and the left border of the module.&lt;br /&gt;
+  Default: 0&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Position Top: &lt;/strong&gt;Specifies the margin between the animation window
+  and the upper border of the module.&lt;br /&gt;
+  Default: 0&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Quality:&lt;/strong&gt; Specifies the animation's quality level.
+  &lt;br /&gt;
+  Default: High&lt;br /&gt;
+  High: Favors quality of animation. (recommended)
+  &lt;br /&gt;
+  Medium: Favors execution speed and does not take quality of animation into account
+  unless it's possible.
+  &lt;br /&gt;
+  Low: Favors execution speed.&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Show Menu: &lt;/strong&gt;Specifies what type of menu appears when the user Right-clicks
+  the animation area.&lt;br /&gt;
+  Default: not checked&lt;br /&gt;
+  Checked: Shows the full menu, which gives the user several options to enhance or
+  control playback.&lt;br /&gt;
+  Not Checked: Shows a menu that contains only the About option and the Settings option.&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Alternative Content: &lt;/strong&gt;Specifies an alternative content, which 
+  will be displayed if Flash is not installed or supported.&lt;br /&gt;
+  Default: -&lt;br /&gt;
+  The alternative content will be displayed in the field provided for the Flash 
+  Player. The extent of this field has been defined in the settings &amp;quot;Flash Player 
+  Width&amp;quot; and &amp;quot;Flash Player Height&amp;quot;. Ensure that the alternative content can be 
+  displayed within the field defined with the Flash Player! If you do not define 
+  any alternative content, the standard Flash Player message will be displayed.&lt;br /&gt;&lt;br /&gt; 
+  The alternative content will also be picked up by search engines, making it a 
+  great tool for creating search-engine-friendly content!&lt;br /&gt;
+  &lt;hr /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;&lt;span style="text-decoration: underline"&gt;Gallery&lt;/span&gt;&lt;/strong&gt;&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Radius:&lt;/strong&gt; Specifies the width of the Gallery.&lt;br /&gt;
+Default: 400&lt;br /&gt;(see help file &amp;quot;How the Gallery works&amp;quot;)&lt;br /&gt;Experiment with the 
+settings Focus and Perspective to obtain the desired configuration of your 
+Gallery.&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Focus:&lt;/strong&gt; Specifies the spatial extension of the Gallery.&lt;br /&gt;Default: 
+  250&lt;br /&gt;Depending on the set value, the gallery moves backwards or forwards, and the 
+  images appear smaller or larger.&lt;br /&gt;(see help file &amp;quot;How the Gallery 
+  works&amp;quot;)&lt;br /&gt;Experiment with the settings Focus and Perspective to obtain the desired 
+  configuration of your Gallery. &lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Vertical View:&lt;/strong&gt; Specifies the vertical view on the Gallery.&lt;br /&gt;
+  Default: 0&lt;br /&gt;
+        &lt;br /&gt;
+  &lt;strong&gt;Speed:&lt;/strong&gt; Specifies the speed of rotation of the Gallery.&lt;br /&gt;
+  Default: 6&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;strong&gt;Position Center Top&lt;/strong&gt;: Specifies the position of the 
+  Gallery starting
+        from the center of the animation window.&lt;br /&gt;
+        Default: 0. Plus and minus values are accepted. e.g -20&lt;br /&gt;
+        The standard position of the Gallery is in the center of the animation 
+  window. With this setting the Gallery can be shifted vertically.&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Random Images: &lt;/strong&gt;Specifies the number of images shown randomly at 
+  any time. Images are taken randomly from the complete selection contained in the 
+  Gallery.&lt;br /&gt;Default: - 
+  &lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Background Color:&lt;/strong&gt; Specifies the background color of the 
+  Gallery.&lt;br /&gt;Default: #ffffff
+  &lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Show Background Image:&lt;/strong&gt; Specifies whether an image should appear 
+  as background image.&lt;br&gt;Default: not checked&lt;br /&gt;Note: If a background image is used, 
+  performance can be affected to some degree. If fastest performance is a top 
+  priority, you may consider other design options. &lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Background Image:&lt;/strong&gt; Specifies the path of an image displayed as 
+  the background image.&lt;br /&gt;
+  Default: -&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Background Top:&lt;/strong&gt; Specifies the margin between the animation 
+  window and the upper border of the background image.&lt;br /&gt;Default: 0 &lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Background Left:&lt;/strong&gt; Specifies the margin between the animation 
+  window and the left border of the background image.&lt;br /&gt;Default: 0&lt;br /&gt;
+  &lt;hr /&gt;
+  &amp;nbsp;&lt;br /&gt;
+  &lt;strong&gt;&lt;span style="text-decoration: underline"&gt;Navigation&lt;br /&gt;
+  &lt;/span&gt;&lt;/strong&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Rotation:&lt;/strong&gt; Specifies the rotation options of the 
+  Gallery.&lt;br /&gt;Default: Auto&lt;br /&gt;&lt;br /&gt;Auto: The Gallery rotates automatically.&lt;br /&gt;Buttons: 
+  Navigation buttons are displayed by which the Gallery rotation can be directed 
+  to run clockwise or counter-clockwise.&lt;br /&gt;Custom: The navigation buttons can be 
+  positioned anywhere. 
+  &lt;br /&gt;
+&lt;br /&gt;
+&lt;strong&gt;Buttons Color: &lt;/strong&gt;Specifies the color of the buttons.&lt;br /&gt;
+Default: #ff0000&lt;br /&gt;
+&lt;br /&gt;
+&lt;strong&gt;Buttons Alpha: &lt;/strong&gt;Specifies the alpha transparency value of the 
+buttons.&lt;br /&gt;
+Default: 75&lt;br /&gt;
+&lt;br /&gt;
+&lt;strong&gt;Initial Rotation Duration: &lt;/strong&gt;Specifies how long the Gallery should rotate initially. Works only in combination with the navigation buttons (see Rotation).&lt;br /&gt;
+Default: 0&amp;nbsp;&lt;br /&gt;
+&lt;br /&gt;
+&lt;strong&gt;Position Left: &lt;/strong&gt;Specifies the margin between the animation 
+window and the left border of the buttons.&lt;br /&gt;
+Default: 0&lt;br /&gt;
+&lt;br /&gt;
+&lt;strong&gt;Position Top: &lt;/strong&gt;Specifies the margin between the animation window 
+and the upper border of the buttons.&lt;br /&gt;
+Default: 0&lt;br /&gt;
+  
+  &lt;hr /&gt;
+  &amp;nbsp;&lt;br /&gt;
+  &lt;strong&gt;&lt;span style="text-decoration: underline"&gt;Effects - Image Reflection &lt;br /&gt;
+  &lt;/span&gt;&lt;/strong&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Visible:&lt;/strong&gt; Specifies if a reflection should be visible.&lt;br /&gt;
+  Default: checked&lt;br /&gt;&lt;span class="style1"&gt;Hint: When the glow effect is activated, no reflection will be 
+  shown!&lt;/span&gt; &lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Alpha:&lt;/strong&gt; Specifies the alpha transparency value of the
+  reflection.&lt;br /&gt;
+  Default: 50&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Height:&lt;/strong&gt; Specifies the height of the reflection.&lt;br /&gt;
+  Default: 4&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Distance:&lt;/strong&gt; Specifies the distance the reflection starts from the
+  bottom of the image.&lt;br /&gt;
+  Default: 0&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;&lt;span style="text-decoration: underline"&gt;Effects - Image Glow&lt;br /&gt;
+  &lt;/span&gt;&lt;/strong&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Enabled:&lt;/strong&gt; Specifies if a glow effect should be displayed on an 
+  image when the curser is placed over it.&lt;br /&gt;Default: not checked&lt;br /&gt;
+  &lt;span class="style1"&gt;Hint: When the glow 
+  effect is activated, no reflection will be shown!&lt;/span&gt;
+  &lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Color:&lt;/strong&gt; Specifies the color of the glow effect.&lt;br /&gt;Default: #ff0000 &lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Alpha:&lt;/strong&gt; Specifies the alpha transparency value of the glow 
+  effect.&lt;br /&gt;
+  Default: 100&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Blur:&lt;/strong&gt; Specifies the extent of the glow effect.&lt;br /&gt;
+  Default: 32&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Strength:&lt;/strong&gt; Specifies the intensity of the glow effect.&lt;br /&gt;
+  Default: 2&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Quality:&lt;/strong&gt; Specifies the presentation quality of the glow effect.&lt;br /&gt;
+  Default: High&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;&lt;span style="text-decoration: underline"&gt;Effects - Image Rotation&lt;br /&gt;
+  &lt;/span&gt;&lt;/strong&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Enabled:&lt;/strong&gt; Specifies if an image should feature a rotation effect 
+  when the curser is placed over it.&lt;br /&gt;Default: not checked&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Speed:&lt;/strong&gt; Specifies the speed of the rotation effect.&lt;br /&gt;Default: 15&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Radians:&lt;/strong&gt; Specifies the degree of rotation of the image.&lt;br /&gt;Default: 180&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;&lt;span style="text-decoration: underline"&gt;Effects - Image Zoom&lt;br /&gt;
+  &lt;/span&gt;&lt;/strong&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Enabled:&lt;/strong&gt; Specifies if a zoom effect is to be displayed in an 
+  image when the curser is placed over it.&lt;br /&gt;Default: not checked&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Rate:&lt;/strong&gt; Specifies the zoom rate of the effect.&lt;br /&gt;Default: 5&lt;br /&gt;
+  &lt;hr /&gt;
+  &amp;nbsp;&lt;br /&gt;
+  &lt;strong&gt;&lt;span style="text-decoration: underline"&gt;Dynamic / Static Textfields&lt;/span&gt;&lt;/strong&gt;&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;HTML:&lt;/strong&gt; Specifies that the textfield supports a subset
+  of standard HTML tags.&lt;br /&gt;
+  Important! If this option is checked the settings for Align, Bold, Italic, 
+  Font, Font Color, Font
+  Size, Leading and Underline are ignored.&lt;br /&gt;
+  Default: not checked&lt;br /&gt;
+  &lt;br /&gt;
+  The following HTML tags are supported:  &lt;span style="color: #cc0000"&gt;
+  &lt;br /&gt;
+  Anchor:&lt;/span&gt; &amp;lt;a href="http://www.3dcarousel.com"&amp;gt;Link&amp;lt;/a&amp;gt;&lt;br /&gt;
+  &lt;span style="color: #cc0000"&gt;Bold:&lt;/span&gt; &amp;lt;b&amp;gt;Lorem ipsum ex vel prima&amp;lt;/b&amp;gt;&lt;br /&gt;
+  &lt;span style="color: #cc0000"&gt;Font:&lt;/span&gt; &amp;lt;font color=&amp;quot;#cccccc&amp;quot; size=&amp;quot;12&amp;quot; face="Verdana&amp;quot;&amp;gt;&lt;br /&gt;
+  &lt;span style="color: #cc0000"&gt;Paragraph:&lt;/span&gt;&amp;lt;p&amp;gt;Lorem ipsum ex vel prima&amp;lt;/p&amp;gt;&lt;br /&gt;
+  &lt;span style="color: #cc0000"&gt;Underline:&lt;/span&gt; &amp;lt;u&amp;gt;Lorem ipsum ex vel prima&amp;lt;/u&amp;gt;&lt;br /&gt;
+  &lt;span style="color: #cc0000"&gt;Break: &lt;/span&gt;&amp;lt;br&amp;gt;Lorem ipsum ex vel prima&lt;br /&gt;
+  &lt;span style="color: #cc0000"&gt;Image:&lt;/span&gt; &amp;lt;img src="..\..\..\portals\0\logo.gif".&amp;gt;&lt;br /&gt;
+  &lt;span style="color: #cc0000"&gt;List Item:&lt;/span&gt; &amp;lt;li&amp;gt;Lorem ipsum&amp;lt;br&amp;gt;Lorem
+  ipsum&amp;lt;/li&amp;gt;
+  &lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Anti-Aliasing: &lt;/strong&gt;Specifies that the font faces should be rendered 
+  more legible.&lt;br /&gt;Default: not checked&lt;br /&gt;&lt;br /&gt;The setting enables high quality rendering and 
+  should be used by preference when using small fonts. (&amp;lt; 10 px) &lt;br /&gt;HTML: When 
+  selecting anti-aliasing, the standard font (Verdana) will be used automatically! 
+  Please don&amp;#65533;t define any fonts in HTML! If you do, the text will not be 
+  displayed!&lt;br /&gt;&amp;lt;font color='#cccccc' face='Arial'&amp;gt;Text&amp;lt;/font&amp;gt; invalid!&lt;br&gt;
+&amp;lt;font color='#cccccc'&amp;gt;Text&amp;lt;/font&amp;gt; vaild!&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Align:&lt;/strong&gt; Specifies the horizontal alignment of the text.&lt;br /&gt;
+  Default: center&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Bold: &lt;/strong&gt;Specifies whether the text is boldface.&lt;br /&gt;
+  Default: not checked&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Italic: &lt;/strong&gt;Specifies whether the text is italicized.&lt;br /&gt;
+  Default: not checked&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Font: &lt;/strong&gt;Spezifies the font name of the text.&lt;br /&gt;
+  Default: Verdana&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Font color: &lt;/strong&gt;Spezifies the color of the text.&lt;br /&gt;
+  Default: #222222&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Font size: &lt;/strong&gt;Spezifies the size of the text.&lt;br /&gt;
+  Default: 14&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Leading: &lt;/strong&gt;Specifies the space in pixels between lines.&lt;br /&gt;
+  Default: 0&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Underline: &lt;/strong&gt;Specifies whether the text is underlined.&lt;br /&gt;
+  Default: not checked&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;strong&gt;Position Left: &lt;/strong&gt;Specifies the margin between the text and the left border 
+  of the animations window.&lt;br /&gt;Default: 0 | 110 | 220 | 330&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Position Top:&lt;/strong&gt; Specifies the margin 
+  between the text and the upper border of the animations window.&lt;br /&gt;Default: 10 
+  | 10 | 10 | 10&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Width:&lt;/strong&gt; Specifies the width of the textfield.&lt;br /&gt;
+  Default: 100 | 100 | 100 | 100 &lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Height:&lt;/strong&gt; Specifies the 
+  height of the textfield.&lt;br /&gt;Default: 30 | 30 | 30 | 30&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Topmost:&lt;/strong&gt; Specifies that the text field is shown on top of other 
+  elements.&lt;br /&gt;Default: checked&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Background Color:&lt;/strong&gt;&lt;br /&gt;Specifies the background color of the textfield.&lt;br /&gt;Default: -&lt;br /&gt;&lt;br /&gt; 
+  &lt;strong&gt;Show Border:&lt;/strong&gt; Specifies that a frame will be displayed around the text field.&lt;br /&gt;
+  Default: not checked&lt;br /&gt;&lt;span class="style1"&gt;Hint: Showing the contours can also be helpful for 
+  positioning the text field!&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Border Color:&lt;/strong&gt; Specifies the border 
+  color.&lt;br /&gt;Default: -&lt;br /&gt;
+        &lt;hr id="Hr4" /&gt;
+        &amp;nbsp;&amp;nbsp;&lt;br /&gt;
+  &lt;strong&gt;&lt;span style="text-decoration: underline"&gt;Gallery Images&lt;br /&gt;
+    &lt;br /&gt;
+  &lt;/span&gt;Image Path: &lt;/strong&gt;Specifies the path of the image displayed in the 
+  Gallery.&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Image Link | Target:&lt;/strong&gt; Specifies the link to the page to be loaded
+  when clicking on the image.&lt;br /&gt;
+  Target:&lt;br /&gt;
+  _blank : The new page will be shown in a new browser window.&lt;br /&gt;
+  _self: The new page will be shown in the Gallery window.&lt;br /&gt;
+        _parent: The new page will be shown in the parent page.&lt;br /&gt;
+        _top: The new page will be shown in the topmost frame.&lt;br /&gt;
+  &lt;br /&gt;
+  &lt;strong&gt;Textfield 1 (dynamic) / Textfield 2 (dynamic):&lt;/strong&gt; Specifies the text to be shown in Textfield1 
+  / Textfield2.&lt;br /&gt;Any 
+  details with regard to the presentation of the text can be defined in the area 
+  &amp;quot;Dynamic Textfields&amp;quot;.&lt;br /&gt;&lt;br /&gt;Note: If you have checked option "HTML" under 
+  "Dynamic Textfields" you can make use of the following HTML tags for designing your text:&lt;br /&gt;
+  &lt;span style="color: #cc0000"&gt;
+  Anchor:&lt;/span&gt; &amp;lt;a href="http://www.3dcarousel.com"&amp;gt;Link&amp;lt;/a&amp;gt;&lt;br /&gt;
+  &lt;span style="color: #cc0000"&gt;Bold:&lt;/span&gt; &amp;lt;b&amp;gt;Lorem ipsum ex vel prima&amp;lt;/b&amp;gt;&lt;br /&gt;
+  &lt;span style="color: #cc0000"&gt;Font:&lt;/span&gt; &amp;lt;font color=&amp;quot;#cccccc&amp;quot; size=&amp;quot;12&amp;quot; face="Verdana&amp;quot;&amp;gt;&lt;br /&gt;
+  &lt;span style="color: #cc0000"&gt;Paragraph:&lt;/span&gt;&amp;lt;p&amp;gt;Lorem ipsum ex vel prima&amp;lt;/p&amp;gt;&lt;br /&gt;
+  &lt;span style="color: #cc0000"&gt;Underline:&lt;/span&gt; &amp;lt;u&amp;gt;Lorem ipsum ex vel prima&amp;lt;/u&amp;gt;&lt;br /&gt;
+  &lt;span style="color: #cc0000"&gt;Break: &lt;/span&gt;&amp;lt;br&amp;gt;Lorem ipsum ex vel prima&lt;br /&gt;
+  &lt;span style="color: #cc0000"&gt;Image:&lt;/span&gt; &amp;lt;img src="..\..\..\portals\0\logo.gif".&amp;gt;&lt;br /&gt;
+  &lt;span style="color: #cc0000"&gt;List Item:&lt;/span&gt; &amp;lt;li&amp;gt;Lorem ipsum&amp;lt;br&amp;gt;Lorem
+  ipsum&amp;lt;/li&amp;gt;</value>
+  </data>
+  <data name="StartContent1.Text" xml:space="preserve">
+    <value>&lt;font size='12' color='#000000'&gt;First steps:&lt;br&gt;&lt;b&gt;1.&lt;/b&gt; Login with an account that has Host or Admin access.&lt;br&gt;&lt;b&gt;2.&lt;/b&gt; Move the cursor over the upper left arrow of the module and select &lt;b&gt;Settings&lt;/b&gt; from the menu.&lt;br&gt;&lt;b&gt;3.&lt;/b&gt; Open the &lt;b&gt;Settings&lt;/b&gt; area.&lt;br&gt;&lt;b&gt;4.&lt;/b&gt; Under &lt;b&gt;Carousel Images&lt;/b&gt; click &lt;b&gt;Add new&lt;/b&gt;.&lt;br&gt;&lt;b&gt;5.&lt;/b&gt; Select an image from the Image Picker.&lt;br&gt;&lt;b&gt;6.&lt;/b&gt; Click &lt;b&gt;Save&lt;/b&gt;.&lt;br&gt;&lt;b&gt;7.&lt;/b&gt; Add any additional number of images (steps 4-6).&lt;br&gt;&lt;b&gt;7.&lt;/b&gt; Click on &lt;b&gt;Update&lt;/b&gt; to save the entries!&lt;/font&gt;</value>
+  </data>
+  <data name="StartContent2.Text" xml:space="preserve">
+    <value>&lt;font size='11' color='#444444'&gt;Click on the image to&lt;br&gt;return to the Carousel&lt;/font&gt;</value>
+  </data>
+  <data name="Template.Text" xml:space="preserve">
+    <value>[CONTENT]</value>
+  </data>
+</root>

@@ -1,0 +1,190 @@
+/*
+    Place your menu inside a DIV and give it an ID.
+    Put all rules that are common to all the menu classes
+    here to avoid repetition.
+*/
+#Layout-Masthead-Navbar-Menu *
+{
+    cursor: pointer;
+}
+
+/*
+span(Menu-Control)
+--span(Menu-Menu-Root) (Menu-Menu-Root Menu-Root-Hover)
+    OR
+--span(Menu-Root-ChildSelected Menu-Root-Selected) (Menu-Root-ChildSelected Menu-Root-Hover Menu-Root-Selected)
+------span
+---------img[icon]
+------span[Text]
+
+----table(Menu-Child-Container)
+------tr(Menu-Child) (Menu-Child Menu-Child-Hover)
+      OR
+------tr(Menu-Child-Selected) (Menu-Child-Selected Menu-Child-Hover)
+      OR
+------tr(Menu-Child-ChildSelected) (Menu-Child-ChildSelected Menu-Child-Hover)
+---------td(Menu-Icon)
+-----------span
+---------td
+-----------span[Text]
+---------td
+-----------img[breadcrumb]
+*/
+
+/* Appearance of overall menu */
+.Menu-Control
+{
+    height: 50px;
+    margin: 0px;
+    float: left;
+    padding-top: 15px;
+}
+
+.Menu-Control *
+{
+    line-height: normal;
+    text-align: left;
+}
+
+
+
+/* span */
+.Menu-Root
+{
+    color: Black;
+    padding: 5px;    
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+/* span */
+.Menu-Root-Hover
+{
+    color: White;
+    background-color: Black;
+    padding: 5px;    
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+/* span */
+.Menu-Root-ChildSelected
+{    
+    color: White;
+    background-color: #999999;
+    padding: 2px;    
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.Menu-Root-Selected
+{
+    color: White;
+    background-color: Black;
+    padding: 2px;    
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+/* table */
+.Menu-Child-Container
+{
+    border: solid 1px #d0d0d0;
+    background-color: White;
+    padding: 2px;
+}
+
+.Menu-Child-Container td
+{
+    padding: 5px;    
+    padding-right: 20px;
+}
+
+/* tr */
+.Menu-Child-ChildSelected
+{
+    color: White;
+    background-color: Black;
+}
+
+/* td */
+.Menu-Icon
+{
+    width: 16px;
+    height: 16px;
+    background-color: White;
+}
+
+/* tr */
+.Menu-Child
+{
+    color: Black;
+    background-color: White;
+}
+
+/* tr */
+.Menu-Child-Selected
+{
+    color: White;
+    background-color: #999999;
+}
+
+.Menu-Child-Hover
+{
+    color: White;
+    background-color: Black;
+}
+
+
+/* Module Action Menus */
+
+.ModuleTitle_MenuItem 
+{
+	border: white 0px solid; /*override borders*/    
+}
+
+.ModuleTitle_MenuItem td 
+{
+	cursor: pointer; 
+	cursor: hand; 
+	color: black; 
+	height: 21px;
+    white-space: nowrap;  /*Word wrapping menu item now optional*/
+    padding: 1px 3px 3px 1px;	
+}
+
+
+.ModuleTitle_MenuIcon 
+{
+	cursor: pointer; 
+	cursor: hand; 
+	background-color: #EEEEEE; 
+	width: 15px;
+	height: 100%;   /*override the default height for icon so that menubreaks can have heights adjusted*/
+}
+
+.ModuleTitle_SubMenu 
+{
+	z-index: 1000; 
+	cursor: pointer; 
+	cursor: hand; 
+	background-color: #FFFFFF; 
+	filter:progid:DXImageTransform.Microsoft.Shadow(color='DimGray', Direction=135, Strength=3); 
+	padding: 1px 1px 1px 1px;   /*explicitly set padding for sub-menus */
+}
+
+.ModuleTitle_MenuBreak  
+{
+	background-color: #EEEEEE; 
+	font-size: 1px;
+}
+
+.ModuleTitle_MenuItemSel {
+
+	cursor: pointer; 
+	color: black; 
+	background-color: #C1D2EE;
+}
+
+
+

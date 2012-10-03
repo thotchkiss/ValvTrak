@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="skin.css" />
+    <title></title>
+</head>
+<body>
+<!-- *********************************************************************** -->
+<!--                 BEGIN DOTNETNUKE SKIN TEMPLATE                          -->
+<!-- *********************************************************************** -->
+<object id="ControlPanel" codetype="dotnetnuke/server" codebase="CONTENTPANE"></object>
+<div id="Layout-Background">
+    <div id="Layout-Grid">
+        <div id="Layout-TopRow">
+                <div id="Layout-TopRow-Profile">
+                    <object id="dnnLogin" codetype="dotnetnuke/server" codebase="LOGIN">
+                        <param name="cssclass" value="ServerSkinWidget" />
+                    </object>
+                    <object id="dnnUser" codetype="dotnetnuke/server" codebase="USER">
+                        <param name="cssclass" value="ServerSkinWidget" />
+                        <param name="text" value="" />
+                        <param name="url" value="" />
+                    </object>
+                    <object id="dnnLanguage" codetype="dotnetnuke/server" codebase="LANGUAGE">
+                        <param name="cssclass" value="ServerSkinWidget" />
+                        <param name="showMenu" value="False" />
+                        <param name="showLinks" value="True" />
+                    </object>
+                </div>
+                <div id="Layout-TopRow-Search">
+                    <object id="dnnSearch" codetype="dotnetnuke/server" codebase="SEARCH">
+                        <param name="cssclass" value="ServerSkinWidget" />
+                        <param name="showWeb" value="False" />
+                        <param name="showSite" value="False" />                        
+                    </object>
+                </div>        
+        </div>
+        <div id="Layout-Masthead">                
+            <div id="Layout-Cell-N">
+
+                <div id="Layout-Cell-NW"></div>
+
+                <div id="Layout-Masthead-Identity-Logo">
+                    <object id="dnnLogo" codetype="dotnetnuke/server" codebase="LOGO">
+                        <param name="borderWidth" value="0" />
+                    </object>
+                </div>  
+
+                <div id="Layout-Cell-NE"></div>
+
+                <div id="Layout-Masthead-Identity-Graphic">
+                    <object id="HeaderRotator" codetype="dotnetnuke/client" codebase="RotatorWidget" declare="declare">
+                        <param name="height" value="129" />
+                        <param name="width" value="479" />
+                        <param name="imageUrl" value="<%=SkinPath %>images/headers/" />
+                        <param name="imageCount" value="6" />
+                        <param name="imageTemplate" value="header_0{INDEX}.png" />
+                        <param name="interval" value="5000" />
+                        <param name="direction" value="left" />
+                        <param name="transition" value="snap" />
+                    </object>
+                    
+                </div>  
+
+                <div id="Layout-Masthead-NavBar">
+                <object id="Toolbox" codetype="dotnetnuke/client" codebase="VisibilityWidget" declare="declare">
+                        <param name="expandClassName" value="Layout-Masthead-InfoBar-ToolBoxIcon-Expanded" />
+                        <param name="collapseClassName" value="Layout-Masthead-InfoBar-ToolBoxIcon-Collapsed" />
+                        <param name="targetElementId" value="Layout-ToolBox" />
+                        <param name="title" value="Toolbox" />
+                </object>                    
+
+                <object id="dnnNav" codetype="dotnetnuke/server" codebase="NAV">
+                    <param name="cssclass" value="ServerSkinWidget" />
+                    <param name="IndicateChildImageExpandedRoot" value="action_down.gif" />
+                    <param name="IndicateChildren" value="true" />
+
+                    <param name="providername="DNNMenuNavigationProvider"  />
+                    <param name="toolTip" value="description" />
+                    <param name="populateNodesFromClient" value="False" />
+                    <param name="expandDepth" value="4" />
+                    <param name="startTabId" value="-1" />
+                    <param name="pathSystemScript" value="" />
+                    <param name="pathSystemImage" value=""                    
+                    <param name="pathImage" value="" />
+                    <param name="workImage" value="" />
+                    <param name="controlOrientation" value="horizontal" />
+
+                    <param name="cssControl" value="Menu-Control" />
+
+                    <param name="cssNodeRoot" value="Menu-Root" />
+                    <param name="cssBreadCrumbRoot" value="Menu-Root-ChildSelected" />
+                    <param name="cssNodeSelectedRoot" value="Menu-Root-Selected" />
+
+                    <param name="cssNodeHoverRoot" value="Menu-Root-Hover" />
+
+                    <param name="cssContainerSub" value="Menu-Child-Container" />
+
+                    <param name="cssNode" value="Menu-Child" />
+                    <param name="cssBreadCrumbSub" value="Menu-Child-ChildSelected" />
+                    <param name="cssNodeSelectedSub" value="Menu-Child-Selected" />
+
+                    <param name="cssNodeHoverSub" value="Menu-Child-Hover" />
+
+                    <param name="cssIcon" value="Menu-Icon" />
+
+                </object>
+            </div>
+                <div id="Layout-Masthead-InfoBar">
+                    <div id="Layout-Masthead-InfoBar-Date">
+                        <object id="dnnCurrentDate" codetype="dotnetnuke/server" codebase="CURRENTDATE">
+                            <param name="cssclass" value="ServerSkinWidget" />
+                        </object>
+                    </div>
+
+
+                    <div id="Layout-Masthead-InfoBar-BreadCrumbs">
+                        <object id="dnnBreadCrumb" codetype="dotnetnuke/server" codebase="BREADCRUMB">
+                            <param name="cssclass" value="ServerSkinWidget" />
+                            <param name="separator" value="&lt;span&gt;&nbsp;&gt;&nbsp;&lt;/span&gt;" />
+                            <param name="rootLevel" value="0" />
+                        </object>
+                    </div>       
+                </div>
+        
+            </div>        
+        </div>
+
+        
+        <div id="Layout-Cell-W">
+            <div id="Layout-Cell-E">
+                <div id="Layout-ToolBox">
+                    <div id="WidgetPanel">
+                        <!-- Begin Text Sizer widget      -->
+                        <object id="TextSizeWidget" codetype="dotnetnuke/client" codebase="StyleSheetWidget" declare="declare">
+                                <param name="baseUrl" value="<%= SkinPath %>stylesheets/textsizes/" />
+                                <param name="template" value="&lt;input type='button' title='{TEXT}' value='' {ID} {CLASS} /&gt; " />
+                                <param name="default" value="textsize-small" />
+
+                                <param name="Small Text" value="textsize-small" />
+                                <param name="Medium Text" value="textsize-medium" />
+                                <param name="Large Text" value="textsize-large" />
+                        </object>
+                            <!-- param name="Giant Text" value="textsize-giant" / -->       
+                        <!-- End Text Sizer widget       -->    
+
+                        <!-- Begin Layout Switcher widget -->
+                        <object id="LayoutWidget" codetype="dotnetnuke/client" codebase="StyleSheetWidget" declare="declare">
+                                <param name="baseUrl" value="<%= SkinPath %>stylesheets/layouts/" />
+                                <param name="template" value="&lt;input type='button' title='{TEXT}' value='' {ID} {CLASS} /&gt; " />
+                                <param name="default" value="layout-1024" />
+                                
+                                <param name="Small (1024 pixels wide)" value="layout-1024" />
+                                <param name="Medium (1400 pixels wide)" value="layout-1400" />
+                                <param name="Large (1680 pixels wide)" value="layout-1680" />
+                        </object>
+                        
+                            <!-- param name="SXGA (1280)" value="layout-1280" / -->
+                            <!-- param name="WUXGA (1920)" value="layout-1920" / -->
+                            <!-- param name="Flex (Browser width)" value="layout-flex" / -->
+                        <!-- End Layout Switcher widget   -->
+
+                        <!-- Begin Color Palette widget      -->
+                        <object id="ColorPaletteWidget" codetype="dotnetnuke/client" codebase="StyleSheetWidget" declare="declare">
+                                <param name="baseUrl" value="<%= SkinPath %>stylesheets/palettes/" />
+                                <param name="template" value="&lt;input type='button' title='{TEXT}' value='' {ID} {CLASS} /&gt; " />
+                                <param name="default" value="blue/palette-blue" />
+                                
+                                <param name="Blue" value="blue/palette-blue" />
+                                <param name="Teal" value="teal/palette-teal" />
+                                <param name="Brown" value="brown/palette-brown" />
+                                <param name="Green" value="green/palette-green" />
+                                <param name="Pink" value="pink/palette-pink" />
+                                <param name="Orange" value="orange/palette-orange" />
+                                <param name="Red" value="red/palette-red" />
+                                <param name="Grayscale" value="grayscale/palette-grayscale" />
+                        </object>
+                        <!-- End Color Palette widget       -->
+                    </div>
+                                        
+                </div>
+
+                <div id="Layout-Content">
+                    <object id="TopPane" codetype="dotnetnuke/server" codebase="CONTENTPANE">
+                        <param name="cssclass" value="Layout-ContentPane" />
+                    </object>
+
+                    <table class="Layout-Table">    
+	                    <tr>
+		                    <td id="LeftPane" class="Layout-SidePane" runat="server"></td>
+		                    <td id="ContentPane" class="Layout-ContentPane" runat="server">
+		                        <p align="center">
+		                            <object id="Object5" codetype="dotnetnuke/client" codebase="EmbedWidget" declare="declare">
+                                        <param name="type" value="Flickr" />
+                                        <param name="src" value="http://www.flickr.com/explore/interesting/7days/show/" />
+                                    </object>
+		                        </p>
+		                    </td>    
+		                    <td id="RightPane" class="Layout-SidePane" runat="server"></td>
+	                    </tr>
+                    </table>
+                    
+                    <table class="Layout-Table">    
+	                    <tr>
+		                    <td id="SidePane" class="Layout-SidePane" runat="server"></td>
+		                    <td id="WidePane" class="Layout-WidePane" runat="server"></td>
+	                    </tr>
+                    </table>
+                                        
+                    <div>
+	                    <div id="LeftHalfPane" class="Layout-LeftHalfPane" runat="server"></div>
+	                    <div id="RightHalfPane" class="Layout-RightHalfPane" runat="server"></div>		            
+		            </div>
+
+                    <object id="BottomPane" codetype="dotnetnuke/server" codebase="CONTENTPANE">
+                        <param name="cssclass" value="Layout-ContentPane" />
+                    </object>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="Layout-Cell-S">
+            <div id="Layout-Cell-SW"></div>
+            <div id="Layout-Cell-SE"></div>
+            <div id="Layout-Bottom">
+                <object id="dnnLinks" codetype="dotnetnuke/server" codebase="LINKS">
+                    <param name="cssclass" value="ServerSkinWidget" />
+                    <param name="separator" value=" | " />
+                    <param name="disabled" value="False" />
+                </object>
+                <div>
+                    <object id="dnnTerms" codetype="dotnetnuke/server" codebase="TERMS">
+                        <param name="cssclass" value="ServerSkinWidget" />
+                    </object>
+                    <object id="dnnPrivacy" codetype="dotnetnuke/server" codebase="PRIVACY">
+                        <param name="cssclass" value="ServerSkinWidget" />
+                    </object>
+                    <object id="dnnCopyright" codetype="dotnetnuke/server" codebase="COPYRIGHT">
+                        <param name="cssclass" value="ServerSkinWidget" />
+                    </object>
+                </div>
+                <object id="dnnDotNetNuke" codetype="dotnetnuke/server" codebase="DOTNETNUKE">
+                    <param name="cssclass" value="ServerSkinWidget" />
+                </object>
+            </div>
+        </div>
+    
+    </div>    
+</div>
+
+<object id="StyleScrubber" codetype="dotnetnuke/client" codebase="StyleScrubberWidget" declare="declare">
+    <param name="classNames" value="ServerSkinWidget" />
+    <param name="removeAttribute" value="style" />
+    <param name="recursive" value="True" />
+</object>
+
+<!-- *********************************************************************** -->
+<!--                  END DOTNETNUKE SKIN TEMPLATE                           -->
+<!-- *********************************************************************** -->
+
+</body>
+</html>

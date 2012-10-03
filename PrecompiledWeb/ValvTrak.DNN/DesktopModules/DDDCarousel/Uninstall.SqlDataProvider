@@ -1,0 +1,43 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+--------------------------------------------------------------
+-- Drop Existing Stored Procedures --
+--------------------------------------------------------------
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}MediaANT_3DCarousel_Delete]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}[{objectQualifier}MediaANT_3DCarousel_Delete]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}MediaANT_3DCarousel_Insert]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}[{objectQualifier}MediaANT_3DCarousel_Insert]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}MediaANT_3DCarousel_Select]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}[{objectQualifier}MediaANT_3DCarousel_Select]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}MediaANT_3DCarousel_Update]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}[{objectQualifier}MediaANT_3DCarousel_Update]
+GO
+
+--------------------------------------------------------------
+-- Drop Existing Table MediaANT_3DCarouselPro --
+--------------------------------------------------------------
+alter table {databaseOwner}[{objectQualifier}MediaANT_3DCarousel] drop constraint [PK_{objectQualifier}MediaANT_3DCarousel]
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}MediaANT_3DCarousel]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table {databaseOwner}[{objectQualifier}MediaANT_3DCarousel]
+GO
+
+
+/************************************************************/
+/*****          END SqlDataProvider                     *****/
+/************************************************************/

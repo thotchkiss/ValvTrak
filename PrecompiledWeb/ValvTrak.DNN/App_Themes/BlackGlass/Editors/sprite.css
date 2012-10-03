@@ -1,0 +1,591 @@
+.dxEditors_edtError_BlackGlass,
+.dxEditors_edtCalendarPrevYear_BlackGlass,
+.dxEditors_edtCalendarPrevYearDisabled_BlackGlass,
+.dxEditors_edtCalendarPrevMonth_BlackGlass,
+.dxEditors_edtCalendarPrevMonthDisabled_BlackGlass,
+.dxEditors_edtCalendarNextMonth_BlackGlass,
+.dxEditors_edtCalendarNextMonthDisabled_BlackGlass,
+.dxEditors_edtCalendarNextYear_BlackGlass,
+.dxEditors_edtCalendarNextYearDisabled_BlackGlass,
+.dxEditors_edtCalendarFNPrevYear_BlackGlass,
+.dxEditors_edtCalendarFNNextYear_BlackGlass,
+.dxEditors_edtEllipsis_BlackGlass,
+.dxEditors_edtEllipsisDisabled_BlackGlass,
+.dxEditors_edtDropDown_BlackGlass,
+.dxEditors_edtDropDownDisabled_BlackGlass,
+.dxEditors_edtSpinEditIncrementImage_BlackGlass,
+.dxEditors_edtSpinEditIncrementImageDisabled_BlackGlass,
+.dxEditors_edtSpinEditDecrementImage_BlackGlass,
+.dxEditors_edtSpinEditDecrementImageDisabled_BlackGlass,
+.dxEditors_edtSpinEditLargeIncImage_BlackGlass,
+.dxEditors_edtSpinEditLargeIncImageDisabled_BlackGlass,
+.dxEditors_edtSpinEditLargeDecImage_BlackGlass,
+.dxEditors_edtSpinEditLargeDecImageDisabled_BlackGlass,
+.dxEditors_fcadd_BlackGlass,
+.dxEditors_fcaddhot_BlackGlass,
+.dxEditors_fcremove_BlackGlass,
+.dxEditors_fcremovehot_BlackGlass,
+.dxEditors_fcgroupaddcondition_BlackGlass,
+.dxEditors_fcgroupaddgroup_BlackGlass,
+.dxEditors_fcgroupremove_BlackGlass,
+.dxEditors_fcopany_BlackGlass,
+.dxEditors_fcopbegin_BlackGlass,
+.dxEditors_fcopbetween_BlackGlass,
+.dxEditors_fcopcontain_BlackGlass,
+.dxEditors_fcopnotcontain_BlackGlass,
+.dxEditors_fcopnotequal_BlackGlass,
+.dxEditors_fcopend_BlackGlass,
+.dxEditors_fcopequal_BlackGlass,
+.dxEditors_fcopgreater_BlackGlass,
+.dxEditors_fcopgreaterorequal_BlackGlass,
+.dxEditors_fcopnotblank_BlackGlass,
+.dxEditors_fcopblank_BlackGlass,
+.dxEditors_fcopless_BlackGlass,
+.dxEditors_fcoplessorequal_BlackGlass,
+.dxEditors_fcoplike_BlackGlass,
+.dxEditors_fcopnotany_BlackGlass,
+.dxEditors_fcopnotbetween_BlackGlass,
+.dxEditors_fcopnotlike_BlackGlass,
+.dxEditors_fcgroupand_BlackGlass,
+.dxEditors_fcgroupor_BlackGlass,
+.dxEditors_fcgroupnotand_BlackGlass,
+.dxEditors_fcgroupnotor_BlackGlass,
+.dxEditors_caRefresh_BlackGlass,
+.dxEditors_edtRadioButtonChecked_BlackGlass,
+.dxEditors_edtRadioButtonUnchecked_BlackGlass,
+.dxEditors_edtRadioButtonCheckedDisabled_BlackGlass,
+.dxEditors_edtRadioButtonUncheckedDisabled_BlackGlass,
+.dxEditors_edtRadioButtonGrayedDisabled_BlackGlass,
+.dxEditors_edtTBDecBtn_BlackGlass,
+.dxEditors_edtTBIncBtn_BlackGlass,
+.dxEditors_edtTBMainDH_BlackGlass,
+.dxEditors_edtTBSecondaryDH_BlackGlass,
+.dxEditors_edtTBIncBtnDisabled_BlackGlass,
+.dxEditors_edtTBDecBtnDisabled_BlackGlass,
+.dxEditors_edtTBMainDHDisabled_BlackGlass,
+.dxEditors_edtTBSecondaryDHDisabled_BlackGlass
+{
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+/* TrackBar */
+.dxEditors_edtTBDecBtn_BlackGlass, .dxEditors_edtTBIncBtn_BlackGlass,
+.dxEditors_edtTBDecBtnHover_BlackGlass, .dxEditors_edtTBIncBtnHover_BlackGlass,
+.dxEditors_edtTBDecBtnPressed_BlackGlass, .dxEditors_edtTBIncBtnPressed_BlackGlass,
+.dxEditors_edtTBDecBtnDisabled_BlackGlass, .dxEditors_edtTBIncBtnDisabled_BlackGlass
+{
+	width: 16px;
+	height: 16px;
+}
+
+.dxeTBHSys .dxEditors_edtTBMainDH_BlackGlass, .dxeTBHSys .dxEditors_edtTBSecondaryDH_BlackGlass,
+.dxeTBHSys .dxEditors_edtTBMainDHHover_BlackGlass, .dxeTBHSys .dxEditors_edtTBSecondaryDHHover_BlackGlass,
+.dxeTBHSys .dxEditors_edtTBMainDHPressed_BlackGlass, .dxeTBHSys .dxEditors_edtTBSecondaryDHPressed_BlackGlass,
+.dxeTBHSys .dxEditors_edtTBMainDHDisabled_BlackGlass, .dxeTBHSys .dxEditors_edtTBSecondaryDHDisabled_BlackGlass
+{
+	width: 13px;
+	height: 26px;
+}
+.dxeTBVSys .dxEditors_edtTBMainDH_BlackGlass, .dxeTBVSys .dxEditors_edtTBSecondaryDH_BlackGlass,
+.dxeTBVSys .dxEditors_edtTBMainDHHover_BlackGlass, .dxeTBVSys .dxEditors_edtTBSecondaryDHHover_BlackGlass,
+.dxeTBVSys .dxEditors_edtTBMainDHPressed_BlackGlass, .dxeTBVSys .dxEditors_edtTBSecondaryDHPressed_BlackGlass,
+.dxeTBVSys .dxEditors_edtTBMainDHDisabled_BlackGlass, .dxeTBVSys .dxEditors_edtTBSecondaryDHDisabled_BlackGlass
+{
+	width: 26px;
+	height: 13px;
+}
+
+.dxEditors_edtTBDecBtn_BlackGlass
+{
+	background-position: 0px -190px;
+}
+.dxEditors_edtTBDecBtnHover_BlackGlass
+{
+	background-position: -57px -190px;
+}
+.dxEditors_edtTBDecBtnPressed_BlackGlass
+{
+	background-position: 0px -211px;
+}
+.dxEditors_edtTBDecBtnDisabled_BlackGlass
+{
+	background-position: -57px -211px;
+}
+
+.dxEditors_edtTBIncBtn_BlackGlass
+{
+	background-position: -29px -190px;
+}
+.dxEditors_edtTBIncBtnHover_BlackGlass
+{
+	background-position: -85px -190px;
+}
+.dxEditors_edtTBIncBtnPressed_BlackGlass
+{ 
+	background-position: -29px -211px;
+}
+.dxEditors_edtTBIncBtnDisabled_BlackGlass
+{ 
+	background-position: -85px -211px;
+}
+
+.dxeTBHSys .dxEditors_edtTBMainDH_BlackGlass,
+.dxeTBHSys .dxEditors_edtTBSecondaryDH_BlackGlass
+{
+	background-position: 0px -156px;
+}
+.dxeTBHSys .dxEditors_edtTBMainDHHover_BlackGlass,
+.dxeTBHSys .dxEditors_edtTBSecondaryDHHover_BlackGlass
+{
+	background-position: -17px -156px;
+}
+
+.dxeTBHSys .dxEditors_edtTBMainDHPressed_BlackGlass,
+.dxeTBHSys .dxEditors_edtTBSecondaryDHPressed_BlackGlass
+{
+	background-position: -34px -156px;
+	z-index: 7;
+}
+
+.dxeTBHSys .dxEditors_edtTBMainDHDisabled_BlackGlass,
+.dxeTBHSys .dxEditors_edtTBSecondaryDHDisabled_BlackGlass
+{
+	background-position: -52px -156px;
+}
+
+.dxeFocused_BlackGlass .dxeTBHSys .dxeFocusedMDHSys .dxEditors_edtTBMainDH_BlackGlass,
+.dxeFocused_BlackGlass .dxeTBHSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDH_BlackGlass
+{
+	background-position: -70px -156px;
+}
+.dxeFocused_BlackGlass .dxeTBHSys .dxeFocusedMDHSys .dxEditors_edtTBMainDHHover_BlackGlass,
+.dxeFocused_BlackGlass .dxeTBHSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDHHover_BlackGlass
+{
+	background-position: -87px -156px;
+}
+.dxeFocused_BlackGlass .dxeTBHSys .dxeFocusedMDHSys .dxEditors_edtTBMainDHPressed_BlackGlass,
+.dxeFocused_BlackGlass .dxeTBHSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDHPressed_BlackGlass
+{
+	background-position: -104px -156px;
+}
+
+.dxeTBVSys .dxEditors_edtTBMainDH_BlackGlass,
+.dxeTBVSys .dxEditors_edtTBSecondaryDH_BlackGlass
+{
+	background-position: -133px -128px;
+}
+
+.dxeTBVSys .dxEditors_edtTBMainDHHover_BlackGlass,
+.dxeTBVSys .dxEditors_edtTBSecondaryDHHover_BlackGlass
+{
+	background-position: -133px -144px;
+}
+
+.dxeTBVSys .dxEditors_edtTBMainDHPressed_BlackGlass,
+.dxeTBVSys .dxEditors_edtTBSecondaryDHPressed_BlackGlass
+{
+	background-position: -133px -160px;
+	z-index: 7;
+}
+
+.dxeTBVSys .dxEditors_edtTBMainDHDisabled_BlackGlass,
+.dxeTBVSys .dxEditors_edtTBSecondaryDHDisabled_BlackGlass
+{
+	background-position: -133px -176px;
+}
+
+.dxeFocused_BlackGlass .dxeTBVSys .dxeFocusedMDHSys .dxEditors_edtTBMainDH_BlackGlass,
+.dxeFocused_BlackGlass .dxeTBVSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDH_BlackGlass
+{
+	background-position: -164px -128px;
+}
+.dxeFocused_BlackGlass .dxeTBVSys .dxeFocusedMDHSys .dxEditors_edtTBMainDHHover_BlackGlass,
+.dxeFocused_BlackGlass .dxeTBVSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDHHover_BlackGlass
+{
+	background-position: -164px -144px;
+}
+.dxeFocused_BlackGlass .dxeTBVSys .dxeFocusedMDHSys .dxEditors_edtTBMainDHPressed_BlackGlass,
+.dxeFocused_BlackGlass .dxeTBVSys .dxeFocusedSDHSys .dxEditors_edtTBSecondaryDHPressed_BlackGlass
+{
+	background-position: -164px -160px;
+}
+
+/* RadioButton */
+.dxEditors_edtRadioButtonChecked_BlackGlass,
+.dxEditors_edtRadioButtonUnchecked_BlackGlass,
+.dxEditors_edtRadioButtonCheckedDisabled_BlackGlass,
+.dxEditors_edtRadioButtonUncheckedDisabled_BlackGlass,
+.dxEditors_edtRadioButtonGrayedDisabled_BlackGlass {
+    width: 15px;
+    height: 15px;
+}
+
+.dxEditors_edtError_BlackGlass,
+.dxEditors_edtCalendarPrevYear_BlackGlass,
+.dxEditors_edtCalendarPrevYearDisabled_BlackGlass,
+.dxEditors_edtCalendarPrevMonth_BlackGlass,
+.dxEditors_edtCalendarPrevMonthDisabled_BlackGlass,
+.dxEditors_edtCalendarNextMonth_BlackGlass,
+.dxEditors_edtCalendarNextMonthDisabled_BlackGlass,
+.dxEditors_edtCalendarNextYear_BlackGlass,
+.dxEditors_edtCalendarNextYearDisabled_BlackGlass,
+.dxEditors_edtCalendarFNPrevYear_BlackGlass,
+.dxEditors_edtCalendarFNNextYear_BlackGlass,
+.dxEditors_edtEllipsis_BlackGlass,
+.dxEditors_edtEllipsisDisabled_BlackGlass,
+.dxEditors_edtDropDown_BlackGlass,
+.dxEditors_edtDropDownDisabled_BlackGlass,
+.dxEditors_edtSpinEditIncrementImage_BlackGlass,
+.dxEditors_edtSpinEditIncrementImageDisabled_BlackGlass,
+.dxEditors_edtSpinEditDecrementImage_BlackGlass,
+.dxEditors_edtSpinEditDecrementImageDisabled_BlackGlass,
+.dxEditors_edtSpinEditLargeIncImage_BlackGlass,
+.dxEditors_edtSpinEditLargeIncImageDisabled_BlackGlass,
+.dxEditors_edtSpinEditLargeDecImage_BlackGlass,
+.dxEditors_edtSpinEditLargeDecImageDisabled_BlackGlass
+{
+	display:block;
+	margin:auto;
+}
+
+.dxEditors_edtRadioButtonUnchecked_BlackGlass {
+	background-position: 0px -46px; 
+}
+.dxEditors_edtRadioButtonChecked_BlackGlass {
+	background-position: -15px -46px; 
+}
+.dxEditors_edtRadioButtonUncheckedDisabled_BlackGlass {
+	background-position: -30px -46px; 
+}
+.dxEditors_edtRadioButtonCheckedDisabled_BlackGlass {
+	background-position: -45px -46px; 
+}
+
+.dxEditors_edtSpinEditLargeIncImage_BlackGlass, .dxEditors_edtSpinEditLargeIncImageDisabled_BlackGlass,
+.dxEditors_edtSpinEditLargeDecImage_BlackGlass, .dxEditors_edtSpinEditLargeDecImageDisabled_BlackGlass,
+.dxEditors_edtSpinEditIncrementImage_BlackGlass, .dxEditors_edtSpinEditIncrementImageDisabled_BlackGlass,
+.dxEditors_edtSpinEditDecrementImage_BlackGlass, .dxEditors_edtSpinEditDecrementImageDisabled_BlackGlass
+{
+	margin:auto;
+}
+
+.dxEditors_edtError_BlackGlass {
+    background-position: -170px 0px;
+    width: 14px;
+    height: 14px;
+}
+
+.dxEditors_edtCalendarPrevYear_BlackGlass {
+    background-position: -76px 0px;
+    width: 22px;
+    height: 18px;
+}
+
+.dxEditors_edtCalendarPrevYearDisabled_BlackGlass {
+    background-position: -76px -20px;
+    width: 22px;
+    height: 18px;
+}
+
+.dxEditors_edtCalendarPrevMonth_BlackGlass {
+    background-position: -42px -130px;
+    width: 20px;
+    height: 18px;
+}
+
+.dxEditors_edtCalendarPrevMonthDisabled_BlackGlass {
+    background-position: -63px -130px;
+    width: 20px;
+    height: 18px;
+}
+
+.dxEditors_edtCalendarNextMonth_BlackGlass {
+    background-position: 0px -130px;
+    width: 20px;
+    height: 18px;
+}
+
+.dxEditors_edtCalendarNextMonthDisabled_BlackGlass {
+    background-position: -21px -130px;
+    width: 20px;
+    height: 18px;
+}
+
+.dxEditors_edtCalendarNextYear_BlackGlass {
+    background-position: -38px 0px;
+    width: 22px;
+    height: 18px;
+}
+
+.dxEditors_edtCalendarNextYearDisabled_BlackGlass {
+    background-position: -38px -20px;
+    width: 22px;
+    height: 18px;
+}
+
+.dxEditors_edtCalendarFNPrevYear_BlackGlass {
+    background-position: 0px 0px;
+    width: 20px;
+    height: 18px;
+}
+
+.dxEditors_edtCalendarFNNextYear_BlackGlass {
+    background-position: 0px -20px;
+    width: 20px;
+    height: 18px;
+}
+
+.dxEditors_edtEllipsis_BlackGlass {
+    background-position: -113px 0px;
+    width: 12px;
+    height: 4px;
+}
+
+.dxEditors_edtEllipsisDisabled_BlackGlass {
+    background-position: -113px -22px;
+    width: 12px;
+    height: 4px;
+}
+
+.dxEditors_edtDropDown_BlackGlass {
+    background-position: -102px 0px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxEditors_edtDropDownDisabled_BlackGlass {
+    background-position: -102px -22px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxEditors_edtSpinEditIncrementImage_BlackGlass {
+    background-position: -150px 0px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxEditors_edtSpinEditIncrementImageDisabled_BlackGlass {
+    background-position: -150px -13px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxEditors_edtSpinEditDecrementImage_BlackGlass {
+    background-position: -132px 0px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxEditors_edtSpinEditDecrementImageDisabled_BlackGlass {
+    background-position: -132px -13px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxEditors_edtSpinEditLargeIncImage_BlackGlass {
+    background-position: -145px -26px;
+    width: 6px;
+    height: 9px;
+}
+
+.dxEditors_edtSpinEditLargeIncImageDisabled_BlackGlass {
+    background-position: -171px -26px;
+    width: 6px;
+    height: 9px;
+}
+
+.dxEditors_edtSpinEditLargeDecImage_BlackGlass {
+    background-position: -132px -26px;
+    width: 6px;
+    height: 9px;
+}
+
+.dxEditors_edtSpinEditLargeDecImageDisabled_BlackGlass {
+    background-position: -158px -26px;
+    width: 6px;
+    height: 9px;
+}
+
+.dxEditors_fcadd_BlackGlass {
+    background-position: 0px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcaddhot_BlackGlass {
+    background-position: -21px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcremove_BlackGlass {
+    background-position: -42px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcremovehot_BlackGlass {
+    background-position: -63px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupaddcondition_BlackGlass {
+    background-position: -168px -46px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupaddgroup_BlackGlass {
+    background-position: -147px -46px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupremove_BlackGlass {
+    background-position: -126px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopany_BlackGlass {
+    background-position: 0px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopbegin_BlackGlass {
+    background-position: -42px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopbetween_BlackGlass {
+    background-position: -84px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopcontain_BlackGlass {
+    background-position: -105px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotcontain_BlackGlass {
+    background-position: -147px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotequal_BlackGlass {
+    background-position: -168px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopend_BlackGlass {
+    background-position: -63px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopequal_BlackGlass {
+    background-position: 0px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopgreater_BlackGlass {
+    background-position: -21px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopgreaterorequal_BlackGlass {
+    background-position: -42px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotblank_BlackGlass {
+    background-position: -105px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopblank_BlackGlass {
+    background-position: -126px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopless_BlackGlass {
+    background-position: -63px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcoplessorequal_BlackGlass {
+    background-position: -84px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcoplike_BlackGlass {
+    background-position: -126px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotany_BlackGlass {
+    background-position: -21px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotbetween_BlackGlass {
+    background-position: -147px -88px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcopnotlike_BlackGlass {
+    background-position: -168px -109px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupand_BlackGlass {
+    background-position: -84px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupor_BlackGlass {
+    background-position: -168px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupnotand_BlackGlass {
+    background-position: -105px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_fcgroupnotor_BlackGlass {
+    background-position: -147px -67px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxEditors_caRefresh_BlackGlass {
+	background-position: -89px -130px;	
+	width: 13px;
+    height: 13px;
+}

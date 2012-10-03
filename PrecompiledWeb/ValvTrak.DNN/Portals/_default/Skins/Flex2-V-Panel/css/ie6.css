@@ -1,0 +1,18 @@
+/*---------------------------------------------------------*/
+/*  ___      _  _      _               ___ _          ___  */
+/* |   \ _ _| \| |_  _| |_____   ___  | __| |_____ __|_  ) */
+/* | |) | '_| .` | || | / / -_) |___| | _|| / -_) \ / / /  */
+/* |___/|_| |_|\_|\_,_|_\_\___|       |_| |_\___/_\_\/___| */
+/*                                                         */
+/*      Skin Styles for DotNetNuke - Flex2 by DrNuke       */
+/*              http://www.DrNuke.co.uk/flex2              */
+/*       Copyright DrNuke Ltd - All rights reserved        */
+/*---------------------------------------------------------*/
+
+.mainmenu-idle { background-image:none !important; }
+.mainmenu-breadcrumbactive { background-image:none !important; }
+.mainmenu-selected { background-image:none !important; }
+
+/* End Style Sheet */
+/*----------------------------------------------------*/
+

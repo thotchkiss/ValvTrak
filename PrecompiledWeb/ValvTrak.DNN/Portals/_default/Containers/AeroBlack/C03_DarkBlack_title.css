@@ -1,0 +1,36 @@
+
+/*****  Containers CSS designed by bind.pt 		*****/
+/*****  03 in DarkBlack  					    *****/
+
+                                 .container                 { margin-bottom:10px; }
+
+/*-- title line				--*/ .C03_DarkBlack_TitleLine   { margin:-40px 15px 0 15px; position:relative; height:25px; }
+/*-- title   				--*/ .C03_Black_DarkTitle       { float:left; font-family:Arial; font-size:16px; font-weight:300; line-height:120%; color:#FFFFFF;  text-transform:lowercase; }
+/*-- actions   				--*/ .C03_Actions               { float:left; width:0px; }
+/*-- visibility  			--*/ .C03_Visibility            { float:right; }
+                                 .C03_Visibility a:hover    { background-color:Transparent; }
+
+
+/*-- round container		--*/ .C03_roundcont             { background-color:#FFFFFF; border-left: 1px solid #E4E4E4; border-right: 1px solid #E4E4E4; }
+                                 .C03_content               { margin: 15px 15px 0px 15px; }
+
+/*-- bottom icons  			--*/ .C03_Icons                 { margin-top:0px; margin-left: 0px; }
+                                 .C03_Icons a:hover         { background-color:Transparent; }
+                                 .C03_Icons a, 
+                                 .C03_Icons input           { margin-top:10px; }
+                    
+/*-- round top left	        --*/ .C03_Black_roundtop_leftD        { background:url(C03_tl_DarkBlack_line.png) no-repeat top left; height:53px; }
+/*-- round top right		--*/ .C03_Black_roundtop_rightD       { background:url(C03_tr_DarkBlack_line.png) no-repeat top right; height:53px; margin-top:-53px; margin-left:201px; }
+
+/*-- round bottom left  	--*/ .C03_Black_roundbottom_leftD     { background:url(C03_bl_line.png) no-repeat bottom left; height:35px; }
+/*-- round bottom right 	--*/ .C03_Black_roundbottom_rightD    { background:url(C03_br_line.png) no-repeat bottom right; height:35px;margin-top:-35px; margin-left:15px; }
+
+/*-- image of corner top    --*/ img.C03_corner_leftT       { height:53px; border: none; display:block !important; }
+/*-- image of corner top	--*/ img.C03_corner_rightT      { height:53px; width:15px; border: none; display:block !important; }
+
+/*-- image of corner bottom	--*/ img.C03_corner_leftB       { width:15px; height:35px; border: none; display:block !important; }
+/*-- image of corner bottom	--*/ img.C03_corner_rightB      { height:35px; border: none; display:block !important; }
+
+
+
+

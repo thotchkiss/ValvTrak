@@ -1,0 +1,1389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cmdCancelImage.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="cmdDeleteAllImages.Text" xml:space="preserve">
+    <value>Delete All</value>
+  </data>
+  <data name="cmdDeleteImage.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="cmdEdit.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="cmdNewImage.Text" xml:space="preserve">
+    <value>Add new</value>
+  </data>
+  <data name="cmdSaveImage.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="cmdSelect.Text" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="colImage.Text" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="colName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ControlTitle_settings.Text" xml:space="preserve">
+    <value>3D Gallery Settings</value>
+  </data>
+  <data name="ErrorNoImagePath.Text" xml:space="preserve">
+    <value>Please insert an Image Path!</value>
+  </data>
+  <data name="itemNavigationAuto.Text" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="itemNavigationBottomLeft.Text" xml:space="preserve">
+    <value>Button: Bottom|Left</value>
+  </data>
+  <data name="itemNavigationBottomRight.Text" xml:space="preserve">
+    <value>Button: Bottom|Right</value>
+  </data>
+  <data name="itemNavigationCustom.Text" xml:space="preserve">
+    <value>Button: Custom</value>
+  </data>
+  <data name="itemNavigationTopLeft.Text" xml:space="preserve">
+    <value>Button: Top|Left</value>
+  </data>
+  <data name="itemNavigationTopRight.Text" xml:space="preserve">
+    <value>Button: Top|Right</value>
+  </data>
+  <data name="lblBackgroundImageLeft.Help" xml:space="preserve">
+    <value>Specifies the margin between the animation window and the left border of the background image.&lt;br&gt;
+Default: 0</value>
+  </data>
+  <data name="lblBackgroundImageLeft.Text" xml:space="preserve">
+    <value>Background Image Left</value>
+  </data>
+  <data name="lblBackgroundImagePath.Help" xml:space="preserve">
+    <value>Specifies the path of an image displayed as the background image.&lt;br&gt;
+Default: -</value>
+  </data>
+  <data name="lblBackgroundImagePath.Text" xml:space="preserve">
+    <value>Background Image Path</value>
+  </data>
+  <data name="lblBackgroundImageTop.Help" xml:space="preserve">
+    <value>Specifies the margin between the animation window and the upper border of the background image.&lt;br&gt;
+Default: 0</value>
+  </data>
+  <data name="lblBackgroundImageTop.Text" xml:space="preserve">
+    <value>Background Image Top</value>
+  </data>
+  <data name="lblFlash.Text" xml:space="preserve">
+    <value>Flash Player</value>
+  </data>
+  <data name="lblFlashAlternative.Help" xml:space="preserve">
+    <value>Specifies an alternative content, which will be displayed if Flash is not installed or supported.&lt;br&gt;
+Default: -&lt;br&gt;&lt;br&gt;
+The alternative content will be displayed in the field provided for the Flash Player. The extent of this field has been defined in the settings "Flash Player Width" and "Flash Player Height".  Ensure that the alternative content can be displayed within the field defined with the Flash Player!  If you do not define any alternative content, the standard Flash Player message will be displayed.&lt;br&gt;&lt;br&gt;
+
+The alternative content will also be picked up by search engines, making it a great tool for creating search-engine-friendly content!</value>
+  </data>
+  <data name="lblFlashAlternative.Text" xml:space="preserve">
+    <value>Alternative Content</value>
+  </data>
+  <data name="lblBackgroundColor.Help" xml:space="preserve">
+    <value>Specifies the background color of the animation.&lt;br&gt;
+Default: #ffffff</value>
+  </data>
+  <data name="lblBackgroundColor.Text" xml:space="preserve">
+    <value>Background Color</value>
+  </data>
+  <data name="lblFlashBgImage.Help" xml:space="preserve">
+    <value>Specifies whether an image should appear as background image.&lt;br&gt;
+Default: not checked</value>
+  </data>
+  <data name="lblFlashBgImage.Text" xml:space="preserve">
+    <value>Show Background Image</value>
+  </data>
+  <data name="lblBackgroundTransparent.Help" xml:space="preserve">
+    <value>Specifies that the Carousel is displayed with a transparent background.
+"Background Color" and "Background Image" play no role in this case.</value>
+  </data>
+  <data name="lblBackgroundTransparent.Text" xml:space="preserve">
+    <value>Transparent</value>
+  </data>
+  <data name="lblFlashHeight.Help" xml:space="preserve">
+    <value>Specifies the height of the animation area.&lt;br&gt;
+Default: 350</value>
+  </data>
+  <data name="lblFlashHeight.Text" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="lblFlashLeft.Help" xml:space="preserve">
+    <value>Specifies the margin between the animation window and the left border of the module.&lt;br&gt;
+Default: 0</value>
+  </data>
+  <data name="lblFlashLeft.Text" xml:space="preserve">
+    <value>Position Left</value>
+  </data>
+  <data name="lblFlashMenu.Help" xml:space="preserve">
+    <value>Specifies what type of menu appears when the user Right-clicks the animation area.&lt;br&gt;
+Default: not checked&lt;br&gt;&lt;br&gt;
+
+Checked: Shows the full menu, which gives the user several options to enhance or control playback.&lt;br&gt;&lt;br&gt;
+Not Checked: Shows a menu that contains only the About option and the Settings option.</value>
+  </data>
+  <data name="lblFlashMenu.Text" xml:space="preserve">
+    <value>Show Menu</value>
+  </data>
+  <data name="lblFlashQuality.Help" xml:space="preserve">
+    <value>Specifies the animation's quality level. &lt;br&gt;
+Default: High&lt;br&gt;&lt;br&gt;
+
+High: Favors quality of animation. (recommended) &lt;br&gt;
+Medium: Favors execution speed and does not take quality of animation into account unless it's possible. &lt;br&gt;
+Low: Favors execution speed.</value>
+  </data>
+  <data name="lblFlashQuality.Text" xml:space="preserve">
+    <value>Quality</value>
+  </data>
+  <data name="lblFlashScale.Help" xml:space="preserve">
+    <value>Specifies whether the animation will be scaled automatically when it is displayed.&lt;br&gt;
+Default: NoScale&lt;br&gt;&lt;br&gt;
+
+No Scale: This option sets the animation's scale mode property to not allow scaling. (recommended)&lt;br&gt;&lt;br&gt;
+Show All: This option displays the entire area of the animation keeping its original size. This option may cause scroll bars to appear.&lt;br&gt;&lt;br&gt; 
+No Border: This option automatically resizes the animation area in terms of the available display space while conserving the original proportions.&lt;br&gt;&lt;br&gt; 
+Exact Fit: This option resizes the animation area in terms of the defined space. The image may be distorted.</value>
+  </data>
+  <data name="lblFlashScale.Text" xml:space="preserve">
+    <value>Scale</value>
+  </data>
+  <data name="lblFlashTop.Help" xml:space="preserve">
+    <value>Specifies the margin between the animation window and the upper border of the module.&lt;br&gt;
+Default: 0</value>
+  </data>
+  <data name="lblFlashTop.Text" xml:space="preserve">
+    <value>Position Top</value>
+  </data>
+  <data name="lblFlashWidth.Help" xml:space="preserve">
+    <value>Specifies the width of the animation area.&lt;br&gt;
+Default: 600</value>
+  </data>
+  <data name="lblFlashWidth.Text" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="lblCarousel.Text" xml:space="preserve">
+    <value>Carousel Settings</value>
+  </data>
+  <data name="lblImage.Text" xml:space="preserve">
+    <value>Carousel Images</value>
+  </data>
+  <data name="lblImageContent1.Help" xml:space="preserve">
+    <value>Specifies the text to be shown in Textfield1. Any details with regard to the presentation of the text can be defined in the area "Dynamic Textfields".&lt;br /&gt;&lt;br&gt;
+
+Note: If you have checked option "HTML" under "Dynamic Textfields" you can make use of the following HTML tags for designing your text: 
+Anchor: &amp;lt;a ...&amp;gt;&lt;br /&gt;
+Bold: &amp;lt;b&amp;gt;&lt;br /&gt;
+Font: &amp;lt;font ...&amp;gt;&lt;br /&gt;
+Italic: &amp;lt;i&amp;gt;&lt;br /&gt;
+Paragraph: &amp;lt;p ...&amp;gt;&lt;br /&gt;
+Underline: &amp;lt;u&amp;gt;&lt;br /&gt;
+Break: &amp;lt;br&amp;gt;&lt;br /&gt;
+Image: &amp;lt;img ...&amp;gt;&lt;br /&gt;
+List Item: &amp;lt;li&amp;gt;&lt;br /&gt;</value>
+  </data>
+  <data name="lblImageContent1.Text" xml:space="preserve">
+    <value>Textfield 1 (dynamic)</value>
+  </data>
+  <data name="lblImageContent2.Help" xml:space="preserve">
+    <value>Specifies the text to be shown in Textfield2. Any details with regard to the presentation of the text can be defined in the area "Dynamic Textfields".&lt;br /&gt;&lt;br&gt;
+
+Note: If you have checked option "HTML" under "Dynamic Textfields" you can make use of the following HTML tags for designing your text: 
+Anchor: &amp;lt;a ...&amp;gt;&lt;br /&gt;
+Bold: &amp;lt;b&amp;gt;&lt;br /&gt;
+Font: &amp;lt;font ...&amp;gt;&lt;br /&gt;
+Italic: &amp;lt;i&amp;gt;&lt;br /&gt;
+Paragraph: &amp;lt;p ...&amp;gt;&lt;br /&gt;
+Underline: &amp;lt;u&amp;gt;&lt;br /&gt;
+Break: &amp;lt;br&amp;gt;&lt;br /&gt;
+Image: &amp;lt;img ...&amp;gt;&lt;br /&gt;
+List Item: &amp;lt;li&amp;gt;&lt;br /&gt;</value>
+  </data>
+  <data name="lblImageContent2.Text" xml:space="preserve">
+    <value>Textfield 2 (dynamic)</value>
+  </data>
+  <data name="lblImageLink.Help" xml:space="preserve">
+    <value>Specifies the link to the page to be loaded when clicking on the image.&lt;br&gt;&lt;br&gt;
+
+Target:&lt;br&gt;_blank : The page will be shown in a new browser window.&lt;br&gt;_self: The page will be shown in the Carousel window.&lt;br&gt;_parent: The page will be shown in the parent page.&lt;br&gt;_top: The page will be shown in the topmost frame.</value>
+  </data>
+  <data name="lblImageLink.Text" xml:space="preserve">
+    <value>Image Link | Target</value>
+  </data>
+  <data name="lblImagePath.Help" xml:space="preserve">
+    <value>Specifies the path of the image displayed in the Carousel.</value>
+  </data>
+  <data name="lblImagePath.Text" xml:space="preserve">
+    <value>Image Path</value>
+  </data>
+  <data name="lblNavigation.Text" xml:space="preserve">
+    <value>Carousel Navigation</value>
+  </data>
+  <data name="lblNavigationButtonLeft.Text" xml:space="preserve">
+    <value>Button Left</value>
+  </data>
+  <data name="lblNavigationButtonRight.Text" xml:space="preserve">
+    <value>Button Right</value>
+  </data>
+  <data name="lblNavigationButtonsAlpha.Help" xml:space="preserve">
+    <value>Specifies the alpha transparency value of the buttons.&lt;br&gt;
+Default: 75</value>
+  </data>
+  <data name="lblNavigationButtonsAlpha.Text" xml:space="preserve">
+    <value>Buttons Opacity</value>
+  </data>
+  <data name="lblNavigationButtonsColor.Help" xml:space="preserve">
+    <value>Specifies the color of the buttons.&lt;br&gt;
+Default: #ff0000</value>
+  </data>
+  <data name="lblNavigationButtonsColor.Text" xml:space="preserve">
+    <value>Buttons Color</value>
+  </data>
+  <data name="lblNavigationButtonsLeft.Help" xml:space="preserve">
+    <value>Specifies the margin between the animation window and the left border of the buttons.&lt;br&gt;
+Default: 0</value>
+  </data>
+  <data name="lblNavigationButtonsLeft.Text" xml:space="preserve">
+    <value>Position Left</value>
+  </data>
+  <data name="lblNavigationButtonsTop.Help" xml:space="preserve">
+    <value>Specifies the margin between the animation window and the upper border of the buttons.&lt;br&gt;
+Default: 0</value>
+  </data>
+  <data name="lblNavigationButtonsTop.Text" xml:space="preserve">
+    <value>Position Top</value>
+  </data>
+  <data name="lblNavigationInitialRotation.Help" xml:space="preserve">
+    <value>Specifies how long the Carousel should rotate initially.  Works only in combination with the navigation buttons.&lt;br&gt;
+Default: 0</value>
+  </data>
+  <data name="lblNavigationInitialRotation.Text" xml:space="preserve">
+    <value>Initial Rotation Duration</value>
+  </data>
+  <data name="lblNavigationType.Help" xml:space="preserve">
+    <value>Specifies the rotation options of the Carousel.&lt;br&gt;
+Default: Auto&lt;br&gt;&lt;br&gt;
+
+Auto: The Carousel rotates automatically.&lt;br&gt;
+Buttons: Navigation buttons are displayed by which the Carousel rotation can be directed to run clockwise or counter-clockwise.&lt;br&gt;
+Custom: The navigation buttons can be positioned anywhere.</value>
+  </data>
+  <data name="lblNavigationType.Text" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="lblReflection.Text" xml:space="preserve">
+    <value>Image Reflection</value>
+  </data>
+  <data name="lblReflectionAlpha.Help" xml:space="preserve">
+    <value>Specifies the alpha transparency value of the reflection.&lt;br&gt;
+Default: 50</value>
+  </data>
+  <data name="lblReflectionAlpha.Text" xml:space="preserve">
+    <value>Opacity</value>
+  </data>
+  <data name="lblReflectionDistance.Help" xml:space="preserve">
+    <value>Specifies the distance the reflection starts from the bottom of the image.&lt;br&gt;
+Default: 0</value>
+  </data>
+  <data name="lblReflectionDistance.Text" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="lblReflectionHeight.Help" xml:space="preserve">
+    <value>Specifies the height of the reflection in percent.&lt;br&gt;
+Default: 50&lt;br&gt;</value>
+  </data>
+  <data name="lblReflectionHeight.Text" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="lblReflectionVisible.Help" xml:space="preserve">
+    <value>Specifies if a reflection should be visible.&lt;br&gt;
+Default: checked</value>
+  </data>
+  <data name="lblReflectionVisible.Text" xml:space="preserve">
+    <value>Visible</value>
+  </data>
+  <data name="messageDeleteAllImages.Text" xml:space="preserve">
+    <value>Are You Sure You Wish To Delete All Images?</value>
+  </data>
+  <data name="messageDeleteImage.Text" xml:space="preserve">
+    <value>Are You Sure You Wish To Delete This Image?</value>
+  </data>
+  <data name="cmdCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="cmdUpdate.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="lblBackground.Text" xml:space="preserve">
+    <value>Carousel Background</value>
+  </data>
+  <data name="lblNavigationButtonLeftPath.Help" xml:space="preserve">
+    <value>Specifies the path of an image displayed as the left button.&lt;br&gt;
+Default: -&lt;br&gt;
+Sample: cmdLeft.png&lt;br&gt;&lt;br&gt;
+
+This setting allows you to replace the standard 3D Carousel left navigation button with your own button image.</value>
+  </data>
+  <data name="lblNavigationButtonLeftPath.Text" xml:space="preserve">
+    <value>Left Button Path</value>
+  </data>
+  <data name="lblNavigationButtonRightPath.Help" xml:space="preserve">
+    <value>Specifies the path of an image displayed as the right button.&lt;br&gt;
+Default: -&lt;br&gt;
+Sample: cmdRight.png&lt;br&gt;&lt;br&gt;
+
+This setting allows you to replace the standard 3D Carousel right navigation button with your own button image.</value>
+  </data>
+  <data name="lblNavigationButtonRightPath.Text" xml:space="preserve">
+    <value>Right Button Path</value>
+  </data>
+  <data name="lblToolTip.Text" xml:space="preserve">
+    <value>Carousel Tooltip</value>
+  </data>
+  <data name="lblToolTipAlign.Help" xml:space="preserve">
+    <value>Specifies the horizontal alignment of the text.&lt;br&gt;
+Default: left</value>
+  </data>
+  <data name="lblToolTipAlign.Text" xml:space="preserve">
+    <value>Align</value>
+  </data>
+  <data name="lblToolTipAntiAliasing.Help" xml:space="preserve">
+    <value>Specifies that the font faces should be rendered more legible&lt;br&gt;
+Default: not checked&lt;br&gt;&lt;br&gt;
+
+The setting enables high quality rendering and should be used by preference when using small fonts. (&lt; 10 px)&lt;br&gt;&lt;br&gt;
+
+HTML:
+When selecting anti-aliasing, the standard font (Verdana) will be used automatically! Please don’t define any fonts in HTML! If you do, the text will not be displayed!&lt;br&gt;&lt;br&gt;
+&amp;lt;font color='#ffffff' face='Arial'&amp;gt;Text&amp;lt;/font&amp;gt; invalid!&lt;br&gt;
+&amp;lt;font color='#ffffff'&amp;gt;Text&amp;lt;/font&amp;gt; vaild!</value>
+  </data>
+  <data name="lblToolTipAntiAliasing.Text" xml:space="preserve">
+    <value>Anti-Aliasing</value>
+  </data>
+  <data name="lblToolTipBgColor.Help" xml:space="preserve">
+    <value>Specifies the background color of the tooltip.&lt;br&gt;
+Default: -</value>
+  </data>
+  <data name="lblToolTipBgColor.Text" xml:space="preserve">
+    <value>Background Color</value>
+  </data>
+  <data name="lblToolTipBold.Help" xml:space="preserve">
+    <value>Specifies whether the text is boldface.&lt;br&gt;
+Default: not checked</value>
+  </data>
+  <data name="lblToolTipBold.Text" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="lblToolTipBorder.Help" xml:space="preserve">
+    <value>Specifies that a frame will be displayed around the tooltip.&lt;br&gt;
+Default: not checked
+
+Hint: Showing the contours can also be helpful for positioning the tooltip!</value>
+  </data>
+  <data name="lblToolTipBorder.Text" xml:space="preserve">
+    <value>Show Border</value>
+  </data>
+  <data name="lblToolTipBorderColor.Help" xml:space="preserve">
+    <value>Specifies the border color of the tooltip.&lt;br&gt;
+default: -</value>
+  </data>
+  <data name="lblToolTipBorderColor.Text" xml:space="preserve">
+    <value>Border Color</value>
+  </data>
+  <data name="lblToolTipFont.Help" xml:space="preserve">
+    <value>Spezifies the font name of the text.&lt;br&gt;
+Default: Verdana</value>
+  </data>
+  <data name="lblToolTipFont.Text" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="lblToolTipFontColor.Help" xml:space="preserve">
+    <value>Spezifies the color of the text.&lt;br&gt;
+Default: #222222</value>
+  </data>
+  <data name="lblToolTipFontColor.Text" xml:space="preserve">
+    <value>Font Color</value>
+  </data>
+  <data name="lblToolTipFontSize.Help" xml:space="preserve">
+    <value>Spezifies the size of the text.&lt;br&gt;
+Default: 11</value>
+  </data>
+  <data name="lblToolTipFontSize.Text" xml:space="preserve">
+    <value>Font Size</value>
+  </data>
+  <data name="lblToolTipHeight.Help" xml:space="preserve">
+    <value>Specifies the height of the tooltip.&lt;br&gt;
+Default: 30</value>
+  </data>
+  <data name="lblToolTipHeight.Text" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="lblToolTipHTML.Help" xml:space="preserve">
+    <value>Specifies that the tooltip supports a subset of standard HTML tags.&lt;br&gt;
+Default: not checked&lt;br&gt;&lt;br&gt;
+
+Important! If this option is checked the settings for Align, Bold, Italic, Font, Font Color, Font Size, Leading and Underline are ignored.&lt;br&gt;&lt;br&gt;
+
+The following HTML tags are supported:&lt;br&gt;
+Anchor: &amp;lt;a ...&amp;gt;&lt;br&gt;
+Bold: &amp;lt;b&amp;gt;&lt;br&gt;
+Font: &amp;lt;font ...&amp;gt;&lt;br&gt;
+Italic: &amp;lt;i&amp;gt;&lt;br&gt;
+Paragraph: &amp;lt;p ...&amp;gt;&lt;br&gt;
+Underline: &amp;lt;u&amp;gt;&lt;br&gt;
+Break: &amp;lt;br&amp;gt;&lt;br&gt;
+Image: &amp;lt;img ...&amp;gt;&lt;br&gt;
+List Item: &amp;lt;li&amp;gt;&lt;br&gt;</value>
+  </data>
+  <data name="lblToolTipHTML.Text" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="lblToolTipItalic.Help" xml:space="preserve">
+    <value>Specifies whether the text is italicized.&lt;br&gt;
+Default: not checked</value>
+  </data>
+  <data name="lblToolTipItalic.Text" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="lblToolTipLeading.Help" xml:space="preserve">
+    <value>Specifies the space in pixels between lines.&lt;br&gt;
+Default: 0</value>
+  </data>
+  <data name="lblToolTipLeading.Text" xml:space="preserve">
+    <value>Leading</value>
+  </data>
+  <data name="lblToolTipLeft.Help" xml:space="preserve">
+    <value>Specifies the margin between the tooltip and the left border of the animations window.&lt;br&gt;
+Default: 0</value>
+  </data>
+  <data name="lblToolTipLeft.Text" xml:space="preserve">
+    <value>Position Left</value>
+  </data>
+  <data name="lblToolTipTop.Help" xml:space="preserve">
+    <value>Specifies the margin between the tooltip and the upper border of the animations window.&lt;br&gt;
+Default: 60</value>
+  </data>
+  <data name="lblToolTipTop.Text" xml:space="preserve">
+    <value>Position Top</value>
+  </data>
+  <data name="lblToolTipTopMost.Help" xml:space="preserve">
+    <value>Specifies that the tooltip is shown on top of other elements.&lt;br&gt;
+Default: checked</value>
+  </data>
+  <data name="lblToolTipTopMost.Text" xml:space="preserve">
+    <value>Topmost</value>
+  </data>
+  <data name="lblToolTipUnderline.Help" xml:space="preserve">
+    <value>Specifies whether the text is underlined.&lt;br&gt;
+Default: not checked</value>
+  </data>
+  <data name="lblToolTipUnderline.Text" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="lblToolTipWidth.Help" xml:space="preserve">
+    <value>Specifies the width of the tooltip.&lt;br&gt;
+Default: 120</value>
+  </data>
+  <data name="lblToolTipWidth.Text" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="lblToolTipAlpha.Help" xml:space="preserve">
+    <value>Specifies the alpha transparency value of the tooltip.&lt;br&gt;
+Default: 100</value>
+  </data>
+  <data name="lblToolTipAlpha.Text" xml:space="preserve">
+    <value>Opacity</value>
+  </data>
+  <data name="lblContent1.Text" xml:space="preserve">
+    <value>Textfield 1</value>
+  </data>
+  <data name="lblContent1Header.Text" xml:space="preserve">
+    <value>Textfield 1</value>
+  </data>
+  <data name="lblContent2.Text" xml:space="preserve">
+    <value>Textfield 2</value>
+  </data>
+  <data name="lblContent2Header.Text" xml:space="preserve">
+    <value>Textfield 2</value>
+  </data>
+  <data name="lblContent3.Help" xml:space="preserve">
+    <value>Specifies the text to be shown in the first static text field.&lt;br /&gt;&lt;br&gt;
+
+Note: If you have checked option "HTML" you can make use of the following HTML tags for designing your text: 
+Anchor: &amp;lt;a ...&amp;gt;&lt;br /&gt;
+Bold: &amp;lt;b&amp;gt;&lt;br /&gt;
+Font: &amp;lt;font ...&amp;gt;&lt;br /&gt;
+Italic: &amp;lt;i&amp;gt;&lt;br /&gt;
+Paragraph: &amp;lt;p ...&amp;gt;&lt;br /&gt;
+Underline: &amp;lt;u&amp;gt;&lt;br /&gt;
+Break: &amp;lt;br&amp;gt;&lt;br /&gt;
+Image: &amp;lt;img ...&amp;gt;&lt;br /&gt;
+List Item: &amp;lt;li&amp;gt;&lt;br /&gt;</value>
+  </data>
+  <data name="lblContent3.Text" xml:space="preserve">
+    <value>Static Textfield 1 Text</value>
+  </data>
+  <data name="lblContent3Header.Text" xml:space="preserve">
+    <value>Static Textfield 1</value>
+  </data>
+  <data name="lblContent4.Help" xml:space="preserve">
+    <value>Specifies the text to be shown in the second static text field.&lt;br /&gt;&lt;br&gt;
+
+Note: If you have checked option "HTML" you can make use of the following HTML tags for designing your text: 
+Anchor: &amp;lt;a ...&amp;gt;&lt;br /&gt;
+Bold: &amp;lt;b&amp;gt;&lt;br /&gt;
+Font: &amp;lt;font ...&amp;gt;&lt;br /&gt;
+Italic: &amp;lt;i&amp;gt;&lt;br /&gt;
+Paragraph: &amp;lt;p ...&amp;gt;&lt;br /&gt;
+Underline: &amp;lt;u&amp;gt;&lt;br /&gt;
+Break: &amp;lt;br&amp;gt;&lt;br /&gt;
+Image: &amp;lt;img ...&amp;gt;&lt;br /&gt;
+List Item: &amp;lt;li&amp;gt;&lt;br /&gt;</value>
+  </data>
+  <data name="lblContent4.Text" xml:space="preserve">
+    <value>Static Textfield 2 Text</value>
+  </data>
+  <data name="lblContent4Header.Text" xml:space="preserve">
+    <value>Static Textfield 2</value>
+  </data>
+  <data name="lblContentAlignDynamic.Help" xml:space="preserve">
+    <value>Specifies the horizontal alignment of the text.&lt;br&gt;
+Default: left</value>
+  </data>
+  <data name="lblContentAlignDynamic.Text" xml:space="preserve">
+    <value>Align</value>
+  </data>
+  <data name="lblContentAlignStatic.Help" xml:space="preserve">
+    <value>Specifies the horizontal alignment of the text.&lt;br&gt;
+Default: left</value>
+  </data>
+  <data name="lblContentAlignStatic.Text" xml:space="preserve">
+    <value>Align</value>
+  </data>
+  <data name="lblContentAlphaDynamic.Help" xml:space="preserve">
+    <value>Specifies the alpha transparency value of the text field.&lt;br&gt;
+Default: 100</value>
+  </data>
+  <data name="lblContentAlphaDynamic.Text" xml:space="preserve">
+    <value>Opacity</value>
+  </data>
+  <data name="lblContentAlphaStatic.Help" xml:space="preserve">
+    <value>Specifies the alpha transparency value of the text field.&lt;br&gt;
+Default: 100</value>
+  </data>
+  <data name="lblContentAlphaStatic.Text" xml:space="preserve">
+    <value>Opacity</value>
+  </data>
+  <data name="lblContentAntiAliasingDynamic.Help" xml:space="preserve">
+    <value>Specifies that the font faces should be rendered more legible&lt;br&gt;
+Default: not checked&lt;br&gt;&lt;br&gt;
+
+The setting enables high quality rendering and should be used by preference when using small fonts. (&lt; 10 px)&lt;br&gt;&lt;br&gt;
+
+HTML:
+When selecting anti-aliasing, the standard font (Verdana) will be used automatically! Please don’t define any fonts in HTML! If you do, the text will not be displayed!&lt;br&gt;&lt;br&gt;
+&amp;lt;font color='#ffffff' face='Arial'&amp;gt;Text&amp;lt;/font&amp;gt; invalid!&lt;br&gt;
+&amp;lt;font color='#ffffff'&amp;gt;Text&amp;lt;/font&amp;gt; vaild!</value>
+  </data>
+  <data name="lblContentAntiAliasingDynamic.Text" xml:space="preserve">
+    <value>Anti-Aliasing</value>
+  </data>
+  <data name="lblContentAntiAliasingStatic.Help" xml:space="preserve">
+    <value>Specifies that the font faces should be rendered more legible&lt;br&gt;
+Default: not checked&lt;br&gt;&lt;br&gt;
+
+The setting enables high quality rendering and should be used by preference when using small fonts. (&lt; 10 px)&lt;br&gt;&lt;br&gt;
+
+HTML:
+When selecting anti-aliasing, the standard font (Verdana) will be used automatically! Please don’t define any fonts in HTML! If you do, the text will not be displayed!&lt;br&gt;&lt;br&gt;
+&amp;lt;font color='#ffffff' face='Arial'&amp;gt;Text&amp;lt;/font&amp;gt; invalid!&lt;br&gt;
+&amp;lt;font color='#ffffff'&amp;gt;Text&amp;lt;/font&amp;gt; vaild!</value>
+  </data>
+  <data name="lblContentAntiAliasingStatic.Text" xml:space="preserve">
+    <value>Anti-Aliasing</value>
+  </data>
+  <data name="lblContentBgColorDynamic.Help" xml:space="preserve">
+    <value>Specifies the background color of the textfield.&lt;br&gt;
+Default: -</value>
+  </data>
+  <data name="lblContentBgColorDynamic.Text" xml:space="preserve">
+    <value>Background Color</value>
+  </data>
+  <data name="lblContentBgColorStatic.Help" xml:space="preserve">
+    <value>Specifies the background color of the textfield.&lt;br&gt;
+Default: -</value>
+  </data>
+  <data name="lblContentBgColorStatic.Text" xml:space="preserve">
+    <value>Background Color</value>
+  </data>
+  <data name="lblContentBoldDynamic.Help" xml:space="preserve">
+    <value>Specifies whether the text is boldface.&lt;br&gt;
+Default: not checked</value>
+  </data>
+  <data name="lblContentBoldDynamic.Text" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="lblContentBoldStatic.Help" xml:space="preserve">
+    <value>Specifies whether the text is boldface.&lt;br&gt;
+Default: not checked</value>
+  </data>
+  <data name="lblContentBoldStatic.Text" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="lblContentBorderColorDynamic.Help" xml:space="preserve">
+    <value>Specifies the border color.&lt;br&gt;
+default: -</value>
+  </data>
+  <data name="lblContentBorderColorDynamic.Text" xml:space="preserve">
+    <value>Border Color</value>
+  </data>
+  <data name="lblContentBorderColorStatic.Help" xml:space="preserve">
+    <value>Specifies the border color.&lt;br&gt;
+default: -</value>
+  </data>
+  <data name="lblContentBorderColorStatic.Text" xml:space="preserve">
+    <value>Border Color</value>
+  </data>
+  <data name="lblContentBorderDynamic.Help" xml:space="preserve">
+    <value>Specifies that a frame will be displayed around the text field.&lt;br&gt;
+Default: not checked
+
+Hint: Showing the contours can also be helpful for positioning the text field!</value>
+  </data>
+  <data name="lblContentBorderDynamic.Text" xml:space="preserve">
+    <value>Show Border</value>
+  </data>
+  <data name="lblContentBorderStatic.Help" xml:space="preserve">
+    <value>Specifies that a frame will be displayed around the text field.&lt;br&gt;
+Default: not checked
+
+Hint: Showing the contours can also be helpful for positioning the text field!</value>
+  </data>
+  <data name="lblContentBorderStatic.Text" xml:space="preserve">
+    <value>Show Border</value>
+  </data>
+  <data name="lblContentDynamic.Text" xml:space="preserve">
+    <value>Textfields</value>
+  </data>
+  <data name="lblContentFontColorDynamic.Help" xml:space="preserve">
+    <value>Spezifies the color of the text.&lt;br&gt;
+Default: #222222</value>
+  </data>
+  <data name="lblContentFontColorDynamic.Text" xml:space="preserve">
+    <value>Font Color</value>
+  </data>
+  <data name="lblContentFontColorStatic.Help" xml:space="preserve">
+    <value>Spezifies the color of the text.&lt;br&gt;
+Default: #222222</value>
+  </data>
+  <data name="lblContentFontColorStatic.Text" xml:space="preserve">
+    <value>Font Color</value>
+  </data>
+  <data name="lblContentFontDynamic.Help" xml:space="preserve">
+    <value>Spezifies the font name of the text.&lt;br&gt;
+Default: Verdana</value>
+  </data>
+  <data name="lblContentFontDynamic.Text" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="lblContentFontSizeDynamic.Help" xml:space="preserve">
+    <value>Spezifies the size of the text.&lt;br&gt;
+Default: 12</value>
+  </data>
+  <data name="lblContentFontSizeDynamic.Text" xml:space="preserve">
+    <value>Font Size</value>
+  </data>
+  <data name="lblContentFontSizeStatic.Help" xml:space="preserve">
+    <value>Spezifies the size of the text.&lt;br&gt;
+Default: 12</value>
+  </data>
+  <data name="lblContentFontSizeStatic.Text" xml:space="preserve">
+    <value>Font Size</value>
+  </data>
+  <data name="lblContentFontStatic.Help" xml:space="preserve">
+    <value>Spezifies the font name of the text.&lt;br&gt;
+Default: Verdana</value>
+  </data>
+  <data name="lblContentFontStatic.Text" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="lblContentHeightDynamic.Help" xml:space="preserve">
+    <value>Specifies the height of the textbox.&lt;br&gt;
+Default: 60 | 60</value>
+  </data>
+  <data name="lblContentHeightDynamic.Text" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="lblContentHeightStatic.Help" xml:space="preserve">
+    <value>Specifies the height of the textbox.&lt;br&gt;
+Default: 60 | 60</value>
+  </data>
+  <data name="lblContentHeightStatic.Text" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="lblContentHTMLDynamic.Help" xml:space="preserve">
+    <value>Specifies that the textfield supports a subset of standard HTML tags.&lt;br&gt;
+Default: not checked&lt;br&gt;&lt;br&gt;
+
+Important! If this option is checked the settings for Align, Bold, Italic, Font, Font Color, Font Size, Leading and Underline are ignored.&lt;br&gt;&lt;br&gt;
+
+The following HTML tags are supported:&lt;br&gt;
+Anchor: &amp;lt;a ...&amp;gt;&lt;br&gt;
+Bold: &amp;lt;b&amp;gt;&lt;br&gt;
+Font: &amp;lt;font ...&amp;gt;&lt;br&gt;
+Italic: &amp;lt;i&amp;gt;&lt;br&gt;
+Paragraph: &amp;lt;p ...&amp;gt;&lt;br&gt;
+Underline: &amp;lt;u&amp;gt;&lt;br&gt;
+Break: &amp;lt;br&amp;gt;&lt;br&gt;
+Image: &amp;lt;img ...&amp;gt;&lt;br&gt;
+List Item: &amp;lt;li&amp;gt;&lt;br&gt;</value>
+  </data>
+  <data name="lblContentHTMLDynamic.Text" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="lblContentHTMLStatic.Help" xml:space="preserve">
+    <value>Specifies that the textfield supports a subset of standard HTML tags.&lt;br&gt;
+Default: not checked&lt;br&gt;&lt;br&gt;
+
+Important! If this option is checked the settings for Align, Bold, Italic, Font, Font Color, Font Size, Leading and Underline are ignored.&lt;br&gt;&lt;br&gt;
+
+The following HTML tags are supported:&lt;br&gt;
+Anchor: &amp;lt;a ...&amp;gt;&lt;br&gt;
+Bold: &amp;lt;b&amp;gt;&lt;br&gt;
+Font: &amp;lt;font ...&amp;gt;&lt;br&gt;
+Italic: &amp;lt;i&amp;gt;&lt;br&gt;
+Paragraph: &amp;lt;p ...&amp;gt;&lt;br&gt;
+Underline: &amp;lt;u&amp;gt;&lt;br&gt;
+Break: &amp;lt;br&amp;gt;&lt;br&gt;
+Image: &amp;lt;img ...&amp;gt;&lt;br&gt;
+List Item: &amp;lt;li&amp;gt;&lt;br&gt;</value>
+  </data>
+  <data name="lblContentHTMLStatic.Text" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="lblContentItalicDynamic.Help" xml:space="preserve">
+    <value>Specifies whether the text is italicized.&lt;br&gt;
+Default: not checked</value>
+  </data>
+  <data name="lblContentItalicDynamic.Text" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="lblContentItalicStatic.Help" xml:space="preserve">
+    <value>Specifies whether the text is italicized.&lt;br&gt;
+Default: not checked</value>
+  </data>
+  <data name="lblContentItalicStatic.Text" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="lblContentLeadingDynamic.Help" xml:space="preserve">
+    <value>Specifies the space in pixels between lines.&lt;br&gt;
+Default: 0</value>
+  </data>
+  <data name="lblContentLeadingDynamic.Text" xml:space="preserve">
+    <value>Leading</value>
+  </data>
+  <data name="lblContentLeadingStatic.Help" xml:space="preserve">
+    <value>Specifies the space in pixels between lines.&lt;br&gt;
+Default: 0</value>
+  </data>
+  <data name="lblContentLeadingStatic.Text" xml:space="preserve">
+    <value>Leading</value>
+  </data>
+  <data name="lblContentLeftDynamic.Help" xml:space="preserve">
+    <value>Specifies the margin between the textbox and the left border of the animations window.&lt;br&gt;
+Default: 0 | 130</value>
+  </data>
+  <data name="lblContentLeftDynamic.Text" xml:space="preserve">
+    <value>Position Left</value>
+  </data>
+  <data name="lblContentLeftStatic.Help" xml:space="preserve">
+    <value>Specifies the margin between the textbox and the left border of the animations window.&lt;br&gt;
+Default: 260 | 390</value>
+  </data>
+  <data name="lblContentLeftStatic.Text" xml:space="preserve">
+    <value>Position Left</value>
+  </data>
+  <data name="lblContentSelectableDynamic.Help" xml:space="preserve">
+    <value>Specifies whether the text field is selectable.&lt;br&gt;
+Default: not checked&lt;br&gt;&lt;br&gt;
+
+If selectable is checked, the text in the text field can be selected with the mouse or keyboard, and the text can be copied with the Copy command (CTRL +C).</value>
+  </data>
+  <data name="lblContentSelectableDynamic.Text" xml:space="preserve">
+    <value>Selectable</value>
+  </data>
+  <data name="lblContentSelectableStatic.Help" xml:space="preserve">
+    <value>Specifies whether the text field is selectable.&lt;br&gt;
+Default: not checked&lt;br&gt;&lt;br&gt;
+
+If selectable is checked, the text in the text field can be selected with the mouse or keyboard, and the text can be copied with the Copy command (CTRL +C).</value>
+  </data>
+  <data name="lblContentSelectableStatic.Text" xml:space="preserve">
+    <value>Selectable</value>
+  </data>
+  <data name="lblContentStatic.Text" xml:space="preserve">
+    <value>Carousel Static Textfields</value>
+  </data>
+  <data name="lblContentTopDynamic.Help" xml:space="preserve">
+    <value>Specifies the margin between the textbox and the upper border of the animations window.&lt;br&gt;
+Default: 10 | 10</value>
+  </data>
+  <data name="lblContentTopDynamic.Text" xml:space="preserve">
+    <value>Position Top</value>
+  </data>
+  <data name="lblContentTopMostDynamic.Help" xml:space="preserve">
+    <value>Specifies that the text field is shown on top of other elements.&lt;br&gt;
+Default: checked</value>
+  </data>
+  <data name="lblContentTopMostDynamic.Text" xml:space="preserve">
+    <value>Topmost</value>
+  </data>
+  <data name="lblContentTopMostStatic.Help" xml:space="preserve">
+    <value>Specifies that the text field is shown on top of other elements.&lt;br&gt;
+Default: checked</value>
+  </data>
+  <data name="lblContentTopMostStatic.Text" xml:space="preserve">
+    <value>Topmost</value>
+  </data>
+  <data name="lblContentTopStatic.Help" xml:space="preserve">
+    <value>Specifies the margin between the textbox and the upper border of the animations window.&lt;br&gt;
+Default: 10 | 10</value>
+  </data>
+  <data name="lblContentTopStatic.Text" xml:space="preserve">
+    <value>Position Top</value>
+  </data>
+  <data name="lblContentUnderlineDynamic.Help" xml:space="preserve">
+    <value>Specifies whether the text is underlined.&lt;br&gt;
+Default: not checked</value>
+  </data>
+  <data name="lblContentUnderlineDynamic.Text" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="lblContentUnderlineStatic.Help" xml:space="preserve">
+    <value>Specifies whether the text is underlined.&lt;br&gt;
+Default: not checked</value>
+  </data>
+  <data name="lblContentUnderlineStatic.Text" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="lblContentVisibleOnDetailPage.Help" xml:space="preserve">
+    <value>Specifies that the static text field should be displayed on the Detail page.&lt;br&gt;
+Default: checked</value>
+  </data>
+  <data name="lblContentVisibleOnDetailPage.Text" xml:space="preserve">
+    <value>Visible On Detail Page</value>
+  </data>
+  <data name="lblContentVisibleOnAnimationPage.Help" xml:space="preserve">
+    <value>Specifies that the static text field should be displayed on the Carousel page.&lt;br&gt;
+Default: checked</value>
+  </data>
+  <data name="lblContentVisibleOnAnimationPage.Text" xml:space="preserve">
+    <value>Visible On Carousel Page</value>
+  </data>
+  <data name="lblContentWidthDynamic.Help" xml:space="preserve">
+    <value>Specifies the width of the textbox.&lt;br&gt;
+Default: 120 | 120</value>
+  </data>
+  <data name="lblContentWidthDynamic.Text" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="lblContentWidthStatic.Help" xml:space="preserve">
+    <value>Specifies the width of the textbox.&lt;br&gt;
+Default: 120 | 120</value>
+  </data>
+  <data name="lblContentWidthStatic.Text" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="lblDetailImage.Text" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="lblDetailImageLeft.Help" xml:space="preserve">
+    <value>Specifies the margin between the image and the left border of the animation window.&lt;br&gt;
+Default: 60</value>
+  </data>
+  <data name="lblDetailImageLeft.Text" xml:space="preserve">
+    <value>Position Left</value>
+  </data>
+  <data name="lblDetailImageTop.Help" xml:space="preserve">
+    <value>Specifies the margin between the image and the upper border of the animation window.&lt;br&gt;
+Default: 170</value>
+  </data>
+  <data name="lblDetailImageTop.Text" xml:space="preserve">
+    <value>Position Top</value>
+  </data>
+  <data name="lblDetailPage.Text" xml:space="preserve">
+    <value>Detail Page</value>
+  </data>
+  <data name="lblDetailPageEnabled.Help" xml:space="preserve">
+    <value>Specifies whether the details page should be displayed.&lt;br&gt;
+Default: checked</value>
+  </data>
+  <data name="lblDetailPageEnabled.Text" xml:space="preserve">
+    <value>Detail Page Enabled</value>
+  </data>
+  <data name="lblImageClickAction.Text" xml:space="preserve">
+    <value>Image Click Action</value>
+  </data>
+  <data name="radioImageClickActionDetail.Text" xml:space="preserve">
+    <value>Show Detail Page</value>
+  </data>
+  <data name="radioImageClickActionLightbox.Text" xml:space="preserve">
+    <value>Show Lightbox</value>
+  </data>
+  <data name="radioImageClickActionLink.Text" xml:space="preserve">
+    <value>Open Link</value>
+  </data>
+  <data name="lblLightbox.Text" xml:space="preserve">
+    <value>Lightbox</value>
+  </data>
+  <data name="lblLightboxCenter.Help" xml:space="preserve">
+    <value>Specifies the Lightbox to be shown centered in the middle of the browser window.&lt;br&gt;
+Default: checked&lt;br/&gt;
+If this option is checked the settings for Position Left and Position Top are ignored.</value>
+  </data>
+  <data name="lblLightboxCenter.Text" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="lblLightboxHeight.Help" xml:space="preserve">
+    <value>Specifies the height of the Lightbox.&lt;br&gt;
+Default: 250</value>
+  </data>
+  <data name="lblLightboxHeight.Text" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="lblLightboxEffectExit.Help" xml:space="preserve">
+    <value>Specifies the effect to be applied on the disappearance of the Lightbox.
+Default: "BlindUp"</value>
+  </data>
+  <data name="lblLightboxEffectExit.Text" xml:space="preserve">
+    <value>Lightbox Disappearance</value>
+  </data>
+  <data name="lblLightboxLeft.Help" xml:space="preserve">
+    <value>Specifies the margin between the Lightbox and the left border of the browser window.&lt;br&gt;
+Default: 0</value>
+  </data>
+  <data name="lblLightboxLeft.Text" xml:space="preserve">
+    <value>Position Left</value>
+  </data>
+  <data name="lblLightboxResizable.Help" xml:space="preserve">
+    <value>Specifies whether the dimensions of the Lightbox can be modified by the user with the mouse.&lt;br&gt;
+Default: not checked</value>
+  </data>
+  <data name="lblLightboxResizable.Text" xml:space="preserve">
+    <value>Resizable</value>
+  </data>
+  <data name="lblLightboxEffectEntry.Help" xml:space="preserve">
+    <value>Specifies the effect to be applied on the appearance of the Lightbox.
+Default: "BlindDown"</value>
+  </data>
+  <data name="lblLightboxEffectEntry.Text" xml:space="preserve">
+    <value>Lightbox Appearance</value>
+  </data>
+  <data name="lblLightboxTop.Help" xml:space="preserve">
+    <value>Specifies the margin between the Lightbox and the upper border of the browser window.&lt;br&gt;
+Default: 0</value>
+  </data>
+  <data name="lblLightboxTop.Text" xml:space="preserve">
+    <value>Position Top</value>
+  </data>
+  <data name="lblLightboxWidth.Help" xml:space="preserve">
+    <value>Specifies the width of the Lightbox.&lt;br&gt;
+Default: 350</value>
+  </data>
+  <data name="lblLightboxWidth.Text" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="lblLightboxContent.Text" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="lblLightboxTheme.Text" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="lblLightboxTitle.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="lightboxContentAnimationImage.Text" xml:space="preserve">
+    <value>Carousel Image</value>
+  </data>
+  <data name="lightboxContentContent1.Text" xml:space="preserve">
+    <value>Textfield 1</value>
+  </data>
+  <data name="lightboxContentContent2.Text" xml:space="preserve">
+    <value>Textfield 2</value>
+  </data>
+  <data name="lightboxContentTooltip.Text" xml:space="preserve">
+    <value>Tooltip</value>
+  </data>
+  <data name="lightboxContentLink.Text" xml:space="preserve">
+    <value>Image Link</value>
+  </data>
+  <data name="lightboxTitleContent1.Text" xml:space="preserve">
+    <value>Textfield 1</value>
+  </data>
+  <data name="lightboxTitleContent2.Text" xml:space="preserve">
+    <value>Textfield 2</value>
+  </data>
+  <data name="lightboxTitleNone.Text" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="lightboxTitleText.Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="lblLightboxEffectsTime.Text" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="lblLightboxAlpha.Help" xml:space="preserve">
+    <value>Specifies the alpha transparency value of the Lightbox.&lt;br&gt;
+Default: 100</value>
+  </data>
+  <data name="lblLightboxAlpha.Text" xml:space="preserve">
+    <value>Opacity</value>
+  </data>
+  <data name="lblLightboxContent.Help" xml:space="preserve">
+    <value>Specifies the content to be displayed in the Lightbox.&lt;br/&gt;
+Default: "Carousel Image"</value>
+  </data>
+  <data name="lblLightboxEffectsTime.Help" xml:space="preserve">
+    <value>Specifies how long the effect will take (in seconds).&lt;br&gt;
+Default: 0.5</value>
+  </data>
+  <data name="lblLightboxTheme.Help" xml:space="preserve">
+    <value>Specifies the theme (style, layout) to be applied by the Lightbox.&lt;br/&gt;
+Default: AlphaCube&lt;br/&gt;
+Altogether 10 different themes are available. These are contained in directory /DesktopModules/3DCarousel/Lightbox/Themes and can be modified at any time.</value>
+  </data>
+  <data name="lblLightboxTitle.Help" xml:space="preserve">
+    <value>Specifies the title to be displayed in der Lightbox.&lt;br/&gt;
+Default: None</value>
+  </data>
+  <data name="lblToolTipHideContent3.Help" xml:space="preserve">
+    <value>Specifies that the first static text field is masked out when displaying the Tooltip.
+Default: not checked</value>
+  </data>
+  <data name="lblToolTipHideContent3.Text" xml:space="preserve">
+    <value>Hide Static Textfield 1</value>
+  </data>
+  <data name="lblToolTipHideContent4.Help" xml:space="preserve">
+    <value>Specifies that the second static text field is masked out when displaying the Tooltip.
+Default: not checked</value>
+  </data>
+  <data name="lblToolTipHideContent4.Text" xml:space="preserve">
+    <value>Hide Static Textfield 2</value>
+  </data>
+  <data name="lblImageClickAction.Help" xml:space="preserve">
+    <value>Specifies the action to be executed when an image in the 3D Carousel is clicked on.&lt;br/&gt;
+Open Link: opens a link to another web page.&lt;br/&gt;
+Show DetailPage: displays the DetailPage.&lt;br/&gt;
+Show Lightbox: displays a Lightbox.&lt;br/&gt;</value>
+  </data>
+  <data name="lblCarouselCenterLeft.Help" xml:space="preserve">
+    <value>Specifies the position of the Carousel starting from the center of the animation window.&lt;br&gt;
+Default: 0&lt;br&gt;
+Plus and minus values are accepted. e.g -20&lt;br&gt;&lt;br&gt;
+
+The standard position of the Carousel is in the center of the animation window. With this setting the Carousel can be shifted horizontally.</value>
+  </data>
+  <data name="lblCarouselCenterLeft.Text" xml:space="preserve">
+    <value>Position Center Left</value>
+  </data>
+  <data name="lblCarouselCenterTop.Help" xml:space="preserve">
+    <value>Specifies the position of the Carousel starting from the center of the animation window.&lt;br&gt;
+Default: 0&lt;br&gt;
+Plus and minus values are accepted. e.g -20&lt;br&gt;&lt;br&gt;
+
+The standard position of the Carousel is in the center of the animation window. With this setting the Carousel can be shifted vertically.</value>
+  </data>
+  <data name="lblCarouselCenterTop.Text" xml:space="preserve">
+    <value>Position Center Top</value>
+  </data>
+  <data name="lblCarouselInitialRotation.Help" xml:space="preserve">
+    <value>Specifies how long the Carousel should rotate initially.  Works only in combination with the navigation buttons.&lt;br&gt;
+Default: 0</value>
+  </data>
+  <data name="lblCarouselInitialRotation.Text" xml:space="preserve">
+    <value>Initial Rotation Duration</value>
+  </data>
+  <data name="lblCarouselPerspective.Help" xml:space="preserve">
+    <value>Specifies the spatial extension of the Carousel.&lt;br&gt;
+Default: 10&lt;br&gt;&lt;br&gt;
+
+Experiment with the settings "Radius-X", "Radius-Y" and "Perspective" to obtain the desired configuration of your Carousel.</value>
+  </data>
+  <data name="lblCarouselPerspective.Text" xml:space="preserve">
+    <value>Perspective</value>
+  </data>
+  <data name="lblCarouselPreloader.Help" xml:space="preserve">
+    <value>Specifies a path to a Flash file (swf) or image file (jpg, png, gif) to display as a preloader message.&lt;br&gt;
+Default: preloader.swf&lt;br&gt;&lt;br&gt;
+
+A preloader is an indicator to inform the viewer that content is being loaded, e.g. "Please wait…" A default preloader (preloader.swf) has been provided and is preset for this option.</value>
+  </data>
+  <data name="lblCarouselPreloader.Text" xml:space="preserve">
+    <value>Preloader Path</value>
+  </data>
+  <data name="lblCarouselRadiusX.Help" xml:space="preserve">
+    <value>Specifies the width of the X axis of the Carousel.&lt;br&gt;
+Default: 150&lt;br&gt;&lt;br&gt;
+
+Experiment with the settings Radius-X, Radius-Y and Perspective to obtain the desired configuration of your Carousel.</value>
+  </data>
+  <data name="lblCarouselRadiusX.Text" xml:space="preserve">
+    <value>Radius X</value>
+  </data>
+  <data name="lblCarouselRadiusY.Help" xml:space="preserve">
+    <value>Specifies the length of the Y axis of the Carousel.&lt;br&gt;
+Default: 30&lt;br&gt;&lt;br&gt;
+
+Experiment with the settings "Radius-X", "Radius-Y" and "Perspective" to obtain the desired configuration of your Carousel.</value>
+  </data>
+  <data name="lblCarouselRadiusY.Text" xml:space="preserve">
+    <value>Radius Y</value>
+  </data>
+  <data name="lblCarouselRandomImages.Help" xml:space="preserve">
+    <value>Specifies the number of images shown randomly at any time. Images are taken randomly from the complete selection contained in the Carousel.&lt;br&gt;
+Default: -</value>
+  </data>
+  <data name="lblCarouselRandomImages.Text" xml:space="preserve">
+    <value>Random Images</value>
+  </data>
+  <data name="lblCarouselSpeed.Help" xml:space="preserve">
+    <value>Specifies the speed of rotation of the Carousel.&lt;br&gt;
+Default: 15
+</value>
+  </data>
+  <data name="lblCarouselSpeed.Text" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="lblCarouselSpeedMax.Help" xml:space="preserve">
+    <value>Specifies the maximum rotation speed which the Carousel may reach when controlled via mouse (Navigation "auto").
+Default: -</value>
+  </data>
+  <data name="lblCarouselSpeedMax.Text" xml:space="preserve">
+    <value>Speed Max</value>
+  </data>
+  <data name="lblFrame.Text" xml:space="preserve">
+    <value>Image Frame</value>
+  </data>
+  <data name="lblFrameBorderAlpha.Help" xml:space="preserve">
+    <value>Specifies the alpha transparency value of the image frame border.&lt;br&gt;
+Default: 50</value>
+  </data>
+  <data name="lblFrameBorderAlpha.Text" xml:space="preserve">
+    <value>Border Opacity</value>
+  </data>
+  <data name="lblFrameBorderColor.Help" xml:space="preserve">
+    <value>Specifies the color of the image frame border.&lt;br&gt;
+Default: -</value>
+  </data>
+  <data name="lblFrameBorderColor.Text" xml:space="preserve">
+    <value>Border Color</value>
+  </data>
+  <data name="lblFrameBorderWidth.Help" xml:space="preserve">
+    <value>Specifies the width of the image frame border.&lt;br&gt;
+Default: 3</value>
+  </data>
+  <data name="lblFrameBorderWidth.Text" xml:space="preserve">
+    <value>Border Width</value>
+  </data>
+  <data name="lblFrameDistance.Help" xml:space="preserve">
+    <value>Specifies the distance between frame and image.&lt;br&gt;
+Default: 10</value>
+  </data>
+  <data name="lblFrameDistance.Text" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="lblFrameFillAlpha1.Help" xml:space="preserve">
+    <value>Specifies the alpha transparency value of the first fill color.&lt;br&gt;
+Default: 50</value>
+  </data>
+  <data name="lblFrameFillAlpha1.Text" xml:space="preserve">
+    <value>Fill Color 1 Opacity</value>
+  </data>
+  <data name="lblFrameFillAlpha2.Help" xml:space="preserve">
+    <value>Specifies the alpha transparency value of the second fill color.&lt;br&gt;
+Default: 50</value>
+  </data>
+  <data name="lblFrameFillAlpha2.Text" xml:space="preserve">
+    <value>Fill Color 2 Opacity</value>
+  </data>
+  <data name="lblFrameFillColor1.Help" xml:space="preserve">
+    <value>Specifies the color with which an image frame should be filled.&lt;br&gt;
+Default: -</value>
+  </data>
+  <data name="lblFrameFillColor1.Text" xml:space="preserve">
+    <value>Fill Color 1</value>
+  </data>
+  <data name="lblFrameFillColor2.Help" xml:space="preserve">
+    <value>Specifies a second color with which the image frame should be filled.
+&lt;br&gt;Default: -&lt;br&gt;&lt;br&gt;
+
+Do not enter any information if you want to use only one fill color!</value>
+  </data>
+  <data name="lblFrameFillColor2.Text" xml:space="preserve">
+    <value>Fill Color 2</value>
+  </data>
+  <data name="lblFrameFillRotation.Help" xml:space="preserve">
+    <value>Specifies the rotation of the fill in radians.&lt;br&gt;
+Default: 0</value>
+  </data>
+  <data name="lblFrameFillRotation.Text" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="lblFrameFillTransition.Help" xml:space="preserve">
+    <value>Specifies in percent the width of the transition from first to second fill color.&lt;br&gt;
+Default: 100</value>
+  </data>
+  <data name="lblFrameFillTransition.Text" xml:space="preserve">
+    <value>Transition</value>
+  </data>
+  <data name="lblFrameVisible.Help" xml:space="preserve">
+    <value>Specifies whether each Carousel image should have an image frame.&lt;br&gt;
+Default: not checked</value>
+  </data>
+  <data name="lblFrameVisible.Text" xml:space="preserve">
+    <value>Visible</value>
+  </data>
+  <data name="lblEffects.Text" xml:space="preserve">
+    <value>Carousel Effects</value>
+  </data>
+  <data name="lblToolTipDefaultTop.Help" xml:space="preserve">
+    <value>Specifies the position of the tooltip starting from the tooltips default position.&lt;br&gt;
+Default: 0&lt;br&gt;
+Plus and minus values are accepted. e.g -150&lt;br&gt;&lt;br&gt;
+
+The default position of the Tooltip is above the image. With this setting the Tooltip can be shifted vertically.</value>
+  </data>
+  <data name="lblToolTipDefaultTop.Text" xml:space="preserve">
+    <value>Default Top</value>
+  </data>
+  <data name="lblToolTipVisible.Help" xml:space="preserve">
+    <value>Specifies whether tooltips should be displayed above the Carousel images.&lt;br&gt;
+Default: checked</value>
+  </data>
+  <data name="lblToolTipVisible.Text" xml:space="preserve">
+    <value>Visible</value>
+  </data>
+</root>

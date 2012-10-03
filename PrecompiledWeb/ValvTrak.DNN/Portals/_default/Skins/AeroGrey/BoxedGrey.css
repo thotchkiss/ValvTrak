@@ -1,0 +1,10 @@
+*========================================================*/
+/*  1. Universal                                          */
+/*========================================================*/
+
+.displaycss							{ }
+body								{ background: #d6d0d2 url('images/page.bg.grey.gif') repeat-x top; margin:0; padding:0; }
+#PageBgImage						{ background: url('images/page.bg.grey.jpg') no-repeat top left; height: 570px; text-align: center; margin:0 auto; padding: 10px 0 30px 0; }
+#OuterContainerTop					{ background: url('images/grey.TR.gif') no-repeat top right; text-align: left; }
+#OuterContainerBottom				{ background: url('images/grey.BR.gif') no-repeat top right; text-align: left; }
+

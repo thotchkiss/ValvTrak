@@ -1,0 +1,168 @@
+<Objects>
+	<Object> 	
+		<Token>[NAV]</Token>
+		<Settings>
+			<Setting>
+				<Name>ProviderName</Name>
+				<Value>DNNMenuNavigationProvider</Value>
+			</Setting>
+			<Setting>
+				<Name>ControlOrientation</Name>
+				<Value>vertical</Value>
+			</Setting>				
+			<Setting>
+				<Name>IndicateChildren</Name>
+				<Value>true</Value>
+			</Setting>					
+			<Setting>
+				<Name>IndicateChildImageRoot</Name>
+				<Value>[SKINPATH]images/spacer.gif</Value>
+			</Setting>
+			<Setting>
+				<Name>IndicateChildImageSub</Name>
+				<Value>[SKINPATH]images/menu-arrow.png</Value>
+			</Setting>
+			<Setting>
+				<Name>SeparatorHTML</Name>
+				<Value></Value>
+			</Setting>
+			<Setting>
+				<Name>CSSNodeRoot</Name>
+				<Value>mainmenu-idle EMMainMenuItemOff EMBaseColour1 EMMainMenuFont</Value>
+			</Setting>
+			<Setting>
+				<Name>CSSNodeSelectedRoot</Name>
+				<Value>mainmenu-selected EMBaseColour2 EMMainMenuItemOn EMMainMenuFont</Value>
+			</Setting>			
+			<Setting>
+				<Name>CSSNodeHoverRoot</Name>
+				<Value>mainmenu-selected EMBaseColour2 EMMainMenuItemOn EMMainMenuFont</Value>
+			</Setting>
+			<Setting>
+				<Name>CSSBreadCrumbRoot</Name>
+				<Value>mainmenu-breadcrumbactive EMBaseColour2 EMMainMenuItemOn EMMainMenuFont</Value>
+			</Setting>										
+			<Setting>
+				<Name>CSSNode</Name>
+				<Value>mainmenu-menuitem EMSubMenuItemOff EMMainMenuFont</Value>
+			</Setting>
+			<Setting>
+				<Name>CSSContainerSub</Name>
+				<Value>mainmenu-submenu EMSubMenuItemBGOff EMMainMenuFont EMSubMenuOpacity</Value>
+			</Setting>	
+			<Setting>
+				<Name>CSSNodeHoverSub</Name>
+				<Value>submenu-menuitemsel EMSubMenuItemBGOn EMSubMenuItemOn EMMainMenuFont</Value>
+			</Setting>
+			<Setting>
+				<Name>NodeRightHTMLRoot</Name>
+				<Value><![CDATA[&lt;span class=&quot;item-arrow&quot;&gt;&lt;img src=&quot;images/menu-arrow.png&quot; class=&quot;trans-png&quot;&gt;&lt;/span&gt;]]></Value>
+			</Setting>																																																
+		</Settings>
+	</Object>
+	<Object>
+		<Token>[SEARCH]</Token>
+		<Settings>
+			<Setting>
+				<Name>showWeb</Name>
+				<Value>False</Value>
+			</Setting>
+			<Setting>
+				<Name>showSite</Name>
+				<Value>False</Value>
+			</Setting>			
+			<Setting>
+				<Name>Submit</Name>
+				<Value><![CDATA[&lt;img src=&quot;images/search-button.png&quot; hspace=&quot;0&quot; alt=&quot;Search&quot; class=&quot;trans-png&quot; /&gt;]]></Value>		
+			</Setting>
+		</Settings>
+	</Object>	
+	<Object>
+		<Token>[USER]</Token>
+		<Settings>
+			<Setting>
+				<Name>CssClass</Name>
+				<Value>UserToken EMFontFamily trans-png</Value>
+			</Setting>		
+		</Settings>
+	</Object>	
+	<Object>
+		<Token>[LOGIN]</Token>
+		<Settings>
+			<Setting>
+				<Name>CssClass</Name>
+				<Value>LoginToken EMFontFamily trans-png</Value>
+			</Setting>		
+		</Settings>
+	</Object>
+	<Object>
+		<Token>[BREADCRUMB]</Token>
+		<Settings>
+			<Setting>
+				<Name>CssClass</Name>
+				<Value>BreadcrumbToken EMFontFamily</Value>
+			</Setting>
+			<Setting>
+				<Name>Separator</Name>
+				<Value><![CDATA[&lt;span class=&quot;EMBaseColour4 BreadcrumbSpan&quot;&gt;&lt;img src=&quot;images/breadcrumb.png&quot; alt=&quot;&quot; class=&quot;trans-png&quot; /&gt;&lt;/span&gt;]]></Value>
+			</Setting>
+			<Setting>
+				<Name>RootLevel</Name>
+				<Value>0</Value>
+			</Setting>			
+		</Settings>
+	</Object>									
+	<Object>
+		<Token>[COPYRIGHT]</Token>
+		<Settings>
+			<Setting>
+				<Name>CssClass</Name>
+				<Value>FooterToken EMFooterFont</Value>
+			</Setting>		
+		</Settings>
+	</Object>	
+	<Object>
+		<Token>[TERMS]</Token>
+		<Settings>
+			<Setting>
+				<Name>CssClass</Name>
+				<Value>FooterToken EMFooterFont</Value>
+			</Setting>		
+		</Settings>
+	</Object>
+	<Object>
+		<Token>[PRIVACY]</Token>
+		<Settings>
+			<Setting>
+				<Name>CssClass</Name>
+				<Value>FooterToken EMFooterFont</Value>
+			</Setting>		
+		</Settings>
+	</Object>	
+	<Object>
+		<Token>[CURRENTDATE]</Token>
+		<Settings>
+			<Setting>
+				<Name>CssClass</Name>
+				<Value>DateToken EMFontFamily</Value>
+			</Setting>	
+			<Setting>
+				<Name>DateFormat</Name>
+				<Value>dddd, MMMM dd, yyyy</Value>
+			</Setting>				
+		</Settings>
+	</Object>
+	<Object>
+		<Token>[LANGUAGE]</Token>
+		<Settings>
+			<Setting>
+				<Name>showMenu</Name>
+				<Value>False</Value>
+			</Setting>	
+			<Setting>
+				<Name>showLinks</Name>
+				<Value>True</Value>
+			</Setting>				
+		</Settings>
+	</Object>			
+</Objects>

@@ -1,0 +1,126 @@
+/*
+--------------------------------------------------------------
+  PORTAL STYLES                                     
+--------------------------------------------------------------
+*/
+
+/* Style for module titles */
+.Head   
+{
+    color: #0000ff;
+}
+
+
+/*
+--------------------------------------------------------------
+  ELEMENT STYLES                                     
+--------------------------------------------------------------
+*/
+body,
+#Layout-ShimRow
+{
+    background-color: #f0f0f0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active  
+{
+    color: #0000ff;
+    text-decoration: none;
+}
+
+a:active,  
+a:hover 
+{
+    text-decoration: underline;
+}
+
+
+/*
+--------------------------------------------------------------
+  LAYOUT STYLES                                     
+--------------------------------------------------------------
+*/
+
+#Layout-Background
+{
+    background-image: url("page_bg.png");
+}
+
+#Layout-Grid
+{
+    background-color: #ffffff;
+}
+
+#Layout-TopRow
+{
+    background-image: url("layout_top.png");
+}
+
+#Layout-Cell-NW
+{
+    background-image: url("layout_nw.png");
+}
+
+#Layout-Cell-N
+{
+    background-image: url("layout_n.png");
+}
+
+#Layout-Cell-NE
+{
+    background-image: url("layout_ne.png");
+}
+
+#Layout-Masthead
+{
+    background-image: url("masthead_bg.png");
+}
+
+#Layout-Masthead-Identity-Logo
+{
+    background-image: url("masthead_curve.png");
+}
+
+#Layout-Cell-W
+{
+    background-image: url("layout_w.png");
+}
+
+#Layout-Cell-E
+{
+    background-image: url("layout_e.png");
+}
+
+#Layout-Cell-SW
+{
+    background-image: url("layout_sw.png");
+}
+
+#Layout-Cell-S
+{
+    background-image: url("layout_s.png");
+}
+
+#Layout-Cell-SE
+{
+    background-image: url("layout_se.png");
+}
+
+
+.ServerSkinWidget,
+a.ServerSkinWidget:link,
+a.ServerSkinWidget:visited,
+a.ServerSkinWidget:hover,
+a.ServerSkinWidget:active,
+a.CommandButton:link,
+a.CommandButton:visited,
+a.CommandButton:hover,
+a.CommandButton:active
+{
+    color: #7f7f7f;
+}
+
+

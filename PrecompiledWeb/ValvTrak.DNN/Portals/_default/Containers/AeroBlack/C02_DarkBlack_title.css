@@ -1,0 +1,37 @@
+
+/*****  Containers CSS designed by bind.pt 		*****/
+/*****  02 in DarkBlack  					    *****/
+
+                                 .container                 { margin-bottom:10px; }
+
+/*-- title line				--*/ .C02_DarkBlack_TitleLine   { margin:0 15px; position:relative; height:25px; }
+/*-- title   				--*/ .C02_Black_DarkTitle       { float:left; font-family:Arial; font-size:16px; font-weight:300; line-height:120%; color:#FFFFFF; text-transform:lowercase; }
+/*-- actions   				--*/ .C02_Actions               { float:left; width:0px; }
+/*-- visibility  			--*/ .C02_Visibility            { float:right; }
+                                 .C02_Visibility a:hover    { background-color:Transparent; }
+
+
+/*-- content pane			--*/ .C02_ContentPaneB           { margin:10px 15px 0px; }
+                                 .C02_ContentPaneB .normal, 
+                                 .C02_ContentPaneB .Normal, 
+                                 .C02_ContentPaneB .NormalDisabled { color: #FFFFFF; } 
+
+/*-- bottom icons  			--*/ .C02_Icons                 { margin-top:0px; margin-left: 15px; }
+                                 .C02_Icons a:hover         { background-color:Transparent; }
+                                 .C02_Icons a, 
+                                 .C02_Icons input           { margin-top:10px; }
+
+/*-- round container		--*/ .C02_DarkBlack_roundcont   { background-color:#000000; }
+                    
+/*-- round top left	        --*/ .C02_Black_roundtop_leftD         { background:url(C02_tl_DarkBlack.png) no-repeat top left; height:16px; }
+/*-- round top right		--*/ .C02_Black_roundtop_rightD        { background:url(C02_tr_DarkBlack.png) no-repeat top right; height:16px; margin-top:-16px; margin-left:15px; }
+
+/*-- round bottom left  	--*/ .C02_Black_roundbottom_leftD      { background:url(C02_bl_DarkBlack.png) no-repeat bottom left; height:16px; }
+/*-- round bottom right 	--*/ .C02_Black_roundbottom_rightD     { background:url(C02_br_DarkBlack.png) no-repeat bottom right; height:16px; margin-top:-16px; margin-left:15px;  }
+
+/*-- image of corner		--*/ img.C02_corner_left        { width:15px; height:16px; border: none; display:block !important; }
+/*-- image of corner		--*/ img.C02_corner_right       { height:16px; border: none; display:block !important; }
+
+
+
+

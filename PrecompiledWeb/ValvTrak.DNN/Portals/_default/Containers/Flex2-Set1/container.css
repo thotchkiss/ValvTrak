@@ -1,0 +1,294 @@
+/*---------------------------------------------------------*/
+/*  ___      _  _      _               ___ _          ___  */
+/* |   \ _ _| \| |_  _| |_____   ___  | __| |_____ __|_  ) */
+/* | |) | '_| .` | || | / / -_) |___| | _|| / -_) \ / / /  */
+/* |___/|_| |_|\_|\_,_|_\_\___|       |_| |_\___/_\_\/___| */
+/*                                                         */
+/*      Skin Styles for DotNetNuke - Flex2 by DrNuke       */
+/*              http://www.DrNuke.co.uk/flex2              */
+/*       Copyright DrNuke Ltd - All rights reserved        */
+/*---------------------------------------------------------*/
+
+/*----------------------------------------------------*/
+/* General Container Styles                           */
+/*----------------------------------------------------*/
+.fullwidth { width:100%; }
+.clear { clear:both; line-height:0; margin:0; padding:0; font-size:0; height:0; }
+.cont-br { height:10px; }
+.flex-container-visibility img { border:none; }
+.flex-container-visibility a { outline:none; }
+
+/* Flex Container 1 - Colour Header - Boxed */
+/*-------------------------------------------------------*/
+.flex-container-1 { border-collapse:collapse; border-spacing:0; }
+.flex-container-1 .flex-container-action { float:left; margin:9px 0 0 0; }
+.flex-container-1 .flex-container-title { float:left; margin:2px 0 0 5px; }
+.flex-container-1 .flex-container-title h1 { line-height:29px; }
+.flex-container-1 .flex-container-title span { display:block; float:left; height:29px; overflow:hidden; }
+.flex-container-1 .flex-container-visibility { float:right; margin:9px 0 0 0; }
+.flex-container-1 .flex-container-help { float:right; margin:8px 4px 0 0; font-size:0; }
+.flex-container-1 .flex-container-action2 { float:left; margin:0 2px 0 2px; line-height:0; }
+.flex-container-1 .flex-container-syndicate { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-1 .flex-container-print { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-1 .flex-container-settings { float:right; margin:0 2px 0 2px; line-height:0; font-size:0; }
+.flex-container-1 .flex-container-tl { width:14px; height:33px; background-image:url(images/v1-tl.png); background-repeat:no-repeat; background-position: top left; padding:0; }
+.flex-container-1 .flex-container-tr { width:14px; height:33px; background-image:url(images/v1-tr.png); background-repeat:no-repeat; background-position: top right; padding:0; }
+.flex-container-1 .flex-container-t { height:33px; vertical-align:middle; background-image:url(images/v1-t.png); background-repeat:repeat-x; background-position:top; padding:0; }
+.flex-container-1 .flex-container-tl-lgrad { width:14px; height:33px; background-image:url(images/v1-tl-lgrad.png); background-repeat:no-repeat; background-position: top left; padding:0; }
+.flex-container-1 .flex-container-tr-lgrad { width:14px; height:33px; background-image:url(images/v1-tr-lgrad.png); background-repeat:no-repeat; background-position: top right; padding:0; }
+.flex-container-1 .flex-container-t-lgrad { height:33px; vertical-align:middle; background-image:url(images/v1-t-lgrad.png); background-repeat:repeat-x; background-position:top; padding:0; }
+.flex-container-1 .flex-container-tl-dgrad { width:14px; height:33px; background-image:url(images/v1-tl-dgrad.png); background-repeat:no-repeat; background-position: top left; padding:0; }
+.flex-container-1 .flex-container-tr-dgrad { width:14px; height:33px; background-image:url(images/v1-tr-dgrad.png); background-repeat:no-repeat; background-position: top right; padding:0; }
+.flex-container-1 .flex-container-t-dgrad { height:33px; vertical-align:middle; background-image:url(images/v1-t-dgrad.png); background-repeat:repeat-x; background-position:top; padding:0; }
+.flex-container-1 .flex-container-tl-simple { width:14px; height:33px; background-image:url(images/v1-tl-simple.png); background-repeat:no-repeat; background-position: top left; padding:0; }
+.flex-container-1 .flex-container-tr-simple { width:14px; height:33px; background-image:url(images/v1-tr-simple.png); background-repeat:no-repeat; background-position: top right; padding:0; }
+.flex-container-1 .flex-container-t-simple { height:33px; vertical-align:middle; background-image:url(images/v1-t-simple.png); background-repeat:repeat-x; background-position:top; padding:0; }
+.flex-container-1 .flex-container-l { width:14px; background:url(images/v1-l.gif) repeat-y; vertical-align:top; padding:0; }
+.flex-container-1 .flex-container-m { padding:12px 8px 4px 8px; vertical-align:top; background:#ffffff; }
+.flex-container-1 .flex-container-m-table { border-collapse:collapse; border-spacing:0; }
+.flex-container-1 .flex-container-m-td { padding:0; }
+.flex-container-1 .flex-container-content { padding:0 0 2px 0; text-align:left; }
+.flex-container-1 .flex-container-r { width:14px; background:url(images/v1-r.gif) repeat-y; vertical-align:top; padding:0; }
+.flex-container-1 .flex-container-b { height:12px; background:url(images/v1-b.gif) repeat-x; padding:0; }
+.flex-container-1 .flex-container-bl { width:14px; height:12px; background:url(images/v1-bl.gif) no-repeat top left; padding:0; }
+.flex-container-1 .flex-container-br { width:14px; height:12px; background:url(images/v1-br.gif) no-repeat top right; padding:0; }
+
+/* Flex Container - Colour Header - BG */
+/*-------------------------------------------------------*/
+.flex-container-2 { border-collapse:collapse; border-spacing:0; }
+.flex-container-2 .flex-container-action { float:left; margin:9px 0 0 0; }
+.flex-container-2 .flex-container-title { float:left; margin:2px 0 0 5px; }
+.flex-container-2 .flex-container-title h1 { line-height:29px; }
+.flex-container-2 .flex-container-title span { display:block; float:left; height:29px; overflow:hidden; }
+.flex-container-2 .flex-container-visibility { float:right; margin:9px 0 0 0; }
+.flex-container-2 .flex-container-help { float:right; margin:8px 4px 0 0; font-size:0; }
+.flex-container-2 .flex-container-action2 { float:left; margin:0 2px 0 2px; line-height:0; }
+.flex-container-2 .flex-container-syndicate { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-2 .flex-container-print { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-2 .flex-container-settings { float:right; margin:0 2px 0 2px; line-height:0; font-size:0; }
+.flex-container-2 .flex-container-tl { width:14px; height:33px; background-image:url(images/v2-tl.png); background-repeat:no-repeat; background-position: top left; padding:0; }
+.flex-container-2 .flex-container-tr { width:14px; height:33px; background-image:url(images/v2-tr.png); background-repeat:no-repeat; background-position: top right; padding:0; }
+.flex-container-2 .flex-container-t { height:33px; background-image:url(images/v2-t.png); background-repeat:repeat-x; background-position:top; padding:0; }
+.flex-container-2 .flex-container-tl-lgrad { width:14px; height:33px; background-image:url(images/v2-tl-lgrad.png); background-repeat:no-repeat; background-position: top left; padding:0; }
+.flex-container-2 .flex-container-tr-lgrad { width:14px; height:33px; background-image:url(images/v2-tr-lgrad.png); background-repeat:no-repeat; background-position: top right; padding:0; }
+.flex-container-2 .flex-container-t-lgrad { height:33px; background-image:url(images/v2-t-lgrad.png); background-repeat:repeat-x; background-position:top; padding:0; }
+.flex-container-2 .flex-container-tl-dgrad { width:14px; height:33px; background-image:url(images/v2-tl-dgrad.png); background-repeat:no-repeat; background-position: top left; padding:0; }
+.flex-container-2 .flex-container-tr-dgrad { width:14px; height:33px; background-image:url(images/v2-tr-dgrad.png); background-repeat:no-repeat; background-position: top right; padding:0; }
+.flex-container-2 .flex-container-t-dgrad { height:33px; background-image:url(images/v2-t-dgrad.png); background-repeat:repeat-x; background-position:top; padding:0; }
+.flex-container-2 .flex-container-tl-simple { width:14px; height:33px; background-image:url(images/v2-tl-simple.png); background-repeat:no-repeat; background-position: top left; padding:0; }
+.flex-container-2 .flex-container-tr-simple { width:14px; height:33px; background-image:url(images/v2-tr-simple.png); background-repeat:no-repeat; background-position: top right; padding:0; }
+.flex-container-2 .flex-container-t-simple { height:33px; background-image:url(images/v2-t-simple.png); background-repeat:repeat-x; background-position:top; padding:0; }
+.flex-container-2 .flex-container-l { width:14px; background:url(images/v2bg-l.gif) repeat-y; vertical-align:top; padding:0; }
+.flex-container-2 .flex-container-m { background:url(images/v2bg-m.gif) repeat-x top #f2f2f2; padding:12px 8px 4px 8px; vertical-align:top; }
+.flex-container-2 .flex-container-m-table { border-collapse:collapse; border-spacing:0; }
+.flex-container-2 .flex-container-m-td { padding:0; }
+.flex-container-2 .flex-container-content { padding:0 0 2px 0; text-align:left; }
+.flex-container-2 .flex-container-r { width:14px; background:url(images/v2bg-r.gif) repeat-y; vertical-align:top; padding:0; }
+.flex-container-2 .flex-container-b { height:12px; background:url(images/v2-b.gif) repeat-x; padding:0; }
+.flex-container-2 .flex-container-bl { width:14px; height:12px; background:url(images/v2-bl.gif) no-repeat top left; padding:0; }
+.flex-container-2 .flex-container-br { width:14px; height:12px; background:url(images/v2-br.gif) no-repeat top right; padding:0; }
+
+/* Flex Container - Colour Header - Open */
+/*-------------------------------------------------------*/
+.flex-container-3 { border-collapse:collapse; border-spacing:0; }
+.flex-container-3 .flex-container-action { float:left; margin:9px 0 0 0; }
+.flex-container-3 .flex-container-title { float:left; margin:2px 0 0 5px; }
+.flex-container-3 .flex-container-title h1 { line-height:29px; }
+.flex-container-3 .flex-container-title span { display:block; float:left; height:29px; overflow:hidden; }
+.flex-container-3 .flex-container-visibility { float:right; margin:9px 0 0 0; }
+.flex-container-3 .flex-container-help { float:right; margin:8px 4px 0 0; font-size:0; }
+.flex-container-3 .flex-container-action2 { float:left; margin:0 2px 0 2px; line-height:0; }
+.flex-container-3 .flex-container-syndicate { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-3 .flex-container-print { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-3 .flex-container-settings { float:right; margin:0 2px 0 2px; line-height:0; font-size:0; }
+.flex-container-3 .flex-container-tl { width:14px; height:33px; background-image:url(images/v3-tl.png); background-repeat:no-repeat; background-position: top left; padding:0; }
+.flex-container-3 .flex-container-tr { width:14px; height:33px; background-image:url(images/v3-tr.png); background-repeat:no-repeat; background-position: top right; padding:0; }
+.flex-container-3 .flex-container-t { height:33px; background-image:url(images/v3-t.png); background-repeat:repeat-x; background-position:top center; padding:0; }
+.flex-container-3 .flex-container-tl-lgrad { width:14px; height:33px; background-image:url(images/v3-tl-lgrad.png); background-repeat:no-repeat; background-position: top left; padding:0; }
+.flex-container-3 .flex-container-tr-lgrad { width:14px; height:33px; background-image:url(images/v3-tr-lgrad.png); background-repeat:no-repeat; background-position: top right; padding:0; }
+.flex-container-3 .flex-container-t-lgrad { height:33px; background-image:url(images/v3-t-lgrad.png); background-repeat:repeat-x; background-position:top center; padding:0; }
+.flex-container-3 .flex-container-tl-dgrad { width:14px; height:33px; background-image:url(images/v3-tl-dgrad.png); background-repeat:no-repeat; background-position: top left; padding:0; }
+.flex-container-3 .flex-container-tr-dgrad { width:14px; height:33px; background-image:url(images/v3-tr-dgrad.png); background-repeat:no-repeat; background-position: top right; padding:0; }
+.flex-container-3 .flex-container-t-dgrad { height:33px; background-image:url(images/v3-t-dgrad.png); background-repeat:repeat-x; background-position:top center; padding:0; }
+.flex-container-3 .flex-container-tl-simple { width:14px; height:33px; background-image:url(images/v3-tl-simple.png); background-repeat:no-repeat; background-position: top left; padding:0; }
+.flex-container-3 .flex-container-tr-simple { width:14px; height:33px; background-image:url(images/v3-tr-simple.png); background-repeat:no-repeat; background-position: top right; padding:0; }
+.flex-container-3 .flex-container-t-simple { height:33px; background-image:url(images/v3-t-simple.png); background-repeat:repeat-x; background-position:top center; padding:0; }
+.flex-container-3 .flex-container-l { width:14px; padding:0; }
+.flex-container-3 .flex-container-m { padding:12px 8px 4px 8px; vertical-align:top; background:#ffffff; }
+.flex-container-3 .flex-container-m-table { border-collapse:collapse; border-spacing:0; }
+.flex-container-3 .flex-container-m-td { padding:0; }
+.flex-container-3 .flex-container-content { padding:0 0 2px 0; text-align:left; }
+.flex-container-3 .flex-container-r { width:14px; padding:0; }
+
+/* Flex Container 4 - Banner - Light */
+/*-------------------------------------------------------*/
+.flex-container-4 { border-collapse:collapse; border-spacing:0; }
+.flex-container-4 .flex-container-action { float:left; margin:0; }
+.flex-container-4 .flex-container-title { float:left; margin:0; }
+.flex-container-4 .flex-container-title h1 { line-height:1em; }
+.flex-container-4 .flex-container-visibility { float:right; margin:0; }
+.flex-container-4 .flex-container-help { float:right; margin:0 4px 0 0; font-size:0; }
+.flex-container-4 .flex-container-action2 { float:left; margin:0 2px 0 2px; line-height:0; }
+.flex-container-4 .flex-container-syndicate { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-4 .flex-container-print { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-4 .flex-container-settings { float:right; margin:0 2px 0 2px; line-height:0; font-size:0; }
+.flex-container-4 .flex-container-tl { width:24px; height:24px; background:url(images/contbanner-tl.png) no-repeat bottom left; padding:0; }
+.flex-container-4 .flex-container-t { height:24px; background:url(images/contbanner-bg.png) repeat; padding:0; }
+.flex-container-4 .flex-container-tr { width:24px; height:24px; background:url(images/contbanner-tr.png) no-repeat bottom right; padding:0; }
+.flex-container-4 .flex-container-l { width:24px; background:url(images/contbanner-bg.png) repeat; padding:0; }
+.flex-container-4 .flex-container-m { background:url(images/contbanner-bg.png) repeat; padding:0; } 
+.flex-container-4 .flex-container-m-table { border-collapse:collapse; border-spacing:0; }
+.flex-container-4 .flex-container-m-td { padding:0; }
+.flex-container-4 .flex-container-content { padding:0 0 2px 2px; text-align:left; }
+.flex-container-4 .flex-container-r { width:24px; background:url(images/contbanner-bg.png) repeat; padding:0; }
+.flex-container-4 .flex-container-bl { width:24px; height:24px; background:url(images/contbanner-bl.png) no-repeat top left; padding:0; }
+.flex-container-4 .flex-container-b { height:24px; background:url(images/contbanner-bg.png) repeat; padding:0; }
+.flex-container-4 .flex-container-br { width:24px; height:24px; background:url(images/contbanner-br.png) no-repeat top right; padding:0; }
+
+/* Flex Container 5 - Banner - Dark */
+/*-------------------------------------------------------*/
+.flex-container-5 { border-collapse:collapse; border-spacing:0; }
+.flex-container-5 .flex-container-action { float:left; margin:0; }
+.flex-container-5 .flex-container-title { float:left; margin:0; }
+.flex-container-5 .flex-container-title h1 { line-height:1em; }
+.flex-container-5 .flex-container-visibility { float:right; margin:0; }
+.flex-container-5 .flex-container-help { float:right; margin:0 4px 0 0; font-size:0; }
+.flex-container-5 .flex-container-action2 { float:left; margin:0 2px 0 2px; line-height:0; }
+.flex-container-5 .flex-container-syndicate { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-5 .flex-container-print { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-5 .flex-container-settings { float:right; margin:0 2px 0 2px; line-height:0; font-size:0; }
+.flex-container-5 .flex-container-tl { width:24px; height:24px; background:url(images/contbanner-dark-tl.png) no-repeat bottom left; padding:0; }
+.flex-container-5 .flex-container-t { height:24px; background:url(images/contbanner-dark-bg.png) repeat; padding:0; }
+.flex-container-5 .flex-container-tr { width:24px; height:24px; background:url(images/contbanner-dark-tr.png) no-repeat bottom right; padding:0; }
+.flex-container-5 .flex-container-l { width:24px; background:url(images/contbanner-dark-bg.png) repeat; padding:0; }
+.flex-container-5 .flex-container-m { background:url(images/contbanner-dark-bg.png) repeat; padding:0; } 
+.flex-container-5 .flex-container-m-table { border-collapse:collapse; border-spacing:0; }
+.flex-container-5 .flex-container-m-td { padding:0; }
+.flex-container-5 .flex-container-content { padding:0 0 2px 2px; text-align:left; }
+.flex-container-5 .flex-container-r { width:24px; background:url(images/contbanner-dark-bg.png) repeat; padding:0; }
+.flex-container-5 .flex-container-bl { width:24px; height:24px; background:url(images/contbanner-dark-bl.png) no-repeat top left; padding:0; }
+.flex-container-5 .flex-container-b { height:24px; background:url(images/contbanner-dark-bg.png) repeat; padding:0; }
+.flex-container-5 .flex-container-br { width:24px; height:24px; background:url(images/contbanner-dark-br.png) no-repeat top right; padding:0; }
+
+/* Flex Container 6 - Banner - Light Compact */
+/*-------------------------------------------------------*/
+.flex-container-6 { border-collapse:collapse; border-spacing:0; }
+.flex-container-6 .flex-container-action { float:left; margin:0; }
+.flex-container-6 .flex-container-title { float:left; margin:0 30px 0 0; }
+.flex-container-6 .flex-container-title h1 { line-height:1em; }
+.flex-container-6 .flex-container-visibility { float:right; margin:0; }
+.flex-container-6 .flex-container-help { float:right; margin:0 4px 0 0; font-size:0; }
+.flex-container-6 .flex-container-action2 { float:left; margin:0 2px 0 2px; line-height:0; }
+.flex-container-6 .flex-container-syndicate { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-6 .flex-container-print { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-6 .flex-container-settings { float:right; margin:0 2px 0 2px; line-height:0; font-size:0; }
+.flex-container-6 .flex-container-tl { width:12px; height:12px; background:url(images/continnerbanner-tl.png) no-repeat bottom left; padding:0; }
+.flex-container-6 .flex-container-t { height:12px; background:url(images/contbanner-bg.png) repeat; padding:0; }
+.flex-container-6 .flex-container-tr { width:12px; height:12px; background:url(images/continnerbanner-tr.png) no-repeat bottom right; padding:0; }
+.flex-container-6 .flex-container-l { width:12px; background:url(images/contbanner-bg.png) repeat; padding:0; }
+.flex-container-6 .flex-container-m { background:url(images/contbanner-bg.png) repeat; padding:0; } 
+.flex-container-6 .flex-container-m-table { border-collapse:collapse; border-spacing:0; }
+.flex-container-6 .flex-container-m-td { padding:0; }
+.flex-container-6 .flex-container-content { padding:0 0 2px 2px; text-align:left; }
+.flex-container-6 .flex-container-r { width:12px; background:url(images/contbanner-bg.png) repeat; padding:0; }
+.flex-container-6 .flex-container-bl { width:12px; height:12px; background:url(images/continnerbanner-bl.png) no-repeat top left; padding:0; }
+.flex-container-6 .flex-container-b { height:12px; background:url(images/contbanner-bg.png) repeat; padding:0; }
+.flex-container-6 .flex-container-br { width:12px; height:12px; background:url(images/continnerbanner-br.png) no-repeat top right; padding:0; }
+
+/* Flex Container 7 - Banner - Dark Compact */
+/*-------------------------------------------------------*/
+.flex-container-7 { border-collapse:collapse; border-spacing:0; }
+.flex-container-7 .flex-container-action { float:left; margin:0; }
+.flex-container-7 .flex-container-title { float:left; margin:0; }
+.flex-container-7 .flex-container-title h1 { line-height:1em; }
+.flex-container-7 .flex-container-visibility { float:right; margin:0; }
+.flex-container-7 .flex-container-help { float:right; margin:0 4px 0 0; font-size:0; }
+.flex-container-7 .flex-container-action2 { float:left; margin:0 2px 0 2px; line-height:0; }
+.flex-container-7 .flex-container-syndicate { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-7 .flex-container-print { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-7 .flex-container-settings { float:right; margin:0 2px 0 2px; line-height:0; font-size:0; }
+.flex-container-7 .flex-container-tl { width:12px; height:12px; background:url(images/continnerbanner-dark-tl.png) no-repeat bottom left; padding:0; }
+.flex-container-7 .flex-container-t { height:12px; background:url(images/contbanner-dark-bg.png) repeat; padding:0; }
+.flex-container-7 .flex-container-tr { width:12px; height:12px; background:url(images/continnerbanner-dark-tr.png) no-repeat bottom right; padding:0; }
+.flex-container-7 .flex-container-l { width:12px; background:url(images/contbanner-dark-bg.png) repeat; padding:0; }
+.flex-container-7 .flex-container-m { background:url(images/contbanner-dark-bg.png) repeat; padding:0; } 
+.flex-container-7 .flex-container-m-table { border-collapse:collapse; border-spacing:0; }
+.flex-container-7 .flex-container-m-td { padding:0; }
+.flex-container-7 .flex-container-content { padding:0 0 2px 2px; text-align:left; }
+.flex-container-7 .flex-container-r { width:12px; background:url(images/contbanner-dark-bg.png) repeat; padding:0; }
+.flex-container-7 .flex-container-bl { width:12px; height:12px; background:url(images/continnerbanner-dark-bl.png) no-repeat top left; padding:0; }
+.flex-container-7 .flex-container-b { height:12px; background:url(images/contbanner-dark-bg.png) repeat; padding:0; }
+.flex-container-7 .flex-container-br { width:12px; height:12px; background:url(images/continnerbanner-dark-br.png) no-repeat top right; padding:0; }
+
+/* Flex Container 8 - Rounded - BG */
+/*-------------------------------------------------------*/
+.flex-container-8 { border-collapse:collapse; border-spacing:0; }
+.flex-container-8 .flex-container-action { float:left; margin: 0; }
+.flex-container-8 .flex-container-title { float:left; margin:0 0 0 5px; }
+.flex-container-8 .flex-container-title h1 { line-height:1em; }
+.flex-container-8 .flex-container-visibility { float:right; margin:0 3px 0 0; }
+.flex-container-8 .flex-container-help { float:right; margin:0 4px 0 0; font-size:0; }
+.flex-container-8 .flex-container-action2 { float:left; margin:0 2px 0 2px; line-height:0; }
+.flex-container-8 .flex-container-syndicate { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-8 .flex-container-print { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-8 .flex-container-settings { float:right; margin:0 2px 0 2px; line-height:0; font-size:0; }
+.flex-container-8 .flex-container-tl { width:12px; height:12px; background:url(images/controunded2-tl.png) no-repeat bottom left; padding:0; }
+.flex-container-8 .flex-container-t { height:12px; background:url(images/controunded2-t.png) repeat; padding:0; }
+.flex-container-8 .flex-container-tr { width:12px; height:12px; background:url(images/controunded2-tr.png) no-repeat bottom right; padding:0; }
+.flex-container-8 .flex-container-l { width:12px; background:url(images/controundedbg2-l.png) repeat; padding:0; }
+.flex-container-8 .flex-container-m { background:url(images/controundedbg2-m.png) repeat-x top; padding:0; }
+.flex-container-8 .flex-container-m-table { border-collapse:collapse; border-spacing:0; }
+.flex-container-8 .flex-container-m-td { padding:0; }
+.flex-container-8 .flex-container-content { padding:4px 5px 2px 7px; text-align:left; }
+.flex-container-8 .flex-container-r { width:12px; background:url(images/controundedbg2-r.png) repeat; padding:0; }
+.flex-container-8 .flex-container-bl { width:12px; height:12px; background:url(images/controunded2-bl.png) no-repeat top left; padding:0; }
+.flex-container-8 .flex-container-b { height:12px; background:url(images/controunded2-b.png) repeat; padding:0; }
+.flex-container-8 .flex-container-br { width:12px; height:12px; background:url(images/controunded2-br.png) no-repeat top right; padding:0; }
+
+/* Flex Container 9 - Rounded */
+/*-------------------------------------------------------*/
+.flex-container-9 { border-collapse:collapse; border-spacing:0; }
+.flex-container-9 .flex-container-action { float:left; margin:0; }
+.flex-container-9 .flex-container-title { float:left; margin:0 0 0 5px; }
+.flex-container-9 .flex-container-title h1 { line-height:1em; }
+.flex-container-9 .flex-container-visibility { float:right; margin:0 3px 0 0; }
+.flex-container-9 .flex-container-help { float:right; margin:0 4px 0 0; font-size:0; }
+.flex-container-9 .flex-container-action2 { float:left; margin:0 2px 0 2px; line-height:0; }
+.flex-container-9 .flex-container-syndicate { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-9 .flex-container-print { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-9 .flex-container-settings { float:right; margin:0 2px 0 2px; line-height:0; font-size:0; }
+.flex-container-9 .flex-container-tl { width:12px; height:12px; background:url(images/controunded-tl.png) no-repeat bottom left; padding:0; }
+.flex-container-9 .flex-container-t { height:12px; background:url(images/controunded-t.png) repeat; padding:0; }
+.flex-container-9 .flex-container-tr { width:12px; height:12px; background:url(images/controunded-tr.png) no-repeat bottom right; padding:0; }
+.flex-container-9 .flex-container-l { width:12px; background:url(images/controunded-l.png) repeat; padding:0; }
+.flex-container-9 .flex-container-m { padding:0; }
+.flex-container-9 .flex-container-m-table { border-collapse:collapse; border-spacing:0; }
+.flex-container-9 .flex-container-m-td { padding:0; }
+.flex-container-9 .flex-container-content { padding:4px 5px 2px 7px; text-align:left; }
+.flex-container-9 .flex-container-r { width:12px; background:url(images/controunded-r.png) repeat; padding:0; }
+.flex-container-9 .flex-container-bl { width:12px; height:12px; background:url(images/controunded-bl.png) no-repeat top left; padding:0; }
+.flex-container-9 .flex-container-b { height:12px; background:url(images/controunded-b.png) repeat; padding:0; }
+.flex-container-9 .flex-container-br { width:12px; height:12px; background:url(images/controunded-br.png) no-repeat top right; padding:0; }
+
+/* Flex Container 10 - Main */
+/*-------------------------------------------------------*/
+.flex-container-10 { border-collapse:collapse; border-spacing:0; }
+.flex-container-10 .flex-container-action { float:left; margin:0; }
+.flex-container-10 .flex-container-title { float:left; margin:0 0 0 3px; }
+.flex-container-10 .flex-container-title h1 { line-height:1em; }
+.flex-container-10 .flex-container-visibility { float:right; margin:0 3px 0 0; }
+.flex-container-10 .flex-container-help { float:right; margin:0 4px 0 0; font-size:0; }
+.flex-container-10 .flex-container-action2 { float:left; margin:0 2px 0 2px; line-height:0; }
+.flex-container-10 .flex-container-syndicate { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-10 .flex-container-print { float:right; margin:0 2px 0 2px; line-height:0; }
+.flex-container-10 .flex-container-settings { float:right; margin:0 2px 0 2px; line-height:0; font-size:0; }
+.flex-container-10 .flex-container-m { padding:0; }
+.flex-container-10 .flex-container-m-table { border-collapse:collapse; border-spacing:0; }
+.flex-container-10 .flex-container-m-td { padding:0; }
+.flex-container-10 .flex-container-content { padding:4px 5px 2px 6px; text-align:left; }
+
+/* End Flex2 By DrNuke Style Sheet */
+/*----------------------------------------------------*/
+
+
+

@@ -1,0 +1,251 @@
+﻿body 
+{
+    background: #d6d0d2 url('images/page.bg.grey.jpg') repeat-x top left; 
+    height: 144%; 
+    text-align: center; 
+    margin:0 auto; 
+    padding: 10px 0 30px 0;
+}
+
+.bordered
+{
+	border-top: solid 2px #DDECF8;
+	border-left: solid 2px #DDECF8;
+	border-right: solid 2px #C2D2DF;
+	border-bottom: solid 2px #C2D2DF;
+	
+	margin-top: .25em;
+	margin-bottom: .25em;
+	margin-left: .25em;
+	margin-right: .25em;
+		
+	padding-top: .75em;
+	padding-bottom: .75em;
+	padding-left: .75em;
+	padding-right: .75em;
+}
+
+.spacer
+{
+    margin-bottom: .45em;
+}
+
+A .input[type=file]
+{
+    text-decoration: none;
+    text-align: center; 
+    vertical-align: middle; 
+    color: black; 
+    cursor: pointer;
+}
+
+.combo
+{
+    width: 12.45em;
+}
+
+/****************************************************************/
+/********************** Status **********************************/
+/****************************************************************/
+
+.attachment
+{
+    margin: 0em 1.5em 0em 1.5em;
+}
+
+.workorder
+{
+    margin: 0em 1.5em 0em 1.5em;
+}
+
+.survey
+{
+    margin: 0em 1.5em 0em 1.5em;
+}
+
+.photo
+{
+    margin: 0em 1.5em 0em 1.5em;
+}
+
+/****************************************************************/
+/********************** Mapping *********************************/
+/****************************************************************/
+
+.titleBar
+{
+    background: url(themes/redmond/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png) #5c9ccc repeat-x 50% 50%;
+    border-bottom: #4297d7 1px solid;
+    border-collapse: collapse;
+    border-left: 0px;
+    border-right: 0px;
+    border-spacing: 0;
+    border-top: 0px;
+    clear: both;
+    display: block;
+    font: x-small arial,helvetica,clean,sans-serif;
+    font-family: Arial, Helvetica, Verdana, Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    height: 16px;
+    width: 675px;
+    line-height: 140%;
+    margin: 0px;
+    position: relative;
+    text-align: left;
+}
+
+.titleText
+{
+    color: #ffffff;
+    float: left;
+    margin: 0.1em 0px 0.2em;
+    text-align: left;
+}
+
+.pushpin-dialog
+{
+    text-align: left;
+}
+
+DIV.pushpin-dialog H1
+{
+    font-weight:bold;
+    font-family: Arial, Helvetica, Verdana, Sans;
+    font-size: 12px;
+}
+
+DIV.pushpin-dialog H2
+{
+    font-style: italic;
+    font-weight:bold;
+    font-family: Arial, Helvetica, Verdana, Sans;
+    font-size: 11px;
+}
+
+DIV.pushpin-dialog P
+{
+    font-style: normal;
+    font-weight: normal;
+    font-family: Arial, Helvetica, Verdana, Sans;
+    font-size: 6px;
+}
+
+.map-chip
+{
+    font-weight:bold;
+    font-family: Arial, Helvetica, Verdana, Sans;
+    font-size: 16px;
+    
+    display:-moz-inline-box; /* Gecko proprietary */
+    display:inline-block; /* supported by Opera and ? */
+    
+    width:32px;
+    height:32px; /* width and height required */
+    
+    vertical-align:top; /* Gecko needs this */
+    padding-top: 8px; 
+}
+
+
+SPAN#cntOpen
+{
+    background-image: url("/portal/desktopmodules/dart_ie6.mapping/images/map_chip_blue_32.gif");
+    background-repeat: no-repeat;
+}
+
+SPAN#cntEnRoute
+{
+    background-image: url("/portal/desktopmodules/dart_ie6.mapping/images/map_chip_yellow_32.gif");
+    background-repeat: no-repeat;
+}
+
+SPAN#cntOnSite
+{
+    background-image: url("/portal/desktopmodules/dart_ie6.mapping/images/map_chip_green_32.gif");
+    background-repeat: no-repeat;
+}
+
+SPAN#cntCompleted
+{
+    background-image: url("/portal/desktopmodules/dart_ie6.mapping/images/map_chip_orange_32.gif");
+    background-repeat: no-repeat;
+}
+
+SPAN#cntCancelled
+{
+    background-image: url("/portal/desktopmodules/dart_ie6.mapping/images/map_chip_purple_32.gif");
+    background-repeat: no-repeat;
+}
+
+SPAN#cntPassedDue
+{
+    background-image: url("/portal/desktopmodules/dart_ie6.mapping/images/map_chip_red_32.gif");
+    background-repeat: no-repeat;
+}
+
+
+/****************************************************************/
+/**************** Ticket Entry **********************************/
+/****************************************************************/
+
+SPAN.required
+{
+    display: inline;
+    background-image : url(../../../../images/required_star.gif);
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+}
+
+INPUT.default
+{
+    width: 13.45em;
+}
+
+SELECT.default
+{
+    width: 20.45em;
+}
+
+SELECT.states
+{
+    width: 3.82em;
+}
+
+INPUT.phone
+{
+    width: 7.45em;
+}
+
+INPUT.address
+{
+    width: 18.45em;
+}
+
+INPUT.zipcode
+{
+    width: 5.82em;
+}
+
+INPUT.date
+{
+    width: 8.45em;
+}
+
+SELECT.schedules
+{
+    width: 8.45em;
+}
+
+INPUT.time
+{
+    width: 3.10em;
+}
+
+TEXTAREA
+{
+    width: 100%;
+}
+
