@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Languages.LanguagePackWriter, App_Web_tboa2qjb" %>
+﻿<%@ control language="vb" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Languages.LanguagePackWriter, App_Web_rncjup1n" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="SectionHead" Src="~/controls/SectionHeadControl.ascx" %>

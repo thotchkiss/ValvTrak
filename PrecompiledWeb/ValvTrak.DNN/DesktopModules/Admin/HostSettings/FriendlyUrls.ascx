@@ -1,4 +1,4 @@
-﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Host.FriendlyUrls, App_Web_dig1lf5q" %>
+﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Host.FriendlyUrls, App_Web_5fzmgac5" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <asp:DataGrid ID="grdRules" AutoGenerateColumns="false" width="475px" 
     CellPadding="2" GridLines="None" cssclass="DataGrid_Container" Runat="server">

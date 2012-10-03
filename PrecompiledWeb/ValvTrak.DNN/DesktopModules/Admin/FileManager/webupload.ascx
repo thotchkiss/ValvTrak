@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.FileManager.WebUpload, App_Web_5gmvk00r" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.FileManager.WebUpload, App_Web_l25bczjg" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"%>
 <table class="Settings" cellspacing="2" cellpadding="2" summary="Web Upload Design Table">
     <tr>

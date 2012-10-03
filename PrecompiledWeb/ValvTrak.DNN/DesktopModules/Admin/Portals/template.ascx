@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Portals.Template, App_Web_y4m4nmc0" %>
+﻿<%@ control language="vb" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Portals.Template, App_Web_dy1ip2l3" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <table cellspacing="1" cellpadding="1" border="0">

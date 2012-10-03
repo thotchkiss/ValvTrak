@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="true" inherits="DotNetNuke.Modules.SearchResults.ResultsSettings, App_Web_oqucs2ky" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="true" inherits="DotNetNuke.Modules.SearchResults.ResultsSettings, App_Web_ajgsgskz" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <table cellSpacing="0" cellPadding="2" summary="Edit Search Design Table" border="0">
 	<tr>

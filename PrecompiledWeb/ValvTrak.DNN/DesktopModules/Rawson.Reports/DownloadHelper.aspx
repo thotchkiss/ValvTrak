@@ -1,4 +1,4 @@
-﻿<%@ page language="C#" autoeventwireup="true" inherits="Rawson.Reports.DownloadHelper, App_Web_nkpa2sz4" enableEventValidation="false" theme="Aqua" %>
+﻿<%@ page language="C#" autoeventwireup="true" inherits="Rawson.Reports.DownloadHelper, App_Web_xue0kjzv" enableEventValidation="false" theme="Aqua" %>
 
 <%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
 <%@ Register assembly="DevExpress.Web.v12.1" namespace="DevExpress.Web.ASPxCallback" tagprefix="dx" %>

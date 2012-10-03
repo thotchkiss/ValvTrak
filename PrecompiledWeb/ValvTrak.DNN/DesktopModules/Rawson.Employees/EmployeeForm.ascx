@@ -1,4 +1,4 @@
-﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.Employees.EmployeeForm, App_Web_jrncrune" enabletheming="true" %>
+﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.Employees.EmployeeForm, App_Web_tgoifdct" enabletheming="true" %>
 <%@ Register Assembly="DevExpress.Web.ASPxGridView.v12.1.Export"
     Namespace="DevExpress.Web.ASPxGridView.Export" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v12.1"

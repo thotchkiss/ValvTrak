@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" inherits="DotNetNuke.Modules.Admin.Authentication.Login, App_Web_zik3a3ey" autoeventwireup="false" explicit="True" %>
+﻿<%@ control language="vb" inherits="DotNetNuke.Modules.Admin.Authentication.Login, App_Web_lgu5rto2" autoeventwireup="false" explicit="True" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"%>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 

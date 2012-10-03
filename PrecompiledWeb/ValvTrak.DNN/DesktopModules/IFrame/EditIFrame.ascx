@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" inherits="DotNetNuke.Modules.IFrame.EditIFrame, App_Web_qs2zn32v" %>
+﻿<%@ control language="vb" autoeventwireup="false" inherits="DotNetNuke.Modules.IFrame.EditIFrame, App_Web_115urjhf" %>
 <%@ Register TagPrefix="dnn" TagName="Url" Src="~/controls/UrlControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="SectionHead" Src="~/controls/SectionHeadControl.ascx" %>

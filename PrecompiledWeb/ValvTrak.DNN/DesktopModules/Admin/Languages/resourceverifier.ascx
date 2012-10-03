@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Languages.ResourceVerifier, App_Web_tboa2qjb" %>
+﻿<%@ control language="vb" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Languages.ResourceVerifier, App_Web_rncjup1n" %>
 <%@ Register TagPrefix="dnntv" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke.WebControls" %>
 <%@ Register TagPrefix="dnn" TagName="SectionHead" Src="~/controls/SectionHeadControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>

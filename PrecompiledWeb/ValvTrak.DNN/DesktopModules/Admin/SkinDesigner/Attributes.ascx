@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Skins.Attributes, App_Web_bxnufoi3" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Skins.Attributes, App_Web_5rzspgvm" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <table cellSpacing="2" cellPadding="0" width="560" summary="Attributes Design Table">
 	<tr>

@@ -1,4 +1,4 @@
-﻿<%@ control inherits="DotNetNuke.Modules.Admin.Users.EditProfileDefinition, App_Web_2ttoksgx" language="vb" autoeventwireup="false" explicit="True" %>
+﻿<%@ control inherits="DotNetNuke.Modules.Admin.Users.EditProfileDefinition, App_Web_pi4i0lsx" language="vb" autoeventwireup="false" explicit="True" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"%>
 <%@ Register TagPrefix="dnn" TagName="SectionHead" Src="~/controls/SectionHeadControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>

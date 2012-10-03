@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Features.SkinEditor, App_Web_vfhbnzbj" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Features.SkinEditor, App_Web_u1bg4vpn" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls" %>
 <asp:Label ID="lblTitle" runat="server" cssClass="SubHead"/>
 <asp:Panel ID="pnlHelp" runat="server">

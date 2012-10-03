@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.UI.Skins.Controls.Search, App_Web_35iabqug" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.UI.Skins.Controls.Search, App_Web_quc3d5j3" %>
 <span id="ClassicSearch" runat="server" visible="true">
   <asp:RadioButton ID="optWeb" runat="server" CssClass="SkinObject" GroupName="Search" />
   <asp:RadioButton ID="optSite" runat="server" CssClass="SkinObject" GroupName="Search" />

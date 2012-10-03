@@ -1,4 +1,4 @@
-﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Marketplace.Marketplace, App_Web_mn4uhyqw" %>
+﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Marketplace.Marketplace, App_Web_4xytailz" %>
 
 <br />
 <asp:label id="lblSearchFor" runat="server" resourcekey="lblSearchFor" />&nbsp;

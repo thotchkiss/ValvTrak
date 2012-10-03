@@ -1,4 +1,4 @@
-﻿<%@ page language="C#" autoeventwireup="true" inherits="Rawson.Reports.Test, App_Web_zbr5ahpi" enableEventValidation="false" theme="Aqua" %>
+﻿<%@ page language="C#" autoeventwireup="true" inherits="Rawson.Reports.Test, App_Web_upzlywia" enableEventValidation="false" theme="Aqua" %>
 <%@ Register Src="ReportViewer.ascx" TagPrefix="rw" TagName="ReportViewer"  %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 

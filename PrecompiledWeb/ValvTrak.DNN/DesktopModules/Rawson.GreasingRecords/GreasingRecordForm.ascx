@@ -1,4 +1,4 @@
-﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.GreasingRecords.GreasingRecordForm, App_Web_eoavz0bv" enabletheming="true" %>
+﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.GreasingRecords.GreasingRecordForm, App_Web_jfvcgkkk" enabletheming="true" %>
 <%@ Register Assembly="DevExpress.Web.v12.1"
     Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
     <%@ Register Assembly="DevExpress.Web.ASPxGridView.v12.1"

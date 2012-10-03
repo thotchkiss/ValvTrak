@@ -3,7 +3,7 @@
 <%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dxrp" %>
 <%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxClasses" TagPrefix="dxw" %>
 <%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
-<%@ control language="vb" autoeventwireup="true" inherits="SpellCheckOptionsForm, App_Web_rnr1uzon" %>
+<%@ control language="vb" autoeventwireup="true" inherits="SpellCheckOptionsForm, App_Web_cr3ychne" %>
 <table id="dxMainSpellCheckOptionsFormTable" cellpadding="0" cellspacing="0" class="mainSpellCheckOptionsFormTable">
 	<tr>
 		<td class="contentSCOptionsFormContainer">

@@ -1,2 +1,2 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.UI.Containers.Icon, App_Web_wfpj1iqb" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.UI.Containers.Icon, App_Web_xf4gmuxf" %>
 <asp:Image BorderWidth="0" runat=server ID="imgIcon" enableviewstate="False"/>

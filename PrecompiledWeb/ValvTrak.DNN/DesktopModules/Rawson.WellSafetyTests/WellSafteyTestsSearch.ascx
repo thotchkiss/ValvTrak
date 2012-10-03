@@ -1,4 +1,4 @@
-﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.WellSafetyTests.WellSafteyTestsSearch, App_Web_x3q4lnut" enabletheming="true" %>
+﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.WellSafetyTests.WellSafteyTestsSearch, App_Web_3nm3ytta" enabletheming="true" %>
 <%@ Register Assembly="DevExpress.Web.v12.1"
     Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v12.1"

@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Scheduler.ViewScheduleHistory, App_Web_hc2ghvw2" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Scheduler.ViewScheduleHistory, App_Web_43erwrub" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"%>
 <asp:DataGrid ID="dgScheduleHistory" AutoGenerateColumns="false" width="100%" 
 	CellPadding="2" GridLines="None" cssclass="DataGrid_Container" Runat="server"

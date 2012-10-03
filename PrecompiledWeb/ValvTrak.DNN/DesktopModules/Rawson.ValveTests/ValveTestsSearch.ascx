@@ -1,4 +1,4 @@
-﻿<%@ control language="C#" autoeventwireup="true" inherits="ValveTestsSearch, App_Web_2kbeosnx" enabletheming="true" %>
+﻿<%@ control language="C#" autoeventwireup="true" inherits="ValveTestsSearch, App_Web_2ul0ypwg" enabletheming="true" %>
 
 <%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>

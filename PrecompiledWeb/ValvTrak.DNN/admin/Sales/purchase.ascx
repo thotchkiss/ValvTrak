@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Sales.Purchase, App_Web_we5pd2mh" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Sales.Purchase, App_Web_vs55zv1v" %>
 <br>
 <table cellSpacing="0" cellPadding="0" width="750" border="0" summary="Purchase Design Table">
 	<tr vAlign="top">

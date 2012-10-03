@@ -1,4 +1,4 @@
-﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Host.WhatsNew, App_Web_wkmlzmsr" %>
+﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Host.WhatsNew, App_Web_v1n4ndwi" %>
 <p class="Normal" id="header" runat="server"></p>
 <asp:Repeater ID="WhatsNewList" runat="server">
     <ItemTemplate>

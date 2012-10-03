@@ -1,4 +1,4 @@
-﻿<%@ page language="C#" autoeventwireup="true" inherits="Rawson.Reports.Loading, App_Web_nkpa2sz4" enableEventValidation="false" theme="Aqua" %>
+﻿<%@ page language="C#" autoeventwireup="true" inherits="Rawson.Reports.Loading, App_Web_xue0kjzv" enableEventValidation="false" theme="Aqua" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 

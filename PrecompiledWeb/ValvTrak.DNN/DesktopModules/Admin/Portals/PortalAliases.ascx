@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Portals.PortalAliases, App_Web_y4m4nmc0" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Portals.PortalAliases, App_Web_dy1ip2l3" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <asp:DataGrid ID="dgPortalAlias" Runat="server" AutoGenerateColumns="false" width="475px" 
     CellPadding="2" GridLines="None" cssclass="DataGrid_Container">

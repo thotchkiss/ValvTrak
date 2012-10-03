@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.SQL.SQL, App_Web_tfq54wim" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.SQL.SQL, App_Web_cllfnbs3" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <table width="430" cellspacing="2" cellpadding="2" summary="Load Script Design Table" border="0">
     <tr>

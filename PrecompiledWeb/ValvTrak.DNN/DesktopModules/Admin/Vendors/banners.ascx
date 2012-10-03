@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Vendors.Banners, App_Web_0kow5itp" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Vendors.Banners, App_Web_gzgj5qk1" %>
 <asp:datagrid id="grdBanners" runat="server" Width="100%" Border="0" CellSpacing="3" AutoGenerateColumns="false" EnableViewState="true" summary="Edit Vendors Design Table" BorderStyle="None" BorderWidth="0px" GridLines="None">
 <Columns>
 <asp:TemplateColumn>

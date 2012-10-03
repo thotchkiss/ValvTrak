@@ -1,4 +1,4 @@
-﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.ServiceItems.ServiceItemForm, App_Web_ml5oohey" enabletheming="true" %>
+﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.ServiceItems.ServiceItemForm, App_Web_e313hjox" enabletheming="true" %>
 <%@ Register Assembly="DevExpress.Web.v12.1"
 	Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v12.1"
