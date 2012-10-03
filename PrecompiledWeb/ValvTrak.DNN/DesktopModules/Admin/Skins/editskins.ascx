@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Skins.EditSkins, App_Web_dzaeobj3" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Skins.EditSkins, App_Web_mzyhql4c" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <table cellSpacing="0" cellPadding="0" width="100%" border="0" style="text-align:center">

@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Vendors.EditVendors, App_Web_00tbcdl4" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Vendors.EditVendors, App_Web_hslumlmg" %>
 <%@ Register TagPrefix="dnn" TagName="Address" Src="~/controls/Address.ascx"%>
 <%@ Register TagPrefix="dnn" TagName="Audit" Src="~/controls/ModuleAuditControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>

@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" inherits="DotNetNuke.UI.Containers.DropDownActions, App_Web_sheyophd" %>
+﻿<%@ control language="vb" autoeventwireup="false" inherits="DotNetNuke.UI.Containers.DropDownActions, App_Web_wfpj1iqb" %>
 <script>
 	function cmdGo_OnClick(o)
 	{

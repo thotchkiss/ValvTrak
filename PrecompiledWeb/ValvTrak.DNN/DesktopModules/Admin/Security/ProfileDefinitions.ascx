@@ -1,5 +1,5 @@
 ﻿<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
-<%@ control inherits="DotNetNuke.Modules.Admin.Users.ProfileDefinitions, App_Web_sz1ogzww" language="vb" autoeventwireup="false" explicit="True" %>
+<%@ control inherits="DotNetNuke.Modules.Admin.Users.ProfileDefinitions, App_Web_2ttoksgx" language="vb" autoeventwireup="false" explicit="True" %>
 <div style="text-align:left;">
     <asp:Label ID="lblProfileHelp" runat="Server" class="normal" resourcekey="ProfilePropertiesHelp" />
 </div>

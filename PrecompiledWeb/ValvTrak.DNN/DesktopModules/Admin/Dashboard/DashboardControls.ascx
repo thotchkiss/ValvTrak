@@ -1,5 +1,5 @@
 ﻿<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
-<%@ control inherits="DotNetNuke.Modules.Admin.Dashboard.DashboardControls, App_Web_vhu4hqgj" language="vb" autoeventwireup="false" explicit="True" %>
+<%@ control inherits="DotNetNuke.Modules.Admin.Dashboard.DashboardControls, App_Web_lxv0r1bz" language="vb" autoeventwireup="false" explicit="True" %>
 <div style="text-align:left;">
     <asp:Label ID="lblDashboardHelp" runat="Server" class="normal" resourcekey="DashboardControlsHelp" />
 </div>

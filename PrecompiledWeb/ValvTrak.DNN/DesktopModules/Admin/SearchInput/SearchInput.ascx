@@ -1,5 +1,5 @@
 ﻿<%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<%@ control language="vb" autoeventwireup="false" inherits="DotNetNuke.Modules.SearchInput.SearchInput, App_Web_i5bg0z1f" %>
+<%@ control language="vb" autoeventwireup="false" inherits="DotNetNuke.Modules.SearchInput.SearchInput, App_Web_b3hrhr1w" %>
 <table cellspacing="0" cellpadding="4" summary="Search Input Table" border="0">
     <tr>
         <td nowrap="nowrap">

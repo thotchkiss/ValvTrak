@@ -1,4 +1,4 @@
-﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Extensions.UsageDetails, App_Web_2ef0k23j" %>
+﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Extensions.UsageDetails, App_Web_4ouqswve" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>                
 
 <h3><asp:Literal ID="lblTitle" runat="server" /></h3>

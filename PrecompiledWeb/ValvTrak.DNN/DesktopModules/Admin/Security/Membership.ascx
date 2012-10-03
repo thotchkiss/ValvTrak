@@ -1,5 +1,5 @@
 ﻿<%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"%>
-<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Users.Membership, App_Web_sz1ogzww" %>
+<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Users.Membership, App_Web_2ttoksgx" %>
 
 <dnn:propertyeditorcontrol id="MembershipEditor" runat="Server" 
 	editmode="View" 

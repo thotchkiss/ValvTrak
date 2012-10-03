@@ -1,4 +1,4 @@
-﻿<%@ page language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Framework.DefaultPage, App_Web_0gzimmaq" enableEventValidation="false" theme="Aqua" %>
+﻿<%@ page language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Framework.DefaultPage, App_Web_k3oopa43" enableEventValidation="false" theme="Aqua" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Common.Controls" Assembly="DotNetNuke" %>
 <%@ Register TagPrefix="dnnui" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web" %>
 <asp:literal id="skinDocType" runat="server"></asp:literal>

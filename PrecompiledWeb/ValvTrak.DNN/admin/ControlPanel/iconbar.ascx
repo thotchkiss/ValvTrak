@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.UI.ControlPanels.IconBar, App_Web_cm2oup25" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.UI.ControlPanels.IconBar, App_Web_r2vidcqh" %>
 <table id="tblControlPanel" runat="server" class="ControlPanel" cellspacing="0" cellpadding="0" border="0">
 	<tr>
 		<td>

@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Vendors.Affiliates, App_Web_1z21sn2f" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Vendors.Affiliates, App_Web_0kow5itp" %>
 <asp:datagrid id="grdAffiliates" runat="server" Width="100%" Border="0" CellSpacing="3" AutoGenerateColumns="false" EnableViewState="true" BorderStyle="None" BorderWidth="0px" GridLines="None">
 <Columns>
 <asp:TemplateColumn>

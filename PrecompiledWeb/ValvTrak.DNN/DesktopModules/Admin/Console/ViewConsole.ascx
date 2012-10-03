@@ -1,4 +1,4 @@
-﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Console.ViewConsole, App_Web_twqhbo01" %>
+﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Console.ViewConsole, App_Web_3rgx4djz" %>
 
 <script type="text/javascript">
 	jQuery(document).ready(function($) {

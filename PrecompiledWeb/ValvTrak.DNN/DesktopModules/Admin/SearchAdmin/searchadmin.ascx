@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Search.SearchAdmin, App_Web_zv5hr3fq" %>
+﻿<%@ control language="vb" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Search.SearchAdmin, App_Web_5vql3ob3" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <table cellSpacing="0" cellPadding="2" summary="Basic Settings Design Table"

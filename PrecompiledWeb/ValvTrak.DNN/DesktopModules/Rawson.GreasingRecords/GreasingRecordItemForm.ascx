@@ -1,4 +1,4 @@
-﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.GreasingRecords.GreasingRecordItemForm, App_Web_qomja403" enabletheming="true" %>
+﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.GreasingRecords.GreasingRecordItemForm, App_Web_eoavz0bv" enabletheming="true" %>
 
 <%@ Register Assembly="DevExpress.Web.v12.1"
     Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dx" %>

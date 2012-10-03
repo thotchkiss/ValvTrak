@@ -1,4 +1,4 @@
-﻿<%@ control language="C#" autoeventwireup="true" inherits="RateValvesForm, App_Web_2lvm5y0v" %>
+﻿<%@ control language="C#" autoeventwireup="true" inherits="RateValvesForm, App_Web_s2iyvbsq" %>
 
 <%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>

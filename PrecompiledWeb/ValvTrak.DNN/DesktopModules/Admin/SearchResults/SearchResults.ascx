@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.SearchResults.SearchResults, App_Web_kafnu0j5" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.SearchResults.SearchResults, App_Web_oqucs2ky" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <asp:label ID="lblMessage" runat="server" cssClass="Normal"/>
 <asp:Datagrid id="dgResults" runat="server" AutoGenerateColumns="False" AllowPaging="true" BorderStyle="None" ShowHeader="False" CellPadding="4" GridLines="None" PagerStyle-Visible="false">

@@ -1,4 +1,4 @@
-﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Authentication.Settings, App_Web_vzqbfngr" %>
+﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Authentication.Settings, App_Web_zik3a3ey" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <dnn:propertyeditorcontrol id="SettingsEditor" runat="Server" 
     editcontrolwidth="200px" 

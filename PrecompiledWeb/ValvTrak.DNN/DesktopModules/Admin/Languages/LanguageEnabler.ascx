@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" inherits="DotNetNuke.Modules.Admin.Languages.LanguageEnabler, App_Web_u5ishsrh" autoeventwireup="false" explicit="True" %>
+﻿<%@ control language="vb" inherits="DotNetNuke.Modules.Admin.Languages.LanguageEnabler, App_Web_tboa2qjb" autoeventwireup="false" explicit="True" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <div class="le_label subHead">

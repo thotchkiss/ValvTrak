@@ -1,4 +1,4 @@
-﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.ChemicalPumps.ChemicalPumpTestForm, App_Web_1tgljiis" enabletheming="true" %>
+﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.ChemicalPumps.ChemicalPumpTestForm, App_Web_femzbhyg" enabletheming="true" %>
 <%@ Register assembly="DevExpress.Web.v12.1" namespace="DevExpress.Web.ASPxCallbackPanel" tagprefix="dx" %>
 <%@ Register assembly="DevExpress.Web.v12.1" namespace="DevExpress.Web.ASPxPanel" tagprefix="dx" %>
 <%@ Register assembly="DevExpress.Web.ASPxEditors.v12.1" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>

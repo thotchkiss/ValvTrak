@@ -1,4 +1,4 @@
-﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.ClientLocations.ClientsForm, App_Web_zoovgc21" enabletheming="true" %>
+﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.ClientLocations.ClientsForm, App_Web_0wyo4bfc" enabletheming="true" %>
 
 <%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxHiddenField" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>

@@ -1,2 +1,2 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.UI.Skins.Controls.Help, App_Web_05djzq3a" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.UI.Skins.Controls.Help, App_Web_35iabqug" %>
 <asp:hyperlink id="hypHelp" runat="server" cssclass="SkinObject" enableviewstate="False"></asp:hyperlink>

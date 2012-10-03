@@ -1,4 +1,4 @@
-﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Authentication.Logoff, App_Web_y02dkmfr" %>
+﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Authentication.Logoff, App_Web_od0pbyqp" %>
 <table cellspacing="0" cellpadding="3" border="0" summary="SignIn Design Table" width="160">
     <tr>
 	    <td colspan="2" class="SubHead" align="center"><asp:Panel ID="pnlLogoffContainer" runat="server" style="text-align:left" /></td>

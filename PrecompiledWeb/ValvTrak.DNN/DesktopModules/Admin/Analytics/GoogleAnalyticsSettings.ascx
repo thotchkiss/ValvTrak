@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" inherits="DotNetNuke.Modules.Admin.Analytics.GoogleAnalyticsSettings, App_Web_a25q3rul" autoeventwireup="false" explicit="True" %>
+﻿<%@ control language="vb" inherits="DotNetNuke.Modules.Admin.Analytics.GoogleAnalyticsSettings, App_Web_kyxjldnp" autoeventwireup="false" explicit="True" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <table cellspacing="2" cellpadding="2" border="0">

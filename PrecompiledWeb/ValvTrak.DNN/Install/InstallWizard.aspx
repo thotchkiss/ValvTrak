@@ -1,4 +1,4 @@
-﻿<%@ page language="VB" autoeventwireup="false" inherits="DotNetNuke.Services.Install.InstallWizard, App_Web_ppey5a21" enableEventValidation="false" theme="Aqua" %>
+﻿<%@ page language="VB" autoeventwireup="false" inherits="DotNetNuke.Services.Install.InstallWizard, App_Web_pfmxkkbh" enableEventValidation="false" theme="Aqua" %>
 
 <%@ Import Namespace="DotNetNuke.UI.Utilities" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>

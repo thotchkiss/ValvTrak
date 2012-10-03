@@ -1,4 +1,4 @@
-﻿<%@ control inherits="DotNetNuke.Modules.Admin.Portals.SiteSettings, App_Web_peccy430" language="vb" autoeventwireup="false" explicit="True" enableviewstate="True" %>
+﻿<%@ control inherits="DotNetNuke.Modules.Admin.Portals.SiteSettings, App_Web_n2lkmlqf" language="vb" autoeventwireup="false" explicit="True" enableviewstate="True" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
 <%@ Register TagPrefix="dnn" TagName="URL" Src="~/controls/URLControl.ascx" %>

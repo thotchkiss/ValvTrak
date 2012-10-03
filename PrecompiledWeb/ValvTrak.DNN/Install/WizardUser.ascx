@@ -1,4 +1,4 @@
-﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Services.Install.WizardUser, App_Web_bcotbpx4" %>
+﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Services.Install.WizardUser, App_Web_jjyyb2tl" %>
 <table cellpadding="0" cellspacing="0" border="0">
      <tr>
         <td class="NormalBold" width="150"><asp:Label ID="lblFirstName" runat="server" /></td>

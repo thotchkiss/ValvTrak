@@ -1,4 +1,4 @@
-﻿<%@ control inherits="DotNetNuke.Modules.Admin.Host.HostSettings, App_Web_lb1yf1cn" language="vb" autoeventwireup="false" explicit="True" %>
+﻿<%@ control inherits="DotNetNuke.Modules.Admin.Host.HostSettings, App_Web_zqpd33jh" language="vb" autoeventwireup="false" explicit="True" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke.WebControls" %>
 <%@ Register TagPrefix="dnn" TagName="SectionHead" Src="~/controls/SectionHeadControl.ascx" %>

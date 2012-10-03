@@ -1,6 +1,6 @@
 ﻿<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<%@ control inherits="DotNetNuke.Modules.Admin.Security.Roles, App_Web_sz1ogzww" language="vb" autoeventwireup="false" explicit="True" %>
+<%@ control inherits="DotNetNuke.Modules.Admin.Security.Roles, App_Web_2ttoksgx" language="vb" autoeventwireup="false" explicit="True" %>
 <table align="left" cellpadding="0" cellspacing="0" border="0" width="100%">
 	<tr id="trGroups" runat="server">
 		<td width="*">&nbsp;</td>

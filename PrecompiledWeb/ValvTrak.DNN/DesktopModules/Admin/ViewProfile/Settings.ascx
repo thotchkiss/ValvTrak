@@ -1,4 +1,4 @@
-﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Users.ViewProfileSettings, App_Web_uul1nuis" %>
+﻿<%@ control language="VB" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Users.ViewProfileSettings, App_Web_ro0i45vf" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 
 <table cellspacing="0" cellpadding="2" border="0" summary="Edit Links Design Table" style="width: 650px">

@@ -1,4 +1,4 @@
-﻿<%@ control language="C#" inherits="Rawson.ValveTests.ValveTestForm, App_Web_ygoxjtih" autoeventwireup="true" enabletheming="true" %>
+﻿<%@ control language="C#" inherits="Rawson.ValveTests.ValveTestForm, App_Web_2kbeosnx" autoeventwireup="true" enabletheming="true" %>
 <%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>

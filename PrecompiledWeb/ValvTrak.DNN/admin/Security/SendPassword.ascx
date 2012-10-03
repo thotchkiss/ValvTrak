@@ -1,6 +1,6 @@
 ﻿<%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"%>
-<%@ control language="vb" inherits="DotNetNuke.Modules.Admin.Security.SendPassword, App_Web_lxsjuly0" autoeventwireup="false" explicit="True" %>
+<%@ control language="vb" inherits="DotNetNuke.Modules.Admin.Security.SendPassword, App_Web_msdxesnp" autoeventwireup="false" explicit="True" %>
 <div style="text-align:left;">
     <asp:Label ID="lblHelp" runat="Server" class="normal" />
 </div>

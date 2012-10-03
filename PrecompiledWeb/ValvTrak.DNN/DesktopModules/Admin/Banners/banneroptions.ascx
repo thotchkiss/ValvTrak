@@ -1,6 +1,6 @@
 ﻿<%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register Assembly="DotNetNuke.WebControls" Namespace="DotNetNuke.UI.WebControls" TagPrefix="DNN" %>
-<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Vendors.BannerOptions, App_Web_kdfbfn0c" %>
+<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Vendors.BannerOptions, App_Web_1po2mdb1" %>
 <style type="text/css">
 .GroupSuggestMenu {
     width: 250px;

@@ -1,4 +1,4 @@
-﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.ManufacturerModels.ManufacturerForm, App_Web_xkishp0r" enabletheming="true" %>
+﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.ManufacturerModels.ManufacturerForm, App_Web_4a10beqe" enabletheming="true" %>
 
 <%@ Register Assembly="DevExpress.Web.ASPxGridView.v12.1" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxHiddenField" TagPrefix="dx" %>

@@ -1,4 +1,4 @@
-﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.Admin.AdminHome, App_Web_vtogvoei" enabletheming="true" %>
+﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.Admin.AdminHome, App_Web_4sd11bub" enabletheming="true" %>
 <%@ Register Assembly="DevExpress.Web.ASPxEditors.v12.1"
     Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v12.1"

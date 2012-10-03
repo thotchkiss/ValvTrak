@@ -1,4 +1,4 @@
-﻿<%@ control inherits="DotNetNuke.Modules.Admin.Tabs.Tabs, App_Web_h1a505di" language="vb" autoeventwireup="false" explicit="True" %>
+﻿<%@ control inherits="DotNetNuke.Modules.Admin.Tabs.Tabs, App_Web_lq4vczna" language="vb" autoeventwireup="false" explicit="True" %>
 <%@ Register TagPrefix="dnn" TagName="HelpButton" Src="~/controls/HelpButtonControl.ascx" %>
 <table class="Settings" cellspacing="2" cellpadding="2" summary="Tabs Design Table" border="0">
 	<tr>

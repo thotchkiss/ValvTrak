@@ -1,5 +1,5 @@
 ﻿<%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Vendors.EditAffiliate, App_Web_1z21sn2f" %>
+<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.Admin.Vendors.EditAffiliate, App_Web_0kow5itp" %>
 <table cellspacing="2" cellpadding="0" width="560">
 	<tr>
 		<td class="SubHead" width="200"><dnn:label id="plStartDate" runat="server" controlname="txtStartDate" suffix=":"></dnn:label></td>

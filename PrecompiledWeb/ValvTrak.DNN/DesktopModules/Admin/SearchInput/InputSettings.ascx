@@ -1,5 +1,5 @@
 ﻿<%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.SearchInput.InputSettings, App_Web_i5bg0z1f" %>
+<%@ control language="vb" autoeventwireup="false" explicit="True" inherits="DotNetNuke.Modules.SearchInput.InputSettings, App_Web_b3hrhr1w" %>
 <table cellSpacing="2" cellPadding="2" border="0">
 	<tr>
 		<td nowrap width="180" class="SubHead"><dnn:label id="plModuleCombo" runat="server" controlname="cboModule" text="Search Results Module:"></dnn:label></td>

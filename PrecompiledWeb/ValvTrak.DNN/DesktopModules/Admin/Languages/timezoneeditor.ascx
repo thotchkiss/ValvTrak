@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Languages.TimeZoneEditor, App_Web_u5ishsrh" %>
+﻿<%@ control language="vb" autoeventwireup="false" inherits="DotNetNuke.Modules.Admin.Languages.TimeZoneEditor, App_Web_tboa2qjb" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <table id="Table1" cellspacing="1" cellpadding="1" border="0">

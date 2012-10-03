@@ -1,5 +1,5 @@
 ﻿<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
-<%@ control inherits="DotNetNuke.Modules.Admin.Users.UserAccounts, App_Web_sz1ogzww" language="vb" autoeventwireup="false" explicit="True" %>
+<%@ control inherits="DotNetNuke.Modules.Admin.Users.UserAccounts, App_Web_2ttoksgx" language="vb" autoeventwireup="false" explicit="True" %>
 <table width="475" border="0">
 	<tr>
 		<td align="left" width="75"><asp:label id="lblSearch" cssclass="SubHead" resourcekey="Search" runat="server">Search:</asp:label></td>

@@ -1,4 +1,4 @@
-﻿<%@ control language="vb" autoeventwireup="false" explicit="true" inherits="DotNetNuke.Modules.Admin.LogViewer.LogViewer, App_Web_g5ytboku" targetschema="http://schemas.microsoft.com/intellisense/ie5" %>
+﻿<%@ control language="vb" autoeventwireup="false" explicit="true" inherits="DotNetNuke.Modules.Admin.LogViewer.LogViewer, App_Web_wfzl1dls" targetschema="http://schemas.microsoft.com/intellisense/ie5" %>
 <%@ Register TagPrefix="dnnsc" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <%@ Register TagPrefix="dnn" TagName="SectionHead" Src="~/controls/SectionHeadControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
