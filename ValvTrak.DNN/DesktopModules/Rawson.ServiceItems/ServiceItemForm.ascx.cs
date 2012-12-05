@@ -348,7 +348,7 @@ namespace Rawson.ServiceItems
             ServiceItemFormController controller = Context.Items[this.UniqueID + "_boController"] as ServiceItemFormController;
             //controller.Load(ServiceItemID);
 
-            ManufacturerSelect.DataSource = controller.GetManufacturers();
+            //ManufacturerSelect.DataSource = controller.GetManufacturers();
             ManufacturerSelect.DataBind();
 
             if (!String.IsNullOrEmpty(e.Parameter))
@@ -363,7 +363,7 @@ namespace Rawson.ServiceItems
             ServiceItemFormController controller = Context.Items[this.UniqueID + "_boController"] as ServiceItemFormController;
             //controller.Load(ServiceItemID);
 
-            ModelSelect.DataSource = controller.GetManufacturerModels(Convert.ToInt32(ManufacturerSelect.Value));
+            //ModelSelect.DataSource = controller.GetManufacturerModels(Convert.ToInt32(ManufacturerSelect.Value));
             ModelSelect.DataBind();
 
             if (!String.IsNullOrEmpty(e.Parameter))

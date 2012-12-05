@@ -14,13 +14,6 @@ namespace Rawson.Data.Controllers
     /// </summary>
     public class GreasingRecordFormController : BaseController<GreasingRecord>
     {
-        public GreasingRecordFormController()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
-
         public Job SetJob(int jobId)
         {
             Entity.Job = Context.GetTable<Job>().FirstOrDefault(j => j.JobID == jobId);

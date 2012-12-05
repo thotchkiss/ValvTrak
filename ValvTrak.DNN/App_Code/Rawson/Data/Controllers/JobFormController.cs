@@ -18,13 +18,6 @@ namespace Rawson.Data.Controllers
     /// </summary>
     public class JobFormController : BaseController<Job>
     {
-        public JobFormController()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
-
         public List<JobFormGridItem> GetCurrentJobServiceForms()
         {
             int jobId = Entity.JobID;

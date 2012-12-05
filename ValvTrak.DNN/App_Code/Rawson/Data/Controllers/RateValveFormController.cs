@@ -11,13 +11,6 @@ using Rawson.App.Security;
 /// </summary>
 public class RateValveFormController : BaseController<RateValveTest>
 {
-	public RateValveFormController()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
-
     public bool CanEdit(int userId)
     {
         UserAuthorization ua = new UserAuthorization(userId);

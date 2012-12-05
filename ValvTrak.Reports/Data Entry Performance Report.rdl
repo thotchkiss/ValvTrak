@@ -79,66 +79,8 @@
       </Fields>
       <Query>
         <DataSourceName>ValvTrak</DataSourceName>
-        <CommandText>select 
-	employees.firstname + ' ' + employees.lastname as [Employee],
-    valvetests.createddate as [DateCreated],
-    'Testing' as [RecordType],
-	jobs.jobid as [JobID], 
-	jobs.salesordernum as [SRO],
-	valvetests.valvetestid as [RecordID], 
-	valvetests.fsrnum as [FSR],
-	clients.name as [Client], 
-	clientlocations.name as [Location]
-from jobs
-inner join clientlocations on jobs.clientlocationid = clientlocations.clientlocationid
-inner join clients on clientlocations.clientid = clients.clientid
-inner join valvetests on valvetests.jobid = jobs.jobid
-left outer join employees on valvetests.createdby = employees.employeeid
-where (valvetests.createddate between @StartDate and @EndDate)
-        and (@EmployeeID is null or employees.employeeid = @EmployeeID)
-
-union
-
-select 
-	employees.firstname + ' ' + employees.lastname,
-	greasingrecorditems.createddate,
-    'Greasing',
-	jobs.jobid, 
-	jobs.salesordernum,
-	greasingrecorditems.greasingrecorditemid, 
-	greasingrecords.fsrnum,
-	clients.name, 
-	clientlocations.name
-from jobs
-inner join clientlocations on jobs.clientlocationid = clientlocations.clientlocationid
-inner join clients on clientlocations.clientid = clients.clientid
-inner join greasingrecords on greasingrecords.jobid = jobs.jobid
-inner join greasingrecorditems on greasingrecords.greasingrecordid = greasingrecorditems.greasingrecordid
-left outer join employees on greasingrecorditems.createdby = employees.employeeid
-where (greasingrecorditems.createddate between @StartDate and @EndDate )
-        and (@EmployeeID is null or employees.employeeid = @EmployeeID)
-
-union
-
-select 
-	employees.firstname + ' ' + employees.lastname,
-	wellsafetytests.createddate,
-    'Well Safety',
-	jobs.jobid, 
-	jobs.salesordernum,
-	wellsafetytests.wellsafetytestid, 
-	wellsafetytests.fsr_num,
-	clients.name, 
-	clientlocations.name
-from jobs
-inner join clientlocations on jobs.clientlocationid = clientlocations.clientlocationid
-inner join clients on clientlocations.clientid = clients.clientid
-inner join wellsafetytests on wellsafetytests.jobid = jobs.jobid
-left outer join employees on wellsafetytests.createdby = employees.employeeid
-where (wellsafetytests.createddate between @StartDate and @EndDate )
-        and (@EmployeeID is null or employees.employeeid = @EmployeeID)
-
-order by Employee, DateCreated, SRO</CommandText>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>sp_DataEntryPerformanceReport</CommandText>
         <QueryParameters>
           <QueryParameter Name="@StartDate">
             <Value>=Parameters!StartDate.Value</Value>

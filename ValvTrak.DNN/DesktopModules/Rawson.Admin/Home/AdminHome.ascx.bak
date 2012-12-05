@@ -1,10 +1,10 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="AdminHome.ascx.cs" Inherits="Rawson.Admin.AdminHome" EnableTheming="true" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v10.2"
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.2"
     Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dx" %>
 
-<%@ Register assembly="DevExpress.Web.v10.2" namespace="DevExpress.Web.ASPxPanel" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v11.2" namespace="DevExpress.Web.ASPxPanel" tagprefix="dx" %>
 
 
 <dx:ASPxRoundPanel ID="ASPxRoundPanel1" runat="server" Width="100%" HorizontalAlign="Center" HeaderText="Configuration" >

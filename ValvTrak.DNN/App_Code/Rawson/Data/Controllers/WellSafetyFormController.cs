@@ -12,13 +12,6 @@ namespace Rawson.Data.Controllers
     /// </summary>
     public class WellSafetyFormController : BaseController<WellSafetyTest>
     {
-        public WellSafetyFormController()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
-
         public Job LoadJob(int jobId)
         {
             Entity.Job = Context.Jobs.SingleOrDefault(j => j.JobID == jobId);

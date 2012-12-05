@@ -15,13 +15,6 @@ namespace Rawson.Data.Controllers
     /// </summary>
     public class ClientFormController : BaseController<Client>
     {
-        public ClientFormController()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
-
         public override Client Load(object pk)
         {
             if (Convert.ToInt32(pk) == -1)

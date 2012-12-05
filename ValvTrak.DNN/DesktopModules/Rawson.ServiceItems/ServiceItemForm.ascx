@@ -1,17 +1,17 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeFile="ServiceItemForm.ascx.cs" Inherits="Rawson.ServiceItems.ServiceItemForm" EnableTheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v11.2"
+<%@ Register Assembly="DevExpress.Web.v12.1"
 	Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.2"
+<%@ Register Assembly="DevExpress.Web.v12.1"
 	Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.2"
+<%@ Register Assembly="DevExpress.Web.v12.1"
 	Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
 
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dxpc" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.2" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
-<%@ Register assembly="DevExpress.Web.v11.2" namespace="DevExpress.Web.ASPxPanel" tagprefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dxpc" %>
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v12.1" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
+<%@ Register assembly="DevExpress.Web.v12.1" namespace="DevExpress.Web.ASPxPanel" tagprefix="dx" %>
 
-<%@ Register assembly="DevExpress.Web.v11.2" namespace="DevExpress.Web.ASPxHiddenField" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v12.1" namespace="DevExpress.Web.ASPxHiddenField" tagprefix="dx" %>
 
 
 <script type="text/javascript">
@@ -24,9 +24,9 @@
 		}
 		if (s.GetSelectedIndex() == -1) { s.SetSelectedIndex(0); }
 	}
-</script><script type="text/javascript">
+</script>
+<script type="text/javascript">
 
-	
 	function CancelAddValve() {
 		pcValveAdd.Hide();
 	}
@@ -39,7 +39,111 @@
 			}
 		}
 		return true;
-	}
+    }
+
+    function ServiceItemSelectedIndexChanged(s, e) {
+        
+        siLocalData.Set('siServiceItemID', parseInt(s.GetValue())); 
+
+								if (s.GetValue() > 0) {
+									edit.SetEnabled(true);
+								}
+								else {
+									edit.SetEnabled(false);
+								}
+    }
+
+    function ManufacturerSelectedIndexChanged(s,e) {
+
+        siLocalData.Set('siManufacturerID', s.GetValue());
+        siLocalData.Set('siManufacturerModelID', -1);
+
+        models.PerformCallback();
+    }
+
+    function ModelSelectedIndexChanged(s, e) {
+
+        siLocalData.Set('siManufacturerModelID', s.GetValue());
+    }
+
+    function AfterServiceItemSaved(s, e) {
+
+    }
+
+    function AfterManufacturerSaved(s, e) {
+
+        manuForm.Hide();
+        manuName.SetText('');
+
+        if (s.cpError != undefined) {
+            alert(s.cpError);
+        }
+        else {
+
+            siLocalData.Set('siManufacturerID', parseInt(s.cpManufacturerID));
+            manufacturers.PerformCallback(s.cpManufacturerID);
+        }
+    }
+
+    function AfterModelSaved(s, e) {
+
+        modelForm.Hide();
+        modelName.SetText('');
+
+        if (s.cpError != undefined) {
+            alert(s.cpError)
+        }
+        else {
+
+            siLocalData.Set('siManufacturerModelID', parseInt(s.cpManufacturerModelID));
+            models.PerformCallback(s.cpManufacturerModelID);
+        }
+    }
+
+    function OnManufacturersEndCallback(s, e) {
+
+        var mid = parseInt(s.cpManufacturerID);
+
+        // New Manufacturer has been added
+        if (!isNaN(mid)) {
+
+            manufacturers.SetValue(mid);
+            modelAdd.Focus();
+        }
+    }
+
+    function OnModelsEndCallback(s, e) {
+
+        var mid = parseInt(s.cpManufacturerModelID);
+
+        // New ManufacturerModel has been added
+        if (!isNaN(mid)) {
+
+            models.SetValue(mid);
+            siNotes.Focus();
+        }
+    }
+
+    function AfterServiceItemSaved(s, e) {
+
+        if (s.cpHasErrors) {
+            if (validation != undefined) {
+                validation.SetContentHtml(s.cpErrorMessage);
+                validation.Show();
+            }
+        }
+        else {
+            if (validation != undefined)
+                validation.Hide();
+        }
+
+        if (s.cpServiceItemID != undefined) {
+            siLocalData.Set('siServiceItemID', s.cpServiceItemID);
+            siSelect.PerformCallback();
+        }
+
+        siDetails.Hide();
+    }
 
 </script>
 
@@ -49,19 +153,11 @@
 			<dxe:ASPxComboBox ID="ServiceItemSelect" runat="server" 
 					DataSourceID="ServiceItemDataSource" Width="170px"
 					TextField="DisplayMember" ValueField="ValueMember"
-					ClientInstanceName="siSelect" ValueType="System.Int32" oncallback="ServiceItemSelect_Callback" 
-				TabIndex="100" IncrementalFilteringMode="StartsWith" 
-				EnableIncrementalFiltering="True" >
-				<ClientSideEvents SelectedIndexChanged="function(s,e) { 
-								
-								siLocalData.Set('siServiceItemID', parseInt(s.GetValue())); 
-
-								if (s.GetValue() &gt; 0) {
-									edit.SetEnabled(true);
-								}
-								else {
-									edit.SetEnabled(false);
-								} }"
+					ClientInstanceName="siSelect" ValueType="System.Int32" 
+                    oncallback="ServiceItemSelect_Callback" TabIndex="100" 
+                    IncrementalFilteringMode="StartsWith" EnableIncrementalFiltering="True" >
+				<ClientSideEvents 
+                            SelectedIndexChanged="function(s,e) { ServiceItemSelectedIndexChanged(s, e); }"
 							
 							EndCallback="function(s,e){
 								s.SetValue(siLocalData.Get('siServiceItemID')); 
@@ -145,14 +241,11 @@
 									</dxe:ASPxLabel>
 								</td>
 								<td>
-									<dxe:ASPxComboBox ID="ServiceItemTypeSelect" runat="server" Width="200" DataSourceID="ServiceItemTypeDataSource"
+									<dxe:ASPxComboBox ID="ServiceItemTypeSelect" runat="server" Width="200" 
+                                        DataSourceID="ServiceItemTypeDataSource"
 										TextField="DisplayMember" ValueField="ValueMember" 
 										ValueType="System.Int32" AutoPostBack="false" TabIndex="105" 
-										EnableIncrementalFiltering="True" IncrementalFilteringMode="StartsWith" >
-										<ClientSideEvents GotFocus="function(s, e) {
-																		s.SelectAll();
-																		s.ShowDropDown();
-																	}" />
+										EnableIncrementalFiltering="True" IncrementalFilteringMode="Contains" >
 									</dxe:ASPxComboBox>
 								</td>
 							</tr>
@@ -170,16 +263,13 @@
 														ValueField="ValueMember" EnableClientSideAPI="true" 
 														ClientInstanceName="manufacturers" TabIndex="106" 
 														OnCallback="ManufacturerSelect_Callback" 
-													EnableIncrementalFiltering="True" IncrementalFilteringMode="StartsWith" 
+													EnableIncrementalFiltering="True" IncrementalFilteringMode="Contains" 
 													ValueType="System.Int32" EnableCallbackMode="True" 
 													ShowLoadingPanel="False" OnItemRequestedByValue="ManufacturerSelect_ItemRequestedByValue" 
                                                     OnItemsRequestedByFilterCondition="ManufacturerSelect_ItemsRequestedByFilterCondition" >
-													<ClientSideEvents SelectedIndexChanged="function(s,e) { models.PerformCallback(); }" 
-														
-														GotFocus="function(s, e) {
-																				s.SelectAll();
-																				s.ShowDropDown();
-																			}" />
+													<ClientSideEvents 
+                                                        SelectedIndexChanged="function(s,e) { ManufacturerSelectedIndexChanged(s,e); }"  
+                                                        EndCallback="function(s,e) { OnManufacturersEndCallback(s,e); } " />
 												</dxe:ASPxComboBox>
 											</td>
 											<td>
@@ -209,16 +299,14 @@
 												<dxe:ASPxComboBox ID="ModelSelect" runat="server" EnableClientSideAPI="true" ClientInstanceName="models"
 														TextField="DisplayMember" Width="200" 
 														ValueField="ValueMember" OnCallback="ModelSelect_Callback" AutoPostBack="false"
-													    TabIndex="107" IncrementalFilteringMode="StartsWith" ValueType="System.Int32" 
+													    TabIndex="107" IncrementalFilteringMode="Contains" ValueType="System.Int32" 
 													    EnableCallbackMode="true" CallbackPageSize="150" DropDownStyle="DropDown"
                                                         ShowLoadingPanel="False" 
                                                     OnItemRequestedByValue="ModelSelect_ItemRequestedByValue" 
                                                     OnItemsRequestedByFilterCondition="ModelSelect_ItemsRequestedByFilterCondition">
-														<ClientSideEvents GotFocus="function(s, e) 
-                                                            {
-															    s.SelectAll();
-																s.ShowDropDown(); 
-                                                            }" />
+														<ClientSideEvents
+                                                            SelectedIndexChanged="function(s,e) { ModelSelectedIndexChanged(s,e); }"
+                                                            EndCallback="function(s,e) { OnModelsEndCallback(s,e); } "  />
 												</dxe:ASPxComboBox>
 											</td>
 											<td>
@@ -242,8 +330,8 @@
 									</dxe:ASPxLabel>
 								</td>
 								<td>
-									<dxe:ASPxMemo ID="NotesTB" runat="server" Height="50px" Width="200px" 
-										TabIndex="110">
+									<dxe:ASPxMemo ID="NotesTB" runat="server" ClientInstanceName="siNotes" 
+                                        Height="50px" Width="200px" TabIndex="110">
 									</dxe:ASPxMemo>
 								</td>
 							</tr>
@@ -378,7 +466,7 @@
 											<td>
 												<dxe:ASPxButton ID="btnCancel" runat="server" AutoPostBack="false" 
 													Text="Cancel" TabIndex="119">
-													<ClientSideEvents Click="function(s, e) { siDetails.Hide(); }"></ClientSideEvents>
+													<ClientSideEvents Click="function(s, e) { siDetails.Hide(); siSelect.Focus(); }"></ClientSideEvents>
 												</dxe:ASPxButton>
 											</td>
 										</tr>
@@ -484,48 +572,16 @@
 </dxpc:ASPxPopupControl>
 <dx:ASPxCallback ID="ServiceItemSaveAction" runat="server" 
 		ClientInstanceName="siSaveAction" oncallback="ServiceItemnSaveAction_Callback">
-	<ClientSideEvents EndCallback="function(s,e) { 
-									if (s.cpHasErrors) {
-										if (validation != undefined)
-										{
-											validation.SetContentHtml(s.cpErrorMessage);
-											validation.Show();
-										}
-									}
-									else {
-										if (validation != undefined) 
-											validation.Hide(); 
-									} 
-									
-									if ( s.cpServiceItemID != undefined) {
-										siLocalData.Set('siServiceItemID', s.cpServiceItemID);
-										siSelect.PerformCallback();
-									}
-
-									siDetails.Hide(); }"  />
+	<ClientSideEvents EndCallback="function(s,e) { AfterServiceItemSaved(s,e); }"  />
 </dx:ASPxCallback>
 <dx:ASPxCallback ID="ManufacturerSaveAction" runat="server" 
 	ClientInstanceName="manuSaveAction" 
 	oncallback="ManufacturerSaveAction_Callback">
-	<ClientSideEvents EndCallback="function(s,e) { 
-			manuForm.Hide();
-			manuName.SetText(''); 
-			
-			if (s.cpError != undefined)
-				alert(s.cpError);
-			else
-				manufacturers.PerformCallback(s.cpManufacturerID) }" />
+	<ClientSideEvents EndCallback="function(s,e) { AfterManufacturerSaved(s,e);	}" />
 </dx:ASPxCallback>
 <dx:ASPxCallback ID="ModelSaveAction" runat="server" 
 	ClientInstanceName="modelSaveAction" oncallback="ModelSaveAction_Callback">
-	<ClientSideEvents EndCallback="function(s,e) { 
-			modelForm.Hide();
-			modelName.SetText('');
-
-			if (s.cpError != undefined)
-				alert(s.cpError)
-			else
-				models.PerformCallback(s.cpManufacturerModelID) }" />
+	<ClientSideEvents EndCallback="function(s,e) { AfterModelSaved(s,e) }" />
 </dx:ASPxCallback>
 <dx:ASPxHiddenField ID="hfServiceItem" runat="server" ClientInstanceName="siLocalData"
 	SyncWithServer="true">

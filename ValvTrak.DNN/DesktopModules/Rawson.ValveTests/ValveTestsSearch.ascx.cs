@@ -64,7 +64,7 @@ public partial class ValveTestsSearch : PortalModuleBase
                 TestedStartDate.Text = q.TestedStartDate;
                 TestedEndDate.Text = q.TestedEndDate;
 
-                reportingGrid.SortBy ( reportingGrid.Columns[ q.SortOrder.Key ], q.SortOrder.Value );
+                reportingGrid.SortBy(reportingGrid.Columns[q.SortOrder.Key], q.SortOrder.Value);
                 reportingGrid.PageIndex = q.PageIndex;
             }
 
@@ -141,6 +141,21 @@ public partial class ValveTestsSearch : PortalModuleBase
 
     protected void reportingGrid_DataBound ( object sender, EventArgs e )
     {
+        if (!IsPostBack)
+        {
+            ValveTestQuery q = DataCache.GetCache<ValveTestQuery>((string)Context.Items["#queryKey"]);
+
+            if (q != null)
+            {
+                if (reportingGrid.VisibleRowCount > q.FocusedRowIndex)
+                    reportingGrid.FocusedRowIndex = q.FocusedRowIndex;
+                else if (reportingGrid.VisibleRowCount > 0)
+                    reportingGrid.FocusedRowIndex = 0;
+                else
+                    reportingGrid.FocusedRowIndex = -1;
+            }
+        }
+
         reportingGrid.JSProperties[ "cpPageCount" ] = reportingGrid.PageCount;
     }
 
@@ -157,6 +172,13 @@ public partial class ValveTestsSearch : PortalModuleBase
         var q = DataCache.GetCache<ValveTestQuery>((string)Context.Items["#queryKey"]);
         if (q != null)
             q.PageIndex = reportingGrid.PageIndex;
+    }
+
+    protected void reportingGrid_FocusedRowChanged(object sender, EventArgs e)
+    {
+        var q = DataCache.GetCache<ValveTestQuery>((string)Context.Items["#queryKey"]);
+        if (q != null)
+            q.FocusedRowIndex = reportingGrid.FocusedRowIndex;
     }
 
     protected void reportingGrid_CustomUnboundColumnData ( object sender, ASPxGridViewColumnDataEventArgs e )
@@ -197,7 +219,6 @@ public partial class ValveTestsSearch : PortalModuleBase
                 e.Row.ForeColor = System.Drawing.Color.White;
             }
         }
-
     }
 
     protected void LocationFilter_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
@@ -308,6 +329,7 @@ public partial class ValveTestsSearch : PortalModuleBase
     {
         ASPxGridViewExporter1.GridViewID = "reportingGrid";
         ASPxGridViewExporter1.WriteXlsToResponse();
-    }   
+    }
+
 
 }

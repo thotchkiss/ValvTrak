@@ -1,6 +1,6 @@
 <%@ Control Language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Security.EditRoles" CodeFile="EditRoles.ascx.vb" %>
-<%@ Register Assembly="DevExpress.Web.ASPxGridView.v10.2" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v10.2" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.ASPxGridView.v11.2" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.2" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="SectionHead" Src="~/controls/SectionHeadControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Url" Src="~/controls/UrlControl.ascx" %>

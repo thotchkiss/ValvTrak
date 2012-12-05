@@ -1,24 +1,24 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="GreasingRecordForm.ascx.cs" Inherits="Rawson.GreasingRecords.GreasingRecordForm" EnableTheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
-    <%@ Register Assembly="DevExpress.Web.ASPxGridView.v10.2"
+    <%@ Register Assembly="DevExpress.Web.ASPxGridView.v11.2"
     Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dxwgv" %>
-    <%@ Register Assembly="DevExpress.Web.v10.2"
+    <%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
 
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dxrp" %>
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v10.2"
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.2"
     Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dxpc" %>
-<%@ Register Assembly="DevExpress.Web.v10.2"
+<%@ Register Assembly="DevExpress.Web.v11.2"
     Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
-<%@ Register assembly="DevExpress.Web.v10.2" namespace="DevExpress.Web.ASPxPanel" tagprefix="dxp" %>
+<%@ Register assembly="DevExpress.Web.v11.2" namespace="DevExpress.Web.ASPxPanel" tagprefix="dxp" %>
 
 <style type="text/css">
     .style1
@@ -43,18 +43,18 @@
         return confirm("Do you wish to delete greasing record item " + grID + "?");
     }
 </script>
-<script type="text/javascript">
+<script id="scrCustomPager" type="text/javascript">
     function pageBarFirstButton_Click() {
-        formGrid.GotoPage(0);
+        grid.GotoPage(0);
     }
     function pageBarPrevButton_Click() {
-        formGrid.PrevPage();
+        grid.PrevPage();
     }
     function pageBarNextButton_Click() {
-        formGrid.NextPage();
+        grid.NextPage();
     }
     function pageBarLastButton_Click(s, e) {
-        formGrid.GotoPage(formGrid.cpPageCount - 1);
+        grid.GotoPage(grid.cpPageCount - 1);
     }
     function pageBarTextBox_Init(s, e) {
         s.SetText(s.cpText);
@@ -65,14 +65,14 @@
         e.htmlEvent.cancelBubble = true;
         e.htmlEvent.returnValue = false;
         var pageIndex = (parseInt(s.GetText()) <= 0) ? 0 : parseInt(s.GetText()) - 1;
-        formGrid.GotoPage(pageIndex);
+        grid.GotoPage(pageIndex);
     }
     function pageBarTextBox_ValueChanged(s, e) {
         var pageIndex = (parseInt(s.GetText()) <= 0) ? 0 : parseInt(s.GetText()) - 1;
-        formGrid.GotoPage(pageIndex);
+        grid.GotoPage(pageIndex);
     }
     function pagerBarComboBox_SelectedIndexChanged(s, e) {
-        formGrid.PerformCallback(s.GetSelectedItem().text);
+        grid.PerformCallback(s.GetSelectedItem().text);
     }
 </script>
 
@@ -211,14 +211,28 @@
                             </tr>
                             <tr>
                                 <td>
-                                    &nbsp;</td>
+                                    <asp:Label ID="Label1" runat="server" Text="Latitude :"></asp:Label>
+                                </td>
                                 <td>
-                                    &nbsp;</td>
+                                    <dxe:ASPxTextBox ID="txtLatitude" runat="server" Height="21px" 
+                                        NullText="Add Latitude" Width="100px" TabIndex="5">
+                                        <MaskSettings PromptChar=" " />
+                                        <NullTextStyle ForeColor="Silver">
+                                        </NullTextStyle>
+                                    </dxe:ASPxTextBox>
+                                </td>
                                 <td></td>
                                 <td>
-                                    &nbsp;</td>
+                                    <asp:Label ID="Label2" runat="server" Text="Longitude :"></asp:Label>
+                                </td>
                                 <td>
-                                    &nbsp;</td>
+                                    <dxe:ASPxTextBox ID="txtLongitude" runat="server" Height="21px" 
+                                        NullText="Add Longitude" Width="100px" TabIndex="6">
+                                        <MaskSettings PromptChar=" " />
+                                        <NullTextStyle ForeColor="Silver">
+                                        </NullTextStyle>
+                                    </dxe:ASPxTextBox>
+                                </td>
                                 <td></td>
                                 <td>
                                     &nbsp;</td>
@@ -229,6 +243,14 @@
                                 <td>
                                     &nbsp;</td>
                                 <td>
+                                <table cellpadding="0" cellspacing="3px" border="0" width="100%" >
+                                    <tr>
+                                        <td>
+                                            &nbsp;</td>
+                                        <td>
+                                            &nbsp;</td>
+                                    </tr>
+                                    </table>
                                     &nbsp;</td>
                                 <td></td>
                                 <td></td>
@@ -237,7 +259,7 @@
                                 <td>
                                     &nbsp;</td>
                                 <td class="style1">
-                                    <dxe:ASPxButton ID="btnSave" runat="server" AutoPostBack="False" TabIndex="5" 
+                                    <dxe:ASPxButton ID="btnSave" runat="server" AutoPostBack="False" TabIndex="7" 
                                         Text="Save" Width="170px">
                                         <ClientSideEvents Click="function(s,e){ saveAction.PerformCallback(); }" />
                                     </dxe:ASPxButton>
@@ -257,7 +279,8 @@
     </tr>
     <tr>
         <td align="right">
-            <dxe:ASPxHyperLink ID="lnkNewItem" runat="server" Text="Add New" TabIndex="6" ClientInstanceName="lnkNew">
+            <dxe:ASPxHyperLink ID="lnkNewItem" runat="server" Text="Add New" TabIndex="8" 
+                ClientInstanceName="lnkNew">
             </dxe:ASPxHyperLink>
         </td>
     </tr>
@@ -271,7 +294,7 @@
                 oncustomcallback="GreasingItemsGrid_CustomCallback" 
                 ondatabound="GreasingItemsGrid_DataBound" 
                 oncustomcolumndisplaytext="GreasingItemsGrid_CustomColumnDisplayText" 
-                Width="100%" TabIndex="7" >
+                Width="100%" TabIndex="9" >
                 <Settings ShowHorizontalScrollBar="true" />
                 <SettingsLoadingPanel Mode="Disabled" />
                 <ClientSideEvents CustomButtonClick="function(s,e) { e.processOnServer = true; if (e.buttonID == 'btnDelete') { e.processOnServer = OnConfirmCustomButtonClick(grid.GetRowKey(e.visibleIndex)); } }" />
@@ -299,47 +322,49 @@
                     <dxwgv:GridViewDataTextColumn FieldName="ServiceItemID" VisibleIndex="4" 
                         Visible="False">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="ValveLocation" VisibleIndex="5">
+                    <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.SerialNum" VisibleIndex="5">
+                    </dxwgv:GridViewDataTextColumn>
+                    <dxwgv:GridViewDataTextColumn FieldName="ValveLocation" VisibleIndex="6">
                          <CellStyle Wrap="False"></CellStyle>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="ActuatorInspected" VisibleIndex="6" 
+                    <dxwgv:GridViewDataTextColumn FieldName="ActuatorInspected" VisibleIndex="7" 
                         Caption="Actuator Inspected" UnboundType="String">
                          <CellStyle Wrap="False"></CellStyle>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="ActuatorLubed" VisibleIndex="7" 
+                    <dxwgv:GridViewDataTextColumn FieldName="ActuatorLubed" VisibleIndex="8" 
                         Caption="Actuator Lubed" UnboundType="String">
                          <CellStyle Wrap="False"></CellStyle>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="PercentCycled" VisibleIndex="8">
+                    <dxwgv:GridViewDataTextColumn FieldName="PercentCycled" VisibleIndex="9">
                          <CellStyle Wrap="False"></CellStyle>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="ValveSecured" VisibleIndex="9" 
+                    <dxwgv:GridViewDataTextColumn FieldName="ValveSecured" VisibleIndex="10" 
                         Caption="Valve Secured" UnboundType="String">
                          <CellStyle Wrap="False"></CellStyle>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="FlangeOrScrew" VisibleIndex="10">
+                    <dxwgv:GridViewDataTextColumn FieldName="FlangeOrScrew" VisibleIndex="11">
                          <CellStyle Wrap="False"></CellStyle>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="EaseOfOperation" VisibleIndex="11">
+                    <dxwgv:GridViewDataTextColumn FieldName="EaseOfOperation" VisibleIndex="12">
                          <CellStyle Wrap="False"></CellStyle>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="SeatsChecked" VisibleIndex="12" 
+                    <dxwgv:GridViewDataTextColumn FieldName="SeatsChecked" VisibleIndex="13" 
                         Caption="Seats Checked" UnboundType="String" Visible="False">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="SeatsLubed" VisibleIndex="13" 
+                    <dxwgv:GridViewDataTextColumn FieldName="SeatsLubed" VisibleIndex="14" 
                         Caption="Seats Lubed" UnboundType="String" Visible="False">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="Leaking" VisibleIndex="14" 
+                    <dxwgv:GridViewDataTextColumn FieldName="Leaking" VisibleIndex="15" 
                         Caption="Leaking" UnboundType="String" Visible="False">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="LubeTypeID" VisibleIndex="15" 
+                    <dxwgv:GridViewDataTextColumn FieldName="LubeTypeID" VisibleIndex="16" 
                         Caption="Lube Type" UnboundType="String">
                          <CellStyle Wrap="False"></CellStyle>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="AmountInjected" VisibleIndex="16" 
+                    <dxwgv:GridViewDataTextColumn FieldName="AmountInjected" VisibleIndex="17" 
                         Visible="False">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="Notes" VisibleIndex="17" 
+                    <dxwgv:GridViewDataTextColumn FieldName="Notes" VisibleIndex="18" 
                         Visible="False">
                     </dxwgv:GridViewDataTextColumn>
                 </Columns>

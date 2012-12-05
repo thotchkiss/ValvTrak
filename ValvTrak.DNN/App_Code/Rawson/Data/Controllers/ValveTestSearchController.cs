@@ -15,13 +15,6 @@ namespace Rawson.Data.Controllers
     /// </summary>
     public class ValveTestSearchController : BaseController<ValveTest>
     {
-        public ValveTestSearchController()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
-
         public List<ValveTest> GetAuthorizedValveTests(ValveTestQuery q, int userId)
         {
             IQueryable<ValveTest> qTests = Fetch(BuildUpWhere(q, userId));

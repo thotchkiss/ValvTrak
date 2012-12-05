@@ -14,13 +14,6 @@ namespace Rawson.Data.Controllers
     /// </summary>
     public class ManufacturerFormController : BaseController<Manufacturer>
     {
-        public ManufacturerFormController()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
-
         public override Manufacturer Load(object pk)
         {
             int key = Convert.ToInt32(pk);

@@ -36,6 +36,14 @@
       <Name>GreasingRecordItemSubreport.rdl</Name>
       <FullPath>GreasingRecordItemSubreport.rdl</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>RateValveFieldReport.rdl</Name>
+      <FullPath>RateValveFieldReport.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>RateValvePartsSubreport.rdl</Name>
+      <FullPath>RateValvePartsSubreport.rdl</FullPath>
+    </ProjectItem>
     <ResourceProjectItem>
       <Name>rawson_logo.gif</Name>
       <FullPath>rawson_logo.gif</FullPath>
@@ -54,12 +62,8 @@
       <FullPath>WellSafetyFieldReport.rdl</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>RateValveFieldReport.rdl</Name>
-      <FullPath>RateValveFieldReport.rdl</FullPath>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>RateValvePartsSubreport.rdl</Name>
-      <FullPath>RateValvePartsSubreport.rdl</FullPath>
+      <Name>Relief Valve Manufacturer Analysis.rdl</Name>
+      <FullPath>Relief Valve Manufacturer Analysis.rdl</FullPath>
     </ProjectItem>
   </Reports>
   <Configurations>

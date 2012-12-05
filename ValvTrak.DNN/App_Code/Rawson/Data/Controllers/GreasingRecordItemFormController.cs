@@ -13,13 +13,6 @@ namespace Rawson.Data.Controllers
     /// </summary>
     public class GreasingRecordItemFormController : BaseController<GreasingRecordItem>
     {
-        public GreasingRecordItemFormController()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
-
         public void LoadGreasingRecord( int grId )
         {
             Entity.GreasingRecord = Context.GreasingRecords.SingleOrDefault(gr => gr.GreasingRecordID == grId); 

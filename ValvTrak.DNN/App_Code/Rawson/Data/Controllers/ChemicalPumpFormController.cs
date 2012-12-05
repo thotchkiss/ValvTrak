@@ -14,9 +14,6 @@ namespace Rawson.Data.Controllers
     {
         public ChemicalPumpFormController()
         {
-            //
-            // TODO: Add constructor logic here
-            //
         }
     }
 }

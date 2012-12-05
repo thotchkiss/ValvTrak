@@ -14,12 +14,6 @@ using Rawson.App;
 /// </summary>
 public class RateValveSearchController : BaseController<RateValveTest>
 {
-	public RateValveSearchController()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
     public List<RateValveTest> GetAuthorizedValveTests(RateValveQuery q, int userId)
     {
         IQueryable<RateValveTest> qTests = Fetch(BuildUpWhere(q, userId));
@@ -90,6 +84,18 @@ public class RateValveSearchController : BaseController<RateValveTest>
                 case "ClientLocation":
                     if ((int)value >= 0)
                         specs = Join(specs, RateValveTestSpecifications.ForLocation((int)value));
+
+                    break;
+                case "TestedEndDate":
+                    DateTime date1;
+                    if (DateTime.TryParse(value.ToString(), out date1))
+                        specs = Join(specs, RateValveTestSpecifications.DateTestedOnOrBeforeDate(date1));
+
+                    break;
+                case "TestedStartDate":
+                    DateTime date2;
+                    if (DateTime.TryParse(value.ToString(), out date2))
+                        specs = Join(specs, RateValveTestSpecifications.DateTestedOnOrAfterDate(date2));
 
                     break;
                 case "JobStatus":

@@ -76,6 +76,7 @@ public partial class RateValvesForm : PortalModuleBase
         txtLatitude.Text = rvt.Job.ClientLocation.Latitude;
         txtLongitude.Text = rvt.Job.ClientLocation.Longitude;
 
+        // TODO : Synchronize with values from TestResults table
         cmbWearSleeve.Value = rvt.ConditionOfWearSleeve;
         cmbCondDisc.Value = rvt.ConditionOfDisc;
         cmbPercDiscWear.Value = rvt.PercentDiscWear;

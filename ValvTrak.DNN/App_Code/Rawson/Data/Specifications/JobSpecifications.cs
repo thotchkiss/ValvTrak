@@ -27,7 +27,7 @@ namespace Rawson.Data
 
         public static Specification<Job> ForSalesOrder ( string salesOrder )
         {
-            return new Specification<Job> ( j => j.SalesOrderNum == salesOrder );
+            return new Specification<Job> ( j => j.SalesOrderNum.StartsWith(salesOrder) );
         }
 
         public static Specification<Job> HasJobType ( int jobType )

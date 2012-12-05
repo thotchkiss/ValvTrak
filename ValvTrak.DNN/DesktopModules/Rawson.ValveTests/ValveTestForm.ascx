@@ -1,17 +1,17 @@
 ﻿<%@ Control Language="C#" CodeFile="~/DesktopModules/Rawson.ValveTests/ValveTestForm.ascx.cs" Inherits="Rawson.ValveTests.ValveTestForm" AutoEventWireup="true" EnableTheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxMenu" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxHeadline" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxNavBar" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxMenu" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxHeadline" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxNavBar" TagPrefix="dx" %>
 
-<%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v11.2" Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dxsc" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dxrp" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dxpc" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.2" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
+<%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v12.1" Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dxsc" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dxrp" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dxpc" %>
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v12.1" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
 
 <%@ Register src="~/DesktopModules/Rawson.ServiceItems/ServiceItemForm.ascx" tagname="SvcItemEdit" tagprefix="vt" %>
 
@@ -166,7 +166,6 @@
 								</td>
 								<td>
 									<dxe:ASPxDateEdit ID="DateTestedEdit" runat="server" Width="100px" TabIndex="4">
-										<ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
 									</dxe:ASPxDateEdit>
 								</td>
 								<td>&nbsp;</td>
@@ -335,7 +334,6 @@
 								</td>
 								<td>
 									<dxe:ASPxDateEdit ID="CalibrationDueDateEdit" runat="server" Width="100px" TabIndex="14">
-										<ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
 									</dxe:ASPxDateEdit>
 								</td>
 								<td>&nbsp;</td>
@@ -363,7 +361,6 @@
 								</td>
 								<td>
 									<dxe:ASPxDateEdit ID="ValveDateEdit" runat="server" Width="100px" TabIndex="16">
-										<ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
 									</dxe:ASPxDateEdit>
 								</td>
 								<td>
@@ -414,8 +411,7 @@
 									<dxe:ASPxComboBox ID="TestPortSelect" runat="server" Width="100px" 
 										ValueType="System.Int32" TabIndex="19" EnableIncrementalFiltering="True" 
 										IncrementalFilteringMode="StartsWith">
-										<ClientSideEvents SelectedIndexChanged="function(s,e){ if (s.GetValue() == 0) showPopup(1); }" 
-											gotfocus="function(s, e) { s.ShowDropDown(); }" />
+										<ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
 										<Items>
 											<dxe:ListEditItem Text="-- Select --" Value="-1" />
 											<dxe:ListEditItem Text="Yes" Value="1" />

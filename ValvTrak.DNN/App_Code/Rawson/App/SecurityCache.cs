@@ -14,13 +14,6 @@ namespace Rawson.App
     /// </summary>
     public class SecurityCache : IHttpModule
     {
-        public SecurityCache()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
-
         public void Dispose()
         {
            

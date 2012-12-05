@@ -18,14 +18,6 @@ namespace Rawson.App
     /// </summary>
     public class ListCache : IHttpModule
     {
-
-        public ListCache()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
-
         public void Dispose()
         {
         }

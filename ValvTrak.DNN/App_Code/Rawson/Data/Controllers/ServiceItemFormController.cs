@@ -15,13 +15,6 @@ namespace Rawson.Data.Controllers
     /// </summary>
     public class ServiceItemFormController : boController<ServiceItem, ValvTrakDBDataContext>
     {
-        public ServiceItemFormController ()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
-
         public override ServiceItem NewEntity()
         {
             ServiceItem sv = base.NewEntity();
@@ -64,7 +57,7 @@ namespace Rawson.Data.Controllers
 
         public List<ComboBoxValue<int>> GetManufacturers()
         {
-            List<ComboBoxValue<int>> list = Context.Manufacturers.OrderBy(m => m.Name).Select(m => new ComboBoxValue<int> { DisplayMember = m.Name, ValueMember = m.ManufacturerID }).ToList();
+            List<ComboBoxValue<int>> list = Context.Manufacturers.Where(m => m.Active == true).OrderBy(m => m.Name).Select(m => new ComboBoxValue<int> { DisplayMember = m.Name, ValueMember = m.ManufacturerID }).ToList();
             list.Insert(0, new ComboBoxValue<int> { DisplayMember = "-- Select Manufacturer --", ValueMember = -1 });
 
             return list;
@@ -72,7 +65,7 @@ namespace Rawson.Data.Controllers
 
         public List<ComboBoxValue<int>> GetManufacturerModels(int manufacturerID)
         {
-            List<ComboBoxValue<int>> list = Context.ManufacturerModels.Where(mm => mm.ManufacturerID == manufacturerID).OrderBy(m => m.Model).Select(m => new ComboBoxValue<int> { DisplayMember = m.Model, ValueMember = m.ManufacturerModelID }).ToList();
+            List<ComboBoxValue<int>> list = Context.ManufacturerModels.Where(mm => mm.Active && mm.Manufacturer.Active && mm.ManufacturerID == manufacturerID).OrderBy(m => m.Model).Select(m => new ComboBoxValue<int> { DisplayMember = m.Model, ValueMember = m.ManufacturerModelID }).ToList();
             list.Insert(0, new ComboBoxValue<int> { DisplayMember = "-- Select Model --", ValueMember = -1 });
 
             return list;
@@ -84,9 +77,9 @@ namespace Rawson.Data.Controllers
             var take = e.EndIndex - e.BeginIndex + 1;
 
             var query = Context.Manufacturers
-                                                .Where(m => m.Name.StartsWith(e.Filter))
-                                                .OrderBy(m => m.Name)
-                                                .Select(m => new ComboBoxValue<int> { DisplayMember = m.Name, ValueMember = m.ManufacturerID });
+                                    .Where(m => m.Name.Contains(e.Filter) && m.Active)
+                                    .OrderBy(m => m.Name)
+                                    .Select(m => new ComboBoxValue<int> { DisplayMember = m.Name, ValueMember = m.ManufacturerID });
 
             var list = query.Skip(skip).Take(take).OrderBy(cbv => cbv.DisplayMember).ToList();
 
@@ -110,10 +103,10 @@ namespace Rawson.Data.Controllers
             var take = e.EndIndex - e.BeginIndex + 1;
 
             var query = Context.ManufacturerModels
-                                                .Where(mm => mm.ManufacturerID == manufacturerID)
-                                                .Where(mm => mm.Model.StartsWith(e.Filter))
-                                                .OrderBy(m => m.Model)
-                                                .Select(m => new ComboBoxValue<int> { DisplayMember = m.Model, ValueMember = m.ManufacturerModelID });
+                                    .Where(mm => mm.Manufacturer.Active && mm.Active && mm.ManufacturerID == manufacturerID)
+                                    .Where(mm => mm.Model.Contains(e.Filter))
+                                    .OrderBy(m => m.Model)
+                                    .Select(m => new ComboBoxValue<int> { DisplayMember = m.Model, ValueMember = m.ManufacturerModelID });
 
             var list = query.Skip(skip).Take(take).OrderBy(cbv => cbv.DisplayMember).ToList();
 
@@ -135,7 +128,7 @@ namespace Rawson.Data.Controllers
         public int CreateManufacturer(string name)
         {
             Manufacturer manufacturer = Activator.CreateInstance<Manufacturer>();
-            manufacturer.Name = name;
+            manufacturer.Name = name.ToUpper();
             manufacturer.Active = true;
 
             if (Context.GetTable<Manufacturer>().Count(m => m.Name.ToUpper() == name.ToUpper()) > 0)
@@ -157,7 +150,7 @@ namespace Rawson.Data.Controllers
             Context.GetTable<ManufacturerModel>().InsertOnSubmit(model);
             Context.SubmitChanges();
 
-            return Context.GetTable<ManufacturerModel>().Single(m => m.Model == name).ManufacturerModelID;
+            return Context.GetTable<ManufacturerModel>().Single(m => m.Model == name && m.ManufacturerID == manufacturerID).ManufacturerModelID;
         }
 
         public override bool Validate()

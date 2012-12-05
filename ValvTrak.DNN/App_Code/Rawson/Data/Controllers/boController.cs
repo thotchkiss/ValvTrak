@@ -401,10 +401,6 @@ namespace Rawson.Data.Controllers
                     case ConflictResolutionModes.AbortChanges:
                         this.Context.ChangeConflicts.ResolveAll(RefreshMode.OverwriteCurrentValues);
                         break;
-                    //case ConflictResolutionModes.WriteNonConflictChanges
-                    //    // TODO: Check this ConflictResoltuionmode behavior
-                    //    context2.ChangeConflicts.ResolveAll(RefreshMode.KeepCurrentValues);
-                    //    break;
                 }
                 try
                 {
