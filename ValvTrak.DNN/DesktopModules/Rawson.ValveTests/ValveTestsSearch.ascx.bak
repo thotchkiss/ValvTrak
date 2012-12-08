@@ -1,19 +1,19 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ValveTestsSearch.ascx.cs" Inherits="ValveTestsSearch" EnableTheming="true" %>
 
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.ASPxGridView.v11.2.Export" Namespace="DevExpress.Web.ASPxGridView.Export" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.ASPxGridView.v11.2" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dxwgv" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.2" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dxrp" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
-<%@ Register assembly="DevExpress.Web.v11.2" namespace="DevExpress.Web.ASPxCallback" tagprefix="dx" %>
-<%@ Register assembly="DevExpress.Web.ASPxEditors.v11.2" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
-<%@ Register assembly="DevExpress.Web.ASPxGridView.v11.2" namespace="DevExpress.Web.ASPxGridView" tagprefix="dx" %>
-<%@ Register assembly="DevExpress.Web.ASPxGridView.v11.2.Export" namespace="DevExpress.Web.ASPxGridView.Export" tagprefix="dx" %>
-<%@ Register assembly="DevExpress.Web.v11.2" namespace="DevExpress.Web.ASPxPanel" tagprefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.ASPxGridView.v12.1.Export" Namespace="DevExpress.Web.ASPxGridView.Export" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.ASPxGridView.v12.1" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dxwgv" %>
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v12.1" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dxrp" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
+<%@ Register assembly="DevExpress.Web.v12.1" namespace="DevExpress.Web.ASPxCallback" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.ASPxEditors.v12.1" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.ASPxGridView.v12.1" namespace="DevExpress.Web.ASPxGridView" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.ASPxGridView.v12.1.Export" namespace="DevExpress.Web.ASPxGridView.Export" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v12.1" namespace="DevExpress.Web.ASPxPanel" tagprefix="dx" %>
 
 <script type="text/javascript" src="../../js/json2.js"></script>
 <script id="scrCommon" type="text/javascript">
@@ -207,6 +207,8 @@
                                             <dxe:ListEditItem Text="Tested Good" Value="5" />
                                             <dxe:ListEditItem Text="Needs Repair" Value="6" />
                                             <dxe:ListEditItem Text="Needs Replacement" Value="7" />
+                                            <dxe:ListEditItem Text="Repaired" Value="8" />
+                                            <dxe:ListEditItem Text="Replaced" Value="9" />
                                             <dxe:ListEditItem Text="Unknown" Value="0" />
                                         </Items>
                                     </dxe:ASPxComboBox>
@@ -301,8 +303,10 @@
                 oncustomunboundcolumndata="reportingGrid_CustomUnboundColumnData" 
                 onhtmlrowprepared="reportingGrid_HtmlRowPrepared" 
                 oncustombuttoncallback="reportingGrid_CustomButtonCallback"
-                EnableCallBacks="true">
+                EnableCallBacks="true" 
+                onfocusedrowchanged="reportingGrid_FocusedRowChanged">
                 <SettingsLoadingPanel Mode="Disabled" />
+                <SettingsBehavior EnableRowHotTrack="true" AllowFocusedRow="true" AllowSelectByRowClick="true" ProcessFocusedRowChangedOnServer="true" />
                 <ClientSideEvents CustomButtonClick="function(s,e) { e.processOnServer = true; if (e.buttonID == 'btnDelete') { e.processOnServer = OnConfirmCustomButtonClick(reportingGrid.GetRowKey(e.visibleIndex)); } }"
                     BeginCallback="function(s,e) { s.cpShowReport = false;}" 
                     EndCallback="function (s,e) { OnPrintSetupEnd(s,e); }" />
@@ -418,8 +422,8 @@
                                 <dxe:ListEditItem Text="Tested Good" Value="5" />
                                 <dxe:ListEditItem Text="Needs Repair" Value="6" />
                                 <dxe:ListEditItem Text="Needs Replacement" Value="7" />
-                                <dxe:ListEditItem Text="Needs Repaired" Value="8" />
-                                <dxe:ListEditItem Text="Needs Replaced" Value="9" />
+                                <dxe:ListEditItem Text="Repaired" Value="8" />
+                                <dxe:ListEditItem Text="Replaced" Value="9" />
                                 <dxe:ListEditItem Text="Unknown" Value="0" />
                             </Items>
                         </PropertiesComboBox>

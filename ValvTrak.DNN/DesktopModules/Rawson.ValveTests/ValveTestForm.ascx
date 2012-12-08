@@ -1,17 +1,17 @@
 ﻿<%@ Control Language="C#" CodeFile="~/DesktopModules/Rawson.ValveTests/ValveTestForm.ascx.cs" Inherits="Rawson.ValveTests.ValveTestForm" AutoEventWireup="true" EnableTheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxMenu" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxHeadline" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxNavBar" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxMenu" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxHeadline" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxNavBar" TagPrefix="dx" %>
 
-<%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v12.1" Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dxsc" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dxrp" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dxpc" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v12.1" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
+<%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v12.2" Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dxsc" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dxrp" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dxpc" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
 
 <%@ Register src="~/DesktopModules/Rawson.ServiceItems/ServiceItemForm.ascx" tagname="SvcItemEdit" tagprefix="vt" %>
 

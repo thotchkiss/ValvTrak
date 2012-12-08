@@ -1,15 +1,15 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="JobDetails.ascx.cs" Inherits="Rawson.Jobs.Details" EnableTheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
 
-<%@ Register Assembly="DevExpress.Web.ASPxGridView.v11.2" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dxwgv" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.2" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.2" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dxrp" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
-<%@ Register assembly="DevExpress.Web.v11.2" namespace="DevExpress.Data.Linq" tagprefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.ASPxGridView.v12.1" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dxwgv" %>
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v12.1" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v12.1" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dxrp" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
+<%@ Register assembly="DevExpress.Web.v12.1" namespace="DevExpress.Data.Linq" tagprefix="dx" %>
 
 <style type="text/css">
     .style1
@@ -168,7 +168,6 @@
                                 </td>
                                 <td>
                                     <dxe:ASPxDateEdit ID="CallDateEdit" runat="server" TabIndex="8" Width="100px">
-                                        <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
                                     </dxe:ASPxDateEdit>
                                 </td>
                                 <td></td>
@@ -205,9 +204,7 @@
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dxe:ASPxDateEdit ID="ServiceDateEdit" runat="server" TabIndex="9" 
-                                        Width="100px">
-                                        <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
+                                    <dxe:ASPxDateEdit ID="ServiceDateEdit" runat="server" TabIndex="9" Width="100px">
                                     </dxe:ASPxDateEdit>
                                 </td>
                                 <td></td>
@@ -232,9 +229,7 @@
                                     </dxe:ASPxLabel>
                                 </td>
                                 <td>
-                                    <dxe:ASPxDateEdit ID="CompletionDateEdit" runat="server" 
-                                        OnValidation="CompletionDateEdit_Validation" TabIndex="10" Width="100px">
-                                        <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
+                                    <dxe:ASPxDateEdit ID="CompletionDateEdit" runat="server" OnValidation="CompletionDateEdit_Validation" TabIndex="10" Width="100px">
                                     </dxe:ASPxDateEdit>
                                 </td>
                                 <td></td>

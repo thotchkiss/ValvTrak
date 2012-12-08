@@ -1,16 +1,16 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ClientsForm.ascx.cs" Inherits="Rawson.ClientLocations.ClientsForm" EnableTheming="true" %>
 
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxHiddenField" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v12.1" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.ASPxGridView.v12.1" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
-<%@ Register assembly="DevExpress.Web.ASPxGridView.v12.1.Export" namespace="DevExpress.Web.ASPxGridView.Export" tagprefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxHiddenField" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
+<%@ Register assembly="DevExpress.Web.v12.2" namespace="DevExpress.Web.ASPxGridView.Export" tagprefix="dx" %>
 <%@ Register Assembly="System.Web.Extensions" Namespace="System.Web.UI.WebControls" TagPrefix="asp" %>
 
 <script type="text/javascript">

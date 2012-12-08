@@ -1,8 +1,8 @@
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.2" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxTabControl" TagPrefix="dxtc" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dxrp" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxClasses" TagPrefix="dxw" %>
-<%@ Register Assembly="DevExpress.Web.v11.2" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v12.1" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxTabControl" TagPrefix="dxtc" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dxrp" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxClasses" TagPrefix="dxw" %>
+<%@ Register Assembly="DevExpress.Web.v12.1" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
 <%@ Control Language="vb" AutoEventWireup="true" CodeFile="SpellCheckOptionsForm.ascx.vb" Inherits="SpellCheckOptionsForm" %>
 <table id="dxMainSpellCheckOptionsFormTable" cellpadding="0" cellspacing="0" class="mainSpellCheckOptionsFormTable">
 	<tr>
