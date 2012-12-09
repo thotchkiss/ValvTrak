@@ -225,17 +225,6 @@
 								</td>
 							</tr>
 							<tr>
-								<td style="white-space: nowrap">
-									<dxe:ASPxLabel ID="ASPxLabel3" runat="server" Text="SAP Equip. # :">
-									</dxe:ASPxLabel>
-								</td>
-								<td>
-									<dxe:ASPxTextBox ID="txtSapEquipNum" runat="server" Width="200px" 
-										TabIndex="104" ClientInstanceName="sapEquipNum">
-									</dxe:ASPxTextBox>
-								</td>
-							</tr>
-							<tr>
 								<td>
 									<dxe:ASPxLabel ID="ASPxLabel4" runat="server" Text="Type :">
 									</dxe:ASPxLabel>
@@ -344,13 +333,16 @@
 									<table cellpadding="0" cellspacing="0" width="100%">
 										<tr>
 											<td style="padding-bottom: 5px">
-												<dxe:ASPxCheckBox ID="chkThreaded" runat="server" Text="Threaded" ClientInstanceName="chkThreaded" TabIndex="111">
-												</dxe:ASPxCheckBox>
-											</td>
+                                                <dxe:ASPxRadioButton ID="rbThreaded" GroupName="EndType" Text="Threaded" TabIndex="111" runat="server">
+                                                </dxe:ASPxRadioButton>
+                                        <%--<dxe:ASPxCheckBox ID="chkThreaded" runat="server" Text="Threaded" ClientInstanceName="chkThreaded" TabIndex="111">
+												</dxe:ASPxCheckBox>--%>											</td>
 											<td style="padding-bottom: 5px">
-												<dxe:ASPxCheckBox ID="chkFlanged" runat="server" Text="Flanged" TabIndex="112">
-												</dxe:ASPxCheckBox>
-											</td>
+                                                <dxe:ASPxRadioButton ID="rbFlanged" GroupName="EndType" Text="Flanged" TabIndex="112" runat="server">
+                                                </dxe:ASPxRadioButton>
+                                        <%--<dxe:ASPxCheckBox ID="chkFlanged" runat="server" Text="Flanged" TabIndex="112">
+												</dxe:ASPxCheckBox>--%>
+                                            </td>
 										</tr>
 									</table>
 								</td>
@@ -441,11 +433,33 @@
 									</table>                        
 								</td>
 							</tr>
+                            <tr>
+                                <td>
+                                    <dxe:ASPxLabel ID="ASPxLabel17" runat="server" Text="Coordinates :">
+                                    </dxe:ASPxLabel>
+                                </td>
+								<td>
+									<table cellpadding="0" cellspacing="0" width="100%">
+										<tr>
+											<td>
+                                                <dxe:ASPxTextBox ID="txtLatitude" runat="server" Width="100px" 
+                                                    NullText="Latitude" TabIndex="117">
+                                                </dxe:ASPxTextBox>
+							                </td>
+											<td>
+                                                <dxe:ASPxTextBox ID="txtLongitude" runat="server" Width="100px" 
+                                                    NullText="Longitude" TabIndex="118">
+                                                </dxe:ASPxTextBox>
+                                            </td>
+										</tr>
+									</table>
+								</td>
+                            </tr>
 							<tr>
 								<td>&nbsp;</td>
 								<td style="padding-top: 5px">
 									<dxe:ASPxCheckBox ID="chkActive" runat="server" Text="Is Active?" 
-										Checked="true" TabIndex="117">
+										Checked="true" TabIndex="119">
 									</dxe:ASPxCheckBox>
 								</td>
 							</tr>
@@ -455,7 +469,7 @@
 										<tr>
 											<td>
 												<dxe:ASPxButton ID="btnOK" runat="server" AutoPostBack="false" Text="Save" 
-													ClientInstanceName="btnOK" TabIndex="118" >
+													ClientInstanceName="btnOK" TabIndex="120" >
 													<ClientSideEvents Click="function(s,e) { siSaveAction.PerformCallback(); }" />
 												</dxe:ASPxButton>
 											</td>
@@ -465,7 +479,7 @@
 											</td>
 											<td>
 												<dxe:ASPxButton ID="btnCancel" runat="server" AutoPostBack="false" 
-													Text="Cancel" TabIndex="119">
+													Text="Cancel" TabIndex="121">
 													<ClientSideEvents Click="function(s, e) { siDetails.Hide(); siSelect.Focus(); }"></ClientSideEvents>
 												</dxe:ASPxButton>
 											</td>

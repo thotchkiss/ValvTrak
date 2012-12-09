@@ -156,7 +156,6 @@ namespace Rawson.ServiceItems
             ServiceItem si = controller.Entity;
 
             si.SerialNum = SerialNum.Text;
-            si.SapEquipNum = txtSapEquipNum.Text;
 
             si.ServiceItemTypeID = int.Parse(ServiceItemTypeSelect.Value.ToString());
             si.ClientLocationID = this.ClientLocationID;
@@ -164,8 +163,8 @@ namespace Rawson.ServiceItems
             si.ManufacturerModelID = ModelSelect.Value == null ? -1 : (int)ModelSelect.Value;
             si.Description = NotesTB.Text;
 
-            si.Threaded = chkThreaded.Checked;
-            si.Flanged = chkFlanged.Checked;
+            si.Threaded = rbThreaded.Checked;
+            si.Flanged = rbFlanged.Checked;
 
             /// *******************************************************
             /// The logic below is to parse the input form the inlet
@@ -235,6 +234,15 @@ namespace Rawson.ServiceItems
             si.InletFlangeRating = seInletFlangeRating.Number;
             si.OutletFlangeRating = seOutletFlangeRating.Number;
 
+            double latitude = 0;
+            double longitude = 0;
+
+            if (Double.TryParse(txtLatitude.Text, out latitude))
+                si.Latitude = latitude;
+
+            if (Double.TryParse(txtLongitude.Text, out longitude))
+                si.Longitude = longitude;
+
             si.Active = chkActive.Checked;
 
             if (si.Version == null)
@@ -268,7 +276,6 @@ namespace Rawson.ServiceItems
             //controller.Load(ServiceItemID);
 
             SerialNum.Text = String.Empty;
-            txtSapEquipNum.Text = String.Empty;
 
             ServiceItemTypeSelect.Value = -1;
             
@@ -284,8 +291,8 @@ namespace Rawson.ServiceItems
             
             NotesTB.Text = String.Empty;
 
-            chkThreaded.Checked = false;
-            chkFlanged.Checked = false;
+            rbThreaded.Checked = false;
+            rbFlanged.Checked = false;
             txtInletFrac.Text = "0";
             txtOutletFrac.Text = "0";
             seInletFlangeRating.Value = 0;
@@ -300,7 +307,6 @@ namespace Rawson.ServiceItems
             controller.Load(ServiceItemID);
 
             SerialNum.Text = controller.Entity.SerialNum;
-            txtSapEquipNum.Text = controller.Entity.SapEquipNum;
 
             ServiceItemTypeSelect.Value = controller.Entity.ServiceItemTypeID.HasValue ? controller.Entity.ServiceItemTypeID : -1;
 
@@ -316,8 +322,8 @@ namespace Rawson.ServiceItems
 
             NotesTB.Text = controller.Entity.Description;
 
-            chkThreaded.Checked = controller.Entity.Threaded.HasValue ? controller.Entity.Threaded.Value : false;
-            chkFlanged.Checked = controller.Entity.Flanged.HasValue ? controller.Entity.Flanged.Value : false;
+            rbThreaded.Checked = controller.Entity.Threaded.HasValue ? controller.Entity.Threaded.Value : false;
+            rbFlanged.Checked = controller.Entity.Flanged.HasValue ? controller.Entity.Flanged.Value : false;
 
             txtInletFrac.Text = controller.Entity.InletSize.HasValue ? controller.Entity.InletSize.Value.ToString() : "0";
             txtOutletFrac.Text = controller.Entity.OutletSize.HasValue ? controller.Entity.OutletSize.Value.ToString() : "0";

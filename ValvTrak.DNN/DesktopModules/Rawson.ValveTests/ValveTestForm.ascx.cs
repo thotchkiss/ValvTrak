@@ -149,32 +149,6 @@ namespace Rawson.ValveTests
             e.Result = controller.GetEmployeesList();
         }
 
-        //private void LoadServiceItemDisplay ( ServiceItem si )
-        //{
-        //    if (si != null)
-        //    {
-        //        LatitudeLabel.Text = si.ClientLocation.Latitude ?? "";
-        //        LongitudeLabel.Text = si.ClientLocation.Longitude ?? "";
-        //        ModelLabel.Text = si.ManufacturerModel.Model ?? "";
-        //        ManufacturerLabel.Text = si.ManufacturerModel.Manufacturer.Name ?? "";
-        //        SerialLabel.Text = si.SerialNum ?? "";
-        //    }
-        //    else
-        //    {
-        //        LatitudeLabel.Text = "";
-        //        LongitudeLabel.Text = "";
-        //        ModelLabel.Text = "";
-        //        ManufacturerLabel.Text = "";
-        //        SerialLabel.Text = "";
-        //    }
-        //}
-
-        //protected void ServiceItemSelect1_SelectedIndexChanged ( object sender, EventArgs e )
-        //{
-        //    ValveTestFormController controller = Context.Items[ "#boController" ] as ValveTestFormController;
-        //    LoadServiceItemDisplay ( controller.SetServiceItem ( Convert.ToInt32 ( siEdit.ServiceItemID ) ) );
-        //}
-
         protected void ASPxSpellChecker1_CheckedElementResolve ( object sender, DevExpress.Web.ASPxClasses.ControlResolveEventArgs e )
         {
             e.ResolvedControl = RemarksTextBox;
