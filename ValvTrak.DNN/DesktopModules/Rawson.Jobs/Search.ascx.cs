@@ -123,7 +123,29 @@ public partial class JobsSearch : PortalModuleBase
 
     protected void JobsGrid_DataBound ( object sender, EventArgs e )
     {
+        if (!IsPostBack)
+        {
+            JobSearchQuery q = DataCache.GetCache<JobSearchQuery>((string)Context.Items["#queryKey"]);
+
+            if (q != null)
+            {
+                if (JobsGrid.VisibleRowCount > q.FocusedRowIndex)
+                    JobsGrid.FocusedRowIndex = q.FocusedRowIndex;
+                else if (JobsGrid.VisibleRowCount > 0)
+                    JobsGrid.FocusedRowIndex = 0;
+                else
+                    JobsGrid.FocusedRowIndex = -1;
+            }
+        }
+
         JobsGrid.JSProperties[ "cpPageCount" ] = JobsGrid.PageCount;
+    }
+
+    protected void JobsGrid_FocusedRowChanged(object sender, EventArgs e)
+    {
+        var q = DataCache.GetCache<JobSearchQuery>((string)Context.Items["#queryKey"]);
+        if (q != null)
+            q.FocusedRowIndex = JobsGrid.FocusedRowIndex;
     }
 
     protected void JobsGrid_CustomCallback ( object sender, ASPxGridViewCustomCallbackEventArgs e )
@@ -231,4 +253,5 @@ public partial class JobsSearch : PortalModuleBase
         list.Insert(0, new ComboBoxValue<int> { DisplayMember = "-- All --", ValueMember = -1 });
         e.Result = list;
     }
+    
 }

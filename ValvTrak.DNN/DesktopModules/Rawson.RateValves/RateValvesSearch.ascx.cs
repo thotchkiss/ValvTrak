@@ -162,7 +162,29 @@ public partial class RateValvesSearch : PortalModuleBase
 
     protected void reportingGrid_DataBound(object sender, EventArgs e)
     {
+        if (!IsPostBack)
+        {
+            RateValveQuery q = DataCache.GetCache<RateValveQuery>((string)Context.Items["#queryKey"]);
+
+            if (q != null)
+            {
+                if (reportingGrid.VisibleRowCount > q.FocusedRowIndex)
+                    reportingGrid.FocusedRowIndex = q.FocusedRowIndex;
+                else if (reportingGrid.VisibleRowCount > 0)
+                    reportingGrid.FocusedRowIndex = 0;
+                else
+                    reportingGrid.FocusedRowIndex = -1;
+            }
+        }
+
         reportingGrid.JSProperties["cpPageCount"] = reportingGrid.PageCount;
+    }
+
+    protected void reportingGrid_FocusedRowChanged(object sender, EventArgs e)
+    {
+        var q = DataCache.GetCache<RateValveQuery>((string)Context.Items["#queryKey"]);
+        if (q != null)
+            q.FocusedRowIndex = reportingGrid.FocusedRowIndex;
     }
 
     protected void reportingGrid_BeforeColumnSortingGrouping(object sender, ASPxGridViewBeforeColumnGroupingSortingEventArgs e)
@@ -258,6 +280,7 @@ public partial class RateValvesSearch : PortalModuleBase
     {
         ASPxGridViewExporter1.GridViewID = "reportingGrid";
         ASPxGridViewExporter1.WriteXlsToResponse();
-    }   
+    }
 
+    
 }

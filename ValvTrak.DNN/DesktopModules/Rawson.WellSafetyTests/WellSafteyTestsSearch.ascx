@@ -304,7 +304,9 @@
     oncustomcallback="reportingGrid_CustomCallback" 
     ondatabound="reportingGrid_DataBound" 
     onpageindexchanged="reportingGrid_PageIndexChanged" 
-    oncustombuttoncallback="reportingGrid_CustomButtonCallback">
+    oncustombuttoncallback="reportingGrid_CustomButtonCallback" 
+    onfocusedrowchanged="reportingGrid_FocusedRowChanged">
+    <SettingsBehavior EnableRowHotTrack="true" AllowFocusedRow="true" AllowSelectByRowClick="true" ProcessFocusedRowChangedOnServer="true" />
     <ClientSideEvents BeginCallback="function(s,e) { s.cpShowReport = false;}" 
         EndCallback="function (s,e) { OnPrintSetupEnd(s,e); }" />
     <Columns>

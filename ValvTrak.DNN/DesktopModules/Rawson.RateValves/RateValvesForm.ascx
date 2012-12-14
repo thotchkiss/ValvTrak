@@ -28,6 +28,7 @@
 </style>
 
 <script type="text/javascript">
+
 	function DevExComboUnboundItem(s, e, itemText, itemValue) {
 		if (s.GetSelectedIndex() == -1) {
 			s.InsertItem(0, itemText, itemValue);
@@ -36,20 +37,33 @@
 			s.InsertItem(0, itemText, itemValue);
 		}
 		if (s.GetSelectedIndex() == -1) { s.SetSelectedIndex(0); }
-	}
-</script>
-<script type="text/javascript"">
+    }
 
-	function showPopup(iWindow) {
-		var win = popups.GetWindow(iWindow)
-		popups.ShowWindow(win);
-	}
-	
+    function showPopup(iWindow) {
+        var win = popups.GetWindow(iWindow)
+        popups.ShowWindow(win);
+    }
+
+    function hotKeyHandler(source, e) {
+
+        if (e.htmlEvent.altKey) {
+
+            if (e.htmlEvent.keyCode == 77) {
+
+                techIDSelect.Focus();
+                techIDSelect.SetText("");
+            }
+        }
+
+        e.htmlEvent.cancelBubble = true;
+    } 
+
 </script>
-<table cellpadding="0" cellspacing="0" width="900px">
+
+<table cellpadding="0" cellspacing="0">
 	<tr>
 		<td>
-			<dxrp:ASPxRoundPanel ID="ASPxRoundPanel1" runat="server" ShowHeader="False" Width="100%">
+			<dxrp:ASPxRoundPanel ID="ASPxRoundPanel1" runat="server" ShowHeader="False">
 				<PanelCollection>
 					<dxp:PanelContent ID="PanelContent1" runat="server">
 						<table style="white-space: nowrap;">
@@ -115,7 +129,7 @@
 									&nbsp;
 								</td>
 								<td class="style1">
-									<table cellpadding="0" cellspacing="3px" border="0" width="100%" >
+									<table cellpadding="0" cellspacing="3px" border="0" >
 									<tr>
 										<td>
 										</td>
@@ -239,16 +253,17 @@
 								</td>
 								<td></td>
 								<td>
-									<dxe:ASPxLabel ID="ASPxLabel12" runat="server" Text="External Cond. :" >
-									</dxe:ASPxLabel>
+									<dxe:ASPxLabel ID="ASPxLabel14" runat="server" Text="% Disc Wear :">
+                                    </dxe:ASPxLabel>
 								</td>
 								<td>
-									<dxe:ASPxComboBox ID="cmbExternalCond" runat="server" Width="120px" 
-                                        ValueType="System.Int32" TabIndex="12">
+									<dxe:ASPxComboBox ID="cmbPercDiscWear" runat="server" TabIndex="11" 
+                                        ValueType="System.Int32" Width="120px">
                                         <Items>
-                                            <dxe:ListEditItem Text="Good" Value="0" />
-                                            <dxe:ListEditItem Text="Needs Replaced" Value="1" />
-                                            <dxe:ListEditItem Text="Replaced" Value="2" />
+                                            <dxe:ListEditItem Text="30 %" Value="30" />
+                                            <dxe:ListEditItem Text="40 %" Value="40" />
+                                            <dxe:ListEditItem Text="50 %" Value="50" />
+                                            <dxe:ListEditItem Text="60 %" Value="60" />
                                         </Items>
                                     </dxe:ASPxComboBox>
 								</td>
@@ -268,25 +283,24 @@
 							</tr>
                             							<tr>
 								<td>
-									&nbsp;</td>
-								<td>
-									&nbsp;</td>
-								<td></td>
-								<td>
-                                    <dxe:ASPxLabel ID="ASPxLabel14" runat="server" Text="% Disc Wear :">
+									<dxe:ASPxLabel ID="ASPxLabel12" runat="server" Text="External Cond. :">
                                     </dxe:ASPxLabel>
-                                </td>
+                                                            </td>
 								<td>
-                                    <dxe:ASPxComboBox ID="cmbPercDiscWear" runat="server" Width="120px" 
-                                        ValueType="System.Int32" TabIndex="11">
+									<dxe:ASPxComboBox ID="cmbExternalCond" runat="server" TabIndex="12" 
+                                        ValueType="System.Int32" Width="120px">
                                         <Items>
-                                            <dxe:ListEditItem Text="30 %" Value="30" />
-                                            <dxe:ListEditItem Text="40 %" Value="40" />
-                                            <dxe:ListEditItem Text="50 %" Value="50" />
-                                            <dxe:ListEditItem Text="60 %" Value="60" />
+                                            <dxe:ListEditItem Text="Good" Value="0" />
+                                            <dxe:ListEditItem Text="Needs Replaced" Value="1" />
+                                            <dxe:ListEditItem Text="Replaced" Value="2" />
                                         </Items>
                                     </dxe:ASPxComboBox>
                                 </td>
+								<td></td>
+								<td>
+                                    &nbsp;</td>
+								<td>
+                                    &nbsp;</td>
 								<td></td>
 								<td></td>
 								<td></td>
@@ -393,8 +407,9 @@
                                         </thead>
                                         <tr>
                                             <td align="center">
-                                                <dxe:ASPxSpinEdit ID="seCD1" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="15">
+                                                <dxe:ASPxSpinEdit ID="seCD1" runat="server" Height="21px" Number="0" EnableClientSideAPI="true" 
+                                                    Width="50px" NumberType="Integer" TabIndex="15" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -409,7 +424,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="seCD2" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="16">
+                                                    Width="50px" NumberType="Integer" TabIndex="16" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -422,7 +438,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="seCSKSFDAL2015" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="17">
+                                                    Width="50px" NumberType="Integer" TabIndex="17" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -437,7 +454,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="seWSXA0066" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="18">
+                                                    Width="50px" NumberType="Integer" TabIndex="18" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -452,7 +470,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="seCST00022" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="19">
+                                                    Width="50px" NumberType="Integer" TabIndex="19" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -467,7 +486,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="seDRV38" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="20">
+                                                    Width="50px" NumberType="Integer" TabIndex="20" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -482,7 +502,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="seFT000024" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="21">
+                                                    Width="50px" NumberType="Integer" TabIndex="21" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -497,7 +518,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="seCSKSFDAL2050D2" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="22">
+                                                    Width="50px" NumberType="Integer" TabIndex="22" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -512,7 +534,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="seCST00051" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="23">
+                                                    Width="50px" NumberType="Integer" TabIndex="23" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -527,7 +550,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="seCRKFBA2006" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="24">
+                                                    Width="50px" NumberType="Integer" TabIndex="24" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -553,7 +577,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="seBSE00001" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="25">
+                                                    Width="50px" NumberType="Integer" TabIndex="25" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -568,7 +593,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="seBBL00025" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="26">
+                                                    Width="50px" NumberType="Integer" TabIndex="26" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -583,7 +609,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="seBST00008" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="27">
+                                                    Width="50px" NumberType="Integer" TabIndex="27" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -598,7 +625,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="seSB140125" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="28">
+                                                    Width="50px" NumberType="Integer" TabIndex="28" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -613,7 +641,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="se51974200" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="29">
+                                                    Width="50px" NumberType="Integer" TabIndex="29" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -628,7 +657,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="se52070434" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="30">
+                                                    Width="50px" NumberType="Integer" TabIndex="30" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -643,7 +673,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="se51961525" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="31">
+                                                    Width="50px" NumberType="Integer" TabIndex="31" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -658,7 +689,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="se52119435" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="32">
+                                                    Width="50px" NumberType="Integer" TabIndex="32" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -673,7 +705,8 @@
                                         <tr>
                                             <td align="center">
                                                 <dxe:ASPxSpinEdit ID="se51960230" runat="server" Height="21px" Number="0" 
-                                                    Width="50px" NumberType="Integer" TabIndex="33">
+                                                    Width="50px" NumberType="Integer" TabIndex="33" ToolTip="Alt+M to exit Parts.">
+                                                    <ClientSideEvents KeyDown="function(s,e){ hotKeyHandler(s,e); }" />
                                                 </dxe:ASPxSpinEdit>
                                             </td>
                                             <td align="left">
@@ -730,13 +763,12 @@
 									</dxe:ASPxLabel>
 								</td>
 								<td>
-									<dxe:ASPxComboBox ID="TechIDSelect" runat="server" 
+									<dxe:ASPxComboBox ID="TechIDSelect" runat="server" ClientInstanceName="techIDSelect" 
 										DataSourceID="EmployeeDataSource" TextField="DisplayMember" 
 										ValueField="ValueMember" ValueType="System.Int32" TabIndex="34" 
 										EnableIncrementalFiltering="True" EnableSynchronization="True" 
 										IncrementalFilteringMode="StartsWith">
-										<ClientSideEvents Init="function(s, e) {DevExComboUnboundItem(s, e, '-- None --', -1)}"
-											 GotFocus="function(s, e) { s.SelectAll(); s.ShowDropDown(); }" />
+										<ClientSideEvents Init="function(s, e) {DevExComboUnboundItem(s, e, '-- None --', -1)}" />
 									</dxe:ASPxComboBox>
 								</td>
 								<td></td>

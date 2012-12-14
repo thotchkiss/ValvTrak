@@ -25,6 +25,9 @@ public class RateValveQuery
         this.PageIndex = 0;
         this.PageSize = 10;
         this.SortOrder = new KeyValuePair<int, ColumnSortOrder>(13, ColumnSortOrder.Ascending);
+
+        // Added TJH 12/12/2012
+        this.FocusedRowIndex = 0;
 	}
 
     public int JobID { get; set; }
@@ -41,4 +44,7 @@ public class RateValveQuery
     public KeyValuePair<int, ColumnSortOrder> SortOrder { get; set; }
     public int PageIndex { get; set; }
     public int PageSize { get; set; }
+
+    // Added TJH 12/12/2012
+    public int FocusedRowIndex { get; set; }
 }

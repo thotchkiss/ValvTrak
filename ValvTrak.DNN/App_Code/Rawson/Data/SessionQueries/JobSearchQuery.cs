@@ -35,6 +35,9 @@ namespace Rawson.Data
             this.PageIndex = 0;
             this.PageSize = 10;
             this.SortOrder = new KeyValuePair<int, ColumnSortOrder> ( 3, ColumnSortOrder.Ascending );
+
+            // Added TJH 12/12/2012
+            this.FocusedRowIndex = 0;
         }
 
         public string JobID { get; set; }
@@ -58,6 +61,9 @@ namespace Rawson.Data
         public KeyValuePair<int, ColumnSortOrder> SortOrder { get; set; }
         public int PageIndex { get; set; }
         public int PageSize { get; set; }
+
+        // Added TJH 12/12/2012
+        public int FocusedRowIndex { get; set; }
 
     }
 }

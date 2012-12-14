@@ -283,15 +283,17 @@
         <td>
             <dxwgv:ASPxGridView ID="reportingGrid" runat="server" 
                 AutoGenerateColumns="False" DataSourceID="gridLinqDataSource" 
-                KeyFieldName="ValveTestID" EnableRowsCache="false"
+                KeyFieldName="RateValveTestID" EnableRowsCache="false"
                 ClientInstanceName="reportingGrid" Width="100%" 
                 onbeforecolumnsortinggrouping="reportingGrid_BeforeColumnSortingGrouping" 
                 onpageindexchanged="reportingGrid_PageIndexChanged" 
                 oncustomcallback="reportingGrid_CustomCallback" 
                 ondatabound="reportingGrid_DataBound" 
                 oncustombuttoncallback="reportingGrid_CustomButtonCallback"
-                EnableCallBacks="true">
+                EnableCallBacks="true" 
+                onfocusedrowchanged="reportingGrid_FocusedRowChanged">
                 <SettingsLoadingPanel Mode="Disabled" />
+                <SettingsBehavior EnableRowHotTrack="true" AllowFocusedRow="true" AllowSelectByRowClick="true" ProcessFocusedRowChangedOnServer="true" />
                 <ClientSideEvents CustomButtonClick="function(s,e) { e.processOnServer = true; if (e.buttonID == 'btnDelete') { e.processOnServer = OnConfirmCustomButtonClick(reportingGrid.GetRowKey(e.visibleIndex)); } }"
                     BeginCallback="function(s,e) { s.cpShowReport = false;}" 
                     EndCallback="function (s,e) { OnPrintSetupEnd(s,e); }" />

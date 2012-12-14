@@ -296,8 +296,10 @@
                 ClientInstanceName="jobsGrid" oncustomcallback="JobsGrid_CustomCallback" 
                 ondatabound="JobsGrid_DataBound" 
                 oncustombuttoncallback="JobsGrid_CustomButtonCallback" 
-                EnableCallbackCompression="False" EnableCallBacks="true" >
+                EnableCallbackCompression="False" EnableCallBacks="true" 
+                onfocusedrowchanged="JobsGrid_FocusedRowChanged" >
                 <SettingsLoadingPanel Mode="Disabled" />
+                <SettingsBehavior EnableRowHotTrack="true" AllowFocusedRow="true" AllowSelectByRowClick="true" ProcessFocusedRowChangedOnServer="true" />
                 <SettingsPager PageSize="15" Position="Top" AlwaysShowPager="true" />
                 <ClientSideEvents CustomButtonClick="function(s,e) { e.processOnServer = true; if (e.buttonID == 'btnDelete') { e.processOnServer = ConfirmCustomButtonClick(jobsGrid.GetRowKey(e.visibleIndex)); } }" />
                 <Columns>

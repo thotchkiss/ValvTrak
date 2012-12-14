@@ -293,7 +293,9 @@
         oncustomcallback="reportingGrid_CustomCallback" 
         ondatabound="reportingGrid_DataBound" 
         onpageindexchanged="reportingGrid_PageIndexChanged" 
-        oncustombuttoncallback="reportingGrid_CustomButtonCallback">
+        oncustombuttoncallback="reportingGrid_CustomButtonCallback" 
+        onfocusedrowchanged="reportingGrid_FocusedRowChanged">
+        <SettingsBehavior EnableRowHotTrack="true" AllowFocusedRow="true" AllowSelectByRowClick="true" ProcessFocusedRowChangedOnServer="true" />
         <ClientSideEvents CustomButtonClick="function(s,e) { e.processOnServer = true; if (e.buttonID == 'btnDelete') { e.processOnServer = OnConfirmCustomButtonClick(reportingGrid.GetRowKey(e.visibleIndex)); } }"
             BeginCallback="function(s,e) { s.cpShowReport = false;}"  
             EndCallback="function (s,e) { OnPrintSetupEnd(s,e); }" />
