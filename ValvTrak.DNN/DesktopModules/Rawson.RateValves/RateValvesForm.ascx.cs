@@ -139,7 +139,12 @@ public partial class RateValvesForm : PortalModuleBase
         rvt.ExternalCondition = Convert.ToInt32(cmbExternalCond.Value);
 
         rvt.Remarks = RemarksTextBox.Text;
-        rvt.TechID = Convert.ToInt32(TechIDSelect.Value);
+
+        if (TechIDSelect.Value == null)
+            rvt.TechID = null;
+        else
+            rvt.TechID = Convert.ToInt32(TechIDSelect.Value);
+
         rvt.CustomerWitness = CustomerWitnessTextBox.Text;
 
         if (rvt.RateValveTestParts.Count == 0)

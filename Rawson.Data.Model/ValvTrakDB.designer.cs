@@ -5836,9 +5836,9 @@ namespace Rawson.Data.Model
 		
 		private byte[] _Version;
 		
-		private System.Nullable<double> _Latitude;
+		private System.Nullable<decimal> _Latitude;
 		
-		private System.Nullable<double> _Longitude;
+		private System.Nullable<decimal> _Longitude;
 		
 		private EntitySet<GreasingRecordItem> _GreasingRecordItems;
 		
@@ -5894,9 +5894,9 @@ namespace Rawson.Data.Model
     partial void OnOutletFlangeRatingChanged();
     partial void OnVersionChanging(byte[] value);
     partial void OnVersionChanged();
-    partial void OnLatitudeChanging(System.Nullable<double> value);
+    partial void OnLatitudeChanging(System.Nullable<decimal> value);
     partial void OnLatitudeChanged();
-    partial void OnLongitudeChanging(System.Nullable<double> value);
+    partial void OnLongitudeChanging(System.Nullable<decimal> value);
     partial void OnLongitudeChanged();
     #endregion
 		
@@ -6251,7 +6251,7 @@ namespace Rawson.Data.Model
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Latitude")]
-		public System.Nullable<double> Latitude
+		public System.Nullable<decimal> Latitude
 		{
 			get
 			{
@@ -6271,7 +6271,7 @@ namespace Rawson.Data.Model
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Longitude")]
-		public System.Nullable<double> Longitude
+		public System.Nullable<decimal> Longitude
 		{
 			get
 			{

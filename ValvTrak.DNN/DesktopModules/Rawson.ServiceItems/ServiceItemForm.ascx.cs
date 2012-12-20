@@ -234,13 +234,13 @@ namespace Rawson.ServiceItems
             si.InletFlangeRating = seInletFlangeRating.Number;
             si.OutletFlangeRating = seOutletFlangeRating.Number;
 
-            double latitude = 0;
-            double longitude = 0;
+            decimal latitude = 0;
+            decimal longitude = 0;
 
-            if (Double.TryParse(txtLatitude.Text, out latitude))
+            if (Decimal.TryParse(txtLatitude.Text, out latitude))
                 si.Latitude = latitude;
 
-            if (Double.TryParse(txtLongitude.Text, out longitude))
+            if (Decimal.TryParse(txtLongitude.Text, out longitude))
                 si.Longitude = longitude;
 
             si.Active = chkActive.Checked;
@@ -297,6 +297,8 @@ namespace Rawson.ServiceItems
             txtOutletFrac.Text = "0";
             seInletFlangeRating.Value = 0;
             seOutletFlangeRating.Value = 0;
+            txtLatitude.Text = "0";
+            txtLongitude.Text = "0";
 
             chkActive.Checked = true;
         }
@@ -330,6 +332,9 @@ namespace Rawson.ServiceItems
             
             seInletFlangeRating.Value = controller.Entity.InletFlangeRating.HasValue ? controller.Entity.InletFlangeRating : 0;
             seOutletFlangeRating.Value = controller.Entity.OutletFlangeRating.HasValue ? controller.Entity.OutletFlangeRating : 0;
+
+            txtLatitude.Text = controller.Entity.Latitude.HasValue ? controller.Entity.Latitude.ToString() : "0";
+            txtLongitude.Text = controller.Entity.Longitude.HasValue ? controller.Entity.Longitude.ToString() : "0";
 
             chkActive.Checked = controller.Entity.Active.HasValue ? controller.Entity.Active.Value : false;
         }

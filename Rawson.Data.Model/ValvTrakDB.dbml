@@ -263,8 +263,8 @@
       <Column Name="InletFlangeRating" Type="System.Decimal" DbType="Decimal(9,3)" CanBeNull="true" UpdateCheck="Always" />
       <Column Name="OutletFlangeRating" Type="System.Decimal" DbType="Decimal(9,3)" CanBeNull="true" UpdateCheck="Always" />
       <Column Name="Version" AutoSync="Never" Type="System.Byte[]" DbType="Timestamp NOT NULL" CanBeNull="false" UpdateCheck="WhenChanged" IsVersion="true" />
-      <Column Member="Latitude" Type="System.Double" CanBeNull="true" UpdateCheck="Always" />
-      <Column Member="Longitude" Type="System.Double" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Latitude" Type="System.Decimal" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="Longitude" Type="System.Decimal" CanBeNull="true" UpdateCheck="Always" />
       <Association Name="ServiceItem_GreasingRecordItem" Member="GreasingRecordItems" ThisKey="ServiceItemID" OtherKey="ServiceItemID" Type="GreasingRecordItem" />
       <Association Name="ServiceItem_ValveTest" Member="ValveTests" ThisKey="ServiceItemID" OtherKey="ServiceItemID" Type="ValveTest" />
       <Association Name="ServiceItem_WellSafetyTest" Member="WellSafetyTests" ThisKey="ServiceItemID" OtherKey="ServiceItemID" Type="WellSafetyTest" />
