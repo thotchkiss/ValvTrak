@@ -55,7 +55,8 @@
 			}
 		}
 
-		e.htmlEvent.cancelBubble = true;
+        e.htmlEvent.cancelBubble = true;
+        
 	} 
 
 </script>
@@ -218,7 +219,7 @@
 								<td>
 									<!-- TODO : Synchronize with values from TestResults table -->
 									<dxe:ASPxComboBox ID="cmbWearSleeve" runat="server" Width="120px" 
-										ValueType="System.Int32" TabIndex="9">
+										ValueType="System.Int32" TabIndex="9" IncrementalFilteringMode="StartsWith">
 										<Items>
 											<dxe:ListEditItem Text="Good" Value="0" />
 											<dxe:ListEditItem Text="Needs Replaced" Value="1" />
@@ -235,7 +236,7 @@
 								</td>
 								<td>
 									<dxe:ASPxComboBox ID="cmbCondDisc" runat="server" Width="120px" 
-										ValueType="System.Int32" TabIndex="10">
+										ValueType="System.Int32" TabIndex="10" IncrementalFilteringMode="StartsWith">
 										<Items>
 											<dxe:ListEditItem Text="Good" Value="0" />
 											<dxe:ListEditItem Text="Needs Replaced" Value="1" />
@@ -250,7 +251,7 @@
 								</td>
 								<td>
 									<dxe:ASPxComboBox ID="cmbPercDiscWear" runat="server" TabIndex="11" 
-										ValueType="System.Int32" Width="120px">
+										ValueType="System.Int32" Width="120px" IncrementalFilteringMode="StartsWith">
 										<Items>
 											<dxe:ListEditItem Text="30 %" Value="30" />
 											<dxe:ListEditItem Text="40 %" Value="40" />
@@ -280,7 +281,7 @@
 							   </td>
 								<td>
 									<dxe:ASPxComboBox ID="cmbExternalCond" runat="server" TabIndex="12" 
-										ValueType="System.Int32" Width="120px">
+										ValueType="System.Int32" Width="120px" IncrementalFilteringMode="StartsWith">
 										<Items>
 											<dxe:ListEditItem Text="Good" Value="0" />
 											<dxe:ListEditItem Text="Needs Replaced" Value="1" />
