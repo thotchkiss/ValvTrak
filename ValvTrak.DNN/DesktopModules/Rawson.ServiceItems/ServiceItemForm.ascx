@@ -332,16 +332,13 @@
 								<td>
 									<table cellpadding="0" cellspacing="0" width="100%">
 										<tr>
-											<td style="padding-bottom: 5px">
+											<td style="padding-bottom: 5px;">
                                                 <dxe:ASPxRadioButton ID="rbThreaded" GroupName="EndType" Text="Threaded" TabIndex="111" runat="server">
                                                 </dxe:ASPxRadioButton>
-                                        <%--<dxe:ASPxCheckBox ID="chkThreaded" runat="server" Text="Threaded" ClientInstanceName="chkThreaded" TabIndex="111">
-												</dxe:ASPxCheckBox>--%>											</td>
+                                            </td>
 											<td style="padding-bottom: 5px">
                                                 <dxe:ASPxRadioButton ID="rbFlanged" GroupName="EndType" Text="Flanged" TabIndex="112" runat="server">
                                                 </dxe:ASPxRadioButton>
-                                        <%--<dxe:ASPxCheckBox ID="chkFlanged" runat="server" Text="Flanged" TabIndex="112">
-												</dxe:ASPxCheckBox>--%>
                                             </td>
 										</tr>
 									</table>
@@ -433,13 +430,23 @@
 									</table>                        
 								</td>
 							</tr>
-                            <tr>
-                                <td>
+                            <tr valign="bottom">
+                                <td style="padding-top:5px">
                                     <dxe:ASPxLabel ID="ASPxLabel17" runat="server" Text="Coordinates :">
                                     </dxe:ASPxLabel>
                                 </td>
-								<td>
+								<td style="padding-top:5px">
 									<table cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td>
+                                                <dxe:ASPxLabel ID="ASPxLabel3" runat="server" Text="Lat." Font-Bold="True">
+                                                </dxe:ASPxLabel>
+                                            </td>
+                                            <td>
+                                                <dxe:ASPxLabel ID="ASPxLabel16" runat="server" Text="Long." Font-Bold="True">
+                                                </dxe:ASPxLabel>
+                                            </td>
+                                        </tr>
 										<tr>
 											<td>
                                                 <dxe:ASPxTextBox ID="txtLatitude" runat="server" Width="100px" 

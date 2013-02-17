@@ -227,7 +227,7 @@
 								<td>
 									<dxe:ASPxSpinEdit ID="seSetPressure" runat="server" 
 										ClientInstanceName="setPressure" Height="21px" Number="0" Width="100px" 
-										TabIndex="8" MaxValue="15000" DecimalPlaces="2" EnableClientSideAPI="True">
+										TabIndex="8" MaxValue="30000" DecimalPlaces="2" EnableClientSideAPI="True">
 										<ClientSideEvents NumberChanged="function(s,e){ 
 																			var sp = s.GetValue();
 																			var bp = backPressure.GetValue();
@@ -245,7 +245,7 @@
 								<td>
 									<dxe:ASPxSpinEdit ID="seBackPressure" runat="server" 
 										ClientInstanceName="backPressure" Height="21px" Number="0" Width="100px" 
-										TabIndex="9" MaxValue="10000" DecimalPlaces="2">
+										TabIndex="9" MaxValue="30000" DecimalPlaces="2">
 										<ClientSideEvents NumberChanged="function(s,e){ 
 																			var sp = setPressure.GetValue();
 																			var bp = s.GetValue();

@@ -320,6 +320,16 @@
                     <dxwgv:GridViewDataTextColumn Caption="Job ID" FieldName="JobID" ReadOnly="True" VisibleIndex="1">
                         <EditFormSettings Visible="False" />
                     </dxwgv:GridViewDataTextColumn>
+                    <dxwgv:GridViewDataHyperLinkColumn FieldName="JobID" Caption="Job ID" VisibleIndex="1">
+                        <DataItemTemplate>
+                            <dxe:ASPxHyperLink ID="ASPxHyperLink1" runat="server" Text='<%# Eval("JobID") %>' NavigateUrl='<%# ResolveUrl("Report.aspx") + "?Format=Multiple&ReportKeys=" + Eval("InspectionID") %>'>
+                                <ClientSideEvents Click="function(s, e) {
+                                        onPrintSingle(s, s.GetNavigateUrl());    
+                                        ASPxClientUtils.PreventEvent(e.htmlEvent);
+                                    }" />
+                            </dxe:ASPxHyperLink>
+                        </DataItemTemplate>
+                    </dxwgv:GridViewDataHyperLinkColumn>
                     <dxwgv:GridViewDataTextColumn Caption="Sales Order #" FieldName="SalesOrderNum" VisibleIndex="2">
                     </dxwgv:GridViewDataTextColumn>
                     <dxwgv:GridViewDataTextColumn Caption="Job Type" FieldName="JobType.Type" VisibleIndex="3">

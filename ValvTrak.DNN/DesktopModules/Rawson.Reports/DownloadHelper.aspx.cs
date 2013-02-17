@@ -26,21 +26,6 @@ namespace Rawson.Reports
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             bool compress = String.IsNullOrEmpty(Request.QueryString["compressed"]) ? false : Boolean.Parse(Request.QueryString["compressed"]);
 
-            //switch (path)
-            //{
-            //    case DocumentPaths.ValveTestFieldReport:
-            //        parameters.Add("ValveTestIds", Session["ReportData"]);
-            //        break;
-            //    case DocumentPaths.GreasingRecordFieldReport:
-            //        parameters.Add("GreasingRecordIds", Session["ReportData"]);
-            //        break;
-            //    case DocumentPaths.WellSafetyFieldReport:
-            //        parameters.Add("WellSafetyTestIds", Session["ReportData"]);
-            //        break;
-            //}
-
-            //Session["ReportData"] = null;
-
             string data = DataCache.GetCache<string>(cacheKey);
             switch (path)
             {
