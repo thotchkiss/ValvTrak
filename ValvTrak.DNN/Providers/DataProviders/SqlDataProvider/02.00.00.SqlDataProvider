@@ -4722,7 +4722,7 @@ create procedure {databaseOwner}{objectQualifier}GetTables
 as
 
 /* Be carefull when changing this procedure as the GetSearchTables() function 
-   in SearchDB.vb is only looking at the first column (to support databases that cannot return 
+   in SearchDB.cs is only looking at the first column (to support databases that cannot return 
    a TableName column name (like MySQL))
 */
 

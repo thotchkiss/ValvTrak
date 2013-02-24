@@ -112,16 +112,13 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ModuleSettings.Text" xml:space="preserve">
     <value>Module Settings</value>
-  </data>
-  <data name="ModuleSettingsHelp.Text" xml:space="preserve">
-    <value>In this section, you can define the settings that relate to the Module content and permissions (ie. those settings that will be the same on all pages that the Module appears ).</value>
   </data>
   <data name="plFriendlyName.Text" xml:space="preserve">
     <value>Module:</value>
@@ -137,9 +134,6 @@
   </data>
   <data name="PageSettings.Text" xml:space="preserve">
     <value>Page Settings</value>
-  </data>
-  <data name="PageSettingsHelp.Text" xml:space="preserve">
-    <value>In this section, you can define settings specific to this particular occurrence of the Module for this Page.</value>
   </data>
   <data name="Security.Text" xml:space="preserve">
     <value>Advanced Settings</value>
@@ -220,31 +214,25 @@
     <value>Start Date:</value>
   </data>
   <data name="plStartDate.Help" xml:space="preserve">
-    <value>Enter the start date for displaying this module.  You may use the Calendar to pick a date.</value>
+    <value>The start date for displaying this module. Prior to this date the module will only be visible to users with Manage permissions.</value>
   </data>
   <data name="plEndDate.Text" xml:space="preserve">
     <value>End Date:</value>
   </data>
   <data name="plEndDate.Help" xml:space="preserve">
-    <value>Enter the end date for displaying this module.  You may use the Calendar to pick a date.</value>
+    <value>The end date for displaying this module. After this date the module will only be visible to users with Manage permissions.</value>
   </data>
   <data name="plDefault.Text" xml:space="preserve">
-    <value>Set As Default Settings?</value>
+    <value>Set As Default Settings? </value>
   </data>
   <data name="plDefault.Help" xml:space="preserve">
-    <value>Select this option if you would like the Page Settings for this module to be used as the default settings when adding new modules.</value>
+    <value>Select this option if you would like the Page Settings for this module to be used as the default settings when adding new modules. Option only available to Website Admins and SuperUsers.</value>
   </data>
   <data name="plAllModules.Text" xml:space="preserve">
     <value>Apply To All Modules?</value>
   </data>
   <data name="plAllModules.Help" xml:space="preserve">
-    <value>Select this option if you would like the Page Settings for this module to be applied to all existing modules in the site.</value>
-  </data>
-  <data name="SpecificSettings.Text" xml:space="preserve">
-    <value>Module Specific Settings</value>
-  </data>
-  <data name="SpecificSettingsHelp.Text" xml:space="preserve">
-    <value>In this section, you can set up settings that are specific for this module.</value>
+    <value>Select this option if you would like the Page Settings for this module to be applied to all existing modules in the site. Option only available to Website Admins and SuperUsers.</value>
   </data>
   <data name="GeneralDetails.Text" xml:space="preserve">
     <value>Basic Settings</value>
@@ -280,25 +268,25 @@
     <value>Allow Print?</value>
   </data>
   <data name="valStartDate.ErrorMessage" xml:space="preserve">
-    <value>&lt;br&gt;Invalid Start Date</value>
+    <value>Invalid Start Date</value>
   </data>
   <data name="valEndDate.ErrorMessage" xml:space="preserve">
-    <value>&lt;br&gt;Invalid End Date</value>
+    <value>Invalid End Date</value>
   </data>
   <data name="valCacheTime.ErrorMessage" xml:space="preserve">
-    <value>&lt;br&gt;Invalid Cache Time</value>
+    <value>Invalid Cache Time</value>
   </data>
   <data name="ModuleHelp.Text" xml:space="preserve">
     <value>&lt;h1&gt;Module Settings&lt;/h1&gt;&lt;p&gt;Administrators can manage the Module Settings for the current Page. This allows you to specify characteristics of the module including content, permissions, and display properties.&lt;/p&gt;</value>
   </data>
   <data name="valBorder.ErrorMessage" xml:space="preserve">
-    <value>&lt;br&gt;Invalid Border (must be a number between 0 and 9)</value>
+    <value>Invalid Border (must be a number between 0 and 9)</value>
   </data>
   <data name="valEndDate2.ErrorMessage" xml:space="preserve">
-    <value>&lt;br&gt;End Date must be after Start Date</value>
+    <value>End Date must be after Start Date</value>
   </data>
   <data name="plNewTabs.Help" xml:space="preserve">
-    <value>Check this box to add the module to new pages only.</value>
+    <value>Check this box to add the module to new pages only. Option only available to Website Admins and SuperUsers.</value>
   </data>
   <data name="plNewTabs.Text" xml:space="preserve">
     <value>Add to new pages only?</value>
@@ -328,10 +316,10 @@
     <value>Web Slice TTL:</value>
   </data>
   <data name="valWebSliceExpiry.ErrorMessage" xml:space="preserve">
-    <value>&lt;br&gt;Invalide Expiry Date</value>
+    <value>Invalide Expiry Date</value>
   </data>
   <data name="valWebSliceTTL.ErrorMessage" xml:space="preserve">
-    <value>&lt;br&gt;Invalid TTL - value must be an integer</value>
+    <value>Invalid TTL - value must be an integer</value>
   </data>
   <data name="InstalledOn.Text" xml:space="preserve">
     <value>This module has been added to the following pages:</value>
@@ -386,5 +374,86 @@
   </data>
   <data name="plTags.Text" xml:space="preserve">
     <value>Tags:</value>
+  </data>
+  <data name="plAdminBorder.Help" xml:space="preserve">
+    <value>Checking this box will enable red admin border to be displayed around the module to admins when logged on to the site.</value>
+  </data>
+  <data name="plAdminBorder.Text" xml:space="preserve">
+    <value>Hide Admin Border</value>
+  </data>
+  <data name="cultureLabel.Help" xml:space="preserve">
+    <value>The culture for this module</value>
+  </data>
+  <data name="cultureLabel.Text" xml:space="preserve">
+    <value>Module Culture:</value>
+  </data>
+  <data name="defaultCultureLabel.Help" xml:space="preserve">
+    <value>Click this link to view the version of this module in the default culture</value>
+  </data>
+  <data name="defaultCultureLabel.Text" xml:space="preserve">
+    <value>Default Culture:</value>
+  </data>
+  <data name="Bind.Text" xml:space="preserve">
+    <value>Bind</value>
+  </data>
+  <data name="edit.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="UnBind.Text" xml:space="preserve">
+    <value>UnBind</value>
+  </data>
+  <data name="LocalizedModules.Text" xml:space="preserve">
+    <value>Module Localization</value>
+  </data>
+  <data name="Translated.Text" xml:space="preserve">
+    <value>Mark Translated</value>
+  </data>
+  <data name="UnTranslated.Text" xml:space="preserve">
+    <value>Mark UnTranslated</value>
+  </data>
+  <data name="CreateBoundCopies.Text" xml:space="preserve">
+    <value>Create Bound Copies</value>
+  </data>
+  <data name="Permissions.Text" xml:space="preserve">
+    <value>Permissions</value>
+  </data>
+  <data name="CacheSettings.Text" xml:space="preserve">
+    <value>Cache Settings</value>
+  </data>
+  <data name="ContainerPreview.Text" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="ExpandAll.Text" xml:space="preserve">
+    <value>Expand All</value>
+  </data>
+  <data name="PreviewNoSelectionMessage.Text" xml:space="preserve">
+    <value>Please select a container to preview.</value>
+  </data>
+  <data name="lblNoRecords.Text" xml:space="preserve">
+    <value>This module has not been added to any other pages.</value>
+  </data>
+  <data name="Page.Header" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="ControlTitle_settings.Text" xml:space="preserve">
+    <value>{0} Settings</value>
+  </data>
+  <data name="plSearchOnce.Help" xml:space="preserve">
+    <value>Select whether to show all pages in search result which include this module.</value>
+  </data>
+  <data name="plSearchOnce.Text" xml:space="preserve">
+    <value>Only Display Search Results Once</value>
+  </data>
+  <data name="isShareableLabel.Help" xml:space="preserve">
+    <value>Check this box to allow the module to be shared across sites.</value>
+  </data>
+  <data name="isShareableLabel.Text" xml:space="preserve">
+    <value>Is Shareable?</value>
+  </data>
+  <data name="isShareableViewOnlyLabel.Help" xml:space="preserve">
+    <value>Check this box to restrict the module to be shared as View Only.</value>
+  </data>
+  <data name="isShareableViewOnlyLabel.Text" xml:space="preserve">
+    <value>View Only?</value>
   </data>
 </root>

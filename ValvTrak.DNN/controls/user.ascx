@@ -1,4 +1,4 @@
-<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.UserControls.User" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.UI.UserControls.User" %>
 <%@ Register TagPrefix="wc" Namespace="DotNetNuke.UI.WebControls" Assembly="CountryListBox" %>
 <%@ Register TagPrefix="dnn" TagName="label" Src="~/controls/labelControl.ascx" %>
 <table cellSpacing="0" cellPadding="1" border="0" summary="User Design Table">

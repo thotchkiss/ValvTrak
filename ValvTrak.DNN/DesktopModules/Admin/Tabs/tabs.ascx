@@ -1,122 +1,346 @@
-<%@ Control Inherits="DotNetNuke.Modules.Admin.Tabs.Tabs" language="vb" AutoEventWireup="false" Explicit="True" CodeFile="Tabs.ascx.vb" %>
-<%@ Register TagPrefix="dnn" TagName="HelpButton" Src="~/controls/HelpButtonControl.ascx" %>
-<table class="Settings" cellspacing="2" cellpadding="2" summary="Tabs Design Table" border="0">
-	<tr>
-		<td width="560">
-		    <asp:Panel ID="pnlHost" runat="server">
-		        <asp:CheckBox ID="chkDisplayHost" runat="server" CssClass="SubHead" resourcekey="HostTabs" AutoPostBack="true" TextAlign="Left" /><br />
-		        <br />
-		    </asp:Panel>
-			<asp:panel id="pnlTabs" runat="server" cssclass="WorkPanel" visible="True">
-				<table cellspacing="0" cellpadding="0" border="0" summary="Tabs Design Table">
-					<tr valign="top">
-						<td width="400">
-							<label style="DISPLAY:none" for="<%=lstTabs.ClientID%>">First Tabs</label>
-							<asp:listbox id="lstTabs" runat="server" rows="22" datatextfield="IndentedTabName" datavaluefield="TabId" cssclass="NormalTextBox" width="400px"></asp:listbox>
-						</td>
-						<td>&nbsp;</td>
-						<td>
-							<table summary="Tabs Design Table">
-								<tr>
-									<td colspan="2" valign="top" class="SubHead">
-										<asp:label id="lblMovePage" runat="server" resourcekey="MovePage">Move Page</asp:label>
-										<hr noshade size="1">
-									</td>
-								</tr>
-								<tr>
-									<td valign="top" width="10%">
-										<asp:imagebutton id="cmdTop" resourcekey="cmdTop.Help" runat="server" alternatetext="Move Tab To Top Of Current Level" commandname="top" imageurl="~/images/action_top.gif" />
-									</td>
-									<td valign="top" width="90%">
-										<dnn:HelpButton id="hbtnTopHelp" resourcekey="cmdTop" runat="server" />
-									</td>
-								</tr>
-								<tr>
-									<td valign="top" width="10%">
-										<asp:imagebutton id="cmdUp" resourcekey="cmdUp.Help" runat="server" alternatetext="Move Tab Up In Current Level" commandname="up" imageurl="~/images/up.gif" />
-									</td>
-									<td valign="top" width="90%">
-										<dnn:HelpButton id="hbtnUpHelp" resourcekey="cmdUp" runat="server" />
-									</td>
-								</tr>
-								<tr>
-									<td valign="top" width="10%">
-										<asp:imagebutton id="cmdDown" resourcekey="cmdDown.Help" runat="server" alternatetext="Move Tab Down In Current Level" commandname="down" imageurl="~/images/dn.gif"></asp:imagebutton>
-									</td>
-									<td valign="top" width="90%">
-										<dnn:helpbutton id="hbtnDownHelp" resourcekey="cmdDown" runat="server" />
-									</td>
-								</tr>
-								<tr>
-									<td valign="top" width="10%">
-										<asp:imagebutton id="cmdBottom" resourcekey="cmdBottom.Help" runat="server" alternatetext="Move Tab To Bottom Of Current Level" commandname="bottom" imageurl="~/images/action_bottom.gif"></asp:imagebutton>
-									</td>
-									<td valign="top" width="90%">
-										<dnn:helpbutton id="hbtnBottomHelp" resourcekey="cmdBottom" runat="server" />
-									</td>
-								</tr>
-								<tr>
-									<td valign="top" width="10%">
-										<asp:imagebutton id="cmdLeft" resourcekey="cmdLeft.Help" runat="server" alternatetext="Move Tab Up One Hierarchical Level" commandname="left" imageurl="~/images/lt.gif"></asp:imagebutton>
-									</td>
-									<td valign="top" width="90%">
-										<dnn:helpbutton id="hbtnLeftHelp" resourcekey="cmdLeft" runat="server" />
-									</td>
-								</tr>
-								<tr>
-									<td valign="top" width="10%">
-										<asp:imagebutton id="cmdRight" resourcekey="cmdRight.Help" runat="server" alternatetext="Move Tab Down One Hierarchical Level" commandname="right" imageurl="~/images/rt.gif"></asp:imagebutton>
-									</td>
-									<td valign="top" width="90%">
-										<dnn:helpbutton id="hbtnRightHelp" resourcekey="cmdRight" runat="server" />
-									</td>
-								</tr>
-								<tr>
-									<td colspan="2" height="25">&nbsp;</td>
-								</tr>
-								<tr>
-									<td colspan="2" valign="top" class="SubHead">
-										<asp:label id="lblActions" runat="server" resourcekey="Actions">Actions</asp:label>
-										<hr noshade size="1">
-									</td>
-								</tr>
-								<tr>
-									<td valign="top" width="10%">
-										<asp:imagebutton id="cmdAdd" resourcekey="cmdAdd.Help" runat="server" alternatetext="Add Tab" imageurl="~/images/add.gif"></asp:imagebutton>
-									</td>
-									<td valign="top" width="90%">
-										<dnn:helpbutton id="hbtnAddHelp" resourcekey="cmdAdd" runat="server" />
-									</td>
-								</tr>
-								<tr>
-									<td valign="top" width="10%">
-										<asp:imagebutton id="cmdEdit" resourcekey="cmdEdit.Help" runat="server" alternatetext="Edit Tab" imageurl="~/images/edit.gif"></asp:imagebutton>
-									</td>
-									<td valign="top" width="90%">
-										<dnn:helpbutton id="hbtnEditHelp" resourcekey="cmdEdit" runat="server" />
-									</td>
-								</tr>
-								<tr>
-									<td valign="top" width="10%">
-										<asp:imagebutton id="cmdView" resourcekey="cmdView.Help" runat="server" alternatetext="View Tab" imageurl="~/images/view.gif"></asp:imagebutton>
-									</td>
-									<td valign="top" width="90%">
-										<dnn:helpbutton id="hbtnViewHelp" resourcekey="cmdView" runat="server" />
-									</td>
-								</tr>
-								<tr>
-									<td valign="top" width="10%">
-										<asp:imagebutton id="cmdDelete" resourcekey="cmdDelete.Help" runat="server" alternatetext="Delete Tab" imageurl="~/images/delete.gif"></asp:imagebutton>
-									</td>
-									<td valign="top" width="90%">
-										<dnn:helpbutton id="hbtnDeleteHelp" resourcekey="cmdDelete" runat="server" />
-									</td>
-								</tr>
-							</table>
-						</td>
-					</tr>
-				</table>
-			</asp:panel>
-		<td width="10">&nbsp;</td>
-	</tr>
-</table>
+﻿<%@ Control Language="C#" AutoEventWireup="false" CodeFile="Tabs.ascx.cs" Inherits="DesktopModules.Admin.Tabs.View" %>
+<%@ Register TagPrefix="dnnweb" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web" %>
+<%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
+<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Security.Permissions.Controls" Assembly="DotNetNuke" %>
+<%@ Register TagPrefix="dnn" TagName="URL" Src="~/controls/URLControl.ascx" %>
+<script language="javascript" type="text/javascript">
+/*globals jQuery, window, Sys */
+(function ($, Sys) {
+	function setUpTabsModule() {
+		$('#dnnTabsModule').dnnPanels()
+			.find('.dnnFormExpandContent a').dnnExpandAll({
+			    expandText: '<%=DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(Localization.GetString("ExpandAll", Localization.SharedResourceFile))%>',
+			    collapseText: '<%=DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(Localization.GetString("CollapseAll", Localization.SharedResourceFile))%>',
+				targetArea: '#dnnTabsModule'
+			});
+	}
+
+
+	$(document).ready(function () {
+		setUpTabsModule();
+
+		var msgQueue = [];
+		if (location.hash != "") {
+			$.each(location.hash.toUpperCase().replace("#", "").split("&"), function (index, value) {
+				if (value == "P" || value == "H") {
+					$("input[type=radio][name$=rblMode][value=" + value + "]").trigger("click");
+				}
+				else if (/^\d+$/.test(value)) {
+					/*try to find node in tree, 
+					if can't find then push it into message queue to wait tree re-load and check again.*/
+					setTimeout(function () {
+						var selectNode = function () {
+							var tree = $find("<%=ctlPages.ClientID %>");
+							var node = tree.findNodeByValue(value);
+							if (node == null) {
+								return false;
+							}
+							else {
+								node.get_parent().expand();
+								node.select();
+								return true;
+							}
+						};
+
+						if (!selectNode()) {
+							msgQueue.push(selectNode);
+						}
+					}, 0);
+				}
+			});
+		}
+
+		var processMsgQueue = function () {
+			while (msgQueue.length > 0) {
+				setTimeout(msgQueue[0], 0);
+				msgQueue.splice(0, 1);
+			}
+		}
+
+		Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+			setUpTabsModule();
+			processMsgQueue();
+		});
+	});
+
+	function toggleSection(id, isToggled) {
+		$("div[id$='" + id + "']").toggle(isToggled);
+	}
+} (jQuery, window.Sys));
+</script>
+<dnnweb:DnnScriptBlock ID="RadScriptBlock1" runat="server">
+	<script type="text/javascript">
+		function onContextClicking(sender, eventArgs) {
+			var id = '<%=ctlContext.ClientID%>';
+			var item = eventArgs.get_menuItem();
+			var cmd = item.get_value();
+			if (cmd == 'delete') {
+				if (!confirm('<%=GetConfirmString()%>')) {
+					item.get_menu().hide();
+					eventArgs.set_cancel(true);
+				}
+			}
+			/*get current node to set hash*/
+			var nodeValue = eventArgs.get_node().get_value();
+			location.hash = "#" + $("input[type=radio][name$=rblMode]:checked").val() + "&" + nodeValue;
+		}
+		function onContextShowing(sender, eventArgs) {
+			var node = eventArgs.get_node();
+			var menu = eventArgs.get_menu();
+			if (node) {
+				var a = node.get_attributes();
+
+				menu.findItemByValue('view').set_visible(a.getAttribute("CanView") == 'True');
+				menu.findItemByValue('edit').set_visible(a.getAttribute("CanEdit") == 'True');
+				menu.findItemByValue('add').set_visible(a.getAttribute("CanAdd") == 'True');
+				menu.findItemByValue('hide').set_visible(a.getAttribute("CanHide") == 'True');
+				menu.findItemByValue('show').set_visible(a.getAttribute("CanMakeVisible") == 'True');
+				menu.findItemByValue('disable').set_visible(a.getAttribute("CanDisable") == 'True');
+				menu.findItemByValue('enable').set_visible(a.getAttribute("CanEnable") == 'True');
+				menu.findItemByValue('delete').set_visible(a.getAttribute("CanDelete") == 'True');
+				menu.findItemByValue('makehome').set_visible(a.getAttribute("CanMakeHome") == 'True');
+			}
+		}
+		function OnClientNodeClicked(sender, eventArgs) {
+			var nodeValue = eventArgs.get_node().get_value();
+			location.hash = "#" + $("input[type=radio][name$=rblMode]:checked").val() + "&" + nodeValue;
+		}
+	</script>
+</dnnweb:DnnScriptBlock>
+<div class="dnnForm dnnTabsModule dnnClear" id="dnnTabsModule">
+	<div class="dnnTreeArea">
+		<asp:Panel ID="pnlHost" runat="server">
+			<div class="dnnFormItem">                
+				<asp:Label ID="lblHostOnly" runat="server" resourcekey="lblHostOnly" AssociatedControlID="rblMode" />
+                <div class="dnnHSRadioButtons" style="margin-top :5px; float: none; display: block; margin-bottom: 0;" >
+				    <asp:RadioButtonList ID="rblMode" runat="server" AutoPostBack="true" RepeatLayout="Flow" RepeatDirection="Vertical">
+					    <asp:ListItem Value="P" Selected="True" />
+					    <asp:ListItem Value="H" />
+				    </asp:RadioButtonList>
+                </div>
+			</div>		
+		</asp:Panel> 
+		<div class="dnnTreeExpand">
+			<asp:LinkButton ID="cmdExpandTree" runat="server" CommandName="Expand" />
+		</div>
+		<dnnweb:DnnTreeView ID="ctlPages" cssclass="dnnTreePages" runat="server" AllowNodeEditing="true"
+		 OnClientContextMenuShowing="onContextShowing" OnClientContextMenuItemClicking="onContextClicking"
+		  OnClientNodeClicked="OnClientNodeClicked" EnableDragAndDropBetweenNodes="true">
+			<ContextMenus>                
+				<dnnweb:DnnTreeViewContextMenu ID="ctlContext" runat="server">
+					<Items>                                            
+						<dnnweb:DnnMenuItem Text="View" Value="view" />
+						<dnnweb:DnnMenuItem Text="Edit" Value="edit" />
+						<dnnweb:DnnMenuItem Text="Delete" Value="delete" />
+						<dnnweb:DnnMenuItem Text="Add" Value="add" />
+						<dnnweb:DnnMenuItem Text="Hide Page in Menu" Value="hide" />
+						<dnnweb:DnnMenuItem Text="Show Page in Menu" Value="show" />
+						<dnnweb:DnnMenuItem Text="Enable Page" Value="enable" />
+						<dnnweb:DnnMenuItem Text="Disable Page" Value="disable" />
+						<dnnweb:DnnMenuItem Text="Make Homepage" Value="makehome" />
+					</Items>
+				</dnnweb:DnnTreeViewContextMenu>               
+			</ContextMenus>
+		</dnnweb:DnnTreeView>
+		<div class="dnnTreeLegend">
+			<h3><asp:Label ID="lblLegend" runat="server" resourcekey="lblLegend" /></h3>
+			<div class="dtlItem">
+				<img runat="server" src="images/Icon_Home.png" alt="" />
+				<asp:Literal ID="lblHome" runat="server" />
+			</div>
+			<div class="dtlItem">
+				<img runat="server" src="images/Icon_Everyone.png" alt="" />
+				<asp:Literal ID="lblEveryone" runat="server" />
+			</div>
+			<div class="dtlItem">
+				<img runat="server" src="images/Icon_User.png" alt="" />
+				<asp:Literal ID="lblRegistered" runat="server" />
+			</div>
+			<div class="dtlItem">
+				<img runat="server" src="images/Icon_UserSecure.png" alt="" />
+				<asp:Literal ID="lblSecure" runat="server" />
+			</div>
+			<div class="dtlItem">
+				<img runat="server" src="images/Icon_UserAdmin.png" alt="" />
+				<asp:Literal ID="lblAdminOnly" runat="server" />
+			</div>
+			<div class="dtlItem">
+				<img runat="server" src="images/Icon_Hidden.png" alt="" />
+				<asp:Literal ID="lblHidden" runat="server" />
+			</div>                
+			<div class="dtlItem">
+				<img runat="server" src="images/Icon_Disabled.png" alt="" />
+				<asp:Literal ID="lblDisabled" runat="server" />
+			</div>
+		</div>
+	</div>        
+	<div class="tmTabContainer" runat="server" visible="false" id="pnlDetails">
+		<div class="dnnFormExpandContent"><a href=""><%=Localization.GetString("ExpandAll", Localization.SharedResourceFile)%></a></div>
+		<%--<div class="dnnFormItem dnnFormHelp dnnClear"><p class="dnnFormRequired"><span><%=LocalizeString("RequiredFields")%></span></p></div>--%>
+		<div class="ssasContent dnnClear">
+			<h2 id="Panel-Common" class="dnnFormSectionHead"><a href="" class="dnnSectionExpanded"><%=LocalizeString("Common.Tabname")%></a></h2>
+			<fieldset>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblName" runat="server" Suffix=":" CssClass="dnnFormRequired"  />
+					<asp:TextBox ID="txtName" runat="server" MaxLength="50" ValidationGroup="Page" />
+					<asp:RequiredFieldValidator ID="valName" runat="server" EnableClientScript="True" Display="Dynamic" resourcekey="valName.ErrorMessage" ControlToValidate="txtName" CssClass="dnnFormMessage dnnFormError" ValidationGroup="Page"/>
+				</div>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblTitle" runat="server" suffix=":" />
+					<asp:TextBox ID="txtTitle" runat="server" />
+				</div>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblVisible" runat="server" suffix="?" />
+					<asp:CheckBox ID="chkVisible" runat="server" />
+				</div>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblDisabledPage" runat="server" suffix="?" />
+					<asp:CheckBox ID="chkDisabled" runat="server" />
+				</div>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblPageSSL" runat="server" suffix="?" />
+					<asp:CheckBox ID="chkSecure" runat="server" />
+				</div> 
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblAllowIndex" runat="server" ControlName="chkAllowIndex" />
+					<asp:CheckBox ID="chkAllowIndex" runat="server" />
+				</div>  
+			</fieldset>
+		</div>    														 
+		<div id="PermissionsSection" class="ssasContent dnnClear" runat="server">
+			<h2 id="Panel-Permissions" class="dnnFormSectionHead"><a href="" class="dnnSectionExpanded"><%=LocalizeString("Permissions.Tabname")%></a></h2>
+			<fieldset>
+				<dnn:TabPermissionsGrid ID="dgPermissions" runat="server" />
+			</fieldset>
+		</div>
+		<div class="ssasContent dnnClear">
+			<h2 id="Panel-Modules" class="dnnFormSectionHead"><a href="" class="dnnSectionExpanded"><%=LocalizeString("Modules.Tabname")%></a></h2>
+			<fieldset>
+				<dnnweb:DnnGrid ID="grdModules" runat="server" AllowPaging="false" AllowSorting="false">
+					<MasterTableView AutoGenerateColumns="false">
+						<Columns>
+							<dnnweb:DnnGridTemplateColumn HeaderText="ModuleTitle">
+								<ItemTemplate>
+									<%#DataBinder.Eval(Container.DataItem, "ModuleTitle")%>
+								</ItemTemplate>
+							</dnnweb:DnnGridTemplateColumn>
+							<dnnweb:DnnGridTemplateColumn HeaderText="Module">
+								<ItemTemplate>
+									<%#DataBinder.Eval(Container.DataItem, "FriendlyName")%>
+								</ItemTemplate>
+							</dnnweb:DnnGridTemplateColumn>
+							<dnnweb:DnnGridTemplateColumn HeaderText="Options">
+								<ItemTemplate>
+									<dnnweb:DnnImageButton ID="cmdDeleteModule" runat="server" CommandArgument='<%#DataBinder.Eval(Container.DataItem, "ModuleId")%>' OnClick="CmdDeleteModuleClick" IconKey="Delete" resourcekey="cmdDelete" />
+									<a href="<%#ModuleEditUrl((int)DataBinder.Eval(Container.DataItem, "ModuleId"))%>">
+										<dnnweb:DnnImage ID="imgEdit" runat="server" IconKey="Edit" resourcekey="Edit" />
+									</a>
+								</ItemTemplate>
+							</dnnweb:DnnGridTemplateColumn>
+						</Columns>
+						<NoRecordsTemplate>
+							<div class="dnnFormMessage dnnFormWarning">
+								<asp:Label ID="lblNoRecords" runat="server" resourcekey="lblNoRecords" />
+							</div>
+						</NoRecordsTemplate>
+					</MasterTableView>
+				</dnnweb:DnnGrid>
+			</fieldset>
+		</div>
+		<div class="ssasContent dnnClear">
+			<h2 id="Panel-SEO" class="dnnFormSectionHead"><a href="" class="dnnSectionExpanded"><%=LocalizeString("SEO.Tabname")%></a></h2>
+			<fieldset>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblSitemapPriority" runat="server" suffix=":" CssClass="dnnFormRequired" />
+					<asp:TextBox ID="txtSitemapPriority" runat="server" ValidationGroup="Page" />
+                    <asp:RequiredFieldValidator ID="valPriorityRequired" runat="server" ControlToValidate="txtSitemapPriority" 
+                        resourcekey="valPriorityRequired.ErrorMessage" CssClass="dnnFormMessage dnnFormError" Display="Dynamic" ValidationGroup="Page" />
+                    <asp:CompareValidator ID="valPriority" runat="server" ControlToValidate="txtSitemapPriority" Operator="DataTypeCheck" Type="Double" 
+                        resourcekey="valPriority.ErrorMessage" CssClass="dnnFormMessage dnnFormError" Display="Dynamic" ValidationGroup="Page" />
+				</div>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblDescription" runat="server" suffix=":" />
+					<asp:TextBox ID="txtDescription" runat="server" TextMode="MultiLine" Height="40px" />
+				</div>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblKeywords" runat="server" suffix=":" />
+					<asp:TextBox ID="txtKeywords" runat="server" TextMode="MultiLine" Height="40px" />
+				</div>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblTags" runat="server" suffix=":" />
+					<dnnweb:TermsSelector ID="termsSelector" runat="server" />
+				</div>
+			</fieldset>
+		</div>
+		<div class="ssasContent dnnClear">
+			<h2 id="Panel-Meta" class="dnnFormSectionHead"><a href="" class="dnnSectionExpanded"><%=LocalizeString("Metatags.Tabname")%></a></h2>
+			<fieldset>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblMetaRefresh" runat="server" suffix=":" />
+					<asp:TextBox ID="txtRefresh" runat="server" ValidationGroup="Page" />
+                    <asp:RegularExpressionValidator ID="valRefresh" runat="server" ControlToValidate="txtRefresh" ValidationGroup="Page"
+                        resourcekey="valRefresh.ErrorMessage" ValidationExpression="^\d+$" CssClass="dnnFormMessage dnnFormError" Display="Dynamic" />
+				</div>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblMetaHead" runat="server" suffix=":" />
+					<asp:TextBox ID="txtMeta" runat="server" TextMode="MultiLine" Height="40px" />
+				</div>
+			</fieldset>
+		</div>
+		<div class="ssasContent dnnClear">
+			<h2 id="Panel-Appearance" class="dnnFormSectionHead"><a href="" class="dnnSectionExpanded"><%=LocalizeString("Appearance.Tabname")%></a></h2>
+			<fieldset>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblSkin" runat="server" suffix=":" />
+					<%--<asp:DropDownList ID="drpSkin" runat="server" DataTextField="Key" DataValueField ="Value" />--%>
+                    <dnnweb:DnnComboBox ID="drpSkin" runat="server" DataTextField="Key" DataValueField ="Value" />
+				</div>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblContainer" runat="server" suffix=":" />
+					<%--<asp:DropDownList ID="drpContainer" runat="server" DataTextField="Key" DataValueField ="Value"  />--%>
+                    <dnnweb:DnnComboBox ID="drpContainer" runat="server" DataTextField="Key" DataValueField ="Value"  />
+					
+				</div>
+                <div class="dnnFormItem">
+                    <div class="dnnLabel"></div>
+                    <asp:LinkButton ID="cmdCopySkin" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdCopySkin" />
+                </div>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblIconLarge" runat="server" suffix=":" />
+					<dnn:URL ID="ctlIconLarge" runat="server" ShowLog="False" ShowTrack="false" />
+				</div>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblIconSmall" runat="server" suffix=":" />
+					<dnn:URL ID="ctlIcon" runat="server" ShowLog="False" />
+				</div>
+			</fieldset>
+		</div>
+		<div class="ssasContent dnnClear">
+			<h2 id="Panel-Link" class="dnnFormSectionHead"><a href="" class="dnnSectionExpanded"><%=LocalizeString("Link.Tabname")%></a></h2>
+			<fieldset>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblUrl" runat="server" suffix=":" />
+					<dnn:URL ID="ctlURL" runat="server" ShowLog="False" ShowNone="True" ShowTrack="False" ShowNewWindow="True" />
+				</div>
+				<div class="dnnFormItem">
+					<dnn:Label ID="lblPermanentRedirect" runat="server" suffix=":" />
+					<asp:CheckBox ID="chkPermanentRedirect" runat="server" />
+				</div>
+			</fieldset>
+		</div>
+		<ul class="dnnActions dnnClear">
+			<li><asp:LinkButton ID="cmdUpdate" runat="server" resourcekey="cmdUpdate" CssClass="dnnPrimaryAction" ValidationGroup="Page" CausesValidation="True" /></li>
+			<li><asp:HyperLink ID="cmdMore" runat="server" resourcekey="cmdMore" CssClass="dnnSecondaryAction" /></li>
+		</ul>     
+	</div>
+	<div runat="server" visible="false" id="pnlBulk" class="tmTabContainer BulkContainer">
+		<div class="dnnFormMessage dnnFormInfo"><asp:Literal ID="lblBulkIntro" runat="server" /></div>
+		<div class="dnnFormItem">
+            <dnn:Label ID="bulkPagesLabel" runat="server" ControlName="txtBulk" />
+            <asp:TextBox ID="txtBulk" runat="server" TextMode="MultiLine" />
+        </div>
+		<ul class="dnnActions dnnClear">
+			<li><asp:LinkButton ID="btnBulkCreate" runat="server" resourcekey="btnBulkCreate" CssClass="dnnPrimaryAction" /></li>
+		</ul>
+	</div>
+</div>

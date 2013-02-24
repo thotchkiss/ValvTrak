@@ -1,272 +1,346 @@
-<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Modules.ModuleSettingsPage" CodeFile="ModuleSettings.ascx.vb" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Modules.ModuleSettingsPage" CodeFile="Modulesettings.ascx.cs" %>
 <%@ Register TagPrefix="dnn" TagName="URL" Src="~/controls/URLControl.ascx" %>
-<%@ Register TagPrefix="dnn" TagName="SectionHead" Src="~/controls/SectionHeadControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<%@ Register TagPrefix="dnn" TagName="Skin" Src="~/controls/SkinControl.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Security.Permissions.Controls" Assembly="DotNetNuke" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web" %>
 <%@ Register TagPrefix="dnn" TagName="Audit" Src="~/controls/ModuleAuditControl.ascx" %>
-<table class="Settings" cellspacing="2" cellpadding="2" style="width:760px" summary="Module Settings Design Table" border="0">
-	<tr>
-		<td style="width:760px" valign="top">
-			<dnn:sectionhead id="dshModule" cssclass="Head" runat="server" text="Module Settings" section="tblModule" resourcekey="ModuleSettings" includerule="True" />
-			<table id="tblModule" cellspacing="2" cellpadding="2" summary="Module Details Design Table" border="0" runat="server">
-				<tr>
-					<td colspan="2"><asp:label id="lblModuleSettingsHelp" cssclass="Normal" runat="server" resourcekey="ModuleSettingsHelp" enableviewstate="False" /></td>
-				</tr>
-				<tr>
-					<td style="width:25px"></td>
-					<td valign="top" style="width:675px">
-						<dnn:sectionhead id="dshDetails" cssclass="Head" runat="server" text="Basic Settings" section="tblDetails" resourcekey="GeneralDetails" />
-						<table id="tblDetails" cellspacing="2" cellpadding="2" summary="Appearance Design Table" border="0" runat="server">
-							<tr>
-								<td class="SubHead" style="width:150px"><dnn:label id="plFriendlyName" text="Module:" runat="server" controlname="lblFriendlyName"></dnn:label></td>
-								<td><asp:TextBox ID="txtFriendlyName" runat="server" CssClass="NormalTextBox" Width="525" Enabled="False"></asp:TextBox></td>
-							</tr>
-							<tr>
-								<td class="SubHead" style="width:150px"><dnn:label id="plTitle" text="Title:" runat="server" controlname="txtTitle"></dnn:label></td>
-								<td><asp:textbox id="txtTitle" runat="server" cssclass="NormalTextBox" style="width:525px"></asp:textbox></td>
-							</tr>
-                            <tr>
-                                <td><dnn:Label ID="plTags" runat="server" cssClass="SubHead" ControlName="termsSelector"/></td>
-                                <td><dnn:TermsSelector ID="termsSelector" runat="server" Height="250px" Width="525px"/></td>
-							</tr>
-							<tr id="rowPerm" runat="server">
-								<td colspan="2" align="left">
-									<div style="text-align:left" class="SubHead" ><dnn:label id="plPermissions" runat="server" controlname="ctlPermissions" text="Permissions:"/></div>
-									<table border="0" cellpadding="0" cellspacing="0" style="text-align:center;">
-							            <tr>
-											<td><dnn:modulepermissionsgrid id="dgPermissions" runat="server"/></td>
-										</tr>
-										<tr><td>&nbsp;</td></tr>
-										<tr>
-											<td><asp:checkbox id="chkInheritPermissions" cssclass="Normal" autopostback="true" runat="server" resourcekey="InheritPermissions" /></td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-						</table>
-						<br/>
-						<dnn:sectionhead id="dshSecurity" cssclass="Head" runat="server" text="Security Settings" section="tblSecurity" resourcekey="Security" isexpanded="False" />
-						<table id="tblSecurity" cellspacing="2" cellpadding="2" summary="Security Details Design Table" border="0" runat="server">
-							<tr id="trAllTabs" runat="server">
-								<td class="SubHead" style="width:225px"><dnn:label id="plAllTabs" runat="server" controlname="chkAllTabs"/></td>
-								<td><asp:checkbox id="chkAllTabs" runat="server" AutoPostback="true"/></td>
-							</tr>
-							<tr id="trnewPages" runat="server" visible="false">
-								<td class="SubHead" style="width:225px"><dnn:label id="plNewTabs" runat="server" controlname="chkNewTabs"/></td>
-								<td><asp:checkbox id="chkNewTabs" runat="server"/></td>
-							</tr>
-							<tr>
-								<td class="SubHead" style="width:225px"><dnn:label id="plHeader" text="Header:" runat="server" controlname="txtHeader"/></td>
-								<td valign="top"><asp:textbox id="txtHeader" style="width:450px" cssclass="NormalTextBox" runat="server" textmode="MultiLine" rows="6"/></td>
-							</tr>
-							<tr>
-								<td class="SubHead" style="width:225px"><dnn:label id="plFooter" text="Footer:" runat="server" controlname="txtFooter"/></td>
-								<td valign="top"><asp:textbox id="txtFooter" style="width:450px" cssclass="NormalTextBox" runat="server" textmode="MultiLine" rows="6"/></td>
-							</tr>
-							<tr>
-								<td class="SubHead" style="width:150px" valign="top"><dnn:label id="plStartDate" runat="server" controlname="txtStartDate" /></td>
-								<td>
-									<asp:textbox id="txtStartDate" runat="server" cssclass="NormalTextBox" style="width:120px" columns="30" maxlength="11"/>&nbsp;
-									<asp:hyperlink id="cmdStartCalendar" cssclass="CommandButton" runat="server" resourcekey="Calendar"/>
-									<asp:CompareValidator ID="valtxtStartDate" ControlToValidate="txtStartDate" Operator="DataTypeCheck" Type="Date" Runat="server" Display="Dynamic" resourcekey="valStartDate.ErrorMessage" />
-								</td>
-							</tr>
-							<tr>
-								<td class="SubHead" style="width:150px" valign="top"><dnn:label id="plEndDate" runat="server" controlname="txtEndDate" /></td>
-								<td>
-									<asp:textbox id="txtEndDate" runat="server" cssclass="NormalTextBox" style="width:120px" columns="30" maxlength="11"/>&nbsp;
-									<asp:hyperlink id="cmdEndCalendar" cssclass="CommandButton" runat="server" resourcekey="Calendar"/>
-									<asp:CompareValidator ID="valtxtEndDate" ControlToValidate="txtEndDate" Operator="DataTypeCheck" Type="Date" Runat="server" Display="Dynamic" resourcekey="valEndDate.ErrorMessage" />
-									<asp:CompareValidator ID="val2txtEndDate" ControlToValidate="txtEndDate" ControlToCompare="txtStartdate" Operator="GreaterThanEqual" Type="Date" Runat="server" Display="Dynamic" resourcekey="valEndDate2.ErrorMessage" />
-								</td>
-							</tr>
-						</table>
-						<br />
-						<dnn:SectionHead ID="dshModuleInstalledOn" CssClass="Head" runat="server" Text="Module Instance Installed on Tabs" Section="tblInstalledOn" ResourceKey="ModuleInstalledOn" IsExpanded="False" />
-						<table id="tblInstalledOn" cellspacing="2" cellpadding="2" summary="Module Instance Installed on Tabs" border="0" runat="server">
-							<tr><td>
-								<dnn:Label ID="lblInstalledOn" Text="This module instance has been added to these pages" runat="server" />
-							</td></tr>
-							<tr><td style="padding-left:10px">
-								<asp:DataGrid ID="lstInstalledOnTabs" runat="server" AutoGenerateColumns="False" BorderStyle="None" BorderWidth="0" CellPadding="4" AllowPaging="true" PageSize="20" EnableViewState="true" ShowHeader="False">
-									<HeaderStyle CssClass="NormalBold" />
-									<Columns>
-									<asp:TemplateColumn HeaderText="Page">
-										<ItemTemplate><%#GetInstalledOnLink(Container.DataItem)%></ItemTemplate>
-									</asp:TemplateColumn>
-									</Columns>
-								</asp:DataGrid>
-							</td></tr>
-						</table>
-					</td>
-				</tr>
-			</table>
-			<br/>
-			<dnn:sectionhead id="dshPage" cssclass="Head" runat="server" text="Page Settings" section="tblPage" resourcekey="PageSettings" isexpanded="False" includerule="True" />
-			<table id="tblPage" cellspacing="0" cellpadding="2" style="width:725px" summary="Advanced Settings Design Table" border="0" runat="server">
-				<tr>
-					<td colspan="2"><asp:label id="lblPageSettingsHelp" cssclass="Normal" runat="server" resourcekey="PageSettingsHelp" enableviewstate="False"/></td>
-				</tr>
-				<tr>
-					<td style="width:25px"></td>
-					<td valign="top" style="width:675px">
-						<dnn:sectionhead id="dshAppearance" cssclass="Head" runat="server" text="Basic Settings" section="tblAppearance" resourcekey="Appearance" />
-						<table id="tblAppearance" cellspacing="2" cellpadding="2" summary="Appearance Design Table" border="0" runat="server">
-							<tr>
-								<td class="SubHead" style="width:200px" valign="top"><dnn:label id="plIcon" text="Icon:" runat="server" controlname="ctlIcon"/></td>
-								<td style="width:475px"><dnn:url id="ctlIcon" runat="server" style="width:475px" ShowImages="true" showurls="False" showtabs="False" showlog="False" showtrack="False" required="False" ShowNone="true" /></td>
-							</tr>
-							<tr>
-								<td class="SubHead" style="width:200px"><dnn:label id="plAlign" text="Alignment:" runat="server" controlname="cboAlign"/></td>
-								<td valign="top">
-									<asp:radiobuttonlist id="cboAlign" cssclass="Normal" runat="server" repeatdirection="Horizontal">
-										<asp:listitem resourcekey="Left" value="left" />
-										<asp:listitem resourcekey="Center" value="center" />
-										<asp:listitem resourcekey="Right" value="right" />
-										<asp:listitem resourcekey="Not_Specified" value="" />
-									</asp:radiobuttonlist>
-								</td>
-							</tr>
-							<tr>
-								<td class="SubHead" style="width:200px"><dnn:label id="plColor" text="Color:" runat="server" controlname="txtColor"/></td>
-								<td valign="top"><asp:textbox id="txtColor" style="width:450px" cssclass="NormalTextBox" runat="server" columns="7"/></td>
-							</tr>
-							<tr>
-								<td class="SubHead" style="width:200px"><dnn:label id="plBorder" text="Border:" runat="server" controlname="txtBorder"/></td>
-								<td valign="top">
-									<asp:textbox id="txtBorder" style="width:450px" cssclass="NormalTextBox" runat="server" MaxLength="1"/>
-									<asp:CompareValidator ID="valBorder" ControlToValidate="txtBorder" Operator="DataTypeCheck" Type="Integer" Runat="server" Display="Dynamic" resourcekey="valBorder.ErrorMessage" />
-								</td>
-							</tr>
-							<tr>
-								<td class="SubHead" style="width:200px"><dnn:label id="plVisibility" text="Visibility:" runat="server" controlname="cboVisibility"/></td>
-								<td>
-									<asp:radiobuttonlist id="cboVisibility" cssclass="Normal" runat="server" repeatdirection="Horizontal">
-										<asp:listitem resourcekey="Maximized" value="0" />
-										<asp:listitem resourcekey="Minimized" value="1" />
-										<asp:listitem resourcekey="None" value="2" />
-									</asp:radiobuttonlist>
-								</td>
-							</tr>
-							<tr>
-								<td class="SubHead" style="width:200px"><dnn:label id="plDisplayTitle" runat="server" controlname="chkDisplayTitle"/></td>
-								<td valign="top"><asp:CheckBox ID="chkDisplayTitle" Runat="server" CssClass="NormalTextBox"/></td>
-							</tr>
-							<tr>
-								<td class="SubHead" style="width:200px"><dnn:label id="plDisplayPrint" runat="server" controlname="chkDisplayPrint"/></td>
-								<td valign="top"><asp:CheckBox ID="chkDisplayPrint" Runat="server" CssClass="NormalTextBox"/></td>
-							</tr>
-							<tr>
-								<td class="SubHead" style="width:200px"><dnn:label id="plDisplaySyndicate" runat="server" controlname="chkDisplaySyndicate"/></td>
-								<td valign="top"><asp:CheckBox ID="chkDisplaySyndicate" Runat="server" CssClass="NormalTextBox"/></td>
-							</tr>
-							<tr>
-								<td class="SubHead" style="width:200px"><dnn:label id="plWebSlice" runat="server" controlname="chkWebSlice"/></td>
-								<td valign="top"><asp:CheckBox ID="chkWebSlice" Runat="server" CssClass="NormalTextBox" AutoPostBack="true"/></td>
-							</tr>
-							<tr>
-							    <td colspan="2">
-							        <table id="tblWebSlice" runat="server">
-							            <tr>
-							                <td style="width:20px"></td>
-								            <td class="SubHead" style="width:180px"><dnn:label id="plWebSliceTitle" runat="server" controlname="txtWebSliceTitle"/></td>
-								            <td valign="top"><asp:TextBox ID="txtWebSliceTitle" runat="server" CssClass="NormalTextBox" style="width:200px" /></td>
-							            </tr>
-							            <tr>
-							                <td style="width:20px"></td>
-								            <td class="SubHead" style="width:180px" valign="top"><dnn:label id="plWebSliceExpiry" runat="server" controlname="txtWebSliceExpiry" /></td>
-								            <td>
-									            <asp:textbox id="txtWebSliceExpiry" runat="server" cssclass="NormalTextBox" style="width:120px" columns="30" maxlength="11"/>&nbsp;
-									            <asp:hyperlink id="cmdWebSliceExpiry" cssclass="CommandButton" runat="server" resourcekey="Calendar"/>
-									            <asp:CompareValidator ID="valWebSliceExpiry" ControlToValidate="txtWebSliceExpiry" Operator="DataTypeCheck" Type="Date" Runat="server" Display="Dynamic" resourcekey="valWebSliceExpiry.ErrorMessage" />
-								            </td>
-							            </tr>
-							            <tr>
-							                <td style="width:20px"></td>
-								            <td class="SubHead" style="width:180px"><dnn:label id="plWebSliceTTL" runat="server" controlname="txtWebSliceTTL"/></td>
-								            <td valign="top">
-								                <asp:TextBox ID="txtWebSliceTTL" runat="server" CssClass="NormalTextBox" style="width:100px" />
-									            <asp:CompareValidator ID="valWebSliceTTL" ControlToValidate="txtWebSliceTTL" Operator="DataTypeCheck" Type="Integer" Runat="server" Display="Dynamic" resourcekey="valWebSliceTTL.ErrorMessage" />
-								            </td>
-							            </tr>
-							        </table>
-							    </td>
-							</tr>
-							<tr>
-								<td class="SubHead" style="width:200px"><dnn:label id="plModuleContainer" runat="server" controlname="ctlModuleContainer"/></td>
-								<td valign="top"><dnn:skin id="ctlModuleContainer" runat="server" DefaultKey="Page" /></td>
-							</tr>
-						</table>
-						<br/>
-						<dnn:SectionHead ID="dshCaching" CssClass="Head" runat="server" Text="Cache Settings"
-                                Section="tblCaching" ResourceKey="CacheSettings"></dnn:SectionHead>
-                            <table id="tblCaching" cellspacing="2" cellpadding="2" summary="Appearance Design Table"
-                            border="0" runat="server">
-                                <tr>
-                                    <td class="SubHead" valign="top" width="200">
-                                        <dnn:Label ID="lblCacheProvider" runat="server" Text="Cache Provider" ControlName="cboCacheProvider" ResourceKey="CacheProvider" HelpKey="CacheProvider.Help"></dnn:Label>
-                                    </td>
-                                    <td>
-                                        <asp:DropDownList ID="cboCacheProvider" runat="server" AutoPostBack="true" DataValueField="Key" DataTextField="filteredkey" />&nbsp;&nbsp;
-                                        <asp:Label ID="lblCacheInherited" runat="server" resourceKey="CacheInherited" CssClass="NormalRed">Inherited</asp:Label>
-                                    </td>
-                                </tr>
-                                <tr id="trCacheDuration" runat="server" visible="false">
-                                    <td class="SubHead" valign="top" width="200">
-                                        <dnn:Label ID="lblCacheDuration" runat="server" Text="Cache Duration (seconds)" ControlName="txtCacheDuration" ResourceKey="CacheDuration" HelpKey="CacheDuration.Help"></dnn:Label>
-                                    </td>
-                                    <td>
-                                        <asp:TextBox ID="txtCacheDuration" runat="server" />
-                                        <asp:CompareValidator ID="valCacheTime" ControlToValidate="txtCacheDuration" Operator="DataTypeCheck" Type="Integer" Runat="server" Display="Dynamic" resourcekey="valCacheTime.ErrorMessage" />
-                                        <br /><asp:Label ID="lblCacheDurationWarning" runat="server" ResourceKey="CacheDurationWarning" CssClass="NormalRed"/>
-                                    </td>
-                                </tr>
-                            </table>
-                            <br />
-						<dnn:sectionhead id="dshOther" cssclass="Head" runat="server" text="Advanced Settings" section="tblOther" resourcekey="OtherSettings" isexpanded="False" />
-						<table id="tblOther" cellspacing="2" cellpadding="2" summary="Security Details Design Table" border="0" runat="server">
-							<tr>
-								<td class="SubHead" style="width:200px"><dnn:label id="plDefault" text="Set As Default Settings?" runat="server" controlname="chkDefault"/></td>
-								<td valign="top"><asp:CheckBox ID="chkDefault" Runat="server" CssClass="NormalTextBox"/></td>
-							</tr>
-							<tr>
-								<td class="SubHead" style="width:200px"><dnn:label id="plAllModules" text="Apply To All Modules?" runat="server" controlname="chkAllModules"/></td>
-								<td valign="top"><asp:CheckBox ID="chkAllModules" Runat="server" CssClass="NormalTextBox"></asp:CheckBox></td>
-							</tr>
-							<tr id="rowTab" runat="server">
-								<td class="SubHead" style="width:200px"><dnn:label id="plTab" text="Move To Tab:" runat="server" controlname="cboTab"/></td>
-								<td>
-								    <asp:dropdownlist id="cboTab" style="width:450px" datatextfield="IndentedTabName" datavaluefield="TabId" cssclass="NormalTextBox" runat="server"/>
-								</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-			</table>
-			<br/>
-			<dnn:sectionhead id="dshSpecific" cssclass="Head" runat="server" text="Module Specific Settings" section="tblSpecific" isexpanded="True" includerule="True" />
-			<table id="tblSpecific" cellspacing="0" cellpadding="2" style="width:525px" summary="Specific Settings Design Table" border="0" runat="server">
-				<tr id="rowspecifichelp" runat="server">
-					<td colSpan="2" class="NormalBold" align="left">
-						<asp:Image id="imgSpecificHelp" runat="server" ImageUrl="~/images/help.gif"/>
-						<asp:HyperLink id="lnkSpecificHelp" runat="server" />&nbsp;:&nbsp;
-						<asp:label id="lblSpecificSettingsHelp" cssclass="Normal" runat="server" resourcekey="SpecificSettingsHelp" enableviewstate="False" />
-					</td>
-				</tr>
-				<tr>
-					<td style="width:25px"></td>
-					<td valign="top" style="width:475px"><asp:panel id="pnlSpecific" runat="server"/></td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-</table>
-<p>
-    <dnn:CommandButton ID="cmdUpdate" resourcekey="cmdUpdate" runat="server" CssClass="CommandButton" ImageUrl="~/images/save.gif" />&nbsp;
-    <dnn:CommandButton ID="cmdDelete" resourcekey="cmdDelete" runat="server" CssClass="CommandButton" ImageUrl="~/images/delete.gif" CausesValidation="False" />&nbsp;
-    <dnn:CommandButton ID="cmdCancel" resourcekey="cmdCancel" runat="server" CssClass="CommandButton" ImageUrl="~/images/lt.gif" CausesValidation="False" />
-</p>
+<%@ Register TagPrefix="dnn" TagName="ModuleLocalization" Src="~/Admin/Modules/ModuleLocalization.ascx" %>
+<%@ Register TagPrefix="dnnweb" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<div class="dnnForm dnnModuleSettings dnnClear" id="dnnModuleSettings">
+    <ul class="dnnAdminTabNav dnnClear">
+        <li><a href="#msModuleSettings"><%=LocalizeString("ModuleSettings")%></a></li>
+        <li><a href="#msPermissions"><%=LocalizeString("Permissions")%></a></li>
+        <li><a href="#msPageSettings"><%=LocalizeString("PageSettings")%></a></li>
+        <li id="specificSettingsTab" runat="server">
+            <asp:HyperLink href="#msSpecificSettings" ID="hlSpecificSettings" runat="server" />
+        </li>
+    </ul>
+    <div class="msModuleSettings dnnClear" id="msModuleSettings">
+        <div class="dnnFormExpandContent">
+            <a href=""><%=Localization.GetString("ExpandAll", Localization.SharedResourceFile)%></a>
+        </div>
+        <div class="msmsContent dnnClear">
+            <h2 id="dnnPanel-ModuleGeneralDetails" class="dnnFormSectionHead"><a href="" class="dnnSectionExpanded"><%=LocalizeString("GeneralDetails")%></a></h2>
+            <fieldset>
+                <div class="dnnFormItem" id="cultureRow" runat="server">
+                    <dnn:label id="cultureLabel" runat="server" controlname="cultureLanguageLabel" />
+                    <dnn:dnnlanguagelabel id="cultureLanguageLabel" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plFriendlyName" runat="server" controlname="txtFriendlyName" />
+                    <asp:TextBox ID="txtFriendlyName" runat="server" Enabled="False" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plTitle" runat="server" controlname="txtTitle" />
+                    <asp:TextBox ID="txtTitle" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plTags" runat="server" controlname="termsSelector" />
+                    <dnn:termsselector id="termsSelector" runat="server" height="250px" width="525px" />
+                </div>
+            </fieldset>
+            <h2 id="dnnPanel-ModuleSecuritySettings" class="dnnFormSectionHead"><a href="" class="dnnSectionExpanded"><%=LocalizeString("Security")%></a></h2>
+            <fieldset>
+                <div class="dnnFormItem" id="rowAllTabs" runat="server">
+                    <dnn:label id="plAllTabs" runat="server" controlname="chkAllTabs" />
+                    <asp:CheckBox ID="chkAllTabs" runat="server" AutoPostBack="true" />
+                </div>
+                <div class="dnnFormItem" id="rowSearchOnce" runat="server">
+                    <dnn:label id="plSearchOnce" runat="server" controlname="chkSearchOnce" />
+                    <asp:CheckBox ID="chkSearchOnce" runat="server" />
+                </div>
+                <div class="dnnFormItem" id="trnewPages" runat="server">
+                    <dnn:label id="plNewTabs" runat="server" controlname="chkNewTabs" />
+                    <asp:CheckBox ID="chkNewTabs" runat="server" />
+                </div>
+                <div id="isShareableRow" runat="server" Visible="False" class="dnnFormItem">
+                    <dnn:label id="isShareableLabel" runat="server" controlname="isShareableCheckBox" />
+                    <asp:CheckBox ID="isShareableCheckBox" runat="server"/>
+                </div>
+                <div id="isShareableRowViewOnly" class="dnnFormItem">
+                    <dnn:label id="isShareableViewOnlyLabel" runat="server" controlname="isShareableViewOnlyCheckBox" />
+                    <asp:CheckBox ID="isShareableViewOnlyCheckBox" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plAdminBorder" runat="server" controlname="chkAdminBorder" />
+                    <asp:CheckBox ID="chkAdminBorder" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plHeader" runat="server" controlname="txtHeader" />
+                    <asp:TextBox ID="txtHeader" runat="server" TextMode="MultiLine" Rows="6" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plFooter" runat="server" controlname="txtFooter" />
+                    <asp:TextBox ID="txtFooter" runat="server" TextMode="MultiLine" Rows="6" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plStartDate" runat="server" controlname="txtStartDate" />
+                    <dnn:dnndatepicker id="startDatePicker" runat="server" />
+                    <asp:CompareValidator ID="valtxtStartDate" ControlToValidate="startDatePicker" Operator="DataTypeCheck"
+                        Type="Date" runat="server" Display="Dynamic" resourcekey="valStartDate.ErrorMessage"
+                        CssClass="dnnFormMessage dnnFormError" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plEndDate" runat="server" controlname="txtEndDate" />
+                    <dnn:dnndatepicker id="endDatePicker" runat="server" />
+                    <asp:CompareValidator ID="valtxtEndDate" ControlToValidate="endDatePicker" Operator="DataTypeCheck"
+                        Type="Date" runat="server" Display="Dynamic" resourcekey="valEndDate.ErrorMessage"
+                        CssClass="dnnFormMessage dnnFormError" />
+                    <asp:CompareValidator ID="val2txtEndDate" ControlToValidate="endDatePicker" ControlToCompare="startDatePicker"
+                        Operator="GreaterThanEqual" Type="Date" runat="server" Display="Dynamic" resourcekey="valEndDate2.ErrorMessage"
+                        CssClass="dnnFormMessage dnnFormError" />
+                </div>
+            </fieldset>
+            <h2 id="dnnPanel-ModuleAdditionalPages" class="dnnFormSectionHead">
+                <a href="" class="dnnSectionExpanded">
+                    <%=LocalizeString("ModuleInstalledOn")%></a></h2>
+            <fieldset>
+                <div>
+                    <div class="dnnFormItem">
+                        <dnnweb:DnnGrid ID="dgOnTabs" runat="server" AutoGenerateColumns="False" 
+                            AllowPaging="true" PageSize="20">
+                            <MasterTableView>
+                                <Columns>
+                                    <dnnweb:DnnGridTemplateColumn HeaderText="Site" HeaderStyle-Width="150px">
+                                        <ItemTemplate>
+                                            <%#GetInstalledOnSite(Container.DataItem)%>
+                                        </ItemTemplate>
+                                    </dnnweb:DnnGridTemplateColumn>
+                                    <dnnweb:DnnGridTemplateColumn HeaderText="Page">
+                                        <ItemTemplate>
+                                            <%#GetInstalledOnLink(Container.DataItem)%>
+                                        </ItemTemplate>
+                                    </dnnweb:DnnGridTemplateColumn>
+                                </Columns>
+                                <NoRecordsTemplate>
+                                    <div class="dnnFormMessage dnnFormWarning">
+                                        <asp:Label ID="lblNoRecords" runat="server" resourcekey="lblNoRecords" />
+                                    </div>
+                                </NoRecordsTemplate>
+                            </MasterTableView>
+                        </dnnweb:DnnGrid>
+                    </div>   
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div class="msPermissions dnnClear" id="msPermissions">
+        <div class="mspContent dnnClear">
+            <fieldset>
+                <div id="permissionsRow" runat="server">
+                    <dnn:modulepermissionsgrid id="dgPermissions" runat="server" />
+                    <asp:CheckBox ID="chkInheritPermissions" Visible="false" AutoPostBack="true" runat="server" resourcekey="InheritPermissions" />
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div class="msPageSettings dnnClear" id="msPageSettings">
+        <div class="dnnFormExpandContent">
+            <a href="">
+                <%=Localization.GetString("ExpandAll", Localization.SharedResourceFile)%></a></div>
+        <div class="mspsContent dnnClear">
+            <h2 id="dnnPanel-ModuleAppearance" class="dnnFormSectionHead">
+                <a href="" class="dnnSectionExpanded">
+                    <%=LocalizeString("Appearance")%></a></h2>
+            <fieldset>
+                <div class="dnnFormItem">
+                    <dnn:label id="plIcon" runat="server" controlname="ctlIcon" />
+                    <div class="dnnLeft">
+                        <dnn:url id="ctlIcon" runat="server" showimages="true" showurls="False" showtabs="False"
+                            showlog="False" showtrack="false" required="False" shownone="true" />
+                    </div>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plAlign" runat="server" controlname="cboAlign" />
+                    
+                        <asp:RadioButtonList ID="cboAlign" CssClass="dnnFormRadioButtons" runat="server"
+                            RepeatLayout="Flow">
+                            <asp:ListItem resourcekey="Left" Value="left" />
+                            <asp:ListItem resourcekey="Center" Value="center" />
+                            <asp:ListItem resourcekey="Right" Value="right" />
+                            <asp:ListItem resourcekey="Not_Specified" Value="" />
+                        </asp:RadioButtonList>
+                   
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plColor" runat="server" controlname="txtColor" />
+                    <asp:TextBox ID="txtColor" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plBorder" runat="server" controlname="txtBorder" />
+                    <asp:TextBox ID="txtBorder" runat="server" MaxLength="1" />
+                    <asp:CompareValidator ID="valBorder" ControlToValidate="txtBorder" Operator="DataTypeCheck"
+                        Type="Integer" runat="server" Display="Dynamic" resourcekey="valBorder.ErrorMessage"
+                        CssClass="dnnFormMessage dnnFormError" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plVisibility" runat="server" controlname="cboVisibility" />
+                    <asp:RadioButtonList ID="cboVisibility" CssClass="dnnFormRadioButtons" runat="server"
+                        RepeatLayout="Flow">
+                        <asp:ListItem resourcekey="Maximized" Value="0" />
+                        <asp:ListItem resourcekey="Minimized" Value="1" />
+                        <asp:ListItem resourcekey="None" Value="2" />
+                    </asp:RadioButtonList>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plDisplayTitle" runat="server" controlname="chkDisplayTitle" />
+                    <asp:CheckBox ID="chkDisplayTitle" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plDisplayPrint" runat="server" controlname="chkDisplayPrint" />
+                    <asp:CheckBox ID="chkDisplayPrint" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plDisplaySyndicate" runat="server" controlname="chkDisplaySyndicate" />
+                    <asp:CheckBox ID="chkDisplaySyndicate" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plWebSlice" runat="server" controlname="chkWebSlice" />
+                    <asp:CheckBox ID="chkWebSlice" runat="server" AutoPostBack="true" />
+                </div>
+                <div class="dnnFormItem" id="webSliceTitle" runat="server">
+                    <dnn:label id="plWebSliceTitle" runat="server" controlname="txtWebSliceTitle" />
+                    <asp:TextBox ID="txtWebSliceTitle" runat="server" />
+                </div>
+                <div class="dnnFormItem" id="webSliceExpiry" runat="server">
+                    <dnn:label id="plWebSliceExpiry" runat="server" controlname="txtWebSliceExpiry" />
+                    <dnn:dnndatepicker ID="diWebSliceExpiry" runat="server" />
+                    <asp:CompareValidator ID="valWebSliceExpiry" ControlToValidate="diWebSliceExpiry"
+                        Operator="DataTypeCheck" Type="Date" runat="server" Display="Dynamic" resourcekey="valWebSliceExpiry.ErrorMessage"
+                        CssClass="dnnFormMessage dnnFormError" />
+                </div>
+                <div class="dnnFormItem" id="webSliceTTL" runat="server">
+                    <dnn:label id="plWebSliceTTL" runat="server" controlname="txtWebSliceTTL" />
+                    <asp:TextBox ID="txtWebSliceTTL" runat="server" />
+                    <asp:CompareValidator ID="valWebSliceTTL" ControlToValidate="txtWebSliceTTL" Operator="DataTypeCheck"
+                        Type="Integer" runat="server" Display="Dynamic" resourcekey="valWebSliceTTL.ErrorMessage"
+                        CssClass="dnnFormMessage dnnFormError" />
+                </div>
+                <div class="dnnFormItem dnnContainerPreview">
+                    <dnn:label id="plModuleContainer" runat="server" controlname="ctlModuleContainer" />
+                    <%--<asp:DropDownList ID="moduleContainerCombo" runat="server" DataTextField="Key" DataValueField="Value" />--%>
+                    <dnn:DnnComboBox ID="moduleContainerCombo" runat="server" DataTextField="Key" DataValueField="Value" />
+                    <a href="#" class="dnnSecondaryAction">
+                        <%=LocalizeString("ContainerPreview")%></a>
+                </div>
+            </fieldset>
+            <h2 id="dnnPanel-ModuleCacheSettings" class="dnnFormSectionHead">
+                <a href="" class="dnnSectionExpanded">
+                    <%=LocalizeString("CacheSettings")%></a></h2>
+            <fieldset>
+                <div class="dnnFormItem dnnCacheSettings">
+                    <dnn:label id="lblCacheProvider" runat="server" controlname="cboCacheProvider" resourcekey="CacheProvider" />
+                    <%--<asp:DropDownList ID="cboCacheProvider" runat="server" AutoPostBack="true" DataValueField="Key"
+                        DataTextField="filteredkey" />--%>
+                    <dnn:DnnComboBox ID="cboCacheProvider" runat="server" AutoPostBack="true" DataValueField="Key" DataTextField="filteredkey" />
+                    <asp:Label ID="lblCacheInherited" runat="server" resourceKey="CacheInherited" CssClass="labelCacheInherited" />
+                </div>
+                <div class="dnnFormItem" id="divCacheDuration" runat="server" visible="false">
+                    <asp:Panel ID="cacheWarningRow" runat="server" Class="dnnFormMessage dnnFormWarning">
+                        <asp:Label ID="lblCacheDurationWarning" runat="server" ResourceKey="CacheDurationWarning"/>                
+                    </asp:Panel>
+                    <dnn:label id="lblCacheDuration" runat="server" controlname="txtCacheDuration" resourcekey="CacheDuration" />
+                    <asp:TextBox ID="txtCacheDuration" runat="server" class="msCacheDuration"/>
+                    <asp:CompareValidator ID="valCacheTime" ControlToValidate="txtCacheDuration" Operator="DataTypeCheck"
+                        Type="Integer" runat="server" Display="Dynamic" resourcekey="valCacheTime.ErrorMessage"
+                        CssClass="dnnFormMessage dnnFormError" />
+                </div>
+            </fieldset>
+            <h2 id="dnnPanel-ModuleOtherSettings" class="dnnFormSectionHead">
+                <a href="" class="dnnSectionExpanded">
+                    <%=LocalizeString("OtherSettings")%></a></h2>
+            <fieldset>
+                <div class="dnnFormItem">
+                    <dnn:label id="plDefault" runat="server" controlname="chkDefault" />
+                    <asp:CheckBox ID="chkDefault" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plAllModules" runat="server" controlname="chkAllModules" />
+                    <asp:CheckBox ID="chkAllModules" runat="server" />
+                </div>
+                <div class="dnnFormItem" id="rowTab" runat="server">
+                    <dnn:label id="plTab" runat="server" controlname="cboTab" />
+                    <%--<asp:DropDownList ID="cboTab" DataTextField="IndentedTabName" DataValueField="TabId"
+                        runat="server" />--%>
+                    <dnn:DnnComboBox ID="cboTab" DataTextField="IndentedTabName" DataValueField="TabId" runat="server" />
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div class="msSpecificSettings dnnClear" id="msSpecificSettings">
+        <div class="mspsContent dnnClear">
+            <fieldset id="fsSpecific" runat="server">
+                <asp:Panel ID="pnlSpecific" runat="server" />
+            </fieldset>
+        </div>
+    </div>
+    <ul class="dnnActions dnnClear">
+        <li>
+            <asp:LinkButton ID="cmdUpdate" runat="server" CssClass="dnnPrimaryAction" resourcekey="cmdUpdate" /></li>
+        <li>
+            <asp:LinkButton ID="cmdDelete" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdDelete"
+                CausesValidation="False" /></li>
+        <li>
+            <asp:HyperLink ID="cancelHyperLink" runat="server" CssClass="dnnSecondaryAction"
+                resourcekey="cmdCancel" /></li>
+    </ul>
+    <div class="dnnmsStat dnnClear">
         <dnn:audit id="ctlAudit" runat="server" />
+    </div>
+</div>
+<script language="javascript" type="text/javascript">
+    /*globals jQuery, window, Sys */
+    (function ($, Sys) {
+        function setUpDnnModuleSettings() {
+            $('#dnnModuleSettings').dnnTabs().dnnPanels();
+            $('#msModuleSettings .dnnFormExpandContent a').dnnExpandAll({
+                expandText: '<%=Localization.GetSafeJSString("ExpandAll", Localization.SharedResourceFile)%>',
+                collapseText: '<%=Localization.GetSafeJSString("CollapseAll", Localization.SharedResourceFile)%>',
+                targetArea: '#msModuleSettings'
+            });
+            $('#msPageSettings .dnnFormExpandContent a').dnnExpandAll({
+                expandText: '<%=Localization.GetSafeJSString("ExpandAll", Localization.SharedResourceFile)%>',
+                collapseText: '<%=Localization.GetSafeJSString("CollapseAll", Localization.SharedResourceFile)%>',
+                targetArea: '#msPageSettings'
+            });
+            $('#<%= cmdDelete.ClientID %>').dnnConfirm({
+                text: '<%= Localization.GetSafeJSString("DeleteItem.Text", Localization.SharedResourceFile) %>',
+                yesText: '<%= Localization.GetSafeJSString("Yes.Text", Localization.SharedResourceFile) %>',
+                noText: '<%= Localization.GetSafeJSString("No.Text", Localization.SharedResourceFile) %>',
+                title: '<%= Localization.GetSafeJSString("Confirm.Text", Localization.SharedResourceFile) %>'
+            });
+            $('.dnnContainerPreview').dnnPreview({
+                containerSelector: '<%=  moduleContainerCombo.ClientID %>',
+                baseUrl: '<%= DotNetNuke.Common.Globals.NavigateURL(this.TabId) %>',
+                noSelectionMessage: '<%= DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(LocalizeString("PreviewNoSelectionMessage.Text")) %>',
+                alertCloseText: '<%= Localization.GetSafeJSString("Close.Text", Localization.SharedResourceFile)%>',
+                alertOkText: '<%= Localization.GetSafeJSString("Ok.Text", Localization.SharedResourceFile)%>',
+                useComboBox: true
+            });
+
+            toggleShareableRowViewOnly(false);
+            $('#<%=isShareableCheckBox.ClientID %>').change(function () {
+                toggleShareableRowViewOnly(true);
+            });
+
+        }
+        
+        function toggleShareableRowViewOnly(animation) {
+            var isSharable = $('#<%=isShareableCheckBox.ClientID %>').attr("checked");
+            if (isSharable == "checked") {
+                animation ? $('#isShareableRowViewOnly').slideDown() : $('#isShareableRowViewOnly').show();
+            }
+            else {
+                animation ? $('#isShareableRowViewOnly').slideUp('fast') : $('#isShareableRowViewOnly').hide();
+            }
+        }
+
+        $(document).ready(function () {
+            setUpDnnModuleSettings();
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+                setUpDnnModuleSettings();
+            });
+        });
+    } (jQuery, window.Sys));
+</script>

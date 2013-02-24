@@ -25,7 +25,7 @@
 	''' This script will fail if the required AJAX libraries loaded by init.js are not present.
 	''' </summary>
 	''' <remarks>
-	'''	Based mostly on GreyWyvern's HTML content Scroller & Marquee script
+	'''	Based mostly on GreyWyvern's HTML content Scroller && Marquee script
 	'''	Portions Copyright GreyWyvern 2007
 	'''	Licenced for free distribution under the BSDL
 	'''

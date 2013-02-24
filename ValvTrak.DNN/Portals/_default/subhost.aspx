@@ -1,41 +1,79 @@
-<%@ Page language="VB" %>
-<%@ Import Namespace="DotNetNuke" %>
+<%@ Page Language="C#" %>
 
 <script runat="server">
+    
+    protected override void OnInit(EventArgs e)
+    {
+        base.OnInit(e);
 
-    Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
+        PortalSettings settings = PortalController.GetCurrentPortalSettings();
+        CultureInfo pageLocale = Localization.GetPageLocale(settings);
+        if ((settings != null) && (pageLocale != null))
+        {
+            Localization.SetThreadCultures(pageLocale, settings);
+        }
+    }    
+    
+	protected override void OnLoad(EventArgs e)
+	{
+		base.OnLoad(e);
 
-        Dim DomainName As String = Null.NullString
-            Dim ServerPath As String
-            Dim URL() As String
-            Dim intURL As Integer
+	    var domainName = "";
+	    int urlIndex;
 
-            ' parse the Request URL into a Domain Name token 
-            URL = Split(Request.Url.ToString(), "/")
-            For intURL = 2 To URL.GetUpperBound(0)
-                Select Case URL(intURL).ToLower
-                    Case "admin", "desktopmodules", "mobilemodules", "premiummodules"
-                        Exit For
-                    Case Else
-                        ' check if filename
-                        If InStr(1, URL(intURL), ".aspx") = 0 Then
-                            DomainName = DomainName & IIf(DomainName <> "", "/", "") & URL(intURL)
-                        Else
-							Exit For
-                        End If
-                End Select
-            Next intURL
+		// parse the Request URL into a Domain Name token 
+		string[] url = Request.Url.ToString().Split('/');
+		for (urlIndex = 2; urlIndex <= url.GetUpperBound(0); urlIndex++)
+		{
+			bool willExit = false;
+			switch (url[urlIndex].ToLower())
+			{
+				case "admin":
+				case "desktopmodules":
+				case "mobilemodules":
+				case "premiummodules":
+					willExit = true;
+					break;
+				default:
+					// check if filename
+					if (url[urlIndex].IndexOf(".aspx", StringComparison.Ordinal) == -1)
+					{
+						domainName = domainName + (!string.IsNullOrEmpty(domainName) ? "/" : "") + url[urlIndex];
+					}
+					else
+					{
+						willExit = true;
+					}
 
-            ' format the Request.ApplicationPath
-            ServerPath = Request.ApplicationPath
-            If Mid(ServerPath, Len(ServerPath), 1) <> "/" Then
-                ServerPath = ServerPath & "/"
-            End If
+					break;
+			}
+			if (willExit)
+				break;
+		}
 
-            DomainName = ServerPath & "Default.aspx?alias=" & DomainName
+		// format the Request.ApplicationPath
+		string serverPath = Request.ApplicationPath;
+		if (serverPath != null && serverPath.Substring(serverPath.Length - 1, 1) != "/")
+		{
+			serverPath = serverPath + "/";
+		}
 
-            Response.Redirect(DomainName,True)
-	
-    End Sub
+        PortalSettings portal = PortalController.GetCurrentPortalSettings();
+
+		var queryString = Request.Url.Query.TrimStart('?');
+
+        if (Request.Url.Query.Length == 0 && portal.HomeTabId > Null.NullInteger)
+        {
+			Response.Redirect(DotNetNuke.Common.Globals.NavigateURL(portal.HomeTabId, portal, string.Empty, queryString), true);
+        }
+        else
+        {
+			domainName = string.Format("{0}Default.aspx?alias={1}&{2}", serverPath, domainName, queryString);
+
+            Response.Redirect(domainName, true);
+        }
+
+	}
 
 </script>
+

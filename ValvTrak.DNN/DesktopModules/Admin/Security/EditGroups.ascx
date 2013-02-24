@@ -1,28 +1,22 @@
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Security.EditGroups" CodeFile="EditGroups.ascx.cs" %>
 <%@ Register TagPrefix="dnn" TagName="SectionHead" Src="~/controls/SectionHeadControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<%@ Control language="vb" CodeFile="EditGroups.ascx.vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Security.EditGroups" %>
-<table class="Settings" cellspacing="2" cellpadding="2" summary="Edit Roles Design Table" border="0">
-	<tr>
-		<td width="560" valign="top">
-			<table id="tblBasic" cellspacing="0" cellpadding="2" width="525" summary="Basic Settings Design Table" border="0" runat="server">
-				<tr valign="top">
-					<td class="SubHead" width="150"><dnn:label id="plRoleGroupName" runat="server" controlname="txtRoleGroupName"></dnn:label></td>
-					<td align="left" width="325">
-						<asp:textbox id="txtRoleGroupName" cssclass="NormalTextBox" runat="server" maxlength="50" columns="30" width="325"></asp:textbox>
-						<asp:requiredfieldvalidator id="valRoleGroupName" cssclass="NormalRed" runat="server" resourcekey="valRoleGroupName" controltovalidate="txtRoleGroupName" errormessage="<br>You Must Enter a Valid Name" display="Dynamic"></asp:requiredfieldvalidator>
-					</td>
-				</tr>
-				<tr valign="top">
-					<td class="SubHead" width="150"><dnn:label id="plDescription" runat="server" controlname="txtDescription"></dnn:label></td>
-					<td width="325"><asp:textbox id="txtDescription" cssclass="NormalTextBox" runat="server" maxlength="1000" columns="30" width="325" textmode="MultiLine" height="84px"></asp:textbox></td></tr>
-			</table>
-		</td>
-	</tr>
-</table>
-<p>
-	<asp:linkbutton id="cmdUpdate" resourcekey="cmdUpdate" runat="server" cssclass="CommandButton" text="Update" borderstyle="none" />
-	&nbsp;
-	<asp:linkbutton id="cmdCancel" resourcekey="cmdCancel" runat="server" cssclass="CommandButton" text="Cancel" causesvalidation="False" borderstyle="none" />
-	&nbsp;
-	<asp:linkbutton id="cmdDelete" resourcekey="cmdDelete" runat="server" cssclass="CommandButton" text="Delete" causesvalidation="False" borderstyle="none" />
-</p>
+<div class="dnnForm dnnEditRoleGroups dnnClear" id="dnnEditRoleGroups">
+    <fieldset>
+        <%--<div class="dnnFormItem dnnFormHelp dnnClear"><p class="dnnFormRequired"><span><%=Localization.GetString("RequiredFields", Localization.SharedResourceFile)%></span></p></div>--%>
+        <div class="dnnFormItem">
+            <dnn:label id="plRoleGroupName" runat="server" controlname="txtRoleGroupName" cssclass="dnnFormRequired" />
+			<asp:textbox id="txtRoleGroupName" runat="server" maxlength="50" />
+			<asp:requiredfieldvalidator id="valRoleGroupName" cssclass="dnnFormMessage dnnFormError" runat="server" resourcekey="valRoleGroupName" controltovalidate="txtRoleGroupName"  display="Dynamic"/>
+        </div>
+        <div class="dnnFormItem">
+            <dnn:label id="plDescription" runat="server" controlname="txtDescription"/>
+            <asp:textbox id="txtDescription" cssclass="NormalTextBox" runat="server" maxlength="1000" textmode="MultiLine" rows="10" />
+        </div>
+    </fieldset >   
+    <ul class="dnnActions dnnClear">
+        <li><asp:LinkButton ID="cmdUpdate" resourcekey="cmdUpdate" runat="server" CssClass="dnnPrimaryAction" /></li>
+        <li><asp:LinkButton ID="cmdDelete" resourcekey="cmdDelete" runat="server" CssClass="dnnSecondaryAction dnnDeleteRole" CausesValidation="False" /></li>
+        <li><asp:LinkButton ID="cmdCancel" resourcekey="cmdCancel" runat="server" CssClass="dnnSecondaryAction" CausesValidation="False" /></li>
+    </ul>
+</div>

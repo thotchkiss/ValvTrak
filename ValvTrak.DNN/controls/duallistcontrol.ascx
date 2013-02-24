@@ -1,4 +1,4 @@
-<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.UserControls.DualListControl" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.UI.UserControls.DualListControl" %>
 <table cellspacing="0" cellpadding="2" border="0">
 	<tr>
 		<td align="center" class="NormalBold"><asp:Label id=Label1 runat="server" enableviewstate="False">Available</asp:Label></td>

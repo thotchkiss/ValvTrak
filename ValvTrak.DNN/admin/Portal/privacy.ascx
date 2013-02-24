@@ -1,3 +1,2 @@
-<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Common.Controls.Privacy" CodeFile="Privacy.ascx.vb" %>
-<br>
-<asp:Label ID="lblPrivacy" Runat="server" CssClass="Normal"></asp:Label>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Common.Controls.Privacy" CodeFile="Privacy.ascx.cs" %>
+<div class="dnnPrivacy dnnClear"><asp:Label ID="lblPrivacy" Runat="server" /></div>

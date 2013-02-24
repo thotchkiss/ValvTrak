@@ -1,4 +1,4 @@
-<%@ Control Language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Extensions.BatchInstall" CodeFile="BatchInstall.ascx.vb" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Extensions.BatchInstall" CodeFile="BatchInstall.ascx.cs" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"%>
 
 <div style="text-align:left">
@@ -38,5 +38,5 @@
     <asp:Label ID="lblAuthSystemsError" runat="server" />
 </div>
 <p>
-	<dnn:commandbutton id="cmdInstall" runat="server" CssClass="CommandButton" ImageUrl="~/images/save.gif" ResourceKey="cmdInstall" />
+	<dnn:commandbutton id="cmdInstall" runat="server" CssClass="CommandButton" IconKey="Save" ResourceKey="cmdInstall" />
 </p>

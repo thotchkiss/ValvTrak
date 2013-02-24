@@ -412,8 +412,10 @@ Wykorzystując Windows Explorer, proszę przejść do folderu głównego witryny
     <value>Instalowanie bazy danych zostało zakończone</value>
   </data>
   <data name="DatabaseConfigDetail.Text">
-    <value>&lt;p&gt;Na tej stronie można skonfigurować ustawienia bazy danych używanej przez aplikację DotNetNuke. Jeśli aplikacja DotNetNuke  jest instalowana w kontekście "konta hostingowego", dostawca  usługi hostingu powinien udostępnić wszystkie potrzebne do instalacji informacje.&lt;/p&gt;
-&lt;p&gt;Dla SQL Server 2005 można wybrać jedną z dwóch możliwości konfiguracji: wskazanie bazy danych lub pliku bazy danych. W większości sytuacji powinna być wybrana opcja bazy danych, ale w przypadku użycia SQL Server 2005 Express może być wybrana także opcja obsługi pliku.&lt;/p&gt;</value>
+    <value>
+      &lt;p&gt;Na tej stronie można skonfigurować ustawienia bazy danych używanej przez aplikację DotNetNuke. Jeśli aplikacja DotNetNuke  jest instalowana w kontekście "konta hostingowego", dostawca  usługi hostingu powinien udostępnić wszystkie potrzebne do instalacji informacje.&lt;/p&gt;
+      &lt;p&gt;Dla SQL Server 2005 można wybrać jedną z dwóch możliwości konfiguracji: wskazanie bazy danych lub pliku bazy danych. W większości sytuacji powinna być wybrana opcja bazy danych, ale w przypadku użycia SQL Server 2005 Express może być wybrana także opcja obsługi pliku.&lt;/p&gt;
+    </value>
   </data>
   <data name="DatabaseConfigTitle.Text">
     <value>Konfiguracja połączenia do bazy danych</value>
@@ -431,9 +433,11 @@ Wykorzystując Windows Explorer, proszę przejść do folderu głównego witryny
     <value>Konfiguracja konta Host (administratora portalu - SuperUżytkownika)</value>
   </data>
   <data name="IntroDetail.Text">
-    <value>&lt;p&gt;Witamy w kreatorze instalacji aplikacji DotNetNuke. Kreator ten pomoże przeprowadzić proces instalacji aplikacji portalowej DotNetNuke.&lt;/p&gt;
-&lt;p&gt;Pomiędzy stronami kreatora można poruszać się używając przycisków Dalej i Wstecz. Na niektórych stronach wyświetlany jest trzeci przycisk "Test ...".  Przycisk ten pozwala sprawdzić ustawienia konfiguracyjne (zobaczyć efekt ustawień), zanim instalacja będzie kontynuowana.&lt;/p&gt;
-&lt;p&gt;Pierwszym krokiem jest wybór metody instalacji oraz języka, który będzie używany do wyświetlania komunikatów podczas instalacji aplikacji.&lt;/p&gt;</value>
+    <value>
+      &lt;p&gt;Witamy w kreatorze instalacji aplikacji DotNetNuke. Kreator ten pomoże przeprowadzić proces instalacji aplikacji portalowej DotNetNuke.&lt;/p&gt;
+      &lt;p&gt;Pomiędzy stronami kreatora można poruszać się używając przycisków Dalej i Wstecz. Na niektórych stronach wyświetlany jest trzeci przycisk "Test ...".  Przycisk ten pozwala sprawdzić ustawienia konfiguracyjne (zobaczyć efekt ustawień), zanim instalacja będzie kontynuowana.&lt;/p&gt;
+      &lt;p&gt;Pierwszym krokiem jest wybór metody instalacji oraz języka, który będzie używany do wyświetlania komunikatów podczas instalacji aplikacji.&lt;/p&gt;
+    </value>
   </data>
   <data name="IntroTitle.Text">
     <value>Kreator instalacji DotNetNuke - wersja {0}</value>
@@ -445,8 +449,10 @@ Wykorzystując Windows Explorer, proszę przejść do folderu głównego witryny
     <value>Instalacja pakietów regionalnych (obsługi dodatkowych języków)</value>
   </data>
   <data name="ModulesDetail.Text">
-    <value>&lt;p&gt;DotNetNuke posiada duże możliwości rozszerzeń. Rozszerzalność jest udostępniona poprzez możliwość instalowania różnych modułów.&lt;/p&gt;
-&lt;p&gt;Na tej stronie można wybrać opcjonalne moduły do instalacji. Zainstalowanie modułu czyni go dostępnym dla administratorów stron.&lt;/p</value>
+    <value>
+      &lt;p&gt;DotNetNuke posiada duże możliwości rozszerzeń. Rozszerzalność jest udostępniona poprzez możliwość instalowania różnych modułów.&lt;/p&gt;
+      &lt;p&gt;Na tej stronie można wybrać opcjonalne moduły do instalacji. Zainstalowanie modułu czyni go dostępnym dla administratorów stron.&lt;/p
+    </value>
   </data>
   <data name="ModulesTitle.Text">
     <value>Instlacja opcjonalnych modułów</value>
@@ -458,19 +464,25 @@ Wykorzystując Windows Explorer, proszę przejść do folderu głównego witryny
     <value>Instacja usługodawców (dostawców)</value>
   </data>
   <data name="PermissionsDetail.Text">
-    <value>&lt;p&gt;W aplikacji DotNetNuke obsługiwane są rozszerzone możliwośći przesyłania treści, modułów oraz skórek. Funkcje te wymagają skonfigurowania odpowiednich uprawnień do systemu plików, tak by aplikacja mogła tworzyć i usuwać pliki wewnątrz folderu witryny.&lt;/p&gt;
-&lt;p&gt;Na tej stronie następuje sprawdzenie, czy uprawnienia zostały ustawione w sposób umożliwiający poprawne działanie tych funkcji.&lt;/p&gt;</value>
+    <value>
+      &lt;p&gt;W aplikacji DotNetNuke obsługiwane są rozszerzone możliwośći przesyłania treści, modułów oraz skórek. Funkcje te wymagają skonfigurowania odpowiednich uprawnień do systemu plików, tak by aplikacja mogła tworzyć i usuwać pliki wewnątrz folderu witryny.&lt;/p&gt;
+      &lt;p&gt;Na tej stronie następuje sprawdzenie, czy uprawnienia zostały ustawione w sposób umożliwiający poprawne działanie tych funkcji.&lt;/p&gt;
+    </value>
   </data>
   <data name="PermissionsTitle.Text">
     <value>Sprawdzanie uprawnień do plików</value>
   </data>
   <data name="PortalDetail.Text">
-    <value>&lt;p&gt;Na tej stronie można skonfigurować witrynę portalu.&lt;/p&gt;
-&lt;p&gt;Należy zdefiniować konto administratora witryny. Użytkownik ten będzie miał dostęp do wszystkich funkcjonalności witryny, i tak jak w przypadku użytkownika Host, powinien posiadać trudne do "złamania" hasło i nazwę użytkownika.&lt;/p&gt;</value>
+    <value>
+      &lt;p&gt;Na tej stronie można skonfigurować witrynę portalu.&lt;/p&gt;
+      &lt;p&gt;Należy zdefiniować konto administratora witryny. Użytkownik ten będzie miał dostęp do wszystkich funkcjonalności witryny, i tak jak w przypadku użytkownika Host, powinien posiadać trudne do "złamania" hasło i nazwę użytkownika.&lt;/p&gt;
+    </value>
   </data>
   <data name="SkinsDetail.Text">
-    <value>&lt;p&gt;DotNetNuke posiada bogate możliwości dostosowywania wyglądu witryn za pomocą skórek. Na tej stronie można wskazać opcjonalne skórki i kontenery do zainstalowania.&lt;/p&gt;
-&lt;p&gt;Instalacja skórki/kontenera nie włącza go automatycznie, ale czyni dostępnym do wykorzystania w witrynach w dowolnym czasie.&lt;/p&gt;</value>
+    <value>
+      &lt;p&gt;DotNetNuke posiada bogate możliwości dostosowywania wyglądu witryn za pomocą skórek. Na tej stronie można wskazać opcjonalne skórki i kontenery do zainstalowania.&lt;/p&gt;
+      &lt;p&gt;Instalacja skórki/kontenera nie włącza go automatycznie, ale czyni dostępnym do wykorzystania w witrynach w dowolnym czasie.&lt;/p&gt;
+    </value>
   </data>
   <data name="SkinsTitle.Text">
     <value>Instlacja opcjonalnych skórek i kontenerów</value>
@@ -479,8 +491,10 @@ Wykorzystując Windows Explorer, proszę przejść do folderu głównego witryny
     <value>Systemy uwierzytelnienia</value>
   </data>
   <data name="AuthSystemsDetail.Text">
-    <value>&lt;p&gt;W aplikacji DotNetNuke obsługiwanych jest wiele systemów uwierzytelniania użytkowników.  Na tej stronie można wskazać, które systemy mają być zainstalowane.&lt;/p&gt;
-&lt;p&gt;Zainstalowanie systemu uwierzytelnienia nie powoduje automatycznego włączenia go w każdej witrynie, a jedynie czyni ten system dostępnym do wykorzystania przez administratorów witryn.&lt;/p&gt;</value>
+    <value>
+      &lt;p&gt;W aplikacji DotNetNuke obsługiwanych jest wiele systemów uwierzytelniania użytkowników.  Na tej stronie można wskazać, które systemy mają być zainstalowane.&lt;/p&gt;
+      &lt;p&gt;Zainstalowanie systemu uwierzytelnienia nie powoduje automatycznego włączenia go w każdej witrynie, a jedynie czyni ten system dostępnym do wykorzystania przez administratorów witryn.&lt;/p&gt;
+    </value>
   </data>
   <data name="AuthSystemsTitle.Text">
     <value>Instalowanie systemów uwierzytelnienia</value>
@@ -588,6 +602,9 @@ Wykorzystując Windows Explorer, proszę przejść do folderu głównego witryny
     <value>&lt;b&gt;&lt;font color='red'&gt;Nazwa hosta zawiera niedozwolone znaki (można użyć tylko A-Z, 0-9, - oraz .).  Nazwa ta powinna być zmodyfikowana.&lt;/font&gt;&lt;/b&gt;</value>
   </data>
   <data name="InstallFailed.Text">
-    <value>Niepowodzenie instalacji skryptów bazy danych</value>
+    <value>Niepowodzenie wykonywania skryptów instalacyjnych bazy danych</value>
+  </data>
+  <data name="DbNameError.Text">
+    <value>&lt;b&gt;&lt;font color='red'&gt;Nazwa bazy danych musi być określona.&lt;/font&gt;&lt;/b&gt;</value>
   </data>
 </root>

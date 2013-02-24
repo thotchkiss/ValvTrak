@@ -1,79 +1,68 @@
-<%@ Control language="vb" CodeFile="User.ascx.vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Users.User" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Users.User" CodeFile="User.ascx.cs" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"%>
-<%@ Register TagPrefix="dnn" TagName="SectionHead" Src="~/controls/SectionHeadControl.ascx" %>
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
 
-<dnn:propertyeditorcontrol id="UserEditor" runat="Server"
-	enableClientValidation = "true"
-	sortmode="SortOrderAttribute" 
-	labelstyle-cssclass="SubHead" 
-	helpstyle-cssclass="Help" 
-	editcontrolstyle-cssclass="NormalTextBox" 
-	labelwidth="175px" 
-	editcontrolwidth="200px" 
-	width="375px" 
-	editmode="Edit" 
-	errorstyle-cssclass="NormalRed"/>
-<asp:panel id="pnlAddUser" runat="server" visible="False">
-	<table id="tblAddUser" runat="server" width="350px">
-		<tr height="25">
-			<td style="width:175px" class="SubHead"><dnn:label id="plAuthorize" runat="server" controlname="chkAuthorize" /></td>
-			<td style="width:175px" class="normalTextBox"><asp:checkbox id="chkAuthorize" runat="server" checked="True" /></td>
-		</tr>
-		<tr height="25">
-			<td style="width:175px" class="SubHead"><dnn:label id="plNotify" runat="server" controlname="chkNotify" /></td>
-			<td style="width:175px" class="normalTextBox"><asp:checkbox id="chkNotify" runat="server" checked="True" /></td>
-		</tr>
-	</table>
-	<br/>
-	<table id="tblPassword" runat="server" cellspacing="0" cellpadding="0" width="350px" summary="Password Management" border="0">
-		<tr><td colspan="2" valign="bottom"><asp:label id="lblPasswordHelp" cssclass="SubHead" runat="server" /></td></tr>
-		<tr><td colspan="2" height="10"></td></tr>
-		<tr id="trRandom" runat="server">
-			<td style="width:175px" class="SubHead"><dnn:label id="plRandom" runat="server" controlname="chkRandom" /></td>
-			<td style="width:175px" class="normalTextBox"><asp:checkbox id="chkRandom" runat="server" checked="True" /></td>
-		</tr>
-		<tr height="25">
-			<td class="SubHead" style="width:175px"><dnn:label id="plPassword" runat="server" controlname="txtPassword" text="Password:"></dnn:label></td>
-			<td style="width:175px">
-			    <asp:textbox id="txtPassword" runat="server" cssclass="NormalTextBox" textmode="Password" size="12" maxlength="20" />
-			    <asp:Image ImageUrl="~/images/required.gif" BorderStyle="None" runat="server"/>
-			</td>
-		</tr>
-		<tr height="25">
-			<td class="SubHead" style="width:175px" valign="top"><dnn:label id="plConfirm" runat="server" controlname="txtConfirm" text="Confirm Password:"></dnn:label></td>
-			<td style="width:175px">
-			    <asp:textbox id="txtConfirm" runat="server" cssclass="NormalTextBox" textmode="Password" size="12" maxlength="20" />
-			    <asp:Image  ImageUrl="~/images/required.gif" BorderStyle="None" runat="server"/>
-			</td>
-		</tr>
-		<tr id="trQuestion" runat="server" height="25" visible="false">
-			<td class="SubHead" style="width:175px"><dnn:label id="plQuestion" runat="server" controlname="lblQuestion" text="Password Question:"></dnn:label></td>
-			<td style="width:175px">
-			    <asp:textbox id="txtQuestion" runat="server" cssclass="NormalTextBox" size="25" maxlength="256" />
-			    <asp:Image ImageUrl="~/images/required.gif" BorderStyle="None" runat="server"/>
-			</td>
-		</tr>
-		<tr id="trAnswer" runat="server" height="25" visible="false">
-			<td class="SubHead" style="width:175px"><dnn:label id="plAnswer" runat="server" controlname="txtAnswer" text="Password Answer:"></dnn:label></td>
-			<td style="width:175px">
-			    <asp:textbox id="txtAnswer" runat="server" cssclass="NormalTextBox" size="25" maxlength="128" />
-			    <asp:Image ImageUrl="~/images/required.gif" BorderStyle="None" runat="server"/>
-			</td>
-		</tr>
-		<tr>
-		    <td colspan="2">
-			    <asp:CustomValidator ID="valPassword" runat="Server" CssClass="NormalRed" />
-		    </td>
-		</tr>
-	</table>
+<dnn:DnnFormEditor id="userForm" runat="Server" FormMode="Short">
+    <Items>
+        <dnn:DnnFormLiteralItem ID="userNameReadOnly" runat="server" DataField="Username" />
+        <dnn:DnnFormTextBoxItem ID="userName" runat="server" DataField="Username" Required="true"/>
+        <dnn:DnnFormTextBoxItem ID="firstName" runat="server" DataField="FirstName" />
+        <dnn:DnnFormTextBoxItem ID="lastName" runat="server" DataField="LastName" />
+        <dnn:DnnFormTextBoxItem ID="displayName" runat="server" DataField="DisplayName" Required="true" />
+        <dnn:DnnFormLiteralItem ID="displayNameReadOnly" runat="server" DataField="DisplayName" />
+        <dnn:DnnFormTextBoxItem ID="email" runat="server" DataField="Email" Required="true" />
+   </Items>
+</dnn:DnnFormEditor>
+<asp:panel id="pnlAddUser" runat="server" visible="False" CssClass="dnnForm">
+    <div id="AuthorizeNotify" runat="server" >
+        <div class="dnnFormItem">
+            <dnn:label id="plAuthorize" runat="server" controlname="chkAuthorize" />
+            <asp:checkbox id="chkAuthorize" runat="server" checked="True" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:label id="plNotify" runat="server" controlname="chkNotify" />
+            <asp:checkbox id="chkNotify" runat="server" checked="True" />
+        </div>
+    </div>
+    <div id="Password" runat="server" >
+        <div class="dnnFormItem">
+            <div class="dnnLabel">            
+            </div>
+            <p class="dnnLeft" style="margin-top: 15px; font-weight:bold">
+                <asp:label id="lblPasswordHelp" runat="server" />
+            </p>
+        </div>
+        <div id="randomRow" runat="server" class="dnnFormItem">
+            <dnn:label id="plRandom" runat="server" controlname="chkRandom" />
+            <asp:checkbox id="chkRandom" runat="server" checked="True" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:label id="plPassword" runat="server" controlname="txtPassword" cssclass="dnnFormRequired"  />
+			<asp:textbox id="txtPassword" runat="server" TextMode="Password" size="12" maxlength="128" AutoCompleteType="Disabled" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:label id="plConfirm" runat="server" controlname="txtConfirm" text="Confirm Password:" cssclass="dnnFormRequired"  ></dnn:label>
+			<asp:textbox id="txtConfirm" runat="server" textmode="Password" size="12" maxlength="128" />
+            <asp:CompareValidator ID="ComparePasswordsValidator" runat="server"
+                                  resourcekey = "ComparePasswordsValidator.ErrorMessage" 
+                                  CssClass="dnnFormMessage dnnFormError"                                   
+                                  ControlToValidate="txtConfirm" 
+                                  ControlToCompare="txtPassword"></asp:CompareValidator>
+        </div>
+        <div id="questionRow" runat="server"  class="dnnFormItem" visible="false">
+            <dnn:label id="plQuestion" runat="server" controlname="lblQuestion"  cssclass="dnnFormRequired" />
+			<asp:textbox id="txtQuestion" runat="server" size="25" maxlength="256" />
+        </div>
+        <div id="answerRow" runat="server" class="dnnFormItem" visible="false">
+            <dnn:label id="plAnswer" runat="server" controlname="txtAnswer" cssclass="dnnFormRequired"  />
+			<asp:textbox id="txtAnswer" runat="server" size="25" maxlength="128" />
+        </div>
+    </div>
 </asp:panel>
-<asp:panel id="pnlUpdate" runat="server" align="center">
-	<dnn:commandbutton id="cmdDelete" runat="server" 
-		imageurl="~/images/delete.gif" 
-		causesvalidation="False" />
-	&nbsp;&nbsp;&nbsp;
-	<dnn:commandbutton id="cmdUpdate" runat="server" 
-		resourcekey="cmdUpdate" imageurl="~/images/save.gif" 
-		causesvalidation="True" />
-</asp:panel>
+<ul id="actionsRow" runat="server" class="dnnActions dnnClear">
+    <li><asp:LinkButton id="cmdUpdate" runat="server" CssClass="dnnPrimaryAction" resourcekey="cmdUpdate" /></li>
+    <li><asp:LinkButton id="cmdDelete" runat="server" CssClass="dnnSecondaryAction"  /></li>
+    <li><asp:LinkButton id="cmdRemove" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdRemove" /></li>
+    <li><asp:LinkButton id="cmdRestore" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdRestore" /></li>
+</ul>

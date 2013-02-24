@@ -1,4 +1,4 @@
-<%@ Control Language="vb" AutoEventWireup="false" Inherits="DotNetNuke.UI.UserControls.SectionHeadControl"
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.UI.UserControls.SectionHeadControl"
     TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
 <div>
     <asp:ImageButton ID="imgIcon" runat="server" EnableViewState="False" TabIndex="-1">

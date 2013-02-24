@@ -1,49 +1,53 @@
-<%@ Control Language="VB" AutoEventWireup="false" CodeFile="FriendlyUrls.ascx.vb" Inherits="DotNetNuke.Modules.Admin.Host.FriendlyUrls" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Host.FriendlyUrls" CodeFile="FriendlyUrls.ascx.cs" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
-<asp:DataGrid ID="grdRules" AutoGenerateColumns="false" width="475px" 
-    CellPadding="2" GridLines="None" cssclass="DataGrid_Container" Runat="server">
-    <headerstyle cssclass="NormalBold" verticalalign="Top" horizontalalign="Center"/>
-    <itemstyle cssclass="Normal" horizontalalign="Left" />
-    <alternatingitemstyle cssclass="Normal" />
-    <edititemstyle cssclass="NormalTextBox" />
-    <selecteditemstyle cssclass="NormalRed" />
-    <footerstyle cssclass="DataGrid_Footer" />
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<div style="width: 950px; overflow: auto;" class="dnnScroll">
+<asp:DataGrid ID="grdRules" AutoGenerateColumns="false" width="100%" GridLines="None" 
+    CssClass="dnnGrid" Runat="server">
+    <headerstyle CssClass="dnnGridHeader" />
+    <itemstyle CssClass="dnnGridItem" />
+    <alternatingitemstyle CssClass="dnnGridAltItem" />
+    <edititemstyle />
+    <selecteditemstyle />
+    <footerstyle />
     <Columns>
-		<dnn:imagecommandcolumn commandname="Edit" imageurl="~/images/edit.gif"/>
-		<dnn:imagecommandcolumn commandname="Delete" imageurl="~/images/delete.gif" />
+        <dnn:imagecommandcolumn commandname="Edit" IconKey="Edit" HeaderStyle-CssClass="dnnGridHeaderTD-NoBorder" />
+		<dnn:imagecommandcolumn commandname="Delete" IconKey="Delete" />
+        <asp:TemplateColumn HeaderStyle-CssClass="dnnGridHeaderTD-NoBorder">
+            <ItemStyle></ItemStyle>
+            <EditItemTemplate>
+	            <dnn:DnnImageButton Runat="server" ID="lnkSave" resourcekey="saveRule" OnCommand="SaveRule" IconKey="Save" />
+            </EditItemTemplate>
+        </asp:TemplateColumn>
+        <asp:TemplateColumn HeaderStyle-CssClass="dnnGridHeaderTD-NoBorder">
+            <ItemStyle></ItemStyle>
+            <EditItemTemplate>
+	            <dnn:DnnImageButton Runat="server" ID="lnkCancelEdit" resourcekey="cmdCancel" OnCommand="CancelEdit" IconKey="Cancel" />
+            </EditItemTemplate>
+        </asp:TemplateColumn>
 		<asp:TemplateColumn HeaderText="Match">
-		    <HeaderStyle  Width="200px" HorizontalAlign="Left" />
-		    <ItemStyle  Width="200px" HorizontalAlign="Left" />
+		    <HeaderStyle  Width="47%" HorizontalAlign="Left" />
+		    <ItemStyle Width="47%" HorizontalAlign="Left" />
 		    <ItemTemplate>
-                <asp:label runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "LookFor") %>' CssClass="Normal" ID="lblMatch" Width="250px"/>
+                <asp:label runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "LookFor") %>' ID="lblMatch" />
 		    </ItemTemplate>
 		    <EditItemTemplate>
-                <asp:textbox runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "LookFor") %>' CssClass="NormalTextBox" ID="txtMatch" Width="250px"/>
+                <asp:textbox runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "LookFor") %>' ID="txtMatch" />
 		    </EditItemTemplate>
 		</asp:TemplateColumn>
-		<asp:TemplateColumn HeaderText="ReplaceWith">
-		    <HeaderStyle  Width="200px" HorizontalAlign="Left" />
-		    <ItemStyle  Width="200px" HorizontalAlign="Left" />
+		<asp:TemplateColumn HeaderText="ReplaceWith" >
+		    <HeaderStyle  Width="47%" HorizontalAlign="Left" />
+		    <ItemStyle  Width="47%" HorizontalAlign="Left" />
 		    <ItemTemplate>
-                <asp:label runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SendTo") %>' CssClass="Normal" ID="lblReplace" Width="250px"/>
+                <asp:label runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SendTo") %>' ID="lblReplace" />
 		    </ItemTemplate>
 		    <EditItemTemplate>
-                <asp:textbox runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SendTo") %>' CssClass="NormalTextBox" ID="txtReplace" Width="250px"/>
+                <asp:textbox runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SendTo") %>' ID="txtReplace" />
 		    </EditItemTemplate>
 		</asp:TemplateColumn>
-        <asp:TemplateColumn>
-            <ItemStyle HorizontalAlign="Right"  width="20px"></ItemStyle>
-            <EditItemTemplate>
-	            <asp:ImageButton Runat="server" ID="lnkSave" resourcekey="saveRule" OnCommand="SaveRule" ImageUrl="~/images/save.gif" />
-            </EditItemTemplate>
-        </asp:TemplateColumn>
-        <asp:TemplateColumn>
-            <ItemStyle HorizontalAlign="Right"  width="20px"></ItemStyle>
-            <EditItemTemplate>
-	            <asp:ImageButton Runat="server" ID="lnkCancelEdit" resourcekey="cmdCancel" OnCommand="CancelEdit" ImageUrl="~/images/delete.gif" />
-            </EditItemTemplate>
-        </asp:TemplateColumn>
+      
+	
     </Columns>
 </asp:DataGrid>
-<br />
-<dnn:CommandButton ID="cmdAddRule" runat="server" ResourceKey="cmdAdd" ImageUrl="~/images/add.gif" />
+</div>
+<ul class="dnnActions rfAddRule dnnClear"><li><asp:LinkButton ID="cmdAddRule" runat="server" resourcekey="cmdAdd" CssClass="dnnPrimaryAction" /></li></ul>

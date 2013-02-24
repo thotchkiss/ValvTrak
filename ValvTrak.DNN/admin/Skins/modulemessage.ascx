@@ -1,8 +1,15 @@
-<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Controls.ModuleMessage" %>
-<table border="0" cellspacing="0" cellpadding="4">
-	<tr>
-		<td valign="top" align="left"><asp:image id="imgIcon" borderwidth="0" runat="server" visible="False" enableviewstate="False"/></td>
-		<td valign="middle" align="left"><asp:label id="lblHeading" runat="server" CssClass="SubHead" visible="False" enableviewstate="False"/><asp:label id="lblMessage" runat="server" CssClass="Normal" enableviewstate="False" /></td>
-	</tr>
-</table>
-<hr noshade size="1"/>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.UI.Skins.Controls.ModuleMessage" %>
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<asp:Panel id="dnnSkinMessage" runat="server" CssClass="dnnModuleMessage">
+    <asp:label id="lblHeading" runat="server" visible="False" enableviewstate="False" CssClass="dnnModMessageHeading" />
+    <asp:label id="lblMessage" runat="server" enableviewstate="False" />
+</asp:Panel>
+<dnn:DnnScriptBlock ID="scrollScript" runat="server">
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			var $body = window.opera ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+			var scrollTop = $('#<%=dnnSkinMessage.ClientID %>').offset().top - parseInt($(document.body).css("margin-top"));
+			$body.animate({ scrollTop: scrollTop }, 'fast');
+		});
+	</script>
+</dnn:DnnScriptBlock>

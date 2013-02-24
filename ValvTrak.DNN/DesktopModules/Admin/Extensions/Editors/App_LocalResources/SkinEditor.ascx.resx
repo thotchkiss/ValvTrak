@@ -129,10 +129,10 @@
   <data name="SkinHelp.Text" xml:space="preserve">
     <value>This editor allows you to configure the Skin Package.  </value>
   </data>
-  <data name="SkinPackageInfo_SkinName.Help" xml:space="preserve">
+  <data name="SkinName.Help" xml:space="preserve">
     <value>Enter a name for the Skin Package</value>
   </data>
-  <data name="SkinPackageInfo_SkinName.Text" xml:space="preserve">
+  <data name="SkinName.Text" xml:space="preserve">
     <value>Skin Package Name:</value>
   </data>
   <data name="SkinPackageInfo_Skins.Help" xml:space="preserve">

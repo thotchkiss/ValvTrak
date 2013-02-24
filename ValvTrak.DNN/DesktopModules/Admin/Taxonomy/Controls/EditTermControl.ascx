@@ -1,29 +1,29 @@
-﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="EditTermControl.ascx.vb" Inherits="DotNetNuke.Modules.Taxonomy.Views.Controls.EditTermControl" %>
+﻿<%@ Control Language="C#" AutoEventWireup="false" CodeBehind="EditTermControl.ascx.cs" Inherits="DotNetNuke.Modules.Taxonomy.Views.Controls.EditTermControl" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
-<table cellpadding="2" cellspacing="2">
-    <tr>
-        <td class="SubHead" style="vertical-align:top">
-            <dnn:DnnFieldLabel id="nameFieldLabel" runat="server" Text="TermName.Text" ToolTip="TermName.ToolTip" />
-        </td>
-        <td class="NormalTextBox">
-            <dnn:DnnTextBox ID="nameTextBox" runat="server" />
-            <asp:RequiredFieldValidator ID="nameValidator" ControlToValidate="nameTextBox" runat="server" ResourceKey="TermName.Required" Display="Dynamic" />
-        </td>
-    </tr>
-    <tr> 
-        <td class="SubHead" style="vertical-align:top">
-            <dnn:DnnFieldLabel id="descriptionFieldLabel" runat="server" Text="Description.Text" ToolTip="Description.ToolTip" />
-        </td>
-        <td class="NormalTextBox">  
-            <dnn:DnnTextBox ID="descriptionTextBox" runat="server" TextMode="MultiLine" cssClass="NormalTextBox"/>
-        </td>
-    </tr>
-    <tr id="parentTermRow" runat="server"> 
-        <td class="SubHead" style="vertical-align:top">
-            <dnn:DnnFieldLabel id="parentTermLabel" runat="server" Text="ParentTerm.Text" ToolTip="ParentTerm.ToolTip" />
-        </td>
-        <td class="NormalTextBox"> 
-             <dnn:DnnComboBox ID="parentTermCombo" runat="server" DataTextField="Name" DataValueField="TermId" Width="125px"/>
-        </td>
-    </tr>
-</table>
+<div class="dnnForm dnnEditTermControl dnnClear">
+    <div class="dnnFormItem">
+        <div class="dnnLabel">
+            <label>
+                <dnn:DnnFieldLabel id="nameFieldLabel" runat="server" Text="TermName.Text" ToolTip="TermName.ToolTip" CssClass="dnnFormRequired" />    
+            </label>
+        </div>        
+        <asp:TextBox ID="nameTextBox" runat="server" />
+        <asp:RequiredFieldValidator ID="nameValidator" ControlToValidate="nameTextBox" runat="server" Display="Dynamic" SetFocusOnError="true" CssClass="dnnFormMessage dnnFormError" />
+    </div>
+    <div class="dnnFormItem">
+        <div class="dnnLabel">
+            <label>
+                <dnn:DnnFieldLabel id="descriptionFieldLabel" runat="server" Text="Description.Text" ToolTip="Description.ToolTip" CssClass="dnnFormRequired" />        
+            </label>
+        </div>        
+        <asp:TextBox ID="descriptionTextBox" runat="server" TextMode="MultiLine" cssClass="NormalTextBox"/>
+    </div>
+    <div class="dnnFormItem" id="divParentTerm" runat="server">
+        <div class="dnnLabel">
+            <label>
+                <dnn:DnnFieldLabel id="parentTermLabel" runat="server" Text="ParentTerm.Text" ToolTip="ParentTerm.ToolTip" CssClass="dnnFormRequired" />    
+            </label>
+        </div>        
+        <dnn:DnnComboBox ID="parentTermCombo" runat="server" DataTextField="Name" DataValueField="TermId"  />
+    </div>
+</div>

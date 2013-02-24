@@ -1,28 +1,13 @@
-<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Features.SkinEditor" CodeFile="SkinEditor.ascx.vb" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Extensions.SkinEditor" CodeFile="SkinEditor.ascx.cs" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls" %>
-<asp:Label ID="lblTitle" runat="server" cssClass="SubHead"/>
-<asp:Panel ID="pnlHelp" runat="server">
-    <br />
-    <asp:Label ID="lblHelp" runat="server" cssClass="Normal" />
-    <br /><br />
-</asp:Panel>
-<table cellspacing="0" cellpadding="4" border="0" summary="Module Definitions Design Table" style="width:100%;">
-	<tr>
-		<td>
-            <dnn:propertyeditorcontrol id="ctlSkin" runat="Server"
-                AutoGenerate="false"
-                SortMode="SortOrderAttribute"
-                editcontrolstyle-cssclass="NormalTextBox" 
-                editcontrolwidth="425px" 
-                ErrorStyle-cssclass="NormalRed"
-                helpstyle-cssclass="Help" 
-                labelstyle-cssclass="SubHead" 
-                labelwidth = "200px" 
-                width= "650px">
-                <Fields>
-                    <dnn:FieldEditorControl ID="fldName" runat="server" DataField="SkinName" EditControlStyle-Width="400px" />
-                </Fields>
-            </dnn:propertyeditorcontrol>
-		</td>
-	</tr>
-</table>
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<h2 class="dnnFormSectionHead"><a href="" class="dnnLabelExpanded"><asp:Label ID="lblTitle" runat="server"/></a></h2>
+<fieldset>
+    <div class="dnnFormMessage dnnFormInfo"><asp:Label ID="lblHelp" runat="server" /></div>
+    <dnn:DnnFormEditor id="skinForm" runat="Server" FormMode="Short" Visible="false">
+	    <Items><dnn:DnnFormTextBoxItem ID="name" runat="server" DataField = "SkinName" /></Items>
+    </dnn:DnnFormEditor>
+    <dnn:DnnFormEditor id="skinFormReadOnly" runat="Server" FormMode="Short" Visible="false">
+        <Items><dnn:DnnFormLiteralItem ID="nameReadOnly" runat="server" DataField = "SkinName" /></Items>
+    </dnn:DnnFormEditor>
+</fieldset>

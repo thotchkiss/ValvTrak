@@ -1,4 +1,4 @@
-﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="Marketplace.ascx.vb" Inherits="DotNetNuke.Modules.Admin.Marketplace.Marketplace" %>
+﻿<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Marketplace.Marketplace" CodeFile="Marketplace.ascx.cs" %>
 
 <br />
 <asp:label id="lblSearchFor" runat="server" resourcekey="lblSearchFor" />&nbsp;

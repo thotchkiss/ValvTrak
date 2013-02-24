@@ -1,5 +1,5 @@
 /*
-DotNetNuke® - http://www.dotnetnuke.com
+DotNetNuke - http://www.dotnetnuke.com
 Copyright (c) 2002-2007
 by DotNetNuke Corporation
  

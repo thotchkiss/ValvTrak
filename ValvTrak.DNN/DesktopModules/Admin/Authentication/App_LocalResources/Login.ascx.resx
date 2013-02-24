@@ -136,7 +136,7 @@
     <value>Create a new Account</value>
   </data>
   <data name="cmdForgotPassword.Text" xml:space="preserve">
-    <value>Forgot Password ?</value>
+    <value>Forgot Password?</value>
   </data>
   <data name="cmdPassword.Text" xml:space="preserve">
     <value>Retrieve Password</value>
@@ -175,7 +175,7 @@
     <value>Your password will expire on {0}.  Please update your password before continuing.</value>
   </data>
   <data name="PasswordInvalid.Text" xml:space="preserve">
-    <value>You must enter a valid password.  Please check with the Portal Administrator if you do not know the password requirements.</value>
+    <value>You must enter a valid password.  Please check with the Website Administrator if you do not know the password requirements.</value>
   </data>
   <data name="PasswordMismatch.Text" xml:space="preserve">
     <value>Password Values Entered Do Not Match.</value>
@@ -224,5 +224,8 @@
   </data>
   <data name="AssociationFailed.Text" xml:space="preserve">
     <value>Error associating identity with user.  Remember that usernames and passwords are case-sensitive.</value>
+  </data>
+  <data name="UserLockedOut_ContactAdmin.Text" xml:space="preserve">
+    <value>This account has been locked out after too many unsuccessful login attempts. Please contact your administrator.</value>
   </data>
 </root>

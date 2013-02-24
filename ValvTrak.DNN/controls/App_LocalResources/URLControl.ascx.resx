@@ -160,7 +160,7 @@
     <value>Upload New File</value>
   </data>
   <data name="Save.Text" xml:space="preserve">
-    <value>Upload Selected File&lt;br/&gt;</value>
+    <value>Upload Selected File</value>
   </data>
   <data name="Cancel.Text" xml:space="preserve">
     <value>Select An Existing File</value>

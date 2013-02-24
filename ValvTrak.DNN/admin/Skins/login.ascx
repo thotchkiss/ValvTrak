@@ -1,2 +1,5 @@
-<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Controls.Login" CodeFile="Login.ascx.vb" %>
-<asp:LinkButton ID="cmdLogin" runat="server" cssclass="SkinObject" CausesValidation="false"></asp:LinkButton>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.UI.Skins.Controls.Login" CodeFile="Login.ascx.cs" %>
+<asp:HyperLink ID="loginLink" runat="server" CssClass="SkinObject" />
+<div class="loginGroup" id="loginGroup" runat="server">
+    <asp:HyperLink ID="enhancedLoginLink" runat="server" CssClass="secondaryActionsList" />
+</div><!--close loginGroup-->

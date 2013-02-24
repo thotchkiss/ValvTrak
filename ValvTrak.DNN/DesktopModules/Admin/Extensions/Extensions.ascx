@@ -1,81 +1,70 @@
-<%@ Control CodeFile="Extensions.ascx.vb" Language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Extensions.Extensions" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Extensions.Extensions" CodeFile="Extensions.ascx.cs" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"%>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke.WebControls" Namespace="DotNetNuke.UI.WebControls"%>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>                
+<%@ Register TagPrefix="dnn" TagName="InstalledExtensions" Src="~/DesktopModules/Admin/Extensions/InstalledExtensions.ascx" %>                
+<%@ Register TagPrefix="dnn" TagName="AvailableExtensions" Src="~/DesktopModules/Admin/Extensions/AvailableExtensions.ascx" %>                
+<%@ Register TagPrefix="dnn" TagName="PurchasedExtensions" Src="~/DesktopModules/Admin/Extensions/PurchasedExtensions.ascx" %>    
+<%@ Register TagPrefix="dnn" TagName="MoreExtensions" Src="~/DesktopModules/Admin/Extensions/MoreExtensions.ascx" %> 
+<script type="text/javascript">
+	/*globals jQuery, window, Sys */
+	(function ($, Sys) {
+		function setUpDnnExtensions() {
+			//$('#dnnExtensions').dnnTabs().tabs('select', window.location.hash).dnnPanels();
+			$('#dnnExtensions').dnnTabs().tabs().dnnPanels();
+			$('#availableExtensions .dnnFormExpandContent a').dnnExpandAll({
+			    expandText: '<%=Localization.GetSafeJSString("ExpandAll", Localization.SharedResourceFile)%>',
+			    collapseText: '<%=Localization.GetSafeJSString("CollapseAll", Localization.SharedResourceFile)%>',
+				targetArea: '#availableExtensions'
+			});
+			$('#installedExtensions .dnnFormExpandContent a').dnnExpandAll({
+			    expandText: '<%=Localization.GetSafeJSString("ExpandAll", Localization.SharedResourceFile)%>',
+			    collapseText: '<%=Localization.GetSafeJSString("CollapseAll", Localization.SharedResourceFile)%>',
+				targetArea: '#installedExtensions'
+			});
+		}
+		$(document).ready(function () {
+			setUpDnnExtensions();
+			Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+				setUpDnnExtensions();
+			});
 
-<table width="100%" cellpadding="0" cellspacing="0">
-    <tr>
-        <td colspan="2" align="left">
-            <asp:Label ID="lblUpdate" runat="server" CssClass="Normal" resourceKey="lblUpdate" />
-        </td> 
-    </tr>
-    <tr><td style="height:10px;">&nbsp;</td></tr>
-    <tr>
-        <td colspan="2">
-			<table>
-                <tr id="trPackageType" runat="server">
-                    <td valign="top" class="SubHead" style="width:150px"><dnn:Label ID="plPackageTypes" runat="server" ControlName="cboPackageTypes" /></td>
-                    <td valign="top">
-                        <asp:DropDownList ID="cboPackageTypes" runat="server" DataTextField="Description" Width="200px" DataValueField="PackageType" AutoPostBack="true" CssClass="NormalTextBox" />
-                    </td>
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-			    <tr id="trLanguageSelector" runat="server">
-                    <td valign="top" class="SubHead" style="width:150px"><dnn:Label ID="plLocales" runat="server" ControlName="cboLocales" /></td>
-                    <td valign="top">
-                        <asp:DropDownList ID="cboLocales" runat="server" Width="200px" DataTextField="Text" DataValueField="Code" AutoPostBack="true" CssClass="NormalTextBox" />
-                    </td>
-                </tr>
-            </table>
-            <br />
-            <asp:Label ID="lblNoResults" runat="server" CssClass="Normal" resourcekey="NoResults" Visible="false" />
-            <asp:DataGrid ID="grdExtensions" BorderWidth="0" BorderStyle="None" CellPadding="4"
-                CellSpacing="0" AutoGenerateColumns="false" runat="server"
-                GridLines="None" Width="100%" style="border:solid 1px #ececec; margin-bottom:10px;">
-                <HeaderStyle Wrap="False" CssClass="NormalBold" BackColor="#f1f6f9" Height="25px" />
-                <ItemStyle CssClass="Normal" VerticalAlign="Top" />
-                <Columns>
-                    <dnn:imagecommandcolumn headerStyle-width="18px" CommandName="Edit" ImageUrl="~/images/edit.gif" EditMode="URL" KeyField="PackageID" />
-                    <dnn:imagecommandcolumn headerStyle-width="18px" commandname="Delete" imageurl="~/images/delete.gif" EditMode="URL" keyfield="PackageID" />
-                    <dnn:textcolumn headerStyle-width="150px" DataField="FriendlyName" HeaderText="Name" />
-                    <asp:TemplateColumn HeaderText="Type">
-                        <HeaderStyle HorizontalAlign="Left" Wrap="False" Width="50px"/>
-                        <ItemStyle HorizontalAlign="Left"/>
-                        <ItemTemplate>
-                            <asp:Label ID="lblType" runat="server" Text='<%# GetPackageTypeDescription(DataBinder.Eval(Container.DataItem, "PackageType")) %>' />
-                        </ItemTemplate>
-                    </asp:TemplateColumn>
-                    <asp:TemplateColumn FooterText="Portal">
-                        <HeaderStyle HorizontalAlign="Left" Wrap="False" Width="18px"/>
-                        <ItemStyle HorizontalAlign="Left"/>
-                        <ItemTemplate>
-							<asp:Image ID="imgAbout" runat="server" ToolTip='<%# GetAboutTooltip(Container.DataItem) %>' ImageUrl="~/images/about.gif" Visible='<%# (DataBinder.Eval(Container.DataItem, "PackageType") = "Skin" OR DataBinder.Eval(Container.DataItem, "PackageType") = "Container") %>' />
-                        </ItemTemplate>
-                    </asp:TemplateColumn>
-                    <dnn:textcolumn headerStyle-width="275px" ItemStyle-HorizontalAlign="Left" DataField="Description" HeaderText="Description" />
-                    <asp:TemplateColumn HeaderText="Version" >
-                        <HeaderStyle HorizontalAlign="Left" Wrap="False" Width="40px"/>
-                        <ItemStyle HorizontalAlign="Left"/>
-                        <ItemTemplate>
-                            <asp:Label ID="lblVersion" runat="server" Text='<%# FormatVersion(Container.DataItem) %>' />
-                        </ItemTemplate>
-                    </asp:TemplateColumn>
-                    <asp:TemplateColumn HeaderText="In Use">
-                        <HeaderStyle HorizontalAlign="Left" Wrap="False" />
-                        <ItemStyle HorizontalAlign="Left"/>
-                        <ItemTemplate>
-                            <%#GetIsPackageInUseInfo(Container.DataItem)%>
-                        </ItemTemplate>
-                    </asp:TemplateColumn>
-                    <asp:TemplateColumn HeaderText="Upgrade" >
-                        <HeaderStyle HorizontalAlign="Left" Wrap="False" Width="120px"/>
-                        <ItemStyle HorizontalAlign="Left"/>
-                        <ItemTemplate>
-                                <asp:Label ID="lblUpgrade" runat="server" Text='<%# UpgradeService(DataBinder.Eval(Container.DataItem,"Version"),DataBinder.Eval(Container.DataItem,"PackageType"),DataBinder.Eval(Container.DataItem,"Name")) %>' ></asp:Label>
-                        </ItemTemplate>
-                    </asp:TemplateColumn>
-                </Columns>
-            </asp:DataGrid>
-        </td>
-    </tr>
-</table>
+			if (location.hash) {
+				$("a[href=" + location.hash + "]").click();
+			}
+		});
+	} (jQuery, window.Sys));
+</script>   
+<ul class="dnnActions dnnRight dnnClear">
+	<li><asp:Hyperlink id="cmdInstall" runat="server" CssClass="dnnPrimaryAction" resourcekey="ExtensionInstall.Action"  /></li>
+	<li><dnn:ActionLink id="createExtensionLink" runat="server" ControlKey="NewExtension" CssClass="dnnSecondaryAction" resourcekey="CreateExtension.Action" /></li>
+	<li><dnn:ActionLink id="createModuleLink" runat="server" ControlKey="EditModuleDefinition" CssClass="dnnSecondaryAction" resourcekey="CreateModule.Action" /></li>
+</ul>
+<div class="dnnForm dnnExtensions dnnClear" id="dnnExtensions">
+	<ul class="dnnAdminTabNav dnnClear">
+		<li id="installedExtensionsTab" runat="server" visible="false"><a href="#installedExtensions"><%=LocalizeString("InstalledExtensions")%></a></li>
+		<li id="availableExtensionsTab" runat="server" visible="false"><a href="#availableExtensions"><%=LocalizeString("AvailableExtensions")%></a></li>
+		<li id="purchasedExtensionsTab" runat="server" visible="false"><a href="#purchasedExtensions"><%=LocalizeString("PurchasedExtensions")%></a></li>
+		<li id="moreExtensionsTab" runat="server" visible="false"><a href="#moreExtensions"><%=LocalizeString("MoreExtensions")%></a></li>
+	</ul>
+	<div id="installedExtensions" class="exInstalledExtensions dnnClear">
+		<div class="dnnFormExpandContent"><a href=""><%=Localization.GetString("ExpandAll", Localization.SharedResourceFile)%></a></div>
+		<dnn:InstalledExtensions id="installedExtensionsControl" runat="Server"/>
+	</div>
+	<div id="availableExtensions" class="exAvailableExtensions dnnClear">
+		<div id="availableExtensionsTabExpand" runat="server" Visible="false" class="dnnFormExpandContent"><a href=""><%=Localization.GetString("ExpandAll", Localization.SharedResourceFile)%></a></div>
+		<div class="exaeContent dnnClear">
+			<dnn:AvailableExtensions id="availableExtensionsControl" runat="Server" Visible="false"/>
+		</div>
+	</div>
+    <div id="purchasedExtensions" class="exPurchasedExtensions dnnClear">
+		<div class="exmeContent dnnClear">
+		    <dnn:PurchasedExtensions id="purchasedExtensionsControl" runat="Server" Visible="false"/>
+		</div>
+    </div>
+	<div id="moreExtensions" class="exMoreExtensions dnnClear">
+		<div class="exmeContent dnnClear">
+		    <dnn:MoreExtensions id="moreExtensionsControl" runat="Server" Visible="false"/>
+		</div>
+	</div>
+</div>

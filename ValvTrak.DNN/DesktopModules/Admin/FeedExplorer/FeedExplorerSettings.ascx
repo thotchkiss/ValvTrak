@@ -1,4 +1,4 @@
-<%@ Control language="vb" CodeFile="FeedExplorerSettings.ascx.vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Syndication.FeedExplorerSettings" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Syndication.FeedExplorerSettings" CodeFile="FeedExplorerSettings.ascx.cs" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 
 <table cellSpacing="2" cellPadding="5" summary="Feed Explorer Settings">

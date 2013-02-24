@@ -123,7 +123,7 @@
   <data name="Introduction.Help" xml:space="preserve">
     <value>
 			The Site Configuration Wizard provides an Administrator with a User-Friendly
-			way to set up the more common features of a Portal.
+			way to set up the more common features of a Website.
 			You can step through the Wizard using the Next/Back buttons at the bottom
 			of the Wizard Page.
 			Once enough detail has been collected to complete the Wizard, the Finish Button will be
@@ -142,10 +142,7 @@
 				also already on your site).
 		</value>
   </data>
-  <data name="TemplateDetail.Text" xml:space="preserve">
-    <value>Build your site from a template (below)</value>
-  </data>
-  <data name="MergeDetail.Text" xml:space="preserve">
+  <data name="lblMergeModule.Help" xml:space="preserve">
     <value>Choose how to deal with duplicate Modules (Modules that are in the Template and also already on your site).</value>
   </data>
   <data name="Ignore.Text" xml:space="preserve">
@@ -169,7 +166,7 @@
     <value>You must select a Template before you can proceed.</value>
   </data>
   <data name="InvalidTemplate.Text" xml:space="preserve">
-    <value>{0} is not a valid Portal Template File.</value>
+    <value>{0} is not a valid Website Template File.</value>
   </data>
   <data name="Skin.Title" xml:space="preserve">
     <value>Select a Skin for your Site</value>
@@ -252,7 +249,7 @@
     <value>Site Wizard</value>
   </data>
   <data name="ModuleHelp.Text" xml:space="preserve">
-    <value>&lt;h1&gt;About Site Wizard&lt;/h1&gt;&lt;p&gt;The Administrator can use this user-friendly wizard to set up the common features of the Portal/Site.&lt;/p&gt;</value>
+    <value>&lt;h1&gt;About Site Wizard&lt;/h1&gt;&lt;p&gt;The Administrator can use this user-friendly wizard to set up the common features of the Website.&lt;/p&gt;</value>
   </data>
   <data name="Finish.Text" xml:space="preserve">
     <value>Finish</value>
@@ -265,5 +262,23 @@
   </data>
   <data name="EditOnly.Text" xml:space="preserve">
     <value>This module is only available for users who have been given Edit permission.  Please contact the site administrator if you think you should have this permission.</value>
+  </data>
+  <data name="lblMergeModule.Text" xml:space="preserve">
+    <value>How to deal with duplicate Modules</value>
+  </data>
+  <data name="lblTemplateList.Help" xml:space="preserve">
+    <value>You can select a template which you want to build the site with.</value>
+  </data>
+  <data name="lblTemplateList.Text" xml:space="preserve">
+    <value>Template List</value>
+  </data>
+  <data name="lblTemplateMessage.Help" xml:space="preserve">
+    <value>If you want to rebuild your site with a template, please select this checkbox.</value>
+  </data>
+  <data name="lblTemplateMessage.Text" xml:space="preserve">
+    <value>Build your site from a template</value>
+  </data>
+  <data name="ModulesNotInstalled.Text" xml:space="preserve">
+    <value>This template has the following modules that are not installed.&lt;br /&gt;{0}</value>
   </data>
 </root>

@@ -1,94 +1,114 @@
-<%@ Control language="vb" CodeFile="SecurityRoles.ascx.vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Security.SecurityRoles" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Security.SecurityRoles" CodeFile="SecurityRoles.ascx.cs" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"%>
-<table class="Settings" cellspacing="2" cellpadding="2" summary="Security Roles Design Table" border="0">
-	<tr>
-		<td width="760" valign="top">
-			<asp:panel id="pnlRoles" runat="server" cssclass="WorkPanel" visible="True">
-				<table cellspacing="4" cellpadding="0" summary="Security Roles Design Table" border="0">
-					<tr>
-						<td colspan="7"><asp:label id="lblTitle" runat="server" cssclass="Head"></asp:label></td></tr>
-					<tr>
-						<td height="5"></td></tr>
-					<tr>
-						<td class="SubHead" valign="top" width="160"><dnn:label id="plUsers" runat="server" suffix="" controlname="cboUsers"></dnn:label><dnn:label id="plRoles" runat="server" suffix="" controlname="cboRoles"></dnn:label></td>
-						<td width="10"></td>
-						<td class="SubHead" valign="top" width="160"><dnn:label id="plEffectiveDate" runat="server" suffix="" controlname="txtEffectiveDate"></dnn:label></td>
-						<td width="10"></td>
-						<td class="SubHead" valign="top" width="160"><dnn:label id="plExpiryDate" runat="server" suffix="" controlname="txtExpiryDate"></dnn:label></td>
-						<td width="10"></td>
-						<td class="SubHead" valign="top" width="160">&nbsp;</td>
-					</tr>
-					<tr>
-						<td valign="top" width="100%">
-							<asp:TextBox ID="txtUsers" Runat="server" cssclass="NormalTextBox" width="150" />
-							<asp:LinkButton ID="cmdValidate" Runat="server" CssClass="CommandButton" resourceKey="cmdValidate"/>
-							<asp:dropdownlist id="cboUsers" cssclass="NormalTextBox" runat="server" autopostback="True" Width="100%" />
-							<asp:dropdownlist id="cboRoles" cssclass="NormalTextBox" runat="server" autopostback="True" datavaluefield="RoleID" datatextfield="RoleName" width="100%"/>
-						</td>
-						<td width="10"></td>
-						<td valign="top" width="110" nowrap="nowrap">
-							<asp:textbox id="txtEffectiveDate" cssclass="NormalTextBox" runat="server" width="80"></asp:textbox>
-							<asp:hyperlink id="cmdEffectiveCalendar" cssclass="CommandButton" runat="server" />
-						</td>
-						<td width="10"></td>
-						<td valign="top" width="110" nowrap="nowrap">
-							<asp:textbox id="txtExpiryDate" cssclass="NormalTextBox" runat="server" width="80"></asp:textbox>
-							<asp:hyperlink id="cmdExpiryCalendar" cssclass="CommandButton" runat="server"/>
-						</td>
-						<td width="10"></td>
-						<td valign="top" width="160" nowrap="nowrap">
-							<dnn:commandbutton id="cmdAdd" cssclass="CommandButton" runat="server" ImageUrl="~/images/add.gif" CausesValidation="true" />
-						</td>
-					</tr>
-				</table>
-				<asp:comparevalidator id="valEffectiveDate" cssclass="NormalRed" runat="server" resourcekey="valEffectiveDate" display="Dynamic" type="Date" operator="DataTypeCheck" errormessage="<br>Invalid effective date" controltovalidate="txtEffectiveDate"></asp:comparevalidator>
-				<asp:comparevalidator id="valExpiryDate" cssclass="NormalRed" runat="server" resourcekey="valExpiryDate" display="Dynamic" type="Date" operator="DataTypeCheck" errormessage="<br>Invalid expiry date" controltovalidate="txtExpiryDate"></asp:comparevalidator>
-				<asp:comparevalidator id="valDates" cssclass="NormalRed" runat="server" resourcekey="valDates" display="Dynamic" type="Date" operator="GreaterThan" errormessage="<br>Expiry Date must be Greater than Effective Date" controltovalidate="txtExpiryDate" controltocompare="txtEffectiveDate"></asp:comparevalidator>
-			</asp:panel>
-			<asp:checkbox id="chkNotify" resourcekey="SendNotification" runat="server" cssclass="SubHead" text="Send Notification?" textalign="Right" Checked="True"></asp:checkbox>
-		</td>
-	</tr>
-	<tr><td height="15"></td></tr>
-	<tr>
-		<td>
-			<asp:panel id="pnlUserRoles" runat="server" cssclass="WorkPanel" visible="True">
-    			<hr noshade size="1">
-			    <asp:datagrid id="grdUserRoles" runat="server" width="100%" gridlines="None" borderwidth="0px" borderstyle="None" ondeletecommand="grdUserRoles_Delete" datakeyfield="UserRoleID" enableviewstate="false" autogeneratecolumns="false" cellspacing="0" cellpadding="4" border="0" summary="Security Roles Design Table">
-					<headerstyle cssclass="NormalBold" />
-					<itemstyle cssclass="Normal" />
-					<columns>
-						<asp:templatecolumn>
-							<itemtemplate>
-							    <!-- [DNN-4285] Hide the button if the user cannot be removed from the role --> 
-								<asp:imagebutton id="cmdDeleteUserRole" 
-								    runat="server" alternatetext="Delete" 
-								    causesvalidation="False" commandname="Delete" 
-								    imageurl="~/images/delete.gif" 
-								    resourcekey="cmdDelete"
-								    visible='<%# DeleteButtonVisible(DataBinder.Eval(Container.DataItem, "UserID"), DataBinder.Eval(Container.DataItem, "RoleID")) %>'></asp:imagebutton>
-							</itemtemplate>
-						</asp:templatecolumn>
-						<asp:templatecolumn headertext="UserName">
-							<itemtemplate>
-								<asp:label runat="server" text='<%#FormatUser(DataBinder.Eval(Container.DataItem, "UserID"),DataBinder.Eval(Container.DataItem, "FullName")) %>' cssclass="Normal" id="Label3" name="Label1"/>
-							</itemtemplate>
-						</asp:templatecolumn>
-						<asp:boundcolumn datafield="RoleName" headertext="SecurityRole" />
-						<asp:templatecolumn headertext="EffectiveDate">
-							<itemtemplate>
-								<asp:label runat="server" text='<%#FormatDate(DataBinder.Eval(Container.DataItem, "EffectiveDate")) %>' cssclass="Normal" id="Label2" name="Label1"/>
-							</itemtemplate>
-						</asp:templatecolumn>
-						<asp:templatecolumn headertext="ExpiryDate">
-							<itemtemplate>
-								<asp:label runat="server" text='<%#FormatDate(DataBinder.Eval(Container.DataItem, "ExpiryDate")) %>' cssclass="Normal" id="Label1" name="Label1"/>
-							</itemtemplate>
-						</asp:templatecolumn>
-					</columns>
-				</asp:datagrid>
-				<hr noshade size="1">
-			</asp:panel>
-		</td>
-	</tr>
-</table>
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<div class="dnnForm dnnManageSecurityRoles">
+    <asp:Panel ID="pnlRoles" runat="server" Visible="True">
+        <h2 class="dnnFormSectionHead"><asp:Label ID="lblTitle" runat="server" /></h2>
+             <div class="dnnFormItem">
+        <table cellspacing="0" cellpadding="0" border="0" class="dnnSecurityRoles dnnClear">
+            <tr>
+                <td valign="top" width="250">                  
+                    <div class="dnnFormItem" style="z-index: 10;">
+                    <dnn:Label ID="plRoles" runat="server" />  
+                    <dnn:Label ID="plUsers" runat="server" /> 
+                    </div>               
+                </td>
+                <td width="30"></td>
+                <td valign="top" width="100">
+                    <dnn:Label ID="plEffectiveDate" runat="server"/>
+                 </td>
+                <td width="30"></td>
+                <td valign="top" width="100">
+                    <dnn:Label ID="plExpiryDate" runat="server" />
+                </td>
+                
+                <asp:Placeholder runat="server" ID="placeIsOwnerHeader" Visible="false">
+                    <td width="30"></td>
+                    <td valign="top" width="150"><dnn:Label ID="lblIsOwner" runat="server" /></td>
+                </asp:Placeholder>
+
+                <td width="30"></td>
+                <td valign="top" width="200"></td>
+            </tr>
+            <tr>
+                <td valign="top" width="250">
+                    <asp:TextBox ID="txtUsers" runat="server" Width="150" />
+                    <asp:LinkButton ID="cmdValidate" runat="server" CssClass="dnnSecondaryAction" resourceKey="cmdValidate" />
+                    <%--<asp:DropDownList ID="cboUsers" runat="server" AutoPostBack="True" Width="100%" />--%>
+                    <dnn:DnnComboBox ID="cboUsers" runat="server" AutoPostBack="True" />
+                    <%--<asp:DropDownList ID="cboRoles" runat="server" AutoPostBack="True" DataValueField="RoleID" DataTextField="RoleName" Width="100%" />--%>
+                    <dnn:DnnComboBox ID="cboRoles" runat="server" AutoPostBack="True" DataValueField="RoleID" DataTextField="RoleName" />
+                </td>
+                <td width="30"></td>
+                <td valign="top" width="100" nowrap="nowrap">
+                    <dnn:DnnDatePicker ID="effectiveDatePicker" runat="server"/>
+                </td>
+                <td width="30"></td>
+                <td valign="top" width="100" nowrap="nowrap">
+                    <dnn:DnnDatePicker ID="expiryDatePicker" runat="server"/>
+                </td>
+                <asp:PlaceHolder runat="server" ID="placeIsOwner" Visible="false">
+                    <td width="30"></td>
+                    <td valign="top" width="150" nowrap="nowrap" align="right"><asp:CheckBox runat="server" ID="chkIsOwner"/></td>
+                </asp:PlaceHolder>
+                <td width="30"></td>
+                <td valign="top" width="200" nowrap="nowrap">
+                    <asp:LinkButton ID="cmdAdd" CssClass="dnnPrimaryAction" runat="server"  CausesValidation="true" ValidationGroup="SecurityRole" />
+                </td>
+            </tr>
+        </table>
+        <asp:CompareValidator ID="valEffectiveDate" CssClass="dnnFormError" runat="server" resourcekey="valEffectiveDate" Display="Dynamic" Type="Date" Operator="DataTypeCheck" ControlToValidate="effectiveDatePicker" ValidationGroup="SecurityRole" />
+        <asp:CompareValidator ID="valExpiryDate" CssClass="dnnFormError" runat="server" resourcekey="valExpiryDate" Display="Dynamic" Type="Date" Operator="DataTypeCheck" ControlToValidate="expiryDatePicker" ValidationGroup="SecurityRole" />
+        <asp:CompareValidator ID="valDates" CssClass="dnnFormError" runat="server" resourcekey="valDates" Display="Dynamic" Type="Date" Operator="GreaterThan" ControlToValidate="expiryDatePicker" ControlToCompare="effectiveDatePicker" ValidationGroup="SecurityRole" />
+         </div>
+    </asp:Panel>
+    <asp:CheckBox ID="chkNotify" resourcekey="SendNotification" runat="server" Checked="True" />
+
+    <asp:Panel ID="pnlUserRoles" runat="server" CssClass="WorkPanel" Visible="True">
+        <asp:DataGrid ID="grdUserRoles" runat="server" Width="100%" GridLines="None" DataKeyField="UserRoleID" EnableViewState="false" AutoGenerateColumns="false" CellSpacing="0" CellPadding="0" CssClass="dnnGrid">
+            <headerstyle cssclass="dnnGridHeader" verticalalign="Top"/>
+            <itemstyle cssclass="dnnGridItem" horizontalalign="Left" />
+            <alternatingitemstyle cssclass="dnnGridAltItem" />
+            <edititemstyle cssclass="dnnFormInput" />
+            <selecteditemstyle cssclass="dnnFormError" />
+            <footerstyle cssclass="dnnGridFooter" />
+            <pagerstyle cssclass="dnnGridPager" />
+            <Columns>
+                <asp:TemplateColumn>
+                    <ItemTemplate>
+                        <!-- [DNN-4285] Hide the button if the user cannot be removed from the role -->
+                        <dnn:DnnImageButton ID="cmdDeleteUserRole" runat="server" AlternateText="Delete" CausesValidation="False" CommandName="Delete" IconKey="Delete" resourcekey="cmdDelete"  Visible='<%# DeleteButtonVisible(Convert.ToInt32(Eval("UserID")), Convert.ToInt32(Eval("RoleID")))  %>' OnClick="cmdDeleteUserRole_click">
+                        </dnn:DnnImageButton>
+                    </ItemTemplate>
+                </asp:TemplateColumn>
+                <asp:TemplateColumn HeaderText="UserName">
+                    <ItemTemplate>
+                         <a href='<%# DotNetNuke.Common.Globals.LinkClick("userid=" + Eval("UserID").ToString(), TabId, ModuleId) %>' class=""> <%# Eval("FullName").ToString()%> </a>
+                    </ItemTemplate>
+                </asp:TemplateColumn>
+                <asp:BoundColumn DataField="RoleName" HeaderText="SecurityRole" />
+                <asp:TemplateColumn HeaderText="EffectiveDate">
+                    <ItemTemplate>
+                         <%#FormatDate(Convert.ToDateTime(Eval("EffectiveDate"))) %>
+                    </ItemTemplate>
+                </asp:TemplateColumn>
+                <asp:TemplateColumn HeaderText="ExpiryDate">
+                    <ItemTemplate>
+                         <%#FormatDate(Convert.ToDateTime(Eval("ExpiryDate"))) %>
+                         </ItemTemplate>
+                </asp:TemplateColumn>
+                <asp:TemplateColumn HeaderText="IsOwner">
+                    <ItemTemplate>
+                        <dnn:DnnImage Runat="server" ID="imgApproved" IconKey="Checked" Visible='<%# (bool)DataBinder.Eval(Container.DataItem,"IsOwner") %>' />
+                    </ItemTemplate>
+                </asp:TemplateColumn>
+            </Columns>
+        </asp:DataGrid>
+        <dnn:pagingcontrol id="ctlPagingControl" runat="server"></dnn:pagingcontrol>
+        
+    </asp:Panel>
+    <ul id="actionsRow" runat="server" class="dnnActions dnnClear">
+        <li><asp:HyperLink id="cmdCancel" runat="server" CssClass="dnnPrimaryAction" resourcekey="Close" /></li>
+    </ul>
+</div>

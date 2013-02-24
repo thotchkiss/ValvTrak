@@ -112,42 +112,42 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="cmdUpdate.Text" xml:space="preserve">
     <value>Update Desktop Module</value>
   </data>
-  <data name="DesktopModuleInfo_BusinessControllerClass.Help" xml:space="preserve">
+  <data name="BusinessControllerClass.Help" xml:space="preserve">
     <value>The fully qualified namespace of the class that implements the Modules Features (IPortable, ISearchable etc)</value>
   </data>
-  <data name="DesktopModuleInfo_BusinessControllerClass.Text" xml:space="preserve">
+  <data name="BusinessControllerClass.Text" xml:space="preserve">
     <value>Business Controller Class:</value>
   </data>
-  <data name="DesktopModuleInfo_IsPortable.Help" xml:space="preserve">
-    <value>Check this if the module supports the IPortable interface allowing it to Export and Import content.</value>
+  <data name="IsPortable.Help" xml:space="preserve">
+    <value>Identifies if the module supports the IPortable interface allowing it to Export and Import content.</value>
   </data>
-  <data name="DesktopModuleInfo_IsPortable.Text" xml:space="preserve">
+  <data name="IsPortable.Text" xml:space="preserve">
     <value>Is Portable?</value>
   </data>
-  <data name="DesktopModuleInfo_IsSearchable.Help" xml:space="preserve">
-    <value>Check this if the module supports the ISearchable interface allowing it to have its content indexed.</value>
+  <data name="IsSearchable.Help" xml:space="preserve">
+    <value>Identifies if the module supports the ISearchable interface allowing it to have its content indexed.</value>
   </data>
-  <data name="DesktopModuleInfo_IsSearchable.Text" xml:space="preserve">
+  <data name="IsSearchable.Text" xml:space="preserve">
     <value>Is Searchable?</value>
   </data>
-  <data name="DesktopModuleInfo_IsUpgradeable.Help" xml:space="preserve">
-    <value>Check this if the module supports the IUpgradable interface allowing it to run custom code when upgraded.</value>
+  <data name="IsUpgradeable.Help" xml:space="preserve">
+    <value>Identifies if the module supports the IUpgradable interface allowing it to run custom code when upgraded.</value>
   </data>
-  <data name="DesktopModuleInfo_IsUpgradeable.Text" xml:space="preserve">
+  <data name="IsUpgradeable.Text" xml:space="preserve">
     <value>Is Upgradable?</value>
   </data>
-  <data name="DesktopModuleInfo_ModuleName.Help" xml:space="preserve">
+  <data name="ModuleName.Help" xml:space="preserve">
     <value>The name of the Module</value>
   </data>
-  <data name="DesktopModuleInfo_ModuleName.Text" xml:space="preserve">
+  <data name="ModuleName.Text" xml:space="preserve">
     <value>Module Name:</value>
   </data>
   <data name="HostHelp.Text" xml:space="preserve">
@@ -240,16 +240,16 @@
   <data name="ModuleControlInfo_ViewOrder.Text" xml:space="preserve">
     <value>View Order:</value>
   </data>
-  <data name="ModuleDefinitionInfo_DefaultCacheTime.Help" xml:space="preserve">
+  <data name="DefaultCacheTime.Help" xml:space="preserve">
     <value>This is the default Cache Time to be used for this Module Definition. A default cache time of "-1" indicates that the module does not support output caching.</value>
   </data>
-  <data name="ModuleDefinitionInfo_DefaultCacheTime.Text" xml:space="preserve">
+  <data name="DefaultCacheTime.Text" xml:space="preserve">
     <value>Default Cache Time:</value>
   </data>
-  <data name="ModuleDefinitionInfo_FriendlyName.Help" xml:space="preserve">
+  <data name="FriendlyName.Help" xml:space="preserve">
     <value>Enter a friendly name for the Module Definition.</value>
   </data>
-  <data name="ModuleDefinitionInfo_FriendlyName.Text" xml:space="preserve">
+  <data name="FriendlyName.Text" xml:space="preserve">
     <value>Friendly Name:</value>
   </data>
   <data name="plSelectDefinition.Help" xml:space="preserve">
@@ -279,10 +279,10 @@
   <data name="plSelectControl.Text" xml:space="preserve">
     <value>Select Control:</value>
   </data>
-  <data name="DesktopModuleInfo_IsPremium.Help" xml:space="preserve">
-    <value>All Modules can be assigned/unassigned from a Portal.  However, on Portal Creation Premium Modules are not auto-assigned to a new portal.</value>
+  <data name="IsPremium.Help" xml:space="preserve">
+    <value>All Modules can be assigned/unassigned from a website.  However, on website Creation Premium Modules are not auto-assigned to a new website.</value>
   </data>
-  <data name="DesktopModuleInfo_IsPremium.Text" xml:space="preserve">
+  <data name="IsPremium.Text" xml:space="preserve">
     <value>Is Premium Module?</value>
   </data>
   <data name="ctlPortals_Available.Text" xml:space="preserve">
@@ -291,14 +291,14 @@
   <data name="ctlPortals_Selected.Text" xml:space="preserve">
     <value>Assigned</value>
   </data>
-  <data name="DesktopModuleInfo_FolderName.Help" xml:space="preserve">
+  <data name="FolderName.Help" xml:space="preserve">
     <value>Specify the folder name for this module</value>
   </data>
-  <data name="DesktopModuleInfo_FolderName.Text" xml:space="preserve">
+  <data name="FolderName.Text" xml:space="preserve">
     <value>Folder Name:</value>
   </data>
   <data name="Permissions.Text" xml:space="preserve">
-    <value>Desktop Module Permissions:</value>
+    <value>Permissions:</value>
   </data>
   <data name="DuplicateName.Text" xml:space="preserve">
     <value>You entered a Friendly Name that is already in use.  Friendly Names must be unique - please enter a different name and try again.</value>
@@ -307,7 +307,7 @@
     <value>In this section you can set deploy permissions for this module. Clicking a checkbox twice will make sure users in that role cannot put this module on a page (Deny Permission).</value>
   </data>
   <data name="NoPermission.Text" xml:space="preserve">
-    <value>You are not allowed to put this module on an page in this portal. For more information please contact your hosting provider</value>
+    <value>You are not allowed to put this module on an page in this website. For more information please contact your hosting provider</value>
   </data>
   <data name="Control.Header" xml:space="preserve">
     <value>Control</value>
@@ -321,16 +321,52 @@
   <data name="plPremium.Text" xml:space="preserve">
     <value>Assigned Premium Modules</value>
   </data>
-  <data name="DesktopModuleInfo_Dependencies.Help" xml:space="preserve">
+  <data name="Dependencies.Help" xml:space="preserve">
     <value>You can list any dependencies that the module has here.</value>
   </data>
-  <data name="DesktopModuleInfo_Dependencies.Text" xml:space="preserve">
+  <data name="Dependencies.Text" xml:space="preserve">
     <value>Dependencies:</value>
   </data>
-  <data name="DesktopModuleInfo_Permissions.Help" xml:space="preserve">
+  <data name="Permissions.Help" xml:space="preserve">
     <value>You can list any Code Access Security Permissions your module requires here.</value>
   </data>
-  <data name="DesktopModuleInfo_Permissions.Text" xml:space="preserve">
-    <value>Permissions:</value>
+  <data name="Category.Text" xml:space="preserve">
+    <value>Module Category</value>
+  </data>
+  <data name="Category.Help" xml:space="preserve">
+    <value>Select the Module Category for this module</value>
+  </data>
+  <data name="Dependencies.Hint" xml:space="preserve">
+    <value>Enter Dependencies</value>
+  </data>
+  <data name="Permissions.Hint" xml:space="preserve">
+    <value>Enter Code Access Permissions</value>
+  </data>
+  <data name="BusinessControllerClass.Hint" xml:space="preserve">
+    <value>Enter Business Controller Class</value>
+  </data>
+  <data name="ModuleSettings.Text" xml:space="preserve">
+    <value>Module Settings</value>
+  </data>
+  <data name="None.Text" xml:space="preserve">
+    <value>&lt; None &gt;</value>
+  </data>
+  <data name="FriendlyName.Required" xml:space="preserve">
+    <value>The friendly name is required.</value>
+  </data>
+  <data name="Shareable.Help" xml:space="preserve">
+    <value>Identifies whether the module supports sharing itself across multiple sites.</value>
+  </data>
+  <data name="Shareable.Text" xml:space="preserve">
+    <value>Module Sharing</value>
+  </data>
+  <data name="DefinitionName.Help" xml:space="preserve">
+    <value>An unchanging name for the Module Definition</value>
+  </data>
+  <data name="DefinitionName.Required" xml:space="preserve">
+    <value>The definition name is required</value>
+  </data>
+  <data name="DefinitionName.Text" xml:space="preserve">
+    <value>Definition Name:</value>
   </data>
 </root>

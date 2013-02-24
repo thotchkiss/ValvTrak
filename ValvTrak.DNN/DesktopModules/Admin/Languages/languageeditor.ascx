@@ -1,105 +1,91 @@
-<%@ Control Language="vb" AutoEventWireup="false" CodeFile="LanguageEditor.ascx.vb"
-    Inherits="DotNetNuke.Modules.Admin.Languages.LanguageEditor" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Languages.LanguageEditor" CodeFile="LanguageEditor.ascx.cs" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
-<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke.WebControls" %>
-<table cellspacing="5" border="0">
-    <tr>
-        <td valign="top" nowrap="nowrap" width="200px">
-            <dnn:Label ID="plResources" runat="server" ControlName="DNNTree" />
-            <br />
-            <dnn:DnnTree ID="DNNTree" runat="server" DefaultNodeCssClassOver="Normal" CssClass="Normal"
-                DefaultNodeCssClass="Normal" />
-        </td>
-        <td style="vertical-align: top; width: 99%">
-            <table border="0">
-                <tr id="rowMode" runat="server">
-                    <td class="SubHead">
-                        <dnn:Label ID="plMode" runat="server" Text="Available Locales" ControlName="cboLocales" />
-                    </td>
-                    <td>
-                        <asp:RadioButtonList ID="rbMode" runat="server" CssClass="Normal" AutoPostBack="True"
-                            RepeatColumns="3" RepeatDirection="Horizontal">
-                            <asp:ListItem resourcekey="ModeSystem" Value="System" Selected="True" />
-                            <asp:ListItem resourcekey="ModeHost" Value="Host" />
-                            <asp:ListItem resourcekey="ModePortal" Value="Portal" />
-                        </asp:RadioButtonList>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="SubHead" colspan="2">
-                        <asp:CheckBox ID="chkHighlight" runat="server" resourcekey="Highlight" AutoPostBack="True"
-                            TextAlign="Left" />
-                    </td>
-                </tr>
-                <tr height="20px">
-                    <td>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="SubHead">
-                        <dnn:Label ID="plEditingLanguage" runat="server" ControlName="lblEditingLanguage" />
-                    </td>
-                    <td valign="top">
-                        <asp:Label ID="lblEditingLanguage" runat="server"  CssClass="NormalBold" ></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="SubHead">
-                        <dnn:Label ID="plSelected" runat="server" ControlName="lblResourceFile" />
-                    </td>
-                    <td valign="top">
-                        <asp:Label ID="lblResourceFile" runat="server" CssClass="NormalBold" />
-                    </td>
-                </tr>
-            </table>
-            <br />
-            <asp:DataGrid ID="dgEditor" runat="server" CssClass="Normal" GridLines="None" CellPadding="2"
-                CellSpacing="0" AutoGenerateColumns="False" AllowPaging="true" AllowCustomPaging="false"
-                ShowHeader="true" ShowFooter="false" PagerStyle-Visible="false" Width="100%">
-                <HeaderStyle Wrap="False" CssClass="NormalBold" BackColor="#f1f6f9" Height="25px" />
-                <ItemStyle VerticalAlign="Top" />
-                <Columns>
-                    <asp:BoundColumn Visible="False" DataField="key"></asp:BoundColumn>
-                    <asp:TemplateColumn>
-                        <HeaderTemplate>
-                            <asp:Label ID="Label4" runat="server" CssClass="NormalBold" resourcekey="Value" />
-                        </HeaderTemplate>
-                        <ItemTemplate>
-                            <asp:TextBox ID="txtValue" Width="90%" runat="server" TextMode="MultiLine" Height="30px"></asp:TextBox>
-                            <asp:HyperLink ID="lnkEdit" runat="server" CssClass="CommandButton" NavigateUrl='<%# OpenFullEditor(DataBinder.Eval(Container, "DataItem.key")) %>'>
-                                <asp:Image runat="server" AlternateText="Edit" ID="imgEdit" ImageUrl="~/images/edit.gif"
-                                    resourcekey="cmdEdit" Style="vertical-align: top"></asp:Image>
-                            </asp:HyperLink>
-                        </ItemTemplate>
-                    </asp:TemplateColumn>
-                    <asp:TemplateColumn>
-                        <HeaderTemplate>
-                            <asp:Label ID="Label5" runat="server" CssClass="NormalBold" resourcekey="DefaultValue"
-                                Font-Bold="True" />
-                        </HeaderTemplate>
-                        <ItemTemplate>
-                            <asp:TextBox ID="txtDefault" Width="90%" runat="server" TextMode="MultiLine" Height="30px"
-                                ReadOnly="true" BorderColor="#f7f7f7" BorderStyle="solid" BorderWidth="1px"></asp:TextBox>
-                            <asp:Image runat="server" AlternateText="View" ID="imgView" ImageUrl="~/images/view.gif"
-                                resourcekey="cmdView" Style="vertical-align: top" Visible="false"></asp:Image>
-                        </ItemTemplate>
-                    </asp:TemplateColumn>
-                </Columns>
-            </asp:DataGrid>
-            <dnn:PagingControl ID="ctlPagingControl" runat="server" Mode="PostBack" />
-            <br />
-            <br />
-            <p style="text-align: center">
-                <dnn:CommandButton ID="cmdUpdate" runat="server" CssClass="CommandButton" ResourceKey="cmdUpdate"
-                    ImageUrl="~/images/save.gif" />
-                &nbsp;&nbsp;
-                <dnn:CommandButton ID="cmdDelete" runat="server" CssClass="CommandButton" ResourceKey="cmdDelete"
-                    ImageUrl="~/images/delete.gif" CausesValidation="false" />
-                &nbsp;&nbsp;
-                <dnn:CommandButton ID="cmdCancel" runat="server" CssClass="CommandButton" ImageUrl="~/images/lt.gif" ResourceKey="cmdCancel" CausesValidation="false" />
-            </p>
-            <br />
-        </td>
-    </tr>
-</table>
+<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web" %>
+<div class="dnnForm dnnLanguageEditor dnnClear" id="dnnLanguageEditor">
+    <div class="dnnLangEditorTree dnnLeft">
+        <dnn:Label ID="plResources" runat="server" ControlName="DNNTree" />
+        <dnn:DnnTreeView ID="resourceFiles" runat="server"></dnn:DnnTreeView>
+    </div>
+    <div class="dnnLangEditorContent dnnRight">
+        <fieldset>
+            <div id="rowMode" runat="server" class="dnnFormItem">
+                <dnn:Label ID="plMode" runat="server" Text="Available Locales" ControlName="cboLocales" />
+                <asp:RadioButtonList ID="rbMode" runat="server" AutoPostBack="True" RepeatLayout="Flow" RepeatColumns="3" RepeatDirection="Horizontal" CssClass="dnnLEMode dnnFormRadioButtons">
+                <asp:ListItem resourcekey="ModeSystem" Value="System" Selected="True" />
+                    <asp:ListItem resourcekey="ModeHost" Value="Host" />
+                    <asp:ListItem resourcekey="ModePortal" Value="Portal" />
+                </asp:RadioButtonList>
+            </div>
+            <div class="dnnFormItem">
+                <dnn:Label ID="highlightLabel" runat="server" ControlName="lblEditingLanguage" />
+                <asp:CheckBox ID="chkHighlight" runat="server" AutoPostBack="True" />
+             </div>
+            <div class="dnnFormItem">
+                <dnn:Label ID="plEditingLanguage" runat="server" ControlName="lblEditingLanguage" />
+                <dnn:DnnLanguageLabel ID="languageLabel" runat="server" />
+            </div>
+            <div class="dnnFormItem">
+                <dnn:Label ID="plFolder" runat="server" ControlName="lblFolder" />
+                <asp:Label ID="lblFolder" runat="server" />
+            </div>
+            <div class="dnnFormItem">
+                <dnn:Label ID="plSelected" runat="server" ControlName="lblResourceFile" />
+                <asp:Label ID="lblResourceFile" runat="server" />
+            </div>
+            <div class="dnnFormItem">
+                <dnn:DnnGrid ID="resourcesGrid" runat="server" AutoGenerateColumns="false" Width="100%">
+                    <MasterTableView>
+                        <ItemStyle VerticalAlign="Top" HorizontalAlign="Center" />
+                        <AlternatingItemStyle  VerticalAlign="Top" HorizontalAlign="Center" />
+                        <HeaderStyle VerticalAlign="Bottom" HorizontalAlign="Left" Wrap="false" />
+                        <Columns>
+                            <dnn:DnnGridTemplateColumn>
+                                <HeaderTemplate>
+                                    <table cellpadding="0" cellspacing="0" class="dnnGrid">
+                                        <tr>
+                                            <td style="width:45%;"><asp:Label ID="Label5" runat="server" resourcekey="DefaultValue" /></td>
+                                            <td style="width:45%;"><asp:Label ID="Label4" runat="server" resourcekey="Value" /></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </HeaderTemplate>
+                                <ItemTemplate>
+                                    <table cellpadding="0" cellspacing="0" class="dnnGrid">
+                                        <tr>
+                                            <td colspan="2" style="text-align:left;">
+                                                <asp:Label ID="resourceKeyLabel" runat="server" resourcekey="ResourceName" />
+                                                <asp:Label ID="resourceKey" runat="server" Text='<%# Eval("key") %>' />
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr style="vertical-align: top;">
+                                            <td style="width:45%;">
+                                                <asp:Label runat="server" ID="lblDefault" CssClass="dnnLabelBox"></asp:Label>
+                                                <asp:TextBox ID="txtDefault" runat="server" Enabled="false" Visible="False" />
+                                            </td>
+                                            <td style="width:45%;">
+                                                <asp:TextBox ID="txtValue" runat="server" />                                                
+                                            </td>
+                                            <td valign="top">
+                                                <asp:HyperLink ID="lnkEdit" runat="server" NavigateUrl='<%# OpenFullEditor(Eval("key").ToString()) %>'>
+                                                    <dnn:DnnImage runat="server" AlternateText="Edit" ID="imgEdit" IconKey="Edit" resourcekey="cmdEdit" Style="vertical-align:top"></dnn:DnnImage>
+                                                </asp:HyperLink>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </ItemTemplate>
+                            </dnn:DnnGridTemplateColumn>
+                        </Columns>
+                    </MasterTableView>
+                    <PagerStyle Mode="NextPrevAndNumeric" />
+                </dnn:DnnGrid>
+            </div>
+        </fieldset>
+        <ul class="dnnActions dnnClear">
+    	    <li><asp:LinkButton id="cmdUpdate" runat="server" CssClass="dnnPrimaryAction" resourcekey="cmdUpdate" /></li>
+    	    <li><asp:LinkButton id="cmdDelete" runat="server" CssClass="dnnSecondaryAction" ResourceKey="cmdDelete" CausesValidation="false" /></li>
+    	    <li><asp:LinkButton id="cmdCancel" runat="server" CssClass="dnnSecondaryAction" ResourceKey="cmdCancel" CausesValidation="false" /></li>
+        </ul>    
+    </div>
+</div>

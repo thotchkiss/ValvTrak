@@ -11,6 +11,10 @@
 /* Set FriendlyName to TypeFullName in Schedule Table - fix 05.02.00 bug */
 /******************************************************/
 
+ALTER TABLE {databaseOwner}{objectQualifier}Schedule 
+	ALTER COLUMN FriendlyName nvarchar(200) NULL
+GO
+
 UPDATE {databaseOwner}{objectQualifier}Schedule SET FriendlyName = 'Purge Users Online' WHERE TypeFullName = 'DotNetNuke.Entities.Users.PurgeUsersOnline, DOTNETNUKE'
 UPDATE {databaseOwner}{objectQualifier}Schedule SET FriendlyName = 'Purge Site Log' WHERE TypeFullName = 'DotNetNuke.Services.Log.SiteLog.PurgeSiteLog, DOTNETNUKE'
 UPDATE {databaseOwner}{objectQualifier}Schedule SET FriendlyName = 'Purge Schedule History' WHERE TypeFullName = 'DotNetNuke.Services.Scheduling.PurgeScheduleHistory, DOTNETNUKE'
@@ -20,7 +24,7 @@ UPDATE {databaseOwner}{objectQualifier}Schedule SET FriendlyName = 'Search Engin
 UPDATE {databaseOwner}{objectQualifier}Schedule SET FriendlyName = 'Purge Cache' WHERE TypeFullName = 'DotNetNuke.Services.Cache.PurgeCache, DOTNETNUKE'
 UPDATE {databaseOwner}{objectQualifier}Schedule SET FriendlyName = 'Purge Module Cache' WHERE TypeFullName = 'DotNetNuke.Services.ModuleCache.PurgeModuleCache, DOTNETNUKE'
 UPDATE {databaseOwner}{objectQualifier}Schedule SET FriendlyName = 'Purge Output Cache' WHERE TypeFullName = 'DotNetNuke.Services.OutputCache.PurgeOutputCache, DotNetNuke'
-UPDATE {databaseOwner}{objectQualifier}Schedule SET FriendlyName = TypeFullName WHERE FriendlyName = '' OR FriendlyName IS NULL
+UPDATE {databaseOwner}{objectQualifier}Schedule SET FriendlyName = LEFT(TypeFullName, 100) WHERE FriendlyName = '' OR FriendlyName IS NULL
 
 GO
 

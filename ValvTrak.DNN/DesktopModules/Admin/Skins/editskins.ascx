@@ -1,81 +1,64 @@
-<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Skins.EditSkins" CodeFile="EditSkins.ascx.vb" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Skins.EditSkins" CodeFile="EditSkins.ascx.cs" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
-<table cellSpacing="0" cellPadding="0" width="100%" border="0" style="text-align:center">
-	<tr id="typeRow" runat="server">
-		<td class="SubHead" vAlign="middle" align="right" colspan="2"><dnn:label id="plType" text="Skin Type:" runat="server"></dnn:label></td>
-		<td align="left" colSpan="2">&nbsp;&nbsp;
-			<asp:checkbox id="chkHost" CssClass="SubHead" Runat="server" resourcekey="Host" AutoPostBack="True" Checked="True" Text="Host"></asp:checkbox>&nbsp;&nbsp;
-			<asp:checkbox id="chkSite" CssClass="SubHead" Runat="server" resourcekey="Site" AutoPostBack="True" Checked="True" Text="Site"></asp:checkbox>
-		</td>
-	</tr>
-	<tr><td colSpan="4">&nbsp;</td></tr>
-	<tr>
-		<td class="SubHead" vAlign="middle"><dnn:label id="plSkins" suffix=":" controlname="cboSkins" runat="server"></dnn:label></td>
-		<td><asp:dropdownlist id="cboSkins" Runat="server" AutoPostBack="True"></asp:dropdownlist></td>
-		<td class="SubHead" vAlign="middle"><dnn:label id="plContainers" suffix=":" controlname="cboContainers" runat="server"></dnn:label></td>
-		<td><asp:dropdownlist id="cboContainers" Runat="server" AutoPostBack="True"></asp:dropdownlist></td>
-	</tr>
-	<tr><td colSpan="4">&nbsp;</td></tr>
-	<tr>
-	    <td colspan="2" align="center"><asp:Label ID="lblLegacy" runat="server" class="NormalRed" resourcekey="LegacySkin" Visible="false" /></td>
-	</tr>
-	<tr><td colSpan="4">&nbsp;</td></tr>
-	<tr>
-		<td class="SubHead" align="center" colSpan="4">
-		    <asp:panel id="pnlSkin" Runat="server" Visible="False">
-                <asp:label id="lblApply" runat="server" resourcekey="ApplyTo">Apply To</asp:label>:&nbsp;&nbsp; 
-                <asp:CheckBox id="chkPortal" Text="Portal" Checked="True" resourcekey="Portal" Runat="server" CssClass="SubHead"></asp:CheckBox>&nbsp;&nbsp; 
-                <asp:CheckBox id="chkAdmin" Text="Admin" Checked="True" resourcekey="Admin" Runat="server" CssClass="SubHead"></asp:CheckBox><br/><br/>
-            </asp:panel>
-        </td>
-	</tr>
-	<tr>
-	    <td colSpan="4">
-	        <table border="1" cellspacing="0" cellpadding="2" width="100%">
-	            <tr>
-	                <td align="center" bgcolor="CCCCCC" class="Head">
-	                    <asp:Label ID="lblSkinTitle" runat="server" resourcekey="plSkins" />
-	                </td>
-	            </tr>
-	            <tr>
-	                <td align="center"><table id="tblSkins" runat="server" cellspacing="4" cellpadding="4" /></td>
-	            </tr>
-	        </table>
-	        <table border="1" cellspacing="0" cellpadding="2" width="100%"">
-	            <tr>
-	                <td align="center" bgcolor="CCCCCC" class="Head">
-	                    <asp:Label ID="lblContainerTitle" runat="server" resourcekey="plContainers" />
-	                </td>
-	            </tr>
-	            <tr>
-	                <td align="center"><table id="tblContainers" runat="server" cellspacing="4" cellpadding="4" /></td>
-	            </tr>
-	        </table>
-	    </td>
-	</tr>
-	<tr>
-		<td align="center" colSpan="4"><asp:panel id="pnlParse" Runat="server" Visible="False">
-			<table cellSpacing="0" cellPadding="0" border="0">
-				<tr>
-					<td class="SubHead"><asp:label id="lblParseOptions" runat="server" resourcekey="ParseOptions">Parse Options</asp:label>:</td>
-					<td>
-						<asp:RadioButtonList id="optParse" Runat="server" CssClass="SubHead" RepeatDirection="Horizontal">
-							<asp:ListItem resourcekey="Localized" Value="L" Selected="True">Localized</asp:ListItem>
-							<asp:ListItem resourcekey="Portable" Value="P">Portable</asp:ListItem>
-						</asp:RadioButtonList>
-					</td>
-				</tr>
-			</table>
-			</asp:panel>
-		</td>
-	</tr>
-	<tr>
-		<td colSpan="4"><asp:label id="lblOutput" CssClass="Normal" Runat="server" EnableViewState="False"></asp:label></td>
-	</tr>
-</table>
-<p align="center">
-    <dnn:CommandButton id="cmdParse" CssClass="CommandButton" Runat="server"  resourcekey="cmdParse" ImageUrl="~/images/settings.gif" />&nbsp;
-    <dnn:CommandButton id="cmdDelete" CssClass="CommandButton" Runat="server" resourcekey="cmdDelete" ImageUrl="~/images/delete.gif" />
-    <dnn:CommandButton id="cmdRestore" CssClass="CommandButton" Runat="server" resourcekey="cmdRestore" ImageUrl="~/images/synchronize.gif" />
-</p>
+<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web" %>
+<div class="dnnForm dnnEditSkins dnnClear" id="dnnEditSkins">
+	<fieldset>
+		<legend></legend>
+		<div id="typeRow" runat="server" class="dnnFormItem">
+			<dnn:label id="plType" runat="server"/>
+            <div class="dnnFormRadioButtons">
+			<asp:checkbox id="chkHost" cssclass="esCheckBoxes" Runat="server" resourcekey="Host" AutoPostBack="True" Checked="True" />
+			<asp:checkbox id="chkSite" cssclass="esCheckBoxes" Runat="server" resourcekey="Site" AutoPostBack="True" Checked="True" />
+            </div>
+		</div>
+		<div class="dnnFormItem">
+			<dnn:label id="plSkins" controlname="cboSkins" runat="server" />
+			<%--<asp:dropdownlist id="cboSkins" Runat="server" AutoPostBack="True" />--%>
+            <dnn:DnnComboBox id="cboSkins" Runat="server" AutoPostBack="true" />
+		</div>
+		<div class="dnnFormItem">
+			<dnn:label id="plContainers" controlname="cboContainers" runat="server" />
+			<%--<asp:dropdownlist id="cboContainers" Runat="server" AutoPostBack="True" />--%>
+            <dnn:DnnComboBox ID="cboContainers" runat="server" AutoPostBack="true" />
+			<div class="legacySkinNotice">
+				<asp:Label ID="lblLegacy" runat="server" class="dnnFormMessage dnnFormWarning" resourcekey="LegacySkin" />
+			</div>	
+		</div>
+		<asp:panel id="pnlSkin" Runat="server" Visible="False" Cssclass="dnnFormItem">
+			<dnn:label id="lblApply" runat="server" ControlName="chkPortal" Suffix=":" />
+            <div class='dnnFormRadioButtons'>
+			<asp:CheckBox id="chkPortal" Checked="True" resourcekey="Portal" Runat="server" CssClass="esCheckBoxes" />
+			<asp:CheckBox id="chkAdmin" Checked="True" resourcekey="Admin" Runat="server" CssClass="esCheckBoxes" />
+            </div>
+            <div class="dnnClear"></div>
+		</asp:panel>
+		<div>
+			<h2 class="dnnFormSectionHead"><%=LocalizeString("plSkins")%></h2>
+			<fieldset>
+			    <asp:Panel runat="server" ID="pnlMsgSkins"></asp:Panel>
+				<table id="tblSkins" runat="server" cellspacing="0" cellpadding="0" class="skinViewer" />
+			</fieldset>
+		</div>
+		<div>
+			<h2 class="dnnFormSectionHead"><%=LocalizeString("plContainers")%></h2>
+			<fieldset id="fsTabContainers">
+			    <asp:Panel runat="server" ID="pnlMsgContainers"></asp:Panel>
+				<table id="tblContainers" runat="server" cellspacing="0" cellpadding="0" class="skinViewer" />
+			</fieldset>
+		</div>
+		<div id="pnlParse" Runat="server" Visible="False" class="dnnFormItem">
+			<dnn:label id="lblParseOptions" runat="server" resourcekey="ParseOptions" />
+			<asp:RadioButtonList id="optParse" Runat="server"  RepeatDirection="Horizontal" CssClass="dnnFormRadioButtons" RepeatLayout="Flow">
+				<asp:ListItem resourcekey="Localized" Value="L" Selected="True" />
+				<asp:ListItem resourcekey="Portable" Value="P" />
+			</asp:RadioButtonList>
+		</div>
+		<div class="dnnFormItem"><asp:label id="lblOutput" Runat="server" EnableViewState="False" /></div>
+	</fieldset>
+	<ul class="dnnActions dnnClear">
+		<li><asp:LinkButton id="cmdParse" runat="server" CssClass="dnnPrimaryAction" resourcekey="cmdParse" /></li>
+		<li><asp:LinkButton id="cmdDelete" runat="server" CssClass="dnnSecondaryAction" ResourceKey="cmdDelete"  /></li>
+		<li><asp:LinkButton id="cmdRestore" runat="server" CssClass="dnnSecondaryAction" ResourceKey="cmdRestore"  /></li>
+	</ul>
+</div>

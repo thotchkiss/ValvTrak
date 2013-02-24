@@ -1,109 +1,133 @@
-<%@ Control language="vb" Inherits="DotNetNuke.Modules.Html.EditHtml" CodeBehind="EditHtml.ascx.vb" AutoEventWireup="false" Explicit="True" %>
-<%@ Register TagPrefix="dnn" TagName="SectionHead" Src="~/controls/SectionHeadControl.ascx" %>
-<%@ Register TagPrefix="dnn" TagName="TextEditor" Src="~/controls/TextEditor.ascx"%>
-<%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
- 
-<table id="tblEdit" cellspacing="2" cellpadding="2" summary="Review Design Table" border="0" runat="server">
-    <tr valign="bottom">
-        <td>
-            <p>
-            <table width="550" cellspacing="2" cellpadding="2" summary="Edit HTML Design Table" border="0">
-                <tr>
-                    <td colspan="2" valign="top"><dnn:texteditor id="txtContent" runat="server" height="400" width="660"/></td>
-                </tr>
-                <tr id="rowPublish" runat="server">
-                    <td class="SubHead" width="150" valign="top"><dnn:label id="plPublish" runat="server" controlname="chkPublish" text="Publish" suffix="?"/></td>
-                    <td width="400" valign="top"><asp:checkbox id="chkPublish" runat="server" class="CommandButton" /></td>
-                </tr>
-            </table>
-            </p>
-            <br />
-            <p>
-                <dnn:commandbutton id="cmdSave" runat="server" class="CommandButton" resourcekey="cmdSave" imageurl="~/images/save.gif" />&nbsp;
-                <dnn:commandbutton id="cmdCancel" runat="server" class="CommandButton" resourcekey="cmdCancel" causesvalidation="False" imageurl="~/images/lt.gif"  />&nbsp;
-                <dnn:commandbutton id="cmdPreview" runat="server" class="CommandButton" resourcekey="cmdPreview" imageurl="~/images/view.gif" />&nbsp;
-            </p>
-        </td>
-    </tr>
-</table>
-<br/>
-<dnn:sectionhead id="dshReview" cssclass="Head" runat="server" text="Review Content" section="tblReview" resourcekey="dshReview" includerule="True" isexpanded="True" />
-<table id="tblReview" width="550" cellspacing="2" cellpadding="2" summary="Review Design Table" border="0" runat="server">
-    <tr valign="bottom">
-        <td>
-            <table width="550" cellspacing="2" cellpadding="2" summary="Review HTML Design Table" border="0">
-                <tr>
-                    <td class="SubHead" width="150" valign="top"><dnn:label id="plComment" runat="server" controlname="txtComment" text="Comment" suffix=":"></dnn:label></td>
-                    <td valign="top"><asp:textbox id="txtComment" runat="server" cssclass="NormalTextBox" style="width:400px" textmode="multiline" rows="5"></asp:textbox></td>
-                </tr>
-            </table>
-            <p>
-                <dnn:commandbutton id="cmdReview" runat="server" class="CommandButton" imageurl="~/images/save.gif" />&nbsp;
-                <dnn:commandbutton id="cmdCancel2" runat="server" class="CommandButton" resourcekey="cmdCancel" imageurl="~/images/lt.gif" causesvalidation="False"/>&nbsp;
-            </p>
-        </td>
-    </tr>
-</table>
-<br/>
-<dnn:sectionhead id="dshVersions" cssclass="Head" runat="server" text="Version History" section="tblVersions" resourcekey="dshVersions" includerule="True" isexpanded="False" />
-<table id="tblVersions" width="550" cellspacing="2" cellpadding="2" summary="History Design Table" border="0" runat="server">
-    <tr valign="bottom">
-        <td>
-            <asp:DataGrid ID="grdVersions" runat="server" Width="100%" AutoGenerateColumns="false" CellPadding="2" GridLines="None" cssclass="DataGrid_Container">
-	            <headerstyle cssclass="DataGrid_Header" verticalalign="Top" horizontalalign="Center"/>
-	            <itemstyle CssClass="DataGrid_Item" horizontalalign="Center" />
-	            <alternatingitemstyle cssclass="DataGrid_AlternatingItem" />
-	            <Columns>
-		            <dnn:imagecommandcolumn CommandName="Item" ImageUrl="~/images/view.gif" KeyField="ItemID" Text="Preview" />
-		            <dnn:imagecommandcolumn CommandName="Edit" ImageUrl="~/images/restore.gif" KeyField="ItemID" Text="Rollback" />
-		            <asp:BoundColumn HeaderText="Version" DataField="Version" ItemStyle-CssClass="Normal" HeaderStyle-Cssclass="NormalBold" />
-		            <asp:BoundColumn HeaderText="Date" DataField="LastModifiedOnDate" ItemStyle-CssClass="Normal" HeaderStyle-Cssclass="NormalBold" />
-		            <asp:BoundColumn HeaderText="User" DataField="DisplayName" ItemStyle-CssClass="Normal" HeaderStyle-Cssclass="NormalBold" />
-		            <asp:BoundColumn HeaderText="State" DataField="StateName" ItemStyle-CssClass="Normal" HeaderStyle-Cssclass="NormalBold" />
-	            </Columns>
-            </asp:DataGrid>
-        </td>
-    </tr>
-</table>
-<dnn:sectionhead id="dshHistory" cssclass="Head" runat="server" text="Item History" section="tblHistory" resourcekey="dshHistory" includerule="True" isexpanded="False" />
-<table id="tblHistory" width="550" cellspacing="2" cellpadding="2" summary="History Design Table" border="0" runat="server">
-    <tr valign="bottom">
-        <td>
-            <table cellspacing="2" width="550" cellpadding="2" summary="History Design Table" border="0" width="100%">
-                <tr>
-                    <td class="SubHead" width="150" valign="top"><dnn:label id="plVersion" runat="server" controlname="lblVersion" text="Version" suffix=":"></dnn:label></td>
-                    <td valign="top"><asp:label id="lblVersion" runat="server" cssclass="Normal" /></td>
-                </tr>
-                <tr>
-                    <td class="SubHead" width="150" valign="top"><dnn:label id="plWorkflow" runat="server" controlname="lblWorkflow" text="Workflow" suffix=":"></dnn:label></td>
-                    <td valign="top"><asp:label id="lblWorkflow" runat="server" cssclass="Normal" /></td>
-                </tr>
-                <tr>
-                    <td class="SubHead" width="150" valign="top"><dnn:label id="plState" runat="server" controlname="lblState" text="Current State" suffix=":"></dnn:label></td>
-                    <td valign="top"><asp:label id="lblState" runat="server" cssclass="Normal" /></td>
-                </tr>
-            </table>
-            <br/>
-            <asp:DataGrid ID="grdLog" runat="server" Width="100%" AutoGenerateColumns="false" CellPadding="2" GridLines="None" cssclass="DataGrid_Container">
-	            <headerstyle cssclass="DataGrid_Header" verticalalign="Top" horizontalalign="Center"/>
-	            <itemstyle CssClass="DataGrid_Item" horizontalalign="Center" />
-	            <alternatingitemstyle cssclass="DataGrid_AlternatingItem" />
-	            <Columns>
-		            <asp:BoundColumn HeaderText="Date" DataField="CreatedOnDate" ItemStyle-CssClass="Normal" HeaderStyle-Cssclass="NormalBold" />
-		            <asp:BoundColumn HeaderText="User" DataField="DisplayName" ItemStyle-CssClass="Normal" HeaderStyle-Cssclass="NormalBold" />
-		            <asp:BoundColumn HeaderText="State" DataField="StateName" ItemStyle-CssClass="Normal" HeaderStyle-Cssclass="NormalBold" />
-		            <asp:BoundColumn HeaderText="Approved" DataField="Approved" ItemStyle-CssClass="Normal" HeaderStyle-Cssclass="NormalBold" />
-		            <asp:BoundColumn HeaderText="" DataField="Comment" ItemStyle-CssClass="Normal" HeaderStyle-Cssclass="NormalBold" />
-	            </Columns>
-            </asp:datagrid>
-        </td>
-    </tr>
-</table>
-<dnn:sectionhead id="dshPreview" cssclass="Head" runat="server" text="Preview Content" section="tblPreview" resourcekey="dshPreview" includerule="True" isexpanded="False" />
-<table id="tblPreview" cellspacing="2" cellpadding="2" summary="Preview Design Table" border="0" runat="server">
-    <tr>
-        <td colspan="2"><asp:label id="lblPreview" runat="server"/></td>
-    </tr>
-</table>
-
+<%@ Control language="C#" Inherits="DotNetNuke.Modules.Html.EditHtml" CodeBehind="EditHtml.ascx.cs" AutoEventWireup="false" Explicit="True" %>
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls" %>
+<%@ Register TagPrefix="dnn" TagName="label" Src="~/controls/LabelControl.ascx" %>
+<%@ Register TagPrefix="dnn" TagName="texteditor" Src="~/controls/texteditor.ascx" %>
+<%@ Register TagPrefix="dnnweb" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<div class="dnnForm dnnEditHtml dnnClear" id="dnnEditHtml">
+	<div class="ehCurrentContent dnnClear" id="ehCurrentContent">
+		<div class="ehccContent dnnClear">
+			<fieldset>
+				<div class="dnnFormItem">
+		        <div class="ehmContent dnnClear" id="ehmContent" runat="server">
+			        <div class="html_preview"><asp:placeholder id="placeMasterContent" runat="server" /></div>
+		        </div>
+					<dnn:texteditor id="txtContent" runat="server" height="400" width="100%"></dnn:texteditor>
+				</div>
+				<div class="dnnFormItem" id="divSubmittedContent" runat="server">
+					<div id="Div3" class="html_preview" runat="server"><asp:Literal ID="litCurrentContentPreview" runat="server" /></div>     
+				</div>
+				<div class="dnnFormItem" id="divCurrentVersion" runat="server">
+					<dnn:label id="plCurrentWorkVersion" runat="server" controlname="lblCurrentVersion" text="Version" suffix=":"/>
+					<asp:Label ID="lblCurrentVersion" runat="server" />
+				</div>
+				<div class="dnnFormItem">
+					<dnn:label id="plCurrentWorkflowInUse" runat="server" controlname="lblCurrentWorkflowInUse" text="Workflow in Use" suffix=":"/>
+					<asp:Label ID="lblCurrentWorkflowInUse" runat="server" />
+				</div>
+				<div class="dnnFormItem" id="divCurrentWorkflowState" runat="server">
+					<dnn:label id="plCurrentWorkflowState" runat="server" controlname="lblCurrentWorkflowState" text="Workflow State" suffix=":"/>
+					<asp:Label ID="lblCurrentWorkflowState" runat="server" />
+				</div>
+				<div class="dnnFormItem" id="divPublish" runat="server">
+					<dnn:label id="plActionOnSave" runat="server" text="On Save" suffix="?" />
+					<asp:checkbox id="chkPublish" runat="server" resourcekey="chkPublish" AutoPostBack="true" />
+				</div>
+				<ul class="dnnActions dnnClear">
+					<li><asp:LinkButton id="cmdSave" runat="server" class="dnnPrimaryAction" resourcekey="cmdSave" /></li>
+					<li><asp:LinkButton id="cmdPreview" runat="server" class="dnnSecondaryAction" resourcekey="cmdPreview" /></li>
+					<li><asp:HyperLink id="hlCancel" runat="server" class="dnnSecondaryAction" resourcekey="cmdCancel" /></li>
+				</ul>
+			</fieldset>
+			<h2 id="dnnPanel-EditHtmlPreview" class="dnnFormSectionHead"><a href=""><%=LocalizeString("dshPreview")%></a></h2>
+			<fieldset>
+				<div class="dnnFormItem" id="divPreviewVersion" runat="server">
+					<dnn:label id="plPreviewVersion" runat="server" controlname="lblPreviewVersion" suffix=":" />
+					<asp:label id="lblPreviewVersion" runat="server" />
+				</div>
+				<div class="dnnFormItem" id="divPreviewWorlflow" runat="server">
+					<dnn:label id="plPreviewWorkflowInUse" runat="server" controlname="lblPreviewWorkflowInUse" suffix=":" />
+					<asp:label id="lblPreviewWorkflowInUse" runat="server" />
+				</div>
+				<div class="dnnFormItem" id="divPreviewWorkflowState" runat="server">
+					<dnn:label id="plPreviewWorkflowState" runat="server" controlname="lblPreviewWorkflowState" suffix=":" />
+					<asp:Label ID="lblPreviewWorkflowState" runat="server" />
+				</div>
+				<div id="Div1" class="html_preview" runat="server"><asp:Literal ID="litPreview" runat="server" /></div>
+			</fieldset>
+			<h2 id="dnnSitePanelEditHTMLHistory" class="dnnFormSectionHead" runat="server"><a href=""><%=LocalizeString("dshHistory")%></a></h2>
+			<fieldset id="fsEditHtmlHistory" runat="server">
+				<dnnweb:dnngrid ID="dgHistory" runat="server" AutoGenerateColumns="false">
+					<MasterTableView>
+						<Columns>
+								<dnnweb:DnnGridBoundColumn HeaderText="Date" DataField="CreatedOnDate" />
+								<dnnweb:DnnGridBoundColumn HeaderText="User" DataField="DisplayName"/>
+								<dnnweb:DnnGridBoundColumn HeaderText="State" DataField="StateName"/>
+								<dnnweb:DnnGridBoundColumn HeaderText="Approved" DataField="Approved" />
+								<dnnweb:DnnGridBoundColumn HeaderText="Comment" DataField="Comment"/>
+						</Columns>
+						<NoRecordsTemplate>
+							<asp:Label ID="lblNoRecords" runat="server" resourcekey="NoHistory" />
+						</NoRecordsTemplate>
+					</MasterTableView>
+				</dnnweb:dnngrid>
+			</fieldset>
+            <h2 id="dnnVersions" class="dnnFormSectionHead" runat="server"><a href=""><%=LocalizeString("dshVersions")%></a></h2>
+            <fieldset>
+		        <div class="ehvContent">
+			        <div class="dnnFormItem">
+				        <dnn:label id="plMaxVersions" runat="server" controlname="lblMaxVersions" suffix=":" />
+				        <asp:Label ID="lblMaxVersions" runat="server" />
+			        </div>
+			        <dnnweb:dnngrid ID="dgVersions" runat="server" AutoGenerateColumns="false" AllowPaging="True" PageSize="5" >
+				        <PagerStyle Mode="NextPrevAndNumeric"></PagerStyle>
+				         <MasterTableView>
+					        <Columns>
+						        <dnnweb:DnnGridBoundColumn HeaderText="Version" DataField="Version" />
+						        <dnnweb:DnnGridBoundColumn HeaderText="Date" DataField="LastModifiedOnDate"  />
+						        <dnnweb:DnnGridBoundColumn HeaderText="User" DataField="DisplayName" />
+						        <dnnweb:DnnGridBoundColumn HeaderText="State" DataField="StateName" />
+						        <dnnweb:DnnGridTemplateColumn>
+							        <HeaderTemplate>
+								        <table cellpadding="0" cellspacing="0" class="DnnGridNestedTable">
+									        <tr>
+										        <td><dnnweb:DnnImage ID="imgDelete" runat="server" IconKey="ActionDelete" resourcekey="VersionsRemove" /></td>
+										        <td><dnnweb:DnnImage ID="imgPreview" runat="server" IconKey="View"  resourcekey="VersionsPreview" /></td>
+										        <td><dnnweb:DnnImage ID="imgRollback" runat="server" IconKey="Restore"  resourcekey="VersionsRollback" /></td>
+									        </tr>
+								        </table>
+							        </HeaderTemplate>
+							        <ItemTemplate>
+								        <table cellpadding="0" cellspacing="0" class="DnnGridNestedTable">
+									        <tr style="vertical-align: top;">
+										        <td><dnnweb:DnnImageButton ID="btnRemove" runat="server" CommandName="Remove" IconKey="ActionDelete" Text="Delete" resourcekey="VersionsRemove" /></td>
+										        <td><dnnweb:DnnImageButton ID="btnPreview" runat="server" CommandName="Preview"  IconKey="View" Text="Preview" resourcekey="VersionsPreview" /></td>
+										        <td><dnnweb:DnnImageButton ID="btnRollback" runat="server" CommandName="RollBack" IconKey="Restore" Text="Rollback" resourcekey="VersionsRollback" /></td>
+									        </tr>
+								        </table>
+							        </ItemTemplate>
+						        </dnnweb:DnnGridTemplateColumn>
+					        </Columns>
+					        <NoRecordsTemplate>
+						        <asp:Label ID="lblNoRecords" runat="server" resourcekey="NoVersions" />
+					        </NoRecordsTemplate>
+				        </MasterTableView>
+			        </dnnweb:dnngrid>
+		        </div>
+            </fieldset>
+		</div>
+	</div>
+</div>
+<script language="javascript" type="text/javascript">
+/*globals jQuery, window, Sys */
+(function ($, Sys) {
+	function setupDnnEditHtml() {
+		$('#dnnEditHtml').dnnPanels();
+	}
+	$(document).ready(function () {
+		setupDnnEditHtml();
+		Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+			setupDnnEditHtml();
+		});
+	});
+} (jQuery, window.Sys));
+</script>

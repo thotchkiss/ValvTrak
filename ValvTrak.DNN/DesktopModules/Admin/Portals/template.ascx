@@ -1,36 +1,32 @@
-<%@ Control Language="vb" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Portals.Template" CodeFile="Template.ascx.vb" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Portals.Template" CodeFile="Template.ascx.cs" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
+<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
-<table cellspacing="1" cellpadding="1" border="0">
-    <tr>
-        <td colspan="2"><asp:label id="lblMessage" runat="server" enableviewstate="False" CssClass="NormalRed" /></td>
-    </tr>
-	<tr>
-		<td class="SubHead" style="vertical-align:top; white-space:nowrap; width:200px;"><dnn:label id="plPortals" text="Portal:" controlname="cboPortals" runat="server" /></td>
-		<td><asp:dropdownlist id="cboPortals" runat="server" width="300px" /></td>
-	</tr>
-	<tr>
-		<td class="SubHead" style="vertical-align:top; white-space:nowrap; width:200px;"><dnn:label id="plTemplateName" text="Template Filename:" controlname="txtTemplateName" runat="server" /></td>
-		<td>
-			<asp:textbox id="txtTemplateName" runat="server" width="300px" enableviewstate="False" />
-			<br/>
-			<asp:requiredfieldvalidator id="valFileName" runat="server" controltovalidate="txtTemplateName" display="Dynamic" resourcekey="valFileName.ErrorMessage"/>
-		</td>
-	</tr>
-	<tr>
-		<td class="SubHead" style="vertical-align:top; white-space:nowrap; width:200px;"><dnn:label id="plDescription" text="Template Description:" controlname="txtDescription" runat="server" /></td>
-		<td>
-			<asp:textbox id="txtDescription" runat="server" width="300px" enableviewstate="False" TextMode="MultiLine" Height="150px" />
-			<br/>
-			<asp:requiredfieldvalidator id="valDescription" runat="server" controltovalidate="txtDescription" display="Dynamic" resourcekey="valDescription.ErrorMessage" />
-		</td>
-	</tr>
-	<tr>
-		<td class="SubHead" style="vertical-align:top; white-space:nowrap; width:200px;"><dnn:label id="plContent" runat="server" controlname="chkContent" /></td>
-		<td><asp:CheckBox id="chkContent" runat="server" /></td>
-	</tr>
-</table>
-<p>
-	<dnn:commandbutton id="cmdExport" cssclass="CommandButton" runat="server" resourcekey="cmdExport" ImageUrl="~/images/save.gif" />
-	<dnn:commandbutton id="cmdCancel" cssclass="CommandButton" runat="server" resourcekey="cmdCancel" ImageUrl="~/images/lt.gif" CausesValidation="false" />
-</p>
+<div class="dnnForm dnnExportPortal dnnClear" id="dnnExportPortal">
+	<%--<div class="dnnFormItem dnnFormHelp dnnClear"><p class="dnnFormRequired"><span><%=LocalizeString("RequiredFields")%></span></p></div>--%>
+    <fieldset>
+        <div class="dnnFormItem">
+            <dnn:label id="plPortals" controlname="cboPortals" runat="server" />
+            <%--<asp:dropdownlist id="cboPortals" runat="server" />--%>
+            <dnn:DnnComboBox id="cboPortals" runat="server" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:label id="plTemplateName" controlname="txtTemplateName" runat="server" CssClass="dnnFormRequired" />
+            <asp:textbox id="txtTemplateName"  runat="server" enableviewstate="False" />
+			<asp:requiredfieldvalidator id="valFileName" runat="server" controltovalidate="txtTemplateName" CssClass="dnnFormMessage dnnFormError" display="Dynamic" resourcekey="valFileName.ErrorMessage" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:label id="plDescription" controlname="txtDescription" runat="server" CssClass="dnnFormRequired" />
+            <asp:textbox id="txtDescription" runat="server" enableviewstate="False" TextMode="MultiLine" Rows="10" />
+			<asp:requiredfieldvalidator id="valDescription" runat="server" controltovalidate="txtDescription" display="Dynamic" CssClass="dnnFormMessage dnnFormError" resourcekey="valDescription.ErrorMessage" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:label id="plContent" runat="server" controlname="chkContent" />
+            <asp:CheckBox id="chkContent" runat="server" />
+        </div>
+    </fieldset>
+    <ul class="dnnActions dnnClear">
+    	<li><asp:LinkButton id="cmdExport" runat="server" CssClass="dnnPrimaryAction" resourcekey="cmdExport" /></li>
+        <li><asp:LinkButton id="cmdCancel" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdCancel" Causesvalidation="False" /></li>
+    </ul>
+</div>

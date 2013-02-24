@@ -1,84 +1,43 @@
-<%@ Control Language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Vendors.Affiliates" CodeFile="Affiliates.ascx.vb" %>
-<asp:datagrid id="grdAffiliates" runat="server" Width="100%" Border="0" CellSpacing="3" AutoGenerateColumns="false" EnableViewState="true" BorderStyle="None" BorderWidth="0px" GridLines="None">
-<Columns>
-<asp:TemplateColumn>
-<ItemStyle Width="20px">
-</ItemStyle>
-
-<ItemTemplate>
-				<asp:hyperlink navigateurl='<%# FormatURL("AffilId",DataBinder.Eval(Container.DataItem,"AffiliateId")) %>' runat="server" id="Hyperlink1">
-					<asp:image imageurl="~/images/edit.gif" resourcekey="Edit" alternatetext="Edit" runat="server" id="Hyperlink1Image" />
-				</asp:hyperlink>
-			
-</ItemTemplate>
-</asp:TemplateColumn>
-<asp:TemplateColumn HeaderText="Start">
-<HeaderStyle CssClass="NormalBold">
-</HeaderStyle>
-
-<ItemStyle CssClass="Normal">
-</ItemStyle>
-
-<ItemTemplate>
-				<asp:Label ID="lblStartDate" Runat="server" Text='<%# DisplayDate(DataBinder.Eval(Container.DataItem, "StartDate")) %>'></asp:Label>
-			
-</ItemTemplate>
-</asp:TemplateColumn>
-<asp:TemplateColumn HeaderText="End">
-<HeaderStyle CssClass="NormalBold">
-</HeaderStyle>
-
-<ItemStyle CssClass="Normal">
-</ItemStyle>
-
-<ItemTemplate>
-				<asp:Label ID="lblEndDate" Runat="server" Text='<%# DisplayDate(DataBinder.Eval(Container.DataItem, "EndDate")) %>'></asp:Label>
-			
-</ItemTemplate>
-</asp:TemplateColumn>
-<asp:BoundColumn DataField="CPC" HeaderText="CPC" DataFormatString="{0:#,##0.0####}">
-<HeaderStyle HorizontalAlign="Center" CssClass="NormalBold">
-</HeaderStyle>
-
-<ItemStyle HorizontalAlign="Center" CssClass="Normal">
-</ItemStyle>
-</asp:BoundColumn>
-<asp:BoundColumn DataField="Clicks" HeaderText="Clicks">
-<HeaderStyle HorizontalAlign="Center" CssClass="NormalBold">
-</HeaderStyle>
-
-<ItemStyle HorizontalAlign="Center" CssClass="Normal">
-</ItemStyle>
-</asp:BoundColumn>
-<asp:BoundColumn DataField="CPCTotal" HeaderText="Total" DataFormatString="{0:#,##0.0####}">
-<HeaderStyle HorizontalAlign="Center" CssClass="NormalBold">
-</HeaderStyle>
-
-<ItemStyle HorizontalAlign="Center" CssClass="Normal">
-</ItemStyle>
-</asp:BoundColumn>
-<asp:BoundColumn DataField="CPA" HeaderText="CPA" DataFormatString="{0:#,##0.0####}">
-<HeaderStyle HorizontalAlign="Center" CssClass="NormalBold">
-</HeaderStyle>
-
-<ItemStyle HorizontalAlign="Center" CssClass="Normal">
-</ItemStyle>
-</asp:BoundColumn>
-<asp:BoundColumn DataField="Acquisitions" HeaderText="Acquisitions">
-<HeaderStyle HorizontalAlign="Center" CssClass="NormalBold">
-</HeaderStyle>
-
-<ItemStyle HorizontalAlign="Center" CssClass="Normal">
-</ItemStyle>
-</asp:BoundColumn>
-<asp:BoundColumn DataField="CPATotal" HeaderText="Total" DataFormatString="{0:#,##0.0####}">
-<HeaderStyle HorizontalAlign="Center" CssClass="NormalBold">
-</HeaderStyle>
-
-<ItemStyle HorizontalAlign="Center" CssClass="Normal">
-</ItemStyle>
-</asp:BoundColumn>
-</Columns>
-</asp:datagrid>
-<br>
-<asp:HyperLink CssClass="CommandButton" ID="cmdAdd" resourcekey="cmdAdd" Runat="server" BorderStyle="None">Create New Affiliate</asp:HyperLink>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Vendors.Affiliates" CodeFile="Affiliates.ascx.cs" %>
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<div class="dnnForm dnnAffiliates dnnClear">
+    <asp:DataGrid ID="grdAffiliates" runat="server" Width="100%" AutoGenerateColumns="false" EnableViewState="true" GridLines="None" CssClass="dnnAffiliatesGrid">
+        <headerstyle cssclass="dnnGridHeader" verticalalign="Top"/>
+	    <itemstyle cssclass="dnnGridItem" horizontalalign="Left" />
+	    <alternatingitemstyle cssclass="dnnGridAltItem" />
+	    <edititemstyle cssclass="dnnFormInput" />
+	    <selecteditemstyle cssclass="dnnFormError" />
+	    <footerstyle cssclass="dnnGridFooter" />
+	    <pagerstyle cssclass="dnnGridPager" />
+        <Columns>
+            <asp:TemplateColumn>
+                <ItemStyle Width="20px"></ItemStyle>
+                <ItemTemplate>
+                    <asp:HyperLink NavigateUrl='<%# FormatURL("AffilId",DataBinder.Eval(Container.DataItem,"AffiliateId").ToString()) %>'
+                        runat="server" ID="Hyperlink1">
+                        <dnn:DnnImage IconKey="Edit" resourcekey="Edit" AlternateText="Edit" runat="server" ID="Hyperlink1Image" />
+                    </asp:HyperLink>
+                </ItemTemplate>
+            </asp:TemplateColumn>
+            <asp:TemplateColumn HeaderText="Start">
+                <ItemTemplate>
+                    <asp:Label ID="lblStartDate" runat="server" Text='<%# DisplayDate((DateTime)DataBinder.Eval(Container.DataItem, "StartDate")) %>' />
+                </ItemTemplate>
+            </asp:TemplateColumn>
+            <asp:TemplateColumn HeaderText="End">
+                <ItemTemplate>
+                    <asp:Label ID="lblEndDate" runat="server" Text='<%# DisplayDate((DateTime)DataBinder.Eval(Container.DataItem, "EndDate")) %>' />
+                </ItemTemplate>
+            </asp:TemplateColumn>
+            <asp:BoundColumn DataField="CPC" HeaderText="CPC" DataFormatString="{0:#,##0.0####}" />
+            <asp:BoundColumn DataField="Clicks" HeaderText="Clicks"/>
+            <asp:BoundColumn DataField="CPCTotal" HeaderText="Total" DataFormatString="{0:#,##0.0####}" />
+            <asp:BoundColumn DataField="CPA" HeaderText="CPA" DataFormatString="{0:#,##0.0####}" />
+            <asp:BoundColumn DataField="Acquisitions" HeaderText="Acquisitions"/>
+            <asp:BoundColumn DataField="CPATotal" HeaderText="Total" DataFormatString="{0:#,##0.0####}" />
+        </Columns>
+    </asp:DataGrid>
+    <ul class="dnnActions dnnClear">
+        <li><asp:hyperlink CssClass="dnnPrimaryAction" id="cmdAdd" resourcekey="cmdAdd" runat="server" /></li>
+    </ul>
+</div>

@@ -1,1 +1,1 @@
-﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="Styles.ascx.vb" Inherits="DotNetNuke.UI.Skins.Controls.Styles" %>
+﻿<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.UI.Skins.Controls.Styles" CodeFile="Styles.ascx.cs" %>

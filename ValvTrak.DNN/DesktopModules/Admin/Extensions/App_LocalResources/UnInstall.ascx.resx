@@ -124,7 +124,7 @@
     <value>Return</value>
   </data>
   <data name="ModuleHelp.Text" xml:space="preserve">
-    <value>&lt;h1&gt;About Package UnInstall&lt;/h1&gt;&lt;p&gt;Allows you to uninstall packages from the portal.&lt;/p&gt;</value>
+    <value>&lt;h1&gt;About Package UnInstall&lt;/h1&gt;&lt;p&gt;Allows you to uninstall packages from the website.&lt;/p&gt;</value>
   </data>
   <data name="cmdUninstall.Text" xml:space="preserve">
     <value>UnInstall Package</value>
@@ -132,8 +132,8 @@
   <data name="ControlTitle_uninstall.Text" xml:space="preserve">
     <value>UnInstall Package</value>
   </data>
-  <data name="chkDelete.Text" xml:space="preserve">
-    <value>Delete Files</value>
+  <data name="plDelete.Text" xml:space="preserve">
+    <value>Delete Files?</value>
   </data>
   <data name="CannotDeleteContainer.ErrorMessage" xml:space="preserve">
     <value>This set of containers cannot be deleted because it is being used</value>
@@ -143,5 +143,8 @@
   </data>
   <data name="CannotDeleteProvider.ErrorMessage" xml:space="preserve">
     <value>This provider cannot be deleted because it is being used</value>
+  </data>
+  <data name="plDelete.Help" xml:space="preserve">
+    <value>Check this box to delete the files associated with this Extension</value>
   </data>
 </root>

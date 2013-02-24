@@ -22,8 +22,8 @@ John Dyer - Revjon Studios (http://www.revjon.com)
 Robin Lilly, Vanessa Monzon, Mike Hernandez
 - UTEP ADA Code Base
 
-Tom Trefz & Scott Willhite
-- PopupCalendar.js (original by Tom, localization & Netscape by Scott)
+Tom Trefz && Scott Willhite
+- PopupCalendar.js (original by Tom, localization && Netscape by Scott)
 
 Richard Cox ( http://www.bydesignwebsights.com )
 - Search engine optimization at the Tab level ( Description, KeyWords, Title )
@@ -40,7 +40,7 @@ Jonathan de Halleux ( http://www.dotnetwiki.org )
 David Haggard ( http://www.newcovenant.com )
 - function to obfuscate sensitive data to prevent collection by robots and spiders and crawlers
 
-Vicenç Masanas ( http://lacolla.europe.webmatrixhosting.net )
+Vicen?Masanas ( http://lacolla.europe.webmatrixhosting.net )
 - SMTP authentication
 
 Bert Corderman
@@ -58,7 +58,7 @@ M. Murali Dharan ( http://www.phpbuilder.com/columns/dhar20040217.php3 )
 Craig Dunn ( http://users.bigpond.com/conceptdevelopment/ )
 - Search Engine Concepts ( Searcharoo )
 
-Stan Schultes ( http://www.vbnetexpert.com )
+Stan Schultes ( http://www.csnetexpert.com )
 - RSS Generator ( Visual Studio Magazine - April 2004 )
 
 James Clarkson ( http://www.blogolith.com )

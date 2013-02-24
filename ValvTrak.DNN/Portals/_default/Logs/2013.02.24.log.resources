@@ -1,0 +1,7 @@
+2013-02-24 01:12:33,434 [Tim-PC][Thread:12][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=62&def=ErrorMessage
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at DataSprings.SkinObject_jQueryLogin.Logout.Redirect()
+   at DataSprings.SkinObject_jQueryLogin.Logout.Page_Load(Object sender, EventArgs e)

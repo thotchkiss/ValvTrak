@@ -1,883 +1,667 @@
-<%@ Control Inherits="DotNetNuke.Modules.Admin.Host.HostSettings" Language="vb" AutoEventWireup="false" Explicit="True" CodeFile="HostSettings.ascx.vb" %>
+<%@ Control Inherits="DotNetNuke.Modules.Admin.Host.HostSettings" Language="C#" AutoEventWireup="false"
+    CodeFile="HostSettings.ascx.cs" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
+<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke.WebControls" %>
 <%@ Register TagPrefix="dnn" TagName="SectionHead" Src="~/controls/SectionHeadControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="FriendlyUrls" Src="~/DesktopModules/Admin/HostSettings/FriendlyUrls.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="RequestFilters" Src="~/DesktopModules/Admin/HostSettings/RequestFilters.ascx" %>
-<%@ Register TagPrefix="dnn" TagName="Skin" Src="~/controls/SkinControl.ascx" %>
-<!-- Settings Tables -->
-<asp:ValidationSummary ID="valSummary" runat="server" CssClass="NormalRed" EnableClientScript="true" DisplayMode="BulletList" />
-<table class="Settings" cellspacing="2" cellpadding="2" style="width: 100%" summary="Host Settings Design Table"
-    border="0">
-    <tr>
-        <td style="vertical-align: top;">
-            <dnn:SectionHead ID="dshBasic" runat="server" CssClass="Head" Text="Basic Settings"
-                Section="tblBasic" ResourceKey="BasicSettings" IncludeRule="True" IsExpanded="True" />
-            <table id="tblBasic" runat="server" cellspacing="0" cellpadding="2" style="width: 100%"
-                summary="Basic Settings Design Table" border="0">
-                <tr>
-                    <td colspan="2"><asp:Label ID="lblBasicSettingsHelp" CssClass="Normal" runat="server" resourcekey="BasicSettingsHelp" EnableViewState="False" /></td>
-                </tr>
-                <tr>
-                    <td width="25">
-                    </td>
-                    <td style="vertical-align: top;">
-                        <dnn:SectionHead ID="dshConfiguration" runat="server" CssClass="Head" Text="Configuration"
-                            Section="tblConfiguration" ResourceKey="Configuration" />
-                        <table id="tblConfiguration" cellspacing="2" cellpadding="2" summary="Configuration Design Table"
-                            border="0" runat="server">
-							<tr>
-								<td class="SubHead" width="150"><dnn:label id="plProduct" text="DotNetNuke Product:" controlname="lblProduct" runat="server" /></td>
-								<td><asp:Label ID="lblProduct" Runat="server" CssClass="NormalBold" /></td>
-							</tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px"><dnn:Label ID="plVersion" Text="DotNetNuke Version:" ControlName="lblVersion" runat="server" /></td>
-                                <td><asp:Label ID="lblVersion" runat="server" CssClass="NormalBold" /></td>
-                            </tr>
-                            <tr id="trBeta" runat="server">
-                                <td class="SubHead" style="width: 250px"><dnn:Label ID="plBetaNotice" Text="Display Beta Notice?" ControlName="chkBetaNotice" runat="server" /></td>
-                                <td><asp:CheckBox ID="chkBetaNotice" runat="server" CssClass="NormalTextBox" /></td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px"><dnn:Label ID="plUpgrade" Text="Check For Upgrades?" ControlName="chkUpgrade" runat="server" /></td>
-                                <td><asp:CheckBox ID="chkUpgrade" runat="server" CssClass="NormalTextBox" /></td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px"><dnn:Label ID="plAvailable" Text="Upgrade Available?" runat="server" /></td>
-                                <td><asp:HyperLink ID="hypUpgrade" Target="_new" runat="server" /></td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plDataProvider" Text="Data Provider:" ControlName="lblDataProvider"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:Label ID="lblDataProvider" runat="server" CssClass="NormalBold" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plFramework" Text=".NET Framework:" ControlName="lblFramework" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:Label ID="lblFramework" runat="server" CssClass="NormalBold" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plIdentity" Text="ASP.NET Identity:" ControlName="lblIdentity" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:Label ID="lblIdentity" runat="server" CssClass="NormalBold" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plHostName" Text="Host Name:" ControlName="lblHostName" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:Label ID="lblHostName" runat="server" CssClass="NormalBold" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plIPAddress" Text="IP Address:" ControlName="lblIPAddress" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:Label ID="lblIPAddress" runat="server" CssClass="NormalBold" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plPermissions" Text="Permissions:" ControlName="lblPermissions" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:Label ID="lblPermissions" runat="server" CssClass="NormalBold" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plApplicationPath" Text="Relative Path:" ControlName="lblApplicationPath"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:Label ID="lblApplicationPath" runat="server" CssClass="NormalBold" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plApplicationMapPath" Text="Physical Path:" ControlName="lblApplicationMapPath"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:Label ID="lblApplicationMapPath" runat="server" CssClass="NormalBold" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plServerTime" Text="Server Time:" ControlName="lblServerTime" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:Label ID="lblServerTime" runat="server" CssClass="NormalBold" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plGUID" Text="GUID:" ControlName="lblGUID" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:Label ID="lblGUID" runat="server" CssClass="NormalBold" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plWebFarm" Text="Web Farm Enabled?" ControlName="chkWebFarm" runat="server" />
-                                </td>
-                                <td>
-                                    <input id="chkWebFarm" type="checkbox" runat="server" class="NormalBold" disabled="disabled" />
-                                </td>
-                            </tr>
-                        </table>
-                        <br />
-                        <dnn:SectionHead ID="dshHost" runat="server" CssClass="Head" Text="Host Details"
-                            Section="tblHost" ResourceKey="HostDetails" />
-                        <table id="tblHost" cellspacing="2" cellpadding="2" summary="Site Details Design Table"
-                            border="0" runat="server">
-                            <tr>
-                                <td class="SubHead" style="width: 250px"><dnn:Label ID="plHostPortal" ControlName="cboHostPortal" runat="server" /></td>
-                                <td><asp:DropDownList ID="cboHostPortal" CssClass="NormalTextBox" DataTextField="PortalName" DataValueField="PortalID" Width="300" runat="server" /></td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px"><dnn:Label ID="plHostTitle" ControlName="txtHostTitle" runat="server" /></td>
-                                <td><asp:TextBox ID="txtHostTitle" CssClass="NormalTextBox" runat="server" MaxLength="256" Width="300" /></td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px"><dnn:Label ID="plHostURL" ControlName="txtHostURL" runat="server" /></td>
-                                <td><asp:TextBox ID="txtHostURL" CssClass="NormalTextBox" runat="server" MaxLength="256" Width="300" /></td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px"><dnn:Label ID="plHostEmail" Text="Host Email:" ControlName="txtHostEmail" runat="server" /></td>
-                                <td>
-                                    <asp:TextBox ID="txtHostEmail" CssClass="NormalTextBox" runat="server" MaxLength="256" Width="300" />
-                                    <asp:RegularExpressionValidator ID="valHostEmail" runat="server" ControlToValidate="txtHostEmail" Display="Dynamic" ResourceKey="HostEmail.Error" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" width="150">
-                                    <dnn:Label ID="plHostDefaultDocType" Text="Default Doctype:" ControlName="cboHostDefaultDocType"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:DropDownList ID="cboHostDefaultDocType" CssClass="Normal" runat="server" Width="150">
-                                        <asp:ListItem resourcekey="LegacyDoctype" Value="0">HTML 4 (legacy)</asp:ListItem>
-                                        <asp:ListItem resourcekey="TransDoctype" Value="1">XHTML 1.0 transitional</asp:ListItem>
-                                        <asp:ListItem resourcekey="StrictDoctype" Value="2">XHTML 1.0 strict</asp:ListItem>
-                                    </asp:DropDownList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" width="150">
-                                    <dnn:Label ID="plRememberMe" Text="Enable Remember me on login controls?" ControlName="chkRemember"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:CheckBox ID="chkRemember" runat="server" CssClass="NormalBold" />
-                                </td>
-                            </tr>
-                        </table>
-                        <br />
-                        <dnn:SectionHead ID="dshAppearance" runat="server" CssClass="Head" Text="Appearance"
-                            Section="tblAppearance" ResourceKey="Appearance" />
-                        <table id="tblAppearance" cellspacing="2" cellpadding="2" summary="Appearance Design Table"
-                            border="0" runat="server">
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plCopyright" Text="Show Copyright Credits?" ControlName="chkCopyright"
-                                        runat="server" />
-                                </td>
-                                <td valign="top">
-                                    <asp:CheckBox ID="chkCopyright" CssClass="NormalTextBox" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plUseCustomErrorMessages" Text="Use Custom Error Messages?" ControlName="chkUseCustomErrorMessages"
-                                        runat="server" />
-                                </td>
-                                <td valign="top">
-                                    <asp:CheckBox ID="chkUseCustomErrorMessages" CssClass="NormalTextBox" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plHostSkin" Text="Host Skin:" ControlName="ctlHostSkin$cboSkin" runat="server" />
-                                </td>
-                                <td valign="top">
-                                    <dnn:Skin ID="ctlHostSkin" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plHostContainer" Text="Host Container:" ControlName="ctlHostContainer$cboSkin"
-                                        runat="server" />
-                                </td>
-                                <td valign="top">
-                                    <dnn:Skin ID="ctlHostContainer" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plAdminSkin" Text="Admin Skin:" ControlName="ctlAdminSkin$cboSkin"
-                                        runat="server" />
-                                </td>
-                                <td valign="top">
-                                    <dnn:Skin ID="ctlAdminSkin" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plAdminContainer" Text="Admin Container:" ControlName="ctlAdminContainer$cboSkin"
-                                        runat="server" />
-                                </td>
-                                <td valign="top">
-                                    <dnn:Skin ID="ctlAdminContainer" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="center" colspan="2">
-                                    <br />
-                                    <dnn:CommandButton ID="cmdUploadSkin" ResourceKey="SkinUpload" runat="server" CssClass="CommandButton"
-                                        ImageUrl="~/images/up.gif" CausesValidation="false" />&nbsp;&nbsp;
-                                    <dnn:CommandButton ID="cmdUploadContainer" ResourceKey="ContainerUpload" runat="server"
-                                        CssClass="CommandButton" ImageUrl="~/images/up.gif"  CausesValidation="false" />
-                                </td>
-                            </tr>
-                        </table>
-                        <br />
-                        <dnn:SectionHead ID="dshPayment" runat="server" CssClass="Head" Text="Payment Settings"
-                            IsExpanded="False" Section="tblPayment" ResourceKey="Payment" />
-                        <table id="tblPayment" cellspacing="2" cellpadding="2" summary="Appearance Design Table"
-                            border="0" runat="server">
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plProcessor" Text="Payment Processor:" ControlName="cboProcessor"
-                                        runat="server" />
-                                </td>
-                                <td align="left">
-                                    <asp:DropDownList ID="cboProcessor" CssClass="NormalTextBox" DataTextField="value"
-                                        DataValueField="text" Width="325" runat="server" />
-                                    <br />
-                                    <dnn:CommandButton ID="cmdProcessor" ResourceKey="ProcessorWebSite" runat="server"
-                                        CssClass="CommandButton" ImageUrl="~/images/rt.gif" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plUserId" Text="Payment UserId:" ControlName="txtUserId" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtUserId" runat="server" Width="300" MaxLength="50" CssClass="NormalTextBox" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plPassword" Text="Payment Password:" ControlName="txtPassword" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtPassword" runat="server" Width="300" MaxLength="50" CssClass="NormalTextBox"
-                                        TextMode="Password" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plHostFee" Text="Hosting Fee:" ControlName="txtHostFee" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtHostFee" CssClass="NormalTextBox" runat="server" MaxLength="10"
-                                        Width="100" />
-                                    <asp:CompareValidator ID="valHostFee" runat="server" ControlToValidate="txtHostFee"
-                                        CssClass="NormalRed" Display="Dynamic" ErrorMessage="Invalid fee, needs to be a currency value!"
-                                        ResourceKey="valHostFee.Error" Operator="DataTypeCheck" Type="Currency" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plHostCurrency" Text="Hosting Currency:" ControlName="cboHostCurrency"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:DropDownList ID="cboHostCurrency" CssClass="NormalTextBox" DataValueField="value"
-                                        DataTextField="text" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plHostSpace" Text="Hosting Space (MB):" ControlName="txtHostSpace"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtHostSpace" CssClass="NormalTextBox" runat="server" MaxLength="6"
-                                        Width="100" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plPageQuota" Text="Page Quota:" ControlName="txtPageQuota" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtPageQuota" CssClass="NormalTextBox" runat="server" MaxLength="6"
-                                        Width="100" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plUserQuota" Text="User Quota:" ControlName="txtUserQuota" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtUserQuota" CssClass="NormalTextBox" runat="server" MaxLength="6"
-                                        Width="100" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plDemoPeriod" ControlName="txtDemoPeriod" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtDemoPeriod" CssClass="NormalTextBox" runat="server" MaxLength="3"
-                                        Width="50" />
-                                    <asp:Label ID="lblDemoPeriod" runat="server" CssClass="Normal" resourcekey="Days" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plDemoSignup" Text="Anonymous Demo Signup:" ControlName="chkDemoSignup"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:CheckBox ID="chkDemoSignup" CssClass="NormalTextBox" runat="server" />
-                                </td>
-                            </tr>
-                        </table>
-                        <br />
-                    </td>
-                </tr>
-            </table>
-            <br />
-            <dnn:SectionHead ID="dshAdvanced" runat="server" CssClass="Head" Text="Advanced Settings"
-                Section="tblAdvanced" ResourceKey="AdvancedSettings" IsExpanded="True" IncludeRule="False" />
-            <table id="tblAdvanced" cellspacing="0" cellpadding="2" style="width: 100%" summary="Basic Settings Design Table"
-                border="0" runat="server">
-                <tr>
-                    <td colspan="2">
-                        <asp:Label ID="lblAdvancedSettingsHelp" CssClass="Normal" runat="server" resourcekey="AdvancedSettingsHelp"
-                            EnableViewState="False" />
-                    </td>
-                </tr>
-                <tr>
-                    <td width="25">
-                    </td>
-                    <td style="vertical-align: top; ">
-                        <dnn:SectionHead ID="dshFriendlyUrl" runat="server" CssClass="Head" Text="Friendly Url Settings"
-                            IsExpanded="False" Section="tblFriendlyUrl" ResourceKey="FriendlyUrl" />
-                        <table id="tblFriendlyUrl" runat="server" style="width: 100%" cellspacing="2" cellpadding="2"
-                            summary="Appearance Design Table" border="0">
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plUseFriendlyUrls" Text="Use Friendly Urls?" ControlName="chkUseFriendlyUrls"
-                                        runat="server" />
-                                </td>
-                                <td style="vertical-align: top">
-                                    <asp:CheckBox ID="chkUseFriendlyUrls" AutoPostBack="true" CssClass="NormalTextBox"
-                                        runat="server" />
-                                </td>
-                            </tr>
-                            <tr id="rowFriendlyUrls" runat="server">
-                                <td colspan="2" style="text-align: center">
-                                    <dnn:FriendlyUrls ID="friendlyUrls" runat="server" />
-                                </td>
-                            </tr>
-                        </table>
-                        <br />
-                        <dnn:SectionHead ID="dshRequestFilter" runat="server" CssClass="Head" Text="Request Filter Settings"
-                            IsExpanded="False" Section="tblRequestFilter" ResourceKey="RequestFilter" />
-                        <table id="tblRequestFilter" runat="server" style="width: 100%" cellspacing="2" cellpadding="2"
-                            summary="Appearance Design Table" border="0">
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plEnableRequestFilters" Text="Enable Request Filters?" ControlName="chkEnableRequestFilters"
-                                        runat="server" />
-                                </td>
-                                <td style="vertical-align: top">
-                                    <asp:CheckBox ID="chkEnableRequestFilters" AutoPostBack="true" CssClass="NormalTextBox"
-                                        runat="server" />
-                                </td>
-                            </tr>
-                            <tr id="rowRequestFilters" runat="server">
-                                <td colspan="2" style="text-align: center">
-                                    <dnn:RequestFilters ID="requestFilters" runat="server" />
-                                </td>
-                            </tr>
-                        </table>
-                        <br />
-                        <dnn:SectionHead ID="dshProxy" runat="server" CssClass="Head" Text="Proxy Settings"
-                            IsExpanded="False" Section="tblProxy" ResourceKey="Proxy" />
-                        <table id="tblProxy" cellspacing="2" cellpadding="2" summary="Appearance Design Table"
-                            border="0" runat="server">
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plProxyServer" Text="Proxy Server:" ControlName="txtProxyServer" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtProxyServer" CssClass="NormalTextBox" runat="server" MaxLength="256"
-                                        Width="300" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plProxyPort" Text="Proxy Port:" ControlName="txtProxyPort" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtProxyPort" CssClass="NormalTextBox" runat="server" MaxLength="256"
-                                        Width="300" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plProxyUsername" Text="Proxy Username:" ControlName="txtProxyUsername"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtProxyUsername" CssClass="NormalTextBox" runat="server" MaxLength="256"
-                                        Width="300" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plProxyPassword" Text="Proxy Password:" ControlName="txtProxyPassword"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtProxyPassword" CssClass="NormalTextBox" runat="server" MaxLength="256"
-                                        Width="300" TextMode="Password" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plWebRequestTimeout" Text="Web Request Timeout:" ControlName="txtWebRequestTimeout"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtWebRequestTimeout" CssClass="NormalTextBox" runat="server" MaxLength="256"
-                                        Width="300" />
-                                </td>
-                            </tr>
-                        </table>
-                        <br />
-                        <dnn:SectionHead ID="dshSMTP" runat="server" CssClass="Head" Text="SMTP Server Settings"
-                            IsExpanded="False" Section="tblSMTP" ResourceKey="SMTP" />
-                        <table id="tblSMTP" cellspacing="2" cellpadding="2" summary="Appearance Design Table"
-                            border="0" runat="server">
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plSMTPServer" Text="SMTP Server:" ControlName="txtSMTPServer" runat="server" />
-                                </td>
-                                <td align="left">
-                                    <asp:TextBox ID="txtSMTPServer" CssClass="NormalTextBox" runat="server" MaxLength="256"
-                                        Width="225" />
-                                    &nbsp;
-                                    <asp:LinkButton ID="cmdEmail" resourcekey="EmailTest" runat="server" CssClass="CommandButton">Test</asp:LinkButton>
-                                    <asp:Label ID="lblEmail" runat="server" CssClass="NormalRed" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plSMTPAuthentication" Text="SMTP Authentication:" ControlName="optSMTPAuthentication"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:RadioButtonList ID="optSMTPAuthentication" CssClass="Normal" runat="server"
-                                        RepeatDirection="Horizontal" AutoPostBack="true">
-                                        <asp:ListItem Value="0" resourcekey="SMTPAnonymous">Anonymous</asp:ListItem>
-                                        <asp:ListItem Value="1" resourcekey="SMTPBasic">Basic</asp:ListItem>
-                                        <asp:ListItem Value="2" resourcekey="SMTPNTLM">NTLM</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plSMTPEnableSSL" Text="SMTP Enable SSL:" ControlName="chkSMTPEnableSSL"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:CheckBox ID="chkSMTPEnableSSL" runat="server" />
-                                </td>
-                            </tr>
-                            <tr id="trSMTPUserName" runat="server">
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plSMTPUsername" Text="SMTP Username:" ControlName="txtSMTPUsername"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtSMTPUsername" CssClass="NormalTextBox" runat="server" MaxLength="256"
-                                        Width="300" />
-                                </td>
-                            </tr>
-                            <tr id="trSMTPPassword" runat="server">
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plSMTPPassword" Text="SMTP Password:" ControlName="txtSMTPPassword"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtSMTPPassword" CssClass="NormalTextBox" runat="server" MaxLength="256"
-                                        Width="300" TextMode="Password" />
-                                </td>
-                            </tr>
-                        </table>
-                        <br />
-                        <dnn:SectionHead ID="dshPerformance" CssClass="Head" runat="server" Text="Performance Settings"
-                            IsExpanded="False" Section="tblPerformance" ResourceKey="Performance" />
-                        <table id="tblPerformance" cellspacing="2" cellpadding="2" summary="Performance Design Table"
-                            border="0" runat="server">
-                            <tr>
-                                <td class="SubHead" width="200" valign="top">
-                                <dnn:Label ID="plPageState" runat="server" ControlName="cboPageState" Text="Page State Persistence:">
-                                    </dnn:Label>
-                                </td>
-                                <td>
-                                    <asp:label ID="plPsWarning" runat="server" CssClass="NormalRed" resourcekey="plPsWarning">
-                                    </asp:label>
-                                    <asp:RadioButtonList ID="cboPageState" CssClass="Normal" runat="server" RepeatDirection="Horizontal">
-                                        <asp:ListItem resourcekey="Page" Value="P">Page</asp:ListItem>
-                                        <asp:ListItem resourcekey="Memory" Value="M">Memory</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" valign="top" width="200">
-                                    <dnn:Label ID="lblModuleCacheProvider" runat="server" Text="Module Cache Provider" ControlName="cboModuleCacheProvider" ResourceKey="ModuleCacheProvider" HelpKey="ModuleCacheProvider.Help"></dnn:Label>
-                                </td>
-                                <td>
-                                    <asp:DropDownList ID="cboModuleCacheProvider" runat="server" DataValueField="key" DataTextField="filteredkey" Style="width: 200px" />
-                                </td>
-                            </tr>
-                            <tr id="PageCacheRow" runat="server" >
-                                <td class="SubHead" valign="top" width="200">
-                                    <dnn:Label ID="lblPageCacheProvider" runat="server" Text="Page Cache Provider" ControlName="cboPageCacheProvider" ResourceKey="PageCacheProvider" HelpKey="PageCacheProvider.Help"></dnn:Label>
-                                </td>
-                                <td>
-                                    <asp:DropDownList ID="cboPageCacheProvider" runat="server" DataValueField="key" DataTextField="filteredkey" Style="width: 200px" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" width="200">
-                                    <dnn:Label ID="plPerformance" Text="Performance Setting:" ControlName="cboPerformance"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:DropDownList ID="cboPerformance" runat="server" Style="width: 200px">
-                                        <asp:ListItem resourcekey="NoCaching" Value="0">No Caching</asp:ListItem>
-                                        <asp:ListItem resourcekey="LightCaching" Value="1">Light Caching</asp:ListItem>
-                                        <asp:ListItem resourcekey="ModerateCaching" Value="3">Moderate Caching</asp:ListItem>
-                                        <asp:ListItem resourcekey="HeavyCaching" Value="6">Heavy Caching</asp:ListItem>
-                                    </asp:DropDownList>
-                                    &nbsp;
-                                    <asp:LinkButton ID="cmdCache" resourcekey="ClearCache" runat="server" CssClass="CommandButton" CausesValidation="false" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" width="200">
-                                    <dnn:Label ID="plCacheability" Text="Authenticated Cacheability:" ControlName="cboCacheability"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:DropDownList ID="cboCacheability" runat="server" Style="width: 200px" CssClass="Normal">
-                                        <asp:ListItem resourcekey="NoCache" Value="0">NoCache</asp:ListItem>
-                                        <asp:ListItem resourcekey="Private" Value="1">Private</asp:ListItem>
-                                        <asp:ListItem resourcekey="Public" Value="2">Public</asp:ListItem>
-                                        <asp:ListItem resourcekey="Server" Value="3">Server</asp:ListItem>
-                                        <asp:ListItem resourcekey="ServerAndNoCache" Value="4">ServerAndNoCache</asp:ListItem>
-                                        <asp:ListItem resourcekey="ServerAndPrivate" Value="5">ServerAndPrivate</asp:ListItem>
-                                    </asp:DropDownList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" width="200">
-                                    <dnn:Label ID="plCompression" Text="Compression Setting:" ControlName="cboCompression"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:DropDownList ID="cboCompression" runat="server" Style="width: 200px" CssClass="NormalTextBox">
-                                        <asp:ListItem resourcekey="NoCompression" Value="0">No Compression</asp:ListItem>
-                                        <asp:ListItem resourcekey="Deflate" Value="2">Deflate Compression</asp:ListItem>
-                                        <asp:ListItem resourcekey="GZip" Value="1">GZip Compression</asp:ListItem>
-                                    </asp:DropDownList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plWhitespace" Text="Use Whitespace Filter:" ControlName="chkWhitespace"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:CheckBox ID="chkWhitespace" runat="server" CssClass="NormalTextBox" />&nbsp;
-                                </td>
-                            </tr>
-                        </table>
-                        <br />
-                        <dnn:SectionHead ID="dshCompression" CssClass="Head" runat="server" Text="Compression Settings"
-                            IsExpanded="False" Section="tblCompression" ResourceKey="Compression" />
-                        <table id="tblCompression" cellspacing="2" cellpadding="2" summary="Compression Design Table"
-                            border="0" runat="server">
-                            <tr>
-                                <td class="SubHead" style="vertical-align: top; width: 250px">
-                                    <dnn:Label ID="plExcludedPaths" runat="server" ControlName="txtExcludedPaths" Text="Excluded Paths:">
-                                    </dnn:Label>
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtExcludedPaths" CssClass="NormalTextBox" runat="server" MaxLength="256"
-                                        Width="300" TextMode="MultiLine" Rows="3" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="vertical-align: top; width: 250px">
-                                    <dnn:Label ID="plWhitespaceFilter" runat="server" ControlName="txtWhitespaceFilter"
-                                        Text="Whitespace Filter:"></dnn:Label>
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtWhitespaceFilter" CssClass="NormalTextBox" runat="server" MaxLength="256"
-                                        Width="300" TextMode="MultiLine" Rows="3" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" style="text-align: center">
-                                    <dnn:CommandButton ID="cmdUpdateCompression" ResourceKey="cmdUpdate" runat="server"
-                                        CssClass="CommandButton" ImageUrl="~/images/save.gif" />
-                                </td>
-                            </tr>
-                        </table>
-                        <br />
-                        <dnn:SectionHead ID="dshJQuery" CssClass="Head" runat="server" Text="jQuery Settings"
-                            IsExpanded="False" Section="tblJQuery" ResourceKey="JQuery" />
-                        <br />
-                        <table id="tblJQuery" cellspacing="2" cellpadding="2" summary="jQuery Design Table"
-                            border="0" runat="server">
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plJQueryVersion" Text="Installed jQuery Version:" ControlName="txtDebugVersion"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:Label ID="jQueryVersion" runat="server"></asp:Label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plJQueryDebugVersion" Text="Use jQuery Debug Version?" ControlName="chkJQueryDebugVersion"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:CheckBox ID="chkJQueryDebugVersion" CssClass="NormalTextBox" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plJQueryUseHosted" Text="Use Hosted jQuery Version?" ControlName="chkJQueryUseHosted"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:CheckBox ID="chkJQueryUseHosted" CssClass="NormalTextBox" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plJQueryHostUrl" Text="Hosted jQuery URL:" ControlName="txtJQueryHostedUrl"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtJQueryHostedUrl" CssClass="NormalTextBox" runat="server" MaxLength="256"
-                                        Width="300" />
-                                </td>
-                            </tr>
-                       </table>
-                        <dnn:SectionHead ID="dshOther" CssClass="Head" runat="server" Text="Other Settings"
-                            IsExpanded="False" Section="tblOther" ResourceKey="Other" />
-                        <table id="tblOther" cellspacing="2" cellpadding="2" summary="Appearance Design Table"
-                            border="0" runat="server">
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plControlPanel" Text="Control Panel:" ControlName="cboControlPanel"
-                                        runat="server" />
-                                </td>
-                                <td valign="top">
-                                    <asp:DropDownList ID="cboControlPanel" CssClass="NormalTextBox" Width="300" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plSiteLogStorage" Text="Site Log Storage:" ControlName="optSiteLogStorage"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:RadioButtonList ID="optSiteLogStorage" CssClass="Normal" runat="server" RepeatDirection="Horizontal">
-                                        <asp:ListItem Value="D" resourcekey="Database">Database</asp:ListItem>
-                                        <asp:ListItem Value="F" resourcekey="FileSystem">File System</asp:ListItem>
-                                    </asp:RadioButtonList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plSiteLogBuffer" ControlName="txtSiteLogBuffer" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtSiteLogBuffer" CssClass="NormalTextBox" runat="server" MaxLength="4"
-                                        Width="50" />
-                                    <asp:Label ID="lblSiteLogBuffer" runat="server" CssClass="Normal" resourcekey="Items" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plSiteLogHistory" ControlName="txtSiteLogHistory" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtSiteLogHistory" CssClass="NormalTextBox" runat="server" MaxLength="3"
-                                        Width="50" />
-                                    <asp:Label ID="lblSiteLogHistory" runat="server" CssClass="Normal" resourcekey="Days" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plUsersOnline" ControlName="chkUsersOnline" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:CheckBox ID="chkUsersOnline" CssClass="NormalTextBox" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plUsersOnlineTime" ControlName="txtUsersOnlineTime" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtUsersOnlineTime" CssClass="NormalTextBox" runat="server" MaxLength="3"
-                                        Width="50" />
-                                    <asp:Label ID="lblUsersOnlineTime" runat="server" CssClass="Normal" resourcekey="Minutes" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plAutoAccountUnlock" ControlName="txtAutoAccountUnlock" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtAutoAccountUnlock" runat="server" CssClass="NormalTextBox" MaxLength="3"
-                                        Width="50" />
-                                    <asp:Label ID="lblAutoAccountUnlock" runat="server" CssClass="Normal" resourcekey="Minutes" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plFileExtensions" ControlName="txtFileExtensions" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtFileExtensions" CssClass="NormalTextBox" runat="server" MaxLength="256" Width="300" TextMode="MultiLine" Rows="3" />
-                                    <asp:RegularExpressionValidator ID="valFileExtensions" CssClass="NormalRed" runat="server" ControlToValidate="txtFileExtensions" 
-                                                EnableClientScript="true" ValidationExpression="[A-Za-z0-9,_]*" resourceKey="valFileExtensions.Error" Display="Dynamic" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plSchedulerMode" Text="Scheduler Mode:" ControlName="cboSchedulerMode"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:DropDownList ID="cboSchedulerMode" runat="server" Width="250px" CssClass="NormalTextBox">
-                                        <asp:ListItem resourcekey="Disabled" Value="0">Disabled</asp:ListItem>
-                                        <asp:ListItem resourcekey="TimerMethod" Value="1">Timer Method</asp:ListItem>
-                                        <asp:ListItem resourcekey="RequestMethod" Value="2">Request Method</asp:ListItem>
-                                    </asp:DropDownList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plLogBuffer" Text="Enable Event Log Buffer?" ControlName="chkLogBuffer"
-                                        runat="server" />
-                                </td>
-                                <td>
-                                    <asp:CheckBox ID="chkLogBuffer" CssClass="NormalTextBox" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plHelpUrl" Text="Help Url:" ControlName="txtHelpURL" runat="server" />
-                                </td>
-                                <td>
-                                    <asp:TextBox ID="txtHelpURL" CssClass="NormalTextBox" runat="server" MaxLength="256"
-                                        Width="300" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plEnableHelp" Text="Enable Module Help?" ControlName="chkEnableHelp"
-                                        runat="server" />
-                                </td>
-                                <td valign="top">
-                                    <asp:CheckBox ID="chkEnableHelp" CssClass="NormalTextBox" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plAutoSync" Text="Enable File System Auto-Sync?" ControlName="chkAutoSync"
-                                        runat="server" />
-                                </td>
-                                <td valign="top">
-                                    <asp:CheckBox ID="chkAutoSync" CssClass="NormalTextBox" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="SubHead" style="width: 250px">
-                                    <dnn:Label ID="plContentLocalization" Text="Enable Content Localization?" ControlName="chkContentLocalization"
-                                        runat="server" />
-                                </td>
-                                <td valign="top">
-                                    <asp:CheckBox ID="chkContentLocalization" CssClass="NormalTextBox" runat="server" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <td style="text-align: center">
-            <dnn:CommandButton ID="cmdUpdate" ResourceKey="cmdUpdate" runat="server" CssClass="CommandButton" ImageUrl="~/images/save.gif" />
-            &nbsp;&nbsp;
-            <dnn:CommandButton ID="cmdRestart" ResourceKey="cmdRestart" runat="server" CssClass="CommandButton" ImageUrl="~/images/reset.gif" CausesValidation="False" />
-        </td>
-    </tr>
-</table>
-<hr noshade="noshade" size="1" />
-<br />
-<table class="Settings" cellspacing="2" cellpadding="2" summary="Host Settings Design Table"
-    border="0">
-    <tr>
-        <td class="SubHead" valign="bottom">
+<%@ Register TagPrefix="asp" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<script language="javascript" type="text/javascript">
+/*globals jQuery, window, Sys */
+(function ($, Sys) {
+    function toggleSmtpCredentials(animation) {
+        var smtpVal = $('#<%= optSMTPAuthentication.ClientID %> input:checked').val(); /*0,1,2*/
+        if (smtpVal == "1") {
+            animation ? $('#SMTPUserNameRow,#SMTPPasswordRow').slideDown() : $('#SMTPUserNameRow,#SMTPPasswordRow').show();
+        }
+        else {
+            animation ? $('#SMTPUserNameRow,#SMTPPasswordRow').slideUp() : $('#SMTPUserNameRow,#SMTPPasswordRow').hide();
+        }
+    }
+
+    function setUpDnnHostSettings() {
+        $('#dnnHostSettings').dnnTabs().dnnPanels();
+        $('#hostSkinSettings').dnnPreview({
+            skinSelector: '<%= hostSkinCombo.ClientID %>',
+            containerSelector: '<%= hostContainerCombo.ClientID %>',
+            baseUrl: '//<%= this.PortalAlias.HTTPAlias %>',
+            noSelectionMessage: '<%= DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(LocalizeString("PreviewNoSelectionMessage.Text")) %>',
+            alertCloseText: '<%= Localization.GetSafeJSString("Close.Text", Localization.SharedResourceFile)%>',
+            alertOkText: '<%= Localization.GetSafeJSString("Ok.Text", Localization.SharedResourceFile)%>',
+            useComboBox: true
+        });
+        $('#adminSkinSettings').dnnPreview({
+            skinSelector: '<%= editSkinCombo.ClientID %>',
+            containerSelector: '<%= editContainerCombo.ClientID %>',
+            baseUrl: '//<%= this.PortalAlias.HTTPAlias %>',
+            noSelectionMessage: '<%= DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(LocalizeString("PreviewNoSelectionMessage.Text")) %>',
+            alertCloseText: '<%= Localization.GetSafeJSString("Close.Text", Localization.SharedResourceFile)%>',
+            alertOkText: '<%= Localization.GetSafeJSString("Ok.Text", Localization.SharedResourceFile)%>',
+            useComboBox: true
+        });
+        $('#basicSettings .dnnFormExpandContent a').dnnExpandAll({ expandText: '<%=Localization.GetSafeJSString("ExpandAll", Localization.SharedResourceFile)%>', collapseText: '<%=Localization.GetSafeJSString("CollapseAll", Localization.SharedResourceFile)%>', targetArea: '#basicSettings' });
+        $('#advancedSettings .dnnFormExpandContent a').dnnExpandAll({ expandText: '<%=Localization.GetSafeJSString("ExpandAll", Localization.SharedResourceFile)%>', collapseText: '<%=Localization.GetSafeJSString("CollapseAll", Localization.SharedResourceFile)%>', targetArea: '#advancedSettings' });
+
+        toggleSmtpCredentials(false);
+        $('#<%= optSMTPAuthentication.ClientID %>').change(function() {
+            toggleSmtpCredentials(true);
+        });
+
+        toggleSection('friendlyUrlsRow', document.getElementById('<%=chkUseFriendlyUrls.ClientID %>').checked);
+        toggleSection('requestFiltersRow', document.getElementById('<%=chkEnableRequestFilters.ClientID %>').checked);
+
+        $("#<%=chkUseFriendlyUrls.ClientID %>").change(function(e) {
+            toggleSection('friendlyUrlsRow', this.checked);
+        });
+
+        $("#<%=chkEnableRequestFilters.ClientID %>").change(function(e) {
+            toggleSection('requestFiltersRow', this.checked);
+        });
+
+        var yesText = '<%= Localization.GetSafeJSString("Yes.Text", Localization.SharedResourceFile) %>',
+            noText = '<%= Localization.GetSafeJSString("No.Text", Localization.SharedResourceFile) %>',
+            titleText = '<%= Localization.GetSafeJSString("Confirm.Text", Localization.SharedResourceFile) %>';
+        
+        $('#<%= IncrementCrmVersionButton.ClientID %>').dnnConfirm({
+            text: '<%= DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(LocalizeString("IncrementCrmVersionConfirm")) %>',
+            yesText: yesText,
+            noText: noText,
+            title: titleText
+        });
+    }
+    
+    $(document).ready(function () {
+        setUpDnnHostSettings();
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            setUpDnnHostSettings();
+        });
+    });
+
+    function toggleSection(id, isToggled) {
+        $("div[id$='" + id + "']").toggle(isToggled);
+    }
+} (jQuery, window.Sys));
+</script>
+<div class="dnnForm dnnHostSettings dnnClear" id="dnnHostSettings">
+    <asp:ValidationSummary ID="valSummary" runat="server" CssClass="dnnFormMessage dnnFormValidationSummary"
+        EnableClientScript="true" DisplayMode="BulletList" />
+    <ul class="dnnAdminTabNav dnnClear">
+        <li><a href="#basicSettings">
+            <%=LocalizeString("BasicSettings")%></a></li>
+        <li><a href="#advancedSettings">
+            <%=LocalizeString("AdvancedSettings")%></a></li>
+        <li><a href="#otherSettings">
+            <%=LocalizeString("OtherSettings")%></a></li>
+        <li><a href="#logSettings">
+            <%=LocalizeString("LogSettings")%></a></li>
+            
+    </ul>
+    <div id="basicSettings" class="ssBasicSettings dnnClear">
+        <div class="dnnFormExpandContent">
+            <a href="">
+                <%=Localization.GetString("ExpandAll", Localization.SharedResourceFile)%></a></div>
+        <div class="ssasContent dnnClear">
+            <h2 id="Panel-Configuration" class="dnnFormSectionHead">
+                <a href="" class="">
+                    <%=LocalizeString("Configuration")%></a></h2>
+            <fieldset>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plProduct" ControlName="lblProduct" runat="server" />
+                    <asp:Label ID="lblProduct" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plVersion" ControlName="lblVersion" runat="server" />
+                    <asp:Label ID="lblVersion" runat="server" />
+                </div>
+                <div id="betaRow" class="dnnFormItem" runat="server">
+                    <dnn:Label ID="plBetaNotice" ControlName="chkBetaNotice" runat="server" />
+                    <asp:CheckBox ID="chkBetaNotice" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plUpgrade" ControlName="chkUpgrade" runat="server" />
+                    <asp:CheckBox ID="chkUpgrade" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plAvailable" ControlName="hypUpgrade" runat="server" />
+                    <asp:HyperLink ID="hypUpgrade" Target="_new" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plDataProvider" ControlName="lblDataProvider" runat="server" />
+                    <asp:Label ID="lblDataProvider" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plFramework" ControlName="lblFramework" runat="server" />
+                    <asp:Label ID="lblFramework" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plIdentity" ControlName="lblIdentity" runat="server" />
+                    <asp:Label ID="lblIdentity" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plHostName" ControlName="lblHostName" runat="server" />
+                    <asp:Label ID="lblHostName" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plIPAddress" ControlName="lblIPAddress" runat="server" />
+                    <asp:Label ID="lblIPAddress" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plPermissions" ControlName="lblPermissions" runat="server" />
+                    <asp:Label ID="lblPermissions" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plApplicationPath" Text="Relative Path:" ControlName="lblApplicationPath"
+                        runat="server" />
+                    <asp:Label ID="lblApplicationPath" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plApplicationMapPath" Text="Physical Path:" ControlName="lblApplicationMapPath"
+                        runat="server" />
+                    <asp:Label ID="lblApplicationMapPath" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plServerTime" Text="Server Time:" ControlName="lblServerTime" runat="server" />
+                    <asp:Label ID="lblServerTime" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plGUID" Text="GUID:" ControlName="lblGUID" runat="server" />
+                    <asp:Label ID="lblGUID" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plWebFarm" Text="Web Farm Enabled?" ControlName="chkWebFarm" runat="server" />
+                    <input id="chkWebFarm" type="checkbox" runat="server" disabled="disabled" />
+                </div>
+            </fieldset>
+            <h2 id="Panel-HostDetails" class="dnnFormSectionHead">
+                <a href="" class="">
+                    <%=LocalizeString("HostDetails")%></a></h2>
+            <fieldset>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plHostPortal" ControlName="cboHostPortal" runat="server" />
+                 <%--   <asp:DropDownList ID="hostPortalsCombo" DataTextField="PortalName" DataValueField="PortalID"
+                        runat="server" />--%>
+                    <dnn:DnnComboBox ID="hostPortalsCombo" DataTextField="PortalName" DataValueField="PortalID"
+                        runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plHostTitle" ControlName="txtHostTitle" runat="server" />
+                    <asp:TextBox ID="txtHostTitle" runat="server" MaxLength="256" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plHostURL" ControlName="txtHostURL" runat="server" />
+                    <asp:TextBox ID="txtHostURL" runat="server" MaxLength="256" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plHostEmail" ControlName="txtHostEmail" runat="server" />
+                    <div>
+                        <asp:TextBox ID="txtHostEmail" runat="server" MaxLength="256" />
+                        <asp:RegularExpressionValidator ID="valHostEmail" CssClass="dnnFormMessage dnnFormError"
+                            runat="server" ControlToValidate="txtHostEmail" Display="Dynamic" ResourceKey="HostEmail.Error" />
+                    </div>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plHostDefaultDocType" ControlName="cboHostDefaultDocType" runat="server" />
+                    <%--<asp:DropDownList ID="docTypeCombo" runat="server" DataTextField="Key" DataValueField="Value" />--%>
+                    <dnn:DnnComboBox ID="docTypeCombo" runat="server" DataTextField="Key" DataValueField="Value" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plRememberMe" ControlName="chkRemember" runat="server" />
+                    <asp:CheckBox ID="chkRemember" runat="server" />
+                </div>
+            </fieldset>
+            <h2 id="Panel-Appearance" class="dnnFormSectionHead">
+                <a href="" class="">
+                    <%=LocalizeString("Appearance")%></a></h2>
+            <fieldset>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plCopyright" ControlName="chkCopyright" runat="server" />
+                    <asp:CheckBox ID="chkCopyright" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plUseCustomErrorMessages" ControlName="chkUseCustomErrorMessages"
+                        runat="server" />
+                    <asp:CheckBox ID="chkUseCustomErrorMessages" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plUseCustomModuleCssClass" ControlName="chkUseCustomModuleCssClass"
+                        runat="server" />
+                    <asp:CheckBox ID="chkUseCustomModuleCssClass" runat="server" />
+                </div>
+                <div id="hostSkinSettings">
+                    <div class="dnnFormItem">
+                        <dnn:Label ID="plHostSkin" ControlName="hostSkinCombo" runat="server" />
+                        <%--<asp:DropDownList ID="hostSkinCombo" runat="Server" DataTextField="Key" DataValueField="Value" />--%>
+                        <dnn:DnnComboBox ID="hostSkinCombo" runat="Server" DataTextField="Key" DataValueField="Value" />
+                    </div>
+                    <div class="dnnFormItem">
+                        <dnn:Label ID="plHostContainer" ControlName="hostContainerCombo" runat="server" />
+                        <%--<asp:DropDownList ID="hostContainerCombo" runat="Server" DataTextField="Key" DataValueField="Value" />--%>
+                        <dnn:DnnComboBox ID="hostContainerCombo" runat="Server" DataTextField="Key" DataValueField="Value" CssClass="dnnFixedSizeComboBox" />
+                        <a href="#" class="dnnSecondaryAction">
+                            <%=LocalizeString("SkinPreview")%></a>
+                    </div>
+                </div>
+                <div id="adminSkinSettings">
+                    <div class="dnnFormItem">
+                        <dnn:Label ID="plAdminSkin" ControlName="editSkinCombo" runat="server" />
+                       <%-- <asp:DropDownList ID="editSkinCombo" runat="Server" DataTextField="Key" DataValueField="Value" />--%>
+                        <dnn:DnnComboBox ID="editSkinCombo" runat="Server" DataTextField="Key" DataValueField="Value" />
+                    </div>
+                    <div class="dnnFormItem" id="adminContainerPreview">
+                        <dnn:Label ID="plAdminContainer" ControlName="editContainerCombo" runat="server" />
+                        <%--<asp:DropDownList ID="editContainerCombo" runat="Server" DataTextField="Key" DataValueField="Value" />--%>
+                        <dnn:DnnComboBox ID="editContainerCombo" runat="Server" DataTextField="Key" DataValueField="Value" CssClass="dnnFixedSizeComboBox" />
+                        <a href="#" class="dnnSecondaryAction">
+                            <%=LocalizeString("EditSkinPreview")%></a>
+                    </div>
+                </div>
+            </fieldset>
+            <h2 id="Panel-Payment" class="dnnFormSectionHead">
+                <a href="" class="">
+                    <%=LocalizeString("Payment")%></a></h2>
+            <fieldset class="dnnhsPaymentSettings">
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plProcessor" ControlName="processorCombo" runat="server" />
+                  <%--  <asp:DropDownList ID="processorCombo" DataTextField="value" DataValueField="text"
+                        runat="server" />--%>
+                    <dnn:DnnComboBox ID="processorCombo" DataTextField="value" DataValueField="text" CssClass="dnnFixedSizeComboBox"
+                        runat="server" />
+                    <asp:HyperLink ID="processorLink" Target="new" CssClass="dnnSecondaryAction" ResourceKey="ProcessorWebSite"
+                        runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plUserId" ControlName="txtUserId" runat="server" />
+                    <asp:TextBox ID="txtUserId" runat="server" MaxLength="50" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plPassword" ControlName="txtPassword" runat="server" />
+                    <asp:TextBox ID="txtPassword" runat="server" MaxLength="50" TextMode="Password" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plHostFee" ControlName="txtHostFee" runat="server" />
+                    <asp:TextBox ID="txtHostFee" runat="server" MaxLength="10" />
+                    <asp:CompareValidator ID="valHostFee" CssClass="dnnFormMessage dnnFormError" runat="server"
+                        ControlToValidate="txtHostFee" Display="Dynamic" ResourceKey="valHostFee.Error"
+                        Operator="DataTypeCheck" Type="Currency" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plHostCurrency" ControlName="cboHostCurrency" runat="server" />
+                   <%-- <asp:DropDownList ID="currencyCombo" DataValueField="value" DataTextField="text"
+                        runat="server" />--%>
+                    <dnn:DnnComboBox ID="currencyCombo" DataValueField="value" DataTextField="text"
+                        runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plHostSpace" ControlName="txtHostSpace" runat="server" />
+                    <asp:TextBox ID="txtHostSpace" runat="server" MaxLength="6" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plPageQuota" ControlName="txtPageQuota" runat="server" />
+                    <asp:TextBox ID="txtPageQuota" runat="server" MaxLength="6" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plUserQuota" ControlName="txtUserQuota" runat="server" />
+                    <asp:TextBox ID="txtUserQuota" runat="server" MaxLength="6" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plDemoPeriod" ControlName="txtDemoPeriod" runat="server" />
+                    <asp:TextBox ID="txtDemoPeriod" runat="server" MaxLength="3" />
+                    <asp:Label ID="lblDemoPeriod" runat="server" resourcekey="Days" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plDemoSignup" ControlName="chkDemoSignup" runat="server" />
+                    <asp:CheckBox ID="chkDemoSignup" runat="server" />
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div id="advancedSettings" class="ssAdvancedSettings dnnClear">
+        <div class="dnnFormExpandContent">
+            <a href="">
+                <%=Localization.GetString("ExpandAll", Localization.SharedResourceFile)%></a></div>
+        <div class="ssasContent dnnClear">
+            <h2 id="Panel-FriendlyUrl" class="dnnFormSectionHead">
+                <a href="#" class="">
+                    <%=LocalizeString("FriendlyUrl")%></a></h2>
+            <fieldset class="asContentFriendlyUrls">
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plUseFriendlyUrls" ControlName="chkUseFriendlyUrls" runat="server" />
+                    <asp:CheckBox ID="chkUseFriendlyUrls" runat="server" />
+                </div>
+                <div id="friendlyUrlsRow" class="dnnFormItem" runat="server">
+                    <dnn:FriendlyUrls ID="friendlyUrls" runat="server" />
+                </div>
+            </fieldset>
+            <h2 id="Panel-Proxy" class="dnnFormSectionHead">
+                <a href="#" class="">
+                    <%=LocalizeString("Proxy")%></a></h2>
+            <fieldset>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plProxyServer" ControlName="txtProxyServer" runat="server" />
+                    <asp:TextBox ID="txtProxyServer" runat="server" MaxLength="256" Width="300" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plProxyPort" ControlName="txtProxyPort" runat="server" />
+                    <asp:TextBox ID="txtProxyPort" runat="server" MaxLength="256" Width="300" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plProxyUsername" ControlName="txtProxyUsername" runat="server" />
+                    <asp:TextBox ID="txtProxyUsername" runat="server" MaxLength="256" Width="300" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plProxyPassword" ControlName="txtProxyPassword" runat="server" />
+                    <asp:TextBox ID="txtProxyPassword" runat="server" MaxLength="256" Width="300" TextMode="Password" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plWebRequestTimeout" ControlName="txtWebRequestTimeout" runat="server" />
+                    <asp:TextBox ID="txtWebRequestTimeout" runat="server" MaxLength="256" Width="300" />
+                </div>
+            </fieldset>
+            <h2 id="Panel-SMTP" class="dnnFormSectionHead">
+                <a href="#" class="">
+                    <%=LocalizeString("SMTP")%></a></h2>
+            <fieldset class="dnnhsSMTPSettings">
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plSMTPServer" ControlName="txtSMTPServer" runat="server" />
+                    <asp:TextBox ID="txtSMTPServer" runat="server" MaxLength="256" Width="225" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plSMTPAuthentication" ControlName="optSMTPAuthentication" runat="server" />
+                    <asp:RadioButtonList ID="optSMTPAuthentication" CssClass="dnnHSRadioButtons" runat="server"
+                        RepeatLayout="Flow">
+                        <asp:ListItem Value="0" resourcekey="SMTPAnonymous" />
+                        <asp:ListItem Value="1" resourcekey="SMTPBasic" />
+                        <asp:ListItem Value="2" resourcekey="SMTPNTLM" />
+                    </asp:RadioButtonList>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plSMTPEnableSSL" ControlName="chkSMTPEnableSSL" runat="server" />
+                    <asp:CheckBox ID="chkSMTPEnableSSL" runat="server" />
+                </div>
+                <div id="SMTPUserNameRow" class="dnnFormItem">
+                    <dnn:Label ID="plSMTPUsername" ControlName="txtSMTPUsername" runat="server" />
+                    <asp:TextBox ID="txtSMTPUsername" runat="server" MaxLength="256" Width="300" />
+                </div>
+                <div id="SMTPPasswordRow" class="dnnFormItem">
+                    <dnn:Label ID="plSMTPPassword" ControlName="txtSMTPPassword" runat="server" />
+                    <asp:TextBox ID="txtSMTPPassword" runat="server" MaxLength="256" Width="300" TextMode="Password" />
+                </div>
+                <ul class="dnnActions dnnClear">
+                    <li>
+                        <asp:LinkButton ID="cmdEmail" resourcekey="EmailTest" runat="server" CssClass="dnnPrimaryAction" /></li>
+                </ul>
+            </fieldset>
+            <h2 id="Panel-Performance" class="dnnFormSectionHead">
+                <a href="#" class="">
+                    <%=LocalizeString("Performance")%></a></h2>
+            <fieldset class="dnnhsPerformanceSettings">
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plPageState" runat="server" ControlName="cboPageState" />
+                    <asp:RadioButtonList ID="cboPageState" CssClass="dnnHSRadioButtons" runat="server"
+                        RepeatLayout="Flow">
+                        <asp:ListItem resourcekey="Page" Value="P" />
+                        <asp:ListItem resourcekey="Memory" Value="M" />
+                    </asp:RadioButtonList>
+                    <div class="dnnFormItem psPageStateWarning dnnClear">
+                        <asp:Label ID="plPsWarning" runat="server" CssClass="dnnFormMessage dnnFormWarning"
+                            resourcekey="plPsWarning" /></div>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="lblModuleCacheProvider" runat="server" ControlName="cboModuleCacheProvider"
+                        ResourceKey="ModuleCacheProvider" HelpKey="ModuleCacheProvider.Help" />
+                   <%-- <asp:DropDownList ID="cboModuleCacheProvider" runat="server" DataValueField="key"
+                        DataTextField="filteredkey" />--%>
+                    <dnn:DnnComboBox ID="cboModuleCacheProvider" runat="server" DataValueField="key"
+                        DataTextField="filteredkey" />
+                </div>
+                <div id="PageCacheRow" class="dnnFormItem" runat="server">
+                    <dnn:Label ID="lblPageCacheProvider" runat="server" ControlName="cboPageCacheProvider"
+                        ResourceKey="PageCacheProvider" HelpKey="PageCacheProvider.Help" />
+                    <%--<asp:DropDownList ID="cboPageCacheProvider" runat="server" DataValueField="key" DataTextField="filteredkey" />--%>
+                    <dnn:DnnComboBox ID="cboPageCacheProvider" runat="server" DataValueField="key" DataTextField="filteredkey" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plPerformance" ControlName="cboPerformance" runat="server" />
+                    <%--<asp:DropDownList ID="cboPerformance" runat="server">
+                        <asp:ListItem resourcekey="NoCaching" Value="0" />
+                        <asp:ListItem resourcekey="LightCaching" Value="1" />
+                        <asp:ListItem resourcekey="ModerateCaching" Value="3" />
+                        <asp:ListItem resourcekey="HeavyCaching" Value="6" />
+                    </asp:DropDownList>--%>
+                    <dnn:DnnComboBox ID="cboPerformance" runat="server">
+                        <Items>
+                        <dnn:DnnComboBoxItem resourcekey="NoCaching" Value="0" />
+                        <dnn:DnnComboBoxItem resourcekey="LightCaching" Value="1" />
+                        <dnn:DnnComboBoxItem resourcekey="ModerateCaching" Value="3" />
+                        <dnn:DnnComboBoxItem resourcekey="HeavyCaching" Value="6" />
+                        </Items>
+                    </dnn:DnnComboBox>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plCacheability" ControlName="cboCacheability" runat="server" />
+                 <%--   <asp:DropDownList ID="cboCacheability" runat="server">
+                        <asp:ListItem resourcekey="NoCache" Value="0" />
+                        <asp:ListItem resourcekey="Private" Value="1" />
+                        <asp:ListItem resourcekey="Public" Value="2" />
+                        <asp:ListItem resourcekey="Server" Value="3" />
+                        <asp:ListItem resourcekey="ServerAndNoCache" Value="4" />
+                        <asp:ListItem resourcekey="ServerAndPrivate" Value="5" />
+                    </asp:DropDownList>--%>
+                    <dnn:DnnComboBox ID="cboCacheability" runat="server">
+                        <Items>
+                        <dnn:DnnComboBoxItem resourcekey="NoCache" Value="0" />
+                        <dnn:DnnComboBoxItem resourcekey="Private" Value="1" />
+                        <dnn:DnnComboBoxItem resourcekey="Public" Value="2" />
+                        <dnn:DnnComboBoxItem resourcekey="Server" Value="3" />
+                        <dnn:DnnComboBoxItem resourcekey="ServerAndNoCache" Value="4" />
+                        <dnn:DnnComboBoxItem resourcekey="ServerAndPrivate" Value="5" />
+                        </Items>
+                    </dnn:DnnComboBox>
+                </div>
+            </fieldset>
+            <h2 id="Panel-JQuery" class="dnnFormSectionHead">
+                <a href="#" class="">
+                    <%=LocalizeString("JQuery")%></a></h2>
+            <fieldset>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plJQueryVersion" ControlName="jQueryVersion" runat="server" />
+                    <asp:Label ID="jQueryVersion" runat="server"></asp:Label>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plJQueryUIVersion" ControlName="jQueryUIVersion" runat="server" />
+                    <asp:Label ID="jQueryUIVersion" runat="server"></asp:Label>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plJQueryDebugVersion" ControlName="chkJQueryDebugVersion" runat="server" />
+                    <asp:CheckBox ID="chkJQueryDebugVersion" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plJQueryUseHosted" ControlName="chkJQueryUseHosted" runat="server" />
+                    <asp:CheckBox ID="chkJQueryUseHosted" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plJQueryHostUrl" ControlName="txtJQueryHostedUrl" runat="server" />
+                    <asp:TextBox ID="txtJQueryHostedUrl" runat="server" MaxLength="256" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plJQueryUIHostUrl" ControlName="txtJQueryUIHostedUrl" runat="server" />
+                    <asp:TextBox ID="txtJQueryUIHostedUrl" runat="server" MaxLength="256" />
+                </div>
+            </fieldset>
+            
+            <h2 id="Panel-ClientResourceManagement" class="dnnFormSectionHead">
+                <a href="#" class=""><%=LocalizeString("ClientResourceManagement")%></a>
+            </h2>
+            <fieldset>
+                <div class="dnnFormMessage dnnFormWarning">
+                    <div><strong><%=LocalizeString("MinificationSettingsInfo.Title") %></strong></div>
+                    <%= LocalizeString("MinificationSettingsInfo.Text")%>
+                </div>
+                <div runat="server" id="DebugEnabledRow" class="dnnFormMessage dnnFormWarning">
+                    <div><strong><%=LocalizeString("DebugEnabled.Title") %></strong></div>
+                    <%= LocalizeString("DebugEnabled.Text")%>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label runat="server" ResourceKey="plCrmVersion"/>
+                    <asp:Label runat="server" ID="CrmVersion" />
+                    <asp:LinkButton runat="server" CssClass="dnnSecondaryAction" ID="IncrementCrmVersionButton" ResourceKey="CrmIncrementCrmVersionButton" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label runat="server" ResourceKey="plCrmEnableCompositeFiles"/>
+                    <asp:CheckBox runat="server" ID="chkCrmEnableCompositeFiles" AutoPostBack="true" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label runat="server" ResourceKey="plCrmMinifyCss"/>
+                    <asp:CheckBox runat="server" ID="chkCrmMinifyCss" />            
+	            </div>
+	            <div class="dnnFormItem">
+                <dnn:Label runat="server" ResourceKey="plCrmMinifyJs"/>
+                    <asp:CheckBox runat="server" ID="chkCrmMinifyJs" />
+	            </div>
+            </fieldset>
+        </div>
+    </div>
+    <div id="otherSettings" class="ssOtherSettings dnnClear">
+        <div class="ssosContent dnnClear">
+            <fieldset class="dnnhsOtherSettings">
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plEnableRequestFilters" ControlName="chkEnableRequestFilters" runat="server" />
+                    <asp:CheckBox ID="chkEnableRequestFilters" runat="server" />
+                </div>
+                <div id="requestFiltersRow" class="dnnFormItem">
+                    <dnn:RequestFilters ID="requestFilters" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plControlPanel" ControlName="cboControlPanel" runat="server" />
+                   <%-- <asp:DropDownList ID="cboControlPanel" runat="server" />--%>
+                    <dnn:DnnComboBox ID="cboControlPanel" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plSiteLogStorage" ControlName="optSiteLogStorage" runat="server" />
+                    <asp:RadioButtonList ID="optSiteLogStorage" CssClass="dnnHSRadioButtons" runat="server"
+                        RepeatLayout="Flow">
+                        <asp:ListItem Value="D" resourcekey="Database" />
+                        <asp:ListItem Value="F" resourcekey="FileSystem" />
+                    </asp:RadioButtonList>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plSiteLogBuffer" ControlName="txtSiteLogBuffer" runat="server" />
+                    <asp:TextBox ID="txtSiteLogBuffer" runat="server" MaxLength="4" />
+                    <asp:Label ID="lblSiteLogBuffer" runat="server" resourcekey="Items" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plSiteLogHistory" ControlName="txtSiteLogHistory" runat="server" />
+                    <asp:TextBox ID="txtSiteLogHistory" runat="server" MaxLength="3" />
+                    <asp:Label ID="lblSiteLogHistory" runat="server" resourcekey="Days" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plUsersOnline" ControlName="chkUsersOnline" runat="server" />
+                    <asp:CheckBox ID="chkUsersOnline" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plUsersOnlineTime" ControlName="txtUsersOnlineTime" runat="server" />
+                    <asp:TextBox ID="txtUsersOnlineTime" runat="server" MaxLength="3" />
+                    <asp:Label ID="lblUsersOnlineTime" runat="server" resourcekey="Minutes" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plAutoAccountUnlock" ControlName="txtAutoAccountUnlock" runat="server" />
+                    <asp:TextBox ID="txtAutoAccountUnlock" runat="server" MaxLength="3" />
+                    <asp:Label ID="lblAutoAccountUnlock" runat="server" resourcekey="Minutes" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plFileExtensions" ControlName="txtFileExtensions" runat="server" />
+                    <asp:TextBox ID="txtFileExtensions" runat="server" MaxLength="256" TextMode="MultiLine"
+                        Rows="3" />
+                    <asp:RegularExpressionValidator ID="valFileExtensions" CssClass="dnnFormMessage dnnFormError"
+                        runat="server" ControlToValidate="txtFileExtensions" EnableClientScript="true"
+                        ValidationExpression="[A-Za-z0-9,_]*" resourceKey="valFileExtensions.Error" Display="Dynamic" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plSchedulerMode" ControlName="cboSchedulerMode" runat="server" />
+                 <%--   <asp:DropDownList ID="cboSchedulerMode" runat="server">
+                        <asp:ListItem resourcekey="Disabled" Value="0" />
+                        <asp:ListItem resourcekey="TimerMethod" Value="1" />
+                        <asp:ListItem resourcekey="RequestMethod" Value="2" />
+                    </asp:DropDownList>--%>
+                    <dnn:DnnComboBox ID="cboSchedulerMode" runat="server">
+                        <Items>
+                        <dnn:DnnComboBoxItem resourcekey="Disabled" Value="0" />
+                        <dnn:DnnComboBoxItem resourcekey="TimerMethod" Value="1" />
+                        <dnn:DnnComboBoxItem resourcekey="RequestMethod" Value="2" />
+                        </Items>
+                    </dnn:DnnComboBox>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plLogBuffer" ControlName="chkLogBuffer" runat="server" />
+                    <asp:CheckBox ID="chkLogBuffer" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plHelpUrl" ControlName="txtHelpURL" runat="server" />
+                    <asp:TextBox ID="txtHelpURL" runat="server" MaxLength="256" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plEnableHelp" ControlName="chkEnableHelp" runat="server" />
+                    <asp:CheckBox ID="chkEnableHelp" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plAutoSync" ControlName="chkAutoSync" runat="server" />
+                    <asp:CheckBox ID="chkAutoSync" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:Label ID="plEnableContentLocalization" ControlName="chkEnableContentLocalization"
+                        runat="server" />
+                    <asp:CheckBox ID="chkEnableContentLocalization" runat="server" />
+                </div>
+                 <div class="dnnFormItem">
+						<dnn:Label ID="plBatch" runat="server" ControlName="txtBatch" />
+						<asp:TextBox ID="txtBatch" runat="server" MaxLength="6" />
+					</div>
+            </fieldset>
+        </div>
+    </div>
+    <div id="logSettings" class="ssLogSettings dnnClear">
+        <div class="dnnFormExpandContent">
+            <h2 class="dnnFormSectionHead"><%=LocalizeString("LogLocations")%></h2>
+    <fieldset>
+        <div class="dnnFormItem">
+            <dnn:Label ID="plLogs" runat="server" ControlName="ddlLogs" />
+            <%--<asp:DropDownList ID="ddlLogs" runat="server" AutoPostBack="true"  /> --%>   
+            <dnn:DnnComboBox ID="ddlLogs" runat="server" AutoPostBack="true" CausesValidation="False"  />        
+        </div>
+        <div class="dnnFormItem">
+            <asp:TextBox ID="txtLogContents" runat="server" TextMode="MultiLine" Rows="20" Columns="75" EnableViewState="True" Visible="False" Width="100%" />
+        </div>
+
+    </fieldset> 
+        <div class="dnnFormItem dnnhsUpgradeLog">
+        <div>
             <dnn:Label ID="plLog" Text="View Upgrade Log For Version:" ControlName="cboUpgrade"
                 runat="server" />
-        </td>
-        <td valign="bottom">
-            <asp:DropDownList ID="cboVersion" runat="server" CssClass="NormalTextBox" />
-            &nbsp;
-            <dnn:CommandButton ID="cmdUpgrade" ResourceKey="cmdGo" runat="server" CssClass="CommandButton"
-                ImageUrl="~/images/view.gif" CausesValidation="false" />
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            <asp:Label ID="lblUpgrade" runat="server" CssClass="Normal" />
-        </td>
-    </tr>
-</table>
+        </div>
+        <div>
+            <%--<asp:DropDownList ID="cboVersion" runat="server" />--%>
+            <dnn:DnnComboBox ID="cboVersion" runat="server" CssClass="dnnFixedSizeComboBox" />
+            <dnn:CommandButton ID="cmdUpgrade" ResourceKey="cmdGo" runat="server" IconKey="View"
+                CausesValidation="false" />
+            <div class="dnnClear"></div>
+        </div>
+        <div><asp:Label ID="lblUpgrade" runat="server" /></div>
+    </div>
+        </div>
+    </div>
+    <ul class="dnnActions dnnClear">
+        <li>
+            <asp:LinkButton ID="cmdUpdate" runat="server" CssClass="dnnPrimaryAction" resourcekey="cmdUpdate" /></li>
+        <li>
+            <asp:HyperLink ID="uploadSkinLink" CssClass="dnnSecondaryAction" ResourceKey="SkinUpload"
+                runat="server" /></li>
+        <li>
+            <asp:LinkButton ID="cmdCache" resourcekey="ClearCache" runat="server" CssClass="dnnSecondaryAction"
+                CausesValidation="false" /></li>
+        <li>
+            <asp:LinkButton ID="cmdRestart" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdRestart"
+                CausesValidation="False" /></li>
+    </ul>
+</div>

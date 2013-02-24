@@ -117,37 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ControlKey.Help" xml:space="preserve">
+    <value>Enter a key for the Skin Object.  The key must be unique.</value>
+  </data>
+  <data name="ControlKey.Text" xml:space="preserve">
+    <value>Control Key:</value>
+  </data>
+  <data name="ControlSrc.Help" xml:space="preserve">
+    <value>Enter the Source for this Control.  If the control is a User Control, enter the source relative to the website root.</value>
+  </data>
+  <data name="ControlSrc.Text" xml:space="preserve">
+    <value>Control Src:</value>
+  </data>
   <data name="Help.Text" xml:space="preserve">
     <value>This editor allows you to configure the Skin Object.</value>
   </data>
-  <data name="SkinControlInfo_ControlKey.Help" xml:space="preserve">
-    <value>Enter a key for the Skin Object.  The key must be unique.</value>
-  </data>
-  <data name="SkinControlInfo_ControlKey.Text" xml:space="preserve">
-    <value>Control Key:</value>
-  </data>
-  <data name="SkinControlInfo_ControlSrc.Help" xml:space="preserve">
-    <value>Enter the Source for this Control.  If the control is a User Control, enter the source relative to the website root.</value>
-  </data>
-  <data name="SkinControlInfo_ControlSrc.Text" xml:space="preserve">
-    <value>Control Src:</value>
-  </data>
-  <data name="SkinControlInfo_HelpURL.Help" xml:space="preserve">
+  <data name="HelpURL.Help" xml:space="preserve">
     <value>Enter a Help URL for this control</value>
   </data>
-  <data name="SkinControlInfo_HelpURL.Text" xml:space="preserve">
+  <data name="HelpURL.Text" xml:space="preserve">
     <value>Help URL:</value>
   </data>
-  <data name="SkinControlInfo_IconFile.Help" xml:space="preserve">
+  <data name="IconFile.Help" xml:space="preserve">
     <value>Enter the url of an icon for this Control.</value>
   </data>
-  <data name="SkinControlInfo_IconFile.Text" xml:space="preserve">
+  <data name="IconFile.Text" xml:space="preserve">
     <value>Icon File:</value>
   </data>
-  <data name="SkinControlInfo_SupportsPartialRendering.Help" xml:space="preserve">
+  <data name="SupportsPartialRendering.Help" xml:space="preserve">
     <value>Check this box to indicate that this control supports AJAX Partial Rendering.</value>
   </data>
-  <data name="SkinControlInfo_SupportsPartialRendering.Text" xml:space="preserve">
+  <data name="SupportsPartialRendering.Text" xml:space="preserve">
     <value>Supports Partial Rendering:</value>
   </data>
   <data name="Title.Text" xml:space="preserve">

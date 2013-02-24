@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Name.Header" xml:space="preserve">
     <value>Name</value>
@@ -148,7 +148,7 @@
     <value>User Accounts</value>
   </data>
   <data name="Search.Text" xml:space="preserve">
-    <value>Search:</value>
+    <value>Search</value>
   </data>
   <data name="RecordsPage.Text" xml:space="preserve">
     <value>Records Per Page:</value>
@@ -184,6 +184,9 @@
   <data name="DeleteUnAuthorized.Action" xml:space="preserve">
     <value>Delete Unauthorized Users</value>
   </data>
+  <data name="RemoveDeleted.Action" xml:space="preserve">
+    <value>Remove Deleted Users</value>
+  </data>
   <data name="UserSettings.Action" xml:space="preserve">
     <value>User Settings</value>
   </data>
@@ -204,6 +207,12 @@
   </data>
   <data name="Delete.Text" xml:space="preserve">
     <value>Delete</value>
+  </data>
+  <data name="Remove.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Restore.Text" xml:space="preserve">
+    <value>Restore</value>
   </data>
   <data name="Prefix.Text" xml:space="preserve">
     <value>Prefix</value>
@@ -267,5 +276,20 @@
   </data>
   <data name="Username.Text" xml:space="preserve">
     <value>Username</value>
+  </data>
+  <data name="Online.Text" xml:space="preserve">
+    <value>Online</value>
+  </data>
+  <data name="Delete.Confirm" xml:space="preserve">
+    <value>Are you sure you want to delete this user?</value>
+  </data>
+  <data name="Remove.Confirm" xml:space="preserve">
+    <value>Are you sure you want to permanently remove this user?</value>
+  </data>
+  <data name="PreferredTimeZone.Text" xml:space="preserve">
+    <value>Preferred Time Zone</value>
+  </data>
+  <data name="Restore.Confirm" xml:space="preserve">
+    <value>Are you sure you want to restore this user?</value>
   </data>
 </root>

@@ -245,7 +245,7 @@ ALTER TABLE {databaseOwner}{objectQualifier}Assemblies ADD CONSTRAINT FK_{object
 	
 GO
 
-/* Fix bug in upgrade.vb that incorrectly points a module control at an image */
+/* Fix bug in upgrade.cs that incorrectly points a module control at an image */
 /******************************************************************************/
 UPDATE {databaseOwner}{objectQualifier}ModuleControls SET  ControlSrc='DesktopModules/Admin/Extensions/Editors/ImportModuleDefinition.ascx' where controlkey='ImportModuleDefinition'
 

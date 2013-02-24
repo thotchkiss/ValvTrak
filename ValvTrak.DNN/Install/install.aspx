@@ -1,1 +1,1 @@
-<%@ Page language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Services.Install.Install" CodeFile="Install.aspx.vb" %>
+<%@ Page Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Services.Install.Install" CodeFile="Install.aspx.cs" EnableSessionState="false" %>

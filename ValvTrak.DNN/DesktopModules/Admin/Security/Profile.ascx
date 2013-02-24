@@ -1,33 +1,29 @@
-<%@ Control language="vb" CodeFile="Profile.ascx.vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Users.Profile" %>
-<%@ Register TagPrefix="dnn" TagName="Sectionhead" Src="~/controls/SectionHeadControl.ascx" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DesktopModules.Admin.Security.DNNProfile" CodeFile="Profile.ascx.cs" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"%>
-<table cellspacing="0" cellpadding="0" summary="Profile Design Table" border="0">
-	<tr id="trTitle" runat="server">
-		<td valign="bottom"><asp:label id="lblTitle" cssclass="Head" runat="server"></asp:label></td>
-	</tr>
-	<tr>
-		<td height="10"></td>
-	</tr>
-	<tr>
-		<td valign="top">
-			<dnn:ProfileEditorControl id="ProfileProperties" runat="Server" 
-				editcontrolstyle-cssclass="NormalTextBox"
-				enableClientValidation = "true"
-				errorstyle-cssclass="NormalRed" 
-				groupHeaderStyle-cssclass="Head" 
-				groupHeaderIncludeRule="True" 
-				helpstyle-cssclass="Help"
-				labelstyle-cssclass="SubHead" 
-				visibilitystyle-cssclass="Normal" 
-				editcontrolwidth="525px" 
-				labelwidth="175px"
-				width="700px" />
-		</td>
-	</tr>
-	<tr>
-		<td height="10"></td>
-	</tr>
-</table>
-<p>
-	<dnn:commandbutton class="CommandButton" id="cmdUpdate" runat="server" resourcekey="cmdUpdate" imageurl="~/images/save.gif" />
-</p>
+<script language="javascript" type="text/javascript">
+/*globals jQuery, window, Sys */
+(function ($, Sys) {
+    function setUpProfile() {
+        $('.dnnButtonDropdown').dnnSettingDropdown();
+    }
+
+    $(document).ready(function () {
+        setUpProfile();
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            setUpProfile();
+        });
+    });
+} (jQuery, window.Sys));
+</script>
+<div class="dnnForm dnnProfile dnnClear">
+	<h2 id="divTitle" runat="server" class="dnnFormSectionHead"><asp:label id="lblTitle" runat="server" /></h2>
+	<fieldset>
+		<div class="propertyList">
+			<dnn:ProfileEditorControl id="ProfileProperties" runat="Server" enableClientValidation="true" />
+            <div class="dnnClear"></div>
+		</div>
+		<ul id="actionsRow" runat="server" class="dnnActions dnnClear">
+			<li><asp:LinkButton class="dnnPrimaryAction" id="cmdUpdate" runat="server" resourcekey="cmdUpdate" /></li>
+		</ul>
+	</fieldset>
+</div>

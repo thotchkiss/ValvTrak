@@ -1,26 +1,25 @@
-<%@ Control Language="vb" AutoEventWireup="false" CodeFile="LanguageEditorExt.ascx.vb" Inherits="DotNetNuke.Modules.Admin.Languages.LanguageEditorExt" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Languages.LanguageEditorExt" CodeFile="LanguageEditorExt.ascx.cs" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
 <%@ Register TagPrefix="dnn" TagName="TextEditor" Src="~/controls/TextEditor.ascx"%>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<table cellspacing="2" cellpadding="2" border="0">
-	<tr>
-		<td class="SubHead"><dnn:Label id="plFile" runat="server" ControlName="lblFile" /></td>
-		<td class="Normal"><asp:Label id="lblFile" runat="server" /></td>
-	</tr>
-	<tr>
-		<td class="SubHead"><dnn:Label id="plName" runat="server" ControlName="lblName" /></td>
-		<td class="Normal"><asp:Label id="lblName" runat="server" /></td>
-	</tr>
-	<tr>
-		<td class="SubHead"><dnn:Label id="plDefault" runat="server" ControlName="lblDefault" /></td>
-		<td class="Normal"><asp:Label id="lblDefault" runat="server" /></td>
-	</tr>
-	<tr height="10"><td></td></tr>
-	<tr valign="top">
-		<td colspan="2" class="SubHead"><dnn:texteditor id="teContent" runat="server" height="400" width="600" /></td>
-	</tr>
-</table>
-<p>
-    <dnn:CommandButton ID="cmdUpdate" runat="server" CssClass="CommandButton" resourcekey="cmdUpdate" ImageUrl="~/images/save.gif" />&nbsp;
-    <dnn:CommandButton ID="cmdCancel" runat="server" CssClass="CommandButton" resourcekey="cmdCancel" ImageUrl="~/images/lt.gif" CausesValidation="false" />
-</p>
+<div class="dnnForm dnnLanguageTextEditor">
+	<div class="dnnFormItem">
+		<dnn:Label id="plFile" runat="server" ControlName="lblFile" />
+		<asp:Label id="lblFile" runat="server" />
+	</div>
+	<div class="dnnFormItem">
+		<dnn:Label id="plName" runat="server" ControlName="lblName" />
+		<asp:Label id="lblName" runat="server" />
+	</div>
+	<div class="dnnFormItem">
+		<dnn:Label id="plDefault" runat="server" ControlName="lblDefault" />
+		<asp:Label id="lblDefault" runat="server" />
+	</div>
+	<div class="dnnLTextEditor dnnClear"><dnn:texteditor id="teContent" runat="server" height="400" width="600" /></div>
+</div>
+<ul class="dnnActions dnnClear">
+    <li><asp:LinkButton id="cmdUpdate" runat="server" CssClass="dnnPrimaryAction" resourcekey="cmdUpdate" /></li>
+    <li><asp:LinkButton id="cmdCancel" runat="server" CssClass="dnnSecondaryAction" ResourceKey="cmdCancel" CausesValidation="false" /></li>
+   <%-- <li><dnn:CommandButton ID="cmdUpdate" runat="server" CssClass="dnnPrimaryAction" resourcekey="cmdUpdate" IconKey="Save" /></li>
+    <li><dnn:CommandButton ID="cmdCancel" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdCancel" IconKey="Lt" CausesValidation="false" /></li>--%>
+</ul>

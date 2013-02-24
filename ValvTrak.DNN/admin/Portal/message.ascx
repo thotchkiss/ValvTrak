@@ -1,3 +1,2 @@
-<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Common.Controls.Message" CodeFile="Message.ascx.vb" %>
-<br>
-<asp:Label ID="Message" Runat="server" CssClass="NormalRed"></asp:Label>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Common.Controls.Message" CodeFile="Message.ascx.cs" %>
+<div><asp:Label ID="lblMessage" Runat="server" CssClass="dnnFormMessage dnnFormValidationSummary" /></div>

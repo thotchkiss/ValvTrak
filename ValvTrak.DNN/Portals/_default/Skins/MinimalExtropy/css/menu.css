@@ -1,7 +1,7 @@
 
 /*--------- dnn menu style ----------*/
 /* main menu td */
-.main_dnnmenu_bar 
+.mainMenu 
 {
 	cursor:pointer;
 	font-size: 11px; 
@@ -9,8 +9,8 @@
 	width:970px;
 }
 
-/*  Main Menu Normal  */
-.main_dnnmenu_rootitem  
+/* Main Menu Normal */
+.mainMenu .root
 {	
 	color: #375162;
 	font-size: 13px; 
@@ -19,73 +19,66 @@
 	padding:12px 12px 12px 12px;
 	text-transform:uppercase; margin-right:1px;
 	white-space:nowrap;
+	margin-right:1px;	
 	float:left;
 }
 
 
-/*  Main menu hover  */
-.main_dnnmenu_rootitem_hover
-{  
-	color:#ffffff;
-	font-size: 13px; 
-	font-weight:bold;
-	text-align:center;
-	padding:12px 12px 12px 12px;
-	background:url(../images/menu_hover.gif) repeat-x top left;
-	text-transform:uppercase; margin-right:1px;
-	white-space:nowrap;
-	float:left;
+/* Main menu hover */
+.mainMenu .hov{ 
+	color:#fff;
+	background:url(../images/menu_hover.png) repeat-x top left;
 }
 
-/*  Main menu selected  */
-.main_dnnmenu_rootitem_selected 
-{
-	color:#ffffff;
-	font-weight:bold;
-	text-align:center;
-	font-size: 13px;
-	padding:12px 12px 12px 12px;
-	background:url(../images/menu_active.gif) repeat-x top left;
-	text-transform:uppercase; margin-right:1px;
-	white-space:nowrap;
-	float:left;
+/* Main menu selected */
+.mainMenu .sel, .mainMenu .bc {
+color:#FFF;
+	background:url(../images/menu_active.png) repeat-x top left;
 }
-
-/*  SUB Menu Normal */
-.main_dnnmenu_submenu 
-{
+.mainMenu table{
 	border:1px solid #C0D6E5;
-}
+	z-index: 5000;
+	}
 
-.main_dnnmenu_submenu td
-{
+/* SUB Menu Normal */
+.mainMenu tr.mi{
 	background-color:#F8FAFF;
 	z-index: 1000;
 	font-size: 11px; 
 	font-weight:bold;
 	text-align:left;
-	color:#000000;
+	color:#375162;
 	line-height:2em;
-	padding: 0px 5px;
-	margin:0px;
+	text-transform:none; 
+}
+.mainMenu tr.mi td{
+padding: 0 2px;
+text-transform:none;
 }
 
-/*  SUB Menu hover & selected */
-.main_dnnmenu_itemhover td   
-{  
-	background: #CE0D0D url(../images/submenu_hover.gif) repeat-x top left;
-	color:#ffffff;
-}
-.main_dnnmenu_itemselected td{
-    background: #CE0D0D url(../images/submenu_active.gif) repeat-x top left;
-	color:#ffffff;
+/* SUB Menu hover & selected */
+.mainMenu tr.hov { 
+background: #CE0D0D url(../images/submenu_hover.png) repeat-x top left;
 }
 
-.main_dnnmenu_break
-{
+.mainMenu tr.hov td{
+color:#fff;
+}
+
+.mainMenu tr.sel, .mainMenu tr.bc{
+background: #CE0D0D url(../images/submenu_active.png) repeat-x top left;
+}
+
+.mainMenu tr.sel td, .mainMenu tr.bc td{
+	color:#fff;
+}
+
+.main_dnnmenu_break{
 	height: 2px;
 	background-color: #D5E0FF;
 }
+
+
 
 /* Module Action Menus */
 .ModuleTitle_SubMenu
@@ -105,7 +98,7 @@
 }
 
 .ModuleTitle_MenuItemSel td, .ModuleTitle_MenuItemSel .ModuleTitle_MenuIcon{
-	background: #CE0D0D url(../images/submenu_hover.gif) repeat-x top left;
+	background: #CE0D0D url(../images/submenu_hover.png) repeat-x top left;
 	color: #fff;
 }
 

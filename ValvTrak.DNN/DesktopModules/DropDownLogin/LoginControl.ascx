@@ -2,7 +2,7 @@
     Inherits="DataSprings.SkinObject_jQueryLogin.LoginControl" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<div>
+<div style="white-space: nowrap">
     <p>
         <dnn:Label ID="plUsername" ControlName="txtUsername" Text="User Name" runat="server"
             ResourceKey="plUsername" />

@@ -138,13 +138,19 @@
   <data name="NoPermission.Text" xml:space="preserve">
     <value>You do not have permissions to view any files on the file system</value>
   </data>
+  <data name="Ok.Text" xml:space="preserve">
+    <value>Ok</value>
+  </data>
   <data name="PortalRoot.Text" xml:space="preserve">
-    <value>Portal Root</value>
+    <value>Site Root</value>
   </data>
   <data name="Save.Text" xml:space="preserve">
     <value>Save File</value>
   </data>
   <data name="Upload.Text" xml:space="preserve">
     <value>Upload File</value>
+  </data>
+  <data name="UploadError.Text" xml:space="preserve">
+    <value>File type {1} is not valid in this context. Valid File Types Include: {0}</value>
   </data>
 </root>

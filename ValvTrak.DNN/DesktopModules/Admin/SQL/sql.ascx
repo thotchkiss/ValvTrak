@@ -1,43 +1,47 @@
-<%@ Control Language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.SQL.SQL"
-    CodeFile="SQL.ascx.vb" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.SQL.SQL" CodeFile="SQL.ascx.cs" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<table width="430" cellspacing="2" cellpadding="2" summary="Load Script Design Table" border="0">
-    <tr>
-        <td class="SubHead" width="110" valign="top">
-            <dnn:Label ID="plSqlScript" runat="server" ControlName="uplSqlScript" Suffix=""></dnn:Label>
-        </td>
-        <td valign="top">
+<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web" %>
+<div class="dnnForm dnnSQLModule dnnClear" id="dnnSQLModule">
+    <fieldset>
+        <div class="dnnFormItem">
+            <dnn:Label ID="plSqlScript" runat="server" ControlName="uplSqlScript" />
             <asp:FileUpload ID="uplSqlScript" runat="server" />
-        </td>
-        <td valign="top">
-            <asp:LinkButton ID="cmdUpload" resourcekey="cmdUpload" EnableViewState="False" CssClass="CommandButton"
-                runat="server" ToolTip="Load the selected file.">Load</asp:LinkButton>
-        </td>
-    </tr>
-    <tr>
-        <td class="SubHead" width="110" valign="top">
-            <dnn:Label ID="plConnection" runat="server" ControlName="cboConnection" Text="Connection" Suffix=":"></dnn:Label>
-        </td>
-        <td colspan="2">
-            <asp:DropDownList ID="cboConnection" runat="server" CssClass="NormalTextBox" Width="300" />
-        </td>
-    </tr>
-</table>
-<asp:TextBox ID="txtQuery" runat="server" TextMode="MultiLine" Columns="50" Rows="10"
-    EnableViewState="False"></asp:TextBox>
-<br>
-<asp:LinkButton ID="cmdExecute" resourcekey="cmdExecute" EnableViewState="False"
-    CssClass="CommandButton" runat="server" ToolTip="can include {directives} and /*comments*/">Execute</asp:LinkButton>&nbsp;&nbsp;
-<asp:CheckBox ID="chkRunAsScript" resourcekey="chkRunAsScript" CssClass="SubHead"
-    runat="server" Text="Run as Script" TextAlign="Left" ToolTip="include 'GO' directives; for testing &amp; update scripts">
-</asp:CheckBox>
-<br>
-<br>
-<asp:Label ID="lblMessage" runat="server" CssClass="NormalRed" EnableViewState="False"></asp:Label>
-<asp:GridView ID="gvResults" runat="server" AutoGenerateColumns="True" EnableViewState="False">
-    <RowStyle CssClass="Normal"></RowStyle>
-    <HeaderStyle CssClass="SubHead"></HeaderStyle>
-    <EmptyDataTemplate>
-        <asp:Label ID="Label1" runat="server" resourcekey="NoDataReturned" />
-    </EmptyDataTemplate>
-</asp:GridView>
+            <asp:LinkButton ID="cmdUpload" resourcekey="cmdUpload" EnableViewState="False" runat="server" CssClass="dnnPrimaryAction" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:Label ID="plConnection" runat="server" ControlName="cboConnection" />
+            <dnn:DnnComboBox ID="cboConnection" runat="server" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:Label ID="scriptLabel" runat="server" ControlName="txtQuery" />
+            <asp:TextBox ID="txtQuery" runat="server" TextMode="MultiLine" Columns="75" Rows="15" EnableViewState="False" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:Label ID="runasLabel" runat="server" ControlName="chkRunAsScript" />
+            <asp:CheckBox ID="chkRunAsScript" runat="server" />
+        </div>
+    </fieldset>
+    <ul class="dnnActions dnnClear">
+    	<li><asp:LinkButton id="cmdExecute" runat="server" CssClass="dnnPrimaryAction" resourcekey="cmdExecute" /></li>
+    </ul>
+    <div class="dnnFormItem dnnResults">
+     <%--   <asp:GridView ID="gvResults" runat="server" AutoGenerateColumns="True" CellSpacing="4" 
+            EnableViewState="False" CssClass="dnnGrid" gridlines="None">
+            <headerstyle CssClass="dnnGridHeader" />
+            <rowstyle CssClass="dnnGridItem" />
+            <alternatingrowstyle CssClass="dnnGridAltItem" />
+            <EmptyDataTemplate>
+                <div class="dnnFormItem"><asp:Label ID="Label1" runat="server" resourcekey="NoDataReturned" CssClass="dnnFormMessage dnnFormWarning" /></div>
+            </EmptyDataTemplate>
+        </asp:GridView>--%>
+        
+        <dnn:DnnGrid ID="gvResults" runat="server" AutoGenerateColumns="true" EnableViewState="False">
+        </dnn:DnnGrid>
+  
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('.dnnResults').jScrollPane();
+    })
+</script>

@@ -25,7 +25,7 @@
 .dnnRibbonGroup .bottomLeft { display:none; }
 .dnnRibbonGroup .bottomRight { display:none; }
 
-.dnnRibbonGroup .content { height:89px; background-color: #ffffff; padding:5px; text-align:left; }
+.dnnRibbonGroup .content { height:113px; background-color: #ffffff; padding:5px; text-align:left; }
 .dnnRibbonGroup .footer { text-align:center; vertical-align:bottom;	font-size:11px;	background-color: #f4f4f4; padding:2px 2px 0px 2px; white-space:nowrap; }
 
 /* RibbonBar Image Link Styles */

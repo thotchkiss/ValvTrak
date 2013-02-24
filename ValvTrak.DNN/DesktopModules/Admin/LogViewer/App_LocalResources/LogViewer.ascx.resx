@@ -118,22 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="plPortalID.Text" xml:space="preserve">
-    <value>Portal</value>
+    <value>Website</value>
   </data>
   <data name="plPortalID.Help" xml:space="preserve">
-    <value>Select the Portal you would like to view</value>
+    <value>Select the Website you would like to view.</value>
   </data>
   <data name="plLogType.Text" xml:space="preserve">
     <value>Type</value>
   </data>
   <data name="plLogType.Help" xml:space="preserve">
-    <value>You can choose to restrict the Log to certain types of events</value>
+    <value>You can choose to restrict the Log to certain types of events.</value>
   </data>
   <data name="plShowRecords.Text" xml:space="preserve">
     <value>Show Records</value>
   </data>
   <data name="plShowRecords.Help" xml:space="preserve">
-    <value>Select which records you would like to view</value>
+    <value>Select which records you would like to view.</value>
   </data>
   <data name="ColorCoding.Text" xml:space="preserve">
     <value>Color Coding On</value>
@@ -154,59 +154,57 @@
     <value>Username</value>
   </data>
   <data name="Portal.Text" xml:space="preserve">
-    <value>Portal</value>
+    <value>Website</value>
   </data>
   <data name="Summary.Text" xml:space="preserve">
     <value>Summary</value>
   </data>
   <data name="btnDelete.Text" xml:space="preserve">
-    <value>Delete Selected Exceptions</value>
+    <value>Delete Selected Entries</value>
   </data>
   <data name="btnClear.Text" xml:space="preserve">
     <value>Clear Log</value>
   </data>
   <data name="SendExceptions.Text" xml:space="preserve">
-    <value>Send Exceptions</value>
+    <value>Send Log Entries</value>
   </data>
   <data name="ExceptionsWarning.Text" xml:space="preserve">
     <value>&lt;b&gt;Please note&lt;/b&gt;: By using these features 
             below, you &lt;i&gt;may&lt;/i&gt; be sending sensitive data over the Internet in clear 
             text (&lt;i&gt;not&lt;/i&gt; encrypted). Before sending your exception submission, 
-            please review the contents of your exception log to verify that no 
+            please review the contents of your log entry to verify that no 
             sensitive data is contained within it. Only the log entries checked above 
             will be sent.</value>
   </data>
   <data name="SendExceptionsEmail.Text" xml:space="preserve">
-    <value>Send Exceptions via Email</value>
+    <value>Send Log Entries via Email</value>
   </data>
   <data name="plEmailAddress.Text" xml:space="preserve">
     <value>Email Address</value>
   </data>
   <data name="plEmailAddress.Help" xml:space="preserve">
-    <value>
-          Please enter the Email Address of the person you wish to receive the exceptions.
-           </value>
+    <value>Please enter the Email Address of the person you wish to receive the log entries.</value>
   </data>
   <data name="SendMessage.Text" xml:space="preserve">
     <value>Message (optional)</value>
   </data>
   <data name="SendMessage.Help" xml:space="preserve">
-    <value>Include an optional message with the exception(s)</value>
+    <value>Include an optional message with the log entries</value>
   </data>
   <data name="btnEmail.Text" xml:space="preserve">
-    <value>Send Selected Exceptions</value>
+    <value>Send Selected Entries</value>
   </data>
   <data name="AddContent.Action" xml:space="preserve">
     <value>Edit Log Settings</value>
   </data>
   <data name="NoEntries.Text" xml:space="preserve">
-    <value>There are no log entries.</value>
+    <value>There are no log items.</value>
   </data>
   <data name="Showing.Text" xml:space="preserve">
     <value>Showing {0} to {1} of {2}</value>
   </data>
   <data name="DeleteSuccess.Text" xml:space="preserve">
-    <value>The selected exceptions were successfully deleted.</value>
+    <value>The selected log entries were successfully deleted.</value>
   </data>
   <data name="EmailSuccess.Text" xml:space="preserve">
     <value>Your email has been sent.</value>
@@ -260,7 +258,7 @@
     <value>Event Viewer</value>
   </data>
   <data name="ModuleHelp.Text" xml:space="preserve">
-    <value>&lt;h1&gt;About Log Viewer&lt;/h1&gt;&lt;p&gt;Allows you to view log entries for portal events.&lt;/p&gt;</value>
+    <value>&lt;h1&gt;About Log Viewer&lt;/h1&gt;&lt;p&gt;Allows you to view log entries for website events.&lt;/p&gt;</value>
   </data>
   <data name="SecurityException.Text" xml:space="preserve">
     <value>Security Exception</value>
@@ -273,5 +271,14 @@
   </data>
   <data name="InavlidEmailAddress.Text" xml:space="preserve">
     <value>'{0}' is not a valid email address.</value>
+  </data>
+  <data name="Viewer.Text" xml:space="preserve">
+    <value>Viewer</value>
+  </data>
+  <data name="ClearLog.Text" xml:space="preserve">
+    <value>Are you sure you wish to clear all log entries?</value>
+  </data>
+  <data name="SelectException.Text" xml:space="preserve">
+    <value>Please select at least one log entry.</value>
   </data>
 </root>

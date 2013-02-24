@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+	<template>DNNMega.xslt</template>
+	<scripts>
+    <script>jquery.dnnmega.js</script>
+  </scripts>
+  <stylesheets>
+    <stylesheet>dnnmega.css</stylesheet>
+  </stylesheets>
+  <defaultClientOptions>
+	<clientOption name="MenuStyle" type="string" value="DNNMega" />
+  </defaultClientOptions>
+</manifest>

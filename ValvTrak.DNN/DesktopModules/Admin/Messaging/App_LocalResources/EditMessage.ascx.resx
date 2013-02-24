@@ -127,10 +127,10 @@
     <value>Delete Message</value>
   </data>
   <data name="EmailTo.Required" xml:space="preserve">
-    <value>&lt;br/&gt;The User is required</value>
+    <value>The User is required</value>
   </data>
   <data name="Subject.Required" xml:space="preserve">
-    <value>&lt;br/&gt;Subject is required</value>
+    <value>Subject is required</value>
   </data>
   <data name="Validation.Error.Message" xml:space="preserve">
     <value>Username '{0}' is invalid</value>

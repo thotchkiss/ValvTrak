@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <template>ULTokens.txt</template>
+  <scripts>
+    <script>StandardMenu.js</script>
+  </scripts>
+  <stylesheets>
+    <stylesheet>StandardMenu.css</stylesheet>
+  </stylesheets>
+</manifest>

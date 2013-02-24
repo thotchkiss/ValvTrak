@@ -132,4 +132,7 @@
   <data name="Updated.Text" xml:space="preserve">
     <value>Updated Google Analytics Configuration.</value>
   </data>
+  <data name="valTrackingId.Text" xml:space="preserve">
+    <value>Tracking ID is Required!</value>
+  </data>
 </root>

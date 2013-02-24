@@ -1,90 +1,131 @@
-<%@ Control Language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Scheduler.EditSchedule" CodeFile="EditSchedule.ascx.vb" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Scheduler.EditSchedule" CodeFile="EditSchedule.ascx.cs" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"%>
-<asp:Panel ID="pnlScheduleItem" runat="server">
-    <table cellspacing="0" cellpadding="3" width="750" summary="Edit Schedule" border="0">
-        <tr valign="top">
-            <td class="SubHead" width="250"><dnn:Label ID="plFriendlyName" runat="server" ControlName="txtFriendlyName" Text="Friendly Name:"/></td>
-            <td class="Normal"><asp:TextBox ID="txtFriendlyName" Width="450" runat="server" CssClass="NormalTextBox" /></td>
-        </tr>
-        <tr valign="top">
-            <td class="SubHead" width="250"><dnn:Label ID="plType" runat="server" ControlName="txtType" Text="Full Class Name and Assembly:"/></td>
-            <td class="Normal"><asp:TextBox ID="txtType" Width="450" runat="server" CssClass="NormalTextBox" /></td>
-        </tr>
-        <tr valign="top">
-            <td class="SubHead" width="250"><dnn:Label ID="plEnabled" runat="server" ControlName="chkEnabled" Text="Schedule Enabled:" /></td>
-            <td class="Normal"><asp:CheckBox ID="chkEnabled" runat="server" Text="Yes" resourcekey="Yes" CssClass="NormalTextBox" /></td>
-        </tr>
-        <tr valign="top">
-            <td class="SubHead" width="250"><dnn:Label ID="plTimeLapse" runat="server" ControlName="txtTimeLapse" Text="Time Lapse:"/></td>
-            <td class="Normal">
-                <asp:TextBox ID="txtTimeLapse" runat="server" MaxLength="10" Width="50" CssClass="NormalTextBox"/>
-                <asp:DropDownList ID="ddlTimeLapseMeasurement" runat="server" CssClass="NormalTextBox">
-                    <asp:ListItem resourcekey="Seconds" Value="s">Seconds</asp:ListItem>
-                    <asp:ListItem resourcekey="Minutes" Value="m">Minutes</asp:ListItem>
-                    <asp:ListItem resourcekey="Hours" Value="h">Hours</asp:ListItem>
-                    <asp:ListItem resourcekey="Days" Value="d">Days</asp:ListItem>
-                </asp:DropDownList>
-            </td>
-        </tr>
-        <tr valign="top">
-            <td class="SubHead" width="250"><dnn:Label ID="plRetryTimeLapse" runat="server" ControlName="txtRetryTimeLapse" Text="Retry Frequency:"/></td>
-            <td class="Normal">
-                <asp:TextBox ID="txtRetryTimeLapse" runat="server" MaxLength="10" Width="50" CssClass="NormalTextBox"/>
-                <asp:DropDownList ID="ddlRetryTimeLapseMeasurement" runat="server" CssClass="NormalTextBox">
-                    <asp:ListItem resourcekey="Seconds" Value="s">Seconds</asp:ListItem>
-                    <asp:ListItem resourcekey="Minutes" Value="m">Minutes</asp:ListItem>
-                    <asp:ListItem resourcekey="Hours" Value="h">Hours</asp:ListItem>
-                    <asp:ListItem resourcekey="Days" Value="d">Days</asp:ListItem>
-                </asp:DropDownList>
-            </td>
-        </tr>
-        <tr valign="top">
-            <td class="SubHead" width="250"><dnn:Label ID="plRetainHistoryNum" runat="server" ControlName="ddlRetainHistoryNum" Text="Retain Schedule History:"/></td>
-            <td class="Normal">
-                <asp:DropDownList ID="ddlRetainHistoryNum" runat="server" CssClass="NormalTextBox">
-                    <asp:ListItem Value="0">None</asp:ListItem>
-                    <asp:ListItem Value="1">1</asp:ListItem>
-                    <asp:ListItem Value="5">5</asp:ListItem>
-                    <asp:ListItem Value="10">10</asp:ListItem>
-                    <asp:ListItem Value="25">25</asp:ListItem>
-                    <asp:ListItem Value="50">50</asp:ListItem>
-                    <asp:ListItem Value="100">100</asp:ListItem>
-                    <asp:ListItem Value="250">250</asp:ListItem>
-                    <asp:ListItem Value="500">500</asp:ListItem>
-                    <asp:ListItem Value="-1">All</asp:ListItem>
-                </asp:DropDownList>
-            </td>
-        </tr>
-        <tr valign="top">
-            <td class="SubHead" width="250"><dnn:Label ID="plAttachToEvent" runat="server" ControlName="ddlAttachToEvent" Text="Run on Event:"/></td>
-            <td class="Normal">
-                <asp:DropDownList ID="ddlAttachToEvent" runat="server" CssClass="NormalTextBox">
-                    <asp:ListItem resourcekey="None" Value="">None</asp:ListItem>
-                    <asp:ListItem resourcekey="APPLICATION_START" Value="APPLICATION_START">Application Start</asp:ListItem>
-                </asp:DropDownList>
-            </td>
-        </tr>
-        <tr valign="top">
-            <td class="SubHead" width="250"><dnn:Label ID="plCatchUpEnabled" runat="server" ControlName="chkCatchUpEnabled" Text="Catch Up Enabled:"/></td>
-            <td class="Normal"><asp:CheckBox ID="chkCatchUpEnabled" runat="server" Text="Yes" resourcekey="Yes" CssClass="NormalTextBox"/></td>
-        </tr>
-        <tr valign="top">
-            <td class="SubHead" width="250"><dnn:Label ID="plObjectDependencies" runat="server" ControlName="txtObjectDependencies" Text="Object Dependencies:"/></td>
-            <td class="Normal"><asp:TextBox ID="txtObjectDependencies" runat="server" MaxLength="150" Width="390" CssClass="NormalTextBox"/></td>
-        </tr>
-        <tr valign="top">
-            <td class="SubHead" width="250"><dnn:Label ID="plServers" runat="server" ControlName="txtServers" Text="Run on Servers:"/></td>
-            <td class="Normal">
-                <asp:CheckBoxList ID="lstServers" runat="server" />
-            </td>
-        </tr>
-    </table>
-    <br />
-    <p>
-        <dnn:commandbutton ID="cmdRun" runat="server" resourcekey="cmdRun" CssClass="CommandButton" imageurl="~/images/icon_scheduler_16px.gif" />&nbsp;
-        <dnn:commandbutton ID="cmdUpdate" runat="server" resourcekey="cmdUpdate" CssClass="CommandButton" imageurl="~/images/save.gif" />&nbsp;
-        <dnn:commandbutton ID="cmdDelete" runat="server" resourcekey="cmdDelete" CssClass="CommandButton" imageurl="~/images/delete.gif" />&nbsp;
-        <dnn:commandbutton ID="cmdCancel" runat="server" resourcekey="cmdCancel" CssClass="CommandButton" imageurl="~/images/lt.gif" />
-    </p>
-</asp:Panel>
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls"%>
+<div class="dnnForm dnnEditSchedule dnnClear" id="dnnEditSchedule">
+    <fieldset>
+        <div class="dnnFormItem">
+            <dnn:Label ID="plFriendlyName" runat="server" ControlName="txtFriendlyName" />
+            <asp:TextBox ID="txtFriendlyName" runat="server" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:Label ID="plType" runat="server" ControlName="txtType" CssClass="dnnFormRequired" />
+            <asp:TextBox ID="txtType" runat="server" />
+            <asp:RequiredFieldValidator ID="valType" runat="server" Display="Dynamic" EnableClientScript="true" ControlToValidate="txtType" CssClass="dnnFormMessage dnnFormError" resourcekey="TypeRequired" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:Label ID="plEnabled" runat="server" ControlName="chkEnabled" />
+            <asp:CheckBox ID="chkEnabled" runat="server" AutoPostBack="True" />
+        </div>
+        <div class="dnnFormItem timeMeasurement">
+            <dnn:Label ID="plTimeLapse" runat="server" ControlName="txtTimeLapse" />
+            <asp:TextBox ID="txtTimeLapse" runat="server" MaxLength="10" CssClass="dnnSmallSizeComboBox" />
+         <%--   <asp:DropDownList ID="ddlTimeLapseMeasurement" runat="server">
+                <asp:ListItem resourcekey="Seconds" Value="s" />
+                <asp:ListItem resourcekey="Minutes" Value="m" />
+                <asp:ListItem resourcekey="Hours" Value="h" />
+                <asp:ListItem resourcekey="Days" Value="d" />
+            </asp:DropDownList>--%>
+            <dnn:DnnComboBox ID="ddlTimeLapseMeasurement" runat="server" CssClass="dnnSmallSizeComboBox">
+                <Items>
+                    <dnn:DnnComboBoxItem resourcekey="Seconds" Value="s" />
+                    <dnn:DnnComboBoxItem resourcekey="Minutes" Value="m" />
+                    <dnn:DnnComboBoxItem resourcekey="Hours" Value="h" />
+                    <dnn:DnnComboBoxItem resourcekey="Days" Value="d" />
+                </Items>
+            </dnn:DnnComboBox>
+        </div>
+        <div class="dnnFormItem timeMeasurement">
+            <dnn:Label ID="plRetryTimeLapse" runat="server" ControlName="txtRetryTimeLapse" />
+            <asp:TextBox ID="txtRetryTimeLapse" runat="server" MaxLength="10" CssClass="dnnSmallSizeComboBox" />
+          <%--  <asp:DropDownList ID="ddlRetryTimeLapseMeasurement" runat="server">
+               <asp:ListItem resourcekey="Seconds" Value="s" />
+                <asp:ListItem resourcekey="Minutes" Value="m" />
+                <asp:ListItem resourcekey="Hours" Value="h" />
+                <asp:ListItem resourcekey="Days" Value="d" />
+            </asp:DropDownList>--%>
+            <dnn:DnnComboBox ID="ddlRetryTimeLapseMeasurement" runat="server" CssClass="dnnSmallSizeComboBox">
+                <Items>
+                    <dnn:DnnComboBoxItem resourcekey="Seconds" Value="s" />
+                    <dnn:DnnComboBoxItem resourcekey="Minutes" Value="m" />
+                    <dnn:DnnComboBoxItem resourcekey="Hours" Value="h" />
+                    <dnn:DnnComboBoxItem resourcekey="Days" Value="d" />
+                </Items>
+            </dnn:DnnComboBox>
+        </div>
+        <div class="dnnFormItem">
+            <dnn:Label ID="plRetainHistoryNum" runat="server" ControlName="ddlRetainHistoryNum" />
+           <%-- <asp:DropDownList ID="ddlRetainHistoryNum" runat="server">
+                <asp:ListItem Value="0" resourcekey="None" />
+                <asp:ListItem Value="1">1</asp:ListItem>
+                <asp:ListItem Value="5">5</asp:ListItem>
+                <asp:ListItem Value="10">10</asp:ListItem>
+                <asp:ListItem Value="25">25</asp:ListItem>
+                <asp:ListItem Value="50">50</asp:ListItem>
+                <asp:ListItem Value="100">100</asp:ListItem>
+                <asp:ListItem Value="250">250</asp:ListItem>
+                <asp:ListItem Value="500">500</asp:ListItem>
+                <asp:ListItem Value="-1" resourcekey="All" />
+            </asp:DropDownList>--%>
+            <dnn:DnnComboBox ID="ddlRetainHistoryNum" runat="server">
+                <Items>
+                    <dnn:DnnComboBoxItem Value="0" resourcekey="None" />
+                    <dnn:DnnComboBoxItem Value="1" Text="1" />
+                    <dnn:DnnComboBoxItem Value="5" Text="5" />
+                    <dnn:DnnComboBoxItem Value="10" Text="10" />
+                    <dnn:DnnComboBoxItem Value="25" Text="25" />
+                    <dnn:DnnComboBoxItem Value="50" Text="50" />
+                    <dnn:DnnComboBoxItem Value="100" Text="100" />
+                    <dnn:DnnComboBoxItem Value="250" Text="250" />
+                    <dnn:DnnComboBoxItem Value="500" Text="500" />
+                    <dnn:DnnComboBoxItem Value="-1" resourcekey="All" />
+                </Items>
+            </dnn:DnnComboBox>
+        </div>
+        <div class="dnnFormItem">
+            <dnn:Label ID="plAttachToEvent" runat="server" ControlName="ddlAttachToEvent" />
+          <%--  <asp:DropDownList ID="ddlAttachToEvent" runat="server" >
+                <asp:ListItem resourcekey="None" Value="" />
+                <asp:ListItem resourcekey="APPLICATION_START" Value="APPLICATION_START" />
+            </asp:DropDownList>--%>
+            <dnn:DnnComboBox ID="ddlAttachToEvent" runat="server" >
+                <Items>
+                    <dnn:DnnComboBoxItem resourcekey="None" Value="" />
+                    <dnn:DnnComboBoxItem resourcekey="APPLICATION_START" Value="APPLICATION_START" />
+                </Items>
+            </dnn:DnnComboBox>
+        </div>
+        <div class="dnnFormItem">
+            <dnn:Label ID="plCatchUpEnabled" runat="server" ControlName="chkCatchUpEnabled" />
+            <asp:CheckBox ID="chkCatchUpEnabled" runat="server" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:Label ID="plObjectDependencies" runat="server" ControlName="txtObjectDependencies" />
+            <asp:TextBox ID="txtObjectDependencies" runat="server" MaxLength="150" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:Label ID="plServers" runat="server" ControlName="txtServers" />
+            <asp:CheckBoxList ID="lstServers" runat="server" />
+        </div>
+    </fieldset>
+    <ul class="dnnActions dnnClear">
+    	<li><asp:LinkButton id="cmdUpdate" runat="server" CssClass="dnnPrimaryAction" resourcekey="cmdUpdate" /></li>
+        <li><asp:LinkButton id="cmdRun" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdRun" Causesvalidation="False" /></li>
+        <li><asp:LinkButton id="cmdDelete" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdDelete" Causesvalidation="False" /></li>
+        <li><asp:HyperLink id="cmdCancel" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdCancel" /></li>
+    </ul>
+</div>
+<script type="text/javascript">
+/*globals jQuery */
+(function ($) {
+    var yesText = '<%= Localization.GetSafeJSString("Yes.Text", Localization.SharedResourceFile) %>';
+    var noText = '<%= Localization.GetSafeJSString("No.Text", Localization.SharedResourceFile) %>';
+    var titleText = '<%= Localization.GetSafeJSString("Confirm.Text", Localization.SharedResourceFile) %>';
+	$('#<%= cmdDelete.ClientID %>').dnnConfirm({
+	    text: '<%= Localization.GetSafeJSString("DeleteItem.Text", Localization.SharedResourceFile) %>',
+		yesText: yesText,
+		noText: noText,
+		title: titleText
+	});
+} (jQuery));
+</script>

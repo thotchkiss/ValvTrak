@@ -1,1 +1,1 @@
-<%@ Control Language="vb" AutoEventWireup="false" Inherits="DotNetNuke.UI.Containers.LinkActions" CodeFile="LinkActions.ascx.vb" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.UI.Containers.LinkActions" CodeFile="LinkActions.ascx.cs" %>

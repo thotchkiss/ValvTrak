@@ -1,120 +1,110 @@
-<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.LogViewer.EditLogTypes" CodeFile="EditLogTypes.ascx.vb" %>
-<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.LogViewer.EditLogTypes" CodeFile="EditLogTypes.ascx.cs" %>
+<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<%@ Register TagPrefix="dnn" TagName="SectionHead" Src="~/controls/SectionHeadControl.ascx" %>
-<asp:panel id="pnlLogTypeConfigInfo" runat="server">
-	<asp:datagrid id="dgLogTypeConfigInfo" runat="server" autogeneratecolumns="false" cellpadding="4"
-		datakeyfield="ID" border="0" summary="This table shows the log configuration entries.">
-		<itemstyle horizontalalign="Left" />
-		<columns>
-		    <dnn:imagecommandcolumn CommandName="Edit" ImageUrl="~/images/edit.gif" KeyField="ID" />
-			<asp:boundcolumn headertext="LogType" datafield="LogTypeKey" headerstyle-cssclass="NormalBold" itemstyle-cssclass="Normal" />
-			<asp:boundcolumn headertext="Portal" datafield="LogTypePortalID" headerstyle-cssclass="NormalBold"
-				itemstyle-cssclass="Normal" />
-			<asp:boundcolumn headertext="Active" datafield="LoggingIsActive" headerstyle-cssclass="NormalBold"
-				itemstyle-cssclass="Normal" />
-			<asp:boundcolumn headertext="FileName" datafield="LogFilename" headerstyle-cssclass="NormalBold"
-				itemstyle-cssclass="Normal" />
-		</columns>
-	</asp:datagrid>
-	<P>
-		<asp:linkbutton class="CommandButton" id="cmdReturn" runat="server" resourcekey="cmdReturn" text="Return"
-			causesvalidation="False" borderstyle="none">Return</asp:linkbutton></P>
-</asp:panel>
-<asp:panel id="pnlEditLogTypeConfigInfo" runat="server">
-	<dnn:sectionhead id="dshSettings" runat="server" cssclass="Head" includeRule="True" resourcekey="Settings"
-		section="tblSettings" text="Logging Settings"></dnn:sectionhead>
-	<TABLE id="tblSettings" cellSpacing="2" cellPadding="2" border="0" runat="server">
-		<TR>
-			<TD class="SubHead" width="150">
-				<dnn:label id="plIsActive" runat="server" controlname="chkIsActive" suffix=":"></dnn:label></TD>
-			<TD class="Normal">
-				<asp:checkbox id="chkIsActive" runat="server" autopostback="True"></asp:checkbox></TD>
-		</TR>
-		<TR>
-			<TD class="SubHead" width="150">
-				<dnn:label id="plLogTypeKey" runat="server" controlname="ddlLogTypeKey" suffix=":"></dnn:label></TD>
-			<TD class="Normal">
-				<asp:dropdownlist id="ddlLogTypeKey" runat="server"></asp:dropdownlist></TD>
-		</TR>
-		<TR>
-			<TD class="SubHead" width="150">
-				<dnn:label id="plLogTypePortalID" runat="server" controlname="ddlLogTypePortalID" suffix=":"></dnn:label></TD>
-			<TD class="Normal">
-				<asp:dropdownlist id="ddlLogTypePortalID" runat="server"></asp:dropdownlist></TD>
-		</TR>
-		<TR>
-			<TD class="SubHead" width="150">
-				<dnn:label id="plKeepMostRecent" runat="server" controlname="ddlKeepMostRecent" suffix=":"></dnn:label></TD>
-			<TD class="Normal">
-				<asp:dropdownlist id="ddlKeepMostRecent" runat="server"></asp:dropdownlist></TD>
-		</TR>
-		<TR>
-			<TD class="SubHead" width="150">
-				<dnn:label id="plFileName" runat="server" controlname="txtFileName" suffix=":"></dnn:label></TD>
-			<TD class="Normal">
-				<asp:textbox id="txtFileName" runat="server" width="300"></asp:textbox></TD>
-		</TR>
-	</TABLE>
-	<BR>
-	<dnn:sectionhead id="dshEmailSettings" runat="server" cssclass="Head" includeRule="True" resourcekey="EmailSettings"
-		section="tblEmailSettings" text="Email Notification Settings"></dnn:sectionhead>
-	<TABLE id="tblEmailSettings" cellSpacing="2" cellPadding="2" border="0" runat="server">
-		<TR>
-			<TD class="SubHead" width="180">
-				<dnn:label id="plEmailNotificationStatus" runat="server" controlname="chkEmailNotificationStatus"
-					suffix=":"></dnn:label></TD>
-			<TD class="Normal">
-				<asp:checkbox id="chkEmailNotificationStatus" runat="server" autopostback="True"></asp:checkbox></TD>
-		</TR>
-		<TR>
-			<TD class="SubHead" width="180">
-				<dnn:label id="plThreshold" runat="server" controlname="ddlThreshold" suffix=":"></dnn:label></TD>
-			<TD class="Normal">
-				<asp:dropdownlist id="ddlThreshold" runat="server"></asp:dropdownlist>&nbsp;
-				<asp:Label id="lblIn" runat="server" resourcekey="In" Font-Bold="True">in</asp:Label>&nbsp;
-				<asp:dropdownlist id="ddlThresholdNotificationTime" runat="server">
-					<asp:listitem value="1" />
-					<asp:listitem value="2" />
-					<asp:listitem value="3" />
-					<asp:listitem value="4" />
-					<asp:listitem value="5" />
-					<asp:listitem value="6" />
-					<asp:listitem value="7" />
-					<asp:listitem value="8" />
-					<asp:listitem value="9" />
-					<asp:listitem value="10" />
-					<asp:listitem value="20" />
-					<asp:listitem value="30" />
-					<asp:listitem value="60" />
-					<asp:listitem value="90" />
-					<asp:listitem value="120" />
-				</asp:dropdownlist>
-				<asp:dropdownlist id="ddlThresholdNotificationTimeType" runat="server">
-					<asp:listitem value="1" resourcekey="Seconds">Seconds</asp:listitem>
-					<asp:listitem value="2" resourcekey="Minutes">Minutes</asp:listitem>
-					<asp:listitem value="3" resourcekey="Hours">Hours</asp:listitem>
-					<asp:listitem value="4" resourcekey="Days">Days</asp:listitem>
-				</asp:dropdownlist></TD>
-		</TR>
-		<TR>
-			<TD class="SubHead" width="180">
-				<dnn:label id="plMailFromAddress" runat="server" controlname="txtMailFromAddress" suffix=":"></dnn:label></TD>
-			<TD class="Normal">
-				<asp:textbox id="txtMailFromAddress" runat="server" width="300"></asp:textbox></TD>
-		</TR>
-		<TR>
-			<TD class="SubHead" width="180">
-				<dnn:label id="plMailToAddress" runat="server" controlname="txtMailToAddress" suffix=":"></dnn:label></TD>
-			<TD class="Normal">
-				<asp:textbox id="txtMailToAddress" runat="server" width="300"></asp:textbox></TD>
-		</TR>
-	</TABLE>
-	<P>
-		<asp:linkbutton class="CommandButton" id="cmdUpdate" runat="server" resourcekey="cmdUpdate" text="Update"></asp:linkbutton>&nbsp;
-		<asp:linkbutton class="CommandButton" id="cmdCancel" runat="server" resourcekey="cmdCancel" text="Cancel"
-			causesvalidation="False" borderstyle="none"></asp:linkbutton>&nbsp;
-		<asp:linkbutton class="CommandButton" id="cmdDelete" runat="server" resourcekey="cmdDelete" text="Delete"
-			causesvalidation="False"></asp:linkbutton>&nbsp;
-	</P>
-</asp:panel>
+
+<div class="dnnForm dnnEditLogTypes" id="dnnEditLogTypes">
+    <asp:panel id="pnlLogTypeConfigInfo" runat="server">
+	    <dnn:DnnGrid id="dgLogTypeConfigInfo" runat="server" autogeneratecolumns="false">
+	        <MasterTableView DataKeyNames="ID">
+		        <Columns>
+		            <dnn:DnnGridImageCommandColumn CommandName="Edit" IconKey="Edit" UniqueName="EditColumn" />
+			        <dnn:DnnGridBoundColumn headertext="LogType" datafield="LogTypeFriendlyName" />
+			        <dnn:DnnGridBoundColumn headertext="Portal" datafield="LogTypePortalID" />
+			        <dnn:DnnGridBoundColumn headertext="Active" datafield="LoggingIsActive" />
+			        <dnn:DnnGridBoundColumn headertext="FileName" datafield="LogFilename" />
+		        </Columns>
+            </MasterTableView>
+	    </dnn:DnnGrid>
+	    <ul class="dnnActions dnnClear"><li><asp:HyperLink class="dnnPrimaryAction" id="hlReturn" runat="server" resourcekey="cmdReturn" causesvalidation="False" /></li></ul>
+    </asp:panel>
+    <asp:panel id="pnlEditLogTypeConfigInfo" runat="server">
+        <div class="eltContent dnnClear" id="eltContent">
+            <h2 id="Panel-Settings" class="dnnFormSectionHead"><a href="" class="dnnSectionExpanded"><%=LocalizeString("Settings")%></a></h2>
+            <fieldset>
+                <legend></legend>
+                <div class="dnnFormItem">
+                    <dnn:label id="plIsActive" runat="server" controlname="chkIsActive" suffix=":" />
+                    <asp:checkbox id="chkIsActive" runat="server" autopostback="True" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plLogTypeKey" runat="server" controlname="ddlLogTypeKey" suffix=":" />
+                    <asp:dropdownlist id="ddlLogTypeKey" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plLogTypePortalID" runat="server" controlname="ddlLogTypePortalID" suffix=":" />
+                    <asp:dropdownlist id="ddlLogTypePortalID" runat="server" /> 
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plKeepMostRecent" runat="server" controlname="ddlKeepMostRecent" suffix=":" />
+                    <asp:dropdownlist id="ddlKeepMostRecent" runat="server" />
+                </div>
+            </fieldset>
+            <h2 id="Panel-EmailSettings" class="dnnFormSectionHead"><a href=""><%=LocalizeString("EmailSettings")%></a></h2>
+            <fieldset>
+                <legend></legend>
+                <div class="dnnFormItem">
+                    <dnn:label id="plEmailNotificationStatus" runat="server" controlname="chkEmailNotificationStatus" suffix=":" />
+                    <asp:checkbox id="chkEmailNotificationStatus" runat="server" autopostback="True" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plThreshold" runat="server" controlname="ddlThreshold" suffix=":" />
+                    <asp:dropdownlist id="ddlThreshold" runat="server" />
+                    <asp:Label id="lblIn" runat="server" resourcekey="In" />
+                    <asp:dropdownlist id="ddlThresholdNotificationTime" runat="server">
+					    <asp:listitem value="1" />
+					    <asp:listitem value="2" />
+					    <asp:listitem value="3" />
+					    <asp:listitem value="4" />
+					    <asp:listitem value="5" />
+					    <asp:listitem value="6" />
+					    <asp:listitem value="7" />
+					    <asp:listitem value="8" />
+					    <asp:listitem value="9" />
+					    <asp:listitem value="10" />
+					    <asp:listitem value="20" />
+					    <asp:listitem value="30" />
+					    <asp:listitem value="60" />
+					    <asp:listitem value="90" />
+					    <asp:listitem value="120" />
+				    </asp:dropdownlist>
+                    <asp:dropdownlist id="ddlThresholdNotificationTimeType" runat="server">
+					    <asp:listitem value="1" resourcekey="Seconds">Seconds</asp:listitem>
+					    <asp:listitem value="2" resourcekey="Minutes">Minutes</asp:listitem>
+					    <asp:listitem value="3" resourcekey="Hours">Hours</asp:listitem>
+					    <asp:listitem value="4" resourcekey="Days">Days</asp:listitem>
+				    </asp:dropdownlist>
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plMailFromAddress" runat="server" controlname="txtMailFromAddress" suffix=":" />
+                    <asp:textbox id="txtMailFromAddress" runat="server" />
+                </div>
+                <div class="dnnFormItem">
+                    <dnn:label id="plMailToAddress" runat="server" controlname="txtMailToAddress" suffix=":" />
+                    <asp:textbox id="txtMailToAddress" runat="server" />
+                </div>
+            </fieldset>
+        </div>
+	    <ul class="dnnActions dnnClear">
+		    <li><asp:linkbutton class="dnnPrimaryAction" id="cmdUpdate" runat="server" resourcekey="cmdUpdate" /></li>
+		    <li><asp:linkbutton class="dnnSecondaryAction" id="cmdCancel" runat="server" resourcekey="cmdCancel" causesvalidation="False" /></li>
+		    <li><asp:linkbutton class="dnnSecondaryAction dnnLogTypeDelete" id="cmdDelete" runat="server" resourcekey="cmdDelete" causesvalidation="False" /></li>
+	    </ul>
+		<dnn:DnnScriptBlock ID="scriptBlock1" runat="server">
+			<script type="text/javascript">
+                /*globals jQuery */
+                (function ($) {
+				$('#eltContent').dnnPanels();
+				var yesText = '<%= Localization.GetSafeJSString("Yes.Text", Localization.SharedResourceFile) %>';
+				var noText = '<%= Localization.GetSafeJSString("No.Text", Localization.SharedResourceFile) %>';
+				var titleText = '<%= Localization.GetSafeJSString("Confirm.Text", Localization.SharedResourceFile) %>';
+				$('#<%= cmdDelete.ClientID %>').dnnConfirm({
+				    text: '<%= Localization.GetSafeJSString("DeleteItem.Text", Localization.SharedResourceFile) %>',
+					yesText: yesText,
+					noText: noText,
+					title: titleText
+				});
+                } (jQuery));
+			</script>
+		</dnn:DnnScriptBlock>
+    </asp:panel>
+</div>

@@ -322,7 +322,7 @@
                     </dxwgv:GridViewDataTextColumn>
                     <dxwgv:GridViewDataHyperLinkColumn FieldName="JobID" Caption="Job ID" VisibleIndex="1">
                         <DataItemTemplate>
-                            <dxe:ASPxHyperLink ID="ASPxHyperLink1" runat="server" Text='<%# Eval("JobID") %>' NavigateUrl='<%# ResolveUrl("Report.aspx") + "?Format=Multiple&ReportKeys=" + Eval("InspectionID") %>'>
+                            <dxe:ASPxHyperLink ID="ASPxHyperLink1" runat="server" Text='<%# Eval("JobID") %>' NavigateUrl='<%# ResolveUrl("Report.aspx") + "?Format=Multiple&ReportKeys=" + Eval("JobID") %>'>
                                 <ClientSideEvents Click="function(s, e) {
                                         onPrintSingle(s, s.GetNavigateUrl());    
                                         ASPxClientUtils.PreventEvent(e.htmlEvent);

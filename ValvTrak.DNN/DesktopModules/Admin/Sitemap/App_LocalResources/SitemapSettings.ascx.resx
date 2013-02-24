@@ -175,7 +175,7 @@
     <value>Refresh Page Priorities</value>
   </data>
   <data name="SectionProviderSettings.Help" xml:space="preserve">
-    <value>In this section you can view and configure available Sitemap providers for the current portal. Check the "Enabled" checkbox if you want to include urls generated for that provider in the final sitemap file. You can also override the priority for all urls of any given provider by checking the appropriate checkbox and giving a value for the new priority</value>
+    <value>In this section you can view and configure available Sitemap providers for the current website. Check the "Enabled" checkbox if you want to include urls generated for that provider in the final sitemap file. You can also override the priority for all urls of any given provider by checking the appropriate checkbox and giving a value for the new priority</value>
   </data>
   <data name="SectionProviderSettings.Text" xml:space="preserve">
     <value>Installed Sitemap Providers</value>
@@ -266,5 +266,29 @@
   </data>
   <data name="OverridePriority.Header" xml:space="preserve">
     <value>Override Priority</value>
+  </data>
+  <data name="1Day.Text" xml:space="preserve">
+    <value>1 Day</value>
+  </data>
+  <data name="2Days.Text" xml:space="preserve">
+    <value>2 Days</value>
+  </data>
+  <data name="3Days.Text" xml:space="preserve">
+    <value>3 Days</value>
+  </data>
+  <data name="4Days.Text" xml:space="preserve">
+    <value>4 Days</value>
+  </data>
+  <data name="5Days.Text" xml:space="preserve">
+    <value>5 Days</value>
+  </data>
+  <data name="6Days.Text" xml:space="preserve">
+    <value>6 Days</value>
+  </data>
+  <data name="7Days.Text" xml:space="preserve">
+    <value>7 Days</value>
+  </data>
+  <data name="DisableCaching.Text" xml:space="preserve">
+    <value>Disable Caching</value>
   </data>
 </root>

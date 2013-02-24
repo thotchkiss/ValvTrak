@@ -135,4 +135,7 @@
   <data name="Success.Text" xml:space="preserve">
     <value>Dashboard exported as xml Successfully.  The file - {0} - can be found in the Host Root Folder in the File Manager</value>
   </data>
+  <data name="valFileName.Error" xml:space="preserve">
+    <value>A file name is required</value>
+  </data>
 </root>

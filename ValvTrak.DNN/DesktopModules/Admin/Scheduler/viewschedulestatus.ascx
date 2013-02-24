@@ -1,151 +1,85 @@
-<%@ Control Language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Scheduler.ViewScheduleStatus"
-    CodeFile="ViewScheduleStatus.ascx.vb" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Scheduler.ViewScheduleStatus" CodeFile="ViewScheduleStatus.ascx.cs" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"%>
-<table border="0" cellspacing="1" cellpadding="3">
-    <tr>
-        <td class="SubHead">
-            <asp:Label ID="lblStatusLabel" resourcekey="lblStatusLabel" runat="server">Current Status:</asp:Label>
-        </td>
-        <td class="Normal">
-            <asp:Label CssClass="NormalBold" ID="lblStatus" runat="server" />
-        </td>
-    </tr>
-    <tr>
-        <td class="SubHead">
-            <asp:Label ID="lblMaxThreadsLabel" resourcekey="lblMaxThreadsLabel" runat="server">Max Threads:</asp:Label>
-        </td>
-        <td class="Normal">
-            <asp:Label CssClass="NormalBold" ID="lblMaxThreads" runat="server" />
-        </td>
-    </tr>
-    <tr>
-        <td class="SubHead">
-            <asp:Label ID="lblActiveThreadsLabel" resourcekey="lblActiveThreadsLabel" runat="server">Active Threads:</asp:Label>
-        </td>
-        <td class="Normal">
-            <asp:Label CssClass="NormalBold" ID="lblActiveThreads" runat="server" />
-        </td>
-    </tr>
-    <tr>
-        <td class="SubHead">
-            <asp:Label ID="lblFreeThreadsLabel" resourcekey="lblFreeThreadsLabel" runat="server">Free Threads:</asp:Label>
-        </td>
-        <td class="Normal">
-            <asp:Label CssClass="NormalBold" ID="lblFreeThreads" runat="server" />
-        </td>
-    </tr>
-    <tr>
-        <td class="SubHead">
-            <asp:Label ID="lblCommand" resourcekey="lblCommand" runat="server">Command:</asp:Label>
-        </td>
-        <td class="Normal">
-            <asp:LinkButton ID="cmdStart" resourcekey="cmdStart" CssClass="CommandButton" runat="server">Start</asp:LinkButton>
-            &nbsp;&nbsp;
-            <asp:LinkButton ID="cmdStop" resourcekey="cmdStop" CssClass="CommandButton" runat="server">Stop</asp:LinkButton>
-        </td>
-    </tr>
-</table>
-<br>
-<asp:Panel ID="pnlScheduleProcessing" runat="server">
-    <asp:Label ID="lblProcessing" runat="server" resourcekey="lblProcessing" CssClass="SubHead">Items Processing</asp:Label>
-    <hr noshade size="1">
-    <asp:DataGrid ID="dgScheduleProcessing" runat="server" AutoGenerateColumns="false"
-        CellPadding="4" DataKeyField="ScheduleID" EnableViewState="false" border="1"
-        summary="This table shows the scheduled tasks that are currently running." AlternatingItemStyle-BackColor="#CFCFCF"
-        BorderStyle="None" BorderWidth="0px" GridLines="None">
-        <AlternatingItemStyle BackColor="#CFCFCF"></AlternatingItemStyle>
-        <Columns>
-            <asp:BoundColumn DataField="ScheduleID" HeaderText="ScheduleID">
-                <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-                <ItemStyle CssClass="Normal"></ItemStyle>
-            </asp:BoundColumn>
-            <asp:BoundColumn DataField="TypeFullName" HeaderText="Type">
-                <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-                <ItemStyle CssClass="Normal"></ItemStyle>
-            </asp:BoundColumn>
-            <asp:BoundColumn DataField="StartDate" HeaderText="Started">
-                <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-                <ItemStyle CssClass="Normal"></ItemStyle>
-            </asp:BoundColumn>
-            <asp:BoundColumn DataField="ElapsedTime" HeaderText="Duration&lt;br&gt;(seconds)">
-                <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-                <ItemStyle CssClass="Normal"></ItemStyle>
-            </asp:BoundColumn>
-            <asp:BoundColumn DataField="ObjectDependencies" HeaderText="ObjectDependencies">
-                <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-                <ItemStyle CssClass="Normal"></ItemStyle>
-            </asp:BoundColumn>
-            <asp:BoundColumn DataField="ScheduleSource" HeaderText="TriggeredBy">
-                <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-                <ItemStyle CssClass="Normal"></ItemStyle>
-            </asp:BoundColumn>
-            <asp:BoundColumn DataField="ThreadID" HeaderText="Thread">
-                <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-                <ItemStyle CssClass="Normal"></ItemStyle>
-            </asp:BoundColumn>
-            <asp:TemplateColumn HeaderText="Servers">
-                <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-                <ItemStyle CssClass="Normal"></ItemStyle>
-                <ItemTemplate>
-                    <%# DataBinder.Eval(Container.DataItem,"Servers") %>
-                </ItemTemplate>
-            </asp:TemplateColumn>
-        </Columns>
-    </asp:DataGrid>
-</asp:Panel>
-<br>
-<br>
-<asp:Panel ID="pnlScheduleQueue" runat="server">
-    <asp:Label ID="lblQueue" runat="server" resourcekey="lblQueue" CssClass="SubHead">Items Processing</asp:Label>
-    <hr noshade size="1">
-    <asp:DataGrid ID="dgScheduleQueue" runat="server" AutoGenerateColumns="false" CellPadding="4"
-        DataKeyField="ScheduleID" EnableViewState="false" border="1" summary="This table shows the tasks that are queued up in the schedule."
-        AlternatingItemStyle-BackColor="#CFCFCF" BorderStyle="None" BorderWidth="0px"
-        GridLines="None">
-        <AlternatingItemStyle BackColor="#CFCFCF"></AlternatingItemStyle>
-        <Columns>
-            <asp:BoundColumn DataField="ScheduleID" HeaderText="ScheduleID">
-                <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-                <ItemStyle CssClass="Normal"></ItemStyle>
-            </asp:BoundColumn>
-            <asp:BoundColumn DataField="FriendlyName" HeaderText="Name">
-                <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-                <ItemStyle CssClass="Normal"></ItemStyle>
-            </asp:BoundColumn>
-            <asp:BoundColumn DataField="NextStart" HeaderText="NextStart">
-                <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-                <ItemStyle CssClass="Normal"></ItemStyle>
-            </asp:BoundColumn>
-            <asp:TemplateColumn HeaderText="Overdue">
-                <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-                <ItemStyle CssClass="Normal"></ItemStyle>
-                <ItemTemplate>
-                    <%# GetOverdueText(DataBinder.Eval(Container.DataItem,"OverdueBy")) %>
-                </ItemTemplate>
-            </asp:TemplateColumn>
-            <asp:BoundColumn DataField="RemainingTime" HeaderText="TimeRemaining">
-                <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-                <ItemStyle CssClass="Normal"></ItemStyle>
-            </asp:BoundColumn>
-            <asp:BoundColumn DataField="ObjectDependencies" HeaderText="ObjectDependencies">
-                <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-                <ItemStyle CssClass="Normal"></ItemStyle>
-            </asp:BoundColumn>
-            <asp:BoundColumn DataField="ScheduleSource" HeaderText="TriggeredBy">
-                <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-                <ItemStyle CssClass="Normal"></ItemStyle>
-            </asp:BoundColumn>
-            <asp:TemplateColumn HeaderText="Servers">
-                <HeaderStyle CssClass="NormalBold"></HeaderStyle>
-                <ItemStyle CssClass="Normal"></ItemStyle>
-                <ItemTemplate>
-                    <%# DataBinder.Eval(Container.DataItem,"Servers") %>
-                </ItemTemplate>
-            </asp:TemplateColumn>
-        </Columns>
-    </asp:DataGrid>
-</asp:Panel>
-<br />
-<p>
-    <dnn:commandbutton ID="cmdCancel" runat="server" resourcekey="cmdCancel" CssClass="CommandButton" imageurl="~/images/lt.gif" />
-</p>
+<%@ Register TagPrefix="dnnweb" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<%@ Register TagPrefix="dnn" Namespace="Telerik.Web.UI" %>
+<%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
+<div class="dnnForm dnnScheduleStatus dnnClear" id="dnnScheduleStatus">
+    <div class="dnnFormItem">
+        <%--<asp:Label ID="lblStatusLabel" resourcekey="lblStatusLabel" runat="server" CssClass="dnnFormLabel" />--%>
+        <dnn:Label ID="lblStatusLabel" resourcekey="lblStatusLabel" runat="server"/>
+        <asp:Label ID="lblStatus" runat="server" />
+    </div>
+    <div class="dnnFormItem">
+        <%--<asp:Label ID="lblMaxThreadsLabel" resourcekey="lblMaxThreadsLabel" runat="server" CssClass="dnnFormLabel" />--%>
+        <dnn:Label ID="lblMaxThreadsLabel" resourcekey="lblMaxThreadsLabel" runat="server" />
+        <asp:Label ID="lblMaxThreads" runat="server" />
+    </div>
+     <div class="dnnFormItem">
+            <%--<asp:Label ID="lblActiveThreadsLabel" resourcekey="lblActiveThreadsLabel" runat="server" CssClass="dnnFormLabel" />--%>
+         <dnn:Label ID="lblActiveThreadsLabel" resourcekey="lblActiveThreadsLabel" runat="server" />
+         <asp:Label ID="lblActiveThreads" runat="server" />
+    </div>
+     <div class="dnnFormItem">
+        <%--<asp:Label ID="lblFreeThreadsLabel" resourcekey="lblFreeThreadsLabel" runat="server" CssClass="dnnFormLabel" />--%>
+        <dnn:Label ID="lblFreeThreadsLabel" resourcekey="lblFreeThreadsLabel" runat="server"/>
+        <asp:Label ID="lblFreeThreads" runat="server" />
+    </div>
+    <asp:PlaceHolder ID="placeCommands" runat="server">
+        <div class="dnnFormItem">
+            <%--<asp:Label ID="lblCommand" resourcekey="lblCommand" runat="server" CssClass="dnnFormLabel" />--%>
+            <dnn:label ID="lblCommand" resourcekey="lblCommand" runat="server" />
+            <asp:LinkButton ID="cmdStart" resourcekey="cmdStart" CssClass="dnnSecondaryAction" runat="server" />
+            <asp:LinkButton ID="cmdStop" resourcekey="cmdStop" CssClass="dnnSecondaryAction" runat="server" />
+        </div>
+    </asp:PlaceHolder>
+	<asp:Panel ID="pnlScheduleProcessing" runat="server" CssClass="dnnScheduleProcessing">
+		<h2><asp:Label ID="lblProcessing" runat="server" resourcekey="lblProcessing" /></h2>
+		<dnnweb:DnnGrid id="dgScheduleProcessing" runat="server" AutoGenerateColumns="false" AllowSorting="false" CssClass="dnnScheduleHistoryGrid">
+			<MasterTableView DataKeyNames="ScheduleID">
+				<Columns>
+					<dnnweb:DnnGridBoundColumn DataField="ScheduleID" HeaderText="ServerScheduleID" />
+					<dnnweb:DnnGridBoundColumn DataField="TypeFullName" HeaderText="Type" />
+					<dnnweb:DnnGridBoundColumn DataField="StartDate" HeaderText="Started" />
+					<dnnweb:DnnGridBoundColumn DataField="ElapsedTime" HeaderText="Duration" />
+					<dnnweb:DnnGridBoundColumn DataField="ObjectDependencies" HeaderText="ObjectDependencies" />
+					<dnnweb:DnnGridBoundColumn DataField="ScheduleSource" HeaderText="TriggeredBy" />
+					<dnnweb:DnnGridBoundColumn DataField="ThreadID" HeaderText="Thread" />
+					<dnnweb:DnnGridTemplateColumn UniqueName="Servers" HeaderText="Servers">
+						<ItemTemplate>
+							<%# DataBinder.Eval(Container.DataItem,"Servers") %>
+					</ItemTemplate>
+					</dnnweb:DnnGridTemplateColumn>
+				</Columns>
+			</MasterTableView>
+		</dnnweb:DnnGrid>
+	</asp:Panel>
+	<asp:Panel ID="pnlScheduleQueue" runat="server" CssClass="dnnScheduleQueue">
+		<h2><asp:Label ID="lblQueue" runat="server" resourcekey="lblQueue" /></h2>
+		<dnnweb:DnnGrid id="dgScheduleQueue" runat="server" AutoGenerateColumns="false" AllowSorting="false" CssClass="dnnScheduleHistoryGrid">
+			<MasterTableView DataKeyNames="ScheduleID,OverdueBy">
+				<Columns>
+					<dnnweb:DnnGridBoundColumn DataField="ScheduleID" HeaderText="ScheduleID" />
+					<dnnweb:DnnGridBoundColumn DataField="FriendlyName" HeaderText="Name" />
+					<dnnweb:DnnGridBoundColumn DataField="NextStart" HeaderText="NextStart" />
+					<dnnweb:DnnGridTemplateColumn UniqueName="Overdue" HeaderText="Overdue">
+						<ItemTemplate>
+							<asp:Label id="lblOverdue" runat="server" />
+						</ItemTemplate>
+					</dnnweb:DnnGridTemplateColumn>
+					<dnnweb:DnnGridBoundColumn DataField="RemainingTime" HeaderText="TimeRemaining" />
+					<dnnweb:DnnGridBoundColumn DataField="ObjectDependencies" HeaderText="ObjectDependencies" />
+					<dnnweb:DnnGridBoundColumn DataField="ScheduleSource" HeaderText="TriggeredBy" />
+					<dnnweb:DnnGridBoundColumn DataField="ThreadID" HeaderText="Thread" />
+					<dnnweb:DnnGridTemplateColumn UniqueName="Servers" HeaderText="Servers">
+						<ItemTemplate>
+							<%# DataBinder.Eval(Container.DataItem,"Servers") %>
+						</ItemTemplate>
+					</dnnweb:DnnGridTemplateColumn>
+				</Columns>
+			</MasterTableView>
+		</dnnweb:DnnGrid>
+	</asp:Panel>
+	<ul class="dnnActions dnnClear">
+		<li><asp:HyperLink id="cmdCancel" runat="server" CssClass="dnnPrimaryAction" resourcekey="cmdReturn" /></li>
+	</ul>
+</div>

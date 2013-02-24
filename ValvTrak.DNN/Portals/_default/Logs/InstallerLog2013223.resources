@@ -1,0 +1,411 @@
+02/23/2013 22:18:06 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.00.02
+02/23/2013 22:18:06 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.00.02.SqlDataProvider
+02/23/2013 22:18:06 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.00.02.SqlDataProvider
+02/23/2013 22:18:07 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.00.02.SqlDataProvider
+02/23/2013 22:18:07 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.00.02.SqlDataProvider
+02/23/2013 22:18:07 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.01.00
+02/23/2013 22:18:07 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.00.SqlDataProvider
+02/23/2013 22:18:07 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.00.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.00.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.00.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.01.01
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.01.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.01.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.01.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.01.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.01.02
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.02.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.02.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.02.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.02.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.01.03
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.03.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.03.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.03.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.03.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.01.04
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.04.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.04.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.04.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.04.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.01.05
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.05.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.05.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.05.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.01.05.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.02.00
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.00.SqlDataProvider
+02/23/2013 22:18:08 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.00.SqlDataProvider
+02/23/2013 22:18:11 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.00.SqlDataProvider
+02/23/2013 22:18:11 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.00.SqlDataProvider
+02/23/2013 22:18:11 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.02.01
+02/23/2013 22:18:11 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.01.SqlDataProvider
+02/23/2013 22:18:11 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.01.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.01.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.01.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.02.02
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.02.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.02.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.02.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.02.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.02.03
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.03.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.03.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.03.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.03.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.02.04
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.04.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.04.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.04.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.04.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 06.02.05
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.05.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.05.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.05.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\06.02.05.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 07.00.00
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\07.00.00.SqlDataProvider
+02/23/2013 22:18:12 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\07.00.00.SqlDataProvider
+02/23/2013 22:18:15 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\07.00.00.SqlDataProvider
+02/23/2013 22:18:15 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\07.00.00.SqlDataProvider
+02/23/2013 22:18:15 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 07.00.01
+02/23/2013 22:18:15 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\07.00.01.SqlDataProvider
+02/23/2013 22:18:15 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\07.00.01.SqlDataProvider
+02/23/2013 22:18:15 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\07.00.01.SqlDataProvider
+02/23/2013 22:18:15 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\07.00.01.SqlDataProvider
+02/23/2013 22:18:15 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 07.00.02
+02/23/2013 22:18:15 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\07.00.02.SqlDataProvider
+02/23/2013 22:18:15 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\07.00.02.SqlDataProvider
+02/23/2013 22:18:15 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\07.00.02.SqlDataProvider
+02/23/2013 22:18:15 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\07.00.02.SqlDataProvider
+02/23/2013 22:18:15 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 07.00.03
+02/23/2013 22:18:15 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\07.00.03.SqlDataProvider
+02/23/2013 22:18:15 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\07.00.03.SqlDataProvider
+02/23/2013 22:18:16 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\07.00.03.SqlDataProvider
+02/23/2013 22:18:16 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:C:\Users\Tim\ValvTrak\Upgrade\Providers\DataProviders\SqlDataProvider\07.00.03.SqlDataProvider
+02/23/2013 22:18:16 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.0.2
+02/23/2013 22:18:16 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.0.2
+02/23/2013 22:18:16 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.1.0
+02/23/2013 22:18:16 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.1.0
+02/23/2013 22:18:16 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleCategories
+02/23/2013 22:18:16 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleControl:99
+02/23/2013 22:18:16 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleDefinition:Extensions
+02/23/2013 22:18:16 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleControl:94
+02/23/2013 22:18:16 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start EnableModalPopUps
+02/23/2013 22:18:17 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddAdminPage:Lists
+02/23/2013 22:18:17 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPagePermission:View
+02/23/2013 22:18:17 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPagePermission:Edit
+02/23/2013 22:18:17 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPage:Lists
+02/23/2013 22:18:17 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleToPage:90
+02/23/2013 22:18:17 [INFO] DotNetNuke.Services.Upgrade.Upgrade End AddModuleToPage:90
+02/23/2013 22:18:17 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleControl:-1
+02/23/2013 22:18:18 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.1.1
+02/23/2013 22:18:18 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.1.1
+02/23/2013 22:18:18 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.1.2
+02/23/2013 22:18:18 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.1.2
+02/23/2013 22:18:18 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.1.3
+02/23/2013 22:18:18 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.1.3
+02/23/2013 22:18:18 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.1.4
+02/23/2013 22:18:18 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.1.4
+02/23/2013 22:18:18 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.1.5
+02/23/2013 22:18:18 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.1.5
+02/23/2013 22:18:18 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.2.0
+02/23/2013 22:18:18 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.2.0
+02/23/2013 22:18:18 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ConvertOldMessages
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ReplaceMessagingModule
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start MovePhotoProperty
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateChildPortalsDefaultPage
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddCoreNotificationTypesFor620
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.2.1
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.2.1
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.2.2
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.2.2
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.2.3
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.2.3
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.2.4
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.2.4
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 6.2.5
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 6.2.5
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 7.0.0
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 7.0.0
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleDefinition:AdvancedSettings
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleControl:149
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddAdminPages:Advanced Settings
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddAdminPage:Advanced Settings
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPagePermission:View
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPagePermission:Edit
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPage:Advanced Settings
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleToPage:149
+02/23/2013 22:18:19 [INFO] DotNetNuke.Services.Upgrade.Upgrade End AddModuleToPage:149
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateChildPortalsDefaultPage
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 7.0.1
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 7.0.1
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 7.0.2
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 7.0.2
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 7.0.3
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 7.0.3
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.0.2
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.00.02
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.0.2
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.0.2
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.00.02
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.1.0
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.01.00
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.1.0
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=type
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.1.0
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.01.00
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.1.1
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.01.01
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.1.1
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.1.1
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.01.01
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.1.2
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.01.02
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.1.2
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.1.2
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.01.02
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.1.3
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.01.03
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.1.3
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.1.3
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.01.03
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.1.4
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.01.04
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.1.4
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.1.4
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.01.04
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.1.5
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.01.05
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.1.5
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.1.5
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.01.05
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.2.0
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.02.00
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.2.0
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=assembly
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=defaultProvider
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=defaultFileProcessingProvider
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=type
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.2.0
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.02.00
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.2.1
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.02.01
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.2.1
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.2.1
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.02.01
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.2.2
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.02.02
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.2.2
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.2.2
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.02.02
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.2.3
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.02.03
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.2.3
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.2.3
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.02.03
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.2.4
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.02.04
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.2.4
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.2.4
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.02.04
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 6.2.5
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:06.02.05
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:6.2.5
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:6.2.5
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:06.02.05
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 7.0.0
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:07.00.00
+02/23/2013 22:18:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:7.0.0
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=assembly
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=assembly
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=expressionPrefix
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=type
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start RemoveNode:
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=key
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:7.0.0
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:07.00.00
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 7.0.1
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:07.00.01
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:7.0.1
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:7.0.1
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:07.00.01
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 7.0.2
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:07.00.02
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:7.0.2
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:7.0.2
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:07.00.02
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 7.0.3
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:07.00.03
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:7.0.3
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:7.0.3
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:07.00.03
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.0.2
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.00.02
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.1.0
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.01.00
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.1.1
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.01.01
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.1.2
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.01.02
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.1.3
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.01.03
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.1.4
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.01.04
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.1.5
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.01.05
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.2.0
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.02.00
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.2.1
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.02.01
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.2.2
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.02.02
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.2.3
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.02.03
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.2.4
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.02.04
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 6.2.5
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:06.02.05
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 7.0.0
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:07.00.00
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 7.0.1
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:07.00.01
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 7.0.2
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:07.00.02
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 7.0.3
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:07.00.03
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Install Packages for type - Module
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DDRMenu_02.00.02_Install.zip
+02/23/2013 22:18:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Module\DDRMenu_02.00.02_Install.zip
+02/23/2013 22:18:22 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:23 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_CoreMessaging_07.00.03_Install.zip
+02/23/2013 22:18:23 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Module\DNNCE_CoreMessaging_07.00.03_Install.zip
+02/23/2013 22:18:23 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_HTML_07.00.03_Install.zip
+02/23/2013 22:18:23 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Module\DNNCE_HTML_07.00.03_Install.zip
+02/23/2013 22:18:23 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_Journal_07.00.03_Install.zip
+02/23/2013 22:18:23 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Module\DNNCE_Journal_07.00.03_Install.zip
+02/23/2013 22:18:24 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_MemberDirectory_07.00.03_Install.zip
+02/23/2013 22:18:24 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Module\DNNCE_MemberDirectory_07.00.03_Install.zip
+02/23/2013 22:18:24 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_MobileManagement_07.00.03_Install.zip
+02/23/2013 22:18:24 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Module\DNNCE_MobileManagement_07.00.03_Install.zip
+02/23/2013 22:18:24 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_PreviewProfileManagement_07.00.03_Install.zip
+02/23/2013 22:18:24 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Module\DNNCE_PreviewProfileManagement_07.00.03_Install.zip
+02/23/2013 22:18:24 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=key
+02/23/2013 22:18:25 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_RazorHost_07.00.03_Install.zip
+02/23/2013 22:18:25 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Module\DNNCE_RazorHost_07.00.03_Install.zip
+02/23/2013 22:18:25 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_SocialGroups_07.00.03_Install.zip
+02/23/2013 22:18:25 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Module\DNNCE_SocialGroups_07.00.03_Install.zip
+02/23/2013 22:18:26 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_Taxonomy_07.00.03_Install.zip
+02/23/2013 22:18:26 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Module\DNNCE_Taxonomy_07.00.03_Install.zip
+02/23/2013 22:18:26 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - HTML_Community_05.02.00_Install.zip
+02/23/2013 22:18:26 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Module\HTML_Community_05.02.00_Install.zip
+02/23/2013 22:18:26 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - Messaging_01.00.00_Install.zip
+02/23/2013 22:18:26 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Module\Messaging_01.00.00_Install.zip
+02/23/2013 22:18:26 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - Taxonomy_01.00.00_Install.zip
+02/23/2013 22:18:26 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Module\Taxonomy_01.00.00_Install.zip
+02/23/2013 22:18:26 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - Telerik_07.00.01_Install.zip
+02/23/2013 22:18:26 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Module\Telerik_07.00.01_Install.zip
+02/23/2013 22:18:30 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=path
+02/23/2013 22:18:30 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:30 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:30 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:30 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=path
+02/23/2013 22:18:30 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:30 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Install Packages for type - Skin
+02/23/2013 22:18:30 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Install Packages for type - Container
+02/23/2013 22:18:30 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Install Packages for type - Language
+02/23/2013 22:18:30 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Install Packages for type - Provider
+02/23/2013 22:18:30 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Provider - CoreSitemapProvider_5.2.0.0_Install.zip
+02/23/2013 22:18:30 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Provider\CoreSitemapProvider_5.2.0.0_Install.zip
+02/23/2013 22:18:31 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:31 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:31 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=path
+02/23/2013 22:18:31 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Provider - DNNMenuNavigationProvider_07.00.03_Install.zip
+02/23/2013 22:18:31 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Provider\DNNMenuNavigationProvider_07.00.03_Install.zip
+02/23/2013 22:18:31 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:31 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Provider - FiftyOneClientCapabilityProvider_07.00.03_Install.zip
+02/23/2013 22:18:31 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Provider\FiftyOneClientCapabilityProvider_07.00.03_Install.zip
+02/23/2013 22:18:33 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:33 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:33 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:33 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:33 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=defaultProvider
+02/23/2013 22:18:33 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Provider - RadEditorProvider_07.00.03_Install.zip
+02/23/2013 22:18:33 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:C:\Users\Tim\ValvTrak\Upgrade\Install\Provider\RadEditorProvider_07.00.03_Install.zip
+02/23/2013 22:18:35 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:35 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+02/23/2013 22:18:35 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Install Packages for type - AuthSystem
+02/23/2013 22:18:35 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Install Packages for type - Package
+02/23/2013 22:19:26 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleToPage:150
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade End AddModuleToPage:150
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddAdminPage:Site Redirection Management
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPagePermission:View
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPagePermission:Edit
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPage:Site Redirection Management
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleToPage:153
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade End AddModuleToPage:153
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddAdminPage:Device Preview Management
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPagePermission:View
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPagePermission:Edit
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPage:Device Preview Management
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleToPage:154
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade End AddModuleToPage:154
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start RemoveHostPage:Device Detection Management
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddHostPage:Device Detection Management
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPage:Device Detection Management
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleToPage:157
+02/23/2013 22:19:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade End AddModuleToPage:157

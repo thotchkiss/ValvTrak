@@ -174,4 +174,13 @@
   <data name="ProfilePropertiesHelp.Text" xml:space="preserve">
     <value>You can change the order of the profile fields, and whether they are Required or Visible on this screen.  Click on the "Apply Changes" button to save any changes you make.  To edit other properties of each Profile Property click the pencil icon in the first column of the grid.</value>
   </data>
+  <data name="DefaultVisibility.Header" xml:space="preserve">
+    <value>Default Visibility</value>
+  </data>
+  <data name="Delete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Edit.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
 </root>

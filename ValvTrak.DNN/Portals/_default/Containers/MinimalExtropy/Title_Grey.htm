@@ -1,4 +1,4 @@
-<div class="c_head c_head_grey">
+<div class="c_container c_head_grey">
     <div class="head_title">
         <div class="c_actions">
 			<object id="dnnACTIONS" codetype="dotnetnuke/server" codebase="ACTIONS">
@@ -10,45 +10,45 @@
         <div class="c_icon">			
 			<object id="dnnICON" codetype="dotnetnuke/server" codebase="ICON">
 			</object>
-			<h1>
+			<h2 class="c_title">
 				<object id="dnnTITLE" codetype="dotnetnuke/server" codebase="TITLE">
 					<param name="CssClass" value="TitleHead" />
 				</object>				
-			</h1>
+			</h2>
             </div>
-            <div class="title_vis">
-				<object id="dnnVISIBILITY" codetype="dotnetnuke/server" codebase="VISIBILITY">
-					<param name="minicon" value="images/DNN-minus.gif" />
-					<param name="maxicon" value="images/DNN-plus.gif" />
-				</object>				
-            </div>
-            <div class="clear_float"></div>
+        <div class="title_vis">
+        <object id="dnnACTIONBUTTON3" codetype="dotnetnuke/server" codebase="ACTIONBUTTON">
+            <param name="CommandName" value="PrintModule.Action" />
+            <param name="DisplayIcon" value="True" />
+            <param name="DisplayLink" value="false" />
+        </object>
+            <object id="dnnVISIBILITY" codetype="dotnetnuke/server" codebase="VISIBILITY">
+                <param name="minicon" value="images/DNN-minus.gif" />
+                <param name="maxicon" value="images/DNN-plus.gif" />
+            </object>
         </div>
-        <div class="c_content">
-            <div id="ContentPane"
-                 runat="server"
-                 class="Normal c_contentpane"></div>
+        <div class="clear_float">
         </div>
-        <div class="c_footer">
-			<object id="dnnACTIONBUTTON1" codetype="dotnetnuke/server" codebase="ACTIONBUTTON">
-				<param name="CommandName" value="AddContent.Action" />
-				<param name="DisplayIcon" value="True" />
-				<param name="DisplayLink" value="True" />
-			</object>	
-			<object id="dnnACTIONBUTTON2" codetype="dotnetnuke/server" codebase="ACTIONBUTTON">
-				<param name="CommandName" value="SyndicateModule.Action" />
-				<param name="DisplayIcon" value="True" />
-				<param name="DisplayLink" value="false" />
-			</object>	
-			<object id="dnnACTIONBUTTON3" codetype="dotnetnuke/server" codebase="ACTIONBUTTON">
-				<param name="CommandName" value="PrintModule.Action" />
-				<param name="DisplayIcon" value="True" />
-				<param name="DisplayLink" value="false" />
-			</object>					
-			<object id="dnnACTIONBUTTON4" codetype="dotnetnuke/server" codebase="ACTIONBUTTON">
-				<param name="CommandName" value="ModuleSettings.Action" />
-				<param name="DisplayIcon" value="True" />
-				<param name="DisplayLink" value="false" />
-			</object>					
-        </div>        </div>
-    
+    </div>
+    <div class="c_content">
+        <div id="ContentPane" runat="server" class="Normal c_contentpane">
+        </div>
+    </div>
+    <div class="c_footer">
+        <object id="dnnACTIONBUTTON1" codetype="dotnetnuke/server" codebase="ACTIONBUTTON">
+            <param name="CommandName" value="AddContent.Action" />
+            <param name="DisplayIcon" value="True" />
+            <param name="DisplayLink" value="True" />
+        </object>
+        <object id="dnnACTIONBUTTON2" codetype="dotnetnuke/server" codebase="ACTIONBUTTON">
+            <param name="CommandName" value="SyndicateModule.Action" />
+            <param name="DisplayIcon" value="True" />
+            <param name="DisplayLink" value="false" />
+        </object>
+        <object id="dnnACTIONBUTTON4" codetype="dotnetnuke/server" codebase="ACTIONBUTTON">
+            <param name="CommandName" value="ModuleSettings.Action" />
+            <param name="DisplayIcon" value="True" />
+            <param name="DisplayLink" value="false" />
+        </object>
+    </div>
+</div>

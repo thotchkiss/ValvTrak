@@ -1,2 +1,2 @@
-<%@ Control Language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Controls.LeftMenu" CodeFile="LeftMenu.ascx.vb" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.UI.Skins.Controls.LeftMenu" CodeFile="LeftMenu.ascx.cs" %>
 <asp:PlaceHolder id="LeftMenu1" runat="server" />

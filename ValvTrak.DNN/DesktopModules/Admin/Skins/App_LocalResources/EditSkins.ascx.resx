@@ -136,7 +136,7 @@
     <value>Restore Default Skin</value>
   </data>
   <data name="Portal.Text" xml:space="preserve">
-    <value>Portal</value>
+    <value>Website</value>
   </data>
   <data name="Admin.Text" xml:space="preserve">
     <value>Admin</value>
@@ -147,7 +147,7 @@
   <data name="cmdParse.Text" xml:space="preserve">
     <value>Parse Skin Package</value>
   </data>
-  <data name="ApplyTo.Text" xml:space="preserve">
+  <data name="lblApply.Text" xml:space="preserve">
     <value>Apply To</value>
   </data>
   <data name="ParseOptions.Text" xml:space="preserve">
@@ -209,5 +209,11 @@
   </data>
   <data name="UsePackageUnInstall.Text" xml:space="preserve">
     <value>This skin is part of a Skin Package.  Use the Uninstall Package option in the list of Skins in the main Grid.</value>
+  </data>
+  <data name="lblApply.Help" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ParseOptions.Help" xml:space="preserve">
+    <value>Portable requires relative graphical references this makes the skin more portable but require additional resources at runtime.</value>
   </data>
 </root>

@@ -67,6 +67,14 @@ AS
 	ORDER BY FriendlyName
 GO
 
+/* Add EditorControlSrc Column to PackageTypes */
+/***********************************************/
+
+ALTER TABLE {databaseOwner}{objectQualifier}PackageTypes
+	ADD EditorControlSrc nvarchar(250) NULL
+GO
+
+
 /* Add GetPackageTypes */
 /***********************/
 
@@ -76,15 +84,8 @@ GO
 
 CREATE procedure {databaseOwner}[{objectQualifier}GetPackageTypes]
 AS
-	SELECT *
+	SELECT PackageType, Description, SecurityAccessLevel, EditorControlSrc
 		FROM   {databaseOwner}{objectQualifier}PackageTypes
-GO
-
-/* Add EditorControlSrc Column to PackageTypes */
-/***********************************************/
-
-ALTER TABLE {databaseOwner}{objectQualifier}PackageTypes
-	ADD EditorControlSrc nvarchar(250) NULL
 GO
 
 /* Update PackageTypes */

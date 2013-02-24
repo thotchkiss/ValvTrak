@@ -1,15 +1,23 @@
-<%@ Control language="vb" Inherits="DotNetNuke.Modules.Html.MyWork" CodeBehind="MyWork.ascx.vb" AutoEventWireup="false" Explicit="True" %>
-<p>
-    <asp:Label ID="lblMessage" runat="server" CssClass="Normal" resourcekey="lblMessage" />
-</p>
-<p>
-<asp:DataGrid ID="grdTabs" runat="server" AutoGenerateColumns="False" BorderStyle="None" BorderWidth="0" CellPadding="4" AllowPaging="false" EnableViewState="true" ShowHeader="False">
-	<HeaderStyle CssClass="NormalBold" />
-	<Columns>
-	<asp:TemplateColumn HeaderText="Page">
-		<ItemTemplate><%#Me.FormatURL(Container.DataItem)%></ItemTemplate>
-	</asp:TemplateColumn>
-	</Columns>
-</asp:DataGrid>
-</p>
-<asp:linkbutton id="cmdCancel" runat="server" class="CommandButton" resourcekey="cmdCancel" borderstyle="none" text="Cancel" causesvalidation="False"></asp:linkbutton>
+<%@ Control language="C#" Inherits="DotNetNuke.Modules.Html.MyWork" CodeBehind="MyWork.ascx.cs" AutoEventWireup="false" %>
+<%@ Register TagPrefix="dnnweb" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<div class="dnnForm dnnMyWork dnnClear">
+	<dnnweb:DnnGrid ID="dgTabs" runat="server" AutoGenerateColumns="False" AllowPaging="false" EnableViewState="true" CssClass="dnnGrid">
+		<MasterTableView>
+			<Columns>
+				<dnnweb:DnnGridTemplateColumn HeaderText="Page">
+					<ItemTemplate>
+						<%#FormatURL(Container.DataItem)%>
+					</ItemTemplate>
+				</dnnweb:DnnGridTemplateColumn>
+			</Columns>
+			<NoRecordsTemplate>
+				<div class="dnnFormMessage dnnFormWarning">
+					<asp:Label ID="lblNoRecords" resourcekey="lblNoRecords" runat="server" />
+				</div>
+			</NoRecordsTemplate>
+		</MasterTableView>
+	</dnnweb:DnnGrid>
+	<ul class="dnnActions dnnClear">
+		<li><asp:HyperLink id="hlCancel" runat="server" class="dnnPrimaryAction" resourcekey="cmdCancel" /></li>
+	</ul>
+</div>

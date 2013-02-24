@@ -151,7 +151,7 @@
     <value>All unsaved changes will be lost if you continue. Are you sure you want to continue?</value>
   </data>
   <data name="ControlTitle_.Text" xml:space="preserve">
-    <value>Custom Portal Locale</value>
+    <value>Custom Website Locale</value>
   </data>
   <data name="ControlTitle_editlanguage.Text" xml:space="preserve">
     <value>Language Editor</value>
@@ -159,7 +159,7 @@
   <data name="DuplicateEntry.Text" xml:space="preserve">
     <value>This file contains more than one entry for: &lt;b&gt;{0}&lt;/b&gt;. You should edit the file and remove the duplicates.</value>
   </data>
-  <data name="Highlight.Text" xml:space="preserve">
+  <data name="highlightLabel.Text" xml:space="preserve">
     <value>Highlight Pending Translations</value>
   </data>
   <data name="ModuleHelp.Text" xml:space="preserve">
@@ -172,7 +172,7 @@
     <value>System</value>
   </data>
   <data name="ModePortal.Text" xml:space="preserve">
-    <value>Portal</value>
+    <value>Site</value>
   </data>
   <data name="plMode.Text" xml:space="preserve">
     <value>Select Mode:</value>
@@ -214,7 +214,7 @@
     <value>Resources:</value>
   </data>
   <data name="cmdEdit.Text" xml:space="preserve">
-    <value>Edit Language</value>
+    <value>Edit Value in Text Editor</value>
   </data>
   <data name="FileSaved.Text" xml:space="preserve">
     <value>Resource File updated successfully</value>
@@ -230,5 +230,17 @@
   </data>
   <data name="ControlTitle_editor.Text" xml:space="preserve">
     <value>Language Editor</value>
+  </data>
+  <data name="plFolder.Help" xml:space="preserve">
+    <value>Selected Folder</value>
+  </data>
+  <data name="plFolder.Text" xml:space="preserve">
+    <value>Selected Folder</value>
+  </data>
+  <data name="highlightLabel.Help" xml:space="preserve">
+    <value>Check this box to highlight any pennding translations.</value>
+  </data>
+  <data name="NoRecords.Text" xml:space="preserve">
+    <value>There are no records to display.</value>
   </data>
 </root>

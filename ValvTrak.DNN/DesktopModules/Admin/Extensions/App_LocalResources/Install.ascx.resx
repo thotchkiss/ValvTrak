@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="LogTitle.Text" xml:space="preserve">
     <value>Package Install Logs</value>
@@ -127,10 +127,10 @@
     <value>Invalid File Extension - {0}</value>
   </data>
   <data name="ModuleHelp.Text" xml:space="preserve">
-    <value>&lt;h1&gt;About Package Install&lt;/h1&gt;&lt;p&gt;Allows you to upload and install packages to the portal.&lt;/p&gt;</value>
+    <value>&lt;h1&gt;About Package Install&lt;/h1&gt;&lt;p&gt;Allows you to upload and install packages to the website.&lt;/p&gt;</value>
   </data>
   <data name="NoFile.Text" xml:space="preserve">
-    <value>You need to select a file to upload first - click the Browse button to locate the file on your local file system.</value>
+    <value>You need to select a file to upload first - click the Choose File button to locate the file on your local file system.</value>
   </data>
   <data name="InstallCustomPackage.Text" xml:space="preserve">
     <value>Install New {0} Extension</value>
@@ -175,7 +175,7 @@
     <value>Package Information</value>
   </data>
   <data name="License.Help" xml:space="preserve">
-    <value>Before proceeding you must accept the terms of the license for this extension.  Please review the license and check the checkbox marked "Accept Terms"</value>
+    <value>Before proceeding you must accept the terms of the license for this extension.  Please review the license and check the checkbox marked "Accept License?"</value>
   </data>
   <data name="License.Title" xml:space="preserve">
     <value>Review License</value>
@@ -241,12 +241,21 @@
     <value>Browse for File:</value>
   </data>
   <data name="BrowseFileHelp.Text" xml:space="preserve">
-    <value>Use the Browse button to browse your local file system to find the extension package you wish to install, then click Next to continue.</value>
+    <value>Use the Choose File button to browse your local file system to find the extension package you wish to install, then click Next to continue.</value>
   </data>
   <data name="Warnings.Help" xml:space="preserve">
     <value>If you have reached this page it is because the installer needs to gather some more information, before proceeding.</value>
   </data>
   <data name="Warnings.Title" xml:space="preserve">
     <value>Upload Results</value>
+  </data>
+  <data name="AcceptLicense.Help" xml:space="preserve">
+    <value>Check this box to accept the terms of the license.</value>
+  </data>
+  <data name="ControlTitle_install.Text" xml:space="preserve">
+    <value>Install Extension</value>
+  </data>
+  <data name="FileSizeRestriction.Text" xml:space="preserve">
+    <value>Your site is configured with a maximum file upload size of {0} MB. </value>
   </data>
 </root>

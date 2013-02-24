@@ -112,22 +112,16 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="cmdExecute.Text" xml:space="preserve">
-    <value>Execute</value>
+    <value>Run Script</value>
   </data>
   <data name="cmdExecute.ToolTip" xml:space="preserve">
     <value>can include {directives} and /*comments*/</value>
-  </data>
-  <data name="chkRunAsScript.Text" xml:space="preserve">
-    <value>Run as Script</value>
-  </data>
-  <data name="chkRunAsScript.ToolTip" xml:space="preserve">
-    <value>include 'GO' directives; for testing &amp;amp; update scripts</value>
   </data>
   <data name="QueryError.Text" xml:space="preserve">
     <value>There is an error in your query!</value>
@@ -148,18 +142,30 @@
     <value>Upload a file into the SQL Query window (Optional).</value>
   </data>
   <data name="cmdUpload.Text" xml:space="preserve">
-    <value>Load</value>
+    <value>Load File</value>
   </data>
   <data name="cmdUpload.ToolTip" xml:space="preserve">
     <value>Load the selected file.</value>
   </data>
   <data name="plConnection.Text" xml:space="preserve">
-    <value>Connection</value>
+    <value>Connection:</value>
   </data>
   <data name="plConnection.Help" xml:space="preserve">
     <value>Select the Connection String you wish to use ( loaded from the list in the web.config file )</value>
   </data>
   <data name="NoDataReturned.Text" xml:space="preserve">
     <value>The query did not return any data</value>
+  </data>
+  <data name="scriptLabel.Text" xml:space="preserve">
+    <value>Script:</value>
+  </data>
+  <data name="scriptLabel.Help" xml:space="preserve">
+    <value>Enter the SQL you wish to execute.</value>
+  </data>
+  <data name="runasLabel.Text" xml:space="preserve">
+    <value>Run as Script:</value>
+  </data>
+  <data name="runasLabel.Help" xml:space="preserve">
+    <value>Select if the SQL statement does not return a value and only acts on the database to make changes</value>
   </data>
 </root>

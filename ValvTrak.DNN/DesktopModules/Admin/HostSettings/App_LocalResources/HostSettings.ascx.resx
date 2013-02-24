@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Configuration.Text" xml:space="preserve">
     <value>Configuration</value>
@@ -193,7 +193,7 @@
     <value>The globally unique identifier which can be used to identify this application.</value>
   </data>
   <data name="plHostPortal.Text" xml:space="preserve">
-    <value>Host Portal:</value>
+    <value>Host Website:</value>
   </data>
   <data name="plHostTitle.Text" xml:space="preserve">
     <value>Host Title:</value>
@@ -265,7 +265,7 @@
     <value>SMTP Server and port:</value>
   </data>
   <data name="EmailTest.Text" xml:space="preserve">
-    <value>Test</value>
+    <value>Test SMTP Settings</value>
   </data>
   <data name="plSMTPAuthentication.Text" xml:space="preserve">
     <value>SMTP Authentication:</value>
@@ -387,6 +387,9 @@
   <data name="SMTP.Text" xml:space="preserve">
     <value>SMTP Server Settings</value>
   </data>
+  <data name="OtherSettings.Text" xml:space="preserve">
+    <value>Other Settings</value>
+  </data>
   <data name="AdvancedSettings.Text" xml:space="preserve">
     <value>Advanced Settings</value>
   </data>
@@ -463,7 +466,7 @@
     <value>Host</value>
   </data>
   <data name="Portal.Text" xml:space="preserve">
-    <value>Portal</value>
+    <value>Site</value>
   </data>
   <data name="plCache.Help" xml:space="preserve">
     <value>Set the length of time that objects remain in the cache</value>
@@ -517,13 +520,13 @@
     <value>Check to enable request filters.</value>
   </data>
   <data name="plHostPortal.Help" xml:space="preserve">
-    <value>Select the default portal</value>
+    <value>Select the default website</value>
   </data>
   <data name="ControlTitle_.Text" xml:space="preserve">
     <value>Host Settings</value>
   </data>
   <data name="SkinUpload.Text" xml:space="preserve">
-    <value>Upload Skin</value>
+    <value>Upload Skin/Container</value>
   </data>
   <data name="ContainerUpload.Text" xml:space="preserve">
     <value>Upload Container</value>
@@ -637,13 +640,13 @@
     <value>Check this box to automatically synchronize the file system.</value>
   </data>
   <data name="plPageQuota.Help" xml:space="preserve">
-    <value>You can specify a maximum number of pages per portal.</value>
+    <value>You can specify a maximum number of pages per website.</value>
   </data>
   <data name="plPageQuota.Text" xml:space="preserve">
     <value>Page Quota:</value>
   </data>
   <data name="plUserQuota.Help" xml:space="preserve">
-    <value>You can specify a maximum number of users per portal.</value>
+    <value>You can specify a maximum number of users per website.</value>
   </data>
   <data name="plUserQuota.Text" xml:space="preserve">
     <value>User Quota:</value>
@@ -802,7 +805,7 @@
     <value>Email Address is invalid</value>
   </data>
   <data name="JQuery.Text" xml:space="preserve">
-    <value>JQuery Settings</value>
+    <value>jQuery Settings</value>
   </data>
   <data name="plProduct.Text" xml:space="preserve">
     <value>DotNetNuke Product:</value>
@@ -826,7 +829,7 @@
     <value>Rethrow CBO Exceptions:</value>
   </data>
   <data name="plPsWarning.Text" xml:space="preserve">
-    <value>** Warning: Memory page state persistence can cause Ajax issues **</value>
+    <value>Warning: Memory page state persistence can cause Ajax issues</value>
   </data>
   <data name="ModuleCacheProvider.Help" xml:space="preserve">
     <value>Select the default module caching provider.  This setting can be overridden by each individual module.</value>
@@ -835,15 +838,138 @@
     <value>Module Cache Provider</value>
   </data>
   <data name="plContentLocalization.Help" xml:space="preserve">
-    <value>Check this to enable passing the users current culture allowing for dynamic portal and content localization</value>
+    <value>Check this to enable passing the users current culture allowing for dynamic website and content localization</value>
   </data>
   <data name="plContentLocalization.Text" xml:space="preserve">
-    <value>Enable Content Localization?</value>
+    <value>Allow Content Localization?</value>
   </data>
   <data name="PageCacheProvider.Help" xml:space="preserve">
     <value>Select the default Page Caching Provider.  The caching provider must be enabled by setting the cache timeout on each page.</value>
   </data>
   <data name="PageCacheProvider.Text" xml:space="preserve">
     <value>Page Output Cache Provider</value>
+  </data>
+  <data name="plUseCustomModuleCssClass.Help" xml:space="preserve">
+    <value>Check this option to enable a custom css class based on the module definition to be rendered.  This can be used by skin designers to apply specific css styles to specific module types.</value>
+  </data>
+  <data name="plUseCustomModuleCssClass.Text" xml:space="preserve">
+    <value>Use Custom Module Css Class?</value>
+  </data>
+  <data name="plEnableContentLocalization.Help" xml:space="preserve">
+    <value>Check this box to allow site administrators to enable content localization for their site.</value>
+  </data>
+  <data name="plEnableContentLocalization.Text" xml:space="preserve">
+    <value>Allow Content Localization?</value>
+  </data>
+  <data name="SkinPreview.Text" xml:space="preserve">
+    <value>Preview Host Skin and Container</value>
+  </data>
+  <data name="EditSkinPreview.Text" xml:space="preserve">
+    <value>Preview Edit Skin and Container</value>
+  </data>
+  <data name="plJQueryUIHostUrl.Help" xml:space="preserve">
+    <value>This is the full URL for the jQuery UI script.  By default this is set to the latest jQuery UI minified script hosted on Google's CDN servers for optimum performance.</value>
+  </data>
+  <data name="plJQueryUIHostUrl.Text" xml:space="preserve">
+    <value>Hosted jQuery UI URL:</value>
+  </data>
+  <data name="plJQueryUIVersion.Help" xml:space="preserve">
+    <value>Identifies the version string embedded in the local jQuery UI script.</value>
+  </data>
+  <data name="plJQueryUIVersion.Text" xml:space="preserve">
+    <value>Installed jQuery UI Version</value>
+  </data>
+  <data name="PreviewNoSelectionMessage.Text" xml:space="preserve">
+    <value>Please select a skin and/or container to preview.</value>
+  </data>
+  <data name="DeprecateGzip.Text" xml:space="preserve">
+    <value>DotNetNuke's GZip compression is getting deprecated and removed in 6.2.0. We recommend using IIS compression to increase performance on your server.</value>
+  </data>
+  <data name="ClientResourceManagement.Text" xml:space="preserve">
+    <value>Client Resource Management</value>
+  </data>
+  <data name="plCrmVersion.Help" xml:space="preserve">
+    <value>To manage browser caching, client resources are assigned a version number. This number is increased when an extension is installed, portal.css is updated, or when the server cache is cleared.  It applies to any processed file (combined and/or minified).  You can manually increase the number below to force browsers to download new copies of the resource files.</value>
+  </data>
+  <data name="plCrmVersion.Text" xml:space="preserve">
+    <value>Current Host Version</value>
+  </data>
+  <data name="plCrmEnableCompositeFiles.Help" xml:space="preserve">
+    <value>Composite files are combinations of resources (JavaScript and CSS) created to reduce the number of file requests by the browser. This will significantly increase the page loading speed.</value>
+  </data>
+  <data name="plCrmEnableCompositeFiles.Text" xml:space="preserve">
+    <value>Enable Composite Files</value>
+  </data>
+  <data name="plCrmMinifyCss.Help" xml:space="preserve">
+    <value>CSS minification will reduce the size of the CSS code by using regular expressions to remove comments, whitespace and "dead css".  It is only available when composite files are enabled.</value>
+  </data>
+  <data name="plCrmMinifyCss.Text" xml:space="preserve">
+    <value>Minify CSS</value>
+  </data>
+  <data name="plCrmMinifyJs.Help" xml:space="preserve">
+    <value>JS minification will reduce the size of the JavaScript code using JSMin. It is only available when composite files are enabled.</value>
+  </data>
+  <data name="plCrmMinifyJs.Text" xml:space="preserve">
+    <value>Minify JS</value>
+  </data>
+  <data name="CrmIncrementCrmVersionButton.Text" xml:space="preserve">
+    <value>Increment Version</value>
+  </data>
+  <data name="IncrementCrmVersionButton.Text" xml:space="preserve">
+    <value>Increment Site Version</value>
+  </data>
+  <data name="IncrementCrmVersionConfirm.Text" xml:space="preserve">
+    <value>&lt;p&gt;This action will force all site visitors to download new versions of CSS and JavaScript files. You should only do this if you are certain that the files have changed and you want those changes to be reflected on the client's browser.&lt;/p&gt;&lt;p&gt;Are you sure you want to increment the version number for your site?&lt;/p&gt;</value>
+  </data>
+  <data name="IncrementCrmVersionError.Text" xml:space="preserve">
+    <value>There was an error incrementing the Client Resource version.</value>
+  </data>
+  <data name="DebugEnabled.Text" xml:space="preserve">
+    <value>Debug mode is currently enabled at the application level (this is specified in the web.config file). This means that files will not be combined, even if file combining is enabled here or at the host level.</value>
+  </data>
+  <data name="DebugEnabled.Title" xml:space="preserve">
+    <value>Important note regarding application debug mode</value>
+  </data>
+  <data name="MinificationSettingsInfo.Text" xml:space="preserve">
+    <value>If minification settings are changed when composite files are enabled, you must first save the minification settings by clicking Update and then increment the version number. This will issue new composite files using the new minification settings.</value>
+  </data>
+  <data name="MinificationSettingsInfo.Title" xml:space="preserve">
+    <value>Important note regarding minification settings</value>
+  </data>
+  <data name="txtBatch.Text" xml:space="preserve">
+    <value>Number of messages sent in each batch:</value>
+  </data>
+  <data name="txtBatch.Help" xml:space="preserve">
+    <value>The number of messages sent by the messaging scheduler in each batch.</value>
+  </data>
+  <data name="SmtpServerWarning.Text" xml:space="preserve">
+    <value>You are trying to use a custom SMTP port with your install instance running under medium trust, you need to contact your host provider to make sure this setting can work correctly on the server.</value>
+  </data>
+  <data name="LogSettings.Text" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="LogSettingsHelp.Text" xml:space="preserve">
+    <value>View install and other logs</value>
+  </data>
+  <data name="Html5Doctype.Text" xml:space="preserve">
+    <value>HTML 5</value>
+  </data>
+  <data name="LogLocations.Text" xml:space="preserve">
+    <value>Log locations</value>
+  </data>
+  <data name="plLogs.Text" xml:space="preserve">
+    <value>Log files</value>
+  </data>
+  <data name="plLogs.Help" xml:space="preserve">
+    <value>List of log files available to view</value>
+  </data>
+  <data name="SelectLog.Text" xml:space="preserve">
+    <value>Please select a log file to view</value>
+  </data>
+  <data name="plBatch.Help" xml:space="preserve">
+    <value>The number of messages sent by the messaging scheduler in each batch.</value>
+  </data>
+  <data name="plBatch.Text" xml:space="preserve">
+    <value>Number of messages sent in each batch:</value>
   </data>
 </root>

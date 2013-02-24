@@ -168,4 +168,13 @@
   <data name="Name.Header" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="History.Text" xml:space="preserve">
+    <value>View History</value>
+  </data>
+  <data name="Status.Text" xml:space="preserve">
+    <value>View Status</value>
+  </data>
+  <data name="ViewLog.Header" xml:space="preserve">
+    <value>Log</value>
+  </data>
 </root>

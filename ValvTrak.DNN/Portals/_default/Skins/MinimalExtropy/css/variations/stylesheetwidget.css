@@ -1,5 +1,5 @@
 /* Widget style -------*/
-.Widgets{float:right;width:25%;margin-right:25px;}
+.Widgets{float:right;padding:7px 25px 0 0}
 .Widgets input{border:none;}
 #SizeWidget, #TextSizeWidget{float:right;margin-right:10px;}
 #TextSizeWidget_smalltext, #TextSizeWidget_mediumtext, #TextSizeWidget_largetext, #SizeWidget_width1024, #SizeWidget_width1280, #SizeWidget_widthfull

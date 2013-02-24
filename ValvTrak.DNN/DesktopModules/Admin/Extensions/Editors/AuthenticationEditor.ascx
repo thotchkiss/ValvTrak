@@ -1,32 +1,32 @@
-<%@ Control language="vb" CodeFile="AuthenticationEditor.ascx.vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Authentication.AuthenticationEditor" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Extensions.AuthenticationEditor" CodeFile="AuthenticationEditor.ascx.cs" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke.WebControls" Namespace="DotNetNuke.UI.WebControls"%>
-<asp:Label ID="lblTitle" runat="server" cssClass="SubHead" resourcekey="Title" />
-<br />
-<asp:Label ID="lblHelp" runat="server" cssClass="Normal" />
-<br /><br />
-<dnn:propertyeditorcontrol id="ctlAuthentication" runat="Server"
-    AutoGenerate="false"
-    SortMode="SortOrderAttribute"
-    editcontrolstyle-cssclass="NormalTextBox" 
-    editcontrolwidth="400px" 
-    ErrorStyle-cssclass="NormalRed"
-    helpstyle-cssclass="Help" 
-    labelstyle-cssclass="SubHead" 
-    labelwidth="175px" 
-    width="575px">
-    <Fields>
-        <dnn:FieldEditorControl ID="fldType" runat="server" DataField="AuthenticationType" />
-        <dnn:FieldEditorControl ID="fldLoginControlSrc" runat="server" DataField="LoginControlSrc" EditControlStyle-Width="375px"  />
-        <dnn:FieldEditorControl ID="fldLogoffControlSrc" runat="server" DataField="LogoffControlSrc" EditControlStyle-Width="375px" />
-        <dnn:FieldEditorControl ID="fldSettingsControlSrc" runat="server" DataField="SettingsControlSrc" EditControlStyle-Width="375px" />
-        <dnn:FieldEditorControl ID="fldIsEnabled" runat="server" DataField="IsEnabled" />
-    </Fields>
-</dnn:propertyeditorcontrol>
-<asp:Panel ID="pnlSettings" runat="server" Visible="false">
-    <p style="text-align:center">
-        <dnn:commandbutton id="cmdUpdate" text="Update" runat="server" class="CommandButton" ImageUrl="~/images/save.gif"  ResourceKey="cmdUpdate" />
-    </p>
-</asp:Panel>
-
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<h2 class="dnnFormSectionHead"><a href="" class="dnnLabelExpanded"><%=LocalizeString("AuthenticationSettings")%></a></h2>
+<fieldset>
+    <div class="dnnFormMessage dnnFormInfo"><asp:Label ID="lblHelp" runat="server" /></div>
+    <dnn:DnnFormEditor id="authenticationForm" runat="Server" FormMode="Short">
+        <Items>
+            <dnn:DnnFormTextBoxItem ID="authenticationType" runat="server" DataField = "AuthenticationType" />
+            <dnn:DnnFormTextBoxItem ID="loginControlSrc" runat="server" DataField = "LoginControlSrc" />
+            <dnn:DnnFormTextBoxItem ID="logoffControlSrc" runat="server" DataField = "LogoffControlSrc"  />
+            <dnn:DnnFormTextBoxItem ID="settingsControlSrc" runat="server" DataField = "SettingsControlSrc" />
+            <dnn:DnnFormToggleButtonItem ID="isEnabled" runat="server" DataField = "IsEnabled"/>
+        </Items>
+    </dnn:DnnFormEditor>
+    <dnn:DnnFormEditor id="authenticationFormReadOnly" runat="Server" FormMode="Short">
+        <Items>
+            <dnn:DnnFormLiteralItem ID="DnnFormTextBoxItem1" runat="server" DataField = "AuthenticationType" />
+            <dnn:DnnFormLiteralItem ID="DnnFormTextBoxItem2" runat="server" DataField = "LoginControlSrc" />
+            <dnn:DnnFormLiteralItem ID="DnnFormTextBoxItem3" runat="server" DataField = "LogoffControlSrc"  />
+            <dnn:DnnFormLiteralItem ID="DnnFormTextBoxItem4" runat="server" DataField = "SettingsControlSrc" />
+            <dnn:DnnFormLiteralItem ID="DnnFormToggleButtonItem1" runat="server" DataField = "IsEnabled"/>
+        </Items>
+    </dnn:DnnFormEditor>
+    <asp:Panel ID="pnlSettings" runat="server" Visible="false" CssClass="dnnAuthenticationSettings">
+        <ul class="dnnActions dnnClear">
+    	    <li><asp:LinkButton id="cmdUpdate" runat="server" CssClass="dnnPrimaryAction" resourcekey="cmdUpdate" /></li>
+        </ul>
+    </asp:Panel>
+</fieldset>

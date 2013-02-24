@@ -1,82 +1,94 @@
-<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
+<%@ Control Inherits="DesktopModules.Admin.Security.Roles" Language="C#" AutoEventWireup="false" CodeFile="Roles.ascx.cs" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<%@ Control Inherits="DotNetNuke.Modules.Admin.Security.Roles" CodeFile="Roles.ascx.vb" language="vb" AutoEventWireup="false" Explicit="True" %>
-<table align="left" cellpadding="0" cellspacing="0" border="0" width="100%">
-	<tr id="trGroups" runat="server">
-		<td width="*">&nbsp;</td>
-		<td width="150" class="SubHead"><dnn:label id="plRoleGroups" runat="server" suffix="" controlname="cboRoleGroups" /></td>
-		<td width="200" class="Normal">
-			<asp:dropdownlist id="cboRoleGroups" Runat="server" AutoPostBack="True" />
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<div class="dnnForm dnnSecurityRoles">
+    <div runat="server" id="divGroups">
+        <div class="dnnFormItem">
+            <dnn:label id="plRoleGroups" runat="server" suffix="" controlname="cboRoleGroups" />
+            <%--<asp:dropdownlist id="cboRoleGroups" Runat="server" AutoPostBack="True" />--%>
+            <dnn:DnnComboBox id="cboRoleGroups" Runat="server" AutoPostBack="True" />
 			<asp:hyperlink ID="lnkEditGroup" runat="server">
-				<asp:image ID="imgEditGroup" ImageUrl="~/images/edit.gif" AlternateText="Edit" runat="server" resourcekey="Edit"/>
+				<dnn:dnnImage ID="imgEditGroup" IconKey="Edit" AlternateText="Edit" runat="server" resourcekey="Edit" />
 			</asp:hyperlink>
-			<asp:imagebutton ID="cmdDelete" Runat="server" ImageUrl="~/images/delete.gif" />
-		</td>
-		<td width="*">&nbsp;</td>
-	</tr>
-	<tr height="20">
-	    <td colspan="4"></td>
-	</tr>
-	<tr>
-		<td colspan="4">
-			<asp:datagrid id="grdRoles" Border="0" CellPadding="0" CellSpacing="0" Width="98%" 
-				AutoGenerateColumns="false" EnableViewState="false" runat="server" 
-				summary="Roles Design Table" BorderStyle="None" BorderWidth="0px"
-				GridLines="None">
-				<headerstyle cssclass="NormalBold" verticalalign="Top"/>
-				<itemstyle cssclass="Normal" horizontalalign="Left" />
-				<alternatingitemstyle cssclass="Normal" />
-				<edititemstyle cssclass="NormalTextBox" />
-				<selecteditemstyle cssclass="NormalRed" />
-				<footerstyle cssclass="DataGrid_Footer" />
-				<pagerstyle cssclass="DataGrid_Pager" />
-				<columns>
-					<dnn:imagecommandcolumn commandname="Edit" imageurl="~/images/edit.gif" editmode="URL" keyfield="RoleID" />
-					<dnn:imagecommandcolumn commandname="UserRoles" imageurl="~/images/icon_users_16px.gif" editmode="URL" keyfield="RoleID" />
-					<asp:boundcolumn DataField="RoleName" HeaderText="Name">
-					</asp:boundcolumn>
-					<asp:boundcolumn DataField="Description" HeaderText="Description">
-					</asp:boundcolumn>
-					<asp:templatecolumn HeaderText="Fee">
-						<itemtemplate>
-							<asp:label runat="server" Text='<%#FormatPrice(DataBinder.Eval(Container.DataItem, "ServiceFee")) %>' CssClass="Normal" ID="Label1"/>
-						</ItemTemplate>
-					</asp:templatecolumn>
-					<asp:templatecolumn HeaderText="Every">
-						<itemtemplate>
-							<asp:label runat="server" Text='<%#FormatPeriod(DataBinder.Eval(Container.DataItem, "BillingPeriod")) %>' CssClass="Normal" ID="Label2"/>
-						</ItemTemplate>
-					</asp:templatecolumn>
-					<asp:boundcolumn DataField="BillingFrequency" HeaderText="Period">
-						<itemstyle cssclass="Normal"></ItemStyle>
-					</asp:boundcolumn>
-					<asp:templatecolumn HeaderText="Trial">
-						<itemtemplate>
-							<asp:label runat="server" Text='<%#FormatPrice(DataBinder.Eval(Container.DataItem, "TrialFee")) %>' CssClass="Normal" ID="Label3"/>
-						</ItemTemplate>
-					</asp:templatecolumn>
-					<asp:templatecolumn HeaderText="Every">
-						<itemtemplate>
-							<asp:label runat="server" Text='<%#FormatPeriod(DataBinder.Eval(Container.DataItem, "TrialPeriod")) %>' CssClass="Normal" ID="Label4"/>
-						</ItemTemplate>
-					</asp:templatecolumn>
-					<asp:boundcolumn DataField="TrialFrequency" HeaderText="Period">
-						<itemstyle cssclass="Normal"></ItemStyle>
-					</asp:boundcolumn>
-					<asp:templatecolumn HeaderText="Public">
-						<itemtemplate>
-							<asp:image Runat="server" ID="imgApproved" ImageUrl="~/images/checked.gif" Visible='<%# DataBinder.Eval(Container.DataItem,"IsPublic")="true" %>'/>
-							<asp:image Runat="server" ID="imgNotApproved" ImageUrl="~/images/unchecked.gif" Visible='<%# DataBinder.Eval(Container.DataItem,"IsPublic")="false" %>'/>
-						</ItemTemplate>
-					</asp:templatecolumn>
-					<asp:templatecolumn HeaderText="Auto">
-						<itemtemplate>
-							<asp:image Runat="server" ID="Image1" ImageUrl="~/images/checked.gif" Visible='<%# DataBinder.Eval(Container.DataItem,"AutoAssignment")="true" %>'/>
-							<asp:image Runat="server" ID="Image2" ImageUrl="~/images/unchecked.gif" Visible='<%# DataBinder.Eval(Container.DataItem,"AutoAssignment")="false" %>'/>
-						</ItemTemplate>
-					</asp:templatecolumn>
-				</Columns>
-			</asp:datagrid>
-		</td>
-	</tr>
-</table>
+			<dnn:DnnImagebutton ID="cmdDelete" Runat="server" IconKey="Delete" />
+        </div>
+    </div>
+	<dnn:DnnGrid id="grdRoles" AutoGenerateColumns="false" EnableViewState="false" runat="server" CssClass="dnnGrid">
+	    <MasterTableView>
+		    <Columns>
+			    <dnn:DnnGridImageCommandColumn commandname="Edit" IconKey="Edit" editmode="URL" keyfield="RoleID" UniqueName="EditButton" />
+			    <dnn:DnnGridImageCommandColumn commandname="UserRoles" IconKey="Users" editmode="URL" keyfield="RoleID" UniqueName="RolesButton" />
+		        <dnn:DnnGridBoundColumn DataField="RoleName" HeaderText="Name" />
+		        <dnn:DnnGridBoundColumn DataField="Description" HeaderText="Description" />
+			    <dnn:DnnGridTemplateColumn HeaderText="Fee">
+				    <ItemTemplate>
+					    <asp:label runat="server" Text='<%#FormatPrice((float)DataBinder.Eval(Container.DataItem, "ServiceFee")) %>' ID="Label1" />
+				    </ItemTemplate>
+			    </dnn:DnnGridTemplateColumn>
+			    <dnn:DnnGridTemplateColumn HeaderText="Every">
+				    <ItemTemplate>
+					    <asp:label runat="server" Text='<%#FormatPeriod((int)DataBinder.Eval(Container.DataItem, "BillingPeriod")) %>' ID="Label2" />
+				    </ItemTemplate>
+			    </dnn:DnnGridTemplateColumn>
+			    <dnn:DnnGridTemplateColumn HeaderText="Period">
+				    <ItemTemplate>
+					    <asp:label runat="server" Text='<%#FormatFrequency((string) DataBinder.Eval(Container.DataItem, "BillingFrequency")) %>' ID="lblBillingFrequency" />
+				    </ItemTemplate>
+			    </dnn:DnnGridTemplateColumn>
+			    <dnn:DnnGridTemplateColumn HeaderText="Trial">
+				    <ItemTemplate>
+					    <asp:label runat="server" Text='<%#FormatPrice((float)DataBinder.Eval(Container.DataItem, "TrialFee")) %>' ID="Label3" />
+				    </ItemTemplate>
+			    </dnn:DnnGridTemplateColumn>
+			    <dnn:DnnGridTemplateColumn HeaderText="Every">
+				    <ItemTemplate>
+					    <asp:label runat="server" Text='<%#FormatPeriod((int)DataBinder.Eval(Container.DataItem, "TrialPeriod")) %>' ID="Label4" />
+				    </ItemTemplate>
+			    </dnn:DnnGridTemplateColumn>
+			    <dnn:DnnGridTemplateColumn HeaderText="Period">
+				    <ItemTemplate>
+					    <asp:label runat="server" Text='<%#FormatFrequency((string) DataBinder.Eval(Container.DataItem, "TrialFrequency")) %>' ID="lblTrialFrequency" />
+				    </ItemTemplate>
+			    </dnn:DnnGridTemplateColumn>
+			    <dnn:DnnGridTemplateColumn HeaderText="Public" ItemStyle-HorizontalAlign="Center">
+				    <ItemTemplate>
+					    <dnn:DnnImage Runat="server" ID="imgApproved" IconKey="Checked" Visible='<%# DataBinder.Eval(Container.DataItem,"IsPublic") %>' />
+					    <dnn:DnnImage Runat="server" ID="imgNotApproved" IconKey="Unchecked" Visible='<%# !(bool)DataBinder.Eval(Container.DataItem,"IsPublic")%>' />
+				    </ItemTemplate>
+			    </dnn:DnnGridTemplateColumn>
+			    <dnn:DnnGridTemplateColumn HeaderText="Auto" ItemStyle-HorizontalAlign="Center">
+				    <ItemTemplate>
+					    <dnn:Dnnimage Runat="server" ID="Image1" IconKey="Checked" Visible='<%# DataBinder.Eval(Container.DataItem,"AutoAssignment") %>' />
+					    <dnn:Dnnimage Runat="server" ID="Image2" IconKey="Unchecked" Visible='<%# !(bool)DataBinder.Eval(Container.DataItem,"AutoAssignment") %>' />
+				    </ItemTemplate>
+			    </dnn:DnnGridTemplateColumn>
+		        <dnn:DnnGridBoundColumn DataField="UserCount" HeaderText="UserCount" ItemStyle-HorizontalAlign="Center" />
+		    </Columns>
+        </MasterTableView>
+	</dnn:DnnGrid>
+    <ul class="dnnActions dnnClear">
+		<li><asp:LinkButton id="cmdAddRole" runat="server" CssClass="dnnPrimaryAction" resourcekey="AddContent.Action"  /></li>
+		<li><asp:LinkButton id="cmdAddRoleGroup" runat="server" CssClass="dnnSecondaryAction" resourcekey="AddGroup.Action" /></li>
+	</ul>
+
+</div>
+<script language="javascript" type="text/javascript">
+/*globals jQuery, window, Sys */
+(function ($, Sys) {
+    function setupDnnRoles() {
+        $('#<%= cmdDelete.ClientID %>').dnnConfirm({
+            text: '<%= DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(LocalizeString("DeleteItem")) %>',
+            yesText: '<%= Localization.GetSafeJSString("Yes.Text", Localization.SharedResourceFile) %>',
+            noText: '<%= Localization.GetSafeJSString("No.Text", Localization.SharedResourceFile) %>',
+            title: '<%= Localization.GetSafeJSString("Confirm.Text", Localization.SharedResourceFile) %>'
+        });
+    }
+
+    $(document).ready(function () {
+        setupDnnRoles();
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+        	setupDnnRoles();
+        });
+    });
+} (jQuery, window.Sys));
+</script>

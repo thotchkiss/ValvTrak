@@ -163,7 +163,7 @@
     <value>Visible:</value>
   </data>
   <data name="ProfilePropertyDefinition_Visible.Help" xml:space="preserve">
-    <value>You can optionally display properties to the user.</value>
+    <value>If left unchecked this property will only be visible to Administrators - the user will not be able to view or edit the property.</value>
   </data>
   <data name="ProfilePropertyDefinition_Required.Text" xml:space="preserve">
     <value>Required:</value>
@@ -210,9 +210,6 @@
   <data name="plPropertyName.Text" xml:space="preserve">
     <value>Property Name:</value>
   </data>
-  <data name="cmdSaveKeys.Text" xml:space="preserve">
-    <value>Save Localized Text</value>
-  </data>
   <data name="cmdCreate.Text" xml:space="preserve">
     <value>Create New Property</value>
   </data>
@@ -232,13 +229,13 @@
     <value>Manage List Entries</value>
   </data>
   <data name="Introduction_Add.Help" xml:space="preserve">
-    <value>The first step in setting up a Profile Property Definition is to define the property's details.  Enter the details in this page and click "Next" to create the Property Definition.   &lt;b&gt;Note:&lt;/b&gt; All fields marked with a red arrow are required.</value>
+    <value>The first step in setting up a Profile Property Definition is to define the property's details.  Enter the details in this page and click "Next" to create the Property Definition.   &lt;b&gt;Note:&lt;/b&gt; All fields marked with a red asterisk are required.</value>
   </data>
   <data name="Introduction_Add.Title" xml:space="preserve">
     <value>Add New Property Details</value>
   </data>
   <data name="Localization.Help" xml:space="preserve">
-    <value>The next step is to manage the localization of this property.  Select the language you wish to update, add text or modify the existing text and click "Save Localized Text"</value>
+    <value>The next step is to manage the localization of this property.  Select the language you wish to update, add text or modify the existing text and click "Update"</value>
   </data>
   <data name="Localization.Title" xml:space="preserve">
     <value>Manage Localization</value>
@@ -266,5 +263,26 @@
   </data>
   <data name="AddProperty.Text" xml:space="preserve">
     <value>Add Profile Property Definition</value>
+  </data>
+  <data name="ProfilePropertyDefinition_DefaultVisibility.Help" xml:space="preserve">
+    <value>You can set the default visibility of the profile property.  This is the initial value of the visibility and applies if the user does not modify it, when editing their profile.</value>
+  </data>
+  <data name="ProfilePropertyDefinition_DefaultVisibility.Text" xml:space="preserve">
+    <value>Default Visibility:</value>
+  </data>
+  <data name="ProfilePropertyDefinition_ReadOnly.Help" xml:space="preserve">
+    <value>You can make a profile property read only.  A read-onlly property can be edited by the admin and is readon-only to the end-user.</value>
+  </data>
+  <data name="ProfilePropertyDefinition_ReadOnly.Text" xml:space="preserve">
+    <value>Read Only:</value>
+  </data>
+  <data name="Cancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Return.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="valPropertyName.ErrorMessage" xml:space="preserve">
+    <value>You need enter a name for this property.</value>
   </data>
 </root>

@@ -1,1 +1,1 @@
-<%@ Control Language="vb" AutoEventWireup="false" Inherits="DotNetNuke.UI.Containers.ActionButton"%>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.UI.Containers.ActionButton"%>

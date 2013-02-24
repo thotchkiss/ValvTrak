@@ -1,33 +1,27 @@
-<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Languages.EditLanguage" CodeFile="EditLanguage.ascx.vb" %>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Languages.EditLanguage" CodeFile="EditLanguage.ascx.cs" %>
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls" %>
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<table cellspacing="0" cellpadding="0" border="0">
-    <tr id="trCoreLanguage" runat="server">
-        <td colspan="2">
-            <dnn:propertyeditorcontrol id="ctlLanguage" runat="Server"
-                AutoGenerate="false"
-                SortMode="SortOrderAttribute"
-                editcontrolstyle-cssclass="NormalTextBox" 
-                editcontrolwidth="325px" 
-                ErrorStyle-cssclass="NormalRed"
-                helpstyle-cssclass="Help" 
-                labelstyle-cssclass="SubHead" 
-                labelwidth="150px" 
-                width="475px">
-                <Fields>
-                    <dnn:FieldEditorControl ID="fldCode" runat="server" DataField="Code" EditControlStyle-Width="300px" LabelMode="Top" EditorTypeName="DotNetNuke.UI.WebControls.DNNLocaleEditControl" />
-                    <dnn:FieldEditorControl ID="fldFallback" runat="server" DataField="Fallback" EditControlStyle-Width="300px" LabelMode="Top" EditorTypeName="DotNetNuke.UI.WebControls.DNNLocaleEditControl" />
-                </Fields>
-            </dnn:propertyeditorcontrol>
-        </td>
-    </tr>
-    <tr>
-        <td class="SubHead" style="width:200px"><dnn:Label ID="plEnabled" runat="server" ControlName="chkEnabled" /></td>
-        <td class="NormalTextBox" style="width:325px"><asp:CheckBox ID="chkEnabled" runat="server" /></td>
-    </tr>
-</table>
-<p style="text-align:center">
-    <dnn:commandbutton id="cmdUpdate" runat="server" class="CommandButton" ImageUrl="~/images/save.gif"  ResourceKey="cmdUpdate" />
-    <dnn:commandbutton id="cmdDelete" runat="server" class="CommandButton" ImageUrl="~/images/delete.gif"  ResourceKey="cmdDelete" />
-    <dnn:commandbutton id="cmdCancel" runat="server" class="CommandButton" ImageUrl="~/images/lt.gif"  ResourceKey="cmdCancel" />
-</p>
+<div class="dnnForm dnnLanguages dnnClear" id="dnnLanguages">
+    <fieldset>
+        <div class="dnnFormItem">
+            <dnn:Label ID="languageLabel" runat="server" ControlName="languageComboBox" />
+            <dnn:DnnLanguageLabel ID="languageLanguageLabel" runat="server"  />
+            <dnn:DnnLanguageComboBox ID="languageComboBox" runat="server" LanguagesListType="All" cssClass="dnnLanguageCombo" ShowModeButtons="false" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:Label ID="fallBackLabel" runat="server" ControlName="fallBackComboBox" />
+            <dnn:DnnLanguageLabel ID="fallbackLanguageLabel" runat="server"  />
+            <dnn:DnnLanguageComboBox ID="fallBackComboBox" runat="server" LanguagesListType="Supported" cssClass="dnnLanguageCombo" />
+        </div>
+        <div id="translatorsRow" runat="server" class="dnnFormItem">
+            <dnn:Label ID="translatorsLabel" runat="server" ControlName="translatorRoles" />
+            <dnn:RolesSelectionGrid  runat="server" ID="translatorRoles" />
+        </div>
+    </fieldset>
+    <ul class="dnnActions dnnClear">
+    	<li><asp:LinkButton id="cmdUpdate" runat="server" CssClass="dnnPrimaryAction" resourcekey="cmdUpdate"/></li>
+    	<li><asp:LinkButton id="cmdDelete" runat="server" CssClass="dnnSecondaryAction" ResourceKey="cmdDelete"/></li>
+    	<li><asp:LinkButton id="cmdCancel" runat="server" CssClass="dnnSecondaryAction" ResourceKey="cmdCancel" /></li>
+    </ul>
+</div>

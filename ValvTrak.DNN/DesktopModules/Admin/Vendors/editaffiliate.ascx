@@ -1,53 +1,55 @@
 <%@ Register TagPrefix="dnn" TagName="Label" Src="~/controls/LabelControl.ascx" %>
-<%@ Control language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Vendors.EditAffiliate" CodeFile="EditAffiliate.ascx.vb" %>
-<table cellspacing="2" cellpadding="0" width="560">
-	<tr>
-		<td class="SubHead" width="200"><dnn:label id="plStartDate" runat="server" controlname="txtStartDate" suffix=":"></dnn:label></td>
-		<td width="325">
-			<asp:textbox id="txtStartDate" runat="server" cssclass="NormalTextBox" width="120" columns="30"
-				maxlength="11"></asp:textbox>&nbsp;
-			<asp:hyperlink id="cmdStartCalendar" resourcekey="Calendar" cssclass="CommandButton" runat="server">Calendar</asp:hyperlink>
-		</td>
-	</tr>
-	<tr>
-		<td class="SubHead" width="200"><dnn:label id="plEndDate" runat="server" controlname="txtEndDate" suffix=":"></dnn:label></td>
-		<td width="325">
-			<asp:textbox id="txtEndDate" runat="server" cssclass="NormalTextBox" width="120" columns="30"
-				maxlength="11"></asp:textbox>&nbsp;
-			<asp:hyperlink id="cmdEndCalendar" resourcekey="Calendar" cssclass="CommandButton" runat="server">Calendar</asp:hyperlink>
-		</td>
-	</tr>
-	<tr>
-		<td class="SubHead" width="200"><dnn:label id="plCPC" runat="server" controlname="txtCPC" suffix=":"></dnn:label></td>
-		<td width="325">
-			<asp:textbox id="txtCPC" runat="server" maxlength="7" columns="30" width="100" cssclass="NormalTextBox"></asp:textbox>
-			<asp:requiredfieldvalidator id="valCPC1" resourcekey="CPC.ErrorMessage" runat="server" controltovalidate="txtCPC"
-				errormessage="You Must Enter a Valid CPC" display="Dynamic" cssclass="NormalRed"></asp:requiredfieldvalidator>
-			<asp:comparevalidator id="valCPC2" resourcekey="CPC.ErrorMessage" runat="server" controltovalidate="txtCPC"
-				errormessage="You Must Enter a Valid CPC" display="Dynamic" type="Double" operator="DataTypeCheck"
-				cssclass="NormalRed"></asp:comparevalidator>
-		</td>
-	</tr>
-	<tr>
-		<td class="SubHead" width="200"><dnn:label id="plCPA" runat="server" controlname="txtCPA" suffix=":"></dnn:label></td>
-		<td width="325">
-			<asp:textbox id="txtCPA" runat="server" maxlength="7" columns="30" width="100" cssclass="NormalTextBox"></asp:textbox>
-			<asp:requiredfieldvalidator id="valCPA1" resourcekey="CPA.ErrorMessage" runat="server" controltovalidate="txtCPA"
-				errormessage="You Must Enter a Valid CPA" display="Dynamic" cssclass="NormalRed"></asp:requiredfieldvalidator>
-			<asp:comparevalidator id="valCPA2" resourcekey="CPA.ErrorMessage" runat="server" controltovalidate="txtCPA"
-				errormessage="You Must Enter a Valid CPA" display="Dynamic" type="Double" operator="DataTypeCheck"
-				cssclass="NormalRed"></asp:comparevalidator>
-		</td>
-	</tr>
-</table>
-<asp:label id="lblOptional" resourcekey="Optional" class="SubHead" runat="server">* = Optional</asp:label>
-<p>
-	<asp:linkbutton class="CommandButton" id="cmdUpdate" resourcekey="cmdUpdate" runat="server" text="Update"
-		borderstyle="none"></asp:linkbutton>&nbsp;
-	<asp:linkbutton class="CommandButton" id="cmdCancel" resourcekey="cmdCancel" runat="server" text="Cancel"
-		borderstyle="none" causesvalidation="False"></asp:linkbutton>&nbsp;
-	<asp:linkbutton class="CommandButton" id="cmdDelete" resourcekey="cmdDelete" runat="server" text="Delete"
-		borderstyle="none" causesvalidation="False"></asp:linkbutton>
-	<asp:linkbutton class="CommandButton" id="cmdSend" resourcekey="cmdSend" runat="server" text="Send Notification"
-		borderstyle="none" causesvalidation="False"></asp:linkbutton>
-</p>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Vendors.EditAffiliate" CodeFile="EditAffiliate.ascx.cs" %>
+<%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.UI.WebControls" Assembly="DotNetNuke.Web" %>
+<div class="dnnForm dnnEditAffiliate dnnClear" id="dnnEditAffiliate">
+    <fieldset>        
+        <div class="dnnFormItem">
+            <dnn:label id="plStartDate" runat="server" controlname="txtStartDate" />
+            <dnn:DnnDatePicker ID="StartDatePicker" runat="server" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:label id="plEndDate" runat="server" controlname="txtEndDate" />
+			<dnn:DnnDatePicker ID="EndDatePicker" runat="server" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:label id="plCPC" runat="server" controlname="txtCPC" cssclass="dnnFormRequired" />
+			<asp:textbox id="txtCPC" runat="server" maxlength="7" columns="30"  />
+			<asp:requiredfieldvalidator id="valCPC1" resourcekey="CPC.ErrorMessage" runat="server" controltovalidate="txtCPC" display="Dynamic" cssclass="dnnFormMessage dnnFormError" />
+			<asp:comparevalidator id="valCPC2" resourcekey="CPC.ErrorMessage" runat="server" controltovalidate="txtCPC" display="Dynamic" type="Double" operator="DataTypeCheck" cssclass="dnnFormMessage dnnFormError" />
+        </div>
+        <div class="dnnFormItem">
+            <dnn:label id="plCPA" runat="server" controlname="txtCPA" cssclass="dnnFormRequired" />
+			<asp:textbox id="txtCPA" runat="server" maxlength="7" columns="30"  />
+			<asp:requiredfieldvalidator id="valCPA1" resourcekey="CPA.ErrorMessage" runat="server" controltovalidate="txtCPA" display="Dynamic" cssclass="dnnFormMessage dnnFormError" />
+			<asp:comparevalidator id="valCPA2" resourcekey="CPA.ErrorMessage" runat="server" controltovalidate="txtCPA" display="Dynamic" type="Double" operator="DataTypeCheck" cssclass="dnnFormMessage dnnFormError" />
+        </div>
+    </fieldset>
+    <ul class="dnnActions dnnClear">
+    	<li><asp:LinkButton id="cmdUpdate" runat="server" CssClass="dnnPrimaryAction" resourcekey="cmdUpdate" /></li>
+        <li><asp:LinkButton id="cmdDelete" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdDelete" Causesvalidation="False" /></li>
+        <li><asp:LinkButton id="cmdCancel" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdCancel" Causesvalidation="False" /></li>
+        <li><asp:LinkButton id="cmdSend" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdSend" Causesvalidation="False" /></li>
+    </ul>
+</div>
+<script language="javascript" type="text/javascript">
+/*globals jQuery, window, Sys */
+(function ($, Sys) {
+    function setUpDnnEditAffiliate() {
+        var yesText = '<%= Localization.GetSafeJSString("Yes.Text", Localization.SharedResourceFile) %>';
+        var noText = '<%= Localization.GetSafeJSString("No.Text", Localization.SharedResourceFile) %>';
+        var titleText = '<%= Localization.GetSafeJSString("Confirm.Text", Localization.SharedResourceFile) %>';
+        $('#<%= cmdDelete.ClientID %>').dnnConfirm({
+            text: '<%= Localization.GetSafeJSString("DeleteItem.Text", Localization.SharedResourceFile) %>',
+            yesText: yesText,
+            noText: noText,
+            title: titleText
+        });
+    }
+    $(document).ready(function () {
+        setUpDnnEditAffiliate();
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            setUpDnnEditAffiliate();
+        });
+    });
+} (jQuery, window.Sys));
+</script>

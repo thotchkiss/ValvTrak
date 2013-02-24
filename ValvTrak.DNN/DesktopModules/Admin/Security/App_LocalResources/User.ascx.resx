@@ -117,50 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="UserInfo_Username.Text" xml:space="preserve">
-    <value>User Name:</value>
-  </data>
-  <data name="UserInfo_Username.Help" xml:space="preserve">
-    <value>Enter a username</value>
-  </data>
-  <data name="UserInfo_FirstName.Text" xml:space="preserve">
-    <value>First Name:</value>
-  </data>
-  <data name="UserInfo_FirstName.Help" xml:space="preserve">
-    <value>Enter a First Name</value>
-  </data>
-  <data name="UserInfo_LastName.Text" xml:space="preserve">
-    <value>Last Name:</value>
-  </data>
-  <data name="UserInfo_LastName.Help" xml:space="preserve">
-    <value>Enter a Last Name</value>
-  </data>
-  <data name="UserInfo_Email.Text" xml:space="preserve">
-    <value>Email Address:</value>
-  </data>
-  <data name="UserInfo_Email.Help" xml:space="preserve">
-    <value>Enter a valid Email address</value>
-  </data>
-  <data name="UserInfo_DisplayName.Text" xml:space="preserve">
-    <value>Display Name:</value>
-  </data>
-  <data name="UserInfo_DisplayName.Help" xml:space="preserve">
-    <value>Provide a Display Name</value>
-  </data>
   <data name="cmdAdd.Text" xml:space="preserve">
     <value>Add New User</value>
-  </data>
-  <data name="UserInfo_Username.Required" xml:space="preserve">
-    <value>User name is required</value>
-  </data>
-  <data name="UserInfo_FirstName.Required" xml:space="preserve">
-    <value>First name is required</value>
-  </data>
-  <data name="UserInfo_LastName.Required" xml:space="preserve">
-    <value>Last name is required</value>
-  </data>
-  <data name="UserInfo_Email.Required" xml:space="preserve">
-    <value>Email is required</value>
   </data>
   <data name="plAuthorize.Text" xml:space="preserve">
     <value>Authorize:</value>
@@ -210,17 +168,17 @@
   <data name="CaptchaText.Text" xml:space="preserve">
     <value>Enter the code shown above in the box below</value>
   </data>
-  <data name="UserInfo_Email.Validation" xml:space="preserve">
-    <value>You must enter a valid email address</value>
-  </data>
-  <data name="UserInfo_DisplayName.Required" xml:space="preserve">
-    <value>Display Name is required</value>
-  </data>
   <data name="UnRegister.Text" xml:space="preserve">
     <value>UnRegister</value>
   </data>
   <data name="Delete.Text" xml:space="preserve">
     <value>Delete</value>
+  </data>
+  <data name="cmdRemove.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="cmdRestore.Text" xml:space="preserve">
+    <value>Restore</value>
   </data>
   <data name="ConfirmUnRegister.Text" xml:space="preserve">
     <value>Are you sure you want to un-register</value>
@@ -236,5 +194,8 @@
   </data>
   <data name="plAnswer.Help" xml:space="preserve">
     <value>Enter an Answer to the Password Question.</value>
+  </data>
+  <data name="ComparePasswordsValidator.ErrorMessage" xml:space="preserve">
+    <value>The Password and Confirmation Passwords must match</value>
   </data>
 </root>

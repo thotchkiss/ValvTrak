@@ -1,28 +1,23 @@
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Users.Membership" CodeFile="Membership.ascx.cs" %>
 <%@ Register TagPrefix="dnn" Assembly="DotNetNuke" Namespace="DotNetNuke.UI.WebControls"%>
-<%@ Control language="vb" CodeFile="Membership.ascx.vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Users.Membership" %>
-
-<dnn:propertyeditorcontrol id="MembershipEditor" runat="Server" 
-	editmode="View" 
-	width="375px" 
-	editcontrolwidth="150px" 
-	labelwidth="200px" 
-	editcontrolstyle-cssclass="NormalTextBox" 
-	helpstyle-cssclass="Help" 
-	labelstyle-cssclass="SubHead" 
-	sortmode="SortOrderAttribute" />
-<p align="center">
-	<dnn:commandbutton id="cmdAuthorize" runat="server" 
-		resourcekey="cmdAuthorize" imageurl="~/images/icon_securityroles_16px.gif" 
-		causesvalidation="False" />
-	<dnn:commandbutton id="cmdUnAuthorize" runat="server" 
-		resourcekey="cmdUnAuthorize" imageurl="~/images/icon_securityroles_16px.gif" 
-		causesvalidation="False" />
-	&nbsp;&nbsp;
-	<dnn:commandbutton id="cmdUnLock" runat="server" 
-		resourcekey="cmdUnLock" imageurl="~/images/icon_securityroles_16px.gif" 
-		causesvalidation="False" />
-	&nbsp;&nbsp;
-	<dnn:commandbutton id="cmdPassword" runat="server" 
-		resourcekey="cmdPassword" imageurl="~/images/icon_securityroles_16px.gif" 
-		causesvalidation="False" />
-</p>
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<dnn:DnnFormEditor id="membershipForm" runat="Server" FormMode="Short">
+    <Items>
+        <dnn:DnnFormLiteralItem ID="createdDate" runat="server" DataField="CreatedDate" />
+        <dnn:DnnFormLiteralItem ID="lastLoginDate" runat="server" DataField="LastLoginDate" />
+        <dnn:DnnFormLiteralItem ID="lastActivityDate" runat="server" DataField="LastActivityDate" />
+        <dnn:DnnFormLiteralItem ID="lastPasswordChangeDate" runat="server" DataField="LastPasswordChangeDate" />
+        <dnn:DnnFormLiteralItem ID="lastLockoutDate" runat="server" ResourceKey="LastLockoutDate" />
+        <dnn:DnnFormLiteralItem ID="isOnLine" runat="server" ResourceKey="IsOnLine" />
+        <dnn:DnnFormLiteralItem ID="lockedOut" runat="server" ResourceKey="LockedOut" />
+        <dnn:DnnFormLiteralItem ID="approved" runat="server" ResourceKey="Approved" />
+        <dnn:DnnFormLiteralItem ID="updatePassword" runat="server" ResourceKey="UpdatePassword" />
+        <dnn:DnnFormLiteralItem ID="isDeleted" runat="server" ResourceKey="IsDeleted" />
+   </Items>
+</dnn:DnnFormEditor>
+<ul id="actionsRow" runat="server" class="dnnActions dnnClear">
+    <li><asp:LinkButton id="cmdAuthorize" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdAuthorize" /></li>
+    <li><asp:LinkButton id="cmdUnAuthorize" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdUnAuthorize" /></li>
+    <li><asp:LinkButton id="cmdUnLock" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdUnLock" /></li>
+    <li><asp:LinkButton id="cmdPassword" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdPassword" /></li>
+</ul>

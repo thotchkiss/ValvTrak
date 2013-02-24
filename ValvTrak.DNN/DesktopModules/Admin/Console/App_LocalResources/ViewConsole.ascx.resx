@@ -132,4 +132,7 @@
   <data name="Show.Text" xml:space="preserve">
     <value>Detailed View</value>
   </data>
+  <data name="IconNone.Text" xml:space="preserve">
+    <value>No Icons</value>
+  </data>
 </root>

@@ -1,98 +1,78 @@
-<%@ Control Language="vb" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.Modules.Admin.Vendors.Vendors" CodeFile="Vendors.ascx.vb" %>
-<%@ Register TagPrefix="dnnsc" Namespace="DotNetNuke.UI.WebControls" Assembly="DotNetNuke" %>
-<table width="100%" border="0">
-	<tr>
-		<td align="left" class="Normal">
-			<asp:Label ID="Label1" Runat="server" resourcekey="Search" CssClass="SubHead">Search:</asp:Label><br>
-			<asp:TextBox id="txtSearch" Runat="server" />
-			<asp:DropDownList id="ddlSearchType" Runat="server">
-				<asp:ListItem Value="name" resourcekey="Name.Header">Name</asp:ListItem>
-				<asp:ListItem Value="email" resourcekey="Email.Header">Email</asp:ListItem>
-			</asp:DropDownList>
-			<asp:ImageButton ID="btnSearch" Runat="server" ImageUrl="~/images/icon_search_16px.gif" />
-		</td>
-		<td>
-		</td>
-		<td align="right" class="Normal">
-			<asp:Label ID="Label5" Runat="server" resourcekey="RecordsPage" CssClass="SubHead">Records Per Page:</asp:Label><br>
-			<asp:DropDownList id="ddlRecordsPerPage" Runat="server" AutoPostBack="True">
-				<asp:ListItem Value="10">10</asp:ListItem>
-				<asp:ListItem Value="25">25</asp:ListItem>
-				<asp:ListItem Value="50">50</asp:ListItem>
-				<asp:ListItem Value="100">100</asp:ListItem>
-				<asp:ListItem Value="250">250</asp:ListItem>
-			</asp:DropDownList>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="3" height="15"></td>
-	</tr>
-</table>
-<asp:Panel ID="plLetterSearch" Runat="server" HorizontalAlign="Center">
-	<asp:Repeater id="rptLetterSearch" Runat="server">
-		<ItemTemplate>
-			<asp:HyperLink runat="server" CssClass="CommandButton" NavigateUrl='<%# FilterURL(Container.DataItem,"1") %>' Text='<%# Container.DataItem %>' ID="Hyperlink2" NAME="Hyperlink2">
-			</asp:HyperLink>&nbsp;&nbsp;
-		</ItemTemplate>
-	</asp:Repeater>
-</asp:Panel>
-<asp:datagrid id="grdVendors" Border="0" CellPadding="4" width="100%" AutoGenerateColumns="False"
-	EnableViewState="False" runat="server" summary="Vendors Design Table" BorderStyle="None" BorderWidth="0px"
-	GridLines="None" cssclass="DataGrid_Container">
-	<Columns>
-		<asp:TemplateColumn>
-			<ItemStyle Width="20px"></ItemStyle>
+<%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.Modules.Admin.Vendors.Vendors" CodeFile="Vendors.ascx.cs" %>
+<%@ Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<div class="dnnForm dnnVendors dnnClear" id="dnnVendors">
+	<div class="dnnFormItem">
+		<asp:TextBox id="txtSearch" Runat="server" CssClass="dnnFixedSizeComboBox" />
+	    <dnn:DnnComboBox id="ddlSearchType" Runat="server" CssClass="dnnFixedSizeComboBox">
+	        <Items>
+	            <dnn:DnnComboBoxItem Value="name" resourcekey="Name.Header"/>
+			    <dnn:DnnComboBoxItem Value="email" resourcekey="Email.Header" />
+	        </Items>
+        </dnn:DnnComboBox>
+		<asp:LinkButton ID="btnSearch" Runat="server" resourcekey="Search" CssClass="dnnSecondaryAction" />
+	</div>
+    <div class="dnnClear"></div>
+	<ul class="vLetterSearch dnnClear">
+		<asp:Repeater id="rptLetterSearch" Runat="server">
 			<ItemTemplate>
-				<asp:HyperLink NavigateUrl='<%# FormatURL("VendorID",DataBinder.Eval(Container.DataItem,"VendorID")) %>' Visible="<%# IsEditable %>" runat="server" ID="Hyperlink1">
-					<asp:Image ImageUrl="~/images/edit.gif" AlternateText="Edit" Visible="<%# IsEditable %>" runat="server" ID="Hyperlink1Image" resourcekey="Edit"/>
-				</asp:HyperLink>
+				<li><asp:HyperLink runat="server" NavigateUrl='<%# FilterURL(Container.DataItem.ToString(),"1") %>' Text='<%# Container.DataItem %>' ID="Hyperlink2" /></li>
 			</ItemTemplate>
-		</asp:TemplateColumn>
-		<asp:BoundColumn DataField="VendorName" HeaderText="Name">
-			<HeaderStyle CssClass="NormalBold"></HeaderStyle>
-			<ItemStyle CssClass="Normal"></ItemStyle>
-		</asp:BoundColumn>
-		<asp:TemplateColumn HeaderText="Address">
-			<HeaderStyle CssClass="NormalBold"></HeaderStyle>
-			<ItemStyle CssClass="Normal"></ItemStyle>
-			<ItemTemplate>
-				<asp:Label ID="lblAddress" Runat="server" Text='<%# DisplayAddress(DataBinder.Eval(Container.DataItem, "Unit"),DataBinder.Eval(Container.DataItem, "Street"), DataBinder.Eval(Container.DataItem, "City"), DataBinder.Eval(Container.DataItem, "Region"), DataBinder.Eval(Container.DataItem, "Country"), DataBinder.Eval(Container.DataItem, "PostalCode")) %>'>
-				</asp:Label>
-			</ItemTemplate>
-		</asp:TemplateColumn>
-		<asp:BoundColumn DataField="Telephone" HeaderText="Telephone">
-			<HeaderStyle CssClass="NormalBold"></HeaderStyle>
-			<ItemStyle CssClass="Normal"></ItemStyle>
-		</asp:BoundColumn>
-		<asp:BoundColumn DataField="Fax" HeaderText="Fax">
-			<HeaderStyle CssClass="NormalBold"></HeaderStyle>
-			<ItemStyle CssClass="Normal"></ItemStyle>
-		</asp:BoundColumn>
-		<asp:TemplateColumn HeaderText="Email">
-			<HeaderStyle CssClass="NormalBold"></HeaderStyle>
-			<ItemStyle CssClass="Normal"></ItemStyle>
-			<ItemTemplate>
-				<asp:Label ID="lblEmail" Runat="server" Text='<%# DisplayEmail(DataBinder.Eval(Container.DataItem, "Email")) %>'>
-				</asp:Label>
-			</ItemTemplate>
-		</asp:TemplateColumn>
-		<asp:TemplateColumn HeaderText="Authorized">
-			<HeaderStyle HorizontalAlign="Center" CssClass="NormalBold"></HeaderStyle>
-			<ItemStyle HorizontalAlign="Center" CssClass="Normal"></ItemStyle>
-			<ItemTemplate>
-				<asp:Image Runat="server" ID="Image1" ImageUrl="~/images/checked.gif" Visible='<%# DataBinder.Eval(Container.DataItem,"Authorized")="true" %>'/>
-				<asp:Image Runat="server" ID="Image2" ImageUrl="~/images/unchecked.gif" Visible='<%# DataBinder.Eval(Container.DataItem,"Authorized")="false" %>'/>
-			</ItemTemplate>
-		</asp:TemplateColumn>
-		<asp:BoundColumn DataField="Banners" HeaderText="Banners">
-			<HeaderStyle HorizontalAlign="Center" CssClass="NormalBold"></HeaderStyle>
-			<ItemStyle HorizontalAlign="Center" CssClass="Normal"></ItemStyle>
-		</asp:BoundColumn>
-	</Columns>
-</asp:datagrid>
-<br>
-<br>
-<dnnsc:PagingControl id="ctlPagingControl" runat="server"></dnnsc:PagingControl>
-<p align="center">
-	<asp:LinkButton id="cmdDelete" resourcekey="cmdDelete" Runat="server" CssClass="CommandButton">Delete Unauthorized Vendors</asp:LinkButton>
-</p>
+		</asp:Repeater>
+	</ul>
+	<dnn:DnnGrid id="grdVendors" AutoGenerateColumns="False" EnableViewState="True" runat="server" AllowPaging="True" AllowCustomPaging="True" OnNeedDataSource="NeedDataSource">  
+        <MasterTableView>
+		    <Columns>
+			    <dnn:DnnGridTemplateColumn>
+				    <ItemStyle Width="20px"></ItemStyle>
+				    <ItemTemplate>
+					    <asp:HyperLink NavigateUrl='<%# FormatURL("VendorID",DataBinder.Eval(Container.DataItem,"VendorID").ToString()) %>' Visible="<%#  CanEdit() %>" runat="server" ID="Hyperlink1">
+						    <dnn:DnnImage IconKey="Edit" AlternateText="Edit" runat="server" ID="Hyperlink1Image" resourcekey="Edit"/>
+					    </asp:HyperLink>
+				    </ItemTemplate>
+			    </dnn:DnnGridTemplateColumn>
+			    <dnn:DnnGridBoundColumn DataField="VendorName" HeaderText="Name" />
+			    <dnn:DnnGridTemplateColumn HeaderText="Address">
+				    <ItemTemplate>
+					    <asp:Label ID="lblAddress" Runat="server" Text='<%# DisplayAddress(DataBinder.Eval(Container.DataItem, "Unit"),DataBinder.Eval(Container.DataItem, "Street"), DataBinder.Eval(Container.DataItem, "City"), DataBinder.Eval(Container.DataItem, "Region"), DataBinder.Eval(Container.DataItem, "Country"), DataBinder.Eval(Container.DataItem, "PostalCode")) %>'>
+					    </asp:Label>
+				    </ItemTemplate>
+			    </dnn:DnnGridTemplateColumn>
+			    <dnn:DnnGridBoundColumn DataField="Telephone" HeaderText="Telephone" />
+			    <dnn:DnnGridBoundColumn DataField="Fax" HeaderText="Fax" />
+			    <dnn:DnnGridBoundColumn DataField="Email" HeaderText="Email" />
+			    <dnn:DnnGridTemplateColumn HeaderText="Authorized">
+				    <ItemTemplate>
+					    <dnn:DnnImage Runat="server" ID="Image1" IconKey="Checked" Visible='<%# DataBinder.Eval(Container.DataItem,"Authorized") %>'/>
+					    <dnn:DnnImage Runat="server" ID="Image2" IconKey="Unchecked" Visible='<%# !(bool)DataBinder.Eval(Container.DataItem,"Authorized") %>'/>
+				    </ItemTemplate>
+			    </dnn:DnnGridTemplateColumn>
+			    <dnn:DnnGridBoundColumn DataField="Banners" HeaderText="Banners" />
+		    </Columns>
+        </MasterTableView>
+	</dnn:DnnGrid>
+    <ul class="dnnActions dnnClear">
+		<li><asp:LinkButton id="cmdAddVendor" runat="server" CssClass="dnnPrimaryAction" resourcekey="AddContent.Action"  /></li>
+		<li><asp:LinkButton id="cmdDeleteUnAuthorized" runat="server" CssClass="dnnSecondaryAction" resourcekey="cmdDelete.Text" /></li>
+	</ul>
+
+</div>
+<script language="javascript" type="text/javascript">
+    /*globals jQuery, window, Sys */
+    (function ($, Sys) {
+        function setUpDnnVendors() {
+            $('#<%= cmdDeleteUnAuthorized.ClientID %>').dnnConfirm({
+                text: '<%= Localization.GetSafeJSString("DeleteItems.Text", Localization.SharedResourceFile) %>',
+                yesText: '<%= Localization.GetSafeJSString("Yes.Text", Localization.SharedResourceFile) %>',
+                noText: '<%= Localization.GetSafeJSString("No.Text", Localization.SharedResourceFile) %>',
+                title: '<%= Localization.GetSafeJSString("Confirm.Text", Localization.SharedResourceFile) %>'
+            });
+        }
+
+        $(document).ready(function () {
+            setUpDnnVendors();
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+                setUpDnnVendors();
+            });
+        });
+    }(jQuery, window.Sys));
+</script>

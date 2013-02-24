@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ControlTitle_.Text" xml:space="preserve">
     <value>Extensions</value>
@@ -211,7 +211,7 @@
     <value>Click Here To Get The Language Pack</value>
   </data>
   <data name="Portal.Header" xml:space="preserve">
-    <value>Portal</value>
+    <value>Website</value>
   </data>
   <data name="lblUpdate.Text" xml:space="preserve">
     <value>This application contains an Update Service which displays an icon when a new version of an Extension is available. The icon displayed will contain a visual indication if a currently installed Extension contains a potential security vulnerability. If a security vulnerability is identified, it is highly recommended that you upgrade to the newer version of the Extension. Clicking the icon will redirect you to a location where you will be able to acquire the Extension for immediate installation.</value>
@@ -236,5 +236,161 @@
   </data>
   <data name="InstalledOnPortal.Tooltip" xml:space="preserve">
     <value>Installed on {0}</value>
+  </data>
+  <data name="Auth_System.Type" xml:space="preserve">
+    <value>Authentication Systems</value>
+  </data>
+  <data name="Container.Type" xml:space="preserve">
+    <value>Containers</value>
+  </data>
+  <data name="CoreLanguagePack.Type" xml:space="preserve">
+    <value>Core Language Packs</value>
+  </data>
+  <data name="DashboardControl.Type" xml:space="preserve">
+    <value>Dashboard Controls</value>
+  </data>
+  <data name="ExtensionLanguagePack.Type" xml:space="preserve">
+    <value>Extension Language Packs</value>
+  </data>
+  <data name="Library.Type" xml:space="preserve">
+    <value>Libraries</value>
+  </data>
+  <data name="Module.Type" xml:space="preserve">
+    <value>Modules</value>
+  </data>
+  <data name="MoreExtensions.Text" xml:space="preserve">
+    <value> More Extensions</value>
+  </data>
+  <data name="Provider.Type" xml:space="preserve">
+    <value>Providers</value>
+  </data>
+  <data name="Skin.Type" xml:space="preserve">
+    <value>Skins</value>
+  </data>
+  <data name="SkinObject.Type" xml:space="preserve">
+    <value>Skin Objects</value>
+  </data>
+  <data name="Widget.Type" xml:space="preserve">
+    <value>Widgets</value>
+  </data>
+  <data name="InstalledExtensions.Text" xml:space="preserve">
+    <value>Installed Extensions</value>
+  </data>
+  <data name="AvailableExtensions.Text" xml:space="preserve">
+    <value>Available Extensions</value>
+  </data>
+  <data name="ExpandAll.Text" xml:space="preserve">
+    <value>Expand All</value>
+  </data>
+  <data name="AuthSystem.Type" xml:space="preserve">
+    <value>Authentication Systems</value>
+  </data>
+  <data name="Language.Type" xml:space="preserve">
+    <value>Language Packs</value>
+  </data>
+  <data name="Catalog.Text" xml:space="preserve">
+    <value>Extension Feed</value>
+  </data>
+  <data name="CatalogModule.Text" xml:space="preserve">
+    <value>Module</value>
+  </data>
+  <data name="CatalogSearchTitle.Text" xml:space="preserve">
+    <value>Search for Extensions</value>
+  </data>
+  <data name="CatalogSkin.Text" xml:space="preserve">
+    <value>Skin</value>
+  </data>
+  <data name="SearchLabel.Help" xml:space="preserve">
+    <value>Hit Enter to Search, Esc will clear and Cancel</value>
+  </data>
+  <data name="SearchLabel.Text" xml:space="preserve">
+    <value>Search:</value>
+  </data>
+  <data name="TypeLabel.Help" xml:space="preserve">
+    <value>Select type of extension</value>
+  </data>
+  <data name="TypeLabel.Text" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="ClearSearch.Text" xml:space="preserve">
+    <value>Clear Search</value>
+  </data>
+  <data name="NameAZ.Text" xml:space="preserve">
+    <value>Name: A-Z</value>
+  </data>
+  <data name="NameZA.Text" xml:space="preserve">
+    <value>Name: Z-A</value>
+  </data>
+  <data name="PriceHighLow.Text" xml:space="preserve">
+    <value>Price: High - Low</value>
+  </data>
+  <data name="PriceLowHigh.Text" xml:space="preserve">
+    <value>Price: Low - High</value>
+  </data>
+  <data name="Search.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="By.Text" xml:space="preserve">
+    <value>By</value>
+  </data>
+  <data name="TagCloud.Text" xml:space="preserve">
+    <value>Tag Cloud</value>
+  </data>
+  <data name="NotSpecified.Text" xml:space="preserve">
+    <value>Not Specified</value>
+  </data>
+  <data name="MoreInformation.Text" xml:space="preserve">
+    <value>More Information</value>
+  </data>
+  <data name="DetailsLabel.Text" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="LicenseLabel.Text" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="TagLabel.Text" xml:space="preserve">
+    <value>Tag:</value>
+  </data>
+  <data name="VendorLabel.Text" xml:space="preserve">
+    <value>Vendor:</value>
+  </data>
+  <data name="ExtensionsLabel.Text" xml:space="preserve">
+    <value>Extensions</value>
+  </data>
+  <data name="NoneLabel.Text" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="ErrorLabel.Text" xml:space="preserve">
+    <value>Error...</value>
+  </data>
+  <data name="LoadingLabel.Text" xml:space="preserve">
+    <value>Loading</value>
+  </data>
+  <data name="OrderLabel.Text" xml:space="preserve">
+    <value>Order:</value>
+  </data>
+  <data name="InUse.Header" xml:space="preserve">
+    <value>In Use</value>
+  </data>
+  <data name="PurchasedExtensions.Text" xml:space="preserve">
+    <value>Purchased Extensions</value>
+  </data>
+  <data name="installExtension.Text" xml:space="preserve">
+    <value>Install</value>
+  </data>
+  <data name="Version.Text" xml:space="preserve">
+    <value>Minimum Version Required:</value>
+  </data>
+  <data name="DescriptionLabel.Text" xml:space="preserve">
+    <value>Product Description</value>
+  </data>
+  <data name="ExtensionDetail.Text" xml:space="preserve">
+    <value>More detail</value>
+  </data>
+  <data name="License.Text" xml:space="preserve">
+    <value>License:</value>
+  </data>
+  <data name="ListExtensions.Text" xml:space="preserve">
+    <value>Learn more about how to offer your extensions &lt;a href="http://www.dotnetnuke.com/App-Gallery.aspx " target="_blank" class="info"&gt;here&lt;/a&gt;.</value>
   </data>
 </root>

@@ -1,0 +1,38 @@
+2013-02-23 15:50:46,399 [Tim-PC][Thread:9][ERROR] System.Collections.Generic.List`1 - A newer version of this package is already installed - 6.0.1
+2013-02-23 15:50:46,551 [Tim-PC][Thread:9][ERROR] System.Collections.Generic.List`1 - A newer version of this package is already installed - 6.0.1
+2013-02-23 15:50:46,664 [Tim-PC][Thread:9][ERROR] System.Collections.Generic.List`1 - A newer version of this package is already installed - 6.0.1
+2013-02-23 15:50:57,197 [Tim-PC][Thread:9][ERROR] System.Collections.Generic.List`1 - A newer version of this package is already installed - 6.0.1
+2013-02-23 16:11:27,473 [Tim-PC][Thread:25][ERROR] DataSprings.SkinObject_jQueryLogin.Logout - ~/Default.aspx?tabid=79&def=ErrorMessage
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at DataSprings.SkinObject_jQueryLogin.Logout.Redirect()
+   at DataSprings.SkinObject_jQueryLogin.Logout.Page_Load(Object sender, EventArgs e)
+2013-02-23 16:18:26,704 [Tim-PC][Thread:23][ERROR] DotNetNuke.Services.Upgrade.Upgrade - A newer version of this package is already installed - 7.0.3
+2013-02-23 16:18:26,895 [Tim-PC][Thread:23][ERROR] DotNetNuke.Services.Upgrade.Upgrade - A newer version of this package is already installed - 6.0.1
+2013-02-23 16:18:26,979 [Tim-PC][Thread:23][ERROR] DotNetNuke.Services.Upgrade.Upgrade - A newer version of this package is already installed - 7.0.3
+2013-02-23 16:18:31,813 [Tim-PC][Thread:23][ERROR] DotNetNuke.Common.Utilities.Config - System.IO.IOException: The process cannot access the file 'C:\Users\Tim\ValvTrak\Upgrade\web.config' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at DotNetNuke.Common.Utilities.Config.Save(XmlDocument xmlDoc, String filename)
+2013-02-23 16:18:36,628 [Tim-PC][Thread:23][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): Server cannot clear headers after HTTP headers have been sent.
+   at System.Web.HttpResponse.ClearHeaders()
+   at System.Web.Script.Services.RestHandler.WriteExceptionJsonString(HttpContext context, Exception ex, Int32 statusCode)
+   at System.Web.Script.Services.RestHandler.ExecuteWebServiceCall(HttpContext context, WebServiceMethodData methodData)
+   at System.Web.Handlers.ScriptModule.OnPostAcquireRequestState(Object sender, EventArgs eventArgs)
+   at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2013-02-23 16:20:10,556 [Tim-PC][Thread:25][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.Net.Mail.SmtpFailedRecipientException: Mailbox unavailable. The server response was: 5.1.1 User unknown
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at DotNetNuke.Services.Mail.Mail.SendMailInternal(MailMessage mailMessage, String subject, String body, MailPriority priority, MailFormat bodyFormat, Encoding bodyEncoding, IEnumerable`1 attachments, String smtpServer, String smtpAuthentication, String smtpUsername, String smtpPassword, Boolean smtpEnableSSL)
+2013-02-23 17:04:23,289 [Tim-PC][Thread:40][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=16&def=ErrorMessage
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at DataSprings.SkinObject_jQueryLogin.Logout.Redirect()
+   at DataSprings.SkinObject_jQueryLogin.Logout.Page_Load(Object sender, EventArgs e)
