@@ -14,6 +14,14 @@
 <%@ Register assembly="DevExpress.Web.v12.2" namespace="DevExpress.Web.ASPxHiddenField" tagprefix="dx" %>
 
 
+<style type="text/css">
+    .style1
+    {
+        height: 25px;
+    }
+</style>
+
+
 <script type="text/javascript">
 	function DevExComboUnboundItem(s, e, itemText, itemValue) {
 		if (s.GetSelectedIndex() == -1) {
@@ -85,6 +93,18 @@
         }
     }
 
+    function OnManufacturersEndCallback(s, e) {
+
+        var mid = parseInt(s.cpManufacturerID);
+
+        // New Manufacturer has been added
+        if (!isNaN(mid)) {
+
+            manufacturers.SetValue(mid);
+            modelAdd.Focus();
+        }
+    }
+
     function AfterModelSaved(s, e) {
 
         modelForm.Hide();
@@ -100,17 +120,7 @@
         }
     }
 
-    function OnManufacturersEndCallback(s, e) {
-
-        var mid = parseInt(s.cpManufacturerID);
-
-        // New Manufacturer has been added
-        if (!isNaN(mid)) {
-
-            manufacturers.SetValue(mid);
-            modelAdd.Focus();
-        }
-    }
+    
 
     function OnModelsEndCallback(s, e) {
 
@@ -225,11 +235,11 @@
 								</td>
 							</tr>
 							<tr>
-								<td>
+								<td class="style1">
 									<dxe:ASPxLabel ID="ASPxLabel4" runat="server" Text="Type :">
 									</dxe:ASPxLabel>
 								</td>
-								<td>
+								<td class="style1">
 									<dxe:ASPxComboBox ID="ServiceItemTypeSelect" runat="server" Width="200" 
                                         DataSourceID="ServiceItemTypeDataSource"
 										TextField="DisplayMember" ValueField="ValueMember" 
@@ -247,15 +257,15 @@
 									<table cellpadding="0" cellspacing="0" border="0">
 										<tr>
 											<td>
-												<dxe:ASPxComboBox ID="ManufacturerSelect" runat="server" Width="200" 
+                                                <dxe:ASPxComboBox ID="ManufacturerSelect" runat="server" Width="200" 
 														TextField="DisplayMember" AutoPostBack="false" 
 														ValueField="ValueMember" EnableClientSideAPI="true" 
 														ClientInstanceName="manufacturers" TabIndex="106" 
 														OnCallback="ManufacturerSelect_Callback" 
-													EnableIncrementalFiltering="True" IncrementalFilteringMode="Contains" 
-													ValueType="System.Int32" EnableCallbackMode="True" 
-													ShowLoadingPanel="False" OnItemRequestedByValue="ManufacturerSelect_ItemRequestedByValue" 
-                                                    OnItemsRequestedByFilterCondition="ManufacturerSelect_ItemsRequestedByFilterCondition" >
+													    EnableIncrementalFiltering="True" IncrementalFilteringMode="Contains" 
+													    ValueType="System.Int32" EnableCallbackMode="True" 
+													    ShowLoadingPanel="False" OnItemRequestedByValue="ManufacturerSelect_ItemRequestedByValue" 
+                                                        OnItemsRequestedByFilterCondition="ManufacturerSelect_ItemsRequestedByFilterCondition" >
 													<ClientSideEvents 
                                                         SelectedIndexChanged="function(s,e) { ManufacturerSelectedIndexChanged(s,e); }"  
                                                         EndCallback="function(s,e) { OnManufacturersEndCallback(s,e); } " />
@@ -289,7 +299,7 @@
 														TextField="DisplayMember" Width="200" 
 														ValueField="ValueMember" OnCallback="ModelSelect_Callback" AutoPostBack="false"
 													    TabIndex="107" IncrementalFilteringMode="Contains" ValueType="System.Int32" 
-													    EnableCallbackMode="true" CallbackPageSize="150" DropDownStyle="DropDown"
+													    EnableCallbackMode="True" CallbackPageSize="150" DropDownStyle="DropDown"
                                                         ShowLoadingPanel="False" 
                                                     OnItemRequestedByValue="ModelSelect_ItemRequestedByValue" 
                                                     OnItemsRequestedByFilterCondition="ModelSelect_ItemsRequestedByFilterCondition">
