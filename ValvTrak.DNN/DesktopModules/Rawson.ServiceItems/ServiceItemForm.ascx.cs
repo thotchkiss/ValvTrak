@@ -357,9 +357,8 @@ namespace Rawson.ServiceItems
         protected void ManufacturerSelect_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
         {
             ServiceItemFormController controller = Context.Items[this.UniqueID + "_boController"] as ServiceItemFormController;
-            //controller.Load(ServiceItemID);
 
-            //ManufacturerSelect.DataSource = controller.GetManufacturers();
+            ManufacturerSelect.DataSource = controller.GetManufacturers();
             ManufacturerSelect.DataBind();
 
             if (!String.IsNullOrEmpty(e.Parameter))
@@ -372,9 +371,8 @@ namespace Rawson.ServiceItems
         protected void ModelSelect_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
         {
             ServiceItemFormController controller = Context.Items[this.UniqueID + "_boController"] as ServiceItemFormController;
-            //controller.Load(ServiceItemID);
 
-            //ModelSelect.DataSource = controller.GetManufacturerModels(Convert.ToInt32(ManufacturerSelect.Value));
+            ModelSelect.DataSource = controller.GetManufacturerModels(Convert.ToInt32(ManufacturerSelect.Value));
             ModelSelect.DataBind();
 
             if (!String.IsNullOrEmpty(e.Parameter))
@@ -383,6 +381,7 @@ namespace Rawson.ServiceItems
                 ModelSelect.JSProperties["cpManufacturerModelID"] = Convert.ToInt32(e.Parameter);
             }
         }
+
 
         protected void ModelSaveAction_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
         {
@@ -482,6 +481,7 @@ namespace Rawson.ServiceItems
             ManufacturerSelect.DataSource = controller.GetManufacturerItemsRequestedByFilterCondition(e);
             ManufacturerSelect.DataBind();
         }
+        
 }
 
 }
