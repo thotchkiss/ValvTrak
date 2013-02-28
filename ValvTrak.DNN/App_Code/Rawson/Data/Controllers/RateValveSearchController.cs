@@ -42,6 +42,38 @@ public class RateValveSearchController : BaseController<RateValveTest>
         return Context.JobStatus.OrderBy(j => j.Status).Select(j => new ComboBoxValue<int> { DisplayMember = j.Status, ValueMember = j.JobStatusID }).ToList();
     }
 
+    public override bool Delete(object Pk)
+    {
+        int result = -1;
+        try
+        {
+            var valve = this.Context.RateValveTests.FirstOrDefault(rv => rv.RateValveTestID == Convert.ToInt32(Pk));
+            if (valve != null)
+            {
+                foreach(RateValveTestPart rvtp in valve.RateValveTestParts)
+                    this.Context.RateValveTestParts.DeleteOnSubmit(rvtp);
+
+                this.Context.RateValveTests.DeleteOnSubmit(valve);
+
+                this.Context.SubmitChanges();
+            }
+
+            result = 1;
+        }
+        catch (Exception ex)
+        {
+            this.SetError(ex);
+            return false;
+        }
+
+        if (result < 1)
+        {
+            this.SetError("Nothing to delete");
+            return false;
+        }
+
+        return true;
+    }
 
     private Specification<RateValveTest> BuildUpWhere(RateValveQuery q, int userId)
     {
