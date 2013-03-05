@@ -187,6 +187,8 @@ namespace Rawson.Data.Controllers
             si.SerialNum = Entity.SerialNum;
             si.ServiceItemTypeID = Entity.ServiceItemTypeID;
             si.Threaded = Entity.Threaded;
+            si.Latitude = Entity.Latitude;
+            si.Longitude = Entity.Longitude;
 
             Entity = si;
         }
