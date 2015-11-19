@@ -6,7 +6,9 @@ Imports System.Data
 Imports System.Xml.Serialization
 Imports System.Xml.Schema
 Imports System.Xml
+
 Imports DotNetNuke.Entities.Modules
+Imports DotNetNuke.Common.Utilities
 
 Namespace Rawson.Roles
     Public Class RoleAuthorizationInfo

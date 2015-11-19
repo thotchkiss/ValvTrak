@@ -12,7 +12,7 @@ using Rawson.App;
 using Rawson.Data.Specifications;
 using Rawson.Data.Model;
 using Mehroz;
-using DevExpress.Web.ASPxEditors;
+using DevExpress.Web;
 
 namespace Rawson.ServiceItems
 {
@@ -134,7 +134,7 @@ namespace Rawson.ServiceItems
             e.Result = controller.GetServiceItems(ClientLocationID);
         }
 
-        protected void ServiceItemnSaveAction_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+        protected void ServiceItemnSaveAction_Callback(object source, DevExpress.Web.CallbackEventArgs e)
         {
             //Save the new valve
             ServiceItemFormController controller = Context.Items[this.UniqueID + "_boController"] as ServiceItemFormController;
@@ -339,7 +339,7 @@ namespace Rawson.ServiceItems
             chkActive.Checked = controller.Entity.Active.HasValue ? controller.Entity.Active.Value : false;
         }
 
-        protected void ServiceItemPanel_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        protected void ServiceItemPanel_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
             if (ServiceItemID >= 0)
             {
@@ -349,12 +349,12 @@ namespace Rawson.ServiceItems
                 ClearData();
         }
 
-        protected void ServiceItemSelect_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        protected void ServiceItemSelect_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
             ServiceItemSelect.DataBind();
         }
 
-        protected void ManufacturerSelect_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        protected void ManufacturerSelect_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
             ServiceItemFormController controller = Context.Items[this.UniqueID + "_boController"] as ServiceItemFormController;
 
@@ -368,7 +368,7 @@ namespace Rawson.ServiceItems
             }
         }
 
-        protected void ModelSelect_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        protected void ModelSelect_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
             ServiceItemFormController controller = Context.Items[this.UniqueID + "_boController"] as ServiceItemFormController;
 
@@ -383,7 +383,7 @@ namespace Rawson.ServiceItems
         }
 
 
-        protected void ModelSaveAction_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+        protected void ModelSaveAction_Callback(object source, DevExpress.Web.CallbackEventArgs e)
         {
             ServiceItemFormController controller = Context.Items[this.UniqueID + "_boController"] as ServiceItemFormController;
 
@@ -413,7 +413,7 @@ namespace Rawson.ServiceItems
             }
         }
 
-        protected void ManufacturerSaveAction_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+        protected void ManufacturerSaveAction_Callback(object source, DevExpress.Web.CallbackEventArgs e)
         {
             ServiceItemFormController controller = Context.Items[this.UniqueID + "_boController"] as ServiceItemFormController;
 

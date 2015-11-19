@@ -1,21 +1,17 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="WellSafteyTestsSearch.ascx.cs" Inherits="Rawson.WellSafetyTests.WellSafteyTestsSearch" EnableTheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v12.2"
-    Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.2"
-    Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
-    <%@ Register Assembly="DevExpress.Web.v12.2"
-    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxPopupControl"
-    TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.2"
-    Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxGridView.Export" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dxwgv" %>
-<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dxrp" %>
-<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dxp" %>
+<%@ Register Assembly="DevExpress.Web.v15.1"
+    Namespace="DevExpress.Web" TagPrefix="dx" %>
 
-<%@ Register assembly="DevExpress.Web.v12.2" namespace="DevExpress.Web.ASPxLoadingPanel" tagprefix="dx1" %>
+    
+
+
+
+<%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxwgv" %>
+<%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxrp" %>
+<%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxp" %>
+
+<%@ Register assembly="DevExpress.Web.v15.1" namespace="DevExpress.Web" tagprefix="dx1" %>
 
 <script type="text/javascript" src="../../js/json2.js"></script>
 <script id="scrCommon" type="text/javascript">
@@ -310,9 +306,7 @@
     <ClientSideEvents BeginCallback="function(s,e) { s.cpShowReport = false;}" 
         EndCallback="function (s,e) { OnPrintSetupEnd(s,e); }" />
     <Columns>
-        <dxwgv:GridViewCommandColumn showselectcheckbox="True" visibleindex="0" Caption=" " Width="32px">
-            <clearfilterbutton visible="True"></clearfilterbutton>
-        </dxwgv:GridViewCommandColumn>
+        <dxwgv:GridViewCommandColumn showselectcheckbox="True" visibleindex="0" Caption=" " Width="32px" ShowClearFilterButton="True"/>
         <dxwgv:GridViewCommandColumn ButtonType="Image" VisibleIndex="0" Caption=" " Width="32px" Name="colEdit">
             <CustomButtons>
                 <dxwgv:GridViewCommandColumnCustomButton ID="btnEdit" Visibility="AllDataRows" Text="Edit">

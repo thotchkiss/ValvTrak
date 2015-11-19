@@ -9,7 +9,7 @@ using Rawson.Data.Controllers;
 using DotNetNuke.Services.Exceptions;
 using Rawson.App;
 using Rawson.Data;
-using DevExpress.Web.ASPxGridView;
+using DevExpress.Web;
 using Rawson.Data.Model;
 
 namespace Rawson.GreasingRecords
@@ -117,7 +117,7 @@ namespace Rawson.GreasingRecords
             e.Result = controller.GetCurrentGreasingRecordItems();
         }
 
-        protected void GreasingItemsGrid_CustomButtonCallback(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewCustomButtonCallbackEventArgs e)
+        protected void GreasingItemsGrid_CustomButtonCallback(object sender, DevExpress.Web.ASPxGridViewCustomButtonCallbackEventArgs e)
         {
             ASPxGridView grid = sender as ASPxGridView;
             object[] values = grid.GetRowValues(e.VisibleIndex, "GreasingRecordItemID", "GreasingRecordID") as object[];
@@ -133,7 +133,7 @@ namespace Rawson.GreasingRecords
             }
         }
 
-        protected void GreasingItemsGrid_CustomCallback(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewCustomCallbackEventArgs e)
+        protected void GreasingItemsGrid_CustomCallback(object sender, DevExpress.Web.ASPxGridViewCustomCallbackEventArgs e)
         {
             int pageSize;
             if (Int32.TryParse(e.Parameters, out pageSize))
@@ -172,7 +172,7 @@ namespace Rawson.GreasingRecords
             }
         }
 
-        protected void SaveAction_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+        protected void SaveAction_Callback(object source, DevExpress.Web.CallbackEventArgs e)
         {
             GreasingRecordFormController controller = Context.Items["#boController"] as GreasingRecordFormController;
             GreasingRecord gr = controller.Entity;

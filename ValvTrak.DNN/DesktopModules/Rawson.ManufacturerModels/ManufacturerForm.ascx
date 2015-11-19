@@ -1,14 +1,14 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ManufacturerForm.ascx.cs" Inherits="Rawson.ManufacturerModels.ManufacturerForm" EnableTheming="true" %>
 
-<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxHiddenField" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
-<%@ Register assembly="DevExpress.Web.v12.2" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
-<%@ Register assembly="DevExpress.Web.v12.2" namespace="DevExpress.Web.ASPxPopupControl" tagprefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+
+
+
+
+
+
+
 
 <script type="text/javascript">
 
@@ -140,13 +140,9 @@
 
                                     }" />
                             <Columns>
-                                <dx:GridViewCommandColumn ButtonType="Image" Caption=" " 
-                                    ShowInCustomizationForm="True" VisibleIndex="0" Width="40px">
-                                    <ClearFilterButton Visible="True">
-                                    </ClearFilterButton>
+                                <dx:GridViewCommandColumn ButtonType="Image" Caption=" " ShowInCustomizationForm="True" VisibleIndex="0" Width="40px" ShowClearFilterButton="True">
                                     <CustomButtons>
-                                        <dx:GridViewCommandColumnCustomButton ID="btnModelEdit" 
-                                            Visibility="AllDataRows">
+                                        <dx:GridViewCommandColumnCustomButton ID="btnModelEdit" Visibility="AllDataRows">
                                             <Image Url="~/images/edit.gif">
                                             </Image>
                                         </dx:GridViewCommandColumnCustomButton>

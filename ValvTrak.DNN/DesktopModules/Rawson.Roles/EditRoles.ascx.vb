@@ -405,7 +405,7 @@ Namespace DotNetNuke.Modules.Admin.Security
 
         End Sub
 
-        Protected Sub cmbProjects_Callback(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxClasses.CallbackEventArgsBase) Handles cmbProjects.Callback
+        Protected Sub cmbProjects_Callback(ByVal sender As Object, ByVal e As DevExpress.Web.CallbackEventArgsBase) Handles cmbProjects.Callback
 
             cmbProjects.DataBind()
 
@@ -419,12 +419,12 @@ Namespace DotNetNuke.Modules.Admin.Security
 
         Protected Sub cmbProjects_DataBound(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbProjects.DataBound
 
-            cmbProjects.Items.Insert(0, New DevExpress.Web.ASPxEditors.ListEditItem("-- All Projects --", Null.NullString))
+            cmbProjects.Items.Insert(0, New DevExpress.Web.ListEditItem("-- All Projects --", Null.NullString))
             cmbProjects.SelectedIndex = 0
 
         End Sub
 
-        Protected Sub RoleAuthorizationsGrid_CustomButtonCallback(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridView.ASPxGridViewCustomButtonCallbackEventArgs) Handles RoleAuthorizationsGrid.CustomButtonCallback
+        Protected Sub RoleAuthorizationsGrid_CustomButtonCallback(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridViewCustomButtonCallbackEventArgs) Handles RoleAuthorizationsGrid.CustomButtonCallback
 
             Dim rid As Integer = CInt(RoleAuthorizationsGrid.GetRowValues(e.VisibleIndex, "RoleAuthorizationId"))
 
@@ -434,7 +434,7 @@ Namespace DotNetNuke.Modules.Admin.Security
             RoleAuthorizationsGrid.DataBind()
         End Sub
 
-        Protected Sub RoleAuthorizationsGrid_CustomCallback(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridView.ASPxGridViewCustomCallbackEventArgs) Handles RoleAuthorizationsGrid.CustomCallback
+        Protected Sub RoleAuthorizationsGrid_CustomCallback(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridViewCustomCallbackEventArgs) Handles RoleAuthorizationsGrid.CustomCallback
 
             If (e.Parameters = "Add") Then
 

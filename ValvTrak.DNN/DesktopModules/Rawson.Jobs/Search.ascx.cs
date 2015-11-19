@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using DevExpress.Data;
 using System.Reflection;
 using Rawson.App;
-using DevExpress.Web.ASPxGridView;
+using DevExpress.Web;
 
 using DotNetNuke.Entities.Modules;
 using Rawson.Data;
@@ -164,7 +164,7 @@ public partial class JobsSearch : PortalModuleBase
     }
 
     // Added TJH 1/31/2010
-    protected void JobsGrid_BeforeColumnSortingGrouping ( object sender, DevExpress.Web.ASPxGridView.ASPxGridViewBeforeColumnGroupingSortingEventArgs e )
+    protected void JobsGrid_BeforeColumnSortingGrouping ( object sender, DevExpress.Web.ASPxGridViewBeforeColumnGroupingSortingEventArgs e )
     {
         var q =  DataCache.GetCache<JobSearchQuery>((string)Context.Items["#queryKey"]);
         if ( q != null )
@@ -230,7 +230,7 @@ public partial class JobsSearch : PortalModuleBase
         JobsGrid.DataBind();
     }
 
-    protected void LocationFilter_Callback ( object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e )
+    protected void LocationFilter_Callback ( object sender, DevExpress.Web.CallbackEventArgsBase e )
     {
         LocationFilter.DataBind();
         LocationFilter.Value = -1;

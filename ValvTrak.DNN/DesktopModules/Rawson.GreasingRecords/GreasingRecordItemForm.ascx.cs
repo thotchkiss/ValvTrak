@@ -88,7 +88,7 @@ namespace Rawson.GreasingRecords
             siEdit.Focus();
         }
 
-        protected void ASPxSpellChecker1_CheckedElementResolve(object sender, DevExpress.Web.ASPxClasses.ControlResolveEventArgs e)
+        protected void ASPxSpellChecker1_CheckedElementResolve(object sender, DevExpress.Web.ControlResolveEventArgs e)
         {
             e.ResolvedControl = RemarksTextBox;
         }
@@ -103,7 +103,7 @@ namespace Rawson.GreasingRecords
             e.Result = controller.GetLubeTypes();
         }
 
-        protected void SaveAction_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+        protected void SaveAction_Callback(object source, DevExpress.Web.CallbackEventArgs e)
         {
             GreasingRecordItemFormController controller = Context.Items["#boController"] as GreasingRecordItemFormController;
             GreasingRecordItem gri = controller.Entity;

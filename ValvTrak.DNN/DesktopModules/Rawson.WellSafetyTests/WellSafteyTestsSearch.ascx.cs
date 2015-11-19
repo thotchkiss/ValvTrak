@@ -8,7 +8,7 @@ using DotNetNuke.Entities.Modules;
 using Rawson.Data;
 using DevExpress.Data;
 using Rawson.App;
-using DevExpress.Web.ASPxGridView;
+using DevExpress.Web;
 using System.Reflection;
 using Rawson.Data.Controllers;
 using System.IO;
@@ -155,7 +155,7 @@ namespace Rawson.WellSafetyTests
             e.Result = controller.GetAuthorizedClients(UserId);
         }
 
-        protected void LocationFilter_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        protected void LocationFilter_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
             LocationFilter.DataBind();
             LocationFilter.Value = "-1";
@@ -233,7 +233,7 @@ namespace Rawson.WellSafetyTests
                 q.PageIndex = reportingGrid.PageIndex;
         }
 
-        protected void PrintSelected_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+        protected void PrintSelected_Callback(object source, DevExpress.Web.CallbackEventArgs e)
         {
             JavaScriptSerializer js = new JavaScriptSerializer();
 
@@ -246,7 +246,7 @@ namespace Rawson.WellSafetyTests
             PrintSelected.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.WellSafetyFieldReport, cacheKey);
         }
 
-        protected void PrintAll_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+        protected void PrintAll_Callback(object source, DevExpress.Web.CallbackEventArgs e)
         {
             WellSafetyQuery q = DataCache.GetCache<WellSafetyQuery>((string)Context.Items["#queryKey"]);
             if (q == null)
