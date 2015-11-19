@@ -1,17 +1,15 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="WellSafetyTestForm.ascx.cs" Inherits="Rawson.WellSafetyTests.WellSafetyTestForm" EnableTheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v12.2"
-	Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.2"
-	Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.2"
-	Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v15.1"
+	Namespace="DevExpress.Web" TagPrefix="dx" %>
 
-<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v12.2" Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dxsc" %>
-<%@ Register assembly="DevExpress.Web.v12.2" namespace="DevExpress.Web.ASPxEditors" tagprefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dxrp" %>
+
+
+
+<%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v15.1" Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dxsc" %>
+<%@ Register assembly="DevExpress.Web.v15.1" namespace="DevExpress.Web" tagprefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxrp" %>
 <%@ Register src="~/DesktopModules/Rawson.ServiceItems/ServiceItemForm.ascx" tagname="SvcItemEdit" tagprefix="vt" %>
-<%@ Register Assembly="DevExpress.Web.v12.2" Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+
 
 
 <style type="text/css">

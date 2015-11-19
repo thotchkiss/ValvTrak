@@ -18,7 +18,7 @@ namespace Rawson.ChemicalPumps
             _controller = new ChemicalPumpFormController();
         }
 
-        protected void ASPxCallbackPanel1_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        protected void ASPxCallbackPanel1_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
 
         }

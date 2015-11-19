@@ -8,12 +8,13 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.ComponentModel;
+using System.Data.EntityClient;
 using System.Data.Objects;
 using System.Data.Objects.DataClasses;
-using System.Data.EntityClient;
-using System.ComponentModel;
-using System.Xml.Serialization;
+using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
@@ -409,6 +410,7 @@ namespace ValvTrak.Model
         private ObjectSet<WellSafetyTest> _WellSafetyTests;
 
         #endregion
+
         #region AddTo Methods
     
         /// <summary>
@@ -564,11 +566,11 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
-    
 
     #endregion
-    
+
     #region Entities
     
     /// <summary>
@@ -607,6 +609,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -901,6 +904,7 @@ namespace ValvTrak.Model
         partial void OnVersionChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -927,6 +931,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -957,6 +962,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1347,6 +1353,7 @@ namespace ValvTrak.Model
         partial void OnVersionChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1455,6 +1462,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1489,6 +1497,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1687,6 +1696,7 @@ namespace ValvTrak.Model
         partial void OnVersionChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1805,6 +1815,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1831,6 +1842,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1885,6 +1897,7 @@ namespace ValvTrak.Model
         partial void OnMethodChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1911,6 +1924,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1945,6 +1959,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2191,6 +2206,7 @@ namespace ValvTrak.Model
         partial void OnVersionChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2481,6 +2497,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2509,6 +2526,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2803,6 +2821,7 @@ namespace ValvTrak.Model
         partial void OnVersionChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2943,6 +2962,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2975,6 +2995,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -3485,6 +3506,7 @@ namespace ValvTrak.Model
         partial void OnVersionChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -3603,6 +3625,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -3641,6 +3664,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -4199,6 +4223,7 @@ namespace ValvTrak.Model
         partial void OnSapWoNumChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -4611,6 +4636,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -4639,6 +4665,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -4717,6 +4744,7 @@ namespace ValvTrak.Model
         partial void OnSequenceChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -4743,6 +4771,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -4771,6 +4800,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -4849,6 +4879,7 @@ namespace ValvTrak.Model
         partial void OnEnabledChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -4897,6 +4928,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -4927,6 +4959,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -5125,6 +5158,7 @@ namespace ValvTrak.Model
         partial void OnSysCodeChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -5151,6 +5185,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -5181,6 +5216,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -5283,6 +5319,7 @@ namespace ValvTrak.Model
         partial void OnVersionChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -5331,6 +5368,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -5363,6 +5401,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -5489,6 +5528,7 @@ namespace ValvTrak.Model
         partial void OnVersionChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -5553,6 +5593,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -5589,6 +5630,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -5763,6 +5805,7 @@ namespace ValvTrak.Model
         partial void OnVersionChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -5789,6 +5832,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -5815,6 +5859,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -6205,6 +6250,7 @@ namespace ValvTrak.Model
         partial void OnOutletFlangeRatingChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -6427,6 +6473,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -6453,6 +6500,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -6507,6 +6555,7 @@ namespace ValvTrak.Model
         partial void OnCategoryChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -6533,6 +6582,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -6561,6 +6611,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -6639,6 +6690,7 @@ namespace ValvTrak.Model
         partial void OnServiceItemCategoryIDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -6703,6 +6755,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -6735,6 +6788,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -7629,6 +7683,7 @@ namespace ValvTrak.Model
         partial void OnSapPsvChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -7861,6 +7916,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -7891,6 +7947,7 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -8641,6 +8698,7 @@ namespace ValvTrak.Model
         partial void OnVersionChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -8797,8 +8855,10 @@ namespace ValvTrak.Model
         }
 
         #endregion
+
     }
 
     #endregion
+
     
 }

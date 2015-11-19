@@ -10,7 +10,7 @@ using Rawson.App;
 using Rawson.Data;
 using DevExpress.Data;
 using System.Reflection;
-using DevExpress.Web.ASPxGridView;
+using DevExpress.Web;
 using Rawson.App.Security;
 using DotNetNuke.Common.Utilities;
 using Rawson.Data.Controllers;
@@ -192,7 +192,7 @@ public partial class ValveTestsSearch : PortalModuleBase
 
     }
 
-    protected void LocationFilter_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+    protected void LocationFilter_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
     {
         LocationFilter.DataBind();
         LocationFilter.Value = -1;
@@ -256,7 +256,7 @@ public partial class ValveTestsSearch : PortalModuleBase
         Session[ "ValveTestQuery" ] = q;
     }
 
-    protected void PrintSelected_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+    protected void PrintSelected_Callback(object source, DevExpress.Web.CallbackEventArgs e)
     {
         if (reportingGrid.Selection.Count <= 0)
             return;
@@ -275,7 +275,7 @@ public partial class ValveTestsSearch : PortalModuleBase
         PrintSelected.JSProperties["cpReportUrl"] = ResourcePaths.DownloadHelperPath + DocumentPaths.ValveTestFieldReport;
     }
 
-    protected void PrintAll_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+    protected void PrintAll_Callback(object source, DevExpress.Web.CallbackEventArgs e)
     {
         ValveTestQuery q = Session["ValveTestQuery"] as ValveTestQuery;
 

@@ -1,24 +1,15 @@
 ﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.Employees.EmployeeForm, App_Web_tgoifdct" enabletheming="true" %>
-<%@ Register Assembly="DevExpress.Web.ASPxGridView.v12.1.Export"
-    Namespace="DevExpress.Web.ASPxGridView.Export" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1"
-    Namespace="DevExpress.Web.ASPxHiddenField" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1"
-    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1"
-    Namespace="DevExpress.Web.ASPxCallback" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.ASPxGridView.v12.1"
-    Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v12.1"
-    Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1"
-    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1"
-    Namespace="DevExpress.Web.ASPxPopupControl" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1"
-    Namespace="DevExpress.Web.ASPxLoadingPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v12.1"
-    Namespace="DevExpress.Web.ASPxGlobalEvents" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v15.1"
+    Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+
+
+
+
+
+
+
+
 
 <script type="text/javascript">
 

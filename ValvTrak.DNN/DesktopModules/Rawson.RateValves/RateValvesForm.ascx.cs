@@ -113,12 +113,12 @@ public partial class RateValvesForm : PortalModuleBase
         e.Result = controller.GetEmployeesList();
     }
 
-    protected void ASPxSpellChecker1_CheckedElementResolve(object sender, DevExpress.Web.ASPxClasses.ControlResolveEventArgs e)
+    protected void ASPxSpellChecker1_CheckedElementResolve(object sender, DevExpress.Web.ControlResolveEventArgs e)
     {
         e.ResolvedControl = RemarksTextBox;
     }
 
-    protected void SaveAction_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+    protected void SaveAction_Callback(object source, DevExpress.Web.CallbackEventArgs e)
     {
         RateValveFormController controller = Context.Items["#boController"] as RateValveFormController;
         RateValveTest rvt = controller.Entity;

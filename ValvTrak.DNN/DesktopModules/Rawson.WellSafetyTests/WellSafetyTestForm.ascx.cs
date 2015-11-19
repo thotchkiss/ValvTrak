@@ -111,12 +111,12 @@ namespace Rawson.WellSafetyTests
             FSR_NumTextBox.Focus();
         }
 
-        protected void ASPxSpellChecker1_CheckedElementResolve(object sender, DevExpress.Web.ASPxClasses.ControlResolveEventArgs e)
+        protected void ASPxSpellChecker1_CheckedElementResolve(object sender, DevExpress.Web.ControlResolveEventArgs e)
         {
             e.ResolvedControl = NotesTextBox;
         }
 
-        protected void SaveAction_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+        protected void SaveAction_Callback(object source, DevExpress.Web.CallbackEventArgs e)
         {
             WellSafetyFormController controller = Context.Items["#boController"] as WellSafetyFormController;
             WellSafetyTest wt = controller.Entity;

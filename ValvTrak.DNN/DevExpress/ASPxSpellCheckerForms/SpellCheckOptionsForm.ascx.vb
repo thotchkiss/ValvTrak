@@ -10,7 +10,7 @@ Imports System.Web.UI.WebControls
 Imports System.Web.UI.WebControls.WebParts
 Imports System.Web.UI.HtmlControls
 Imports DevExpress.Web.ASPxSpellChecker
-Imports DevExpress.Web.ASPxEditors
+Imports DevExpress.Web
 Imports DevExpress.Web.ASPxSpellChecker.Localization
 
 Public Partial Class SpellCheckOptionsForm

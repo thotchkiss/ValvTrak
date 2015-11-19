@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SRD" EntityNamespace="Rawson.Data.Model" ContextNamespace="Rawson.Data" Class="ValvTrakDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="ConnectionString" ConnectionString="Data Source=localhost;Initial Catalog=SRD;User ID=srd;Password=HOmLF1L8" Provider="System.Data.SqlClient" />
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=localhost\SQLExpress;Initial Catalog=SRD;User ID=srd;Password=HOmLF1L8" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ClientContactPositions" Member="ClientContactPositions">
     <Type Name="ClientContactPosition">
       <Column Name="ClientContactPositionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

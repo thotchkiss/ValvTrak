@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using DotNetNuke.Entities.Modules;
 using Rawson.Data.Controllers;
 using DotNetNuke.Services.Exceptions;
-using DevExpress.Web.ASPxGridView;
+using DevExpress.Web;
 using DotNetNuke.Common.Utilities;
 using Rawson.App;
 using Rawson.Reports.Constants;
@@ -201,7 +201,7 @@ public partial class RateValvesSearch : PortalModuleBase
             q.PageIndex = reportingGrid.PageIndex;
     }
 
-    protected void LocationFilter_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+    protected void LocationFilter_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
     {
         LocationFilter.DataBind();
         LocationFilter.Value = -1;
@@ -229,7 +229,7 @@ public partial class RateValvesSearch : PortalModuleBase
         e.Result = controller.GetJobStatus();
     }
 
-    protected void PrintSelected_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+    protected void PrintSelected_Callback(object source, DevExpress.Web.CallbackEventArgs e)
     {
         JavaScriptSerializer js = new JavaScriptSerializer();
 
@@ -242,7 +242,7 @@ public partial class RateValvesSearch : PortalModuleBase
         PrintSelected.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.RateValveFieldReport, cacheKey);
     }
 
-    protected void PrintAll_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+    protected void PrintAll_Callback(object source, DevExpress.Web.CallbackEventArgs e)
     {
         RateValveQuery q = DataCache.GetCache<RateValveQuery>((string)Context.Items["#queryKey"]);
 

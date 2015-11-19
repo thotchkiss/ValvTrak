@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Rawson.Data.Controllers;
 using DotNetNuke.Services.Exceptions;
-using DevExpress.Web.ASPxGridView;
+using DevExpress.Web;
 using DotNetNuke.Entities.Modules;
 using Rawson.Data.Model;
 
@@ -60,7 +60,7 @@ namespace Rawson.ClientLocations
             e.Result = controller.Scheduler.GetServiceIntervalsList();
         }
 
-        protected void ClientDetailsPanel_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        protected void ClientDetailsPanel_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
             string action = (string)hfSelectedClient["Action"];
 
@@ -105,7 +105,7 @@ namespace Rawson.ClientLocations
             LocationsGrid.DataBind();
         }
 
-        protected void LocationDetailsPanel_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        protected void LocationDetailsPanel_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
             string action = (string)hfSelectedLocation["Action"];
 
@@ -168,7 +168,7 @@ namespace Rawson.ClientLocations
             }
         }
 
-        protected void ClientSaveAction_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+        protected void ClientSaveAction_Callback(object source, DevExpress.Web.CallbackEventArgs e)
         {
             ClientFormController controller = Context.Items["#boController"] as ClientFormController;
 
@@ -220,7 +220,7 @@ namespace Rawson.ClientLocations
             //}
         }
 
-        protected void LocationSaveAction_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+        protected void LocationSaveAction_Callback(object source, DevExpress.Web.CallbackEventArgs e)
         {
             ClientFormController controller = Context.Items["#boController"] as ClientFormController;
             controller.Load(hfSelectedClient["ClientID"]);
@@ -297,7 +297,7 @@ namespace Rawson.ClientLocations
             ClientsGrid.DataBind();
         }
 
-        protected void LocationSchedulingCallbackPanel_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        protected void LocationSchedulingCallbackPanel_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
             ClientFormController controller = Context.Items["#boController"] as ClientFormController;
 

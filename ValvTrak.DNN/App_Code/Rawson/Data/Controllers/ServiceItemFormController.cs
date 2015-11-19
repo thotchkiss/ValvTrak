@@ -6,7 +6,7 @@ using Rawson.Data.Model;
 using Microsoft.Practices.EnterpriseLibrary.Validation;
 using Rawson.App;
 using Rawson.Data.Specifications;
-using DevExpress.Web.ASPxEditors;
+using DevExpress.Web;
 
 namespace Rawson.Data.Controllers
 {

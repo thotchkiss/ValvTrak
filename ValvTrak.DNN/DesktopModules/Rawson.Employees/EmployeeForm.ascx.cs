@@ -40,7 +40,7 @@ namespace Rawson.Employees
             e.Result = controller.GetEmployeeLocations();
         }
 
-        protected void DetailsPanel_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        protected void DetailsPanel_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
             if (String.IsNullOrEmpty(e.Parameter)) // New
             {
@@ -73,7 +73,7 @@ namespace Rawson.Employees
             }
         }
 
-        protected void EmployeeSaveAction_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+        protected void EmployeeSaveAction_Callback(object source, DevExpress.Web.CallbackEventArgs e)
         {
             EmployeeFormController controller = Context.Items["#boController"] as EmployeeFormController;
             controller.Load(EmployeeLocalData["EmployeeID"]);

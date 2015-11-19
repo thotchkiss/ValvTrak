@@ -9,7 +9,7 @@ using Rawson.Data;
 using Rawson.App;
 using System.Reflection;
 using Rawson.App.Security;
-using DevExpress.Web.ASPxGridView;
+using DevExpress.Web;
 using DevExpress.Data;
 using Rawson.Data.Controllers;
 using System.ServiceModel.Syndication;
@@ -167,7 +167,7 @@ namespace Rawson.GreasingRecords
             e.Result = controller.GetAuthorizedClients(UserId);
         }
 
-        protected void LocationFilter_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        protected void LocationFilter_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
             LocationFilter.DataBind();
 
@@ -189,7 +189,7 @@ namespace Rawson.GreasingRecords
             e.Result = controller.GetLubeTypes();
         }
 
-        protected void PrintSelected_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+        protected void PrintSelected_Callback(object source, DevExpress.Web.CallbackEventArgs e)
         {
             JavaScriptSerializer js = new JavaScriptSerializer();
 
@@ -202,7 +202,7 @@ namespace Rawson.GreasingRecords
             PrintSelected.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.GreasingRecordFieldReport, cacheKey);
         }
 
-        protected void PrintAll_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+        protected void PrintAll_Callback(object source, DevExpress.Web.CallbackEventArgs e)
         {
             GreasingRecordQuery q = DataCache.GetCache<GreasingRecordQuery>((string)Context.Items["#queryKey"]);
             if (q == null)

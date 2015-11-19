@@ -10,7 +10,7 @@ using Rawson.App;
 using DotNetNuke.Common.Utilities;
 using Rawson.Data;
 using DotNetNuke.Entities.Users;
-using DevExpress.Web.ASPxGridView;
+using DevExpress.Web;
 using Rawson.App.Security;
 using DotNetNuke.Entities.Tabs;
 using System.Runtime.Serialization;
@@ -177,7 +177,7 @@ namespace Rawson.Jobs
             e.Result = controller.GetEmployeesList();
         }
 
-        protected void CompletionDateEdit_Validation(object sender, DevExpress.Web.ASPxEditors.ValidationEventArgs e)
+        protected void CompletionDateEdit_Validation(object sender, DevExpress.Web.ValidationEventArgs e)
         {
             if (!(e.Value is DateTime))
                 return;
@@ -282,7 +282,7 @@ namespace Rawson.Jobs
             LocationSelect.DataBind();
         }
 
-        protected void LocationSelect_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        protected void LocationSelect_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
             LocationSelect.DataBind();
         }
@@ -300,7 +300,7 @@ namespace Rawson.Jobs
             ServiceDetailsGrid.DataBind();
         }
 
-        protected void SaveAction_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+        protected void SaveAction_Callback(object source, DevExpress.Web.CallbackEventArgs e)
         {
             JobFormController controller = Context.Items["#boController"] as JobFormController;
             Job job = controller.Entity;

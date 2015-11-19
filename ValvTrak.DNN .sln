@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rawson.Data.Model", "Rawson.Data.Model\Rawson.Data.Model.csproj", "{EBF20F87-6687-459E-AD92-3B83BC99144E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rawson.Providers", "Rawson.Providers\Rawson.Providers.csproj", "{C1FECB50-7231-4899-9FF0-A9D50A293273}"
@@ -26,31 +28,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ValvTrak.DNN", "ValvTrak.DN
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "8308"
+		SlnRelativePath = "ValvTrak.DNN\"
 	EndProjectSection
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ValvTrak.Silverlight.Web", "ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Web\", "{643561F1-5E7E-442F-9AF1-10C6F6588EDB}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		ProjectReferences = ""
-		Debug.AspNetCompiler.VirtualPath = "/ValvTrak.Silverlight.Web"
-		Debug.AspNetCompiler.PhysicalPath = "ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Web\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\ValvTrak.Silverlight.Web\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/ValvTrak.Silverlight.Web"
-		Release.AspNetCompiler.PhysicalPath = "ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Web\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\ValvTrak.Silverlight.Web\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "8311"
-		ProjOutputReferences = "{5ABD20C3-FFFA-4592-BA39-39FB13A04C6E}|ClientBin|false;"
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValvTrak.Silverlight.Maps", "ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps.csproj", "{5ABD20C3-FFFA-4592-BA39-39FB13A04C6E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{73805DAC-A20C-4686-9A81-A7A2A1A5A1A9}"
 	ProjectSection(SolutionItems) = preProject
@@ -59,9 +38,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{73805D
 	EndProjectSection
 EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = ValvTrak.DNN .vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -83,20 +59,15 @@ Global
 		{4483A01F-57BF-4014-9A9F-025A2BB760F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4483A01F-57BF-4014-9A9F-025A2BB760F0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{4483A01F-57BF-4014-9A9F-025A2BB760F0}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{643561F1-5E7E-442F-9AF1-10C6F6588EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{643561F1-5E7E-442F-9AF1-10C6F6588EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{643561F1-5E7E-442F-9AF1-10C6F6588EDB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{643561F1-5E7E-442F-9AF1-10C6F6588EDB}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{5ABD20C3-FFFA-4592-BA39-39FB13A04C6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5ABD20C3-FFFA-4592-BA39-39FB13A04C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5ABD20C3-FFFA-4592-BA39-39FB13A04C6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5ABD20C3-FFFA-4592-BA39-39FB13A04C6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.ExceptionHandling.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Validation.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Logging.5.0.505.1\lib\NET35;packages\EnterpriseLibrary.ExceptionHandling.Logging.5.0.505.0\lib\NET35
 		VisualSVNWorkingCopyRoot = .
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.ExceptionHandling.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Validation.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Logging.5.0.505.1\lib\NET35;packages\EnterpriseLibrary.ExceptionHandling.Logging.5.0.505.0\lib\NET35
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = ValvTrak.DNN .vsmdi
 	EndGlobalSection
 EndGlobal

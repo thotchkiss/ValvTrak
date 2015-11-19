@@ -424,3 +424,10 @@ C:\Users\mil8924\Documents\Personal\Outside Work\ValvTrak\ValvTrak.Silverlight.M
 C:\Users\mil8924\Documents\Personal\Outside Work\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\ValvTrak.Silverlight.Maps.dll
 C:\Users\mil8924\Documents\Personal\Outside Work\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\ValvTrak.Silverlight.Maps.pdb
 C:\Users\mil8924\Documents\Personal\Outside Work\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\XapCacheFile.xml
+C:\Users\Tim\Source\Workspaces\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\ValvTrak.Silverlight.Maps.csprojResolveAssemblyReference.cache
+C:\Users\Tim\Source\Workspaces\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\App.g.cs
+C:\Users\Tim\Source\Workspaces\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\Shell.g.cs
+C:\Users\Tim\Source\Workspaces\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\Views\LocationView.g.cs
+C:\Users\Tim\Source\Workspaces\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\Views\MapView.g.cs
+C:\Users\Tim\Source\Workspaces\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\Views\NavigationView.g.cs
+C:\Users\Tim\Source\Workspaces\ValvTrak\ValvTrak.Silverlight.Maps\ValvTrak.Silverlight.Maps\obj\Debug\ValvTrak.Silverlight.Maps.g.resources

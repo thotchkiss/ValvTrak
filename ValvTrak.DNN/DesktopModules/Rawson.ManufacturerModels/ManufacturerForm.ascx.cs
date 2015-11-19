@@ -18,13 +18,13 @@ namespace Rawson.ManufacturerModels
             Context.Items.Add("#boController", controller);
         }
 
-        protected void ManufacturerGridPanel_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        protected void ManufacturerGridPanel_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
             ManufacturerGrid.FilterExpression = "[ManufacturerID] = " + e.Parameter;
             ManufacturerGrid.DataBind();
         }
 
-        protected void ModelGridPanel_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        protected void ModelGridPanel_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
             ManufacturerFormController controller = Context.Items["#boController"] as ManufacturerFormController;
 
@@ -40,7 +40,7 @@ namespace Rawson.ManufacturerModels
             ModelGrid.DataBind();
         }
 
-        protected void ManufacturerPanel_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        protected void ManufacturerPanel_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
             ManufacturerFormController controller = Context.Items["#boController"] as ManufacturerFormController;
             controller.Load(hfManufacturerGridLocalData["ManufacturerID"]);
@@ -57,7 +57,7 @@ namespace Rawson.ManufacturerModels
             txtManufacturerName.Focus();
         }
 
-        protected void ModelPanel_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e)
+        protected void ModelPanel_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e)
         {
             ManufacturerFormController controller = Context.Items["#boController"] as ManufacturerFormController;
             controller.Load(hfModelGridLocalData["ManufacturerID"]);
@@ -71,7 +71,7 @@ namespace Rawson.ManufacturerModels
             txtModelName.Focus();
         }
 
-        protected void ManufacturerSaveAction_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+        protected void ManufacturerSaveAction_Callback(object source, DevExpress.Web.CallbackEventArgs e)
         {
             ManufacturerFormController controller = Context.Items["#boController"] as ManufacturerFormController;
             controller.Load(hfManufacturerGridLocalData["ManufacturerID"]);
@@ -99,7 +99,7 @@ namespace Rawson.ManufacturerModels
             }
         }
 
-        protected void ModelSaveAction_Callback(object source, DevExpress.Web.ASPxCallback.CallbackEventArgs e)
+        protected void ModelSaveAction_Callback(object source, DevExpress.Web.CallbackEventArgs e)
         {
             ManufacturerFormController controller = Context.Items["#boController"] as ManufacturerFormController;
             controller.Load(hfModelGridLocalData["ManufacturerID"]);
