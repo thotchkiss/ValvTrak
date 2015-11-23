@@ -7060,6 +7060,12 @@ namespace Rawson.Data.Model
 		
 		private byte[] _Version;
 		
+		private System.Nullable<decimal> _Pop_1;
+		
+		private System.Nullable<decimal> _Pop_2;
+		
+		private System.Nullable<decimal> _Pop_3;
+		
 		private EntityRef<Job> _Job;
 		
 		private EntityRef<List> _List;
@@ -7152,6 +7158,12 @@ namespace Rawson.Data.Model
     partial void OnModifiedDateChanged();
     partial void OnVersionChanging(byte[] value);
     partial void OnVersionChanged();
+    partial void OnPop_1Changing(System.Nullable<decimal> value);
+    partial void OnPop_1Changed();
+    partial void OnPop_2Changing(System.Nullable<decimal> value);
+    partial void OnPop_2Changed();
+    partial void OnPop_3Changing(System.Nullable<decimal> value);
+    partial void OnPop_3Changed();
     #endregion
 		
 		public ValveTest()
@@ -7930,6 +7942,66 @@ namespace Rawson.Data.Model
 					this._Version = value;
 					this.SendPropertyChanged("Version");
 					this.OnVersionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pop_1", DbType="decimal(9,2)")]
+		public System.Nullable<decimal> Pop_1
+		{
+			get
+			{
+				return this._Pop_1;
+			}
+			set
+			{
+				if ((this._Pop_1 != value))
+				{
+					this.OnPop_1Changing(value);
+					this.SendPropertyChanging();
+					this._Pop_1 = value;
+					this.SendPropertyChanged("Pop_1");
+					this.OnPop_1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pop_2", DbType="decimal(9,2)")]
+		public System.Nullable<decimal> Pop_2
+		{
+			get
+			{
+				return this._Pop_2;
+			}
+			set
+			{
+				if ((this._Pop_2 != value))
+				{
+					this.OnPop_2Changing(value);
+					this.SendPropertyChanging();
+					this._Pop_2 = value;
+					this.SendPropertyChanged("Pop_2");
+					this.OnPop_2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pop_3", DbType="decimal(9,2)")]
+		public System.Nullable<decimal> Pop_3
+		{
+			get
+			{
+				return this._Pop_3;
+			}
+			set
+			{
+				if ((this._Pop_3 != value))
+				{
+					this.OnPop_3Changing(value);
+					this.SendPropertyChanging();
+					this._Pop_3 = value;
+					this.SendPropertyChanged("Pop_3");
+					this.OnPop_3Changed();
 				}
 			}
 		}

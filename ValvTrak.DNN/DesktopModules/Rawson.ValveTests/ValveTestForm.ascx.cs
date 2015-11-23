@@ -127,6 +127,10 @@ namespace Rawson.ValveTests
             SetPressureFoundTextBox.Text = vt.SetPressureFound.GetValueOrDefault ( 0 ).ToString ( "N2" );
             SetPressureLeftTextBox.Text = vt.SetPressureLeft.GetValueOrDefault ( 0 ).ToString ( "N2" );
 
+            Pop1TextBox.Text = vt.Pop_1.GetValueOrDefault(0).ToString("N2");
+            Pop2TextBox.Text = vt.Pop_1.GetValueOrDefault(0).ToString("N2");
+            Pop3TextBox.Text = vt.Pop_1.GetValueOrDefault(0).ToString("N2");
+
             TestResultIDSelect.Value = vt.TestResultID.GetValueOrDefault(-1);
 
             RemarksTextBox.Text = vt.Notes ?? "";
@@ -234,6 +238,10 @@ namespace Rawson.ValveTests
             vt.JsaComplete = JSACompleteCheckBox.Checked;
             vt.SetPressureFound = ( SetPressureFoundTextBox.Text == "" ) ? (decimal?)null : decimal.Parse ( SetPressureFoundTextBox.Text );
             vt.SetPressureLeft = ( SetPressureLeftTextBox.Text == "" ) ? (decimal?)null : decimal.Parse ( SetPressureLeftTextBox.Text );
+
+            vt.Pop_1 = (Pop1TextBox.Text == "") ? (decimal?)null : decimal.Parse(Pop1TextBox.Text);
+            vt.Pop_2 = (Pop2TextBox.Text == "") ? (decimal?)null : decimal.Parse(Pop2TextBox.Text);
+            vt.Pop_3 = (Pop3TextBox.Text == "") ? (decimal?)null : decimal.Parse(Pop3TextBox.Text);
 
             vt.TestResultID = ( (int)TestResultIDSelect.Value == -1 ) ? (int?)null : Convert.ToInt32 ( TestResultIDSelect.Value );
 

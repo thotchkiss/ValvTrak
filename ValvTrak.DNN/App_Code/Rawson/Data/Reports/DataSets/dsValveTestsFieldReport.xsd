@@ -16,7 +16,7 @@
                     <CommandText>SELECT        ValveTestID, JobID, SalesOrderNum, FSRNum, ClientName, ClientLocationName, ServiceItemID, CostCenter, Latitude, Longitude, Description, DateTested, Model, 
                          ManufacturerName, Threaded, Flanged, SerialNum, InletSize, OutletSize, InletFlangeRating, OutletFlangeRating, ModelSize, SetPressure, BackPressure, 
                          ColdDiffPressure, TempCorr, Capacity, CapacityTypeID, CapacityTypeDisplay, SealNum, GaugeNum, CalibrationDue, CodedSource, CodedDisplay, ValveDate, 
-                         IsolationValve, ReliefValveSupport, TestPort, WeatherCap, DotLocation, JsaComplete, SetPressureFound, SetPressureLeft, TestResultID, TestResultDisplay, Notes, 
+                         IsolationValve, ReliefValveSupport, TestPort, WeatherCap, DotLocation, JsaComplete, SetPressureFound, SetPressureLeft, Pop_1, Pop_2, Pop_3, TestResultID, TestResultDisplay, Notes, 
                          ReviewItems, TechID, TechnicianID, TechnicianDisplay, CustomerWitness, CreatedBy, CreatedByDisplay, CreatedDate, SapWoNum, SapPsv, SapEquipNum
 FROM            dbo.vw_ValveTests
 </CommandText>
@@ -34,8 +34,6 @@ FROM            dbo.vw_ValveTests
               <Mapping SourceColumn="ClientLocationName" DataSetColumn="ClientLocationName" />
               <Mapping SourceColumn="ServiceItemID" DataSetColumn="ServiceItemID" />
               <Mapping SourceColumn="CostCenter" DataSetColumn="CostCenter" />
-              <Mapping SourceColumn="Latitude" DataSetColumn="Latitude" />
-              <Mapping SourceColumn="Longitude" DataSetColumn="Longitude" />
               <Mapping SourceColumn="Description" DataSetColumn="Description" />
               <Mapping SourceColumn="DateTested" DataSetColumn="DateTested" />
               <Mapping SourceColumn="Model" DataSetColumn="Model" />
@@ -83,6 +81,11 @@ FROM            dbo.vw_ValveTests
               <Mapping SourceColumn="SapWoNum" DataSetColumn="SapWoNum" />
               <Mapping SourceColumn="SapPsv" DataSetColumn="SapPsv" />
               <Mapping SourceColumn="SapEquipNum" DataSetColumn="SapEquipNum" />
+              <Mapping SourceColumn="Latitude" DataSetColumn="Latitude1" />
+              <Mapping SourceColumn="Longitude" DataSetColumn="Longitude1" />
+              <Mapping SourceColumn="Pop_1" DataSetColumn="Pop_1" />
+              <Mapping SourceColumn="Pop_2" DataSetColumn="Pop_2" />
+              <Mapping SourceColumn="Pop_3" DataSetColumn="Pop_3" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -94,7 +97,7 @@ FROM            dbo.vw_ValveTests
   <xs:element name="dsValveTestsFieldReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsValveTestsFieldReport" msprop:Generator_UserDSName="dsValveTestsFieldReport">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="dsValveTests" msprop:Generator_TableClassName="dsValveTestsDataTable" msprop:Generator_TableVarName="tabledsValveTests" msprop:Generator_TablePropName="dsValveTests" msprop:Generator_RowDeletingName="dsValveTestsRowDeleting" msprop:Generator_UserTableName="dsValveTests" msprop:Generator_RowChangingName="dsValveTestsRowChanging" msprop:Generator_RowEvHandlerName="dsValveTestsRowChangeEventHandler" msprop:Generator_RowDeletedName="dsValveTestsRowDeleted" msprop:Generator_RowEvArgName="dsValveTestsRowChangeEvent" msprop:Generator_RowChangedName="dsValveTestsRowChanged" msprop:Generator_RowClassName="dsValveTestsRow">
+        <xs:element name="dsValveTests" msprop:Generator_TableClassName="dsValveTestsDataTable" msprop:Generator_TableVarName="tabledsValveTests" msprop:Generator_RowChangedName="dsValveTestsRowChanged" msprop:Generator_TablePropName="dsValveTests" msprop:Generator_RowDeletingName="dsValveTestsRowDeleting" msprop:Generator_RowChangingName="dsValveTestsRowChanging" msprop:Generator_RowEvHandlerName="dsValveTestsRowChangeEventHandler" msprop:Generator_RowDeletedName="dsValveTestsRowDeleted" msprop:Generator_RowClassName="dsValveTestsRow" msprop:Generator_UserTableName="dsValveTests" msprop:Generator_RowEvArgName="dsValveTestsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ValveTestID" msprop:Generator_ColumnVarNameInTable="columnValveTestID" msprop:Generator_ColumnPropNameInRow="ValveTestID" msprop:Generator_ColumnPropNameInTable="ValveTestIDColumn" msprop:Generator_UserColumnName="ValveTestID" type="xs:int" />
@@ -304,6 +307,11 @@ FROM            dbo.vw_ValveTests
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Latitude1" msdata:ReadOnly="true" msdata:Caption="Latitude" msprop:Generator_ColumnVarNameInTable="columnLatitude1" msprop:Generator_ColumnPropNameInRow="Latitude1" msprop:Generator_ColumnPropNameInTable="Latitude1Column" msprop:Generator_UserColumnName="Latitude1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Longitude1" msdata:ReadOnly="true" msdata:Caption="Longitude" msprop:Generator_ColumnVarNameInTable="columnLongitude1" msprop:Generator_ColumnPropNameInRow="Longitude1" msprop:Generator_ColumnPropNameInTable="Longitude1Column" msprop:Generator_UserColumnName="Longitude1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Pop_1" msprop:Generator_ColumnVarNameInTable="columnPop_1" msprop:Generator_ColumnPropNameInRow="Pop_1" msprop:Generator_ColumnPropNameInTable="Pop_1Column" msprop:Generator_UserColumnName="Pop_1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Pop_2" msprop:Generator_ColumnVarNameInTable="columnPop_2" msprop:Generator_ColumnPropNameInRow="Pop_2" msprop:Generator_ColumnPropNameInTable="Pop_2Column" msprop:Generator_UserColumnName="Pop_2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Pop_3" msprop:Generator_ColumnVarNameInTable="columnPop_3" msprop:Generator_ColumnPropNameInRow="Pop_3" msprop:Generator_ColumnPropNameInTable="Pop_3Column" msprop:Generator_UserColumnName="Pop_3" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

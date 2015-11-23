@@ -1,11 +1,5 @@
 ﻿<%@ Control Language="C#" CodeFile="~/DesktopModules/Rawson.ValveTests/ValveTestForm.ascx.cs" Inherits="Rawson.ValveTests.ValveTestForm" AutoEventWireup="true" EnableTheming="true" %>
 <%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dx" %>
-
-
-
-
-
-
 <%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v15.1" Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dxsc" %>
 <%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxrp" %>
 <%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxcp" %>
@@ -24,6 +18,9 @@
 	{
 		height: 22px;
 	}
+    .auto-style1 {
+        height: 54px;
+    }
 </style>
 
 <script type="text/javascript">
@@ -525,7 +522,7 @@
 									<table>
 										<tr>
 											<td>
-												<dxe:ASPxLabel ID="ASPxLabel27" runat="server" Text="Set Pres. Found :">
+												<dxe:ASPxLabel ID="ASPxLabel27" runat="server" Text="Set Press. Found :">
 												</dxe:ASPxLabel>
 											</td>
 											<td>
@@ -539,11 +536,64 @@
 										</tr>
 									</table>
 								</td>
+								<td colspan="5">
+									<table>
+										<tr>
+											<td>
+												<table>
+                                                                <tr>
+                                                                    <td>
+                                                                        <dx:ASPxLabel ID="ASPxLabel28" runat="server" Text="Pop #1 :"></dx:ASPxLabel>
+                                                                    </td>
+                                                                    <td>
+                                                                        <dx:ASPxTextBox ID="Pop1TextBox" runat="server" Width="70px" TabIndex="24"></dx:ASPxTextBox>
+                                                                    </td>
+                                                                    <td style="text-align:left">
+                                                                        <dx:ASPxLabel ID="ASPxLabel29" runat="server" Text="(psig)"></dx:ASPxLabel>
+                                                                    </td>
+                                                                </tr>
+												</table>
+											</td>
+											<td>
+												<table>
+                                                                <tr>
+                                                                    <td>
+                                                                        <dx:ASPxLabel ID="ASPxLabel35" runat="server" Text="Pop #2:"></dx:ASPxLabel>
+                                                                    </td>
+                                                                    <td>
+                                                                        <dx:ASPxTextBox ID="Pop2TextBox" runat="server" Width="70px"  TabIndex="24"></dx:ASPxTextBox>
+                                                                    </td>
+                                                                    <td style="text-align:left">
+                                                                        <dx:ASPxLabel ID="ASPxLabel37" runat="server" Text="(psig)"></dx:ASPxLabel>
+                                                                    </td>
+                                                                </tr>
+												</table>
+											</td>
+											<td>
+												<table>
+                                                                <tr>
+                                                                    <td>
+                                                                        <dx:ASPxLabel ID="ASPxLabel38" runat="server" Text="Pop #3:"></dx:ASPxLabel>
+                                                                    </td>
+                                                                    <td>
+                                                                        <dx:ASPxTextBox ID="Pop3TextBox" runat="server" Width="70px" abIndex="24"></dx:ASPxTextBox>
+                                                                    </td>
+                                                                    <td style="text-align:left">
+                                                                        <dx:ASPxLabel ID="ASPxLabel41" runat="server" Text="(psig)"></dx:ASPxLabel>
+                                                                    </td>
+                                                                </tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+                                  <tr>
 								<td colspan="3">
 									<table>
 										<tr>
 											<td>
-												<dxe:ASPxLabel ID="ASPxLabel28" runat="server" Text="Set Pres. Left :">
+												<dxe:ASPxLabel ID="ASPxLabel39" runat="server" Text="Set Pressure Left :">
 												</dxe:ASPxLabel>
 											</td>
 											<td>
@@ -551,28 +601,37 @@
 													Width="100px"></dxe:ASPxTextBox>
 											</td>
 											<td align="left">
-												<dxe:ASPxLabel ID="ASPxLabel35" runat="server" Text="(psig)">
+												<dxe:ASPxLabel ID="ASPxLabel40" runat="server" Text="(psig)">
 												</dxe:ASPxLabel>
 											</td>
 										</tr>
 									</table>
 								</td>
-								<td nowrap="nowrap">
-									<dxe:ASPxLabel ID="ASPxLabel29" runat="server" Text="Test Result :">
-									</dxe:ASPxLabel>
-								</td>
-								<td>
-									<dxe:ASPxComboBox ID="TestResultIDSelect" runat="server" Width="170px" 
-										ValueType="System.Int32" TabIndex="25" IncrementalFilteringMode="StartsWith">
-										<ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
-										<Items>
-											<dxe:ListEditItem Text="-- Select Test Result ID --" Value="-1" />
-											<dxe:ListEditItem Text="Tested Good" Value="5" />
-											<dxe:ListEditItem Text="Needs Replacement" Value="7" />
-											<dxe:ListEditItem Text="Repaired" Value="8" />
-											<dxe:ListEditItem Text="Replaced" Value="9" />
-										</Items>
-									</dxe:ASPxComboBox>
+                                        <td colspan="5">
+									<table>
+										<tr>
+											<td style="padding-left:3px">
+												<dxe:ASPxLabel ID="ASPxLabel42" runat="server" Text="Result :">
+									               </dxe:ASPxLabel>
+											</td>
+											<td style="padding-left:4px">
+												<dxe:ASPxComboBox ID="TestResultIDSelect" runat="server" Width="170px" 
+										            ValueType="System.Int32" TabIndex="25" IncrementalFilteringMode="StartsWith">
+										            <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
+										            <Items>
+											            <dxe:ListEditItem Text="-- Select Test Result ID --" Value="-1" />
+											            <dxe:ListEditItem Text="Tested Good" Value="5" />
+											            <dxe:ListEditItem Text="Needs Replacement" Value="7" />
+											            <dxe:ListEditItem Text="Repaired" Value="8" />
+											            <dxe:ListEditItem Text="Replaced" Value="9" />
+										            </Items>
+									            </dxe:ASPxComboBox>
+											</td>
+											<td align="left">
+												&nbsp;
+											</td>
+										</tr>
+									</table>
 								</td>
 							</tr>
 							<tr>
@@ -582,11 +641,11 @@
 							   </td>
 							</tr>
 							<tr>
-								<td>
+								<td class="auto-style1">
 									<dxe:ASPxLabel ID="ASPxLabel30" runat="server" Text="Remarks :">
 									</dxe:ASPxLabel>
 								</td>
-								<td colspan="7">
+								<td colspan="7" class="auto-style1">
 									<dxe:ASPxTextBox ID="RemarksTextBox" runat="server" Height="50px" TextMode="MultiLine"
 										Width="100%" TabIndex="26"></dxe:ASPxTextBox>
 								</td>
@@ -610,6 +669,8 @@
 										 </Dictionaries>
 										 <ClientSideEvents BeforeCheck="function(s, e) {    RemarksCheckButton.SetEnabled(false); }"
 														   AfterCheck="function(s, e) { RemarksCheckButton.SetEnabled(true); }" />
+
+<SettingsLoadingPanel Enabled="False"></SettingsLoadingPanel>
 									 </dxsc:ASPxSpellChecker>
 
 								</td>
@@ -650,6 +711,8 @@
 										 </Dictionaries>
 										 <ClientSideEvents BeforeCheck="function(s, e) {    ItemsCheckButton.SetEnabled(false); }"
 														   AfterCheck="function(s, e) { ItemsCheckButton.SetEnabled(true); }" />
+
+<SettingsLoadingPanel Enabled="False"></SettingsLoadingPanel>
 									 </dxsc:ASPxSpellChecker>
 								</td>
 								<td></td>
