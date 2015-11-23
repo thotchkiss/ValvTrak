@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
 Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Rawson.Reports", "Rawson.Reports.rptproj", "{19FBDB1F-A411-467E-AE22-CBB39C8E209B}"
 EndProject
 Global

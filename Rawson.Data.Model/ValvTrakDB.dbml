@@ -338,6 +338,9 @@
       <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Always" />
       <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Always" />
       <Column Name="Version" AutoSync="Never" Type="System.Byte[]" DbType="Timestamp NOT NULL" CanBeNull="false" UpdateCheck="WhenChanged" IsVersion="true" />
+      <Column Member="Pop_1" Type="System.Decimal" DbType="decimal(9,2)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Member="Pop_2" Type="System.Decimal" DbType="decimal(9,2)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Member="Pop_3" Type="System.Decimal" DbType="decimal(9,2)" CanBeNull="true" UpdateCheck="Always" />
       <Association Name="Job_ValveTest" Member="Job" ThisKey="JobID" OtherKey="JobID" Type="Job" IsForeignKey="true" />
       <Association Name="List_ValveTest" Member="List" ThisKey="CapacityTypeID" OtherKey="ListID" Type="List" IsForeignKey="true" />
       <Association Name="ServiceItem_ValveTest" Member="ServiceItem" ThisKey="ServiceItemID" OtherKey="ServiceItemID" Type="ServiceItem" IsForeignKey="true" />
