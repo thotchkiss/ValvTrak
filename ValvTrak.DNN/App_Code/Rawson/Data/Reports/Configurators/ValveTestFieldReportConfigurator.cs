@@ -7,6 +7,7 @@ using Microsoft.Reporting.WebForms;
 using System.Collections.Specialized;
 using System.Data;
 using System.Drawing.Printing;
+using DotNetNuke.Common.Utilities;
 
 namespace Rawson.Reports
 {
@@ -25,11 +26,11 @@ namespace Rawson.Reports
             rpt.ProcessingMode = ProcessingMode.Local;
             rpt.LocalReport.ReportPath = HttpContext.Current.Server.MapPath ( "~/Desktopmodules/Rawson.Reports/Field" ) + "\\ValveTestFieldReport.rdlc";
 
-            dsValveTestsFieldReportTableAdapters.dtValveTestsTableAdapter adapter = new dsValveTestsFieldReportTableAdapters.dtValveTestsTableAdapter();
+            dsValveTestsFieldReportTableAdapters.dsValveTestsTableAdapter adapter = new dsValveTestsFieldReportTableAdapters.dsValveTestsTableAdapter();
             adapter.Connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ValvTrakData"].ConnectionString;
 
             DataTable dt = adapter.GetData();
-            dt.DefaultView.RowFilter = String.Format("RateValveTestID IN ({0})", HttpContext.Current.Session["ReportData"]);
+            dt.DefaultView.RowFilter = String.Format("ValveTestID IN ({0})", DataCache.GetCache(param["key"]));
 
             HttpContext.Current.Session["ReportData"] = null;
 

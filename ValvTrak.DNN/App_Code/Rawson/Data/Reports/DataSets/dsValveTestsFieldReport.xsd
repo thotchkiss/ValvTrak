@@ -8,18 +8,16 @@
           <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ValvTrakData" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ValvTrakData (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ValvTrakData.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtValveTestsTableAdapter" GeneratorDataComponentClassName="dtValveTestsTableAdapter" Name="dsValveTests" UserDataComponentName="dtValveTestsTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dsValveTestsTableAdapter" GeneratorDataComponentClassName="dsValveTestsTableAdapter" Name="dsValveTests" UserDataComponentName="dsValveTestsTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="ValvTrakData (Web.config)" DbObjectName="SRD.dbo.vw_ValveTests" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        ValveTestID, JobID, SalesOrderNum, FSRNum, ClientName, ClientLocationName, ServiceItemID, CostCenter, Latitude, Longitude, Description, DateTested, Model, 
-                         ManufacturerName, Threaded, Flanged, SerialNum, InletSize, OutletSize, InletFlangeRating, OutletFlangeRating, ModelSize, SetPressure, BackPressure, 
-                         ColdDiffPressure, TempCorr, Capacity, CapacityTypeID, CapacityTypeDisplay, SealNum, GaugeNum, CalibrationDue, CodedSource, CodedDisplay, ValveDate, 
-                         IsolationValve, ReliefValveSupport, TestPort, WeatherCap, DotLocation, JsaComplete, SetPressureFound, SetPressureLeft, Pop_1, Pop_2, Pop_3, TestResultID, TestResultDisplay, Notes, 
-                         ReviewItems, TechID, TechnicianID, TechnicianDisplay, CustomerWitness, CreatedBy, CreatedByDisplay, CreatedDate, SapWoNum, SapPsv, SapEquipNum
-FROM            dbo.vw_ValveTests
-</CommandText>
+                    <CommandText>SELECT        ValveTestID, JobID, SalesOrderNum, FSRNum, ClientName, ClientLocationName, ServiceItemID, CostCenter, Latitude, Longitude, Description, DateTested, Model, ManufacturerName, Threaded, Flanged, 
+                         SerialNum, InletSize, OutletSize, InletFlangeRating, OutletFlangeRating, ModelSize, SetPressure, BackPressure, ColdDiffPressure, TempCorr, Capacity, CapacityTypeID, CapacityTypeDisplay, SealNum, 
+                         GaugeNum, CalibrationDue, CodedSource, CodedDisplay, ValveDate, IsolationValve, ReliefValveSupport, TestPort, WeatherCap, DotLocation, JsaComplete, SetPressureFound, SetPressureLeft, Pop_1, Pop_2, 
+                         Pop_3, TestResultID, TestResultDisplay, Notes, ReviewItems, TechID, TechnicianID, TechnicianDisplay, CustomerWitness, CreatedBy, CreatedByDisplay, CreatedDate, SapWoNum, SapPsv, SapEquipNum
+FROM            vw_ValveTests</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -34,6 +32,8 @@ FROM            dbo.vw_ValveTests
               <Mapping SourceColumn="ClientLocationName" DataSetColumn="ClientLocationName" />
               <Mapping SourceColumn="ServiceItemID" DataSetColumn="ServiceItemID" />
               <Mapping SourceColumn="CostCenter" DataSetColumn="CostCenter" />
+              <Mapping SourceColumn="Latitude" DataSetColumn="Latitude" />
+              <Mapping SourceColumn="Longitude" DataSetColumn="Longitude" />
               <Mapping SourceColumn="Description" DataSetColumn="Description" />
               <Mapping SourceColumn="DateTested" DataSetColumn="DateTested" />
               <Mapping SourceColumn="Model" DataSetColumn="Model" />
@@ -67,6 +67,9 @@ FROM            dbo.vw_ValveTests
               <Mapping SourceColumn="JsaComplete" DataSetColumn="JsaComplete" />
               <Mapping SourceColumn="SetPressureFound" DataSetColumn="SetPressureFound" />
               <Mapping SourceColumn="SetPressureLeft" DataSetColumn="SetPressureLeft" />
+              <Mapping SourceColumn="Pop_1" DataSetColumn="Pop_1" />
+              <Mapping SourceColumn="Pop_2" DataSetColumn="Pop_2" />
+              <Mapping SourceColumn="Pop_3" DataSetColumn="Pop_3" />
               <Mapping SourceColumn="TestResultID" DataSetColumn="TestResultID" />
               <Mapping SourceColumn="TestResultDisplay" DataSetColumn="TestResultDisplay" />
               <Mapping SourceColumn="Notes" DataSetColumn="Notes" />
@@ -81,11 +84,6 @@ FROM            dbo.vw_ValveTests
               <Mapping SourceColumn="SapWoNum" DataSetColumn="SapWoNum" />
               <Mapping SourceColumn="SapPsv" DataSetColumn="SapPsv" />
               <Mapping SourceColumn="SapEquipNum" DataSetColumn="SapEquipNum" />
-              <Mapping SourceColumn="Latitude" DataSetColumn="Latitude1" />
-              <Mapping SourceColumn="Longitude" DataSetColumn="Longitude1" />
-              <Mapping SourceColumn="Pop_1" DataSetColumn="Pop_1" />
-              <Mapping SourceColumn="Pop_2" DataSetColumn="Pop_2" />
-              <Mapping SourceColumn="Pop_3" DataSetColumn="Pop_3" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -97,7 +95,7 @@ FROM            dbo.vw_ValveTests
   <xs:element name="dsValveTestsFieldReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsValveTestsFieldReport" msprop:Generator_UserDSName="dsValveTestsFieldReport">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="dsValveTests" msprop:Generator_TableClassName="dsValveTestsDataTable" msprop:Generator_TableVarName="tabledsValveTests" msprop:Generator_RowChangedName="dsValveTestsRowChanged" msprop:Generator_TablePropName="dsValveTests" msprop:Generator_RowDeletingName="dsValveTestsRowDeleting" msprop:Generator_RowChangingName="dsValveTestsRowChanging" msprop:Generator_RowEvHandlerName="dsValveTestsRowChangeEventHandler" msprop:Generator_RowDeletedName="dsValveTestsRowDeleted" msprop:Generator_RowClassName="dsValveTestsRow" msprop:Generator_UserTableName="dsValveTests" msprop:Generator_RowEvArgName="dsValveTestsRowChangeEvent">
+        <xs:element name="dsValveTests" msprop:Generator_TableClassName="dsValveTestsDataTable" msprop:Generator_TableVarName="tabledsValveTests" msprop:Generator_TablePropName="dsValveTests" msprop:Generator_RowDeletingName="dsValveTestsRowDeleting" msprop:Generator_RowChangingName="dsValveTestsRowChanging" msprop:Generator_RowEvHandlerName="dsValveTestsRowChangeEventHandler" msprop:Generator_RowDeletedName="dsValveTestsRowDeleted" msprop:Generator_UserTableName="dsValveTests" msprop:Generator_RowChangedName="dsValveTestsRowChanged" msprop:Generator_RowEvArgName="dsValveTestsRowChangeEvent" msprop:Generator_RowClassName="dsValveTestsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ValveTestID" msprop:Generator_ColumnVarNameInTable="columnValveTestID" msprop:Generator_ColumnPropNameInRow="ValveTestID" msprop:Generator_ColumnPropNameInTable="ValveTestIDColumn" msprop:Generator_UserColumnName="ValveTestID" type="xs:int" />
@@ -138,20 +136,8 @@ FROM            dbo.vw_ValveTests
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Latitude" msprop:Generator_ColumnVarNameInTable="columnLatitude" msprop:Generator_ColumnPropNameInRow="Latitude" msprop:Generator_ColumnPropNameInTable="LatitudeColumn" msprop:Generator_UserColumnName="Latitude" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Longitude" msprop:Generator_ColumnVarNameInTable="columnLongitude" msprop:Generator_ColumnPropNameInRow="Longitude" msprop:Generator_ColumnPropNameInTable="LongitudeColumn" msprop:Generator_UserColumnName="Longitude" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="Latitude" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLatitude" msprop:Generator_ColumnPropNameInRow="Latitude" msprop:Generator_ColumnPropNameInTable="LatitudeColumn" msprop:Generator_UserColumnName="Latitude" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Longitude" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLongitude" msprop:Generator_ColumnPropNameInRow="Longitude" msprop:Generator_ColumnPropNameInTable="LongitudeColumn" msprop:Generator_UserColumnName="Longitude" type="xs:decimal" minOccurs="0" />
               <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -179,7 +165,7 @@ FROM            dbo.vw_ValveTests
               <xs:element name="SerialNum" msprop:Generator_ColumnVarNameInTable="columnSerialNum" msprop:Generator_ColumnPropNameInRow="SerialNum" msprop:Generator_ColumnPropNameInTable="SerialNumColumn" msprop:Generator_UserColumnName="SerialNum" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
+                    <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -239,6 +225,9 @@ FROM            dbo.vw_ValveTests
               <xs:element name="JsaComplete" msprop:Generator_ColumnVarNameInTable="columnJsaComplete" msprop:Generator_ColumnPropNameInRow="JsaComplete" msprop:Generator_ColumnPropNameInTable="JsaCompleteColumn" msprop:Generator_UserColumnName="JsaComplete" type="xs:boolean" />
               <xs:element name="SetPressureFound" msprop:Generator_ColumnVarNameInTable="columnSetPressureFound" msprop:Generator_ColumnPropNameInRow="SetPressureFound" msprop:Generator_ColumnPropNameInTable="SetPressureFoundColumn" msprop:Generator_UserColumnName="SetPressureFound" type="xs:decimal" minOccurs="0" />
               <xs:element name="SetPressureLeft" msprop:Generator_ColumnVarNameInTable="columnSetPressureLeft" msprop:Generator_ColumnPropNameInRow="SetPressureLeft" msprop:Generator_ColumnPropNameInTable="SetPressureLeftColumn" msprop:Generator_UserColumnName="SetPressureLeft" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Pop_1" msprop:Generator_ColumnVarNameInTable="columnPop_1" msprop:Generator_ColumnPropNameInRow="Pop_1" msprop:Generator_ColumnPropNameInTable="Pop_1Column" msprop:Generator_UserColumnName="Pop_1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Pop_2" msprop:Generator_ColumnVarNameInTable="columnPop_2" msprop:Generator_ColumnPropNameInRow="Pop_2" msprop:Generator_ColumnPropNameInTable="Pop_2Column" msprop:Generator_UserColumnName="Pop_2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Pop_3" msprop:Generator_ColumnVarNameInTable="columnPop_3" msprop:Generator_ColumnPropNameInRow="Pop_3" msprop:Generator_ColumnPropNameInTable="Pop_3Column" msprop:Generator_UserColumnName="Pop_3" type="xs:decimal" minOccurs="0" />
               <xs:element name="TestResultID" msprop:Generator_ColumnVarNameInTable="columnTestResultID" msprop:Generator_ColumnPropNameInRow="TestResultID" msprop:Generator_ColumnPropNameInTable="TestResultIDColumn" msprop:Generator_UserColumnName="TestResultID" type="xs:int" minOccurs="0" />
               <xs:element name="TestResultDisplay" msprop:Generator_ColumnVarNameInTable="columnTestResultDisplay" msprop:Generator_ColumnPropNameInRow="TestResultDisplay" msprop:Generator_ColumnPropNameInTable="TestResultDisplayColumn" msprop:Generator_UserColumnName="TestResultDisplay" minOccurs="0">
                 <xs:simpleType>
@@ -300,18 +289,13 @@ FROM            dbo.vw_ValveTests
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="SapEquipNum" msprop:Generator_ColumnVarNameInTable="columnSapEquipNum" msprop:Generator_ColumnPropNameInRow="SapEquipNum" msprop:Generator_ColumnPropNameInTable="SapEquipNumColumn" msprop:Generator_UserColumnName="SapEquipNum" minOccurs="0">
+              <xs:element name="SapEquipNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSapEquipNum" msprop:Generator_ColumnPropNameInRow="SapEquipNum" msprop:Generator_ColumnPropNameInTable="SapEquipNumColumn" msprop:Generator_UserColumnName="SapEquipNum" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
+                    <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Latitude1" msdata:ReadOnly="true" msdata:Caption="Latitude" msprop:Generator_ColumnVarNameInTable="columnLatitude1" msprop:Generator_ColumnPropNameInRow="Latitude1" msprop:Generator_ColumnPropNameInTable="Latitude1Column" msprop:Generator_UserColumnName="Latitude1" type="xs:decimal" minOccurs="0" />
-              <xs:element name="Longitude1" msdata:ReadOnly="true" msdata:Caption="Longitude" msprop:Generator_ColumnVarNameInTable="columnLongitude1" msprop:Generator_ColumnPropNameInRow="Longitude1" msprop:Generator_ColumnPropNameInTable="Longitude1Column" msprop:Generator_UserColumnName="Longitude1" type="xs:decimal" minOccurs="0" />
-              <xs:element name="Pop_1" msprop:Generator_ColumnVarNameInTable="columnPop_1" msprop:Generator_ColumnPropNameInRow="Pop_1" msprop:Generator_ColumnPropNameInTable="Pop_1Column" msprop:Generator_UserColumnName="Pop_1" type="xs:decimal" minOccurs="0" />
-              <xs:element name="Pop_2" msprop:Generator_ColumnVarNameInTable="columnPop_2" msprop:Generator_ColumnPropNameInRow="Pop_2" msprop:Generator_ColumnPropNameInTable="Pop_2Column" msprop:Generator_UserColumnName="Pop_2" type="xs:decimal" minOccurs="0" />
-              <xs:element name="Pop_3" msprop:Generator_ColumnVarNameInTable="columnPop_3" msprop:Generator_ColumnPropNameInRow="Pop_3" msprop:Generator_ColumnPropNameInTable="Pop_3Column" msprop:Generator_UserColumnName="Pop_3" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

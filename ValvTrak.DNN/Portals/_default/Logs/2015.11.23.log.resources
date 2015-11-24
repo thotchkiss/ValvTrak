@@ -1,0 +1,47 @@
+2015-11-23 21:47:35,398 [TIM-PC][Thread:10][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): The file '/beta/desktopmodules/rawson.reports/downloadhelper.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-11-23 22:27:18,653 [TIM-PC][Thread:6][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): The file '/beta/desktopmodules/rawson.reports/downloadhelper.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-11-23 22:28:09,044 [TIM-PC][Thread:10][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Web.HttpException (0x80004005): The file '/beta/~/DesktopModules/Rawson.Reports/Reports.aspx' does not exist.
+   at System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-11-23 22:30:20,617 [TIM-PC][Thread:33][FATAL] DotNetNuke.Services.Exceptions.Exceptions - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2015-11-23 22:30:20,648 [TIM-PC][Thread:33][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2015-11-23 22:32:04,109 [TIM-PC][Thread:5][FATAL] DotNetNuke.Services.Exceptions.Exceptions - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2015-11-23 22:32:04,109 [TIM-PC][Thread:5][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2015-11-23 22:35:31,154 [TIM-PC][Thread:51][FATAL] DotNetNuke.Services.Exceptions.Exceptions - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2015-11-23 22:35:31,154 [TIM-PC][Thread:51][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2015-11-23 22:37:20,316 [TIM-PC][Thread:64][FATAL] DotNetNuke.Services.Exceptions.Exceptions - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2015-11-23 22:37:20,316 [TIM-PC][Thread:64][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)

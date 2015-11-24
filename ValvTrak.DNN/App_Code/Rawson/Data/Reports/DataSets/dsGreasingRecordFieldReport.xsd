@@ -8,7 +8,7 @@
           <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ValvTrakData" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ValvTrakData (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ValvTrakData.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_GreasingRecordsTableAdapter" GeneratorDataComponentClassName="vw_GreasingRecordsTableAdapter" Name="vw_GreasingRecords" UserDataComponentName="vw_GreasingRecordsTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dsGreasingRecordsTableAdapter" GeneratorDataComponentClassName="dsGreasingRecordsTableAdapter" Name="dsGreasingRecords" UserDataComponentName="dsGreasingRecordsTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="ValvTrakData (Web.config)" DbObjectName="SRD.dbo.vw_GreasingRecords" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
@@ -47,7 +47,7 @@ FROM            dbo.vw_GreasingRecords
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_GreasingRecordItemsTableAdapter" GeneratorDataComponentClassName="vw_GreasingRecordItemsTableAdapter" Name="vw_GreasingRecordItems" UserDataComponentName="vw_GreasingRecordItemsTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dsGreasingRecordItemsTableAdapter" GeneratorDataComponentClassName="dsGreasingRecordItemsTableAdapter" Name="dsGreasingRecordItems" UserDataComponentName="dsGreasingRecordItemsTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="ValvTrakData (Web.config)" DbObjectName="SRD.dbo.vw_GreasingRecordItems" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
@@ -110,7 +110,7 @@ WHERE GreasingRecordID = @GreasingRecordID
   <xs:element name="dsGreasingRecordFieldReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsGreasingRecordFieldReport" msprop:Generator_UserDSName="dsGreasingRecordFieldReport">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="vw_GreasingRecords" msprop:Generator_TableClassName="vw_GreasingRecordsDataTable" msprop:Generator_TableVarName="tablevw_GreasingRecords" msprop:Generator_TablePropName="vw_GreasingRecords" msprop:Generator_RowDeletingName="vw_GreasingRecordsRowDeleting" msprop:Generator_UserTableName="vw_GreasingRecords" msprop:Generator_RowChangingName="vw_GreasingRecordsRowChanging" msprop:Generator_RowEvHandlerName="vw_GreasingRecordsRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_GreasingRecordsRowDeleted" msprop:Generator_RowEvArgName="vw_GreasingRecordsRowChangeEvent" msprop:Generator_RowChangedName="vw_GreasingRecordsRowChanged" msprop:Generator_RowClassName="vw_GreasingRecordsRow">
+        <xs:element name="dsGreasingRecords" msprop:Generator_TableClassName="dsGreasingRecordsDataTable" msprop:Generator_TableVarName="tabledsGreasingRecords" msprop:Generator_RowChangedName="dsGreasingRecordsRowChanged" msprop:Generator_TablePropName="dsGreasingRecords" msprop:Generator_RowDeletingName="dsGreasingRecordsRowDeleting" msprop:Generator_RowChangingName="dsGreasingRecordsRowChanging" msprop:Generator_RowEvHandlerName="dsGreasingRecordsRowChangeEventHandler" msprop:Generator_RowDeletedName="dsGreasingRecordsRowDeleted" msprop:Generator_RowClassName="dsGreasingRecordsRow" msprop:Generator_UserTableName="dsGreasingRecords" msprop:Generator_RowEvArgName="dsGreasingRecordsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="GreasingRecordID" msprop:Generator_ColumnVarNameInTable="columnGreasingRecordID" msprop:Generator_ColumnPropNameInRow="GreasingRecordID" msprop:Generator_ColumnPropNameInTable="GreasingRecordIDColumn" msprop:Generator_UserColumnName="GreasingRecordID" type="xs:int" />
@@ -208,7 +208,7 @@ WHERE GreasingRecordID = @GreasingRecordID
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vw_GreasingRecordItems" msprop:Generator_TableClassName="vw_GreasingRecordItemsDataTable" msprop:Generator_TableVarName="tablevw_GreasingRecordItems" msprop:Generator_TablePropName="vw_GreasingRecordItems" msprop:Generator_RowDeletingName="vw_GreasingRecordItemsRowDeleting" msprop:Generator_UserTableName="vw_GreasingRecordItems" msprop:Generator_RowChangingName="vw_GreasingRecordItemsRowChanging" msprop:Generator_RowEvHandlerName="vw_GreasingRecordItemsRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_GreasingRecordItemsRowDeleted" msprop:Generator_RowEvArgName="vw_GreasingRecordItemsRowChangeEvent" msprop:Generator_RowChangedName="vw_GreasingRecordItemsRowChanged" msprop:Generator_RowClassName="vw_GreasingRecordItemsRow">
+        <xs:element name="dsGreasingRecordItems" msprop:Generator_TableClassName="dsGreasingRecordItemsDataTable" msprop:Generator_TableVarName="tabledsGreasingRecordItems" msprop:Generator_RowChangedName="dsGreasingRecordItemsRowChanged" msprop:Generator_TablePropName="dsGreasingRecordItems" msprop:Generator_RowDeletingName="dsGreasingRecordItemsRowDeleting" msprop:Generator_RowChangingName="dsGreasingRecordItemsRowChanging" msprop:Generator_RowEvHandlerName="dsGreasingRecordItemsRowChangeEventHandler" msprop:Generator_RowDeletedName="dsGreasingRecordItemsRowDeleted" msprop:Generator_RowClassName="dsGreasingRecordItemsRow" msprop:Generator_UserTableName="dsGreasingRecordItems" msprop:Generator_RowEvArgName="dsGreasingRecordItemsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="GreasingRecordItemID" msprop:Generator_ColumnVarNameInTable="columnGreasingRecordItemID" msprop:Generator_ColumnPropNameInRow="GreasingRecordItemID" msprop:Generator_ColumnPropNameInTable="GreasingRecordItemIDColumn" msprop:Generator_UserColumnName="GreasingRecordItemID" type="xs:int" />
@@ -352,11 +352,11 @@ WHERE GreasingRecordID = @GreasingRecordID
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:vw_GreasingRecords" />
+      <xs:selector xpath=".//mstns:dsGreasingRecords" />
       <xs:field xpath="mstns:GreasingRecordID" />
     </xs:unique>
-    <xs:unique name="vw_GreasingRecordItems_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:vw_GreasingRecordItems" />
+    <xs:unique name="dsGreasingRecordItems_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dsGreasingRecordItems" />
       <xs:field xpath="mstns:GreasingRecordItemID" />
     </xs:unique>
   </xs:element>
