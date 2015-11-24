@@ -11,12 +11,12 @@
     <DataSet Name="ValvTrak">
       <Query>
         <DataSourceName>ValvTrak</DataSourceName>
-        <CommandText>SELECT        ValveTestID, JobID, SalesOrderNum, SapWoNum, FSRNum, ClientName, ClientLocationName, ServiceItemID, CostCenter, Latitude, Longitude, Description, SapPsv, 
+        <CommandText>SELECT ValveTestID, JobID, SalesOrderNum, SapWoNum, FSRNum, ClientName, ClientLocationName, ServiceItemID, CostCenter, Latitude, Longitude, Description, SapPsv, 
                          DateTested, Model, ManufacturerName, Threaded, Flanged, SerialNum, SapEquipNum, InletSize, OutletSize, InletFlangeRating, OutletFlangeRating, ModelSize, 
                          SetPressure, BackPressure, ColdDiffPressure, TempCorr, Capacity, CapacityTypeID, CapacityTypeDisplay, SealNum, GaugeNum, CalibrationDue, CodedSource, 
                          CodedDisplay, ValveDate, IsolationValve, ReliefValveSupport, TestPort, WeatherCap, DotLocation, JsaComplete, SetPressureFound, SetPressureLeft, TestResultID, 
                          TestResultDisplay, Notes, ReviewItems, TechID, TechnicianID, TechnicianDisplay, CustomerWitness, CreatedBy, CreatedByDisplay, CreatedDate
-FROM            vw_ValveTests</CommandText>
+					FROM vw_ValveTests</CommandText>
       </Query>
       <Fields>
         <Field Name="ValveTestID">
@@ -29,10 +29,6 @@ FROM            vw_ValveTests</CommandText>
         </Field>
         <Field Name="SalesOrderNum">
           <DataField>SalesOrderNum</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="SapWoNum">
-          <DataField>SapWoNum</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="FSRNum">
@@ -57,18 +53,14 @@ FROM            vw_ValveTests</CommandText>
         </Field>
         <Field Name="Latitude">
           <DataField>Latitude</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="Longitude">
           <DataField>Longitude</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="Description">
           <DataField>Description</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="SapPsv">
-          <DataField>SapPsv</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="DateTested">
@@ -93,10 +85,6 @@ FROM            vw_ValveTests</CommandText>
         </Field>
         <Field Name="SerialNum">
           <DataField>SerialNum</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="SapEquipNum">
-          <DataField>SapEquipNum</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="InletSize">
@@ -203,6 +191,18 @@ FROM            vw_ValveTests</CommandText>
           <DataField>SetPressureLeft</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
+        <Field Name="Pop_1">
+          <DataField>Pop_1</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Pop_2">
+          <DataField>Pop_2</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Pop_3">
+          <DataField>Pop_3</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
         <Field Name="TestResultID">
           <DataField>TestResultID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -247,7 +247,27 @@ FROM            vw_ValveTests</CommandText>
           <DataField>CreatedDate</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
+        <Field Name="SapWoNum">
+          <DataField>SapWoNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SapPsv">
+          <DataField>SapPsv</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SapEquipNum">
+          <DataField>SapEquipNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsValveTestsFieldReport</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Tim\Source\Workspaces\ValvTrak\ValvTrak.DNN\App_Code\Rawson\Data\Reports\DataSets\dsValveTestsFieldReport.xsd</rd:SchemaPath>
+        <rd:TableName>dsValveTests</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>dsValveTestsTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <ReportSections>
@@ -2535,8 +2555,8 @@ FROM            vw_ValveTests</CommandText>
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>SetPressureLeft</rd:DefaultName>
-                              <Top>7in</Top>
-                              <Left>1.5in</Left>
+                              <Top>6.625in</Top>
+                              <Left>4.38889in</Left>
                               <Height>0.25in</Height>
                               <Width>1in</Width>
                               <ZIndex>80</ZIndex>
@@ -2590,9 +2610,10 @@ FROM            vw_ValveTests</CommandText>
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <Top>7in</Top>
+                              <Top>6.625in</Top>
+                              <Left>3.10417in</Left>
                               <Height>0.25in</Height>
-                              <Width>1.5in</Width>
+                              <Width>1.27083in</Width>
                               <ZIndex>82</ZIndex>
                               <Style>
                                 <PaddingLeft>2pt</PaddingLeft>
@@ -2608,7 +2629,7 @@ FROM            vw_ValveTests</CommandText>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>psig</Value>
+                                      <Value>(psig)</Value>
                                       <Style />
                                     </TextRun>
                                   </TextRuns>
@@ -2635,15 +2656,15 @@ FROM            vw_ValveTests</CommandText>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>psig</Value>
+                                      <Value>(psig)</Value>
                                       <Style />
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <Top>7in</Top>
-                              <Left>2.5in</Left>
+                              <Top>6.625in</Top>
+                              <Left>5.43749in</Left>
                               <Height>0.25in</Height>
                               <Width>0.5in</Width>
                               <ZIndex>84</ZIndex>
@@ -2775,10 +2796,9 @@ FROM            vw_ValveTests</CommandText>
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>textbox93</rd:DefaultName>
-                              <Top>6.625in</Top>
-                              <Left>3.25in</Left>
-                              <Height>0.625in</Height>
-                              <Width>4in</Width>
+                              <Top>7.375in</Top>
+                              <Height>0.51042in</Height>
+                              <Width>3.79166in</Width>
                               <ZIndex>89</ZIndex>
                               <Style>
                                 <Border>
@@ -2806,8 +2826,9 @@ FROM            vw_ValveTests</CommandText>
                               </Paragraphs>
                               <rd:DefaultName>textbox96</rd:DefaultName>
                               <Top>7.375in</Top>
+                              <Left>4in</Left>
                               <Height>0.51042in</Height>
-                              <Width>7.25in</Width>
+                              <Width>3.25in</Width>
                               <ZIndex>90</ZIndex>
                               <Style>
                                 <Border>
@@ -3815,6 +3836,267 @@ FROM            vw_ValveTests</CommandText>
                                 </Border>
                               </Style>
                             </Line>
+                            <Textbox Name="SetPressureFound2">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Pop_1.Value</Value>
+                                      <Style>
+                                        <Color>Blue</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Right</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>SetPressureFound</rd:DefaultName>
+                              <Top>7in</Top>
+                              <Left>0.74653in</Left>
+                              <Height>0.25in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>148</ZIndex>
+                              <Style>
+                                <BottomBorder>
+                                  <Style>Solid</Style>
+                                </BottomBorder>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="textbox85">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Pop #1 :</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>textbox81</rd:DefaultName>
+                              <Top>7in</Top>
+                              <Left>0.05209in</Left>
+                              <Height>0.25in</Height>
+                              <Width>0.66666in</Width>
+                              <ZIndex>149</ZIndex>
+                              <Style>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="textbox87">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>(psig)</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>textbox83</rd:DefaultName>
+                              <Top>7in</Top>
+                              <Left>1.80209in</Left>
+                              <Height>0.25in</Height>
+                              <Width>0.5in</Width>
+                              <ZIndex>150</ZIndex>
+                              <Style>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="SetPressureFound3">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Pop_2.Value</Value>
+                                      <Style>
+                                        <Color>Blue</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Right</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>SetPressureFound</rd:DefaultName>
+                              <Top>7in</Top>
+                              <Left>3.1111in</Left>
+                              <Height>0.25in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>151</ZIndex>
+                              <Style>
+                                <BottomBorder>
+                                  <Style>Solid</Style>
+                                </BottomBorder>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="textbox89">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Pop #2 :</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>textbox81</rd:DefaultName>
+                              <Top>7in</Top>
+                              <Left>2.40625in</Left>
+                              <Height>0.25in</Height>
+                              <Width>0.66666in</Width>
+                              <ZIndex>152</ZIndex>
+                              <Style>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="textbox91">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>(psig)</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>textbox83</rd:DefaultName>
+                              <Top>7in</Top>
+                              <Left>4.16666in</Left>
+                              <Height>0.25in</Height>
+                              <Width>0.5in</Width>
+                              <ZIndex>153</ZIndex>
+                              <Style>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="SetPressureFound4">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Pop_3.Value</Value>
+                                      <Style>
+                                        <Color>Blue</Color>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Right</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>SetPressureFound</rd:DefaultName>
+                              <Top>7in</Top>
+                              <Left>5.47916in</Left>
+                              <Height>0.25in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>154</ZIndex>
+                              <Style>
+                                <BottomBorder>
+                                  <Style>Solid</Style>
+                                </BottomBorder>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="textbox98">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Pop #3 :</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>textbox81</rd:DefaultName>
+                              <Top>7in</Top>
+                              <Left>4.78472in</Left>
+                              <Height>0.25in</Height>
+                              <Width>0.66666in</Width>
+                              <ZIndex>155</ZIndex>
+                              <Style>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="textbox103">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>(psig)</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>textbox83</rd:DefaultName>
+                              <Top>7in</Top>
+                              <Left>6.53472in</Left>
+                              <Height>0.25in</Height>
+                              <Width>0.5in</Width>
+                              <ZIndex>156</ZIndex>
+                              <Style>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
                           </ReportItems>
                           <KeepTogether>true</KeepTogether>
                           <Style />

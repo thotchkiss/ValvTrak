@@ -1,19 +1,10 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ValveTestsSearch.ascx.cs" Inherits="ValveTestsSearch" EnableTheming="true" %>
 
 <%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dx" %>
-
-
-
-
 <%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxwgv" %>
 <%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxe" %>
 <%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxrp" %>
 <%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxp" %>
-
-
-
-
-
 
 <script type="text/javascript" src="../../js/json2.js"></script>
 <script id="scrCommon" type="text/javascript">
@@ -408,11 +399,17 @@
                     </dxwgv:GridViewDataTextColumn>
                     <dxwgv:GridViewDataTextColumn FieldName="SetPressureLeft" VisibleIndex="30">
                     </dxwgv:GridViewDataTextColumn>
+                    <dxwgv:GridViewDataTextColumn FieldName="Pop_1" VisibleIndex="31">
+                    </dxwgv:GridViewDataTextColumn>
+                    <dxwgv:GridViewDataTextColumn FieldName="Pop_2" VisibleIndex="32">
+                    </dxwgv:GridViewDataTextColumn>
+                    <dxwgv:GridViewDataTextColumn FieldName="Pop_3" VisibleIndex="33">
+                    </dxwgv:GridViewDataTextColumn>
                     <dxwgv:GridViewDataTextColumn Caption="Deviation" FieldName="Tolerance" 
-                        Name="colTolerance" ReadOnly="True" UnboundType="Decimal" VisibleIndex="31">
+                        Name="colTolerance" ReadOnly="True" UnboundType="Decimal" VisibleIndex="34">
                         <PropertiesTextEdit DisplayFormatString="f2"></PropertiesTextEdit>
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataComboBoxColumn FieldName="TestResultID" VisibleIndex="32" 
+                    <dxwgv:GridViewDataComboBoxColumn FieldName="TestResultID" VisibleIndex="35" 
                         Caption="Test Result ID">
                         <PropertiesComboBox ValueType="System.Int32">
                             <Items>
@@ -427,19 +424,19 @@
                         <Settings SortMode="DisplayText" />
                         <EditFormSettings Visible="True" />
                     </dxwgv:GridViewDataComboBoxColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="Notes" VisibleIndex="33" Width="250px">
+                    <dxwgv:GridViewDataTextColumn FieldName="Notes" VisibleIndex="36" Width="250px">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="Employee.FirstName" VisibleIndex="34"
+                    <dxwgv:GridViewDataTextColumn FieldName="Employee.FirstName" VisibleIndex="37"
                         Caption="Tech First Name">  
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="Employee.LastName" VisibleIndex="35"
+                    <dxwgv:GridViewDataTextColumn FieldName="Employee.LastName" VisibleIndex="38"
                         Caption="Tech Last Name">  
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="CustomerWitness" VisibleIndex="36">
+                    <dxwgv:GridViewDataTextColumn FieldName="CustomerWitness" VisibleIndex="39">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataTextColumn FieldName="CreatedBy" VisibleIndex="37">
+                    <dxwgv:GridViewDataTextColumn FieldName="CreatedBy" VisibleIndex="40">
                     </dxwgv:GridViewDataTextColumn>
-                    <dxwgv:GridViewDataDateColumn FieldName="CreatedDate" VisibleIndex="38">
+                    <dxwgv:GridViewDataDateColumn FieldName="CreatedDate" VisibleIndex="41">
                     </dxwgv:GridViewDataDateColumn>
                 </Columns>
                 <SettingsBehavior AllowDragDrop="False" AllowGroup="False" />
@@ -480,7 +477,7 @@
                 <ClientSideEvents Closing="function (s,e) { s.SetContentUrl(''); }" />
                 <ContentStyle VerticalAlign="Top"></ContentStyle>
                 <ContentCollection>
-                    <dx:PopupControlContentControl ID="PopupControlContentControl3" runat="server" >
+                    <dx:PopupControlContentControl ID="PopupControlContentControl3" runat="server"  >
                         <asp:Image ImageUrl="~/images/ajax-loader.gif" runat="server" />
                     </dx:PopupControlContentControl>
                 </ContentCollection>

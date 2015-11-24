@@ -25,7 +25,7 @@ namespace Rawson.Reports
 
             rpt.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_SubreportProcessing);
 
-            dsGreasingRecordFieldReportTableAdapters.vw_GreasingRecordsTableAdapter grAdapter = new dsGreasingRecordFieldReportTableAdapters.vw_GreasingRecordsTableAdapter();
+            dsGreasingRecordFieldReportTableAdapters.dsGreasingRecordsTableAdapter grAdapter = new dsGreasingRecordFieldReportTableAdapters.dsGreasingRecordsTableAdapter();
             grAdapter.Connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ValvTrakData"].ConnectionString;
 
             DataTable dtGr = grAdapter.GetData();
@@ -42,7 +42,7 @@ namespace Rawson.Reports
 
         void LocalReport_SubreportProcessing(object sender, SubreportProcessingEventArgs e)
         {
-            dsGreasingRecordFieldReportTableAdapters.vw_GreasingRecordItemsTableAdapter griAdapter = new dsGreasingRecordFieldReportTableAdapters.vw_GreasingRecordItemsTableAdapter();
+            dsGreasingRecordFieldReportTableAdapters.dsGreasingRecordItemsTableAdapter griAdapter = new dsGreasingRecordFieldReportTableAdapters.dsGreasingRecordItemsTableAdapter();
             griAdapter.Connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ValvTrakData"].ConnectionString;
             
             DataTable dtGri = griAdapter.GetData(Convert.ToInt32(e.Parameters["GreasingRecordID"].Values[0]));
