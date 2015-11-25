@@ -4101,6 +4101,7 @@
                           <KeepTogether>true</KeepTogether>
                           <Style />
                         </Rectangle>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -4115,7 +4116,13 @@
             <TablixRowHierarchy>
               <TablixMembers>
                 <TablixMember>
-                  <Group Name="list1_Details_Group">
+                  <Group Name="Page_Group">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!ValveTestID.Value</GroupExpression>
+                    </GroupExpressions>
+                    <PageBreak>
+                      <BreakLocation>StartAndEnd</BreakLocation>
+                    </PageBreak>
                     <DataElementName>Item</DataElementName>
                   </Group>
                   <DataElementName>Item_Collection</DataElementName>

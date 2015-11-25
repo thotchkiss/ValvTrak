@@ -20,21 +20,27 @@ namespace Rawson.Reports
 
         public void Configure ( ReportViewer rpt, NameValueCollection param )
         {
-            rpt.LocalReport.ReportPath = null;
-            rpt.LocalReport.DataSources.Clear();
+            try
+            {
+                rpt.LocalReport.ReportPath = null;
+                rpt.LocalReport.DataSources.Clear();
 
-            rpt.ProcessingMode = ProcessingMode.Local;
-            rpt.LocalReport.ReportPath = HttpContext.Current.Server.MapPath ( "~/Desktopmodules/Rawson.Reports/Field" ) + "\\ValveTestFieldReport.rdlc";
+                rpt.ProcessingMode = ProcessingMode.Local;
+                rpt.LocalReport.ReportPath = HttpContext.Current.Server.MapPath("~/Desktopmodules/Rawson.Reports/Field") + "\\ValveTestFieldReport.rdlc";
 
-            dsValveTestsFieldReportTableAdapters.dsValveTestsTableAdapter adapter = new dsValveTestsFieldReportTableAdapters.dsValveTestsTableAdapter();
-            adapter.Connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ValvTrakData"].ConnectionString;
+                dsValveTestsFieldReportTableAdapters.dsValveTestsTableAdapter adapter = new dsValveTestsFieldReportTableAdapters.dsValveTestsTableAdapter();
+                adapter.Connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ValvTrakData"].ConnectionString;
 
-            DataTable dt = adapter.GetData();
-            dt.DefaultView.RowFilter = String.Format("ValveTestID IN ({0})", DataCache.GetCache(param["key"]));
+                string ids = (string)DataCache.GetCache(param["key"]);
+                DataTable dt = adapter.GetData(ids);
 
-            HttpContext.Current.Session["ReportData"] = null;
-
-            rpt.LocalReport.DataSources.Add(new ReportDataSource("ValvTrak", dt.DefaultView));
+                rpt.LocalReport.DataSources.Add(new ReportDataSource("ValvTrak", dt.DefaultView));
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                throw;
+            }
 
         }
 
