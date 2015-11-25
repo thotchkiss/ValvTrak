@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI.WebControls;
 using Microsoft.Reporting.WebForms;
 using System.Drawing.Printing;
+using DotNetNuke.Common.Utilities;
 
 namespace Rawson.Reports
 {
@@ -28,16 +29,11 @@ namespace Rawson.Reports
             dsGreasingRecordFieldReportTableAdapters.dsGreasingRecordsTableAdapter grAdapter = new dsGreasingRecordFieldReportTableAdapters.dsGreasingRecordsTableAdapter();
             grAdapter.Connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ValvTrakData"].ConnectionString;
 
-            DataTable dtGr = grAdapter.GetData();
-            dtGr.DefaultView.RowFilter = String.Format("GreasingRecordID IN ({0})", HttpContext.Current.Session["ReportData"]);
-
-            HttpContext.Current.Session["ReportData"] = null;
+            string ids = (string)DataCache.GetCache(param["key"]);
+            DataTable dtGr = grAdapter.GetData(ids);
 
             rpt.LocalReport.DataSources.Add(new ReportDataSource("GreasingRecord", dtGr.DefaultView));
             rpt.LocalReport.Refresh();
-
-            //rpt.LocalReport.SubreportProcessing -= LocalReport_SubreportProcessing;
-
         }
 
         void LocalReport_SubreportProcessing(object sender, SubreportProcessingEventArgs e)

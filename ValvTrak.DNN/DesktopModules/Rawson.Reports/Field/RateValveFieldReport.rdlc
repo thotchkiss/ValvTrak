@@ -1,0 +1,1638 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="list1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>7.5in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>8.625in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="list1_Contents">
+                      <ReportItems>
+                        <Textbox Name="textbox2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>FSR # : </Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox2</rd:DefaultName>
+                          <Top>0.125in</Top>
+                          <Height>0.25in</Height>
+                          <Width>0.625in</Width>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox3">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Date :</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox3</rd:DefaultName>
+                          <Top>0.5in</Top>
+                          <Height>0.25in</Height>
+                          <Width>0.625in</Width>
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox4">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Customer :</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox4</rd:DefaultName>
+                          <Top>0.875in</Top>
+                          <Height>0.25in</Height>
+                          <Width>0.875in</Width>
+                          <ZIndex>2</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox5">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Location :</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox5</rd:DefaultName>
+                          <Top>1.25in</Top>
+                          <Height>0.25in</Height>
+                          <Width>0.75in</Width>
+                          <ZIndex>3</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox6">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Manufacturer :</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox6</rd:DefaultName>
+                          <Top>1.625in</Top>
+                          <Height>0.25in</Height>
+                          <Width>1in</Width>
+                          <ZIndex>4</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox7">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Serial # :</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox7</rd:DefaultName>
+                          <Top>2in</Top>
+                          <Height>0.25in</Height>
+                          <Width>0.75in</Width>
+                          <ZIndex>5</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox8">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Job # :</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox8</rd:DefaultName>
+                          <Top>0.125in</Top>
+                          <Left>4.125in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.75in</Width>
+                          <ZIndex>6</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox9">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>SO # :</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox9</rd:DefaultName>
+                          <Top>0.5in</Top>
+                          <Left>4.125in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.75in</Width>
+                          <ZIndex>7</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox10">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Model # :</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox10</rd:DefaultName>
+                          <Top>1.625in</Top>
+                          <Left>4.125in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.75in</Width>
+                          <ZIndex>8</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox11">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Condition of Wear Sleeve : </Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox11</rd:DefaultName>
+                          <Top>2.5in</Top>
+                          <Height>0.25in</Height>
+                          <Width>1.875in</Width>
+                          <ZIndex>9</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox12">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIF(Fields!ConditionOfWearSleeve.Value = 0, "X", "")</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox12</rd:DefaultName>
+                          <Top>2.5in</Top>
+                          <Left>2in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.25in</Width>
+                          <ZIndex>10</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox13">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Good</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox13</rd:DefaultName>
+                          <Top>2.5in</Top>
+                          <Left>2.375in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.5in</Width>
+                          <ZIndex>11</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox15">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIF(Fields!ConditionOfWearSleeve.Value = 1, "X", "")</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>2.5in</Top>
+                          <Left>3.125in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.25in</Width>
+                          <ZIndex>12</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox14">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Needs Replaced</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>2.5in</Top>
+                          <Left>3.5in</Left>
+                          <Height>0.25in</Height>
+                          <Width>1.1875in</Width>
+                          <ZIndex>13</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox17">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIF(Fields!ConditionOfWearSleeve.Value = 2, "X", "")</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>2.5in</Top>
+                          <Left>4.875in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.25in</Width>
+                          <ZIndex>14</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox16">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Replaced</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>2.5in</Top>
+                          <Left>5.25in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.75in</Width>
+                          <ZIndex>15</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox24">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Condition of Disc : </Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>2.875in</Top>
+                          <Height>0.25in</Height>
+                          <Width>1.875in</Width>
+                          <ZIndex>16</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox23">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIF(Fields!ConditionOfDisc.Value = 0, "X", "")</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>2.875in</Top>
+                          <Left>2in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.25in</Width>
+                          <ZIndex>17</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox22">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Good</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>2.875in</Top>
+                          <Left>2.375in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.5in</Width>
+                          <ZIndex>18</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox21">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIF(Fields!ConditionOfDisc.Value = 1, "X", "")</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>2.875in</Top>
+                          <Left>3.125in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.25in</Width>
+                          <ZIndex>19</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox20">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Needs Replaced</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>2.875in</Top>
+                          <Left>3.5in</Left>
+                          <Height>0.25in</Height>
+                          <Width>1.1875in</Width>
+                          <ZIndex>20</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox19">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIF(Fields!ConditionOfDisc.Value = 2, "X", "")</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>2.875in</Top>
+                          <Left>4.875in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.25in</Width>
+                          <ZIndex>21</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox18">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Replaced</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>2.875in</Top>
+                          <Left>5.25in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.75in</Width>
+                          <ZIndex>22</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox31">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>External Condition : </Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>3.25in</Top>
+                          <Height>0.25in</Height>
+                          <Width>1.875in</Width>
+                          <ZIndex>23</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox30">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIF(Fields!ExternalCondition.Value = 0, "X", "")</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>3.25in</Top>
+                          <Left>2in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.25in</Width>
+                          <ZIndex>24</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox29">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Good</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>3.25in</Top>
+                          <Left>2.375in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.5in</Width>
+                          <ZIndex>25</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox28">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIF(Fields!ExternalCondition.Value = 1, "X", "")</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>3.25in</Top>
+                          <Left>3.125in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.25in</Width>
+                          <ZIndex>26</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox27">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Needs Replaced</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>3.25in</Top>
+                          <Left>3.5in</Left>
+                          <Height>0.25in</Height>
+                          <Width>1.1875in</Width>
+                          <ZIndex>27</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox26">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIF(Fields!ExternalCondition.Value = 2, "X", "")</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>3.25in</Top>
+                          <Left>4.875in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.25in</Width>
+                          <ZIndex>28</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox25">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Replaced</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>3.25in</Top>
+                          <Left>5.25in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.75in</Width>
+                          <ZIndex>29</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox32">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>% Worn :</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox32</rd:DefaultName>
+                          <Top>2.875in</Top>
+                          <Left>6.25in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.75in</Width>
+                          <ZIndex>30</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox33">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Notes :</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox33</rd:DefaultName>
+                          <Top>3.625in</Top>
+                          <Height>0.25in</Height>
+                          <Width>0.625in</Width>
+                          <ZIndex>31</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Subreport Name="subreport1">
+                          <ReportName>RateValvePartsSubreport</ReportName>
+                          <Parameters>
+                            <Parameter Name="RateValveTestID">
+                              <Value>=Fields!RateValveTestID.Value</Value>
+                            </Parameter>
+                          </Parameters>
+                          <KeepTogether>true</KeepTogether>
+                          <Top>4.625in</Top>
+                          <Height>2.875in</Height>
+                          <Width>7.5in</Width>
+                          <ZIndex>32</ZIndex>
+                          <Style />
+                        </Subreport>
+                        <Textbox Name="FSRNum">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!FSRNum.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>FSRNum</rd:DefaultName>
+                          <Top>0.125in</Top>
+                          <Left>0.625in</Left>
+                          <Height>0.25in</Height>
+                          <Width>3.25in</Width>
+                          <ZIndex>33</ZIndex>
+                          <Style>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="DateTested">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!DateTested.Value</Value>
+                                  <Style>
+                                    <Format>d</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>DateTested</rd:DefaultName>
+                          <Top>0.5in</Top>
+                          <Left>0.625in</Left>
+                          <Height>0.25in</Height>
+                          <Width>3.25in</Width>
+                          <ZIndex>34</ZIndex>
+                          <Style>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="ClientName">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ClientName.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ClientName</rd:DefaultName>
+                          <Top>0.875in</Top>
+                          <Left>0.875in</Left>
+                          <Height>0.25in</Height>
+                          <Width>6.5in</Width>
+                          <ZIndex>35</ZIndex>
+                          <Style>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="LocationName">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!LocationName.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>LocationName</rd:DefaultName>
+                          <Top>1.25in</Top>
+                          <Left>0.875in</Left>
+                          <Height>0.25in</Height>
+                          <Width>6.5in</Width>
+                          <ZIndex>36</ZIndex>
+                          <Style>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Remarks">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Remarks.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Remarks</rd:DefaultName>
+                          <Top>3.625in</Top>
+                          <Left>0.625in</Left>
+                          <Height>0.625in</Height>
+                          <Width>6.625in</Width>
+                          <ZIndex>37</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Manufacturer">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Manufacturer.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Manufacturer</rd:DefaultName>
+                          <Top>1.625in</Top>
+                          <Left>1in</Left>
+                          <Height>0.25in</Height>
+                          <Width>2.875in</Width>
+                          <ZIndex>38</ZIndex>
+                          <Style>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="SerialNum">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!SerialNum.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>SerialNum</rd:DefaultName>
+                          <Top>2in</Top>
+                          <Left>1in</Left>
+                          <Height>0.25in</Height>
+                          <Width>2.875in</Width>
+                          <ZIndex>39</ZIndex>
+                          <Style>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Model">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Model.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Model</rd:DefaultName>
+                          <Top>1.625in</Top>
+                          <Left>4.875in</Left>
+                          <Height>0.25in</Height>
+                          <Width>2.5in</Width>
+                          <ZIndex>40</ZIndex>
+                          <Style>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="JobID">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!JobID.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>JobID</rd:DefaultName>
+                          <Top>0.125in</Top>
+                          <Left>4.875in</Left>
+                          <Height>0.25in</Height>
+                          <Width>2.5in</Width>
+                          <ZIndex>41</ZIndex>
+                          <Style>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="SalesOrderNum">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!SalesOrderNum.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>SalesOrderNum</rd:DefaultName>
+                          <Top>0.5in</Top>
+                          <Left>4.875in</Left>
+                          <Height>0.25in</Height>
+                          <Width>2.5in</Width>
+                          <ZIndex>42</ZIndex>
+                          <Style>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="PercentDiscWear">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PercentDiscWear.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PercentDiscWear</rd:DefaultName>
+                          <Top>2.875in</Top>
+                          <Left>7in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.375in</Width>
+                          <ZIndex>43</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox34">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Technician :</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox34</rd:DefaultName>
+                          <Top>7.75in</Top>
+                          <Height>0.25in</Height>
+                          <Width>0.875in</Width>
+                          <ZIndex>44</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox35">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!FirstName.Value + " " + Fields!LastName.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox35</rd:DefaultName>
+                          <Top>7.75in</Top>
+                          <Left>0.875in</Left>
+                          <Height>0.25in</Height>
+                          <Width>2.875in</Width>
+                          <ZIndex>45</ZIndex>
+                          <Style>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox36">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Print Name</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox36</rd:DefaultName>
+                          <Top>8.125in</Top>
+                          <Left>1.5in</Left>
+                          <Height>0.25in</Height>
+                          <Width>1in</Width>
+                          <ZIndex>46</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox37">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>7.75in</Top>
+                          <Left>4.125in</Left>
+                          <Height>0.25in</Height>
+                          <Width>3.125in</Width>
+                          <ZIndex>47</ZIndex>
+                          <Style>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox38">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Signature</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>8.125in</Top>
+                          <Left>5.25in</Left>
+                          <Height>0.25in</Height>
+                          <Width>0.75in</Width>
+                          <ZIndex>48</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox39">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Parts Used</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox39</rd:DefaultName>
+                          <Top>4.375in</Top>
+                          <Height>0.25in</Height>
+                          <Width>1in</Width>
+                          <ZIndex>49</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                      <KeepTogether>true</KeepTogether>
+                      <Style />
+                    </Rectangle>
+                    <rd:Selected>true</rd:Selected>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Page_Group">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!RateValveTestID.Value</GroupExpression>
+                </GroupExpressions>
+                <PageBreak>
+                  <BreakLocation>StartAndEnd</BreakLocation>
+                </PageBreak>
+                <DataElementName>Item</DataElementName>
+              </Group>
+              <DataElementName>Item_Collection</DataElementName>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <KeepTogether>true</KeepTogether>
+        <DataSetName>RateValveTest</DataSetName>
+        <PageBreak>
+          <BreakLocation>End</BreakLocation>
+        </PageBreak>
+        <Height>8.625in</Height>
+        <Width>7.5in</Width>
+        <Style />
+      </Tablix>
+    </ReportItems>
+    <Height>8.625in</Height>
+    <Style />
+  </Body>
+  <Width>7.5in</Width>
+  <Page>
+    <PageHeader>
+      <Height>1in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Image Name="image1">
+          <Source>Embedded</Source>
+          <Value>rawson_logo</Value>
+          <Sizing>Fit</Sizing>
+          <Height>0.625in</Height>
+          <Width>2.125in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="textbox1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Rate Valve Inspection Report</Value>
+                  <Style>
+                    <FontSize>14pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>textbox1</rd:DefaultName>
+          <Top>0.625in</Top>
+          <Left>2.25in</Left>
+          <Height>0.375in</Height>
+          <Width>3in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style />
+    </PageHeader>
+    <LeftMargin>0.5in</LeftMargin>
+    <RightMargin>0.5in</RightMargin>
+    <TopMargin>0.5in</TopMargin>
+    <BottomMargin>0.67in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="ValvTrak">
+      <DataSourceReference>ValvTrak</DataSourceReference>
+      <rd:DataSourceID>1c0ff0a2-c83d-4545-ad43-424333c542ed</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="RateValveTest">
+      <Query>
+        <DataSourceName>ValvTrak</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@RateValveTestIDs">
+            <Value>=Parameters!RateValveTestIDs.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>rpt_RateValveFieldReport</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="FSRNum">
+          <DataField>FSRNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateTested">
+          <DataField>DateTested</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="ConditionOfWearSleeve">
+          <DataField>ConditionOfWearSleeve</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ConditionOfDisc">
+          <DataField>ConditionOfDisc</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PercentDiscWear">
+          <DataField>PercentDiscWear</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ExternalCondition">
+          <DataField>ExternalCondition</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Remarks">
+          <DataField>Remarks</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CustomerWitness">
+          <DataField>CustomerWitness</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FirstName">
+          <DataField>FirstName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastName">
+          <DataField>LastName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SerialNum">
+          <DataField>SerialNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ClientName">
+          <DataField>ClientName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Manufacturer">
+          <DataField>Manufacturer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PropertyNumber">
+          <DataField>PropertyNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LocationName">
+          <DataField>LocationName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Model">
+          <DataField>Model</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RateValveTestID">
+          <DataField>RateValveTestID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="JobID">
+          <DataField>JobID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SalesOrderNum">
+          <DataField>SalesOrderNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsRateValveFieldReport</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Tim\Source\Workspaces\ValvTrak\ValvTrak.DNN\App_Code\Rawson\Data\Reports\DataSets\dsRateValveFieldReport.xsd</rd:SchemaPath>
+        <rd:TableName>dsRateValveFieldReport</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>dsRateValveFieldReportTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="RateValveTestIDs">
+      <DataType>String</DataType>
+      <Prompt>RateValveTestIDs</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <EmbeddedImages>
+    <EmbeddedImage Name="rawson_logo">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>d500cf30-d1b1-4635-8040-2001622ba86b</rd:ReportID>
+</Report>

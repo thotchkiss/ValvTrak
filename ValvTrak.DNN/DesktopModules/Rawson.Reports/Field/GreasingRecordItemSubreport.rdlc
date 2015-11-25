@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
@@ -295,6 +295,7 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                         <Direction>RTL</Direction>
+                        <WritingMode>Vertical</WritingMode>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -328,6 +329,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <WritingMode>Vertical</WritingMode>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -361,6 +363,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <WritingMode>Vertical</WritingMode>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -394,6 +397,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <WritingMode>Vertical</WritingMode>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -427,6 +431,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <WritingMode>Vertical</WritingMode>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -460,6 +465,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <WritingMode>Vertical</WritingMode>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -493,6 +499,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <WritingMode>Vertical</WritingMode>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -526,6 +533,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <WritingMode>Vertical</WritingMode>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -559,6 +567,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <WritingMode>Vertical</WritingMode>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -593,6 +602,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <WritingMode>Vertical</WritingMode>
                       </Style>
                     </Textbox>
                   </CellContents>
@@ -1281,7 +1291,8 @@
             <Value>=Parameters!GreasingRecordID.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>select * from vw_greasingrecorditems where GreasingRecordID = @GreasingRecordID</CommandText>
+        <CommandText>select * from vw_greasingrecorditems
+where GreasingRecordID = @GreasingRecordID</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <Fields>

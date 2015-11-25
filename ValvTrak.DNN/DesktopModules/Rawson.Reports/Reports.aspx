@@ -10,6 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <div>
         <uc1:ReportViewer runat="server" ID="ReportViewer" />
     </div>
