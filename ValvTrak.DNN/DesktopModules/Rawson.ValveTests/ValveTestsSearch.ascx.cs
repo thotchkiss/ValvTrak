@@ -72,7 +72,7 @@ public partial class ValveTestsSearch : PortalModuleBase
             {
                 DateTime end = DateTime.Today;
                 TestedEndDate.Text = end.ToString ( "d" );
-                TestedStartDate.Text = end.AddDays ( -30 ).ToString ( "d" );
+                TestedStartDate.Text = end.AddDays ( -90 ).ToString ( "d" );
 
                 ClientFilter.Value = -1;
                 LocationFilter.Value = -1;
@@ -128,7 +128,7 @@ public partial class ValveTestsSearch : PortalModuleBase
             /*******************************************************************************************************************/
 
             reportingGrid.JSProperties["cpShowReport"] = true;
-            reportingGrid.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.ValveTestFieldReport, cacheKey);
+            PrintSelected.JSProperties["cpReportUrl"] = String.Format("DesktopModules/Rawson.Reports/Reports.aspx?rpt=vtfr&key={0}", cacheKey);
         }
         else
         {
@@ -321,7 +321,7 @@ public partial class ValveTestsSearch : PortalModuleBase
             /***************************************************************************************************************/
 
             PrintAll.JSProperties["cpShowReport"] = true;
-            PrintAll.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.ValveTestFieldReport, cacheKey);
+            PrintSelected.JSProperties["cpReportUrl"] = String.Format("DesktopModules/Rawson.Reports/Reports.aspx?rpt=vtfr&key={0}", cacheKey);
         }
     }
 

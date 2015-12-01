@@ -80,7 +80,7 @@ namespace Rawson.GreasingRecords
                     //default completion date to past 30 days
                     DateTime end = DateTime.Today;
                     TestedEndDate.Text = end.ToString("d");
-                    TestedStartDate.Text = end.AddDays(-30).ToString("d");
+                    TestedStartDate.Text = end.AddDays(-90).ToString("d");
 
                     ClientFilter.Value = -1;
                     LocationFilter.Value = -1;

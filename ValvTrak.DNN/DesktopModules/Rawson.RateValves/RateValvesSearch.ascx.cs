@@ -68,7 +68,7 @@ public partial class RateValvesSearch : PortalModuleBase
             {
                 DateTime end = DateTime.Today;
                 TestedEndDate.Text = end.ToString("d");
-                TestedStartDate.Text = end.AddDays(-30).ToString("d");
+                TestedStartDate.Text = end.AddDays(-90).ToString("d");
 
                 ClientFilter.Value = -1;
                 LocationFilter.Value = -1;
@@ -149,7 +149,7 @@ public partial class RateValvesSearch : PortalModuleBase
             /*******************************************************************************************************************/
 
             reportingGrid.JSProperties["cpShowReport"] = true;
-            reportingGrid.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.RateValveFieldReport, cacheKey);
+            PrintSelected.JSProperties["cpReportUrl"] = String.Format("DesktopModules/Rawson.Reports/Reports.aspx?rpt=rvfr&key={0}", cacheKey);
         }
         else
         {
@@ -239,7 +239,7 @@ public partial class RateValvesSearch : PortalModuleBase
         /*******************************************************************************************************************/
 
         PrintSelected.JSProperties["cpShowReport"] = true;
-        PrintSelected.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.RateValveFieldReport, cacheKey);
+        PrintSelected.JSProperties["cpReportUrl"] = String.Format("DesktopModules/Rawson.Reports/Reports.aspx?rpt=rvfr&key={0}", cacheKey);
     }
 
     protected void PrintAll_Callback(object source, DevExpress.Web.CallbackEventArgs e)
@@ -272,7 +272,7 @@ public partial class RateValvesSearch : PortalModuleBase
             /***************************************************************************************************************/
 
             PrintAll.JSProperties["cpShowReport"] = true;
-            PrintAll.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.RateValveFieldReport, cacheKey);
+            PrintSelected.JSProperties["cpReportUrl"] = String.Format("DesktopModules/Rawson.Reports/Reports.aspx?rpt=rvfr&key={0}", cacheKey);
         }
     }
 

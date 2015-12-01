@@ -1398,6 +1398,7 @@
                       <KeepTogether>true</KeepTogether>
                       <Style />
                     </Rectangle>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -1412,7 +1413,13 @@
         <TablixRowHierarchy>
           <TablixMembers>
             <TablixMember>
-              <Group Name="list1_Details_Group">
+              <Group Name="Page_Group">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!RateValveTestID.Value</GroupExpression>
+                </GroupExpressions>
+                <PageBreak>
+                  <BreakLocation>StartAndEnd</BreakLocation>
+                </PageBreak>
                 <DataElementName>Item</DataElementName>
               </Group>
               <DataElementName>Item_Collection</DataElementName>
@@ -1422,7 +1429,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <KeepTogether>true</KeepTogether>
-        <DataSetName>ValvTrak</DataSetName>
+        <DataSetName>RateValveTest</DataSetName>
         <PageBreak>
           <BreakLocation>End</BreakLocation>
         </PageBreak>
@@ -1502,7 +1509,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ValvTrak">
+    <DataSet Name="RateValveTest">
       <Query>
         <DataSourceName>ValvTrak</DataSourceName>
         <QueryParameters>

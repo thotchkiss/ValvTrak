@@ -37,6 +37,9 @@ namespace Rawson.Reports
                 case "wsfr":
                     config = new WellTestFieldReportConfigurator();
                     break;
+                case "rvfr":
+                    config = new RateValveFieldReportConfigurator();
+                    break;
                 default:
                     throw new ArgumentException ( "Invalid report type." );
             }
