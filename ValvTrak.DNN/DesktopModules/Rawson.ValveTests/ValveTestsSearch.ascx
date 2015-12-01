@@ -98,10 +98,8 @@
                                 </td>
                                 <td>
                                     <dxe:ASPxComboBox ID="ClientFilter" runat="server" DataSourceID="ClientDataSource"
-                                        TextField="DisplayMember" ValueField="ValueMember" AutoPostBack="False"
-                                        EnableIncrementalFiltering="True" ValueType="System.Int32" 
-                                        EnableCallbackMode="True" ShowLoadingPanel="False" >
-                                        <ClientSideEvents SelectedIndexChanged="function(s,e){ locations.PerformCallback(); }" />
+                                        TextField="DisplayMember" ValueField="ValueMember"
+                                        ValueType="System.Int32" Height="22px" >
                                     </dxe:ASPxComboBox>
                                 </td>
                                 <td rowspan="4" style="width: 40px">&nbsp;</td>
@@ -192,7 +190,7 @@
                                 </td>
                                 <td>
                                     <dxe:ASPxComboBox ID="TestResultFilter" runat="server" 
-                                        EnableIncrementalFiltering="True" ValueType="System.Int32">
+                                        EnableIncrementalFiltering="True" ValueType="System.Int32" Height="22px">
                                         <Items>
                                             <dxe:ListEditItem Text="-- All --" Value="-1" />
                                             <dxe:ListEditItem Text="Tested Good" Value="5" />
