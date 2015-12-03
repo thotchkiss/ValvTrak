@@ -480,10 +480,11 @@
 {
 	font: 12px Tahoma;
 }
-td.dxic
+/* Commented out by TJH*/
+/*td.dxic
 {
 	font-size: 0;
-}
+}*/
 /* -- ErrorFrame -- */
 .dxeErrorCell_Aqua,
 .dxeErrorCell_Aqua td

@@ -6,7 +6,7 @@
         <td>
             <div>
                 <rsweb:ReportViewer ID="ReportViewer1" Height="100%" Width="910px" runat="server" AsyncRendering="false" 
-                    ShowRefreshButton="false" PageCountMode="Estimate">
+                    ShowRefreshButton="false" PageCountMode="Actual">
                 </rsweb:ReportViewer>
             </div>
         </td>
