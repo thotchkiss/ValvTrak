@@ -128,7 +128,7 @@ public partial class ValveTestsSearch : PortalModuleBase
             /*******************************************************************************************************************/
 
             reportingGrid.JSProperties["cpShowReport"] = true;
-            PrintSelected.JSProperties["cpReportUrl"] = String.Format("DesktopModules/Rawson.Reports/Reports.aspx?rpt=vtfr&key={0}", cacheKey);
+            reportingGrid.JSProperties["cpReportUrl"] = String.Format("DesktopModules/Rawson.Reports/Reports.aspx?rpt=vtfr&key={0}", cacheKey);
         }
         else
         {
@@ -330,6 +330,5 @@ public partial class ValveTestsSearch : PortalModuleBase
         ASPxGridViewExporter1.GridViewID = "reportingGrid";
         ASPxGridViewExporter1.WriteXlsToResponse();
     }
-
 
 }

@@ -98,8 +98,10 @@
                                 </td>
                                 <td>
                                     <dxe:ASPxComboBox ID="ClientFilter" runat="server" DataSourceID="ClientDataSource"
-                                        TextField="DisplayMember" ValueField="ValueMember"
+                                        TextField="DisplayMember" ValueField="ValueMember" AutoPostBack="false"
+                                        EnableCallbackMode="true" IncrementalFilteringMode="StartsWith"    
                                         ValueType="System.Int32" Height="22px" >
+                                        <ClientSideEvents SelectedIndexChanged="function(s,e){ locations.PerformCallback(); }" />
                                     </dxe:ASPxComboBox>
                                 </td>
                                 <td rowspan="4" style="width: 40px">&nbsp;</td>
@@ -147,8 +149,9 @@
                                 <td>
                                     <dxe:ASPxComboBox ID="LocationFilter" runat="server" DataSourceID="LocationDataSource"
                                         TextField="DisplayMember" ValueField="ValueMember" ClientInstanceName="locations" 
-                                        EnableIncrementalFiltering="true" OnCallback="LocationFilter_Callback" 
-                                        ValueType="System.Int32" EnableCallbackMode="True" ShowLoadingPanel="False">
+                                        IncrementalFilteringMode="StartsWith" OnCallback="LocationFilter_Callback" 
+                                        ValueType="System.Int32" EnableCallbackMode="True" ShowLoadingPanel="False"
+                                        NullText="-- Select Location --">
                                     </dxe:ASPxComboBox>
                                 </td>
                                 <td>
@@ -170,7 +173,7 @@
                                 <td>
                                     <dxe:ASPxComboBox ID="JobStatusFilter" runat="server" DataSourceID="JobStatusDataSource"
                                         TextField="DisplayMember" ValueField="ValueMember" 
-                                        EnableIncrementalFiltering="True" ValueType="System.Int32">
+                                        IncrementalFilteringMode="StartsWith" ValueType="System.Int32">
                                         <ClientSideEvents Init="function(s, e) {DevExComboUnboundItem(s, e, '-- All --', -1)}" />
                                     </dxe:ASPxComboBox>
                                 </td>
@@ -190,7 +193,7 @@
                                 </td>
                                 <td>
                                     <dxe:ASPxComboBox ID="TestResultFilter" runat="server" 
-                                        EnableIncrementalFiltering="True" ValueType="System.Int32" Height="22px">
+                                        IncrementalFilteringMode="StartsWith" ValueType="System.Int32" Height="22px">
                                         <Items>
                                             <dxe:ListEditItem Text="-- All --" Value="-1" />
                                             <dxe:ListEditItem Text="Tested Good" Value="5" />
