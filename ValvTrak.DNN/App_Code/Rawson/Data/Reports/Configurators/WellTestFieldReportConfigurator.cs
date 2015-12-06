@@ -29,7 +29,7 @@ namespace Rawson.Reports
             string ids = (string)DataCache.GetCache(param["key"]);
             DataTable dt = adapter.GetData(ids);
 
-            rpt.LocalReport.DataSources.Add(new ReportDataSource("WellSafetyTests", dt.DefaultView));
+            rpt.LocalReport.DataSources.Add(new ReportDataSource("ValvTrak", dt.DefaultView));
             rpt.LocalReport.Refresh();
         }
     }

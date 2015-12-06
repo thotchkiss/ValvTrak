@@ -739,6 +739,7 @@
                       <KeepTogether>true</KeepTogether>
                       <Style />
                     </Rectangle>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -757,13 +758,16 @@
                 <GroupExpressions>
                   <GroupExpression>=Fields!GreasingRecordID.Value</GroupExpression>
                 </GroupExpressions>
+                <PageBreak>
+                  <BreakLocation>Between</BreakLocation>
+                </PageBreak>
               </Group>
               <DataElementOutput>Output</DataElementOutput>
               <KeepTogether>true</KeepTogether>
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>GreasingRecord</DataSetName>
+        <DataSetName>ValvTrak</DataSetName>
         <PageBreak>
           <BreakLocation>End</BreakLocation>
         </PageBreak>
@@ -861,23 +865,19 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ValvTrak">
-      <DataSourceReference>ValvTrak</DataSourceReference>
-      <rd:DataSourceID>6564bed7-d7b7-42bf-b0ea-08281db19651</rd:DataSourceID>
+    <DataSource Name="dsGreasingRecordFieldReport">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>dcf4532a-2697-4b99-8e66-e6c831223304</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="GreasingRecord">
+    <DataSet Name="ValvTrak">
       <Query>
-        <DataSourceName>ValvTrak</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@GreasingRecordIds">
-            <Value>=Parameters!GreasingRecordIds.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandType>StoredProcedure</CommandType>
-        <CommandText>rpt_GreasingRecordFieldReport</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <DataSourceName>dsGreasingRecordFieldReport</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
         <Field Name="GreasingRecordID">
@@ -960,6 +960,14 @@
           <DataField>SapWoNum</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Longitude">
+          <DataField>Longitude</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Latitude">
+          <DataField>Latitude</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dsGreasingRecordFieldReport</rd:DataSetName>
@@ -971,12 +979,6 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="GreasingRecordIds">
-      <DataType>String</DataType>
-      <Prompt>Greasing Record Id's</Prompt>
-    </ReportParameter>
-  </ReportParameters>
   <EmbeddedImages>
     <EmbeddedImage Name="rawson_report_logo">
       <MIMEType>image/jpeg</MIMEType>

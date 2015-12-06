@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Name>ValvTrak</Name>
-  <DataSourceID>f19e7ded-d1b5-4e94-819f-1c820af910c1</DataSourceID>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="ValvTrak">
   <ConnectionProperties>
     <Extension>SQL</Extension>
-    <ConnectString>Data Source=localhost;Initial Catalog=SRD</ConnectString>
+    <ConnectString>Data Source=.\SQLExpress;Initial Catalog=SRD</ConnectString>
   </ConnectionProperties>
+  <DataSourceID>f19e7ded-d1b5-4e94-819f-1c820af910c1</DataSourceID>
 </RptDataSource>

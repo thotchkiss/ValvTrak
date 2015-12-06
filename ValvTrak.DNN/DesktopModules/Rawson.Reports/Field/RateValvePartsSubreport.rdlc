@@ -3228,22 +3228,19 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ValvTrak">
-      <DataSourceReference>ValvTrak</DataSourceReference>
-      <rd:DataSourceID>66c59bde-108d-48fd-834e-8ed8c715dfaa</rd:DataSourceID>
+    <DataSource Name="dsRateValveFieldReport">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>a6331a62-c351-42b9-a6a0-690ab1e06cb9</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="ValvTrak">
       <Query>
-        <DataSourceName>ValvTrak</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@RateValveTestID">
-            <Value>=Parameters!RateValveTestID.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandType>StoredProcedure</CommandType>
-        <CommandText>rpt_RateValveParts</CommandText>
+        <DataSourceName>dsRateValveFieldReport</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
         <Field Name="Quantity_CD1">
@@ -3487,8 +3484,9 @@
   </DataSets>
   <ReportParameters>
     <ReportParameter Name="RateValveTestID">
-      <DataType>String</DataType>
-      <Prompt>RateValveTestID</Prompt>
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Language>en-US</Language>

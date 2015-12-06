@@ -891,7 +891,11 @@
                           <Height>2.875in</Height>
                           <Width>7.5in</Width>
                           <ZIndex>32</ZIndex>
-                          <Style />
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
                         </Subreport>
                         <Textbox Name="FSRNum">
                           <CanGrow>true</CanGrow>
@@ -1398,6 +1402,7 @@
                       <KeepTogether>true</KeepTogether>
                       <Style />
                     </Rectangle>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -1413,6 +1418,9 @@
           <TablixMembers>
             <TablixMember>
               <Group Name="list1_Details_Group">
+                <PageBreak>
+                  <BreakLocation>Between</BreakLocation>
+                </PageBreak>
                 <DataElementName>Item</DataElementName>
               </Group>
               <DataElementName>Item_Collection</DataElementName>
@@ -1496,22 +1504,19 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ValvTrak">
-      <DataSourceReference>ValvTrak</DataSourceReference>
-      <rd:DataSourceID>1c0ff0a2-c83d-4545-ad43-424333c542ed</rd:DataSourceID>
+    <DataSource Name="dsRateValveFieldReport">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>d30662e2-e8d7-4fd4-8323-4df25add8b8a</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="ValvTrak">
       <Query>
-        <DataSourceName>ValvTrak</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@RateValveTestIDs">
-            <Value>=Parameters!RateValveTestIDs.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandType>StoredProcedure</CommandType>
-        <CommandText>rpt_RateValveFieldReport</CommandText>
+        <DataSourceName>dsRateValveFieldReport</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
         <Field Name="FSRNum">
@@ -1601,12 +1606,6 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="RateValveTestIDs">
-      <DataType>String</DataType>
-      <Prompt>RateValveTestIDs</Prompt>
-    </ReportParameter>
-  </ReportParameters>
   <EmbeddedImages>
     <EmbeddedImage Name="rawson_logo">
       <MIMEType>image/gif</MIMEType>

@@ -32,7 +32,7 @@ namespace Rawson.Reports
             string ids = (string)DataCache.GetCache(param["key"]);
             DataTable dtGr = grAdapter.GetData(ids);
 
-            rpt.LocalReport.DataSources.Add(new ReportDataSource("GreasingRecord", dtGr.DefaultView));
+            rpt.LocalReport.DataSources.Add(new ReportDataSource("ValvTrak", dtGr.DefaultView));
             rpt.LocalReport.Refresh();
         }
 
@@ -42,7 +42,7 @@ namespace Rawson.Reports
             griAdapter.Connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ValvTrakData"].ConnectionString;
             
             DataTable dtGri = griAdapter.GetData(Convert.ToInt32(e.Parameters["GreasingRecordID"].Values[0]));
-            e.DataSources.Add(new ReportDataSource("GreasingRecordItems", dtGri));
+            e.DataSources.Add(new ReportDataSource("ValvTrak", dtGri));
             
         }
 

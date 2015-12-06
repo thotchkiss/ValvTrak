@@ -1251,7 +1251,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <KeepTogether>true</KeepTogether>
-        <DataSetName>GreasingRecordItems</DataSetName>
+        <DataSetName>ValvTrak</DataSetName>
         <PageBreak>
           <BreakLocation>End</BreakLocation>
         </PageBreak>
@@ -1277,23 +1277,19 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ValvTrak">
-      <DataSourceReference>ValvTrak</DataSourceReference>
-      <rd:DataSourceID>b777c597-6df9-4a90-88a0-777d344f8dd7</rd:DataSourceID>
+    <DataSource Name="dsGreasingRecordFieldReport">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>3a3b695f-37e4-46a8-8818-14a0fc881f67</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="GreasingRecordItems">
+    <DataSet Name="ValvTrak">
       <Query>
-        <DataSourceName>ValvTrak</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@GreasingRecordID">
-            <Value>=Parameters!GreasingRecordID.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandText>select * from vw_greasingrecorditems
-where GreasingRecordID = @GreasingRecordID</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <DataSourceName>dsGreasingRecordFieldReport</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
         <Field Name="GreasingRecordItemID">
@@ -1442,7 +1438,8 @@ where GreasingRecordID = @GreasingRecordID</CommandText>
   <ReportParameters>
     <ReportParameter Name="GreasingRecordID">
       <DataType>Integer</DataType>
-      <Prompt>GreasingRecordID</Prompt>
+      <Nullable>true</Nullable>
+      <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Language>en-US</Language>

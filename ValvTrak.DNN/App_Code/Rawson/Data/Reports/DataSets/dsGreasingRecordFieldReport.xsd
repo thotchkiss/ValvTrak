@@ -43,6 +43,8 @@
               <Mapping SourceColumn="TechnicianDisplay" DataSetColumn="TechnicianDisplay" />
               <Mapping SourceColumn="SalesOrderNum" DataSetColumn="SalesOrderNum" />
               <Mapping SourceColumn="SapWoNum" DataSetColumn="SapWoNum" />
+              <Mapping SourceColumn="Longitude" DataSetColumn="Longitude" />
+              <Mapping SourceColumn="Latitude" DataSetColumn="Latitude" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -104,7 +106,7 @@
   <xs:element name="dsGreasingRecordFieldReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsGreasingRecordFieldReport" msprop:Generator_UserDSName="dsGreasingRecordFieldReport">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="dsGreasingRecords" msprop:Generator_TableClassName="dsGreasingRecordsDataTable" msprop:Generator_TableVarName="tabledsGreasingRecords" msprop:Generator_TablePropName="dsGreasingRecords" msprop:Generator_RowDeletingName="dsGreasingRecordsRowDeleting" msprop:Generator_RowChangingName="dsGreasingRecordsRowChanging" msprop:Generator_RowEvHandlerName="dsGreasingRecordsRowChangeEventHandler" msprop:Generator_RowDeletedName="dsGreasingRecordsRowDeleted" msprop:Generator_UserTableName="dsGreasingRecords" msprop:Generator_RowChangedName="dsGreasingRecordsRowChanged" msprop:Generator_RowEvArgName="dsGreasingRecordsRowChangeEvent" msprop:Generator_RowClassName="dsGreasingRecordsRow">
+        <xs:element name="dsGreasingRecords" msprop:Generator_TableClassName="dsGreasingRecordsDataTable" msprop:Generator_TableVarName="tabledsGreasingRecords" msprop:Generator_RowChangedName="dsGreasingRecordsRowChanged" msprop:Generator_TablePropName="dsGreasingRecords" msprop:Generator_RowDeletingName="dsGreasingRecordsRowDeleting" msprop:Generator_RowChangingName="dsGreasingRecordsRowChanging" msprop:Generator_RowEvHandlerName="dsGreasingRecordsRowChangeEventHandler" msprop:Generator_RowDeletedName="dsGreasingRecordsRowDeleted" msprop:Generator_RowClassName="dsGreasingRecordsRow" msprop:Generator_UserTableName="dsGreasingRecords" msprop:Generator_RowEvArgName="dsGreasingRecordsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="GreasingRecordID" msprop:Generator_ColumnVarNameInTable="columnGreasingRecordID" msprop:Generator_ColumnPropNameInRow="GreasingRecordID" msprop:Generator_ColumnPropNameInTable="GreasingRecordIDColumn" msprop:Generator_UserColumnName="GreasingRecordID" type="xs:int" />
@@ -199,10 +201,24 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Longitude" msprop:Generator_ColumnVarNameInTable="columnLongitude" msprop:Generator_ColumnPropNameInRow="Longitude" msprop:Generator_ColumnPropNameInTable="LongitudeColumn" msprop:Generator_UserColumnName="Longitude" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Latitude" msprop:Generator_ColumnVarNameInTable="columnLatitude" msprop:Generator_ColumnPropNameInRow="Latitude" msprop:Generator_ColumnPropNameInTable="LatitudeColumn" msprop:Generator_UserColumnName="Latitude" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dsGreasingRecordItems" msprop:Generator_TableClassName="dsGreasingRecordItemsDataTable" msprop:Generator_TableVarName="tabledsGreasingRecordItems" msprop:Generator_TablePropName="dsGreasingRecordItems" msprop:Generator_RowDeletingName="dsGreasingRecordItemsRowDeleting" msprop:Generator_RowChangingName="dsGreasingRecordItemsRowChanging" msprop:Generator_RowEvHandlerName="dsGreasingRecordItemsRowChangeEventHandler" msprop:Generator_RowDeletedName="dsGreasingRecordItemsRowDeleted" msprop:Generator_UserTableName="dsGreasingRecordItems" msprop:Generator_RowChangedName="dsGreasingRecordItemsRowChanged" msprop:Generator_RowEvArgName="dsGreasingRecordItemsRowChangeEvent" msprop:Generator_RowClassName="dsGreasingRecordItemsRow">
+        <xs:element name="dsGreasingRecordItems" msprop:Generator_TableClassName="dsGreasingRecordItemsDataTable" msprop:Generator_TableVarName="tabledsGreasingRecordItems" msprop:Generator_RowChangedName="dsGreasingRecordItemsRowChanged" msprop:Generator_TablePropName="dsGreasingRecordItems" msprop:Generator_RowDeletingName="dsGreasingRecordItemsRowDeleting" msprop:Generator_RowChangingName="dsGreasingRecordItemsRowChanging" msprop:Generator_RowEvHandlerName="dsGreasingRecordItemsRowChangeEventHandler" msprop:Generator_RowDeletedName="dsGreasingRecordItemsRowDeleted" msprop:Generator_RowClassName="dsGreasingRecordItemsRow" msprop:Generator_UserTableName="dsGreasingRecordItems" msprop:Generator_RowEvArgName="dsGreasingRecordItemsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="GreasingRecordItemID" msprop:Generator_ColumnVarNameInTable="columnGreasingRecordItemID" msprop:Generator_ColumnPropNameInRow="GreasingRecordItemID" msprop:Generator_ColumnPropNameInTable="GreasingRecordItemIDColumn" msprop:Generator_UserColumnName="GreasingRecordItemID" type="xs:int" />

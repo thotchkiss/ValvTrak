@@ -1,0 +1,109 @@
+2015-12-04 22:11:42,892 [TIM-PC][Thread:34][FATAL] DotNetNuke.Services.Exceptions.Exceptions - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2015-12-04 22:11:42,917 [TIM-PC][Thread:34][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2015-12-04 22:17:57,888 [TIM-PC][Thread:58][FATAL] DotNetNuke.Services.Exceptions.Exceptions - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2015-12-04 22:17:57,892 [TIM-PC][Thread:58][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2015-12-04 23:11:07,177 [TIM-PC][Thread:42][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): The state information is invalid for this page and might be corrupted. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: ::1
+	Port: 59413
+	Referer: http://localhost:8080/beta/ValveTests.aspx
+	Path: /Beta/Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0
+	ViewState: /wEdAA6OAmtnhQeA+tgR6zry7msi4jcfWoh7MlbeNyTwNfR2OvYO1iD380+uQ6Ifxi9l6wADMUjVqGk19UieGxYga66tS814HP1UyWbRVsfJpPKqfVLFyK5lHX6U31udmnBV0+fnsrONRQByxLm3f+qM9IH54eqDcQQ3xm/HU8cOBka8niWYZ5LNA7Pyfb/7/5Z/yXAWin2ze5qWEwj5/FNUDe+YZ43NBQvdUbBxzljvAjkOGy1sje62mvBfCKbL5HopcfBXyfNnC2LjR4Gt1Zo90L2sIJWE4Jsg+tfguQrQbLlbQFHmGXnkc8Tq4sGZ6WYlJznIWZbW
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.ClientScriptManager.EnsureEventValidationFieldLoaded()
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.Control.ValidateEvent(String uniqueID, String eventArgument)
+   at System.Web.UI.WebControls.TextBox.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-04 23:11:07,599 [TIM-PC][Thread:42][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ApplicationException: Server.Transfer cannot be called in a Page callback.
+   at System.Web.HttpServerUtility.Transfer(String path, Boolean preserveForm)
+   at System.Web.HttpServerUtility.Transfer(String path)
+   at DotNetNuke.Framework.PageBase.OnError(EventArgs e)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\beta\5b361dc9\2b811827\App_Web_qpfz23k5.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-04 23:11:25,770 [TIM-PC][Thread:45][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): The state information is invalid for this page and might be corrupted. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: ::1
+	Port: 59413
+	Referer: http://localhost:8080/beta/ValveTests.aspx
+	Path: /Beta/Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0
+	ViewState: /wEdAA6OAmtnhQeA+tgR6zry7msi4jcfWoh7MlbeNyTwNfR2OvYO1iD380+uQ6Ifxi9l6wADMUjVqGk19UieGxYga66tS814HP1UyWbRVsfJpPKqfVLFyK5lHX6U31udmnBV0+fnsrONRQByxLm3f+qM9IH54eqDcQQ3xm/HU8cOBka8niWYZ5LNA7Pyfb/7/5Z/yXAWin2ze5qWEwj5/FNUDe+YZ43NBQvdUbBxzljvAjkOGy1sje62mvBfCKbL5HopcfBXyfNnC2LjR4Gt1Zo90L2sIJWE4Jsg+tfguQrQbLlbQFHmGXnkc8Tq4sGZ6WYlJznIWZbW
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.ClientScriptManager.EnsureEventValidationFieldLoaded()
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.Control.ValidateEvent(String uniqueID, String eventArgument)
+   at System.Web.UI.WebControls.TextBox.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-04 23:11:25,817 [TIM-PC][Thread:45][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ApplicationException: Server.Transfer cannot be called in a Page callback.
+   at System.Web.HttpServerUtility.Transfer(String path, Boolean preserveForm)
+   at System.Web.HttpServerUtility.Transfer(String path)
+   at DotNetNuke.Framework.PageBase.OnError(EventArgs e)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\beta\5b361dc9\2b811827\App_Web_qpfz23k5.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-04 23:11:42,474 [TIM-PC][Thread:54][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): The state information is invalid for this page and might be corrupted. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: ::1
+	Port: 59409
+	Referer: http://localhost:8080/beta/ValveTests.aspx
+	Path: /Beta/Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0
+	ViewState: /wEdAA5nkoaWRcksu67eSdYeA1ne4jcfWoh7MlbeNyTwNfR2OvYO1iD380+uQ6Ifxi9l6wADMUjVqGk19UieGxYga66tS814HP1UyWbRVsfJpPKqfVLFyK5lHX6U31udmnBV0+fnsrONRQByxLm3f+qM9IH54eqDcQQ3xm/HU8cOBka8niWYZ5LNA7Pyfb/7/5Z/yXAWin2ze5qWEwj5/FNUDe+YZ43NBQvdUbBxzljvAjkOGy1sje62mvBfCKbL5HopcfBXyfNnC2LjR4Gt1Zo90L2sIJWE4Jsg+tfguQrQbLlbQJwe6sr2jjaq+nPR3ETyj1m08Ckv
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.ClientScriptManager.EnsureEventValidationFieldLoaded()
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.Control.ValidateEvent(String uniqueID, String eventArgument)
+   at System.Web.UI.WebControls.TextBox.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-04 23:11:42,521 [TIM-PC][Thread:54][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ApplicationException: Server.Transfer cannot be called in a Page callback.
+   at System.Web.HttpServerUtility.Transfer(String path, Boolean preserveForm)
+   at System.Web.HttpServerUtility.Transfer(String path)
+   at DotNetNuke.Framework.PageBase.OnError(EventArgs e)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\beta\5b361dc9\2b811827\App_Web_qpfz23k5.2.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-04 23:39:03,201 [TIM-PC][Thread:102][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.ApplicationException: ReaderWriterLockStrategy.GetWriteLock timed out
+   at DotNetNuke.Collections.Internal.ReaderWriterLockStrategy.GetWriteLock(TimeSpan timeout)
+   at DotNetNuke.Collections.Internal.SharedList`1.GetWriteLock(TimeSpan timeOut)
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.RemoveFromScheduleQueue(ScheduleItem scheduleItem)
+2015-12-04 23:39:03,201 [TIM-PC][Thread:84][ERROR] DotNetNuke.Services.Exceptions.Exceptions - System.ApplicationException: ReaderWriterLockStrategy.GetWriteLock timed out
+   at DotNetNuke.Collections.Internal.ReaderWriterLockStrategy.GetWriteLock(TimeSpan timeout)
+   at DotNetNuke.Collections.Internal.SharedList`1.GetWriteLock(TimeSpan timeOut)
+   at DotNetNuke.Services.Scheduling.Scheduler.CoreScheduler.RemoveFromScheduleQueue(ScheduleItem scheduleItem)
+2015-12-04 23:43:15,935 [TIM-PC][Thread:11][FATAL] DotNetNuke.Services.Exceptions.Exceptions - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2015-12-04 23:43:15,951 [TIM-PC][Thread:11][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2015-12-04 23:43:30,070 [TIM-PC][Thread:26][FATAL] DotNetNuke.Services.Exceptions.Exceptions - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2015-12-04 23:43:30,070 [TIM-PC][Thread:26][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)

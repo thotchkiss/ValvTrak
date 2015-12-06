@@ -128,8 +128,8 @@ namespace Rawson.ValveTests
             SetPressureLeftTextBox.Text = vt.SetPressureLeft.GetValueOrDefault ( 0 ).ToString ( "N2" );
 
             Pop1TextBox.Text = vt.Pop_1.GetValueOrDefault(0).ToString("N2");
-            Pop2TextBox.Text = vt.Pop_1.GetValueOrDefault(0).ToString("N2");
-            Pop3TextBox.Text = vt.Pop_1.GetValueOrDefault(0).ToString("N2");
+            Pop2TextBox.Text = vt.Pop_2.GetValueOrDefault(0).ToString("N2");
+            Pop3TextBox.Text = vt.Pop_3.GetValueOrDefault(0).ToString("N2");
 
             TestResultIDSelect.Value = vt.TestResultID.GetValueOrDefault(-1);
 

@@ -1,19 +1,10 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="RateValvesSearch.ascx.cs" Inherits="RateValvesSearch" %>
 
 <%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dx" %>
-
-
-
-
 <%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxwgv" %>
 <%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxe" %>
 <%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxrp" %>
 <%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxp" %>
-
-
-
-
-
 
 <script type="text/javascript" src="../../js/json2.js"></script>
 <script id="scrCommon" type="text/javascript">
@@ -261,7 +252,7 @@
                     <td>
                         <dxe:ASPxButton ID="printSelectedButton" runat="server" Text="Print Selected" 
                             Wrap="false" AutoPostBack="false" UseSubmitBehavior="false">
-                            <ClientSideEvents Click="function(s,e){ reportingGrid.GetSelectedFieldValues('ValveTestID', OnGridGetSelectedValues ); }" />
+                            <ClientSideEvents Click="function(s,e){ reportingGrid.GetSelectedFieldValues('RateValveTestID', OnGridGetSelectedValues ); }" />
                         </dxe:ASPxButton>
                     </td>
                     <td>

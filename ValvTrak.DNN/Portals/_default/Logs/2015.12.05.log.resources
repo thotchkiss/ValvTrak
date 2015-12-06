@@ -1,0 +1,24 @@
+2015-12-05 00:46:00,394 [TIM-PC][Thread:49][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - Microsoft.Reporting.WebForms.HttpHandlerInputException: Missing URL parameter: IterationId
+   at Microsoft.Reporting.WebForms.HandlerOperation.GetAndEnsureParam(NameValueCollection urlQuery, String paramName)
+   at Microsoft.Reporting.WebForms.ReportImageOperation.PerformOperation(NameValueCollection urlQuery, HttpResponse response)
+   at Microsoft.Reporting.WebForms.HttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-05 00:46:38,384 [TIM-PC][Thread:42][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - Microsoft.Reporting.WebForms.HttpHandlerInputException: Missing URL parameter: IterationId
+   at Microsoft.Reporting.WebForms.HandlerOperation.GetAndEnsureParam(NameValueCollection urlQuery, String paramName)
+   at Microsoft.Reporting.WebForms.ReportImageOperation.PerformOperation(NameValueCollection urlQuery, HttpResponse response)
+   at Microsoft.Reporting.WebForms.HttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-05 00:47:37,384 [TIM-PC][Thread:105][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - Microsoft.Reporting.WebForms.HttpHandlerInputException: Missing URL parameter: IterationId
+   at Microsoft.Reporting.WebForms.HandlerOperation.GetAndEnsureParam(NameValueCollection urlQuery, String paramName)
+   at Microsoft.Reporting.WebForms.ReportImageOperation.PerformOperation(NameValueCollection urlQuery, HttpResponse response)
+   at Microsoft.Reporting.WebForms.HttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-05 00:54:07,973 [TIM-PC][Thread:63][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - Microsoft.Reporting.WebForms.HttpHandlerInputException: Missing URL parameter: IterationId
+   at Microsoft.Reporting.WebForms.HandlerOperation.GetAndEnsureParam(NameValueCollection urlQuery, String paramName)
+   at Microsoft.Reporting.WebForms.ReportImageOperation.PerformOperation(NameValueCollection urlQuery, HttpResponse response)
+   at Microsoft.Reporting.WebForms.HttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)

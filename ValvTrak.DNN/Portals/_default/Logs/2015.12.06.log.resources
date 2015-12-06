@@ -1,0 +1,141 @@
+2015-12-06 09:29:37,903 [TIM-PC][Thread:12][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - Microsoft.Reporting.WebForms.HttpHandlerInputException: Missing URL parameter: IterationId
+   at Microsoft.Reporting.WebForms.HandlerOperation.GetAndEnsureParam(NameValueCollection urlQuery, String paramName)
+   at Microsoft.Reporting.WebForms.ReportImageOperation.PerformOperation(NameValueCollection urlQuery, HttpResponse response)
+   at Microsoft.Reporting.WebForms.HttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-06 11:48:34,594 [TIM-PC][Thread:51][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): The state information is invalid for this page and might be corrupted. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: ::1
+	Port: 53194
+	Referer: http://localhost:8080/beta/GreasingRecords.aspx
+	Path: /Beta/Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0
+	ViewState: /wEdAA01na9k5facLqW0hJ2JM/5U4jcfWoh7MlbeNyTwNfR2OvYO1iD380+uQ6Ifxi9l6wADMUjVqGk19UieGxYga66tYyDpF7nn2O5aiFdBDaonUyswuu6LNLFYX9/ZQyC9HXonROThEEIV14iFwgYcMm73oXRXBFMFI8ujP7dzNf8resrv5wwTc4ZgOHL+2UpA0+LukVT2vsX9XKRETGVLrdWCknmfxhKvXQXJfY0nS4sQEVfJ82cLYuNHga3Vmj3QvawglYTgmyD61+C5CtBsuVtAe4fert3KjrCe6VoQOK3wOWd/q84=
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.ClientScriptManager.EnsureEventValidationFieldLoaded()
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.Control.ValidateEvent(String uniqueID, String eventArgument)
+   at System.Web.UI.WebControls.TextBox.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-06 11:48:34,840 [TIM-PC][Thread:51][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ApplicationException: Server.Transfer cannot be called in a Page callback.
+   at System.Web.HttpServerUtility.Transfer(String path, Boolean preserveForm)
+   at System.Web.HttpServerUtility.Transfer(String path)
+   at DotNetNuke.Framework.PageBase.OnError(EventArgs e)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\beta\5b361dc9\2b811827\App_Web_rbv0g2eg.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-06 12:41:39,498 [TIM-PC][Thread:15][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): The state information is invalid for this page and might be corrupted. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: ::1
+	Port: 53623
+	Referer: http://localhost:8080/beta/GreasingRecords.aspx
+	Path: /Beta/Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0
+	ViewState: /wEdAA01na9k5facLqW0hJ2JM/5U4jcfWoh7MlbeNyTwNfR2OvYO1iD380+uQ6Ifxi9l6wADMUjVqGk19UieGxYga66tYyDpF7nn2O5aiFdBDaonUyswuu6LNLFYX9/ZQyC9HXonROThEEIV14iFwgYcMm73oXRXBFMFI8ujP7dzNf8resrv5wwTc4ZgOHL+2UpA0+LukVT2vsX9XKRETGVLrdWCknmfxhKvXQXJfY0nS4sQEVfJ82cLYuNHga3Vmj3QvawglYTgmyD61+C5CtBsuVtAe4fert3KjrCe6VoQOK3wOWd/q84=
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.ClientScriptManager.EnsureEventValidationFieldLoaded()
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.Control.ValidateEvent(String uniqueID, String eventArgument)
+   at System.Web.UI.WebControls.TextBox.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-06 12:41:39,560 [TIM-PC][Thread:15][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ApplicationException: Server.Transfer cannot be called in a Page callback.
+   at System.Web.HttpServerUtility.Transfer(String path, Boolean preserveForm)
+   at System.Web.HttpServerUtility.Transfer(String path)
+   at DotNetNuke.Framework.PageBase.OnError(EventArgs e)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\beta\5b361dc9\2b811827\App_Web_dusw0ttp.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-06 12:44:19,983 [TIM-PC][Thread:35][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - Microsoft.Reporting.WebForms.HttpHandlerInputException: Missing URL parameter: IterationId
+   at Microsoft.Reporting.WebForms.HandlerOperation.GetAndEnsureParam(NameValueCollection urlQuery, String paramName)
+   at Microsoft.Reporting.WebForms.ReportImageOperation.PerformOperation(NameValueCollection urlQuery, HttpResponse response)
+   at Microsoft.Reporting.WebForms.HttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-06 12:44:20,301 [TIM-PC][Thread:35][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - Microsoft.Reporting.WebForms.HttpHandlerInputException: Missing URL parameter: IterationId
+   at Microsoft.Reporting.WebForms.HandlerOperation.GetAndEnsureParam(NameValueCollection urlQuery, String paramName)
+   at Microsoft.Reporting.WebForms.ReportImageOperation.PerformOperation(NameValueCollection urlQuery, HttpResponse response)
+   at Microsoft.Reporting.WebForms.HttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-06 12:47:35,641 [TIM-PC][Thread:57][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - Microsoft.Reporting.WebForms.HttpHandlerInputException: Missing URL parameter: IterationId
+   at Microsoft.Reporting.WebForms.HandlerOperation.GetAndEnsureParam(NameValueCollection urlQuery, String paramName)
+   at Microsoft.Reporting.WebForms.ReportImageOperation.PerformOperation(NameValueCollection urlQuery, HttpResponse response)
+   at Microsoft.Reporting.WebForms.HttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-06 12:51:29,053 [TIM-PC][Thread:46][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - Microsoft.Reporting.WebForms.HttpHandlerInputException: Missing URL parameter: IterationId
+   at Microsoft.Reporting.WebForms.HandlerOperation.GetAndEnsureParam(NameValueCollection urlQuery, String paramName)
+   at Microsoft.Reporting.WebForms.ReportImageOperation.PerformOperation(NameValueCollection urlQuery, HttpResponse response)
+   at Microsoft.Reporting.WebForms.HttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-06 12:51:29,241 [TIM-PC][Thread:49][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - Microsoft.Reporting.WebForms.HttpHandlerInputException: Missing URL parameter: IterationId
+   at Microsoft.Reporting.WebForms.HandlerOperation.GetAndEnsureParam(NameValueCollection urlQuery, String paramName)
+   at Microsoft.Reporting.WebForms.ReportImageOperation.PerformOperation(NameValueCollection urlQuery, HttpResponse response)
+   at Microsoft.Reporting.WebForms.HttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-06 12:54:21,630 [TIM-PC][Thread:49][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - Microsoft.Reporting.WebForms.HttpHandlerInputException: Missing URL parameter: IterationId
+   at Microsoft.Reporting.WebForms.HandlerOperation.GetAndEnsureParam(NameValueCollection urlQuery, String paramName)
+   at Microsoft.Reporting.WebForms.ReportImageOperation.PerformOperation(NameValueCollection urlQuery, HttpResponse response)
+   at Microsoft.Reporting.WebForms.HttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-06 12:54:21,789 [TIM-PC][Thread:38][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - Microsoft.Reporting.WebForms.HttpHandlerInputException: Missing URL parameter: IterationId
+   at Microsoft.Reporting.WebForms.HandlerOperation.GetAndEnsureParam(NameValueCollection urlQuery, String paramName)
+   at Microsoft.Reporting.WebForms.ReportImageOperation.PerformOperation(NameValueCollection urlQuery, HttpResponse response)
+   at Microsoft.Reporting.WebForms.HttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-06 13:39:22,297 [TIM-PC][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Web.HttpException (0x80004005): The state information is invalid for this page and might be corrupted. ---> System.Web.UI.ViewStateException: Invalid viewstate. 
+	Client IP: ::1
+	Port: 54647
+	Referer: http://localhost:8080/beta/ValveTests.aspx
+	Path: /Beta/Default.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0
+	ViewState: /wEdAA4W/MLa2lnjXIv55C3cMz/j4jcfWoh7MlbeNyTwNfR2OvYO1iD380+uQ6Ifxi9l6wADMUjVqGk19UieGxYga66tS814HP1UyWbRVsfJpPKqfVLFyK5lHX6U31udmnBV0+fnsrONRQByxLm3f+qM9IH54eqDcQQ3xm/HU8cOBka8niWYZ5LNA7Pyfb/7/5Z/yXAWin2ze5qWEwj5/FNUDe+YZ43NBQvdUbBxzljvAjkOGy1sje62mvBfCKbL5HopcfBXyfNnC2LjR4Gt1Zo90L2sIJWE4Jsg+tfguQrQbLlbQHgjKPw7jNGRO9j9vy4RsTIi9I++
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.ClientScriptManager.EnsureEventValidationFieldLoaded()
+   at System.Web.UI.ClientScriptManager.ValidateEvent(String uniqueId, String argument)
+   at System.Web.UI.Control.ValidateEvent(String uniqueID, String eventArgument)
+   at System.Web.UI.WebControls.TextBox.LoadPostData(String postDataKey, NameValueCollection postCollection)
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2015-12-06 13:39:22,422 [TIM-PC][Thread:6][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.ApplicationException: Server.Transfer cannot be called in a Page callback.
+   at System.Web.HttpServerUtility.Transfer(String path, Boolean preserveForm)
+   at System.Web.HttpServerUtility.Transfer(String path)
+   at DotNetNuke.Framework.PageBase.OnError(EventArgs e)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\beta\5b361dc9\2b811827\App_Web_y2t02c4h.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-06 14:32:54,523 [TIM-PC][Thread:31][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - Microsoft.Reporting.WebForms.HttpHandlerInputException: Missing URL parameter: IterationId
+   at Microsoft.Reporting.WebForms.HandlerOperation.GetAndEnsureParam(NameValueCollection urlQuery, String paramName)
+   at Microsoft.Reporting.WebForms.ReportImageOperation.PerformOperation(NameValueCollection urlQuery, HttpResponse response)
+   at Microsoft.Reporting.WebForms.HttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2015-12-06 14:32:54,715 [TIM-PC][Thread:13][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - Microsoft.Reporting.WebForms.HttpHandlerInputException: Missing URL parameter: IterationId
+   at Microsoft.Reporting.WebForms.HandlerOperation.GetAndEnsureParam(NameValueCollection urlQuery, String paramName)
+   at Microsoft.Reporting.WebForms.ReportImageOperation.PerformOperation(NameValueCollection urlQuery, HttpResponse response)
+   at Microsoft.Reporting.WebForms.HttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)

@@ -474,7 +474,7 @@
                 PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" 
                 AllowDragging="True" AllowResize="true" ShowPageScrollbarWhenModal="True" 
                 CloseAction="CloseButton" AutoUpdatePosition="True" Modal="False" HeaderText="Valve Test Reports (....may take several moments to load.)" 
-                ShowSizeGrip="True" Width="600px" Height="500px" ShowLoadingPanel="false" >
+                ShowSizeGrip="True" Width="600px" Height="500px" ShowLoadingPanel="false" RenderIFrameForPopupElements="False" >
                 <ClientSideEvents Closing="function (s,e) { s.SetContentUrl(''); }" />
                 <ContentStyle VerticalAlign="Top"></ContentStyle>
                 <ContentCollection>

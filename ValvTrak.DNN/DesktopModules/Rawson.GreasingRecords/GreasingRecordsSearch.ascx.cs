@@ -150,7 +150,7 @@ namespace Rawson.GreasingRecords
                 /*******************************************************************************************************************/
 
                 reportingGrid.JSProperties["cpShowReport"] = true;
-                reportingGrid.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.GreasingRecordFieldReport, cacheKey);
+                reportingGrid.JSProperties["cpReportUrl"] = String.Format("DesktopModules/Rawson.Reports/Reports.aspx?rpt=grfr&key={0}", cacheKey);
             }
             else
             {
@@ -199,7 +199,7 @@ namespace Rawson.GreasingRecords
             /*******************************************************************************************************************/
 
             PrintSelected.JSProperties["cpShowReport"] = true;
-            PrintSelected.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.GreasingRecordFieldReport, cacheKey);
+            PrintSelected.JSProperties["cpReportUrl"] = String.Format("DesktopModules/Rawson.Reports/Reports.aspx?rpt=grfr&key={0}", cacheKey);
         }
 
         protected void PrintAll_Callback(object source, DevExpress.Web.CallbackEventArgs e)
@@ -232,7 +232,7 @@ namespace Rawson.GreasingRecords
                 /***************************************************************************************************************/
 
                 PrintAll.JSProperties["cpShowReport"] = true;
-                PrintAll.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.GreasingRecordFieldReport, cacheKey);
+                PrintAll.JSProperties["cpReportUrl"] = String.Format("DesktopModules/Rawson.Reports/Reports.aspx?rpt=grfr&key={0}", cacheKey);
             }
         }
 

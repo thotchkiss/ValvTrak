@@ -30,17 +30,17 @@ namespace Rawson.Reports
             string ids = (string)DataCache.GetCache(param["key"]);
             DataTable dtRv = rvAdapter.GetData(ids);
 
-            rpt.LocalReport.DataSources.Add(new ReportDataSource("RateValveTest", dtRv.DefaultView));
+            rpt.LocalReport.DataSources.Add(new ReportDataSource("ValvTrak", dtRv.DefaultView));
             rpt.LocalReport.Refresh();
         }
 
         void LocalReport_SubreportProcessing(object sender, SubreportProcessingEventArgs e)
         {
-            dsGreasingRecordFieldReportTableAdapters.dsGreasingRecordItemsTableAdapter griAdapter = new dsGreasingRecordFieldReportTableAdapters.dsGreasingRecordItemsTableAdapter();
-            griAdapter.Connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ValvTrakData"].ConnectionString;
+            dsRateValveFieldReportTableAdapters.dsRateValvePartsTableAdapter subAdapter = new dsRateValveFieldReportTableAdapters.dsRateValvePartsTableAdapter();
+            subAdapter.Connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ValvTrakData"].ConnectionString;
 
-            DataTable dtGri = griAdapter.GetData(Convert.ToInt32(e.Parameters["RateValveTestID"].Values[0]));
-            e.DataSources.Add(new ReportDataSource("RateValveTestParts", dtGri));
+            DataTable dtGri = subAdapter.GetData(Convert.ToInt32(e.Parameters["RateValveTestID"].Values[0]));
+            e.DataSources.Add(new ReportDataSource("ValvTrak", dtGri));
 
         }
 
