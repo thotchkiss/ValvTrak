@@ -144,7 +144,7 @@ namespace Rawson.WellSafetyTests
                 /*******************************************************************************************************************/
 
                 reportingGrid.JSProperties["cpShowReport"] = true;
-                reportingGrid.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.WellSafetyFieldReport, cacheKey);
+                reportingGrid.JSProperties["cpReportUrl"] = String.Format("DesktopModules/Rawson.Reports/Reports.aspx?rpt=wsfr&key={0}", cacheKey);
             }
 
         }
@@ -243,7 +243,7 @@ namespace Rawson.WellSafetyTests
             /*******************************************************************************************************************/
 
             PrintSelected.JSProperties["cpShowReport"] = true;
-            PrintSelected.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.WellSafetyFieldReport, cacheKey);
+            PrintSelected.JSProperties["cpReportUrl"] = String.Format("DesktopModules/Rawson.Reports/Reports.aspx?rpt=wsfr&key={0}", cacheKey);
         }
 
         protected void PrintAll_Callback(object source, DevExpress.Web.CallbackEventArgs e)
@@ -275,7 +275,7 @@ namespace Rawson.WellSafetyTests
                 /***************************************************************************************************************/
 
                 PrintAll.JSProperties["cpShowReport"] = true;
-                PrintAll.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.WellSafetyFieldReport, cacheKey);
+                PrintAll.JSProperties["cpReportUrl"] = String.Format("DesktopModules/Rawson.Reports/Reports.aspx?rpt=wsfr&key={0}", cacheKey);
             }
         }
 

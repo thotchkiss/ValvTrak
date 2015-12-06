@@ -1982,6 +1982,7 @@
                       <KeepTogether>true</KeepTogether>
                       <Style />
                     </Rectangle>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -1997,6 +1998,9 @@
           <TablixMembers>
             <TablixMember>
               <Group Name="list1_Details_Group">
+                <PageBreak>
+                  <BreakLocation>Between</BreakLocation>
+                </PageBreak>
                 <DataElementName>Item</DataElementName>
               </Group>
               <DataElementName>Item_Collection</DataElementName>
@@ -2005,7 +2009,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>WellSafetyTests</DataSetName>
+        <DataSetName>ValvTrak</DataSetName>
         <Height>8.125in</Height>
         <Width>7.375in</Width>
         <Style />
@@ -2108,22 +2112,19 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ValvTrak">
-      <DataSourceReference>ValvTrak</DataSourceReference>
-      <rd:DataSourceID>1b6e0800-a80a-4e26-909c-0cd6403bbbcd</rd:DataSourceID>
+    <DataSource Name="dsWellTestFieldReport">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>d51158c5-d423-42b2-8941-2f41c6d2a24a</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="WellSafetyTests">
+    <DataSet Name="ValvTrak">
       <Query>
-        <DataSourceName>ValvTrak</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@WellSafetyTestIds">
-            <Value>=Parameters!WellSafetyTestIds.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandType>StoredProcedure</CommandType>
-        <CommandText>rpt_WellSafetyFieldReport</CommandText>
+        <DataSourceName>dsWellTestFieldReport</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
         <Field Name="WellSafetyTestID">
@@ -2333,12 +2334,6 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
-  <ReportParameters>
-    <ReportParameter Name="WellSafetyTestIds">
-      <DataType>String</DataType>
-      <Prompt>Well Test Id's</Prompt>
-    </ReportParameter>
-  </ReportParameters>
   <EmbeddedImages>
     <EmbeddedImage Name="rawson_report_logo">
       <MIMEType>image/jpeg</MIMEType>

@@ -102,7 +102,7 @@ namespace Rawson.Data.Controllers
                             specs = Join(specs, ValveTestSpecifications.ForJobID(jobId));
 
                         break;
-                    case "RateValveTestID":
+                    case "ValveTestID":
                         int valveId;
                         if (Int32.TryParse(value.ToString(), out valveId) && valveId > 0)
                             specs = Join(specs, ValveTestSpecifications.ForID(valveId));

@@ -321,7 +321,7 @@ public partial class ValveTestsSearch : PortalModuleBase
             /***************************************************************************************************************/
 
             PrintAll.JSProperties["cpShowReport"] = true;
-            PrintSelected.JSProperties["cpReportUrl"] = String.Format("DesktopModules/Rawson.Reports/Reports.aspx?rpt=vtfr&key={0}", cacheKey);
+            PrintAll.JSProperties["cpReportUrl"] = String.Format("DesktopModules/Rawson.Reports/Reports.aspx?rpt=vtfr&key={0}", cacheKey);
         }
     }
 
