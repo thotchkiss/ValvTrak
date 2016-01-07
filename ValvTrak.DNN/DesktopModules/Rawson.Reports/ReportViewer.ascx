@@ -4,9 +4,9 @@
     <tr>
         <td>
             <div>
-                <rsweb:ReportViewer ID="ReportViewer1" Height="100%" Width="910px" runat="server" AsyncRendering="false" 
+                <%--<rsweb:ReportViewer ID="ReportViewer1" Height="100%" Width="910px" runat="server" AsyncRendering="false" 
                     ShowRefreshButton="false" PageCountMode="Actual">
-                </rsweb:ReportViewer>
+                </rsweb:ReportViewer>--%>
             </div>
         </td>
     </tr>

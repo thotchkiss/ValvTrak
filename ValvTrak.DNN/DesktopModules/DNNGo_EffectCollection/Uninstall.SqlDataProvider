@@ -1,0 +1,86 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_Item] DROP CONSTRAINT [PK_{objectQualifier}DNNGo_EffectCollection_Item]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_Item]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_Template]
+GO
+DROP TABLE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_Category]
+GO
+DROP TABLE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_ItemCategory]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_GetItems]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_GetItem]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_AddItem]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_UpdateItem]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_DeleteItem]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_GetTemplate]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_AddTemplate]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_UpdateTemplate]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_GetAllItems]
+GO
+
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_GetCategorysByItemId]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_AddCategory]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_UpdateCategory]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_DeleteCategory]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_GetCategory]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_GetCategorys]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_GetItemsByCategoryId]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_AddItemCategory]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_DeleteItemCategory]
+GO
+
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

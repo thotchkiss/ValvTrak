@@ -1,0 +1,190 @@
+﻿SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_Category](
+	[CategoryId] [int] IDENTITY(1,1) NOT NULL,
+	[ModuleId] [int] NULL,
+	[Name] [nvarchar](500) NOT NULL,
+	[Order] [int] NOT NULL,
+ CONSTRAINT [PK_DNNGo_EffectCollection_Category] PRIMARY KEY CLUSTERED 
+(
+	[CategoryId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_ItemCategory](
+	[ItemId] [int] NOT NULL,
+	[CategoryId] [int] NOT NULL,
+ CONSTRAINT [PK_DNNGo_EffectCollection_ItemCategory] PRIMARY KEY CLUSTERED 
+(
+	[ItemId] ASC,
+	[CategoryId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+create procedure {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_GetCategorysByItemId]
+@ItemId int	
+as
+
+select * from {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Category DEC inner join {databaseOwner}{objectQualifier}DNNGo_EffectCollection_ItemCategory DEIC ON DEC.CategoryId=DEIC.CategoryId
+where  ItemId = @ItemId 
+order by DEC.[Order]
+
+
+
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+create procedure {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_AddCategory]
+@ModuleId	int,
+@Name		nvarchar(500),
+@Order		int
+
+as
+
+insert into {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Category (
+	ModuleId,
+	[Name],
+	[Order]
+) 
+values (
+	@ModuleId,
+	@Name,
+	@Order
+)
+
+SELECT SCOPE_IDENTITY() 
+
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+create procedure {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_UpdateCategory]
+@CategoryId	int,
+@ModuleId	int,
+@Name		nvarchar(500),
+@Order		int
+
+as
+
+update {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Category 
+set	ModuleId=@ModuleId,
+	[Name]=@Name,
+	[Order]=@Order
+where CategoryId=@CategoryId
+
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+create procedure {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_DeleteCategory]
+@CategoryId	int
+
+as
+
+delete from {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Category 
+where CategoryId=@CategoryId
+
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+create procedure {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_GetCategory]
+@CategoryId	int
+
+as
+
+select * from {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Category 
+where CategoryId=@CategoryId
+
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE procedure {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_GetCategorys]
+@ModuleId	int
+
+as
+
+select * from {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Category 
+where ModuleId=@ModuleId
+order by [Order]
+
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+create procedure {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_GetItemsByCategoryId]
+@CategoryId int	
+as
+
+select * from {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Item DEI inner join {databaseOwner}{objectQualifier}DNNGo_EffectCollection_ItemCategory DEIC ON DEI.ItemId=DEIC.ItemId
+where  @CategoryId = CategoryId and IsActive=1
+order by DEI.ItemOrder
+
+
+
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+create procedure {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_AddItemCategory]
+@ItemId int,
+@CategoryId	int
+as
+
+insert into {databaseOwner}{objectQualifier}DNNGo_EffectCollection_ItemCategory
+(ItemId,CategoryId)
+values(@ItemId,@CategoryId)
+
+
+
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+create procedure {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_DeleteItemCategory]
+@ItemId int,
+@CategoryId	int
+as
+
+delete from {databaseOwner}{objectQualifier}DNNGo_EffectCollection_ItemCategory
+where ItemId=@ItemId and CategoryId=@CategoryId
+
+
+
+

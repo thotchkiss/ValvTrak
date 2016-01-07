@@ -1,0 +1,108 @@
+﻿alter table {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Item
+add IsActive bit default 1 not null
+
+GO
+
+alter procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_AddItem
+	@PortalId			 int,
+	@ModuleId			 int,
+	@Title				 nvarchar(2000),
+	@Description		 ntext,
+	@ImageSrc			 nvarchar(2000),
+	@Html				 ntext,
+	@SelectTabId		 int,
+	@SelectModuleId		 int,
+	@ItemOrder			 int,
+	@Url			     nvarchar(2000),
+	@TypeValue			ntext,
+	@DisplayType		nvarchar(100),
+	@IsActive			bit
+
+as
+
+insert into {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Item (
+	PortalId,
+	ModuleId,
+	Title,
+	Description,
+	ImageSrc,
+	Html,
+	SelectTabId,
+	SelectModuleId,
+	ItemOrder,
+	Url,
+	TypeValue,
+	DisplayType,
+	IsActive
+) 
+values (
+	@PortalId,
+	@ModuleId,
+	@Title,
+	@Description,
+	@ImageSrc,
+	@Html,
+	@SelectTabId,
+	@SelectModuleId,
+	@ItemOrder,
+	@Url,
+	@TypeValue,
+	@DisplayType,
+	@IsActive
+)
+
+GO
+
+alter procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_UpdateItem
+	@PortalId			 int,
+	@ModuleId			 int,
+	@ItemId				int,
+	@Title				 nvarchar(2000),
+	@Description		 ntext,
+	@ImageSrc			 nvarchar(2000),
+	@Html				 ntext,
+	@SelectTabId		 int,
+	@SelectModuleId		 int,
+	@ItemOrder			 int,
+	@Url			     nvarchar(2000),
+	@TypeValue			 ntext,
+	@DisplayType		nvarchar(100),
+	@IsActive			 bit
+
+as
+
+update {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Item
+set    PortalId=@PortalId,
+		ModuleId=@ModuleId,
+	    Title = @Title,       
+       [Description]=@Description,
+       [ImageSrc]=@ImageSrc,
+       [Html]=@Html,
+       [SelectTabId]=@SelectTabId,       
+       [SelectModuleId]=@SelectModuleId,
+       [ItemOrder]=@ItemOrder,
+       [Url]=@Url,
+       [TypeValue]=@TypeValue,
+       [DisplayType]=@DisplayType,
+       [IsActive]=@IsActive
+where  ItemId=@ItemId
+
+go
+
+alter procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_GetItems
+	@ModuleId int	
+as
+
+select * from {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Item
+where  ModuleId = @ModuleId and IsActive=1
+order by ItemOrder
+
+go
+
+create procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_GetAllItems
+	@ModuleId int	
+as
+
+select * from {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Item
+where  ModuleId = @ModuleId
+order by ItemOrder

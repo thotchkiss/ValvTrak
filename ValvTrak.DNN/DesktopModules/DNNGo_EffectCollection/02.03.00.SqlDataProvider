@@ -1,0 +1,83 @@
+﻿alter table {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Item
+add DisplayType nvarchar(100) default 'html' not null
+
+GO
+
+alter procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_AddItem
+	@PortalId			 int,
+	@ModuleId			 int,
+	@Title				 nvarchar(2000),
+	@Description		 ntext,
+	@ImageSrc			 nvarchar(2000),
+	@Html				 ntext,
+	@SelectTabId		 int,
+	@SelectModuleId		 int,
+	@ItemOrder			 int,
+	@Url			     nvarchar(2000),
+	@TypeValue			ntext,
+	@DisplayType		nvarchar(100)
+
+as
+
+insert into {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Item (
+	PortalId,
+	ModuleId,
+	Title,
+	Description,
+	ImageSrc,
+	Html,
+	SelectTabId,
+	SelectModuleId,
+	ItemOrder,
+	Url,
+	TypeValue,
+	DisplayType
+) 
+values (
+	@PortalId,
+	@ModuleId,
+	@Title,
+	@Description,
+	@ImageSrc,
+	@Html,
+	@SelectTabId,
+	@SelectModuleId,
+	@ItemOrder,
+	@Url,
+	@TypeValue,
+	@DisplayType
+)
+
+GO
+
+alter procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_UpdateItem
+	@PortalId			 int,
+	@ModuleId			 int,
+	@ItemId				int,
+	@Title				 nvarchar(2000),
+	@Description		 ntext,
+	@ImageSrc			 nvarchar(2000),
+	@Html				 ntext,
+	@SelectTabId		 int,
+	@SelectModuleId		 int,
+	@ItemOrder			 int,
+	@Url			     nvarchar(2000),
+	@TypeValue			 ntext,
+	@DisplayType		nvarchar(100)
+
+as
+
+update {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Item
+set    PortalId=@PortalId,
+		ModuleId=@ModuleId,
+	    Title = @Title,       
+       [Description]=@Description,
+       [ImageSrc]=@ImageSrc,
+       [Html]=@Html,
+       [SelectTabId]=@SelectTabId,       
+       [SelectModuleId]=@SelectModuleId,
+       [ItemOrder]=@ItemOrder,
+       [Url]=@Url,
+       [TypeValue]=@TypeValue,
+       [DisplayType]=@DisplayType
+where  ItemId=@ItemId

@@ -1,0 +1,224 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Create Table **/
+
+if not exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}DNNGo_EffectCollection_Item]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	BEGIN
+		CREATE TABLE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_Item]
+		(
+			[ItemId]					[int] NOT NULL IDENTITY(1, 1),
+			[PortalId]					[int] NOT NULL,
+			[ModuleId]					[int] NOT NULL,
+			[Title]						nvarchar(2000) NOT NULL,
+			[Description]				ntext NULL,
+			[ImageSrc]					nvarchar(2000) NULL,
+			[Html]						ntext NULL,
+			[SelectTabId]				int NOT NULL,			
+			[SelectModuleId]			int NOT NULL,
+			[ItemOrder]					int
+		)
+			ALTER TABLE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_Item] ADD CONSTRAINT [PK_{objectQualifier}DNNGo_EffectCollection_Item] PRIMARY KEY CLUSTERED  ([ItemId])				
+	END
+GO
+
+if not exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}DNNGo_EffectCollection_Template]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	BEGIN
+		CREATE TABLE {databaseOwner}[{objectQualifier}DNNGo_EffectCollection_Template]
+		(
+			[ModuleId]		[int],
+			[Template]			ntext
+		)		
+	END
+GO
+
+/** Drop Existing Stored Procedures **/
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}DNNGo_EffectCollection_GetItems]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_GetItems
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}DNNGo_EffectCollection_GetItem]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_GetItem
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}DNNGo_EffectCollection_AddItem]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_AddItem
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}DNNGo_EffectCollection_UpdateItem]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_UpdateItem
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}DNNGo_EffectCollection_DeleteItem]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_DeleteItem
+GO
+
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}DNNGo_EffectCollection_GetTemplate]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_GetTemplate
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}DNNGo_EffectCollection_AddTemplate]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_AddTemplate
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}DNNGo_EffectCollection_UpdateTemplate]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_UpdateTemplate
+GO
+
+/** Create Stored Procedures **/
+
+create procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_GetItems
+	@ModuleId int	
+as
+
+select * from {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Item
+where  ModuleId = @ModuleId 
+order by ItemOrder
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_GetItem
+    @ItemId int
+
+as
+
+select *
+from {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Item 
+where ItemId = @ItemId
+GO
+
+
+create procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_AddItem
+	@PortalId			 int,
+	@ModuleId			 int,
+	@Title				 nvarchar(2000),
+	@Description		 ntext,
+	@ImageSrc			 nvarchar(2000),
+	@Html				 ntext,
+	@SelectTabId		 int,
+	@SelectModuleId		 int,
+	@ItemOrder			 int
+
+as
+
+insert into {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Item (
+	PortalId,
+	ModuleId,
+	Title,
+	Description,
+	ImageSrc,
+	Html,
+	SelectTabId,
+	SelectModuleId,
+	ItemOrder
+) 
+values (
+	@PortalId,
+	@ModuleId,
+	@Title,
+	@Description,
+	@ImageSrc,
+	@Html,
+	@SelectTabId,
+	@SelectModuleId,
+	@ItemOrder
+)
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_UpdateItem
+	@PortalId			 int,
+	@ModuleId			 int,
+	@ItemId				int,
+	@Title				 nvarchar(2000),
+	@Description		 ntext,
+	@ImageSrc			 nvarchar(2000),
+	@Html				 ntext,
+	@SelectTabId		 int,
+	@SelectModuleId		 int,
+	@ItemOrder			 int
+
+
+as
+
+update {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Item
+set    PortalId=@PortalId,
+		ModuleId=@ModuleId,
+	    Title = @Title,       
+       [Description]=@Description,
+       [ImageSrc]=@ImageSrc,
+       [Html]=@Html,
+       [SelectTabId]=@SelectTabId,       
+       [SelectModuleId]=@SelectModuleId,
+       [ItemOrder]=@ItemOrder
+where  ItemId=@ItemId
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_DeleteItem
+     @ItemId         int
+
+as
+
+delete
+from   {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Item
+where  ItemId = @ItemId
+
+GO
+
+
+
+create procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_GetTemplate
+
+    @ModuleId int
+
+as
+
+select *
+from {objectQualifier}DNNGo_EffectCollection_Template 
+where ModuleId = @ModuleId
+GO
+
+
+create procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_AddTemplate
+
+	@ModuleId			int,
+	@Template           ntext
+as
+
+insert into {objectQualifier}DNNGo_EffectCollection_Template (
+	ModuleId,
+	Template
+) 
+values (
+	@ModuleId,
+	@Template
+)
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_UpdateTemplate
+	@ModuleId	int,
+	@Template   ntext
+
+
+as
+
+update {objectQualifier}DNNGo_EffectCollection_Template
+set    Template       = @Template
+where  ModuleId=@ModuleId
+
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

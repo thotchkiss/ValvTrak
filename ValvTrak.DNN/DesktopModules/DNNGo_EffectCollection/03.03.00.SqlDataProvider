@@ -1,0 +1,49 @@
+﻿alter procedure {databaseOwner}{objectQualifier}DNNGo_EffectCollection_AddItem
+	@PortalId			 int,
+	@ModuleId			 int,
+	@Title				 nvarchar(2000),
+	@Description		 ntext,
+	@ImageSrc			 nvarchar(2000),
+	@Html				 ntext,
+	@SelectTabId		 int,
+	@SelectModuleId		 int,
+	@ItemOrder			 int,
+	@Url			     nvarchar(2000),
+	@TypeValue			ntext,
+	@DisplayType		nvarchar(100),
+	@IsActive			bit
+
+as
+
+insert into {databaseOwner}{objectQualifier}DNNGo_EffectCollection_Item (
+	PortalId,
+	ModuleId,
+	Title,
+	Description,
+	ImageSrc,
+	Html,
+	SelectTabId,
+	SelectModuleId,
+	ItemOrder,
+	Url,
+	TypeValue,
+	DisplayType,
+	IsActive
+) 
+values (
+	@PortalId,
+	@ModuleId,
+	@Title,
+	@Description,
+	@ImageSrc,
+	@Html,
+	@SelectTabId,
+	@SelectModuleId,
+	@ItemOrder,
+	@Url,
+	@TypeValue,
+	@DisplayType,
+	@IsActive
+)
+
+SELECT SCOPE_IDENTITY() 

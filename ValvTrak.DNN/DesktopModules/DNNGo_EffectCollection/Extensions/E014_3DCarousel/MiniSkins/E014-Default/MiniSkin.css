@@ -1,0 +1,38 @@
+/* Carousel */
+.E014-Default
+{
+	position: relative;
+}
+.E014-Default .carousel_container
+{
+	background-color: White;
+}
+.E014-Default .reflection
+{
+	 border:0;
+}
+
+.E014-Default .carousel_title
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 22px;
+	padding: 0;
+	margin: 10px 20px 0 0;
+	text-align: left;
+}
+.E014-Default .carousel_alt
+{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	padding: 0;
+	margin: 5px 20px 0 0;
+	text-align: right;
+       display: none;
+}
+.E014-Default .carousel_usercontrol
+{
+	bottom: 10px;
+	padding: 0;
+	position: absolute;
+	right: 15px;
+}
