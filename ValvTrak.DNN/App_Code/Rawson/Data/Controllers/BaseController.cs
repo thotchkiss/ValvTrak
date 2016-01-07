@@ -7,6 +7,7 @@ using Rawson.App.Security;
 using Rawson.Data.Model;
 using Microsoft.Practices.EnterpriseLibrary.Validation;
 using System.Collections.Specialized;
+using Microsoft.Practices.EnterpriseLibrary.Common.Configuration;
 
 namespace Rawson.Data.Controllers
 {
@@ -170,6 +171,9 @@ namespace Rawson.Data.Controllers
 
         public override bool Validate()
         {
+            // Specify the config file as the default source for validation rules (EntLib 6 breaking change)
+            ValidationFactory.SetDefaultConfigurationValidatorFactory(new SystemConfigurationSource());
+
             Validator<TEntity> validator = ValidationFactory.CreateValidator<TEntity>("Default");
             ValidationResults vr = validator.Validate(Entity);
 

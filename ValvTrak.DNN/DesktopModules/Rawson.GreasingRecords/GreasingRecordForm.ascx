@@ -387,9 +387,8 @@
                                                                     validation.SetContentHtml(s.cpErrorMessage);
                                                                     validation.Show();
                                                                 }
-                                                                else {
-                                                                    validation.Hide();
-                                                                } }"  />
+                                                                else
+                                                                    validation.Hide(); }"  />
             </dx:ASPxCallback>
             <dxpc:ASPxPopupControl ID="pcValidation" runat="server" ClientInstanceName="validation"
                     Modal="false" ShowFooter="false" HeaderText="Validation Errrors" CloseAction="CloseButton" 

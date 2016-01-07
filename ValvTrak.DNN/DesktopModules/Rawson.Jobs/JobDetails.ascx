@@ -19,6 +19,7 @@
 </style>
 
 <script type="text/javascript">
+
     function DevExComboUnboundItem(s, e, itemText, itemValue) {
         if (s.GetSelectedIndex() == -1) {
             s.InsertItem(0, itemText, itemValue);
@@ -28,7 +29,23 @@
         }
         if (s.GetSelectedIndex() == -1) { s.SetSelectedIndex(0); }
     }
+
+    function OnPrintSetupEnd(s, e) {
+
+        if (s.cpShowReport == true) {
+
+            pdfPopper.SetContentUrl(s.cpReportUrl);
+            pdfPopper.Show();
+        }
+        else {
+
+            pdfPopper.Hide();
+            pdfPopper.SetContentUrl('');
+        }
+
+    }
 </script>
+
 <script type="text/javascript">
     function pageBarFirstButton_Click() {
         formGrid.GotoPage(0);
@@ -350,24 +367,10 @@
                             oncustomcallback="ServiceDetailsGrid_CustomCallback" 
                             ondatabound="ServiceDetailsGrid_DataBound" TabIndex="18">
                             <ClientSideEvents 
-                                CustomButtonClick="function(s,e)
-                                    {
-                                        if (s.cpShowReport)
-                                            s.cpShowReport = null;
-
-                                        pdfPopper.Hide();
-                                        pdfPopper.SetContentUrl('about:blank');
-                    
-                                        e.processOnServer = true;
-                                    }"
-                                EndCallback="function (s,e) 
-                                    {
-                                        if (s.cpShowReport == true)
-                                        { 
-                                            pdfPopper.SetContentUrl(s.cpReportUrl);
-                                            pdfPopper.Show();                        
-                                        }
-                                }" />
+                                CustomButtonClick="function(s,e) { e.processOnServer = true; }"
+                                BeginCallback="function(s,e){ s.cpShowReport = false; }"
+                                EndCallback="function (s,e) { OnPrintSetupEnd(s,e); }" 
+                            />
                             <SettingsLoadingPanel Mode="Disabled" />
                             <SettingsPager Position="Top"></SettingsPager>
                             <Columns>
@@ -444,12 +447,13 @@
                             ClientInstanceName="pdfPopper" EnableClientSideAPI="True" 
                             PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" 
                             AllowDragging="True" AllowResize="true" ShowPageScrollbarWhenModal="True" 
-                            CloseAction="CloseButton" AutoUpdatePosition="True" Modal="False" HeaderText="Document View (.....may take several moments to load.)" 
-                            ShowSizeGrip="True" Width="600px" Height="500px">
-                            <ContentStyle VerticalAlign="Top">
-                            </ContentStyle>
+                            CloseAction="CloseButton" AutoUpdatePosition="True" Modal="False" HeaderText="Valve Test Reports (....may take several moments to load.)" 
+                            ShowSizeGrip="True" Width="600px" Height="500px" ShowLoadingPanel="false" RenderIFrameForPopupElements="False" >
+                            <ClientSideEvents Closing="function (s,e) { s.SetContentUrl(''); }" />
+                            <ContentStyle VerticalAlign="Top"></ContentStyle>
                             <ContentCollection>
-                                <dx:PopupControlContentControl ID="PopupControlContentControl3" runat="server">
+                                <dx:PopupControlContentControl ID="PopupControlContentControl3" runat="server"  >
+                                    <asp:Image ImageUrl="~/images/ajax-loader.gif" runat="server" />
                                 </dx:PopupControlContentControl>
                             </ContentCollection>
                         </dx:ASPxPopupControl>

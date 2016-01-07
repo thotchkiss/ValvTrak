@@ -222,7 +222,7 @@ namespace Rawson.Jobs
             }
             else
             {
-                Session["ReportData"] = values[0];
+                //Session["ReportData"] = values[0];
 
                 string cacheKey = Guid.NewGuid().ToString();
                 DataCache.SetCache(cacheKey, values[0].ToString(), new TimeSpan(0, 3, 0));
@@ -234,16 +234,16 @@ namespace Rawson.Jobs
                 switch (jobTypeId)
                 {
                     case (int)JobTypeEnum.ReliefValve:
-                        grid.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.ValveTestFieldReport, cacheKey);
+                        grid.JSProperties["cpReportUrl"] = String.Format("{0}/DesktopModules/Rawson.Reports/Reports.aspx?rpt=vtfr&key={1}", Request.ApplicationPath, cacheKey);
                         break;
                     case (int)JobTypeEnum.Greasing:
-                        grid.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.GreasingRecordFieldReport, cacheKey);
+                        grid.JSProperties["cpReportUrl"] = String.Format("{0}/DesktopModules/Rawson.Reports/Reports.aspx?rpt=grfr&key={1}", Request.ApplicationPath, cacheKey);
                         break;
                     case (int)JobTypeEnum.WellSafety:
-                        grid.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.WellSafetyFieldReport, cacheKey);
+                        grid.JSProperties["cpReportUrl"] = String.Format("{0}/DesktopModules/Rawson.Reports/Reports.aspx?rpt=wsfr&key={1}", Request.ApplicationPath, cacheKey);
                         break;
                     case (int)JobTypeEnum.RateValve:
-                        grid.JSProperties["cpReportUrl"] = String.Format(ResourcePaths.DownloadHelperPath, DocumentPaths.RateValveFieldReport, cacheKey);
+                        grid.JSProperties["cpReportUrl"] = String.Format("{0}/DesktopModules/Rawson.Reports/Reports.aspx?rpt=rvfr&key={1}", Request.ApplicationPath, cacheKey);
                         break;
                     default:
                         break;

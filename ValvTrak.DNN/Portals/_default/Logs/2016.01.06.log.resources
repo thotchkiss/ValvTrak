@@ -1,0 +1,416 @@
+2016-01-06 14:15:59,017 [TIM-PC][Thread:68][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=46&def=ErrorMessage
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at DataSprings.SkinObject_jQueryLogin.Logout.Redirect()
+   at DataSprings.SkinObject_jQueryLogin.Logout.Page_Load(Object sender, EventArgs e)
+2016-01-06 14:46:00,533 [TIM-PC][Thread:71][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.SearchException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddSearchItem(String Title, String Description, Int32 Author, DateTime PubDate, Int32 ModuleId, String Key, String Guid, Int32 ImageFileId)
+   at DotNetNuke.Services.Search.SearchDataStoreController.AddSearchItem(SearchItemInfo item)
+   at DotNetNuke.Services.Search.SearchDataStore.StoreSearchItems(SearchItemInfoCollection SearchItems)
+   --- End of inner exception stack trace ---
+2016-01-06 14:46:00,564 [TIM-PC][Thread:71][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.SearchException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddSearchItem(String Title, String Description, Int32 Author, DateTime PubDate, Int32 ModuleId, String Key, String Guid, Int32 ImageFileId)
+   at DotNetNuke.Services.Search.SearchDataStoreController.AddSearchItem(SearchItemInfo item)
+   at DotNetNuke.Services.Search.SearchDataStore.StoreSearchItems(SearchItemInfoCollection SearchItems)
+   --- End of inner exception stack trace ---
+2016-01-06 14:46:00,586 [TIM-PC][Thread:71][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.SearchException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddSearchItem(String Title, String Description, Int32 Author, DateTime PubDate, Int32 ModuleId, String Key, String Guid, Int32 ImageFileId)
+   at DotNetNuke.Services.Search.SearchDataStoreController.AddSearchItem(SearchItemInfo item)
+   at DotNetNuke.Services.Search.SearchDataStore.StoreSearchItems(SearchItemInfoCollection SearchItems)
+   --- End of inner exception stack trace ---
+2016-01-06 14:46:00,602 [TIM-PC][Thread:71][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.SearchException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddSearchItem(String Title, String Description, Int32 Author, DateTime PubDate, Int32 ModuleId, String Key, String Guid, Int32 ImageFileId)
+   at DotNetNuke.Services.Search.SearchDataStoreController.AddSearchItem(SearchItemInfo item)
+   at DotNetNuke.Services.Search.SearchDataStore.StoreSearchItems(SearchItemInfoCollection SearchItems)
+   --- End of inner exception stack trace ---
+2016-01-06 15:05:29,244 [TIM-PC][Thread:78][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at DataSprings.SkinObject_jQueryLogin.Logout.Redirect()
+   at DataSprings.SkinObject_jQueryLogin.Logout.Page_Load(Object sender, EventArgs e)
+2016-01-06 15:15:12,607 [TIM-PC][Thread:71][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at DataSprings.SkinObject_jQueryLogin.Logout.Redirect()
+   at DataSprings.SkinObject_jQueryLogin.Logout.Page_Load(Object sender, EventArgs e)
+2016-01-06 15:16:15,747 [TIM-PC][Thread:74][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.SearchException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddSearchItem(String Title, String Description, Int32 Author, DateTime PubDate, Int32 ModuleId, String Key, String Guid, Int32 ImageFileId)
+   at DotNetNuke.Services.Search.SearchDataStoreController.AddSearchItem(SearchItemInfo item)
+   at DotNetNuke.Services.Search.SearchDataStore.StoreSearchItems(SearchItemInfoCollection SearchItems)
+   --- End of inner exception stack trace ---
+2016-01-06 15:16:15,763 [TIM-PC][Thread:74][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.SearchException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddSearchItem(String Title, String Description, Int32 Author, DateTime PubDate, Int32 ModuleId, String Key, String Guid, Int32 ImageFileId)
+   at DotNetNuke.Services.Search.SearchDataStoreController.AddSearchItem(SearchItemInfo item)
+   at DotNetNuke.Services.Search.SearchDataStore.StoreSearchItems(SearchItemInfoCollection SearchItems)
+   --- End of inner exception stack trace ---
+2016-01-06 15:16:15,779 [TIM-PC][Thread:74][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.SearchException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddSearchItem(String Title, String Description, Int32 Author, DateTime PubDate, Int32 ModuleId, String Key, String Guid, Int32 ImageFileId)
+   at DotNetNuke.Services.Search.SearchDataStoreController.AddSearchItem(SearchItemInfo item)
+   at DotNetNuke.Services.Search.SearchDataStore.StoreSearchItems(SearchItemInfoCollection SearchItems)
+   --- End of inner exception stack trace ---
+2016-01-06 15:16:15,810 [TIM-PC][Thread:74][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.SearchException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddSearchItem(String Title, String Description, Int32 Author, DateTime PubDate, Int32 ModuleId, String Key, String Guid, Int32 ImageFileId)
+   at DotNetNuke.Services.Search.SearchDataStoreController.AddSearchItem(SearchItemInfo item)
+   at DotNetNuke.Services.Search.SearchDataStore.StoreSearchItems(SearchItemInfoCollection SearchItems)
+   --- End of inner exception stack trace ---
+2016-01-06 15:16:22,525 [TIM-PC][Thread:51][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - Microsoft.Reporting.WebForms.HttpHandlerInputException: Missing URL parameter: IterationId
+   at Microsoft.Reporting.WebForms.HandlerOperation.GetAndEnsureParam(NameValueCollection urlQuery, String paramName)
+   at Microsoft.Reporting.WebForms.ReportImageOperation.PerformOperation(NameValueCollection urlQuery, HttpResponse response)
+   at Microsoft.Reporting.WebForms.HttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-01-06 15:58:25,886 [TIM-PC][Thread:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.SearchException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddSearchItem(String Title, String Description, Int32 Author, DateTime PubDate, Int32 ModuleId, String Key, String Guid, Int32 ImageFileId)
+   at DotNetNuke.Services.Search.SearchDataStoreController.AddSearchItem(SearchItemInfo item)
+   at DotNetNuke.Services.Search.SearchDataStore.StoreSearchItems(SearchItemInfoCollection SearchItems)
+   --- End of inner exception stack trace ---
+2016-01-06 15:58:25,925 [TIM-PC][Thread:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.SearchException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddSearchItem(String Title, String Description, Int32 Author, DateTime PubDate, Int32 ModuleId, String Key, String Guid, Int32 ImageFileId)
+   at DotNetNuke.Services.Search.SearchDataStoreController.AddSearchItem(SearchItemInfo item)
+   at DotNetNuke.Services.Search.SearchDataStore.StoreSearchItems(SearchItemInfoCollection SearchItems)
+   --- End of inner exception stack trace ---
+2016-01-06 15:58:26,058 [TIM-PC][Thread:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.SearchException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddSearchItem(String Title, String Description, Int32 Author, DateTime PubDate, Int32 ModuleId, String Key, String Guid, Int32 ImageFileId)
+   at DotNetNuke.Services.Search.SearchDataStoreController.AddSearchItem(SearchItemInfo item)
+   at DotNetNuke.Services.Search.SearchDataStore.StoreSearchItems(SearchItemInfoCollection SearchItems)
+   --- End of inner exception stack trace ---
+2016-01-06 15:58:26,080 [TIM-PC][Thread:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.SearchException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddSearchItem(String Title, String Description, Int32 Author, DateTime PubDate, Int32 ModuleId, String Key, String Guid, Int32 ImageFileId)
+   at DotNetNuke.Services.Search.SearchDataStoreController.AddSearchItem(SearchItemInfo item)
+   at DotNetNuke.Services.Search.SearchDataStore.StoreSearchItems(SearchItemInfoCollection SearchItems)
+   --- End of inner exception stack trace ---
+2016-01-06 15:59:34,929 [TIM-PC][Thread:7][FATAL] DotNetNuke.Services.Exceptions.Exceptions - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2016-01-06 15:59:34,945 [TIM-PC][Thread:7][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2016-01-06 16:01:00,337 [TIM-PC][Thread:7][FATAL] DotNetNuke.Services.Exceptions.Exceptions - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2016-01-06 16:01:00,353 [TIM-PC][Thread:7][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2016-01-06 16:01:46,479 [TIM-PC][Thread:40][FATAL] DotNetNuke.Services.Exceptions.Exceptions - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2016-01-06 16:01:46,493 [TIM-PC][Thread:40][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2016-01-06 16:02:01,098 [TIM-PC][Thread:47][FATAL] DotNetNuke.Services.Exceptions.Exceptions - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2016-01-06 16:02:01,110 [TIM-PC][Thread:47][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2016-01-06 18:10:19,666 [TIM-PC][Thread:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.SearchException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddSearchItem(String Title, String Description, Int32 Author, DateTime PubDate, Int32 ModuleId, String Key, String Guid, Int32 ImageFileId)
+   at DotNetNuke.Services.Search.SearchDataStoreController.AddSearchItem(SearchItemInfo item)
+   at DotNetNuke.Services.Search.SearchDataStore.StoreSearchItems(SearchItemInfoCollection SearchItems)
+   --- End of inner exception stack trace ---
+2016-01-06 18:10:19,921 [TIM-PC][Thread:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.SearchException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddSearchItem(String Title, String Description, Int32 Author, DateTime PubDate, Int32 ModuleId, String Key, String Guid, Int32 ImageFileId)
+   at DotNetNuke.Services.Search.SearchDataStoreController.AddSearchItem(SearchItemInfo item)
+   at DotNetNuke.Services.Search.SearchDataStore.StoreSearchItems(SearchItemInfoCollection SearchItems)
+   --- End of inner exception stack trace ---
+2016-01-06 18:10:19,946 [TIM-PC][Thread:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.SearchException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddSearchItem(String Title, String Description, Int32 Author, DateTime PubDate, Int32 ModuleId, String Key, String Guid, Int32 ImageFileId)
+   at DotNetNuke.Services.Search.SearchDataStoreController.AddSearchItem(SearchItemInfo item)
+   at DotNetNuke.Services.Search.SearchDataStore.StoreSearchItems(SearchItemInfoCollection SearchItems)
+   --- End of inner exception stack trace ---
+2016-01-06 18:10:19,965 [TIM-PC][Thread:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - DotNetNuke.Services.Exceptions.SearchException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'PubDate', table 'SRD_Portal_7_0_3.dbo.dnn_SearchItem'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at PetaPoco.Database.ExecuteScalar[T](String sql, Object[] args)
+   at DotNetNuke.Data.PetaPoco.PetaPocoHelper.ExecuteScalar[T](String connectionString, CommandType type, String sql, Object[] args)
+   at DotNetNuke.Data.SqlDataProvider.ExecuteScalar[T](String procedureName, Object[] commandParameters)
+   at DotNetNuke.Data.DataProvider.AddSearchItem(String Title, String Description, Int32 Author, DateTime PubDate, Int32 ModuleId, String Key, String Guid, Int32 ImageFileId)
+   at DotNetNuke.Services.Search.SearchDataStoreController.AddSearchItem(SearchItemInfo item)
+   at DotNetNuke.Services.Search.SearchDataStore.StoreSearchItems(SearchItemInfoCollection SearchItems)
+   --- End of inner exception stack trace ---
+2016-01-06 18:16:47,530 [TIM-PC][Thread:9][FATAL] DotNetNuke.Services.Exceptions.Exceptions - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2016-01-06 18:16:47,561 [TIM-PC][Thread:9][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2016-01-06 18:27:14,936 [TIM-PC][Thread:38][FATAL] DotNetNuke.Services.Exceptions.Exceptions - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2016-01-06 18:27:14,936 [TIM-PC][Thread:38][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2016-01-06 18:29:12,714 [TIM-PC][Thread:33][FATAL] DotNetNuke.Services.Exceptions.Exceptions - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2016-01-06 18:29:12,728 [TIM-PC][Thread:33][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2016-01-06 18:29:46,421 [TIM-PC][Thread:34][FATAL] DotNetNuke.Services.Exceptions.Exceptions - System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2016-01-06 18:29:46,499 [TIM-PC][Thread:34][ERROR] DotNetNuke.Services.Exceptions.Exceptions - ~/Default.aspx?tabid=40&def=ErrorMessage
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DotNetNuke.Services.Exceptions.Exceptions.ProcessModuleLoadException(String FriendlyMessage, Control ctrl, Exception exc, Boolean DisplayErrorMessage)
+2016-01-06 18:38:38,805 [TIM-PC][Thread:39][FATAL] DotNetNuke.Web.Common.Internal.DotNetNukeHttpApplication - System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Linq.SqlClient.SqlConnectionManager.UseConnection(IConnectionUser user)
+   at System.Data.Linq.SqlClient.SqlProvider.get_IsSqlCe()
+   at System.Data.Linq.SqlClient.SqlProvider.InitializeProviderMode()
+   at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   at System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Rawson.App.SecurityCache.GetAuthorizedClients(UserAuthorization ua) in c:\Users\Tim\source\Workspaces\ValvTrak\ValvTrak.DNN\App_Code\Rawson\App\SecurityCache.cs:line 66
+   at Rawson.App.SecurityCache.context_PreRequestHandlerExecute(Object sender, EventArgs e) in c:\Users\Tim\source\Workspaces\ValvTrak\ValvTrak.DNN\App_Code\Rawson\App\SecurityCache.cs:line 52
+   at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
