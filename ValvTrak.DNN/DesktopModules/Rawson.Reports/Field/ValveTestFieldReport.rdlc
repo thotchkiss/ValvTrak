@@ -3224,7 +3224,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=IIF(IsNothing(Fields!WeatherCap.Value) Or Fields!WeatherCap.Value = 2, "X", "")</Value>
                                   <Style>
                                     <FontFamily>Arial Unicode MS</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -3404,7 +3404,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(Not IsNothing(Fields!WeatherCap.Value) And Fields!WeatherCap.Value = True, "X", "")</Value>
+                                  <Value>=IIF(Not IsNothing(Fields!WeatherCap.Value) And Fields!WeatherCap.Value = 1, "X", "")</Value>
                                   <Style>
                                     <FontFamily>Arial Unicode MS</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -3440,7 +3440,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(IsNothing(Fields!WeatherCap.Value) Or Fields!WeatherCap.Value = False, "X", "")</Value>
+                                  <Value>=IIF(IsNothing(Fields!WeatherCap.Value) Or Fields!WeatherCap.Value &lt;= 0, "X", "")</Value>
                                   <Style>
                                     <FontFamily>Arial Unicode MS</FontFamily>
                                     <FontWeight>Bold</FontWeight>

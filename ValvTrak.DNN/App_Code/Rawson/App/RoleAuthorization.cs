@@ -32,6 +32,7 @@ namespace Rawson.App.Security
         {
             _roleId = roleId;
 
+            DatabaseFactory.SetDatabaseProviderFactory(new DatabaseProviderFactory(), false);
             Database db = DatabaseFactory.CreateDatabase("SiteSqlServer");
 
             DbCommand cmd = new SqlCommand("select distinct customerid, projectid from roleauthorizations where roleid = @RoleId ");
@@ -169,6 +170,8 @@ namespace Rawson.App.Security
         public static List<RoleAuthorization> GetRoleAuthorizationsForUser(object userId)
         {
             List<RoleAuthorization> roles = new List<RoleAuthorization>();
+
+            DatabaseFactory.SetDatabaseProviderFactory(new DatabaseProviderFactory(), false);
             Database db = DatabaseFactory.CreateDatabase("SiteSqlServer");
 
             DbCommand cmd = new SqlCommand("select distinct du.roleid from dnn_userroles du inner join roleauthorizations ra on du.roleid = ra.roleid where du.userid = @UserId");
@@ -186,6 +189,8 @@ namespace Rawson.App.Security
         public static List<RoleAuthorization> GetRoleAuthorizationsForRole(object roleId)
         {
             List<RoleAuthorization> roles = new List<RoleAuthorization>();
+
+            DatabaseFactory.SetDatabaseProviderFactory(new DatabaseProviderFactory(), false);
             Database db = DatabaseFactory.CreateDatabase("SiteSqlServer");
 
             DbCommand cmd = new SqlCommand("select distinct du.roleid from dnn_userroles du inner join roleauthorizations ra on du.roleid = ra.roleid where du.roleid = @RoleId");
@@ -203,6 +208,8 @@ namespace Rawson.App.Security
         public static List<RoleAuthorization> GetRoleAuthorizationsForBranch(object branchId)
         {
             List<object> roles = new List<object>();
+
+            DatabaseFactory.SetDatabaseProviderFactory(new DatabaseProviderFactory(), false);
             Database db = DatabaseFactory.CreateDatabase("SiteSqlServer");
 
             DbCommand cmd = new SqlCommand("select distinct du.roleid from dnn_userroles du inner join roleauthorizations ra on du.roleid = ra.roleid where du.customerid = @CustomerId");
@@ -220,6 +227,8 @@ namespace Rawson.App.Security
         public static List<RoleAuthorization> GetRoleAuthorizationsForLeaf(object leafId)
         {
             List<object> roles = new List<object>();
+
+            DatabaseFactory.SetDatabaseProviderFactory(new DatabaseProviderFactory(), false);
             Database db = DatabaseFactory.CreateDatabase("SiteSqlServer");
 
             DbCommand cmd = new SqlCommand("select distinct du.roleid from dnn_userroles du inner join roleauthorizations ra on du.roleid = ra.roleid where du.projectid = @ProjectId");

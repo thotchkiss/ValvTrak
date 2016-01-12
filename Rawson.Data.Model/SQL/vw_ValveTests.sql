@@ -1,19 +1,12 @@
-USE [SRD]
-GO
-
-/****** Object:  View [dbo].[vw_ValveTests]    Script Date: 11/30/2015 7:28:35 PM ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
 
 
 ALTER VIEW [dbo].[vw_ValveTests]
 AS
 SELECT     vt.ValveTestID, vt.JobID, j.SalesOrderNum, j.SapWoNum, vt.FSRNum, c.Name AS ClientName, cl.Name AS ClientLocationName, vt.ServiceItemID, vt.CostCenter, 
-                      ISNULL(si.Latitude, case  when isnumeric(cl.Latitude) = 1 then cast(cl.Latitude as decimal(18,6)) else 0 end) AS Latitude, ISNULL(si.Longitude, case when isnumeric(cl.Longitude) = 1 then cast(cl.Longitude as decimal(18,6)) else 0 end) AS Longitude, 
+                      --ISNULL(si.Latitude, case  when isnumeric(cl.Latitude) = 1 then cast(cl.Latitude as decimal(18,6)) else 0 end) AS Latitude, ISNULL(si.Longitude, case when isnumeric(cl.Longitude) = 1 then cast(cl.Longitude as decimal(18,6)) else 0 end) AS Longitude, 
+					  (case when si.Latitude is null or si.Latitude < 10 then case when cl.Latitude is not null and isnumeric(cl.Latitude) = 1 then cast(cl.Latitude as decimal(18,6)) else 0 end else si.Latitude end) AS Latitude,
+					  (case when si.Longitude is null or si.Longitude < 10 then case when cl.Longitude is not null and isnumeric(cl.Longitude) = 1 then cast(cl.Longitude as decimal(18,6)) else 0 end else si.Longitude end) AS Longitude,
+					  --ISNULL(cl.Latitude,'') AS Latitude, ISNULL(cl.Longitude,'') AS Longitude,
 					  si.Description, vt.PsvApplication AS SapPsv, vt.DateTested, 
                       model.Model, man.Manufacturer AS ManufacturerName, si.Threaded, si.Flanged, si.SerialNum, ISNULL(si.SapEquipNum, vt.SapPsv) AS SapEquipNum, si.InletSize, 
                       si.OutletSize, si.InletFlangeRating, si.OutletFlangeRating, dbo.fn_GetModelSize(si.ServiceItemID) AS ModelSize, vt.SetPressure, vt.BackPressure, 
@@ -33,10 +26,6 @@ FROM         dbo.ValveTests AS vt INNER JOIN
                       dbo.TestResults AS result ON vt.TestResultID = result.TestResultID LEFT OUTER JOIN
                       dbo.Employees AS empTech ON vt.TechID = empTech.EmployeeID LEFT OUTER JOIN
                       dbo.Employees AS empCreated ON vt.CreatedBy = empCreated.EmployeeID
-
-
-
-GO
 
 
 

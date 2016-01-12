@@ -365,7 +365,7 @@
                         Caption="PSV Application" Width="250px">
                     </dxwgv:GridViewDataTextColumn>
                     <dxwgv:GridViewDataTextColumn FieldName="SapPsv" VisibleIndex="17"
-                        Caption="SAP PSV" Width="250px">
+                        Caption="SAP #" Width="250px">
                     </dxwgv:GridViewDataTextColumn>
                     <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.SerialNum" VisibleIndex="18"
                         Caption="Serial Num" Width="200px">
@@ -425,6 +425,12 @@
                         <Settings SortMode="DisplayText" />
                         <EditFormSettings Visible="True" />
                     </dxwgv:GridViewDataComboBoxColumn>
+                    <dxwgv:GridViewDataTextColumn FieldName="Job.ClientLocation.Latitude" VisibleIndex="18"
+                        Caption="Latitude" >
+                    </dxwgv:GridViewDataTextColumn>
+                    <dxwgv:GridViewDataTextColumn FieldName="Job.ClientLocation.Longitude" VisibleIndex="18"
+                        Caption="Longitude" >
+                    </dxwgv:GridViewDataTextColumn>
                     <dxwgv:GridViewDataTextColumn FieldName="Notes" VisibleIndex="36" Width="250px">
                     </dxwgv:GridViewDataTextColumn>
                     <dxwgv:GridViewDataTextColumn FieldName="Employee.FirstName" VisibleIndex="37"

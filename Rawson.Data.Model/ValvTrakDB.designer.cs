@@ -121,7 +121,8 @@ namespace Rawson.Data
     #endregion
 		
 		public ValvTrakDBDataContext() : 
-				base("Data Source=localhost;Initial Catalog=SRD_20160106;User ID=srd;Password=HOmLF1L8", mappingSource)
+				base("Data Source=localhost\\SQLExpress;Initial Catalog=SRD;User ID=srd;Password=HOmLF1L" +
+						"8", mappingSource)
 		{
 			OnCreated();
 		}
