@@ -370,6 +370,20 @@
                     <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.SerialNum" VisibleIndex="18"
                         Caption="Serial Num" Width="200px">
                     </dxwgv:GridViewDataTextColumn>
+
+                    <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.InletSize" VisibleIndex="18"
+                        Caption="Inlet Size" >
+                    </dxwgv:GridViewDataTextColumn>
+                    <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.OutletSize" VisibleIndex="18"
+                        Caption="Outlet Size" >
+                    </dxwgv:GridViewDataTextColumn>
+                    <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.InletFlangeRating" VisibleIndex="18"
+                        Caption="Inlet Flange Rating" >
+                    </dxwgv:GridViewDataTextColumn>
+                    <dxwgv:GridViewDataTextColumn FieldName="ServiceItem.OutletFlangeRating" VisibleIndex="18"
+                        Caption="Outlet Flange Rating" >
+                    </dxwgv:GridViewDataTextColumn>
+
                     <dxwgv:GridViewDataTextColumn FieldName="Capacity" VisibleIndex="19">
                     </dxwgv:GridViewDataTextColumn>
                     <dxwgv:GridViewDataComboBoxColumn FieldName="CapacityTypeID" VisibleIndex="20" 
