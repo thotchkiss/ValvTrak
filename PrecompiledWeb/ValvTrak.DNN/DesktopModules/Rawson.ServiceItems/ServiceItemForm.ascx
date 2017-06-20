@@ -1,12 +1,12 @@
 ﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.ServiceItems.ServiceItemForm, App_Web_e313hjox" enabletheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v15.1"
+<%@ Register Assembly="DevExpress.Web.v15.2"
 	Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 
 
 
-<%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxpc" %>
-<%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxpc" %>
+<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxe" %>
 
 
 

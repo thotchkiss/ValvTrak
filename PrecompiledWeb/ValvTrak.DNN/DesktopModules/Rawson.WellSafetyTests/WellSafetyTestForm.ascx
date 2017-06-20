@@ -1,13 +1,13 @@
 ﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.WellSafetyTests.WellSafetyTestForm, App_Web_3nm3ytta" enabletheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v15.1"
+<%@ Register Assembly="DevExpress.Web.v15.2"
 	Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 
 
 
-<%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v15.1" Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dxsc" %>
-<%@ Register assembly="DevExpress.Web.v15.1" namespace="DevExpress.Web" tagprefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxrp" %>
+<%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v15.2" Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dxsc" %>
+<%@ Register assembly="DevExpress.Web.v15.2" namespace="DevExpress.Web" tagprefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxrp" %>
 <%@ Register src="~/DesktopModules/Rawson.ServiceItems/ServiceItemForm.ascx" tagname="SvcItemEdit" tagprefix="vt" %>
 
 

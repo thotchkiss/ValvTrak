@@ -1,17 +1,17 @@
 ﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.GreasingRecords.GreasingRecordItemForm, App_Web_jfvcgkkk" enabletheming="true" %>
 
-<%@ Register Assembly="DevExpress.Web.v15.1"
+<%@ Register Assembly="DevExpress.Web.v15.2"
     Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 
 
-<%@ Register Assembly="DevExpress.Web.v15.1"
+<%@ Register Assembly="DevExpress.Web.v15.2"
     Namespace="DevExpress.Web" TagPrefix="dxrp" %>
-<%@ Register Assembly="DevExpress.Web.v15.1"
+<%@ Register Assembly="DevExpress.Web.v15.2"
     Namespace="DevExpress.Web" TagPrefix="dxp" %>
-<%@ Register Assembly="DevExpress.Web.v15.1"
+<%@ Register Assembly="DevExpress.Web.v15.2"
     Namespace="DevExpress.Web" TagPrefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v15.1" 
+<%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v15.2" 
     Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dxsc" %>
 <%@ Register src="~/DesktopModules/Rawson.ServiceItems/ServiceItemForm.ascx" tagname="SvcItemEdit" tagprefix="vt" %>
 

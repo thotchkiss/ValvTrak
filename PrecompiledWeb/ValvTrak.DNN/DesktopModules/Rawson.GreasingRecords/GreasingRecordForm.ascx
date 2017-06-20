@@ -1,20 +1,20 @@
 ﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.GreasingRecords.GreasingRecordForm, App_Web_jfvcgkkk" enabletheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v15.1"
+<%@ Register Assembly="DevExpress.Web.v15.2"
     Namespace="DevExpress.Web" TagPrefix="dx" %>
-    <%@ Register Assembly="DevExpress.Web.v15.1"
+    <%@ Register Assembly="DevExpress.Web.v15.2"
     Namespace="DevExpress.Web" TagPrefix="dxwgv" %>
     
 
 
-<%@ Register Assembly="DevExpress.Web.v15.1"
+<%@ Register Assembly="DevExpress.Web.v15.2"
     Namespace="DevExpress.Web" TagPrefix="dxrp" %>
-<%@ Register Assembly="DevExpress.Web.v15.1"
+<%@ Register Assembly="DevExpress.Web.v15.2"
     Namespace="DevExpress.Web" TagPrefix="dxcp" %>
-<%@ Register Assembly="DevExpress.Web.v15.1"
+<%@ Register Assembly="DevExpress.Web.v15.2"
     Namespace="DevExpress.Web" TagPrefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.v15.1"
+<%@ Register Assembly="DevExpress.Web.v15.2"
     Namespace="DevExpress.Web" TagPrefix="dxpc" %>
-<%@ Register Assembly="DevExpress.Web.v15.1"
+<%@ Register Assembly="DevExpress.Web.v15.2"
     Namespace="DevExpress.Web" TagPrefix="dxp" %>
 
 

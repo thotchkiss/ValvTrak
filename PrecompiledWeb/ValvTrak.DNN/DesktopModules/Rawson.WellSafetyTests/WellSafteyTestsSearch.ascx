@@ -1,17 +1,17 @@
 ﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.WellSafetyTests.WellSafteyTestsSearch, App_Web_3nm3ytta" enabletheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v15.1"
+<%@ Register Assembly="DevExpress.Web.v15.2"
     Namespace="DevExpress.Web" TagPrefix="dx" %>
 
     
 
 
 
-<%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxwgv" %>
-<%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxrp" %>
-<%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxp" %>
+<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxwgv" %>
+<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxrp" %>
+<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxp" %>
 
-<%@ Register assembly="DevExpress.Web.v15.1" namespace="DevExpress.Web" tagprefix="dx1" %>
+<%@ Register assembly="DevExpress.Web.v15.2" namespace="DevExpress.Web" tagprefix="dx1" %>
 
 <script type="text/javascript" src="../../js/json2.js"></script>
 <script id="scrCommon" type="text/javascript">

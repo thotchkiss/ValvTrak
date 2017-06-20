@@ -1,6 +1,6 @@
 ﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.ClientLocations.ClientsForm, App_Web_b3hhww5c" enabletheming="true" %>
 
-<%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 
 
@@ -9,7 +9,7 @@
 
 
 
-<%@ Register Assembly="DevExpress.Web.v15.1" Namespace="DevExpress.Web" TagPrefix="dxp" %>
+<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxp" %>
 
 <%@ Register Assembly="System.Web.Extensions" Namespace="System.Web.UI.WebControls" TagPrefix="asp" %>
 

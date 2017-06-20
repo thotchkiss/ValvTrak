@@ -1,5 +1,5 @@
 ﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.ChemicalPumps.ChemicalPumpTestForm, App_Web_mxikfxoh" enabletheming="true" %>
-<%@ Register assembly="DevExpress.Web.v15.1" namespace="DevExpress.Web" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v15.2" namespace="DevExpress.Web" tagprefix="dx" %>
 
 
 

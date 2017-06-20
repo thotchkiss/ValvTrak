@@ -1,5 +1,5 @@
 ﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.Admin.AdminHome, App_Web_oyowb11b" enabletheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v15.1"
+<%@ Register Assembly="DevExpress.Web.v15.2"
     Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 
