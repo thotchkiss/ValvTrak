@@ -31,3 +31,5 @@ _ReSharper*/
 *.suo
 Deploy*/
 stash*/
+*.zip
+*.7z
