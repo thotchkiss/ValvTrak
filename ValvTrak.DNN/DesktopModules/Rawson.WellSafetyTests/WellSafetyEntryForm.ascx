@@ -1,19 +1,23 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="WellSafetyEntryForm.ascx.cs" Inherits="DesktopModules_Rawson.WellSafetyTests_WellSafetyEntryForm" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="WellSafetyEntryForm.ascx.cs" Inherits="Rawson.WellSafetyTests.WellSafetyEntryForm" %>
 <%@ Register assembly="DevExpress.Web.v15.2, Version=15.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
 
+<%@ Import namespace="System.Linq" %>
 
 <script runat="server">
 
+
+
     protected void LinqDataSource_Selecting(object sender, LinqDataSourceSelectEventArgs e)
     {
-        using (var db = new Rawson.Data.ValvTrakDBDataContext())
+
+        using (var db = new Rawson.Model.ValvTrakModel())
         {
-            var result = db.WellSafetyTests.Select(w => new
-            {
+            //var job = db.Jobs.First(x => x.JobID = jobID);
 
-            }).ToList();
 
-            e.Result = result;
+
+
+            //e.Result = result;
         }
 
     }
@@ -68,10 +72,7 @@
     </Columns>
 </dx:ASPxGridView>
 
-
-
-
-<asp:LinqDataSource ID="LinqDataSource" runat="server" ContextTypeName="Rawson.Data.ValvTrakDBDataContext" EntityTypeName="" OnSelecting="LinqDataSource_Selecting" TableName="WellSafetyTests">
+<asp:LinqDataSource ID="LinqDataSource" runat="server" ContextTypeName="Rawson.Model.ValvTrakDBModel" EntityTypeName="" OnSelecting="LinqDataSource_Selecting" TableName="WellSafetyTests">
 </asp:LinqDataSource>
 
 

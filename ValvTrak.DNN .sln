@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rawson.Data.Model", "Rawson.Data.Model\Rawson.Data.Model.csproj", "{EBF20F87-6687-459E-AD92-3B83BC99144E}"
 EndProject
@@ -11,8 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rawson.Utilities", "Rawson.
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ValvTrak.DNN", "ValvTrak.DNN\", "{4483A01F-57BF-4014-9A9F-025A2BB760F0}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
-		ProjectReferences = "{EBF20F87-6687-459E-AD92-3B83BC99144E}|Rawson.Data.Model.dll;{C1FECB50-7231-4899-9FF0-A9D50A293273}|Rawson.Providers.dll;"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{EBF20F87-6687-459E-AD92-3B83BC99144E}|Rawson.Data.Model.dll;{C1FECB50-7231-4899-9FF0-A9D50A293273}|Rawson.Providers.dll;{cd1a92b0-173e-4a47-a9ba-5db81a3b7c7d}|Rawson.Model.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/ValvTrak.DNN"
 		Debug.AspNetCompiler.PhysicalPath = "ValvTrak.DNN\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\ValvTrak.DNN\"
@@ -38,6 +38,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{73805D
 	EndProjectSection
 EndProject
 Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "ValvTrak.Reports", "ValvTrak.Reports\ValvTrak.Reports.rptproj", "{19203501-6ABC-48B5-B173-BF15CD3BDBF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rawson.Model", "Rawson.Model\Rawson.Model.csproj", "{CD1A92B0-173E-4A47-A9BA-5DB81A3B7C7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rawson.Model.Test", "Rawson.Model.Test\Rawson.Model.Test.csproj", "{FBBB9FA7-7B7F-4FA2-9952-0112D4CC8C9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +95,22 @@ Global
 		{19203501-6ABC-48B5-B173-BF15CD3BDBF7}.Release|Any CPU.ActiveCfg = Production
 		{19203501-6ABC-48B5-B173-BF15CD3BDBF7}.Release|Any CPU.Build.0 = Production
 		{19203501-6ABC-48B5-B173-BF15CD3BDBF7}.Release|Any CPU.Deploy.0 = Production
+		{CD1A92B0-173E-4A47-A9BA-5DB81A3B7C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD1A92B0-173E-4A47-A9BA-5DB81A3B7C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD1A92B0-173E-4A47-A9BA-5DB81A3B7C7D}.DebugLocal|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD1A92B0-173E-4A47-A9BA-5DB81A3B7C7D}.DebugLocal|Any CPU.Build.0 = Debug|Any CPU
+		{CD1A92B0-173E-4A47-A9BA-5DB81A3B7C7D}.Production|Any CPU.ActiveCfg = Release|Any CPU
+		{CD1A92B0-173E-4A47-A9BA-5DB81A3B7C7D}.Production|Any CPU.Build.0 = Release|Any CPU
+		{CD1A92B0-173E-4A47-A9BA-5DB81A3B7C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD1A92B0-173E-4A47-A9BA-5DB81A3B7C7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBBB9FA7-7B7F-4FA2-9952-0112D4CC8C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBBB9FA7-7B7F-4FA2-9952-0112D4CC8C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBBB9FA7-7B7F-4FA2-9952-0112D4CC8C9F}.DebugLocal|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBBB9FA7-7B7F-4FA2-9952-0112D4CC8C9F}.DebugLocal|Any CPU.Build.0 = Debug|Any CPU
+		{FBBB9FA7-7B7F-4FA2-9952-0112D4CC8C9F}.Production|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBB9FA7-7B7F-4FA2-9952-0112D4CC8C9F}.Production|Any CPU.Build.0 = Release|Any CPU
+		{FBBB9FA7-7B7F-4FA2-9952-0112D4CC8C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBB9FA7-7B7F-4FA2-9952-0112D4CC8C9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

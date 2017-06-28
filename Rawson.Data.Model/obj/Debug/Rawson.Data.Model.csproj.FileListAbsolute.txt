@@ -25,6 +25,6 @@ C:\Users\mil8924\Documents\Personal\Outside Work\ValvTrak\Rawson.Data.Model\obj\
 C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Data.Model\bin\Debug\Rawson.Data.Model.dll.config
 C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Data.Model\bin\Debug\Rawson.Data.Model.dll
 C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Data.Model\bin\Debug\Rawson.Data.Model.pdb
-C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Data.Model\obj\Debug\Rawson.Data.Model.csprojResolveAssemblyReference.cache
 C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Data.Model\obj\Debug\Rawson.Data.Model.dll
 C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Data.Model\obj\Debug\Rawson.Data.Model.pdb
+C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Data.Model\obj\Debug\Rawson.Data.Model.csprojResolveAssemblyReference.cache

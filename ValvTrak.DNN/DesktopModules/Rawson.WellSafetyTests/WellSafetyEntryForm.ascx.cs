@@ -5,10 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class DesktopModules_Rawson.WellSafetyTests_WellSafetyEntryForm : System.Web.UI.UserControl
+namespace Rawson.WellSafetyTests
 {
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class WellSafetyEntryForm : System.Web.UI.UserControl
     {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
