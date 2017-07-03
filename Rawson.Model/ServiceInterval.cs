@@ -28,6 +28,11 @@ namespace Rawson.Model
 
         public bool IsActive { get; set; }
 
+        [Column(TypeName = "timestamp")]
+        [MaxLength(8)]
+        [Timestamp]
+        public byte[] Version { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ClientLocationServiceSchedule> ClientLocationServiceSchedules { get; set; }
     }

@@ -11,9 +11,11 @@ namespace Rawson.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ServiceItem()
         {
-            ChemicalPumpTests = new HashSet<ChemicalPumpTest>();
+            ChemPumpWorksheets = new HashSet<ChemPumpWorksheet>();
+            ChemPumpWorksheets1 = new HashSet<ChemPumpWorksheet>();
             GreasingRecordItems = new HashSet<GreasingRecordItem>();
             RateValveTests = new HashSet<RateValveTest>();
+            ServiceItemSpecs = new HashSet<ServiceItemSpec>();
             ValveTests = new HashSet<ValveTest>();
             WellSafetyTests = new HashSet<WellSafetyTest>();
         }
@@ -28,7 +30,7 @@ namespace Rawson.Model
 
         public int? ManufacturerModelID { get; set; }
 
-        [StringLength(50)]
+        [StringLength(255)]
         public string SerialNum { get; set; }
 
         [StringLength(2000)]
@@ -36,7 +38,12 @@ namespace Rawson.Model
 
         public bool? Active { get; set; }
 
-        [StringLength(50)]
+        [Column(TypeName = "timestamp")]
+        [MaxLength(8)]
+        [Timestamp]
+        public byte[] Version { get; set; }
+
+        [StringLength(255)]
         public string SapEquipNum { get; set; }
 
         public bool? Threaded { get; set; }
@@ -51,17 +58,15 @@ namespace Rawson.Model
 
         public decimal? OutletFlangeRating { get; set; }
 
-        [Column(TypeName = "timestamp")]
-        [MaxLength(8)]
-        [Timestamp]
-        public byte[] Version { get; set; }
-
         public decimal? Latitude { get; set; }
 
         public decimal? Longitude { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChemicalPumpTest> ChemicalPumpTests { get; set; }
+        public virtual ICollection<ChemPumpWorksheet> ChemPumpWorksheets { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChemPumpWorksheet> ChemPumpWorksheets1 { get; set; }
 
         public virtual ClientLocation ClientLocation { get; set; }
 
@@ -75,12 +80,15 @@ namespace Rawson.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RateValveTest> RateValveTests { get; set; }
 
+        public virtual ServiceItemType ServiceItemType { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ServiceItemSpec> ServiceItemSpecs { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ValveTest> ValveTests { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<WellSafetyTest> WellSafetyTests { get; set; }
-
-        public virtual ServiceItemType ServiceItemType { get; set; }
     }
 }

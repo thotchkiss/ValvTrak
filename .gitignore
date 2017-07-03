@@ -33,3 +33,7 @@ Deploy*/
 stash*/
 *.zip
 *.7z
+.git.bfg-report/2017-06-27/21-27-43/cache-stats.txt
+*.txt
+.git.bfg-report/2017-06-27/21-27-43/protected-dirt/776a09b6-HEAD.csv
+*.csv

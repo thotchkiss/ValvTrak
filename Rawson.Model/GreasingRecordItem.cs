@@ -38,7 +38,7 @@ namespace Rawson.Model
 
         public int? LubeTypeID { get; set; }
 
-        public double? AmountInjected { get; set; }
+        public double AmountInjected { get; set; }
 
         [StringLength(200)]
         public string Notes { get; set; }

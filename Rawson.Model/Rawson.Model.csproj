@@ -56,7 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChemicalPumpTest.cs" />
+    <Compile Include="ChemPumpWorksheet.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="ClientContact.cs" />
     <Compile Include="ClientContactPosition.cs" />
@@ -82,11 +82,19 @@
     <Compile Include="ServiceInterval.cs" />
     <Compile Include="ServiceItem.cs" />
     <Compile Include="ServiceItemCategory.cs" />
+    <Compile Include="ServiceItemSpec.cs" />
     <Compile Include="ServiceItemType.cs" />
     <Compile Include="ServiceLocationType.cs" />
     <Compile Include="TestResult.cs" />
     <Compile Include="ValveTest.cs" />
     <Compile Include="ValvTrakModel.cs" />
+    <Compile Include="vw_ChemPumpWorksheets.cs" />
+    <Compile Include="vw_GreasingRecordItems.cs" />
+    <Compile Include="vw_GreasingRecords.cs" />
+    <Compile Include="vw_RateValveTests.cs" />
+    <Compile Include="vw_Reports_ClientLocations.cs" />
+    <Compile Include="vw_ValveTests.cs" />
+    <Compile Include="vw_WellSafetyTests.cs" />
     <Compile Include="WellSafetyTest.cs" />
   </ItemGroup>
   <ItemGroup>

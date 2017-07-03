@@ -11,7 +11,7 @@ namespace Rawson.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Job()
         {
-            ChemicalPumpTests = new HashSet<ChemicalPumpTest>();
+            ChemPumpWorksheets = new HashSet<ChemPumpWorksheet>();
             GreasingRecords = new HashSet<GreasingRecord>();
             RateValveTests = new HashSet<RateValveTest>();
             ValveTests = new HashSet<ValveTest>();
@@ -22,9 +22,6 @@ namespace Rawson.Model
 
         [StringLength(50)]
         public string SalesOrderNum { get; set; }
-
-        [StringLength(50)]
-        public string SapWoNum { get; set; }
 
         [Column(TypeName = "smalldatetime")]
         public DateTime? CallDate { get; set; }
@@ -78,8 +75,11 @@ namespace Rawson.Model
         [Timestamp]
         public byte[] Version { get; set; }
 
+        [StringLength(50)]
+        public string SapWoNum { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChemicalPumpTest> ChemicalPumpTests { get; set; }
+        public virtual ICollection<ChemPumpWorksheet> ChemPumpWorksheets { get; set; }
 
         public virtual ClientLocation ClientLocation { get; set; }
 
@@ -93,10 +93,12 @@ namespace Rawson.Model
 
         public virtual Employee Employee3 { get; set; }
 
-        public virtual Employee Employee4 { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GreasingRecord> GreasingRecords { get; set; }
+
+        public virtual JobStatu JobStatu { get; set; }
+
+        public virtual JobType JobType { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RateValveTest> RateValveTests { get; set; }
@@ -106,9 +108,5 @@ namespace Rawson.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<WellSafetyTest> WellSafetyTests { get; set; }
-
-        public virtual JobStatu JobStatu { get; set; }
-
-        public virtual JobType JobType { get; set; }
     }
 }

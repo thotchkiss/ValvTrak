@@ -12,7 +12,7 @@ namespace Rawson.Model
         {
         }
 
-        public virtual DbSet<ChemicalPumpTest> ChemicalPumpTests { get; set; }
+        public virtual DbSet<ChemPumpWorksheet> ChemPumpWorksheets { get; set; }
         public virtual DbSet<ClientContactPosition> ClientContactPositions { get; set; }
         public virtual DbSet<ClientContact> ClientContacts { get; set; }
         public virtual DbSet<ClientLocationContact> ClientLocationContacts { get; set; }
@@ -37,41 +37,57 @@ namespace Rawson.Model
         public virtual DbSet<ServiceInterval> ServiceIntervals { get; set; }
         public virtual DbSet<ServiceItemCategory> ServiceItemCategories { get; set; }
         public virtual DbSet<ServiceItem> ServiceItems { get; set; }
+        public virtual DbSet<ServiceItemSpec> ServiceItemSpecs { get; set; }
         public virtual DbSet<ServiceItemType> ServiceItemTypes { get; set; }
         public virtual DbSet<ServiceLocationType> ServiceLocationTypes { get; set; }
         public virtual DbSet<TestResult> TestResults { get; set; }
         public virtual DbSet<ValveTest> ValveTests { get; set; }
         public virtual DbSet<WellSafetyTest> WellSafetyTests { get; set; }
+        public virtual DbSet<vw_ChemPumpWorksheets> vw_ChemPumpWorksheets { get; set; }
+        public virtual DbSet<vw_GreasingRecordItems> vw_GreasingRecordItems { get; set; }
+        public virtual DbSet<vw_GreasingRecords> vw_GreasingRecords { get; set; }
+        public virtual DbSet<vw_RateValveTests> vw_RateValveTests { get; set; }
+        public virtual DbSet<vw_Reports_ClientLocations> vw_Reports_ClientLocations { get; set; }
+        public virtual DbSet<vw_ValveTests> vw_ValveTests { get; set; }
+        public virtual DbSet<vw_WellSafetyTests> vw_WellSafetyTests { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ChemicalPumpTest>()
+            modelBuilder.Entity<ChemPumpWorksheet>()
                 .Property(e => e.FSR_Num)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<ChemicalPumpTest>()
+            modelBuilder.Entity<ChemPumpWorksheet>()
+                .Property(e => e.WellName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ChemPumpWorksheet>()
+                .Property(e => e.WellNumber)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ChemPumpWorksheet>()
                 .Property(e => e.Contact)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<ChemicalPumpTest>()
+            modelBuilder.Entity<ChemPumpWorksheet>()
                 .Property(e => e.Phone)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<ChemicalPumpTest>()
-                .Property(e => e.ChemicalBeingPumped)
+            modelBuilder.Entity<ChemPumpWorksheet>()
+                .Property(e => e.VoltType)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<ChemicalPumpTest>()
+            modelBuilder.Entity<ChemPumpWorksheet>()
+                .Property(e => e.MotorAmps)
+                .HasPrecision(9, 5);
+
+            modelBuilder.Entity<ChemPumpWorksheet>()
                 .Property(e => e.HeadSize)
                 .HasPrecision(9, 5);
 
-            modelBuilder.Entity<ChemicalPumpTest>()
+            modelBuilder.Entity<ChemPumpWorksheet>()
                 .Property(e => e.Notes)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<ChemicalPumpTest>()
-                .Property(e => e.Version)
-                .IsFixedLength();
 
             modelBuilder.Entity<ClientContactPosition>()
                 .Property(e => e.ContactPosition)
@@ -216,13 +232,18 @@ namespace Rawson.Model
                 .IsFixedLength();
 
             modelBuilder.Entity<Employee>()
-                .HasMany(e => e.ChemicalPumpTests)
+                .HasMany(e => e.ChemPumpWorksheets)
                 .WithOptional(e => e.Employee)
                 .HasForeignKey(e => e.CreatedBy);
 
             modelBuilder.Entity<Employee>()
-                .HasMany(e => e.ChemicalPumpTests1)
+                .HasMany(e => e.ChemPumpWorksheets1)
                 .WithOptional(e => e.Employee1)
+                .HasForeignKey(e => e.ModifiedBy);
+
+            modelBuilder.Entity<Employee>()
+                .HasMany(e => e.GreasingRecordItems)
+                .WithOptional(e => e.Employee)
                 .HasForeignKey(e => e.ModifiedBy);
 
             modelBuilder.Entity<Employee>()
@@ -233,11 +254,6 @@ namespace Rawson.Model
             modelBuilder.Entity<Employee>()
                 .HasMany(e => e.GreasingRecords1)
                 .WithOptional(e => e.Employee1)
-                .HasForeignKey(e => e.ModifiedBy);
-
-            modelBuilder.Entity<Employee>()
-                .HasMany(e => e.GreasingRecordItems)
-                .WithOptional(e => e.Employee)
                 .HasForeignKey(e => e.ModifiedBy);
 
             modelBuilder.Entity<Employee>()
@@ -252,18 +268,12 @@ namespace Rawson.Model
 
             modelBuilder.Entity<Employee>()
                 .HasMany(e => e.Jobs2)
-                .WithRequired(e => e.Employee2)
-                .HasForeignKey(e => e.AssignedByID)
-                .WillCascadeOnDelete(false);
+                .WithOptional(e => e.Employee2)
+                .HasForeignKey(e => e.AssignedToID);
 
             modelBuilder.Entity<Employee>()
                 .HasMany(e => e.Jobs3)
                 .WithOptional(e => e.Employee3)
-                .HasForeignKey(e => e.AssignedToID);
-
-            modelBuilder.Entity<Employee>()
-                .HasMany(e => e.Jobs4)
-                .WithOptional(e => e.Employee4)
                 .HasForeignKey(e => e.ApprovedByID);
 
             modelBuilder.Entity<Employee>()
@@ -361,10 +371,6 @@ namespace Rawson.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<Job>()
-                .Property(e => e.SapWoNum)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Job>()
                 .Property(e => e.PM)
                 .HasPrecision(10, 4);
 
@@ -389,7 +395,11 @@ namespace Rawson.Model
                 .IsFixedLength();
 
             modelBuilder.Entity<Job>()
-                .HasMany(e => e.ChemicalPumpTests)
+                .Property(e => e.SapWoNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Job>()
+                .HasMany(e => e.ChemPumpWorksheets)
                 .WithRequired(e => e.Job)
                 .WillCascadeOnDelete(false);
 
@@ -529,6 +539,10 @@ namespace Rawson.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<ServiceInterval>()
+                .Property(e => e.Version)
+                .IsFixedLength();
+
+            modelBuilder.Entity<ServiceInterval>()
                 .HasMany(e => e.ClientLocationServiceSchedules)
                 .WithRequired(e => e.ServiceInterval)
                 .WillCascadeOnDelete(false);
@@ -551,6 +565,10 @@ namespace Rawson.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<ServiceItem>()
+                .Property(e => e.Version)
+                .IsFixedLength();
+
+            modelBuilder.Entity<ServiceItem>()
                 .Property(e => e.SapEquipNum)
                 .IsUnicode(false);
 
@@ -571,16 +589,22 @@ namespace Rawson.Model
                 .HasPrecision(9, 3);
 
             modelBuilder.Entity<ServiceItem>()
-                .Property(e => e.Version)
-                .IsFixedLength();
-
-            modelBuilder.Entity<ServiceItem>()
                 .Property(e => e.Latitude)
-                .HasPrecision(29, 4);
+                .HasPrecision(18, 6);
 
             modelBuilder.Entity<ServiceItem>()
                 .Property(e => e.Longitude)
-                .HasPrecision(29, 4);
+                .HasPrecision(18, 6);
+
+            modelBuilder.Entity<ServiceItem>()
+                .HasMany(e => e.ChemPumpWorksheets)
+                .WithOptional(e => e.ServiceItem)
+                .HasForeignKey(e => e.StartPumpID);
+
+            modelBuilder.Entity<ServiceItem>()
+                .HasMany(e => e.ChemPumpWorksheets1)
+                .WithOptional(e => e.ServiceItem1)
+                .HasForeignKey(e => e.EndPumpID);
 
             modelBuilder.Entity<ServiceItem>()
                 .HasMany(e => e.GreasingRecordItems)
@@ -589,6 +613,11 @@ namespace Rawson.Model
 
             modelBuilder.Entity<ServiceItem>()
                 .HasMany(e => e.RateValveTests)
+                .WithRequired(e => e.ServiceItem)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<ServiceItem>()
+                .HasMany(e => e.ServiceItemSpecs)
                 .WithRequired(e => e.ServiceItem)
                 .WillCascadeOnDelete(false);
 
@@ -647,10 +676,6 @@ namespace Rawson.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<ValveTest>()
-                .Property(e => e.SapPsv)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ValveTest>()
                 .Property(e => e.PsvApplication)
                 .IsUnicode(false);
 
@@ -661,6 +686,10 @@ namespace Rawson.Model
             modelBuilder.Entity<ValveTest>()
                 .Property(e => e.Version)
                 .IsFixedLength();
+
+            modelBuilder.Entity<ValveTest>()
+                .Property(e => e.SapPsv)
+                .IsUnicode(false);
 
             modelBuilder.Entity<ValveTest>()
                 .Property(e => e.Pop_1)
@@ -757,6 +786,603 @@ namespace Rawson.Model
             modelBuilder.Entity<WellSafetyTest>()
                 .Property(e => e.Version)
                 .IsFixedLength();
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.ClientName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.ClientLocationName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.FSR_Num)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.SalesOrderNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.WellName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.WellNumber)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.Contact)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.Phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.WarrantyTypeDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.WorkType1Display)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.WorkType2Display)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.StartPumpManufacturer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.StartPumpModel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.StartPumpSerial)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.StartPumpType)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.EndPumpManufacturer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.EndPumpModel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.EndPumpSerial)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.EndPumpType)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.VoltType)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.MotorAmps)
+                .HasPrecision(3, 1);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.ChemDailyVolTypeDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.SetDailyVolTypeDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.Notes)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.CreatedByDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.TechnicianDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ChemPumpWorksheets>()
+                .Property(e => e.Customer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.SerialNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.Description)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.SapEquipNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.ServiceItemTypeDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.ManufacturerName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.Model)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.ModelSize)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.ValveLocation)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.ActuatorInspectedDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.ActuatorLubedDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.ValveSecuredDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.FlangeOrScrew)
+                .IsFixedLength()
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.SeatsCheckedDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.SeatsLubedDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.LeakingDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.LubeTypeDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecordItems>()
+                .Property(e => e.Notes)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecords>()
+                .Property(e => e.ClientFieldOffice)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecords>()
+                .Property(e => e.PipelineSegment)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecords>()
+                .Property(e => e.Field)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecords>()
+                .Property(e => e.SapWO)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecords>()
+                .Property(e => e.SapEquipNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecords>()
+                .Property(e => e.FSRNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecords>()
+                .Property(e => e.CreatedByDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecords>()
+                .Property(e => e.ClientName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecords>()
+                .Property(e => e.ClientLocationName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecords>()
+                .Property(e => e.TechnicianDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecords>()
+                .Property(e => e.SalesOrderNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecords>()
+                .Property(e => e.SapWoNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecords>()
+                .Property(e => e.Longitude)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_GreasingRecords>()
+                .Property(e => e.Latitude)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_RateValveTests>()
+                .Property(e => e.FSRNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_RateValveTests>()
+                .Property(e => e.Remarks)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_RateValveTests>()
+                .Property(e => e.CustomerWitness)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_RateValveTests>()
+                .Property(e => e.FirstName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_RateValveTests>()
+                .Property(e => e.LastName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_RateValveTests>()
+                .Property(e => e.SerialNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_RateValveTests>()
+                .Property(e => e.ClientName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_RateValveTests>()
+                .Property(e => e.Manufacturer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_RateValveTests>()
+                .Property(e => e.PropertyNumber)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_RateValveTests>()
+                .Property(e => e.LocationName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_RateValveTests>()
+                .Property(e => e.Model)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_RateValveTests>()
+                .Property(e => e.SalesOrderNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_Reports_ClientLocations>()
+                .Property(e => e.Client)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_Reports_ClientLocations>()
+                .Property(e => e.Location)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_Reports_ClientLocations>()
+                .Property(e => e.Address)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_Reports_ClientLocations>()
+                .Property(e => e.City)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_Reports_ClientLocations>()
+                .Property(e => e.State)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_Reports_ClientLocations>()
+                .Property(e => e.ZipCode)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.SalesOrderNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.SapWoNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.FSRNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.ClientName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.ClientLocationName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.CostCenter)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.Latitude)
+                .HasPrecision(18, 6);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.Longitude)
+                .HasPrecision(18, 6);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.Description)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.SapPsv)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.Model)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.ManufacturerName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.SerialNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.SapEquipNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.InletSize)
+                .HasPrecision(9, 3);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.OutletSize)
+                .HasPrecision(9, 3);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.InletFlangeRating)
+                .HasPrecision(9, 3);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.OutletFlangeRating)
+                .HasPrecision(9, 3);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.ModelSize)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.CapacityTypeDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.SealNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.GaugeNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.CodedDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.SetPressureFound)
+                .HasPrecision(9, 2);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.SetPressureLeft)
+                .HasPrecision(9, 2);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.Pop_1)
+                .HasPrecision(9, 2);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.Pop_2)
+                .HasPrecision(9, 2);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.Pop_3)
+                .HasPrecision(9, 2);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.TestResultDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.Notes)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.ReviewItems)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.TechnicianDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.CustomerWitness)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_ValveTests>()
+                .Property(e => e.CreatedByDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.ServiceItemManufacturer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.ServiceItemModel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.ServiceItemSerial)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.ServiceItemType)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.FSR_Num)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.SSV_SAP_Num)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.BodyMaterial)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.BodyMaterialDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.PlugMaterial)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.PlugMaterialDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.SteamMaterial)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.SteamMaterialDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.GateMaterial)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.GateMaterialDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.PortSize)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.PressClass)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.ActuatorType)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.ActuatorTypeDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.ActuatorModel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.ActuatorSerialNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.AirSupplyMedium)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.AirSupplyMediumDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.Condition)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.SystemLocation)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.SystemLocationDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.ControllerType)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.HI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.LO)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.Notes)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.CustomerWitness)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.ManualOverride)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.ManualOverrideDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.TestResultDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.CreatedByDisplay)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.SalesOrderNum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.LocationWellName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.Description)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.ModelSize)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vw_WellSafetyTests>()
+                .Property(e => e.TechnicianDisplay)
+                .IsUnicode(false);
         }
     }
 }

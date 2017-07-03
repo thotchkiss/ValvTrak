@@ -11,16 +11,15 @@ namespace Rawson.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Employee()
         {
-            ChemicalPumpTests = new HashSet<ChemicalPumpTest>();
-            ChemicalPumpTests1 = new HashSet<ChemicalPumpTest>();
+            ChemPumpWorksheets = new HashSet<ChemPumpWorksheet>();
+            ChemPumpWorksheets1 = new HashSet<ChemPumpWorksheet>();
+            GreasingRecordItems = new HashSet<GreasingRecordItem>();
             GreasingRecords = new HashSet<GreasingRecord>();
             GreasingRecords1 = new HashSet<GreasingRecord>();
-            GreasingRecordItems = new HashSet<GreasingRecordItem>();
             Jobs = new HashSet<Job>();
             Jobs1 = new HashSet<Job>();
             Jobs2 = new HashSet<Job>();
             Jobs3 = new HashSet<Job>();
-            Jobs4 = new HashSet<Job>();
             RateValveTests = new HashSet<RateValveTest>();
             RateValveTests1 = new HashSet<RateValveTest>();
             RateValveTests2 = new HashSet<RateValveTest>();
@@ -32,8 +31,6 @@ namespace Rawson.Model
         }
 
         public int EmployeeID { get; set; }
-
-        public int? UserID { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -56,25 +53,27 @@ namespace Rawson.Model
 
         public bool Active { get; set; }
 
+        public int? UserID { get; set; }
+
         [Column(TypeName = "timestamp")]
         [MaxLength(8)]
         [Timestamp]
         public byte[] Version { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChemicalPumpTest> ChemicalPumpTests { get; set; }
+        public virtual ICollection<ChemPumpWorksheet> ChemPumpWorksheets { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChemicalPumpTest> ChemicalPumpTests1 { get; set; }
+        public virtual ICollection<ChemPumpWorksheet> ChemPumpWorksheets1 { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<GreasingRecordItem> GreasingRecordItems { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GreasingRecord> GreasingRecords { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GreasingRecord> GreasingRecords1 { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<GreasingRecordItem> GreasingRecordItems { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Job> Jobs { get; set; }
@@ -87,9 +86,6 @@ namespace Rawson.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Job> Jobs3 { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Job> Jobs4 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RateValveTest> RateValveTests { get; set; }

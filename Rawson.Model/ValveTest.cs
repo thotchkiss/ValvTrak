@@ -61,9 +61,6 @@ namespace Rawson.Model
         public string CostCenter { get; set; }
 
         [StringLength(255)]
-        public string SapPsv { get; set; }
-
-        [StringLength(50)]
         public string PsvApplication { get; set; }
 
         public bool? IsolationValve { get; set; }
@@ -93,6 +90,9 @@ namespace Rawson.Model
         [MaxLength(8)]
         [Timestamp]
         public byte[] Version { get; set; }
+
+        [StringLength(255)]
+        public string SapPsv { get; set; }
 
         public decimal? Pop_1 { get; set; }
 

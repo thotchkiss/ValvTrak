@@ -20,7 +20,11 @@ namespace Rawson.Model
         public DateTime LastServiceDate { get; set; }
 
         [Column(TypeName = "smalldatetime")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime? NextServiceDate { get; set; }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public int? CountDown { get; set; }
 
         [Column(TypeName = "timestamp")]
         [MaxLength(8)]

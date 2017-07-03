@@ -24,6 +24,10 @@ namespace Rawson.Model
         [StringLength(255)]
         public string Description { get; set; }
 
+        public int LayoutColumn { get; set; }
+
+        public int LayoutOrder { get; set; }
+
         [Column(TypeName = "timestamp")]
         [MaxLength(8)]
         [Timestamp]
