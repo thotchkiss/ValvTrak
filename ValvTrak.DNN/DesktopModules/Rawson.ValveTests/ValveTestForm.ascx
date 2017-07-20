@@ -1,11 +1,11 @@
 ﻿<%@ Control Language="C#" CodeFile="~/DesktopModules/Rawson.ValveTests/ValveTestForm.ascx.cs" Inherits="Rawson.ValveTests.ValveTestForm" AutoEventWireup="true" EnableTheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v15.2" Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dxsc" %>
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxrp" %>
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxcp" %>
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxpc" %>
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxp" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v17.1" Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dxsc" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxrp" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxpc" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxp" %>
 
 <%@ Register src="~/DesktopModules/Rawson.ServiceItems/ServiceItemForm.ascx" tagname="SvcItemEdit" tagprefix="vt" %>
 

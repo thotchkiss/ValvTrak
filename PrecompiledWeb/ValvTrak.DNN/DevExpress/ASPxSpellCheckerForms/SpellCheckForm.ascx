@@ -1,6 +1,6 @@
-﻿<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v15.2" Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dxwsc" %>
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxp" %>
+﻿<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v17.1" Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dxwsc" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxp" %>
 <%@ control language="vb" autoeventwireup="true" inherits="SpellCheckForm, App_Web_cr3ychne" %>
 <table id="dxMainSpellCheckFormTable" cellpadding="0" cellspacing="0" class="mainSpellCheckFormTable"> 
 	<tr>

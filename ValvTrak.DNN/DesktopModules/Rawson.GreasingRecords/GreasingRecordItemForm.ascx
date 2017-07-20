@@ -1,17 +1,17 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="GreasingRecordItemForm.ascx.cs" Inherits="Rawson.GreasingRecords.GreasingRecordItemForm" EnableTheming="true" %>
 
-<%@ Register Assembly="DevExpress.Web.v15.2"
+<%@ Register Assembly="DevExpress.Web.v17.1"
     Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 
 
-<%@ Register Assembly="DevExpress.Web.v15.2"
+<%@ Register Assembly="DevExpress.Web.v17.1"
     Namespace="DevExpress.Web" TagPrefix="dxrp" %>
-<%@ Register Assembly="DevExpress.Web.v15.2"
+<%@ Register Assembly="DevExpress.Web.v17.1"
     Namespace="DevExpress.Web" TagPrefix="dxp" %>
-<%@ Register Assembly="DevExpress.Web.v15.2"
+<%@ Register Assembly="DevExpress.Web.v17.1"
     Namespace="DevExpress.Web" TagPrefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v15.2" 
+<%@ Register Assembly="DevExpress.Web.ASPxSpellChecker.v17.1" 
     Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dxsc" %>
 <%@ Register src="~/DesktopModules/Rawson.ServiceItems/ServiceItemForm.ascx" tagname="SvcItemEdit" tagprefix="vt" %>
 
@@ -73,7 +73,7 @@
                         <td>
                             <dxe:ASPxComboBox ID="ActuatorInspSelect" runat="server" 
                                 ValueType="System.Int32" TabIndex="4" EnableIncrementalFiltering="True" 
-                                IncrementalFilteringMode="StartsWith" ShowLoadingPanel="False">
+                                IncrementalFilteringMode="StartsWith" >
                                 <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }" />
 <ClientSideEvents GotFocus="function(s, e) { s.ShowDropDown(); }"></ClientSideEvents>
                                 <Items>

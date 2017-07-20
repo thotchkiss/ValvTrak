@@ -1,15 +1,15 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="JobDetails.ascx.cs" Inherits="Rawson.Jobs.Details" EnableTheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 
 
 
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxwgv" %>
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxwgv" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxe" %>
 
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxrp" %>
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxp" %>
-<%@ Register assembly="DevExpress.Web.v15.2" namespace="DevExpress.Data.Linq" tagprefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxrp" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxp" %>
+<%@ Register assembly="DevExpress.Web.v17.1" namespace="DevExpress.Data.Linq" tagprefix="dx" %>
 
 <style type="text/css">
     .style1
@@ -136,8 +136,7 @@
                                     <dxe:ASPxComboBox ID="ClientSelect" runat="server" AutoPostBack="true" 
                                         DataSourceID="ClientDataSource" TextField="DisplayMember" 
                                         ValueField="ValueMember" ValueType="System.Int32" OnSelectedIndexChanged="OnClientSelectedIndexChanged" 
-                                        EnableIncrementalFiltering="True" TabIndex="1" EnableCallbackMode="True" 
-                                        ShowLoadingPanel="False">
+                                        EnableIncrementalFiltering="True" TabIndex="1" EnableCallbackMode="True">
                                         <ClientSideEvents
                                             GotFocus="function(s, e) { if (s.GetValue() == -1) { s.SelectAll(); s.ShowDropDown(); } }" />
                                     </dxe:ASPxComboBox>
@@ -172,7 +171,7 @@
                                         TextField="DisplayMember" ValueField="ValueMember" ClientInstanceName="locations"
                                         OnCallback="LocationSelect_Callback" TabIndex="2" AutoPostBack="false" 
                                         EnableIncrementalFiltering="True" ValueType="System.Int32" 
-                                        EnableCallbackMode="True" ShowLoadingPanel="False">
+                                        EnableCallbackMode="True">
                                         <ClientSideEvents
                                             EndCallback="function(s,e) { s.Focus(); }" 
                                             GotFocus="function(s, e) { if (s.GetValue() == -1){ s.SelectAll(); s.ShowDropDown(); } }" />
@@ -448,7 +447,7 @@
                             PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" 
                             AllowDragging="True" AllowResize="true" ShowPageScrollbarWhenModal="True" 
                             CloseAction="CloseButton" AutoUpdatePosition="True" Modal="False" HeaderText="Valve Test Reports (....may take several moments to load.)" 
-                            ShowSizeGrip="True" Width="600px" Height="500px" ShowLoadingPanel="false" RenderIFrameForPopupElements="False" >
+                            ShowSizeGrip="True" Width="600px" Height="500px" RenderIFrameForPopupElements="False" >
                             <ClientSideEvents Closing="function (s,e) { s.SetContentUrl(''); }" />
                             <ContentStyle VerticalAlign="Top"></ContentStyle>
                             <ContentCollection>

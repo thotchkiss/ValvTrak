@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ManufacturerForm.ascx.cs" Inherits="Rawson.ManufacturerModels.ManufacturerForm" EnableTheming="true" %>
 
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 
 
@@ -119,8 +119,7 @@
         </td>
         <td>
             <dx:ASPxCallbackPanel ID="ModelGridPanel" runat="server" Width="100%" 
-                ClientInstanceName="modelGridPanel" oncallback="ModelGridPanel_Callback" 
-                ShowLoadingPanel="False">
+                ClientInstanceName="modelGridPanel" oncallback="ModelGridPanel_Callback">
                 <PanelCollection>
                     <dx:PanelContent>
                         <dx:ASPxLabel ID="lblModels" runat="server" Text="Models for " ClientInstanceName="modelsLabel">

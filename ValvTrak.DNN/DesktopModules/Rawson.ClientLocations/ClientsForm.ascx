@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ClientsForm.ascx.cs" Inherits="Rawson.ClientLocations.ClientsForm" EnableTheming="true" %>
 
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 
 
@@ -9,7 +9,7 @@
 
 
 
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxp" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxp" %>
 
 <%@ Register Assembly="System.Web.Extensions" Namespace="System.Web.UI.WebControls" TagPrefix="asp" %>
 
@@ -429,7 +429,7 @@
 								<td>
 									<dx:ASPxComboBox ID="cmbLocationState" runat="server" 
 										DataSourceID="StatesDataSource" EnableIncrementalFiltering="True" 
-										IncrementalFilteringMode="StartsWith" ShowLoadingPanel="False" 
+										IncrementalFilteringMode="StartsWith" 
 										TextField="DisplayMember" ValueField="ValueMember" Width="70px">
 									</dx:ASPxComboBox>
 								</td>

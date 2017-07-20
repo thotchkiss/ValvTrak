@@ -1,13 +1,13 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Search.ascx.cs" Inherits="JobsSearch" EnableTheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxwgv" %>
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxwgv" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxe" %>
 
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxrp" %>
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxp" %>
-<%@ Register assembly="DevExpress.Web.v15.2" namespace="DevExpress.Data.Linq" tagprefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxrp" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxp" %>
+<%@ Register assembly="DevExpress.Web.v17.1" namespace="DevExpress.Data.Linq" tagprefix="dx" %>
 
 <script type="text/javascript">
     function DevExComboUnboundItem(s, e, itemText, itemValue) {
@@ -181,7 +181,7 @@
                                     <dxe:ASPxComboBox ID="ClientFilter" runat="server" 
                                         DataSourceID="ClientDataSource" EnableCallbackMode="True" 
                                         EnableIncrementalFiltering="True" IncrementalFilteringMode="StartsWith" 
-                                        ShowLoadingPanel="False" TextField="DisplayMember" ValueField="ValueMember" 
+                                        TextField="DisplayMember" ValueField="ValueMember" 
                                         ValueType="System.Int32" Width="170px">
                                         <ClientSideEvents SelectedIndexChanged="function(s,e){ locations.PerformCallback(); }" />
                                     </dxe:ASPxComboBox>
@@ -210,7 +210,7 @@
                                         ClientInstanceName="locations" DataSourceID="LocationDataSource" 
                                         EnableCallbackMode="True" EnableClientSideAPI="True" 
                                         EnableIncrementalFiltering="True" IncrementalFilteringMode="StartsWith" 
-                                        OnCallback="LocationFilter_Callback" ShowLoadingPanel="False" 
+                                        OnCallback="LocationFilter_Callback" 
                                         TextField="DisplayMember" ValueField="ValueMember" ValueType="System.Int32" 
                                         Width="170px">
                                     </dxe:ASPxComboBox>

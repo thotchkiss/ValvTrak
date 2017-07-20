@@ -1,6 +1,6 @@
 ﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.ManufacturerModels.ManufacturerForm, App_Web_n0vd323z" enabletheming="true" %>
 
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 
 

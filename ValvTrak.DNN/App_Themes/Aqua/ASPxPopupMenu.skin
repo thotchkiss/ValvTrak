@@ -1,9 +1,9 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v15.2, Version=15.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
-<%@ Register TagPrefix="dxm" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v15.2, Version=15.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxm" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 
 <dxm:ASPxPopupMenu runat="server"
     CssFilePath="~/App_Themes/Aqua/{0}/styles.css" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" CssPostfix="Aqua"
-    GutterWidth="16px" GutterImageSpacing="7px" LoadingPanelImagePosition="Top">
+    GutterWidth="16px" >
     <SubMenuStyle GutterWidth="0px"  />
     <RootItemSubMenuOffset FirstItemY="-2" LastItemY="-2" Y="-2" FirstItemX="2" LastItemX="2" X="2" />
     <ItemSubMenuOffset FirstItemX="2" FirstItemY="-2" LastItemX="2" LastItemY="-2" X="2" Y="-2" />

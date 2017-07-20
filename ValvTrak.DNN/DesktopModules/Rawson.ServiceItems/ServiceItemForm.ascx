@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeFile="ServiceItemForm.ascx.cs" Inherits="Rawson.ServiceItems.ServiceItemForm" EnableTheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxpc" %>
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxpc" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dxe" %>
 
 <style type="text/css">
     .style1
@@ -197,7 +197,7 @@
 	<ContentCollection>
 		<dxpc:PopupControlContentControl ID="PopupControlContentControl1" runat="server">
 			<dx:ASPxCallbackPanel ID="ServiceItemPanel" runat="server" ClientInstanceName="siPanel" 
-				OnCallback="ServiceItemPanel_Callback" ShowLoadingPanel="false" >
+				OnCallback="ServiceItemPanel_Callback" >
 				<ClientSideEvents EndCallback="function(s,e) { siDetails.Show(); }" />
 				<PanelCollection>
 					<dx:PanelContent>
@@ -253,7 +253,7 @@
 														OnCallback="ManufacturerSelect_Callback" 
 													    EnableIncrementalFiltering="True" IncrementalFilteringMode="Contains" 
 													    ValueType="System.Int32" EnableCallbackMode="True" 
-													    ShowLoadingPanel="False" OnItemRequestedByValue="ManufacturerSelect_ItemRequestedByValue" 
+													    OnItemRequestedByValue="ManufacturerSelect_ItemRequestedByValue" 
                                                         OnItemsRequestedByFilterCondition="ManufacturerSelect_ItemsRequestedByFilterCondition" >
 													<ClientSideEvents 
                                                         SelectedIndexChanged="function(s,e) { ManufacturerSelectedIndexChanged(s,e); }"  
@@ -289,7 +289,6 @@
 														ValueField="ValueMember" OnCallback="ModelSelect_Callback" AutoPostBack="false"
 													    TabIndex="107" IncrementalFilteringMode="Contains" ValueType="System.Int32" 
 													    EnableCallbackMode="True" CallbackPageSize="150" DropDownStyle="DropDown"
-                                                        ShowLoadingPanel="False" 
                                                     OnItemRequestedByValue="ModelSelect_ItemRequestedByValue" 
                                                     OnItemsRequestedByFilterCondition="ModelSelect_ItemsRequestedByFilterCondition">
 														<ClientSideEvents

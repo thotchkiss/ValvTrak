@@ -90,10 +90,10 @@ C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Providers\bin\Debug\Microsoft.Pra
 C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Providers\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll
 C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Providers\bin\Debug\Rawson.Data.Model.dll
 C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Providers\bin\Debug\Rawson.Data.Model.pdb
+C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Providers\bin\Debug\Rawson.Data.Model.dll.config
 C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Providers\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
 C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Providers\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.xml
 C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Providers\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.xml
 C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Providers\obj\Debug\Rawson.Providers.csprojResolveAssemblyReference.cache
 C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Providers\obj\Debug\Rawson.Providers.dll
 C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Providers\obj\Debug\Rawson.Providers.pdb
-C:\Users\Tim\Source\Workspaces\ValvTrak\Rawson.Providers\bin\Debug\Rawson.Data.Model.dll.config

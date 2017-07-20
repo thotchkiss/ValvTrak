@@ -1,9 +1,9 @@
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v15.2, Version=15.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
-<%@ Register TagPrefix="dxm" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v15.2, Version=15.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxm" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 
 <dxm:ASPxMenu runat="server"
     CssFilePath="~/App_Themes/RedWine/{0}/styles.css" SpriteCssFilePath="~/App_Themes/RedWine/{0}/sprite.css" CssPostfix="RedWine" 
-    AutoSeparators="RootOnly" GutterWidth="16px" GutterImageSpacing="7px">
+    AutoSeparators="RootOnly" GutterWidth="16px" >
     <ItemStyle DropDownButtonSpacing="10px"></ItemStyle>
     <SubMenuStyle GutterWidth="0px" />
     <RootItemSubMenuOffset FirstItemY="2" LastItemY="2" Y="2" />
@@ -28,6 +28,6 @@
 </dxm:ASPxMenu>
 <dxm:ASPxMenu runat="server" SkinID="MenuLinks" CssFilePath="~/App_Themes/RedWine/{0}/styles.css" ShowPopOutImages="True" 
     CssPostfix="RedWine" SpriteCssFilePath="~/App_Themes/RedWine/{0}/sprite.css" SeparatorWidth="1px"  
-    EnableDefaultAppearance="False" CssClass="menuLinks_RedWine">
+    CssClass="menuLinks_RedWine">
     <LoadingPanelImage Url="~/App_Themes/RedWine/Web/Loading.gif"></LoadingPanelImage>
 </dxm:ASPxMenu>

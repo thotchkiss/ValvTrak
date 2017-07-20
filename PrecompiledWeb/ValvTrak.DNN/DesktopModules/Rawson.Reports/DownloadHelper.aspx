@@ -1,6 +1,6 @@
 ﻿<%@ page language="C#" autoeventwireup="true" inherits="Rawson.Reports.DownloadHelper, App_Web_xue0kjzv" enableEventValidation="false" theme="Aqua" %>
 
-<%@ Register Assembly="DevExpress.Web.v15.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v17.1" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 
 

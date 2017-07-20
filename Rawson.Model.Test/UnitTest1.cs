@@ -9,7 +9,7 @@ namespace Rawson.Model.Test
         [TestMethod]
         public void EnsureDatabase()
         {
-            ValvTrakEntities.CreateDataBaseFromLINQ();
+            
         }
     }
 }

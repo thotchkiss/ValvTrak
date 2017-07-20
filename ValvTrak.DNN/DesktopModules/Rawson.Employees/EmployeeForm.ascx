@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="EmployeeForm.ascx.cs" Inherits="Rawson.Employees.EmployeeForm" EnableTheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v15.2"
+<%@ Register Assembly="DevExpress.Web.v17.1"
     Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 
@@ -189,7 +189,7 @@
                                 <td>
                                     <dx:ASPxComboBox ID="cmbLocation" runat="server" AutoPostBack="false" 
                                         DataSourceID="LocationsDataSource" EnableIncrementalFiltering="True" 
-                                        IncrementalFilteringMode="StartsWith" ShowLoadingPanel="False" 
+                                        IncrementalFilteringMode="StartsWith" 
                                         TextField="DisplayMember" ValueField="ValueMember" ValueType="System.Int32">
                                     </dx:ASPxComboBox>
                                 </td>
@@ -201,7 +201,7 @@
                                 </td>
                                 <td>
                                     <dx:ASPxComboBox ID="cmbUser" runat="server" AutoPostBack="false" 
-                                        DataSourceID="UsersDataSource" ShowLoadingPanel="False" 
+                                        DataSourceID="UsersDataSource" 
                                         TextField="DisplayMember" ValueField="ValueMember" ValueType="System.Int32">
                                     </dx:ASPxComboBox>
                                 </td>

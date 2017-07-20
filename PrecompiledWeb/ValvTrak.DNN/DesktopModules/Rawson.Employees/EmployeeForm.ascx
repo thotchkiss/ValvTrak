@@ -1,5 +1,5 @@
 ﻿<%@ control language="C#" autoeventwireup="true" inherits="Rawson.Employees.EmployeeForm, App_Web_tgoifdct" enabletheming="true" %>
-<%@ Register Assembly="DevExpress.Web.v15.2"
+<%@ Register Assembly="DevExpress.Web.v17.1"
     Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 

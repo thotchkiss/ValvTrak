@@ -67,10 +67,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Rawson.Data.Model\Rawson.Data.Model.csproj">
-      <Project>{ebf20f87-6687-459e-ad92-3b83bc99144e}</Project>
-      <Name>Rawson.Data.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Rawson.Model\Rawson.Model.csproj">
       <Project>{cd1a92b0-173e-4a47-a9ba-5db81a3b7c7d}</Project>
       <Name>Rawson.Model</Name>
