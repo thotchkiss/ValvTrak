@@ -43,6 +43,7 @@ namespace Rawson.Model
         public virtual DbSet<TestResult> TestResults { get; set; }
         public virtual DbSet<ValveTest> ValveTests { get; set; }
         public virtual DbSet<WellSafetyTest> WellSafetyTests { get; set; }
+        public virtual DbSet<WellSafetyTestExt> WellSafetyTestExts { get; set; }
         public virtual DbSet<vw_ChemPumpWorksheets> vw_ChemPumpWorksheets { get; set; }
         public virtual DbSet<vw_GreasingRecordItems> vw_GreasingRecordItems { get; set; }
         public virtual DbSet<vw_GreasingRecords> vw_GreasingRecords { get; set; }

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="WellSafetyEntryForm.ascx.cs" Inherits="Rawson.WellSafetyTests.WellSafetyEntryForm" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="WellSafetyTestExtForm.ascx.cs" Inherits="WellSafetyTestExtForm" %>
 <%@ Register assembly="DevExpress.Web.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
 
 <%@ Import namespace="System.Linq" %>

@@ -96,6 +96,7 @@
     <Compile Include="vw_ValveTests.cs" />
     <Compile Include="vw_WellSafetyTests.cs" />
     <Compile Include="WellSafetyTest.cs" />
+    <Compile Include="WellSafetyTestExt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
